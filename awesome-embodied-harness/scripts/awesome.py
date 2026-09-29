@@ -181,7 +181,7 @@ def validate_entry(entry, where: str, tax: dict, rep: Report) -> None:
     m = MONTH_RE.match(date)
     if date and not m:
         rep.error(f"{where}: date '{date}' must be YYYY-MM or YYYY-MM-DD")
-    elif m and not (2010 <= int(m.group(1)) <= dt.date.today().year + 1):
+    elif m and not (1990 <= int(m.group(1)) <= dt.date.today().year + 1):
         rep.error(f"{where}: date '{date}' is out of range")
 
     for field in ("added", "updated"):
@@ -239,7 +239,8 @@ def validate(tax: dict, entries: dict[str, list[dict]]) -> Report:
             rep.error(f"data/{key}.yaml is missing")
 
     ids: dict[str, str] = {}
-    urls: dict[str, str] = {}
+    urls: dict[str, str] = {}   # normalised paper/code URLs, for the candidates check
+    papers: dict[tuple[str, str], str] = {}
     names: dict[str, str] = {}
     for key, items in entries.items():
         if not isinstance(items, list):
@@ -257,17 +258,26 @@ def validate(tax: dict, entries: dict[str, list[dict]]) -> Report:
                 if eid in ids:
                     rep.error(f"{where}: duplicate id (also in {ids[eid]})")
                 ids[eid] = where
+            # One paper can introduce several listed artifacts (a model and its
+            # dataset, say), but within one category a repeated paper link is
+            # almost always the same system listed twice. Shared code links are
+            # fine (openpi hosts several pi-models).
             for link_key in ("paper", "code"):
                 url = (entry.get("links") or {}).get(link_key)
                 if isinstance(url, str):
-                    nu = norm_url(url)
-                    if nu in urls:
-                        rep.error(f"{where}: {link_key} link duplicates {urls[nu]}")
-                    urls[nu] = where
-            name = norm_text(entry.get("name", ""))
-            if name:
+                    urls.setdefault(norm_url(url), where)
+            paper = (entry.get("links") or {}).get("paper")
+            if isinstance(paper, str):
+                slot = (key, norm_url(paper))
+                if slot in papers:
+                    rep.error(f"{where}: paper link duplicates {papers[slot]}")
+                papers[slot] = where
+            # Same name and same release month is probably one system listed twice;
+            # same name in different months is usually two different papers.
+            name = norm_text(entry.get("name", "")) + "@" + str(entry.get("date", ""))[:7]
+            if not name.startswith("@"):
                 if name in names:
-                    rep.warn(f"{where}: same name as {names[name]} — duplicate?")
+                    rep.warn(f"{where}: same name and date as {names[name]} — duplicate?")
                 names[name] = where
 
     if CANDIDATES.exists():
@@ -800,8 +810,10 @@ def cmd_check_links(args) -> int:
                         continue
                     if key == "paper" and entry.get("title") and norm_text(entry["title"]) != norm_text(info["title"]):
                         warnings.append(f"{tag}: title differs from arXiv: {info['title']!r}")
-                    if key == "paper" and entry.get("date", "")[:7] != info["published"][:7]:
-                        warnings.append(f"{tag}: date {entry.get('date')} vs arXiv v1 {info['published'][:7]}")
+                    # `date` is the first public release, which may be a code or
+                    # blog release before the paper, but never after arXiv v1.
+                    if key == "paper" and entry.get("date", "")[:7] > info["published"][:7]:
+                        warnings.append(f"{tag}: date {entry.get('date')} is after arXiv v1 {info['published'][:7]}")
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {pool.submit(check_url, url): (entry, key, url) for entry, key, url in others}
