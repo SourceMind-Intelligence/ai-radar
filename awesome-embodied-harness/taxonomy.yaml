@@ -110,6 +110,7 @@ tags:
   - failure-recovery
   - hitl
   - humanoid
+  - leaderboard
   - legged
   - long-horizon
   - manipulation
@@ -122,6 +123,7 @@ tags:
   - open-vocabulary
   - planning
   - pointing
+  - real-world
   - reward-model
   - rl
   - ros
