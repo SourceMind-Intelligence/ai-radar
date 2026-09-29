@@ -8,9 +8,18 @@ All paths are relative to `awesome-embodied-harness/`. Time budget: about 30–4
 
 ## How the radar is scheduled
 
-The radar runs once a day as a scheduled agent session, for example a Claude Code Routine that starts a fresh cloud session in this repository. Every run starts from a clean checkout and gets this prompt:
+The radar runs every day at **08:54 Beijing time (00:54 UTC)**, just after arXiv's daily release. It runs as a Claude Code Routine that starts a fresh cloud session in this repository.
 
-> Run today's Embodied Harness radar in this repository. Follow `awesome-embodied-harness/radar/PLAYBOOK.md` end to end (it is also the `/embodied-harness-radar` skill), then commit and push as its "Deliver" step describes, to the branch named here: `<branch>`.
+Delivery is a **rolling pull request**:
+
+- Every run works on the long-lived branch `radar/embodied-harness`.
+- Before starting, the run merges `origin/main` into that branch.
+- It pushes its commit to that branch, which updates a single open PR from `radar/embodied-harness` to `main`.
+- A maintainer merges the PR whenever they like. Nothing reaches `main` without a human.
+
+The Routine's prompt, in short:
+
+> Check out `radar/embodied-harness` (merge `origin/main` into it), follow `awesome-embodied-harness/radar/PLAYBOOK.md` end to end (it is also the `/embodied-harness-radar` skill), then commit and push to `radar/embodied-harness`. If no PR from that branch to `main` is open, open one. Never merge it.
 
 The playbook does not depend on any particular scheduler. The same prompt works from a local `claude -p` cron job, or from a CI job that runs an agent with web access.
 
