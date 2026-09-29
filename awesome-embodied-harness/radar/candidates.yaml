@@ -1,0 +1,4 @@
+# Items the radar has seen but cannot verify yet (see CONTRIBUTING.md).
+# The daily run re-checks entries whose last_checked is 3+ days old and
+# promotes them to data/ once a paper, code or official page appears.
+[]

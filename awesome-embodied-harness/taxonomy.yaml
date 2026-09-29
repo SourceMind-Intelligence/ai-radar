@@ -1,0 +1,140 @@
+# Taxonomy for Awesome Embodied Harness.
+#
+# scripts/awesome.py reads this file to validate data/*.yaml and to render
+# README.md. Every category key below has a matching data/<key>.yaml file.
+
+# Date of the initial bulk import. Entries added on this date are the
+# baseline; the README's "Recently added" section only lists later additions.
+baseline: 2026-09-29
+
+# The embodied harness stack (see SURVEY.md for the long version).
+layers:
+  L0: Embodiment & middleware — robot hardware, drivers, ROS 2, real-time control
+  L1: Skill policies — VLAs and controllers that turn short commands into motor actions
+  L2: Action interface — how robot capabilities are exposed to the model (skills as tools, code APIs, MCP, semantic actions)
+  L3: World state & memory — the harness's context (scene graphs, maps, object and episodic memory)
+  L4: Reasoning & orchestration — the agent loop (planning, tool calls, replanning, multi-robot coordination)
+  L5: Verification & safety — exit codes (success detection, failure diagnosis, recovery), guardrails, permissions, human-in-the-loop
+  L6: Evaluation & data flywheel — simulators, world models, benchmarks, datasets, teleoperation, training infrastructure
+
+# README section order follows this list.
+categories:
+  - key: survey
+    title: Surveys & Position Papers
+    layer: meta
+    blurb: Surveys, position papers and essays that frame embodied agents and their harnesses.
+  - key: harness
+    title: Embodied Harnesses
+    layer: L4
+    blurb: >-
+      Systems where an LLM/VLM-driven agent loop orchestrates robot capabilities
+      (skills, VLAs, motion primitives, generated code) and closes the loop on feedback.
+  - key: framework
+    title: Open-Source Frameworks & Runtimes
+    layer: L0-L4
+    blurb: Robot-agent frameworks, runtimes and SDKs you can install and run today.
+  - key: interface
+    title: Action Interfaces, Skills & Tool Protocols
+    layer: L2
+    blurb: >-
+      How robot capabilities are exposed to models: skills as tools, code-as-action
+      APIs, MCP servers, semantic action spaces, keypoint and affordance constraints.
+  - key: memory
+    title: World State, Memory & Spatial Context
+    layer: L3
+    blurb: Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.
+  - key: brain
+    title: Embodied Reasoning Models & Planners
+    layer: L4
+    blurb: >-
+      "System 2" models trained or adapted for embodied reasoning, spatial grounding,
+      pointing and task planning.
+  - key: policy
+    title: VLA Models & Skill Policies
+    layer: L1
+    blurb: >-
+      "System 1" vision-language-action models and skill policies a harness calls,
+      including hierarchical and dual-system designs.
+  - key: world-model
+    title: World Models
+    layer: L6
+    blurb: Learned world models and simulators used for planning, policy evaluation and data generation.
+  - key: verification
+    title: Verification, Failure Detection & Recovery
+    layer: L5
+    blurb: >-
+      "Exit codes" for robots: success detection, failure reasoning, self-reflection,
+      recovery and knowing when to ask for help.
+  - key: safety
+    title: Safety, Guardrails & Security
+    layer: L5
+    blurb: Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.
+  - key: multi-agent
+    title: Multi-Robot & Fleet Orchestration
+    layer: L4
+    blurb: Coordinating multiple robots, fleets and human-robot teams with language-model agents.
+  - key: sim
+    title: Simulators & Environments
+    layer: L6
+    blurb: Physics simulators, rendering stacks and environment platforms for building and testing harnesses.
+  - key: benchmark
+    title: Benchmarks & Evaluation
+    layer: L6
+    blurb: Benchmarks, evaluation suites and leaderboards for embodied agents, reasoning models and VLAs.
+  - key: data
+    title: Data, Teleoperation & Training Infrastructure
+    layer: L6
+    blurb: Datasets, data-collection and teleoperation systems, and training frameworks.
+
+access:
+  open: {icon: "🟢", label: "open — code (and weights, for models) released"}
+  partial: {icon: "🟡", label: "partial — some artifacts released (e.g. weights only, dataset only)"}
+  api: {icon: "🔵", label: "api — usable through an API or product, not open"}
+  closed: {icon: "⚪", label: "closed — paper, blog or demo only"}
+
+# Allowed keys under an entry's `links:` (rendered in this order).
+link_keys: [paper, code, project, blog, weights, data, docs, video]
+
+# Tag vocabulary. Unknown tags are a validation warning, not an error; add new
+# tags here when they are genuinely needed.
+tags:
+  - agentic-loop
+  - awesome-list
+  - benchmark
+  - code-as-policy
+  - cross-embodiment
+  - dataset
+  - dexterous
+  - driving
+  - dual-system
+  - failure-recovery
+  - hitl
+  - humanoid
+  - legged
+  - long-horizon
+  - manipulation
+  - mcp
+  - memory
+  - mobile-manipulation
+  - multi-robot
+  - navigation
+  - on-device
+  - open-vocabulary
+  - planning
+  - pointing
+  - reward-model
+  - rl
+  - ros
+  - safety
+  - scene-graph
+  - security
+  - self-improving
+  - sim2real
+  - spatial-reasoning
+  - success-detection
+  - teleop
+  - tool-use
+  - video
+  - vla
+  - world-model
+  - 3d
