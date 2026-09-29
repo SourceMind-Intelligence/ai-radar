@@ -1,6 +1,6 @@
 # Contributing
 
-Humans and the daily radar agent follow the same rules. The list in `README.md` is generated; edit the YAML in `data/` instead.
+Humans and the daily radar agent follow the same rules. The lists in `README.md` and `categories/*.md` are generated; edit the YAML in `data/` instead.
 
 ```bash
 pip install pyyaml
@@ -8,7 +8,7 @@ python3 scripts/awesome.py find "<name or url>"   # 1. not already listed?
 # 2. edit data/<category>.yaml
 python3 scripts/awesome.py validate               # 3. schema + duplicate checks
 python3 scripts/awesome.py check-links --ids <id> # 4. links resolve, arXiv title/date match
-python3 scripts/awesome.py build                  # 5. regenerate README.md / SURVEY.md blocks
+python3 scripts/awesome.py build                  # 5. regenerate README.md, categories/*.md, SURVEY.md stats
 ```
 
 CI runs `validate` and `build --check` on every pull request that touches this folder.
@@ -80,11 +80,15 @@ The `access` values mean:
 
 ## Radar candidates
 
-Some items look important but cannot be verified yet: an announcement with no paper, a demo video, a rumor. They go into `radar/candidates.yaml`, not `data/`:
+Two kinds of item go into `radar/candidates.yaml` instead of `data/`:
+
+- items that look important but cannot be verified yet: an announcement with no paper, a demo video, a rumor;
+- verified items that did not fit a radar run's daily cap. The next run re-triages these first.
 
 ```yaml
 - name: Example Robot Brain 2
   url: https://example.com/announcement
+  title: Example Robot Brain 2 technical report   # optional
   first_seen: 2026-09-29
   last_checked: 2026-09-29
   suggested_category: policy

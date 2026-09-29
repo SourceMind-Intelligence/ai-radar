@@ -1,1 +1,748 @@
-[]
+- id: robormbench
+  name: ROBORMBENCH
+  title: >-
+    Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision
+    Language Reward Models
+  date: 2026-09
+  org: Yonsei University et al.
+  summary: >-
+    Paraphrase-robustness benchmark for VLM reward models: 2,390 real-robot trajectories
+    with progress labels and 21,673 verified instruction paraphrases; rewording alone can
+    flip identical behavior between judged success and failure.
+  links:
+    paper: https://arxiv.org/abs/2609.05401
+  access: closed
+  tags: [benchmark, reward-model, success-detection]
+  added: 2026-09-29
+
+- id: gavel
+  name: GAVEL
+  title: >-
+    GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning
+  date: 2026-09
+  summary: >-
+    Verifies and repairs LLM task plans against an explicit graph world model of object
+    relations, action preconditions/effects and beliefs over unseen object locations: it
+    predicts consequences before execution, fixes violations directly and saves LLM
+    replanning for semantic errors.
+  links:
+    paper: https://arxiv.org/abs/2609.19315
+  access: closed
+  tags: [planning, scene-graph, world-model, long-horizon, success-detection]
+  note: >-
+    First-party: on BEHAVIOR-1K, Qwen3-8B single-task success rises from 41.2% to 91.8%.
+  added: 2026-09-29
+
+- id: failbench
+  name: FailBench
+  title: 'FailBench: How Reliable are VLMs at Judging Robot Task Success?'
+  date: 2026-09
+  summary: >-
+    Benchmark of 2,197 manipulation attempts from 14 public sources for VLM success/failure
+    judges; the best of 13 detectors reaches 0.77 mean balanced accuracy, near chance on
+    contact-rich assembly, with a bias toward predicting success.
+  links:
+    paper: https://arxiv.org/abs/2609.03611
+    project: https://metric-ai-lab.github.io/failbench/
+  access: closed
+  tags: [success-detection, benchmark, manipulation]
+  note: First-party numbers; a direct check on VLM-as-judge reliability.
+  added: 2026-09-29
+
+- id: care-corrective-execution
+  name: CARE
+  title: >-
+    CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies
+  date: 2026-09
+  summary: >-
+    Learns VLA recovery from the policy's own failed rollouts: models stage-conditioned
+    post-failure deviations to synthesize failure states and corrective demos, then uses
+    stage-wise planning and 3D monitoring to trigger atomic adjustments at run time; adds
+    the FSR-Bench recovery benchmark.
+  links:
+    paper: https://arxiv.org/abs/2609.24118
+    code: https://github.com/xiaojunlan/care
+  access: partial
+  tags: [failure-recovery, vla, manipulation]
+  note: The repo is a code-only snapshot; checkpoints and datasets are not included.
+  added: 2026-09-29
+
+- id: ars-agentic-reward-system
+  name: ARS
+  title: 'ARS: Agentic Reward System for Robot Learning'
+  date: 2026-09
+  summary: >-
+    Training-free progress reward modeling with general VLMs: a sub-agent proposes a
+    task-relevant event timeline that a primary agent verifies and revises before estimating
+    per-frame progress; it can also audit other reward models' progress estimates.
+  links:
+    paper: https://arxiv.org/abs/2609.34484
+  access: closed
+  tags: [reward-model, success-detection, agentic-loop]
+  note: >-
+    The code URL given in the paper (github.com/midea-ai/ars) returned 404 on 2026-09-29.
+  added: 2026-09-29
+
+- id: rynnvalue
+  name: RynnValue
+  title: 'RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance'
+  date: 2026-08
+  org: Alibaba DAMO Academy
+  summary: >-
+    Open value foundation model for manipulation that learns temporal distance (cost-to-go
+    to a language goal) from timestamps over roughly 7,000 hours of clips, yielding progress
+    estimates without preference or progress labels.
+  links:
+    paper: https://arxiv.org/abs/2608.09853
+    code: https://github.com/alibaba-damo-academy/RynnValue
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnValue-8B
+  access: open
+  tags: [reward-model, success-detection, manipulation]
+  added: 2026-09-29
+
+- id: semantic-handoff-failures
+  name: Semantic handoff failures
+  title: >-
+    Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill
+    Composition
+  date: 2026-07
+  summary: >-
+    Studies an agent-orchestrated harness that calls pi0.5-based BEHAVIOR-1K skills with
+    typed arguments, step budgets and multi-view VLM verification; skills that succeed from
+    clean snapshots often stall from states left by the previous skill.
+  links:
+    paper: https://arxiv.org/abs/2607.06256
+  access: closed
+  tags: [vla, success-detection, long-horizon]
+  added: 2026-09-29
+
+- id: hide-and-seek
+  name: Hide-and-Seek
+  title: >-
+    Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring
+  date: 2026-05
+  org: University of Wisconsin-Madison, Georgia Tech
+  summary: >-
+    Learns step-level failure signals for VLA runtime monitoring from trajectory-level
+    success labels via inter- and intra-trajectory contrastive objectives, with conformal
+    thresholds; evaluated with OpenVLA, pi0 and pi0.5 on LIBERO, VLABench and a real robot.
+  links:
+    paper: https://arxiv.org/abs/2605.30834
+    project: https://seongheon-96.github.io/hide_and_seek_site/
+  access: closed
+  tags: [success-detection, uncertainty, vla]
+  note: >-
+    NeurIPS 2026; official repo (deeplearning-wisc/hide_and_seek) says code is coming soon.
+  added: 2026-09-29
+
+- id: agentchord
+  name: AgentChord
+  title: >-
+    From Reaction to Anticipation: Proactive Failure Recovery through Agentic Task Graph for
+    Robotic Manipulation
+  date: 2026-05
+  org: CUHK-Shenzhen, DexForce
+  summary: >-
+    Multi-agent system that compiles a manipulation task into a directed task graph,
+    pre-attaches anticipatory recovery branches, and uses low-latency monitors to fire
+    pre-compiled recoveries without re-planning; shown on long-horizon bimanual tasks.
+  links:
+    paper: https://arxiv.org/abs/2605.11951
+    code: https://github.com/EDEM-AI/AgentChord
+    project: https://shengxu.net/AgentChord/
+  access: open
+  tags: [failure-recovery, agentic-loop, long-horizon, manipulation]
+  note: RSS 2026.
+  added: 2026-09-29
+
+- id: serp
+  name: SERP
+  title: Self-Evolutionary Replanning for Failure-Aware Motion Planning
+  date: 2026-03
+  org: University of Macau; University of Hong Kong et al.
+  summary: >-
+    Failure-aware adaptation of motion-planner parameters and loss weights:
+    auto-differentiation handles local updates while a VLM reads the adaptation history to
+    intervene, and a memory-augmented rollout system proposes and tests recovery candidates.
+  links:
+    paper: https://arxiv.org/abs/2603.02772
+  access: closed
+  tags: [failure-recovery, memory, planning]
+  added: 2026-09-29
+
+- id: robometer
+  name: Robometer
+  title: >-
+    Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons
+  date: 2026-03
+  summary: >-
+    General robot reward model trained with a frame-level progress loss on expert data plus
+    a trajectory-comparison preference loss that exploits failed and suboptimal rollouts;
+    releases RBM-1M, a reward-learning dataset of over one million trajectories.
+  links:
+    paper: https://arxiv.org/abs/2603.02115
+    code: https://github.com/robometer/robometer
+    project: https://robometer.github.io/
+    weights: https://huggingface.co/robometer/Robometer-4B
+  access: open
+  tags: [reward-model, dataset, cross-embodiment, manipulation]
+  note: RSS 2026.
+  added: 2026-09-29
+
+- id: prm-as-a-judge
+  name: PRM-as-a-Judge
+  title: 'PRM-as-a-Judge: A Dense Evaluation Paradigm for Fine-Grained Robotic Auditing'
+  date: 2026-03
+  summary: >-
+    Uses process reward models to audit policy rollout videos as dense progress curves
+    scored by an Outcome-Process-Diagnosis metric system instead of binary success; ships
+    the RoboPulse diagnostic benchmark and an open evaluator toolkit.
+  links:
+    paper: https://arxiv.org/abs/2603.21669
+    code: https://github.com/YuyangLiu2003/PRM-as-a-Judge
+    project: https://prm-as-a-judge.github.io/
+  access: open
+  tags: [reward-model, benchmark, video]
+  note: Toolkit follow-up 'PRM-as-a-Judge 1.5' is arXiv 2608.14284 (2026-08).
+  added: 2026-09-29
+
+- id: cover-vla
+  name: CoVer-VLA
+  title: >-
+    Scaling Verification Can Be More Effective than Scaling Policy Learning for
+    Vision-Language-Action Alignment
+  date: 2026-02
+  org: Stanford University, NVIDIA Research
+  summary: >-
+    Trains CoVer, a contrastive verifier of instruction-action alignment, and uses it in a
+    hierarchical test-time pipeline that scores VLM-rephrased instructions and sampled
+    action chunks; reports larger gains than scaling policy pre-training on the same data.
+  links:
+    paper: https://arxiv.org/abs/2602.12281
+    code: https://github.com/cover-vla/cover-vla
+    project: https://cover-vla.github.io/
+  access: open
+  tags: [vla, reward-model, manipulation]
+  note: First-party results on SIMPLER, PolaRiS and real robots.
+  added: 2026-09-29
+
+- id: roboreward
+  name: RoboReward
+  title: 'RoboReward: General-Purpose Vision-Language Reward Models for Robotics'
+  date: 2026-01
+  org: Stanford University, UC Berkeley
+  summary: >-
+    Reward dataset and benchmark built from Open X-Embodiment and RoboArena episodes, using
+    counterfactual relabeling and temporal clipping to create negatives, plus 4B/8B VLM
+    reward models deployed for real-robot RL.
+  links:
+    paper: https://arxiv.org/abs/2601.00675
+    project: https://crfm.stanford.edu/helm/robo-reward-bench/latest/
+    weights: https://huggingface.co/teetone/RoboReward-8B
+    data: https://huggingface.co/datasets/teetone/RoboReward
+  access: open
+  tags: [reward-model, benchmark, dataset, rl, cross-embodiment]
+  note: >-
+    First-party: the 8B model beats much larger general VLMs at short-horizon reward
+    assignment and outperforms Gemini Robotics-ER 1.5 as an RL reward.
+  added: 2026-09-29
+
+- id: cyclevla
+  name: CycleVLA
+  title: >-
+    CycleVLA: Proactive Self-Correcting Vision-Language-Action Models via Subtask
+    Backtracking and Minimum Bayes Risk Decoding
+  date: 2026-01
+  org: University of Oxford
+  summary: >-
+    A progress-aware VLA flags risky subtask transitions, a VLM failure predictor triggers
+    subtask backtracking, and Minimum Bayes Risk decoding improves retries; evaluated on
+    LIBERO, LIBERO-Plus and a real robot.
+  links:
+    paper: https://arxiv.org/abs/2601.02295
+    code: https://github.com/dannymcy/cyclevla_code
+    project: https://dannymcy.github.io/cyclevla/
+  access: open
+  tags: [failure-recovery, vla, long-horizon, manipulation]
+  added: 2026-09-29
+
+- id: robo-dopamine
+  name: Robo-Dopamine
+  title: >-
+    Robo-Dopamine: General Process Reward Modeling for High-Precision Robotic Manipulation
+  date: 2025-12
+  org: BAAI, Peking University
+  summary: >-
+    Step-aware, multi-view general process reward model trained on 3,400+ hours of data,
+    paired with policy-invariant reward shaping (Dopamine-RL) for real-robot RL and one-shot
+    adaptation to new tasks.
+  links:
+    paper: https://arxiv.org/abs/2512.23703
+    code: https://github.com/FlagOpen/Robo-Dopamine
+    project: https://robo-dopamine.github.io/
+    weights: https://huggingface.co/collections/tanhuajie2001/robo-dopamine
+  access: open
+  tags: [reward-model, rl, manipulation, success-detection]
+  note: >-
+    Robo-Dopamine 2.0 (arXiv 2608.15680, 2026-08) adds history conditioning and OOD
+    awareness.
+  added: 2026-09-29
+
+- id: guardian
+  name: Guardian
+  title: >-
+    Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
+  date: 2025-12
+  org: Inria, ENS-PSL
+  summary: >-
+    Perturbs successful RLBench and BridgeData V2 trajectories into planning and execution
+    failures with VLM-written reasoning traces (GuardianFail-36k) and trains a multi-view
+    reasoning VLM that verifies both plans and execution steps.
+  links:
+    paper: https://arxiv.org/abs/2512.01946
+    code: https://github.com/paulpacaud/Guardian-FailCot
+    project: https://www.di.ens.fr/willow/research/guardian/
+    weights: https://huggingface.co/collections/paulpacaud/robotic-failure-detection-dataset-and-model-guardian
+  access: open
+  tags: [success-detection, failure-recovery, dataset, manipulation]
+  added: 2026-09-29
+
+- id: seal-vla-steering
+  name: SEAL
+  title: >-
+    Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action
+    Alignment Verification
+  date: 2025-10
+  org: NVIDIA, Carnegie Mellon University
+  summary: >-
+    Training-free runtime steering for reasoning VLAs: samples several action sequences,
+    predicts their outcomes in simulation, and has a VLM pick the one whose outcome best
+    matches the model's own textual plan; adds a reasoning-annotated LIBERO-100 extension.
+  links:
+    paper: https://arxiv.org/abs/2510.16281
+    code: https://github.com/NVlabs/actalign
+    project: https://yilin-wu98.github.io/steering-reasoning-vla/
+    data: https://huggingface.co/datasets/nvidia/libero-r-datasets
+  access: partial
+  tags: [vla, success-detection, manipulation]
+  note: Code and data released; model checkpoints marked TBA in the repo.
+  added: 2026-09-29
+
+- id: failsafe
+  name: FailSafe
+  title: 'FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models'
+  date: 2025-10
+  summary: >-
+    Generates diverse failure cases paired with executable recovery actions in simulators
+    with motion-planning support, then fine-tunes FailSafe-VLM (LLaVA-OV-7B) to detect
+    failures and propose recoveries for VLAs such as pi0-FAST and OpenVLA in ManiSkill.
+  links:
+    paper: https://arxiv.org/abs/2510.01642
+    code: https://github.com/Jimntu/FailSafe_code
+    project: https://jimntu.github.io/FailSafe/
+    data: https://huggingface.co/datasets/onepiece1999/failsafe_data
+  access: partial
+  tags: [failure-recovery, vla, dataset, manipulation]
+  note: >-
+    IROS 2026. Repo covers failure/recovery data generation; a FailSafe-VLM checkpoint was
+    not located.
+  added: 2026-09-29
+
+- id: vlac
+  name: VLAC
+  title: >-
+    A Vision-Language-Action-Critic Model for Robotic Real-World Reinforcement Learning
+  date: 2025-09
+  org: Shanghai AI Laboratory
+  summary: >-
+    InternVL-based process reward model that, given paired observations and a language goal,
+    outputs dense progress deltas and a done signal (and can also emit actions); drives an
+    asynchronous real-world RL loop with graded human-in-the-loop interventions.
+  links:
+    paper: https://arxiv.org/abs/2509.15937
+    code: https://github.com/InternRobotics/VLAC
+    weights: https://huggingface.co/InternRobotics/VLAC
+  access: open
+  tags: [reward-model, success-detection, rl, hitl, vla]
+  added: 2026-09-29
+
+- id: sarm
+  name: SARM
+  title: 'SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation'
+  date: 2025-09
+  org: Stanford University, UC Berkeley, xdof
+  summary: >-
+    Video reward model that jointly predicts task stage and within-stage progress from
+    language subtask annotations, used for Reward-Aligned Behavior Cloning that filters and
+    reweights demonstrations (e.g. T-shirt folding); integrated into LeRobot.
+  links:
+    paper: https://arxiv.org/abs/2509.25358
+    code: https://github.com/xdofai/opensarm
+    project: https://qianzhong-chen.github.io/sarm.github.io/
+    docs: https://huggingface.co/docs/lerobot/sarm
+  access: open
+  tags: [reward-model, long-horizon, manipulation]
+  note: >-
+    SARM2 (arXiv 2606.10305, 2026-06) extends it to multi-task stage-aware reward modeling.
+  added: 2026-09-29
+
+- id: i-failsense
+  name: I-FailSense
+  title: >-
+    I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
+  date: 2025-09
+  org: Sorbonne Universite (ISIR)
+  summary: >-
+    Post-trains a VLM and attaches lightweight classifier heads to several internal layers,
+    ensembled, to detect semantic-misalignment failures (a plausible action that does not
+    match the instruction), using datasets derived from existing manipulation data.
+  links:
+    paper: https://arxiv.org/abs/2509.16072
+    code: https://github.com/clemgris/I-FailSense
+    project: https://clemgris.github.io/I-FailSense/
+    weights: https://huggingface.co/collections/ACIDE/failsense-3b
+  access: open
+  tags: [success-detection, manipulation, dataset]
+  note: ICRA 2026.
+  added: 2026-09-29
+
+- id: safe-failure-detector
+  name: SAFE
+  title: 'SAFE: Multitask Failure Detection for Vision-Language-Action Models'
+  date: 2025-06
+  org: University of Toronto, Vector Institute, Toyota Research Institute
+  summary: >-
+    Learns a failure score from a VLA's internal features that generalises to unseen tasks,
+    with conformal thresholds for timely stop/backtrack/ask-for-help alerts; tested on
+    OpenVLA, pi0 and pi0-FAST in simulation and the real world.
+  links:
+    paper: https://arxiv.org/abs/2506.09937
+    code: https://github.com/vla-safe/SAFE
+    project: https://vla-safe.github.io/
+  access: open
+  tags: [success-detection, uncertainty, vla, manipulation]
+  note: NeurIPS 2025.
+  added: 2026-09-29
+
+- id: robomonkey
+  name: RoboMonkey
+  title: >-
+    RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action
+    Models
+  date: 2025-06
+  org: Stanford University, UC Berkeley
+  summary: >-
+    Test-time scaling for VLAs: samples and perturbs candidate actions, then a VLM-based
+    action verifier trained on synthetic preference data selects one; reports that action
+    error follows a power law in the number of samples.
+  links:
+    paper: https://arxiv.org/abs/2506.17811
+    code: https://github.com/robomonkey-vla/RoboMonkey
+    project: https://robomonkey-vla.github.io/
+    weights: https://huggingface.co/robomonkey-vla/monkey-verifier-7b
+  access: open
+  tags: [vla, reward-model, manipulation]
+  note: CoRL 2025.
+  added: 2026-09-29
+
+- id: robofac
+  name: RoboFAC
+  title: 'RoboFAC: A Comprehensive Framework for Robotic Failure Analysis and Correction'
+  date: 2025-05
+  org: Shanghai Jiao Tong University
+  summary: >-
+    Failure-centric dataset (9,440 erroneous trajectories, 78k QA pairs, sim and real) and a
+    lightweight VLM for task understanding, failure analysis and correction, used as an
+    external supervisor in a real-world VLA control pipeline.
+  links:
+    paper: https://arxiv.org/abs/2505.12224
+    code: https://github.com/MINT-SJTU/RoboFAC
+    weights: https://huggingface.co/MINT-SJTU/RoboFAC-7B
+    data: https://huggingface.co/datasets/MINT-SJTU/RoboFAC-dataset
+  access: open
+  tags: [failure-recovery, vla, dataset, manipulation]
+  added: 2026-09-29
+
+- id: ask-to-act
+  name: Ask-to-Act
+  title: >-
+    Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement
+    Learning
+  date: 2025-04
+  org: Georgia Tech, Meta FAIR
+  summary: >-
+    Defines the Ask-to-Act task, where a household agent given under-specified rearrangement
+    instructions must ask minimal clarification questions, and fine-tunes an MLLM as a VLA
+    policy with online RL on LLM-generated rewards.
+  links:
+    paper: https://arxiv.org/abs/2504.00907
+  access: closed
+  tags: [uncertainty, hitl, vla, rl, mobile-manipulation]
+  added: 2026-09-29
+
+- id: fail-detect
+  name: FAIL-Detect
+  title: >-
+    Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection
+    for Imitation Learning Policies
+  date: 2025-03
+  org: Toyota Research Institute
+  summary: >-
+    Two-stage runtime failure detector trained only on successful demonstrations: policy
+    inputs/outputs are distilled into uncertainty scores, and conformal prediction
+    calibrates alarm thresholds for diffusion/flow policies.
+  links:
+    paper: https://arxiv.org/abs/2503.08558
+    code: https://github.com/CXU-TRI/FAIL-Detect
+    project: https://cxu-tri.github.io/FAIL-Detect-Website/
+  access: open
+  tags: [uncertainty, success-detection, manipulation]
+  note: RSS 2025.
+  added: 2026-09-29
+
+- id: reflectvlm
+  name: ReflectVLM
+  title: >-
+    Reflective Planning: Vision-Language Models for Multi-Stage Long-Horizon Robotic
+    Manipulation
+  date: 2025-02
+  org: Cornell University, CUHK, Yale University, UC Berkeley
+  summary: >-
+    Test-time reflection loop in which a VLM planner imagines future states with a
+    generative model, uses them to pick actions and critiques its own choices; improves
+    multi-stage manipulation over commercial VLMs and MCTS (first-party).
+  links:
+    paper: https://arxiv.org/abs/2502.16707
+    code: https://github.com/yunhaif/reflect-vlm
+    project: https://reflect-vlm.github.io/
+    weights: https://huggingface.co/collections/yunhaif/reflectvlm-67b95e4316ab2d5f71ad4b25
+  access: open
+  tags: [planning, world-model, long-horizon, manipulation, self-improving]
+  added: 2026-09-29
+
+- id: forewarn
+  name: FOREWARN
+  title: >-
+    From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment
+  date: 2025-02
+  org: Carnegie Mellon University
+  summary: >-
+    A latent world model predicts the outcomes of candidate action plans from a generative
+    policy, and a VLM aligned to those latents judges them in language, acting as an
+    open-vocabulary runtime verifier for policy steering.
+  links:
+    paper: https://arxiv.org/abs/2502.01828
+    code: https://github.com/CMU-IntentLab/Forewarn
+    project: https://yilin-wu98.github.io/forewarn/
+  access: open
+  tags: [world-model, success-detection, manipulation]
+  added: 2026-09-29
+
+- id: code-as-monitor
+  name: Code-as-Monitor
+  title: >-
+    Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic
+    Failure Detection
+  date: 2024-12
+  org: Beihang University, Peking University, BAAI, Galbot
+  summary: >-
+    Casts reactive and proactive failure detection as spatio-temporal constraint
+    satisfaction: a VLM writes monitor code over compact geometric "constraint elements",
+    evaluated in real time to close the loop around open-loop policies.
+  links:
+    paper: https://arxiv.org/abs/2412.04455
+    project: https://zhoues.github.io/Code-as-Monitor/
+  access: closed
+  tags: [code-as-policy, success-detection, failure-recovery, manipulation]
+  note: CVPR 2025. No code link on the project page.
+  added: 2026-09-29
+
+- id: gvl
+  name: GVL
+  title: Vision Language Models are In-Context Value Learners
+  date: 2024-11
+  org: Google DeepMind
+  summary: >-
+    Generative Value Learning prompts a VLM to predict task progress over shuffled video
+    frames, giving zero/few-shot value estimates on 300+ real-world tasks that can be used
+    for success detection, dataset filtering and advantage-weighted regression.
+  links:
+    paper: https://arxiv.org/abs/2411.04549
+    project: https://generative-value-learning.github.io/
+  access: closed
+  tags: [reward-model, success-detection, video, cross-embodiment]
+  note: >-
+    No official code; the OpenGVL benchmark (arXiv 2509.17321) re-implements GVL with open
+    VLMs.
+  added: 2026-09-29
+
+- id: v-gps
+  name: V-GPS
+  title: >-
+    Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance
+  date: 2024-10
+  org: UC Berkeley, Carnegie Mellon University
+  summary: >-
+    Deployment-time steering that samples actions from a generalist robot policy and
+    re-ranks them with a value function learned by offline RL, improving five different
+    policies without fine-tuning or access to their weights.
+  links:
+    paper: https://arxiv.org/abs/2410.13816
+    code: https://github.com/nakamotoo/V-GPS
+    project: https://nakamotoo.github.io/V-GPS/
+  access: open
+  tags: [vla, reward-model, rl, manipulation, cross-embodiment]
+  note: >-
+    CoRL 2024. Early 'verifier re-ranks policy samples' pattern later scaled by RoboMonkey
+    and CoVer-VLA.
+  added: 2026-09-29
+
+- id: sentinel
+  name: Sentinel
+  title: >-
+    Unpacking Failure Modes of Generative Policies: Runtime Monitoring of Consistency and
+    Progress
+  date: 2024-10
+  org: Stanford University, NVIDIA Research
+  summary: >-
+    Runtime monitor for diffusion policies that pairs a cheap statistical temporal action
+    consistency test for erratic failures with a VLM that flags task-progression failures;
+    evaluated on simulated and real mobile manipulation.
+  links:
+    paper: https://arxiv.org/abs/2410.04640
+    code: https://github.com/agiachris/sentinel
+    project: https://sites.google.com/stanford.edu/sentinel
+  access: open
+  tags: [success-detection, failure-recovery, mobile-manipulation]
+  note: CoRL 2024.
+  added: 2026-09-29
+
+- id: aha
+  name: AHA
+  title: >-
+    AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic
+    Manipulation
+  date: 2024-10
+  org: NVIDIA, University of Washington
+  summary: >-
+    Instruction-tuned VLM that detects manipulation failures and explains them in free-form
+    language, trained on FailGen data made by perturbing successful simulated demos; its
+    feedback is plugged into reward design, TAMP and sub-task verification.
+  links:
+    paper: https://arxiv.org/abs/2410.00371
+    code: https://github.com/NVlabs/AHA
+    project: https://aha-vlm.github.io/
+  access: partial
+  tags: [success-detection, failure-recovery, manipulation, dataset]
+  note: >-
+    ICLR 2025. Repo has data-generation and fine-tuning code; no released AHA checkpoint was
+    found.
+  added: 2026-09-29
+
+- id: racer
+  name: RACER
+  title: 'RACER: Rich Language-Guided Failure Recovery Policies for Imitation Learning'
+  date: 2024-09
+  org: University of Michigan
+  summary: >-
+    Supervisor-actor framework: a VLM supervisor issues rich language corrections to a
+    language-conditioned visuomotor policy trained on demonstrations automatically augmented
+    with failure-recovery trajectories; evaluated on RLBench and a real robot.
+  links:
+    paper: https://arxiv.org/abs/2409.14674
+    code: https://github.com/sled-group/RACER
+    project: https://rich-language-failure-recovery.github.io/
+    data: https://huggingface.co/datasets/sled-umich/RACER-augmented_rlbench
+  access: open
+  tags: [failure-recovery, manipulation, dataset, dual-system]
+  added: 2026-09-29
+
+- id: introplan
+  name: IntroPlan
+  title: >-
+    Introspective Planning: Aligning Robots' Uncertainty with Inherent Task Ambiguity
+  date: 2024-02
+  org: Princeton University
+  summary: >-
+    Retrieves introspective reasoning examples (post-hoc rationales of human-chosen safe
+    plans) at run time so an LLM planner's uncertainty tracks instruction ambiguity;
+    combined with conformal prediction it cuts unnecessary clarification requests.
+  links:
+    paper: https://arxiv.org/abs/2402.06529
+    code: https://github.com/kevinliang888/IntroPlan
+    project: https://introplan.github.io/
+  access: open
+  tags: [uncertainty, hitl, planning, safety, mobile-manipulation]
+  note: NeurIPS 2024; adds a safe mobile manipulation benchmark.
+  added: 2026-09-29
+
+- id: knowno
+  name: KnowNo
+  title: >-
+    Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners
+  date: 2023-07
+  org: Princeton University, Google DeepMind
+  summary: >-
+    Applies conformal prediction to an LLM planner's candidate next steps to obtain a
+    statistical task-success guarantee; when the prediction set holds more than one option
+    the robot asks a human for help, minimising help requests.
+  links:
+    paper: https://arxiv.org/abs/2307.01928
+    code: https://github.com/google-research/google-research/tree/master/language_model_uncertainty
+    project: https://robot-help.github.io/
+  access: open
+  tags: [uncertainty, hitl, planning, manipulation, safety]
+  note: CoRL 2023 oral. Canonical 'ask for help' exit code for LLM planners.
+  added: 2026-09-29
+
+- id: doremi
+  name: DoReMi
+  title: >-
+    DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution
+    Misalignment
+  date: 2023-07
+  org: Tsinghua University
+  summary: >-
+    The LLM planner also emits constraints for each step; a VLM checks them continuously
+    during low-level execution so plan-execution misalignments are caught immediately and
+    the LLM replans. Shown on robot arms and humanoids.
+  links:
+    paper: https://arxiv.org/abs/2307.00329
+    project: https://sites.google.com/view/doremi-paper
+  access: closed
+  tags: [failure-recovery, agentic-loop, planning, humanoid, manipulation, success-detection]
+  note: IROS 2024. No code link found on the project page.
+  added: 2026-09-29
+
+- id: reflect
+  name: REFLECT
+  title: 'REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction'
+  date: 2023-06
+  org: Columbia University
+  summary: >-
+    Converts multisensory robot logs into a hierarchical text summary that an LLM queries to
+    explain why an execution failed and to guide a language planner's correction; introduces
+    the RoboFail dataset of failure scenarios.
+  links:
+    paper: https://arxiv.org/abs/2306.15724
+    code: https://github.com/columbia-ai-robotics/reflect
+    project: https://robot-reflect.github.io/
+  access: open
+  tags: [failure-recovery, success-detection, planning, manipulation, dataset]
+  note: CoRL 2023.
+  added: 2026-09-29
+
+- id: successvqa
+  name: SuccessVQA
+  title: Vision-Language Models as Success Detectors
+  date: 2023-03
+  org: DeepMind
+  summary: >-
+    Frames success detection as visual question answering, fine-tuning a Flamingo VLM on
+    human reward annotations; studied on simulated household agents, real robot manipulation
+    and egocentric human video, with a focus on out-of-distribution generalisation.
+  links:
+    paper: https://arxiv.org/abs/2303.07280
+  access: closed
+  tags: [success-detection, reward-model, manipulation]
+  added: 2026-09-29

@@ -1,1 +1,791 @@
-[]
+- id: robotalk
+  name: RoboTalk
+  title: >-
+    RoboTalk: Learning Multi-Robot Communication and Coordination from Multimodal
+    Demonstrations
+  date: 2026-09
+  org: UMass Amherst et al.
+  summary: >-
+    Synthetic data pipeline and dataset of 7,950 multimodal trajectories over 53 kitchen
+    mobile-manipulation tasks, with leader-follower planning, tool calls, rationales and
+    natural-language messages, for training small on-device VLMs to communicate and
+    coordinate.
+  links:
+    paper: https://arxiv.org/abs/2609.23997
+  access: closed
+  tags: [multi-robot, dataset, on-device, tool-use, mobile-manipulation]
+  note: >-
+    First-party result of 77% success on held-out tasks after fine-tuning vs ~2% untuned;
+    dataset release not verified.
+  added: 2026-09-29
+
+- id: robion
+  name: Robion
+  title: Efficient Vision-Language-Action Management and Serving for Robot Factories
+  date: 2026-09
+  org: Max Planck Institute for Software Systems
+  summary: >-
+    Serving and management system for fleet-scale VLA inference on multi-GPU edge servers
+    under latency SLOs, co-scheduling VLM and action-diffusion stages on one GPU and placing
+    multiple models; reports up to 64 robots served from a 4-GPU server (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.12075
+  access: closed
+  tags: [multi-robot, vla]
+  added: 2026-09-29
+
+- id: orch
+  name: ORCH
+  title: Organizational Principles Enable Collective Intelligence in Embodied AI
+  date: 2026-09
+  org: Duke University
+  summary: >-
+    Builds task-specific hierarchies of LLM-driven embodied agents from organization theory
+    (pooled vs. sequential interdependence); on 25 wildfire-response missions with up to 50
+    heterogeneous agents it beat four prior multi-agent frameworks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.11737
+    project: https://generalroboticslab.com/ORCH
+  access: closed
+  tags: [multi-robot, planning, long-horizon, hitl]
+  added: 2026-09-29
+
+- id: aeroweaver
+  name: AeroWeaver
+  title: >-
+    AeroWeaver: An Embodied-Agent Harness for Weaving Aerial Skills into Distributed,
+    Adaptive Swarm Execution
+  date: 2026-09
+  org: Beihang University
+  summary: >-
+    Embodied-agent harness for UAV swarms that connects LLM decisions to governed skills,
+    runs role-conditioned local agents for distributed coordination without a central
+    joint-action agent, and refines skill selection from role-indexed experience.
+  links:
+    paper: https://arxiv.org/abs/2609.18520
+    code: https://github.com/Admire-ljb/AeroWeaver
+    project: https://admire-ljb.github.io/AeroWeaver/
+  access: open
+  tags: [multi-robot, tool-use, self-improving]
+  added: 2026-09-29
+
+- id: physical-agentic-ai
+  name: Physical Agentic AI
+  title: 'Physical Agentic AI: An Architecture for Orchestrating a Robot Crew with LLMs'
+  date: 2026-08
+  summary: >-
+    Non-actuating LLM mission planner assigns phases to typed robot skills while a
+    deterministic orchestrator validates each dispatch against capabilities, state and
+    workflow contracts before motion (drone, UGV, G1, Go2).
+  links:
+    paper: https://arxiv.org/abs/2608.22657
+  access: closed
+  tags: [multi-robot, tool-use, safety]
+  added: 2026-09-29
+
+- id: eflux
+  name: EFLUX
+  title: 'EFLUX: Elastic Multi-Robot Formation Navigation and Adaptation with Agentic LLMs'
+  date: 2026-07
+  org: University of Pennsylvania, University of Southern California
+  summary: >-
+    Geometry-grounded LLM agent for multi-robot formation navigation that reasons jointly
+    over deformation (scaling, shearing) and reconfiguration (split, merge) and turns
+    strategies into per-robot waypoints via a generate-verify-correct loop; sim and hardware
+    tests.
+  links:
+    paper: https://arxiv.org/abs/2607.12050
+  access: closed
+  tags: [multi-robot, navigation, agentic-loop, failure-recovery]
+  added: 2026-09-29
+
+- id: d-vlc
+  name: D-VLC
+  title: >-
+    D-VLC: Decentralized Vision-Language Collaboration for Heterogeneous Embodied
+    Multi-Robot Systems in Unknown Environments
+  date: 2026-07
+  org: Zhejiang University et al.
+  summary: >-
+    Decentralized, asynchronous VLM collaboration for heterogeneous robot teams in unknown
+    environments, combining lightweight information sharing, capability-aware collaboration
+    and a unified action interface so general VLMs emit actions run by learning-free
+    experts.
+  links:
+    paper: https://arxiv.org/abs/2607.29009
+  access: closed
+  tags: [multi-robot, navigation, cross-embodiment]
+  added: 2026-09-29
+
+- id: closed-loop-multi-robot-manipulation
+  name: Closed-Loop Multi-Agent Framework
+  title: A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation
+  date: 2026-07
+  org: Sun Yat-sen University
+  summary: >-
+    Hierarchical LLM agents for multi-robot manipulation: a Planning Agent allocates
+    sub-tasks, per-robot Manipulation Agents act through adaptive tool use, and a
+    Verification Agent monitors physical outcomes and feeds back semantic corrections.
+    Real-robot tests; RSS 2026.
+  links:
+    paper: https://arxiv.org/abs/2607.06990
+  access: closed
+  tags: [multi-robot, manipulation, agentic-loop, tool-use, success-detection, failure-recovery]
+  added: 2026-09-29
+
+- id: dynahmrc
+  name: DynaHMRC
+  title: >-
+    DynaHMRC: Decentralized Heterogeneous Multi-Robot Collaboration for Dynamic Tasks with
+    Large Language Models
+  date: 2026-06
+  org: University of Science and Technology of China, University of Macau
+  summary: >-
+    Each robot is a role-aware LLM agent; the team collaborates through self-description,
+    leadership bidding for task allocation, leader election and reflective execution. Adds a
+    benchmark of dynamic task variants and fine-tunes domain-specific LLMs.
+  links:
+    paper: https://arxiv.org/abs/2606.14882
+  access: closed
+  tags: [multi-robot, planning, failure-recovery, benchmark]
+  added: 2026-09-29
+
+- id: rosclaw-multi-agent
+  name: ROSClaw
+  title: >-
+    ROSClaw: A Hierarchical Semantic-Physical Framework for Heterogeneous Multi-Agent
+    Collaboration
+  date: 2026-04
+  org: Tongji University
+  summary: >-
+    Agent framework for heterogeneous robots with one VLM controller that uses e-URDF
+    descriptions as physical constraints, maps simulated and real agents, logs execution
+    data for iterative policy improvement, and hands task-specific control to different
+    robots.
+  links:
+    paper: https://arxiv.org/abs/2604.04664
+    code: https://github.com/ros-claw/rosclaw
+    project: https://www.rosclaw.io/
+  access: open
+  tags: [multi-robot, ros, tool-use, sim2real, cross-embodiment]
+  note: >-
+    The repo presents it as a "physical AI runtime for embodied agents"; could also fit
+    framework.
+  added: 2026-09-29
+
+- id: scale-plan
+  name: Scale-Plan
+  title: >-
+    Scale-Plan: Scalable Language-Enabled Task Planning for Heterogeneous Multi-Robot Teams
+  date: 2026-03
+  org: Honda Research Institute
+  summary: >-
+    Given a PDDL domain, builds an action graph and uses shallow LLM reasoning to extract a
+    compact, task-relevant problem from object-rich scenes before planning, to curb
+    hallucination and weak grounding in heterogeneous multi-robot teams; evaluated in
+    AI2-THOR. IROS 2026.
+  links:
+    paper: https://arxiv.org/abs/2603.08814
+    code: https://github.com/honda-research-institute/Scale_Plan
+  access: open
+  tags: [multi-robot, planning, long-horizon]
+  added: 2026-09-29
+
+- id: indoorr2x
+  name: IndoorR2X
+  title: 'IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning'
+  date: 2026-03
+  org: Fujitsu Research, Carnegie Mellon University
+  summary: >-
+    Benchmark and simulation framework for LLM-driven multi-robot task planning that fuses
+    observations from mobile robots and static IoT sensors (e.g., cameras) into a global
+    semantic state, reducing redundant exploration.
+  links:
+    paper: https://arxiv.org/abs/2603.20182
+    project: https://fandulu.github.io/IndoorR2X_project_page/
+  access: closed
+  tags: [multi-robot, planning, memory, benchmark]
+  note: Code release not verified.
+  added: 2026-09-29
+
+- id: imr-llm
+  name: IMR-LLM
+  title: >-
+    IMR-LLM: Industrial Multi-Robot Task Planning and Program Generation using Large
+    Language Models
+  date: 2026-03
+  org: Shenzhen University et al.
+  summary: >-
+    Industrial multi-robot planning: LLMs help build disjunctive graphs that are solved
+    deterministically for a feasible high-level plan, and a process tree guides LLMs to
+    generate executable low-level robot programs; introduces the three-level IMR-Bench.
+  links:
+    paper: https://arxiv.org/abs/2603.02669
+  access: closed
+  tags: [multi-robot, planning, code-as-policy, benchmark]
+  added: 2026-09-29
+
+- id: agentcomm-bench
+  name: AgentComm-Bench
+  title: >-
+    AgentComm-Bench: Stress-Testing Cooperative Embodied AI Under Latency, Packet Loss, and
+    Bandwidth Collapse
+  date: 2026-03
+  summary: >-
+    Stress-tests cooperative embodied AI under six communication impairments (latency,
+    packet loss, bandwidth collapse, asynchronous updates, stale memory, conflicting
+    evidence) across cooperative perception, multi-agent navigation and zone search.
+  links:
+    paper: https://arxiv.org/abs/2603.20285
+  access: closed
+  tags: [benchmark, multi-robot, navigation]
+  note: No code link found.
+  added: 2026-09-29
+
+- id: kglamp
+  name: KGLAMP
+  title: >-
+    KGLAMP: Knowledge Graph-guided Language model for Adaptive Multi-robot Planning and
+    Replanning
+  date: 2026-02
+  org: Honda Research Institute USA, University of Maryland
+  summary: >-
+    A knowledge graph of object relations, spatial reachability and robot capabilities
+    guides an LLM to write PDDL problems for heterogeneous teams, serves as persistent
+    memory updated with observations, and triggers replanning on inconsistencies; tested on
+    MAT-THOR.
+  links:
+    paper: https://arxiv.org/abs/2602.04129
+  access: closed
+  tags: [multi-robot, planning, memory, failure-recovery]
+  added: 2026-09-29
+
+- id: commcp
+  name: CommCP
+  title: >-
+    CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal
+    Prediction
+  date: 2026-02
+  org: UC Riverside
+  summary: >-
+    Decentralized LLM communication for heterogeneous robots on multi-agent multi-task
+    embodied question answering; conformal prediction calibrates generated messages to limit
+    receiver distraction. Ships an MM-EQA benchmark. ICRA 2026.
+  links:
+    paper: https://arxiv.org/abs/2602.06038
+    code: https://github.com/tasl-lab/CommCP
+    project: https://comm-cp.github.io/
+  access: open
+  tags: [multi-robot, planning, benchmark]
+  added: 2026-09-29
+
+- id: meco
+  name: MeCo
+  title: >-
+    MeCo: Enhancing LLM-Empowered Multi-Robot Collaboration via Similar Task Memoization
+  date: 2026-01
+  org: Northwestern Polytechnical University et al.
+  summary: >-
+    Memoization for LLM-driven multi-robot collaboration: a similarity test retrieves
+    previously solved, similar tasks so their plans can be reused without re-invoking the
+    LLM; introduces MeCoBench for similar-task scenarios. AAMAS 2026.
+  links:
+    paper: https://arxiv.org/abs/2601.20577
+    code: https://github.com/TomWang-NPU/MeCo
+  access: open
+  tags: [multi-robot, memory, planning, benchmark]
+  added: 2026-09-29
+
+- id: emboteam
+  name: EmboTeam
+  title: >-
+    EmboTeam: Grounding LLM Reasoning into Reactive Behavior Trees via PDDL for Embodied
+    Multi-Robot Collaboration
+  date: 2026-01
+  org: Institute of Software, Chinese Academy of Sciences
+  summary: >-
+    Three-stage planner for heterogeneous teams: an LLM writes PDDL problems, a classical
+    planner searches for action sequences, and plans compile into behavior trees for
+    reactive control with a shared blackboard; introduces the MACE-THOR benchmark (42
+    tasks).
+  links:
+    paper: https://arxiv.org/abs/2601.11063
+  access: closed
+  tags: [multi-robot, planning, long-horizon, benchmark]
+  note: First-party comparison reports gains over LaMMA-P on MACE-THOR.
+  added: 2026-09-29
+
+- id: interactgen
+  name: InteractGen
+  title: >-
+    Transforming Monolithic Foundation Models into Embodied Multi-Agent Architectures for
+    Human-Robot Collaboration
+  date: 2025-11
+  org: Tsinghua University et al.
+  summary: >-
+    LLM-powered multi-agent framework that splits robot intelligence into agents for
+    perception, dependency-aware planning, decision and verification, failure reflection and
+    dynamic delegation to humans; reported in a three-month shared-office deployment
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2512.00797
+  access: closed
+  tags: [hitl, multi-robot, agentic-loop, failure-recovery, success-detection]
+  added: 2026-09-29
+
+- id: robotfleet
+  name: RobotFleet
+  title: 'RobotFleet: An Open-Source Framework for Centralized Multi-Robot Task Planning'
+  date: 2025-10
+  org: University of Southern California
+  summary: >-
+    Open-source framework for centralized LLM-based planning and scheduling across
+    heterogeneous robot fleets; robots run as containerized services, with a shared
+    declarative world state and two-way communication for execution and replanning.
+  links:
+    paper: https://arxiv.org/abs/2510.10379
+    code: https://github.com/therohangupta/robot-fleet
+  access: open
+  tags: [multi-robot, planning, agentic-loop]
+  added: 2026-09-29
+
+- id: roboos-next
+  name: RoboOS-NeXT
+  title: >-
+    RoboOS-NeXT: A Unified Memory-based Framework for Lifelong, Scalable, and Robust
+    Multi-Robot Collaboration
+  date: 2025-10
+  org: BAAI, Peking University
+  summary: >-
+    Extends RoboOS with a Spatio-Temporal-Embodiment Memory (STEM) that fuses scene
+    geometry, event history and embodiment profiles into one shared representation inside a
+    brain-cerebellum framework, for lifelong, scalable and failure-robust multi-robot
+    collaboration.
+  links:
+    paper: https://arxiv.org/abs/2510.26536
+    project: https://flagopen.github.io/RoboOS/
+  access: partial
+  tags: [multi-robot, memory, failure-recovery, cross-embodiment]
+  note: RoboOS code is open; a NeXT-specific code release was not verified.
+  added: 2026-09-29
+
+- id: pip-llm
+  name: PIP-LLM
+  title: >-
+    PIP-LLM: Integrating PDDL-Integer Programming with LLMs for Coordinating Multi-Robot
+    Teams Using Natural Language
+  date: 2025-10
+  org: University of Southern California, University of Pennsylvania
+  summary: >-
+    Translates a command into a team-level PDDL problem, turns the resulting plan into a
+    subtask dependency graph, then solves integer programs to allocate subtasks to robots,
+    optimizing travel cost and workload under capability and user constraints.
+  links:
+    paper: https://arxiv.org/abs/2510.22784
+  access: closed
+  tags: [multi-robot, planning]
+  added: 2026-09-29
+
+- id: fleet
+  name: FLEET
+  title: 'FLEET: Formal Language-Grounded Scheduling for Heterogeneous Robot Teams'
+  date: 2025-10
+  org: Johns Hopkins University APL, DEVCOM ARL
+  summary: >-
+    An LLM front-end outputs a task graph with durations and precedence plus a
+    capability-aware robot-task fitness matrix; a MILP back-end minimizes makespan while
+    robots run subtasks with agentic closed-loop control. Hardware trials use two
+    quadrupeds.
+  links:
+    paper: https://arxiv.org/abs/2510.07417
+  access: closed
+  tags: [multi-robot, planning, legged]
+  added: 2026-09-29
+
+- id: prompting-robot-teams
+  name: Prompting Robot Teams
+  title: Prompting Robot Teams with Natural Language
+  date: 2025-09
+  org: University of Cambridge
+  summary: >-
+    Distills an LLM's task decomposition into a small RNN whose states track a task
+    automaton, plus a GNN policy conditioned on those states and language embeddings, so
+    robot teams run language-specified tasks decentrally without calling the LLM at runtime.
+    RA-L.
+  links:
+    paper: https://arxiv.org/abs/2509.24575
+    project: https://sites.google.com/view/prompting-teams
+  access: closed
+  tags: [multi-robot, on-device, planning]
+  added: 2026-09-29
+
+- id: dexter-llm
+  name: DEXTER-LLM
+  title: >-
+    DEXTER-LLM: Dynamic and Explainable Coordination of Multi-Robot Systems in Unknown
+    Environments via Large Language Models
+  date: 2025-08
+  org: Peking University, Duke Kunshan University
+  summary: >-
+    Online multi-robot coordination in unknown environments: parses missions in natural
+    language or LTL, generates subtasks with multi-stage LLM reasoning, assigns them by
+    search-based optimization, and updates plans with human-in-the-loop verification as new
+    tasks appear.
+  links:
+    paper: https://arxiv.org/abs/2508.14387
+    code: https://github.com/TCXM/DEXTER-LLM
+    project: https://tcxm.github.io/DEXTER-LLM/
+  access: open
+  tags: [multi-robot, planning, hitl, long-horizon]
+  added: 2026-09-29
+
+- id: lan2cb
+  name: LAN2CB
+  title: Compositional Coordination for Multi-Robot Teams with Large Language Models
+  date: 2025-07
+  org: University of Southern California, University of Pennsylvania
+  summary: >-
+    Converts natural-language mission descriptions into executable Python for multi-robot
+    teams by parsing missions into behavior trees and generating control code from them plus
+    a structured knowledge base; adds a mission-description dataset. MRS 2025 oral.
+  links:
+    paper: https://arxiv.org/abs/2507.16068
+    project: https://sites.google.com/view/lan-cb
+  access: closed
+  tags: [multi-robot, code-as-policy, planning, dataset]
+  note: >-
+    Evaluated in simulation and on real robots (first-party); code release not verified.
+  added: 2026-09-29
+
+- id: viki-r
+  name: VIKI-R
+  title: 'VIKI-R: Coordinating Embodied Multi-Agent Cooperation via Reinforcement Learning'
+  date: 2025-06
+  org: Shanghai Jiao Tong University, Shanghai AI Laboratory et al.
+  summary: >-
+    VIKI-Bench tests embodied multi-agent cooperation at three levels (agent activation,
+    task planning, trajectory perception) across robot morphologies; VIKI-R fine-tunes a VLM
+    on chain-of-thought demonstrations, then with multi-level RL rewards. NeurIPS 2025 D&B.
+  links:
+    paper: https://arxiv.org/abs/2506.09049
+    code: https://github.com/MARS-EAI/VIKI-R
+    project: https://faceong.github.io/VIKI-R/
+  access: open
+  tags: [multi-robot, benchmark, rl, planning, cross-embodiment]
+  added: 2026-09-29
+
+- id: multi-robot-3dsg-planning
+  name: Multi-Robot 3D Scene Graph Planning
+  title: >-
+    Language-Grounded Hierarchical Planning and Execution with Multi-Robot 3D Scene Graphs
+  date: 2025-06
+  org: MIT, DEVCOM Army Research Laboratory
+  summary: >-
+    Fuses robots' open-set object maps into a shared 3D scene graph used for relocalization
+    and task and motion planning, while an LLM turns operator intent into PDDL goals using
+    scene-graph and robot capability context; tested on large-scale outdoor tasks.
+  links:
+    paper: https://arxiv.org/abs/2506.07454
+    video: https://www.youtube.com/watch?v=8xbGGOLfLAY
+  access: closed
+  tags: [multi-robot, scene-graph, memory, planning, navigation]
+  added: 2026-09-29
+
+- id: roboos
+  name: RoboOS
+  title: >-
+    RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent
+    Collaboration
+  date: 2025-05
+  org: BAAI, Peking University
+  summary: >-
+    Open-source brain-cerebellum system for multi-robot collaboration: the RoboBrain MLLM
+    plans, a plug-and-play cerebellum skill library executes, and real-time shared memory
+    syncs multi-agent state; the repo's 2.0 version adds a SaaS + MCP structure.
+  links:
+    paper: https://arxiv.org/abs/2505.03673
+    code: https://github.com/FlagOpen/RoboOS
+    project: https://flagopen.github.io/RoboOS/
+  access: open
+  tags: [multi-robot, cross-embodiment, memory, mcp, planning, long-horizon, failure-recovery, tool-use, agentic-loop]
+  note: >-
+    Could also be listed under harness; placed here because multi-agent collaboration is its
+    headline contribution.
+  added: 2026-09-29
+
+- id: hmcf
+  name: HMCF
+  title: >-
+    HMCF: A Human-in-the-loop Multi-Robot Collaboration Framework Based on Large Language
+    Models
+  date: 2025-05
+  org: University of Southampton
+  summary: >-
+    Human-in-the-loop multi-robot framework: every heterogeneous robot has an LLM agent that
+    reasons about its own capabilities for task allocation and execution, while a human
+    operator oversees the team and intervenes only when needed.
+  links:
+    paper: https://arxiv.org/abs/2505.00820
+  access: closed
+  tags: [multi-robot, hitl, safety, planning]
+  added: 2026-09-29
+
+- id: genswarm
+  name: GenSwarm
+  title: >-
+    GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models
+  date: 2025-03
+  org: Westlake University et al.
+  summary: >-
+    End-to-end multi-language-agent system that turns natural-language instructions into
+    white-box code policies for multi-robot tasks and deploys them on simulated and real
+    robot swarms. Published in npj Robotics.
+  links:
+    paper: https://arxiv.org/abs/2503.23875
+    code: https://github.com/WindyLab/GenSwarm
+  access: open
+  tags: [multi-robot, code-as-policy, sim2real]
+  added: 2026-09-29
+
+- id: swarmgpt
+  name: SwarmGPT
+  title: >-
+    SwarmGPT: Combining Large Language Models with Safe Motion Planning for Drone Swarm
+    Choreography
+  date: 2024-12
+  org: Technical University of Munich
+  summary: >-
+    Language-based choreographer for drone swarms: an LLM designs performances and a safety
+    filter minimally corrects plans that violate safety or feasibility constraints; shown in
+    simulation with up to 200 drones and on hardware with up to 20. RA-L 2025.
+  links:
+    paper: https://arxiv.org/abs/2412.08428
+    code: https://github.com/utiasDSL/swarmGPT
+    project: https://utiasdsl.github.io/swarm_GPT/
+  access: open
+  tags: [multi-robot, safety, planning]
+  added: 2026-09-29
+
+- id: dart-llm
+  name: DART-LLM
+  title: >-
+    DART-LLM: Dependency-Aware Multi-Robot Task Decomposition and Execution using Large
+    Language Models
+  date: 2024-11
+  org: The University of Tokyo
+  summary: >-
+    Decomposes natural-language instructions into subtasks linked by a directed acyclic
+    graph of dependencies, assigns them to robots, executes them through an actuation module
+    and perceives the scene with a VLM-based object detector.
+  links:
+    paper: https://arxiv.org/abs/2411.09022
+    code: https://github.com/wyd0817/DART_LLM_Task_Decomposer_Module
+    project: https://wyd0817.github.io/project-dart-llm/
+  access: open
+  tags: [multi-robot, planning]
+  note: Code is split across several module repositories linked from the project page.
+  added: 2026-09-29
+
+- id: llm2swarm
+  name: LLM2Swarm
+  title: >-
+    LLM2Swarm: Robot Swarms that Responsively Reason, Plan, and Collaborate through LLMs
+  date: 2024-10
+  org: IRIDIA (Universite Libre de Bruxelles), CISPA
+  summary: >-
+    Proof-of-concept integration of LLMs with robot swarms in two modes: indirect (LLMs
+    synthesize and validate controllers) and direct (each robot runs its own LLM for
+    robot-robot and human-swarm dialogue, e.g., to detect anomalies). NeurIPS 2024 workshop.
+  links:
+    paper: https://arxiv.org/abs/2410.11387
+    code: https://github.com/Pold87/LLM2Swarm
+  access: open
+  tags: [multi-robot, code-as-policy, hitl]
+  added: 2026-09-29
+
+- id: emos
+  name: EMOS
+  title: >-
+    EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents
+  date: 2024-10
+  org: National University of Singapore et al.
+  summary: >-
+    LLM multi-agent system for heterogeneous robots in which each agent writes its own
+    "robot resume" by reading its URDF and calling kinematics tools, instead of
+    human-assigned roles, before planning and task allocation; introduces the Habitat-MAS
+    benchmark.
+  links:
+    paper: https://arxiv.org/abs/2410.22662
+    code: https://github.com/SgtVincent/EMOS
+  access: open
+  tags: [multi-robot, planning, tool-use, cross-embodiment, benchmark]
+  note: The repo describes itself as an early release.
+  added: 2026-09-29
+
+- id: lamma-p
+  name: LaMMA-P
+  title: >-
+    LaMMA-P: Generalizable Multi-Agent Long-Horizon Task Allocation and Planning with
+    LM-Driven PDDL Planner
+  date: 2024-09
+  org: UC Riverside
+  summary: >-
+    Couples LM reasoning with a classical heuristic-search PDDL planner to identify and
+    allocate subtasks across heterogeneous robot teams on long-horizon tasks; introduces the
+    MAT-THOR benchmark in AI2-THOR. ICRA 2025.
+  links:
+    paper: https://arxiv.org/abs/2409.20560
+    code: https://github.com/tasl-lab/LaMMA-P
+    project: https://lamma-p.github.io/
+  access: open
+  tags: [multi-robot, planning, long-horizon, benchmark]
+  added: 2026-09-29
+
+- id: coherent
+  name: COHERENT
+  title: >-
+    COHERENT: Collaboration of Heterogeneous Multi-Robot System with Large Language Models
+  date: 2024-09
+  org: Shanghai AI Laboratory, Northwestern Polytechnical University
+  summary: >-
+    LLM task planning for heterogeneous teams (quadrotors, robot dogs, arms) via a
+    Proposal-Execution-Feedback-Adjustment loop: a central assigner decomposes and assigns
+    subtasks, each robot executor picks a feasible action and reports feedback for
+    adjustment. ICRA 2025.
+  links:
+    paper: https://arxiv.org/abs/2409.15146
+    code: https://github.com/MrKeee/COHERENT
+  access: open
+  tags: [multi-robot, planning, agentic-loop, failure-recovery]
+  added: 2026-09-29
+
+- id: llamar
+  name: LLaMAR
+  title: >-
+    LLaMAR: Long-Horizon Planning for Multi-Agent Robots in Partially Observable
+    Environments
+  date: 2024-07
+  org: MIT et al.
+  summary: >-
+    LM-based cognitive architecture for long-horizon multi-agent planning under partial
+    observability, using a plan-act-correct-verify loop that self-corrects from execution
+    feedback without oracles or simulators; introduces the MAP-THOR suite in AI2-THOR.
+  links:
+    paper: https://arxiv.org/abs/2407.10031
+    code: https://github.com/nsidn98/LLaMAR
+  access: open
+  tags: [multi-robot, planning, long-horizon, failure-recovery, success-detection, benchmark]
+  added: 2026-09-29
+
+- id: autort
+  name: AutoRT
+  title: >-
+    AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents
+  date: 2024-01
+  org: Google DeepMind
+  summary: >-
+    Fleet orchestration for data collection: a VLM describes each robot's scene, an LLM
+    proposes diverse tasks, and a prompt-level "robot constitution" of safety rules filters
+    them. DeepMind reports up to 20 robots at once and 77,000 trials over seven months
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2401.12963
+    project: https://auto-rt.github.io/
+    blog: https://deepmind.google/blog/shaping-the-future-of-advanced-robotics/
+  access: closed
+  tags: [multi-robot, safety, dataset, hitl, mobile-manipulation, agentic-loop]
+  note: All deployed robots were under human supervision per the DeepMind blog.
+  added: 2026-09-29
+
+- id: co-navgpt
+  name: Co-NavGPT
+  title: >-
+    Co-NavGPT: Multi-Robot Cooperative Visual Semantic Navigation Using Vision Language
+    Models
+  date: 2023-10
+  org: University of Groningen
+  summary: >-
+    A VLM acts as global planner for multi-robot visual target navigation: sub-maps from
+    several robots are merged into one global map encoding robot states and frontiers, and
+    the VLM assigns frontiers to robots. Evaluated on HM3D scenes.
+  links:
+    paper: https://arxiv.org/abs/2310.07937
+    code: https://github.com/ybgdgh/Co-NavGPT
+    project: https://sites.google.com/view/co-navgpt2
+  access: open
+  tags: [multi-robot, navigation, open-vocabulary, planning]
+  added: 2026-09-29
+
+- id: smart-llm
+  name: SMART-LLM
+  title: 'SMART-LLM: Smart Multi-Agent Robot Task Planning using Large Language Models'
+  date: 2023-09
+  org: Purdue University
+  summary: >-
+    Few-shot programmatic LLM prompting pipeline that turns a high-level instruction into a
+    multi-robot plan via task decomposition, coalition formation and task allocation; ships
+    a benchmark of instructions of varying complexity and is tested in simulation and on
+    real robots.
+  links:
+    paper: https://arxiv.org/abs/2309.10062
+    code: https://github.com/SMARTlab-Purdue/SMART-LLM
+    project: https://sites.google.com/view/smart-llm/
+  access: open
+  tags: [multi-robot, planning, code-as-policy, benchmark]
+  added: 2026-09-29
+
+- id: hmas-2
+  name: HMAS-2 (Scalable Multi-Robot Collaboration)
+  title: >-
+    Scalable Multi-Robot Collaboration with Large Language Models: Centralized or
+    Decentralized Systems?
+  date: 2023-09
+  org: MIT
+  summary: >-
+    Compares centralized, decentralized and two hybrid LLM communication frameworks for
+    multi-robot planning on success rate and token efficiency; a hybrid design (HMAS-2)
+    scaled best as agent count grew and was also shown in 3D simulation.
+  links:
+    paper: https://arxiv.org/abs/2309.15943
+    code: https://github.com/yongchao98/multi-agent-framework
+    project: https://yongchao98.github.io/MIT-REALM-Multi-Robot/
+  access: open
+  tags: [multi-robot, planning, agentic-loop]
+  added: 2026-09-29
+
+- id: roco
+  name: RoCo
+  title: 'RoCo: Dialectic Multi-Robot Collaboration with Large Language Models'
+  date: 2023-07
+  org: Columbia University
+  summary: >-
+    Each robot arm is driven by an LLM agent; agents discuss strategy in dialogue, propose
+    sub-task plans and task-space waypoints for a multi-arm motion planner, and revise them
+    in-context from environment feedback such as collision checks. Introduces RoCoBench.
+  links:
+    paper: https://arxiv.org/abs/2307.04738
+    code: https://github.com/MandiZhao/robot-collab
+    project: https://project-roco.github.io/
+  access: open
+  tags: [multi-robot, manipulation, planning, agentic-loop, benchmark, hitl]
+  added: 2026-09-29
+
+- id: coela
+  name: CoELA
+  title: Building Cooperative Embodied Agents Modularly with Large Language Models
+  date: 2023-07
+  org: UMass Amherst et al.
+  summary: >-
+    Cooperative Embodied Language Agent: a modular LLM agent (perception, memory,
+    communication, planning, execution) for decentralized multi-agent cooperation with
+    costly communication, evaluated on C-WAH and TDW-MAT. ICLR 2024.
+  links:
+    paper: https://arxiv.org/abs/2307.02485
+    code: https://github.com/UMass-Foundation-Model/Co-LLM-Agents
+    project: https://umass-embodied-agi.github.io/CoELA/
+  access: open
+  tags: [multi-robot, agentic-loop, memory, planning, hitl]
+  note: >-
+    First-party result that GPT-4-driven CoELA beat planning-based baselines; open LLMs
+    lagged.
+  added: 2026-09-29

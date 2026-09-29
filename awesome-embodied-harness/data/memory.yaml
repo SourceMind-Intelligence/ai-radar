@@ -1,1 +1,920 @@
-[]
+- id: workspace-models
+  name: Workspace Models
+  title: 'Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision'
+  date: 2026-09
+  org: MIT, CMU
+  summary: >-
+    Moves VLM calls to training time: a VLM labels task-salient current and past
+    information, which is distilled into a lightweight latent 'workspace token' that
+    policies use at deployment to solve memory-intensive tasks without in-the-loop VLM
+    reasoning.
+  links:
+    paper: https://arxiv.org/abs/2609.20820
+  access: closed
+  tags: [memory, manipulation, long-horizon]
+  note: CoRL 2026.
+  added: 2026-09-29
+
+- id: me-brain-1-0
+  name: ME-Brain-1.0
+  title: 'ME-Brain-1.0: Memory, Cognition and Action for Evolving Embodied Intelligence'
+  date: 2026-09
+  org: MachEmbodied
+  summary: >-
+    Self-evolving embodied system built as a loop of execution, experience acquisition and
+    evolution: an evolvable hierarchical memory of multimodal trajectories, a cognitive core
+    that turns experience into skills, and an event-driven action model.
+  links:
+    paper: https://arxiv.org/abs/2609.24271
+    project: https://github.com/MachEmbodied/ME-Brain-1.0
+  access: closed
+  tags: [memory, self-improving, agentic-loop, long-horizon]
+  note: >-
+    Repository is a project page (report and videos); the MachEmbodied GitHub org also hosts
+    Li Auto's ME-VLM.
+  added: 2026-09-29
+
+- id: ledger-object-memory
+  name: Ledger
+  title: 'Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs'
+  date: 2026-09
+  org: Harvard University
+  summary: >-
+    Harness that keeps short-term perceptual memory inside a fine-tuned pi0.5 policy and
+    long-term object memory outside it, as a spatio-temporal object ledger built from a SAM3
+    tracker and VLM captions that an LLM planner reads at step boundaries.
+  links:
+    paper: https://arxiv.org/abs/2609.34554
+  access: closed
+  tags: [memory, vla, long-horizon, manipulation]
+  note: 'First-party: 64.3% four-suite average on RoboMME.'
+  added: 2026-09-29
+
+- id: ponderpounce
+  name: PonderPounce
+  title: 'PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control'
+  date: 2026-08
+  org: MAUM.AI, Seoul National University, Georgia Tech
+  summary: >-
+    Uses a pretrained System-2 MLLM's native context as episode memory: it folds execution
+    history and demonstrations into continuously refreshed 'cognition' that an asynchronous
+    System-1 action model conditions on; evaluated on RoboMME.
+  links:
+    paper: https://arxiv.org/abs/2608.24115
+    project: https://worv-ai.github.io/ponderpounce/
+    weights: https://huggingface.co/worv-ai/ponderpounce-9b-robomme
+  access: partial
+  tags: [memory, dual-system, vla, long-horizon]
+  added: 2026-09-29
+
+- id: mimir
+  name: Mimir
+  title: >-
+    Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in
+    Interactive Environments
+  date: 2026-08
+  summary: >-
+    Neuro-symbolic memory that separates world memory (object locations, states, evidence)
+    from task memory (goal agenda, progress, failures) and grounds the active goal before
+    each action; evaluated on EB-ALFRED and EB-Habitat.
+  links:
+    paper: https://arxiv.org/abs/2608.04933
+  access: closed
+  tags: [memory, planning]
+  added: 2026-09-29
+
+- id: worth-remembering
+  name: Worth Remembering
+  title: 'Worth Remembering: Surprise-Gated Robot Episodic Memory'
+  date: 2026-06
+  org: MIT, Lockheed Martin
+  summary: >-
+    Decides which episodes a robot should store by gating memory formation with Bayesian
+    surprise computed in V-JEPA 2's latent space, augmenting a 4D scene-graph spatial memory
+    for robot question answering.
+  links:
+    paper: https://arxiv.org/abs/2606.03787
+  access: closed
+  tags: [memory, scene-graph, world-model]
+  added: 2026-09-29
+
+- id: raven
+  name: RAVEN
+  title: 'RAVEN: Long-Horizon Reasoning & Navigation with a Visuo-Spatio-Temporal Memory'
+  date: 2026-06
+  org: Princeton University, University of Pennsylvania
+  summary: >-
+    Agentic memory that stores visual embeddings with pose and time in a vector database and
+    grounds retrieval in a spatial map to answer long-horizon questions and navigate to
+    goals, avoiding lossy captioning; demonstrated on a Unitree Go1.
+  links:
+    paper: https://arxiv.org/abs/2606.25206
+    code: https://github.com/princeton-prism/RAVEN
+    project: https://ravenmem.github.io/
+  access: open
+  tags: [memory, navigation, agentic-loop, legged]
+  added: 2026-09-29
+
+- id: halo-memory-retrieval
+  name: HALO
+  title: Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control
+  date: 2026-06
+  org: UT Austin
+  summary: >-
+    Visuomotor policy with attention-based memory retrieval over up to eight minutes of
+    history; distills VLM priors through memory-dependent video QA to avoid spurious
+    correlations and uses sparse attention to limit compounding memory errors.
+  links:
+    paper: https://arxiv.org/abs/2606.25136
+    project: https://robin-lab.cs.utexas.edu/HALO
+  access: closed
+  tags: [memory, manipulation, long-horizon]
+  added: 2026-09-29
+
+- id: farm-relational-memory
+  name: FARM
+  title: 'FARM: Find Anything using Relational Spatial Memory'
+  date: 2026-06
+  org: UC Berkeley, Stanford University
+  summary: >-
+    Real-time (5-10 Hz) open-vocabulary object-level memory with geometry, visual-language
+    descriptors and viewpoint evidence; queries are parsed by VLMs and spatial relations
+    grounded through object symbols and predicates to find specific instances.
+  links:
+    paper: https://arxiv.org/abs/2606.15476
+    code: https://github.com/GoldenGait/FARM-Project
+    project: https://goldengait.github.io/farm/
+  access: open
+  tags: [memory, open-vocabulary, navigation, legged]
+  note: Deployed closed-loop on a quadruped with onboard compute (first-party).
+  added: 2026-09-29
+
+- id: h2-emv
+  name: H2-EMV
+  title: Learning to Forget -- Hierarchical Episodic Memory for Lifelong Robot Deployment
+  date: 2026-04
+  org: Karlsruhe Institute of Technology
+  summary: >-
+    Hierarchical episodic memory that lets a humanoid verbalize past experience and learn
+    what to forget, using LLM-based relevance estimation conditioned on natural-language
+    rules refined from user feedback; evaluated on 20.5 h of ARMAR-7 recordings.
+  links:
+    paper: https://arxiv.org/abs/2604.11306
+  access: closed
+  tags: [memory, humanoid, hitl, long-horizon]
+  note: 'First-party: about 45% smaller memory at maintained QA accuracy.'
+  added: 2026-09-29
+
+- id: robostream
+  name: RoboStream
+  title: >-
+    RoboStream: Weaving Spatio-Temporal Reasoning with Memory in Vision-Language Models for
+    Robotics
+  date: 2026-03
+  org: Tsinghua University (SIGS), et al.
+  summary: >-
+    Training-free memory layer for VLM planners: spatio-temporal fusion tokens bind visual
+    evidence to 3D attributes for persistent object grounding, and a causal spatio-temporal
+    graph records action-triggered state transitions across long-horizon manipulation.
+  links:
+    paper: https://arxiv.org/abs/2603.12939
+    code: https://github.com/yu2hi13/RoboStream
+    project: https://robostream123.github.io/
+  access: open
+  tags: [memory, scene-graph, manipulation, long-horizon]
+  note: ECCV 2026.
+  added: 2026-09-29
+
+- id: mem-multi-scale-embodied-memory
+  name: MEM
+  title: 'MEM: Multi-Scale Embodied Memory for Vision Language Action Models'
+  date: 2026-03
+  org: Physical Intelligence
+  summary: >-
+    Mixed-modal memory for VLA policies that pairs video-based short-horizon memory
+    (compressed by a video encoder) with text-based long-horizon memory, letting robot
+    policies carry out multi-stage tasks lasting up to about fifteen minutes.
+  links:
+    paper: https://arxiv.org/abs/2603.03596
+  access: closed
+  tags: [memory, vla, long-horizon, manipulation]
+  note: >-
+    The arXiv entry points to a Physical Intelligence research page; that page rate-limited
+    automated access, so only the paper is linked.
+  added: 2026-09-29
+
+- id: gsmem
+  name: GSMem
+  title: >-
+    GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied
+    Exploration and Reasoning
+  date: 2026-03
+  org: Case Western Reserve University, University at Buffalo
+  summary: >-
+    Uses 3D Gaussian Splatting as persistent spatial memory so an exploring agent can
+    re-render optimal novel views of remembered regions for VLM reasoning, localizing
+    targets via parallel object-level scene graphs and language fields.
+  links:
+    paper: https://arxiv.org/abs/2603.19137
+    code: https://github.com/vulab-AI/GSMem
+    project: https://vulab-ai.github.io/GSMem/
+  access: open
+  tags: [memory, 3d, navigation, scene-graph]
+  added: 2026-09-29
+
+- id: star-robot-memory
+  name: STaR
+  title: >-
+    STaR: Scalable Task-Conditioned Retrieval for Long-Horizon Multimodal Robot Memory
+  date: 2026-02
+  org: University of Toronto, York University
+  summary: >-
+    Agentic framework that builds a task-agnostic multimodal long-term memory (object
+    attributes, spatial relations, dynamic events) and extracts compact task-relevant
+    context with an Information-Bottleneck-based retrieval algorithm for reasoning and
+    navigation.
+  links:
+    paper: https://arxiv.org/abs/2602.09255
+    code: https://github.com/TRAILab/STaR
+    project: https://trailab.github.io/STaR-website/
+  access: open
+  tags: [memory, navigation, agentic-loop, long-horizon]
+  note: RA-L 2026 (per repository README).
+  added: 2026-09-29
+
+- id: physmem
+  name: PhysMem
+  title: 'PhysMem: Scaling Test-Time Memory for Embodied Physical Reasoning'
+  date: 2026-02
+  org: UC San Diego, Stanford University
+  summary: >-
+    Test-time memory for VLM robot planners that records interaction experience, forms
+    hypotheses about physical properties and verifies them through targeted interaction
+    before promoting them to guide later decisions, without updating model weights.
+  links:
+    paper: https://arxiv.org/abs/2602.20323
+    code: https://github.com/haoyangli16/PhysMem
+    project: https://phys-mem.github.io/
+  access: open
+  tags: [memory, self-improving, manipulation, planning]
+  added: 2026-09-29
+
+- id: memctrl
+  name: MemCtrl
+  title: 'MemCtrl: Using MLLMs as Active Memory Controllers on Embodied Agents'
+  date: 2026-01
+  org: University of Maryland
+  summary: >-
+    Adds a trainable memory head to an MLLM that decides online which observations or
+    reflections to retain, update or discard during exploration, trained from an offline
+    expert or with online RL, instead of treating memory as offline RAG storage.
+  links:
+    paper: https://arxiv.org/abs/2601.20831
+  access: closed
+  tags: [memory, rl, navigation]
+  added: 2026-09-29
+
+- id: momagraph
+  name: MomaGraph
+  title: >-
+    MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Model for Embodied Task
+    Planning
+  date: 2025-12
+  org: UC Berkeley, University of Toronto, University of Maryland
+  summary: >-
+    State-aware scene graph unifying spatial-functional relations and part-level interactive
+    elements for mobile manipulation; releases MomaGraph-Scenes, MomaGraph-Bench and
+    MomaGraph-R1, a 7B RL-trained VLM that predicts task-oriented graphs for
+    Graph-then-Plan.
+  links:
+    paper: https://arxiv.org/abs/2512.16909
+    code: https://github.com/HybridRobotics/MomaGraph
+    project: https://hybridrobotics.github.io/MomaGraph/
+    weights: https://huggingface.co/cheryyunl/MomaGraph-R1
+  access: open
+  tags: [scene-graph, planning, mobile-manipulation, dataset, benchmark]
+  added: 2026-09-29
+
+- id: affordance-rag
+  name: Affordance RAG
+  title: >-
+    Affordance RAG: Hierarchical Multimodal Retrieval with Affordance-Aware Embodied Memory
+    for Mobile Manipulation
+  date: 2025-12
+  org: Keio University, CMU
+  summary: >-
+    Zero-shot hierarchical multimodal retrieval over an affordance-aware embodied memory
+    built from pre-explored images: retrieves candidate targets by regional and visual
+    semantics, then reranks by affordance for open-vocabulary mobile manipulation.
+  links:
+    paper: https://arxiv.org/abs/2512.18987
+  access: closed
+  tags: [memory, mobile-manipulation, open-vocabulary]
+  note: RA-L, presented at ICRA 2026; first-party 85% real-world task success.
+  added: 2026-09-29
+
+- id: daaam
+  name: DAAAM
+  title: Describe Anything Anywhere At Any Moment
+  date: 2025-11
+  org: MIT
+  summary: >-
+    Real-time spatio-temporal memory that turns localized captions into a hierarchical 4D
+    scene graph with detailed, geometrically grounded descriptions, queried by a
+    tool-calling agent for spatio-temporal QA (NaVQA, OC-NaVQA) and task grounding (SG3D).
+  links:
+    paper: https://arxiv.org/abs/2512.00565
+    code: https://github.com/MIT-SPARK/DAAAM
+    project: https://nicolasgorlo.com/DAAAM_25
+  access: open
+  tags: [scene-graph, memory, tool-use, 3d]
+  note: CVPR 2026 (per repository); builds on Hydra.
+  added: 2026-09-29
+
+- id: memer
+  name: MemER
+  title: 'MemER: Scaling Up Memory for Robot Control via Experience Retrieval'
+  date: 2025-10
+  org: Stanford University
+  summary: >-
+    Hierarchical policy in which a fine-tuned VLM selects and tracks task-relevant keyframes
+    from past experience and issues language subtasks to a low-level VLA (pi0.5), enabling
+    long-horizon, memory-dependent real-world manipulation.
+  links:
+    paper: https://arxiv.org/abs/2510.20328
+    code: https://github.com/memer-policy/memer
+    project: https://jen-pan.github.io/memer/
+  access: partial
+  tags: [memory, dual-system, vla, manipulation, long-horizon]
+  note: Code and high-level training data released; released weights not verified.
+  added: 2026-09-29
+
+- id: robomemory
+  name: RoboMemory
+  title: >-
+    RoboMemory: A Brain-inspired Multi-memory Agentic Framework for Interactive
+    Environmental Learning in Physical Embodied Systems
+  date: 2025-08
+  org: CUHK-Shenzhen, et al.
+  summary: >-
+    Brain-inspired agent framework unifying spatial, temporal, episodic and semantic memory
+    in a parallel architecture, with a dynamic spatial knowledge graph and a closed-loop
+    planner with critic; evaluated on EmbodiedBench and in real-world trials.
+  links:
+    paper: https://arxiv.org/abs/2508.01415
+    project: https://sp4595.github.io/robomemory/
+  access: closed
+  tags: [memory, agentic-loop, planning, long-horizon]
+  added: 2026-09-29
+
+- id: memoryvla
+  name: MemoryVLA
+  title: >-
+    MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic
+    Manipulation
+  date: 2025-08
+  org: Tsinghua University, Dexmal
+  summary: >-
+    VLA with a perceptual-cognitive memory bank: VLM-produced perceptual and cognitive
+    tokens form working memory that retrieves, fuses and consolidates past entries,
+    conditioning a diffusion action expert for long-horizon, non-Markovian manipulation.
+  links:
+    paper: https://arxiv.org/abs/2508.19236
+    code: https://github.com/shihao1895/MemoryVLA
+    project: https://shihao1895.github.io/MemoryVLA
+  access: open
+  tags: [memory, vla, manipulation, long-horizon]
+  note: ICLR 2026.
+  added: 2026-09-29
+
+- id: m3-agent
+  name: M3-Agent
+  title: >-
+    Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory
+  date: 2025-08
+  org: ByteDance Seed
+  summary: >-
+    Multimodal agent that turns streaming video and audio into entity-centric episodic and
+    semantic long-term memory and completes instructions through multi-turn retrieval and
+    reasoning; introduces M3-Bench, including robot-perspective videos.
+  links:
+    paper: https://arxiv.org/abs/2508.09736
+    code: https://github.com/bytedance-seed/m3-agent
+    project: https://m3-agent.github.io/
+    weights: https://huggingface.co/ByteDance-Seed/M3-Agent-Control
+  access: open
+  tags: [memory, video, benchmark]
+  note: >-
+    General multimodal agent rather than a robot controller; included for its
+    robot-perspective long-term memory evaluation (M3-Bench-robot).
+  added: 2026-09-29
+
+- id: graphpad
+  name: GraphPad
+  title: 'GraphPad: Inference-Time 3D Scene Graph Updates for Embodied Question Answering'
+  date: 2025-06
+  org: University of Waterloo, UCLA
+  summary: >-
+    Structured memory that a VLM agent edits through API calls at inference time: a mutable
+    scene graph, a frame-indexed navigation log and a task scratchpad, tailored to the
+    current question; evaluated on OpenEQA.
+  links:
+    paper: https://arxiv.org/abs/2506.01174
+  access: closed
+  tags: [scene-graph, memory, tool-use]
+  added: 2026-09-29
+
+- id: m3-spatial-memory
+  name: M3
+  title: 'M3: 3D-Spatial MultiModal Memory'
+  date: 2025-03
+  org: UC San Diego, NVIDIA
+  summary: >-
+    Multimodal scene memory that stores foundation-model features in 3D Gaussian Splatting,
+    using principal scene components and Gaussian memory attention to compress
+    high-dimensional features; deployed as a feature field on a quadruped robot indoors.
+  links:
+    paper: https://arxiv.org/abs/2503.16413
+    code: https://github.com/MaureenZOU/m3-spatial
+    project: https://m3-spatial-memory.github.io/
+  access: open
+  tags: [memory, 3d, legged]
+  note: ICLR 2025.
+  added: 2026-09-29
+
+- id: mem2ego
+  name: Mem2Ego
+  title: >-
+    Mem2Ego: Empowering Vision-Language Models with Global-to-Ego Memory for Long-Horizon
+    Embodied Navigation
+  date: 2025-02
+  org: Huawei Noah's Ark Lab
+  summary: >-
+    VLM navigation framework that adaptively retrieves task-relevant cues from a global
+    memory module and aligns them with the agent's egocentric observations, rather than
+    verbalizing maps into text, for long-horizon object navigation.
+  links:
+    paper: https://arxiv.org/abs/2502.14254
+  access: closed
+  tags: [memory, navigation, long-horizon]
+  added: 2026-09-29
+
+- id: grapheqa
+  name: GraphEQA
+  title: >-
+    GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering
+  date: 2024-12
+  org: CMU, et al.
+  summary: >-
+    Grounds a VLM planner in a real-time 3D metric-semantic scene graph (built with Hydra)
+    plus task-relevant images as multimodal memory, exploiting the graph hierarchy for
+    structured planning and semantics-guided exploration in embodied QA.
+  links:
+    paper: https://arxiv.org/abs/2412.14480
+    code: https://github.com/SaumyaSaxena/graph_eqa
+    project: https://saumyasaxena.github.io/grapheqa/
+  access: open
+  tags: [scene-graph, memory, navigation, planning]
+  added: 2026-09-29
+
+- id: embodied-videoagent
+  name: Embodied VideoAgent
+  title: >-
+    Embodied VideoAgent: Persistent Memory from Egocentric Videos and Embodied Sensors
+    Enables Dynamic Scene Understanding
+  date: 2024-12
+  org: BIGAI
+  summary: >-
+    LLM agent that builds persistent scene memory from egocentric video plus depth and pose,
+    and uses a VLM to update the memory when actions on objects are observed; used for 3D
+    scene QA, planning and perception for robot manipulation.
+  links:
+    paper: https://arxiv.org/abs/2501.00358
+    code: https://github.com/Embodied-VideoAgent/embodied-videoagent
+    project: https://embodied-videoagent.github.io/
+  access: open
+  tags: [memory, video, 3d]
+  note: ICCV 2025 Spotlight (per repository).
+  added: 2026-09-29
+
+- id: dynamem
+  name: DynaMem
+  title: >-
+    DynaMem: Online Dynamic Spatio-Semantic Memory for Open World Mobile Manipulation
+  date: 2024-11
+  org: NYU, Hello Robot, Meta
+  summary: >-
+    Dynamic spatio-semantic memory (a 3D point-cloud structure) for open-vocabulary mobile
+    manipulation in changing scenes; answers object-localization queries with multimodal
+    LLMs or VLM features and updates as objects move, appear or disappear.
+  links:
+    paper: https://arxiv.org/abs/2411.04999
+    code: https://github.com/hello-robot/stretch_ai
+    project: https://dynamem.github.io/
+  access: open
+  tags: [memory, mobile-manipulation, open-vocabulary, 3d]
+  note: Code ships as part of Hello Robot's stretch_ai.
+  added: 2026-09-29
+
+- id: 3d-mem
+  name: 3D-Mem
+  title: '3D-Mem: 3D Scene Memory for Embodied Exploration and Reasoning'
+  date: 2024-11
+  org: UMass Amherst, et al.
+  summary: >-
+    Represents explored space as multi-view 'memory snapshots' and unexplored space as
+    'frontier snapshots', letting a VLM agent both answer questions from memory and decide
+    where to explore, for lifelong embodied exploration and QA.
+  links:
+    paper: https://arxiv.org/abs/2411.17735
+    code: https://github.com/UMass-Foundation-Model/3D-Mem
+    project: https://umass-embodied-agi.github.io/3D-Mem/
+  access: open
+  tags: [memory, navigation, 3d]
+  added: 2026-09-29
+
+- id: sg-nav
+  name: SG-Nav
+  title: >-
+    SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation
+  date: 2024-10
+  org: Tsinghua University, BUPT
+  summary: >-
+    Zero-shot object navigation that represents the observed scene as an online 3D scene
+    graph (objects, groups, rooms) and prompts an LLM with hierarchical chain-of-thought
+    over it, plus a re-perception step to correct detection errors.
+  links:
+    paper: https://arxiv.org/abs/2410.08189
+    code: https://github.com/bagh2178/SG-Nav
+    project: https://bagh2178.github.io/SG-Nav/
+  access: open
+  tags: [scene-graph, navigation, planning, open-vocabulary]
+  note: NeurIPS 2024.
+  added: 2026-09-29
+
+- id: dovsg
+  name: DovSG
+  title: >-
+    Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile
+    Manipulation
+  date: 2024-10
+  org: Beihang University, City University of Hong Kong, et al.
+  summary: >-
+    Mobile manipulation framework that builds an open-vocabulary 3D scene graph from RGB-D
+    with VLM detections and updates it locally as people or the robot change the scene,
+    feeding a language-guided task planner for long-term tasks.
+  links:
+    paper: https://arxiv.org/abs/2410.11989
+    code: https://github.com/BJHYZJ/DovSG
+    project: https://bjhyzj.github.io/dovsg-web
+  access: open
+  tags: [scene-graph, mobile-manipulation, open-vocabulary, long-horizon]
+  note: RA-L 2025 (per arXiv).
+  added: 2026-09-29
+
+- id: remembr
+  name: ReMEmbR
+  title: >-
+    ReMEmbR: Building and Reasoning Over Long-Horizon Spatio-Temporal Memory for Robot
+    Navigation
+  date: 2024-09
+  org: NVIDIA
+  summary: >-
+    Retrieval-augmented robot memory that indexes long deployment histories by time,
+    position and image content, and lets an LLM agent query it to answer where/when/what
+    questions and produce navigation goals; introduces the NaVQA dataset.
+  links:
+    paper: https://arxiv.org/abs/2409.13682
+    code: https://github.com/NVIDIA-AI-IOT/remembr
+    project: https://nvidia-ai-iot.github.io/remembr/
+  access: open
+  tags: [memory, navigation, agentic-loop, video, long-horizon]
+  added: 2026-09-29
+
+- id: karma
+  name: KARMA
+  title: 'KARMA: Augmenting Embodied AI Agents with Long-and-short Term Memory Systems'
+  date: 2024-09
+  summary: >-
+    Memory system for LLM planners in household tasks: long-term memory holds a 3D scene
+    graph of the environment, short-term memory tracks object position and state changes
+    with adaptive replacement, and both are retrieved via memory-augmented prompting.
+  links:
+    paper: https://arxiv.org/abs/2409.14908
+  access: closed
+  tags: [memory, scene-graph, planning, long-horizon]
+  added: 2026-09-29
+
+- id: embodied-rag
+  name: Embodied-RAG
+  title: >-
+    Embodied-RAG: General Non-parametric Embodied Memory for Retrieval and Generation
+  date: 2024-09
+  org: CMU
+  summary: >-
+    Non-parametric embodied memory that autonomously builds a hierarchical 'semantic forest'
+    of language descriptions at multiple spatial and semantic resolutions, supporting
+    retrieval-augmented navigation and language generation across diverse environments.
+  links:
+    paper: https://arxiv.org/abs/2409.18313
+    code: https://github.com/quanting-xie/Embodied-RAG
+    project: https://quanting-xie.github.io/Embodied-RAG-web/
+  access: open
+  tags: [memory, navigation, open-vocabulary]
+  note: >-
+    Code link is the first author's Embodied-RAG repository (semantic-forest construction);
+    it is not linked from the project page.
+  added: 2026-09-29
+
+- id: mobility-vla
+  name: Mobility VLA
+  title: >-
+    Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological
+    Graphs
+  date: 2024-07
+  org: Google DeepMind
+  summary: >-
+    Hierarchical navigation for multimodal (text and image) instructions: a long-context VLM
+    reasons over a previously recorded demonstration-tour video to pick the goal, and a
+    topological graph built from the tour drives low-level navigation.
+  links:
+    paper: https://arxiv.org/abs/2407.07775
+  access: closed
+  tags: [navigation, memory, video, long-horizon, dual-system]
+  added: 2026-09-29
+
+- id: clio
+  name: Clio
+  title: 'Clio: Real-time Task-Driven Open-Set 3D Scene Graphs'
+  date: 2024-04
+  org: MIT SPARK Lab
+  summary: >-
+    Builds a hierarchical open-set 3D scene graph online on onboard compute, keeping only
+    the objects, regions and granularity relevant to a list of natural-language tasks via
+    agglomerative Information Bottleneck clustering.
+  links:
+    paper: https://arxiv.org/abs/2404.13696
+    code: https://github.com/MIT-SPARK/Clio
+  access: open
+  tags: [scene-graph, open-vocabulary, 3d, memory]
+  added: 2026-09-29
+
+- id: moma-llm
+  name: MoMa-LLM
+  title: >-
+    Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile
+    Manipulation
+  date: 2024-03
+  org: University of Freiburg
+  summary: >-
+    Grounds an LLM in open-vocabulary scene graphs that are updated as the robot explores
+    and interleaved with an object-centric action space, for zero-shot interactive object
+    search with mobile manipulation in simulation and the real world.
+  links:
+    paper: https://arxiv.org/abs/2403.08605
+    code: https://github.com/robot-learning-freiburg/MoMa-LLM
+    project: https://moma-llm.cs.uni-freiburg.de/
+  access: open
+  tags: [scene-graph, mobile-manipulation, open-vocabulary, planning]
+  added: 2026-09-29
+
+- id: hov-sg
+  name: HOV-SG
+  title: >-
+    Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation
+  date: 2024-03
+  org: University of Freiburg, University of Technology Nuremberg
+  summary: >-
+    Hierarchical open-vocabulary 3D scene graph (floors, rooms, objects) enriched with
+    vision-language features plus a cross-floor Voronoi graph, enabling language-grounded
+    robot navigation in multi-story buildings.
+  links:
+    paper: https://arxiv.org/abs/2403.17846
+    code: https://github.com/hovsg/HOV-SG
+    project: https://hovsg.github.io/
+  access: open
+  tags: [scene-graph, open-vocabulary, navigation, 3d]
+  added: 2026-09-29
+
+- id: roboexp
+  name: RoboEXP
+  title: >-
+    RoboEXP: Action-Conditioned Scene Graph via Interactive Exploration for Robotic
+    Manipulation
+  date: 2024-02
+  org: Columbia University, UIUC, Amazon, et al.
+  summary: >-
+    Robot explores a scene by physically interacting with objects, using an LMM and explicit
+    memory to decide what and how to explore, and incrementally builds an action-conditioned
+    scene graph (geometry, semantics, action-conditioned relations) for downstream
+    manipulation.
+  links:
+    paper: https://arxiv.org/abs/2402.15487
+    code: https://github.com/jianghanxiao/RoboEXP
+    project: https://jianghanxiao.github.io/roboexp-web/
+  access: open
+  tags: [scene-graph, memory, manipulation]
+  added: 2026-09-29
+
+- id: khronos
+  name: Khronos
+  title: >-
+    Khronos: A Unified Approach for Spatio-Temporal Metric-Semantic SLAM in Dynamic
+    Environments
+  date: 2024-02
+  org: MIT SPARK Lab
+  summary: >-
+    Spatio-temporal metric-semantic SLAM that tracks short-term dynamics in an active window
+    and reasons over long-term scene changes with a factor graph, building a dense map of
+    how a 3D scene evolves over time in real time.
+  links:
+    paper: https://arxiv.org/abs/2402.13817
+    code: https://github.com/MIT-SPARK/Khronos
+  access: open
+  tags: [memory, 3d, long-horizon]
+  note: RSS 2024.
+  added: 2026-09-29
+
+- id: llm-state
+  name: LLM-State
+  title: >-
+    LLM-State: Open World State Representation for Long-horizon Task Planning with Large
+    Language Model
+  date: 2023-11
+  summary: >-
+    Open-world state representation that the LLM continuously expands and updates with
+    object attributes and changes, enabling retrospective summaries of past actions for
+    long-horizon household planning in simulation and the real world.
+  links:
+    paper: https://arxiv.org/abs/2311.17406
+  access: closed
+  tags: [memory, planning]
+  added: 2026-09-29
+
+- id: goat-go-to-any-thing
+  name: GOAT
+  title: 'GOAT: GO to Any Thing'
+  date: 2023-11
+  org: Meta FAIR, UIUC, CMU, Georgia Tech, UC Berkeley, et al.
+  summary: >-
+    Universal, platform-agnostic navigation system for goals given as category labels,
+    target images or language, built on a continually augmented instance-aware semantic
+    memory that tracks object appearance across viewpoints and improves with lifelong
+    experience in a home.
+  links:
+    paper: https://arxiv.org/abs/2311.06430
+    code: https://github.com/facebookresearch/home-robot
+    project: https://theophilegervet.github.io/projects/goat/
+  access: open
+  tags: [memory, navigation, open-vocabulary, long-horizon]
+  note: >-
+    First-party: 83% success over 675 goals in 9 homes. The project page's code link points
+    to Meta's home-robot repository.
+  added: 2026-09-29
+
+- id: conceptgraphs
+  name: ConceptGraphs
+  title: 'ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and Planning'
+  date: 2023-09
+  org: University of Toronto, Université de Montréal, MIT, et al.
+  summary: >-
+    Open-vocabulary, object-centric 3D scene graph built by fusing 2D foundation-model
+    outputs across views; the compact graph supports LLM-based planning from abstract
+    language queries for navigation and manipulation.
+  links:
+    paper: https://arxiv.org/abs/2309.16650
+    code: https://github.com/concept-graphs/concept-graphs
+    project: https://concept-graphs.github.io/
+  access: open
+  tags: [scene-graph, open-vocabulary, 3d, planning]
+  added: 2026-09-29
+
+- id: sayplan
+  name: SayPlan
+  title: >-
+    SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task
+    Planning
+  date: 2023-07
+  org: QUT Centre for Robotics, University of Adelaide, CSIRO Data61
+  summary: >-
+    LLM task planning over large multi-floor 3D scene graphs: the LLM semantically searches
+    a collapsed graph for task-relevant subgraphs, a classical path planner shortens the
+    horizon, and plans are iteratively refined with feedback from a scene-graph simulator.
+  links:
+    paper: https://arxiv.org/abs/2307.06135
+    project: https://sayplan.github.io/
+  access: closed
+  tags: [scene-graph, planning, mobile-manipulation, long-horizon, failure-recovery]
+  note: CoRL 2023 (oral).
+  added: 2026-09-29
+
+- id: statler
+  name: Statler
+  title: 'Statler: State-Maintaining Language Models for Embodied Reasoning'
+  date: 2023-06
+  org: TTIC, et al.
+  summary: >-
+    Prompts an LLM to explicitly maintain and update an estimate of the (often unobservable)
+    world state as actions are taken, and conditions each planned action on that state;
+    reported to outperform Code-as-Policies on several tabletop planning tasks
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2306.17840
+    code: https://github.com/ripl/statler
+    project: https://statler-lm.github.io/
+  access: open
+  tags: [memory, planning, manipulation, long-horizon, code-as-policy]
+  note: ICRA 2024.
+  added: 2026-09-29
+
+- id: conceptfusion
+  name: ConceptFusion
+  title: 'ConceptFusion: Open-set Multimodal 3D Mapping'
+  date: 2023-02
+  org: MIT, Université de Montréal, University of Toronto, et al.
+  summary: >-
+    Open-set, multimodal 3D mapping that fuses pixel-aligned foundation-model features into
+    a 3D map that can be queried by text, images, audio or clicks, without additional
+    training.
+  links:
+    paper: https://arxiv.org/abs/2302.07241
+    code: https://github.com/concept-fusion/concept-fusion
+    project: https://concept-fusion.github.io/
+  access: open
+  tags: [open-vocabulary, 3d, memory]
+  note: RSS 2023.
+  added: 2026-09-29
+
+- id: vlmaps
+  name: VLMaps
+  title: Visual Language Maps for Robot Navigation
+  date: 2022-10
+  org: University of Freiburg, Google
+  summary: >-
+    Fuses pretrained visual-language features into a 3D reconstruction to build a spatial
+    map that can be indexed with natural language; combined with an LLM, instructions become
+    open-vocabulary, spatially precise navigation goals.
+  links:
+    paper: https://arxiv.org/abs/2210.05714
+    code: https://github.com/vlmaps/vlmaps
+    project: https://vlmaps.github.io/
+  access: open
+  tags: [open-vocabulary, navigation, memory, 3d]
+  note: ICRA 2023.
+  added: 2026-09-29
+
+- id: clip-fields
+  name: CLIP-Fields
+  title: 'CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory'
+  date: 2022-10
+  org: NYU, Meta AI
+  summary: >-
+    Implicit scene model that maps 3D locations to semantic embeddings, trained only with
+    supervision from web-trained models (CLIP, Detic, Sentence-BERT) and used as a queryable
+    scene memory for real-world semantic navigation.
+  links:
+    paper: https://arxiv.org/abs/2210.05663
+    code: https://github.com/notmahi/clip-fields
+    project: https://mahis.life/clip-fields/
+  access: open
+  tags: [memory, open-vocabulary, navigation, 3d]
+  note: RSS 2023.
+  added: 2026-09-29
+
+- id: nlmap
+  name: NLMap
+  title: Open-vocabulary Queryable Scene Representations for Real World Planning
+  date: 2022-09
+  org: Robotics at Google
+  summary: >-
+    Builds a natural-language-queryable scene representation with VLMs; an LLM proposes the
+    objects an instruction needs, queries the map for their availability and location, and
+    plans with that context (paired with SayCan on real robots).
+  links:
+    paper: https://arxiv.org/abs/2209.09874
+    project: https://nlmap-saycan.github.io/
+  access: closed
+  tags: [open-vocabulary, memory, planning, mobile-manipulation]
+  note: No official code; the project page links a third-party reimplementation.
+  added: 2026-09-29
+
+- id: hydra
+  name: Hydra
+  title: >-
+    Hydra: A Real-time Spatial Perception System for 3D Scene Graph Construction and
+    Optimization
+  date: 2022-01
+  org: MIT SPARK Lab
+  summary: >-
+    Real-time spatial perception system that incrementally builds and optimizes a layered 3D
+    scene graph (objects, places, rooms) from sensor data as the robot explores, giving it a
+    hierarchical metric-semantic model of the environment.
+  links:
+    paper: https://arxiv.org/abs/2201.13360
+    code: https://github.com/MIT-SPARK/Hydra
+  access: open
+  tags: [scene-graph, 3d, memory, navigation]
+  note: >-
+    RSS 2022; extended in 'Foundations of Spatial Perception for Robotics' (arXiv
+    2305.07154, submitted to IJRR).
+  added: 2026-09-29

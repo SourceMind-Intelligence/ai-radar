@@ -1,1 +1,856 @@
-[]
+- id: x-planner
+  name: X-Planner
+  title: 'X-Planner: Event-Structured Task Planning for Embodied Intelligence'
+  date: 2026-09
+  org: X Square Robot
+  summary: >-
+    Planning front-end for VLA systems: a shared VLM backbone emits event-structured plans
+    through a discrete interface of interpretable event states and a latent interface that
+    relays continuous chain-of-thought states; trained on ego, UMI and teleop data with
+    failure and takeover annotations.
+  links:
+    paper: https://arxiv.org/abs/2609.25187
+    code: https://github.com/X-Square-Robot/Xplanner
+    project: https://x-square-robot.github.io/Xplanner/
+    weights: https://huggingface.co/x-square-robot/X-Planner-9B-0916
+  access: open
+  tags: [planning, long-horizon, vla]
+  added: 2026-09-29
+
+- id: physbrain-1-5
+  name: PhysBrain 1.5
+  title: 'PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models'
+  date: 2026-09
+  org: DeepCybo
+  summary: >-
+    8B unified physical foundation model that encodes language answers, end-effector motion
+    and dense visual targets as discrete tokens, pretrained on human interaction videos and
+    fine-tuned on human, robot and simulated data; evaluated on 28 embodied-understanding
+    benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2609.14973
+    code: https://github.com/DeepCybo-PhysAI/PhysBrainEvalKit
+    project: https://deepcybo-physai.github.io/PhysBrain-1.5/
+    weights: https://huggingface.co/DeepCybo/PhysBrain1.5-8B
+  access: partial
+  tags: [spatial-reasoning, world-model, video]
+  note: >-
+    Code link is the evaluation toolkit; training code not found. First-party: open-source
+    SOTA average of 72.5 across the 28 benchmarks. Also predicts future RGB/depth/robot-mask
+    frames, so it overlaps policy and world-model.
+  added: 2026-09-29
+
+- id: me-vlm
+  name: ME-VLM
+  title: 'ME-VLM: A Unified VLM for Embodied Cognition and Agent Coordination'
+  date: 2026-09
+  org: Li Auto
+  summary: >-
+    Unified VLM (4B and 35B-A3B) combining embodied cognition (physical perception,
+    spatiotemporal reasoning, execution-feedback assessment) with multimodal-agent skills,
+    trained via separate embodied and agent expert RL and multi-teacher on-policy
+    distillation.
+  links:
+    paper: https://arxiv.org/abs/2609.24526
+    project: https://github.com/MachEmbodied/ME-VLM
+  access: closed
+  tags: [spatial-reasoning, planning, success-detection, rl]
+  note: Weights listed as forthcoming in the repository.
+  added: 2026-09-29
+
+- id: rynnbrain-1-1
+  name: RynnBrain 1.1
+  title: 'RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model'
+  date: 2026-07
+  org: Alibaba DAMO Academy
+  summary: >-
+    RynnBrain upgrade in 2B, 9B and 122B-A10B sizes adding contact-point prediction and
+    native 3D grounding, plus RynnBrain-VLA with a unified cross-embodiment action space
+    deployed on Unitree G1, Astribot-S1 and Tianji-Wuji.
+  links:
+    paper: https://arxiv.org/abs/2607.17977
+    code: https://github.com/alibaba-damo-academy/RynnBrain
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain1.1-9B
+  access: open
+  tags: [spatial-reasoning, 3d, pointing, cross-embodiment]
+  added: 2026-09-29
+
+- id: hy-embodied-vlm-1-0
+  name: Hy-Embodied-VLM-1.0
+  title: 'Hy-Embodied-VLM-1.0: Efficient Physical-World Agents'
+  date: 2026-07
+  org: Tencent Robotics X, Tencent Hy Vision Team, Futian Laboratory
+  summary: >-
+    Efficient MoE embodied VLM (about 3B of 30B parameters active) on the Hy3-A3B backbone,
+    trained around an action-centric capability taxonomy with self-evolving RL
+    post-training; evaluated on 38 embodied perception and reasoning benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2607.12894
+    code: https://github.com/Tencent-Hunyuan/HY-Embodied
+    weights: https://huggingface.co/tencent/Hy-Embodied-VLM-1.0
+  access: open
+  tags: [spatial-reasoning, planning, on-device, rl]
+  added: 2026-09-29
+
+- id: rxbrain
+  name: Hy-Embodied-RxBrain
+  title: >-
+    RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and
+    Imagination
+  date: 2026-07
+  org: Tencent Robotics X, Futian Laboratory, Tencent Hy Team
+  summary: >-
+    Embodied cognition model that writes plans as one sequence interleaving language
+    reasoning with visual imagination of intermediate and final world states, using a
+    unified Mixture-of-Transformers for multimodal understanding and generation.
+  links:
+    paper: https://arxiv.org/abs/2607.14187
+    code: https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0
+    weights: https://huggingface.co/tencent/Hy-Embodied-RxBrain-1.0
+  access: open
+  tags: [planning, world-model, video]
+  added: 2026-09-29
+
+- id: gemini-robotics-er-2
+  name: Gemini Robotics-ER 2
+  date: 2026-07
+  org: Google DeepMind
+  summary: >-
+    High-level robot 'brain' that converses with people, plans multi-step tasks, tracks
+    progress and self-corrects while handing motor execution to a VLA; adds real-time video
+    understanding, multi-robot orchestration and tool integration (public preview via the
+    Gemini API).
+  links:
+    project: https://deepmind.google/models/gemini-robotics/embodied-reasoning/
+    blog: https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/
+    docs: https://deepmind.google/models/model-cards/gemini-robotics-er-2/
+  access: api
+  tags: [planning, success-detection, multi-robot, tool-use, video, spatial-reasoning]
+  note: >-
+    Announced 2026-07-30 with the Gemini Robotics 2 VLA and On-Device 2; private preview on
+    Gemini Enterprise Agent Platform.
+  added: 2026-09-29
+
+- id: athena-brain
+  name: Athena-Brain
+  title: >-
+    Athena-Brain Technical Report: An Efficient Robot Brain for General Intelligence and
+    Embodied Interaction
+  date: 2026-07
+  summary: >-
+    8B LLM meant as an on-device robot brain, post-trained through general SFT, general RL,
+    embodied-expert training and model merging to keep general reasoning close to Qwen3-8B
+    (thinking) while giving shorter responses for high-level embodied interaction.
+  links:
+    paper: https://arxiv.org/abs/2607.18985
+  access: closed
+  tags: [on-device, planning, rl]
+  note: >-
+    The paper lists no affiliations; its correspondence address is on the xiaopeng.com
+    domain. No released weights found.
+  added: 2026-09-29
+
+- id: ace-brain-0-5
+  name: ACE-Brain-0.5
+  title: 'ACE-Brain-0.5: A Unified Embodied Foundational Model for Physical Agentic AI'
+  date: 2026-07
+  org: ACE Robotics
+  summary: >-
+    Extends ACE-Brain-0 into a closed-loop 8B model covering spatial perception, decision
+    making (subgoal decomposition), embodied interaction (navigation and manipulation
+    actions) and self-monitoring (progress estimation for verification and recovery).
+  links:
+    paper: https://arxiv.org/abs/2607.04426
+    code: https://github.com/ACE-BRAIN-Team/ACE-Brain-0.5
+    weights: https://huggingface.co/ACERobotics/ACE-Brain-0.5-8B
+  access: open
+  tags: [spatial-reasoning, planning, success-detection, failure-recovery]
+  added: 2026-09-29
+
+- id: vesta
+  name: Vesta
+  title: 'Vesta: A Generalist Embodied Reasoning Model'
+  date: 2026-06
+  org: NVIDIA (GEAR), et al.
+  summary: >-
+    Single generalist embodied reasoning model (fine-tuned from Qwen3-VL-8B) that
+    consolidates localization, spatial reasoning, navigation, embodied QA and long-horizon
+    planning, using a simple multimodal memory harness to reason over extended horizons.
+  links:
+    paper: https://arxiv.org/abs/2606.20905
+    project: https://research.nvidia.com/labs/gear/vesta/
+  access: closed
+  tags: [spatial-reasoning, navigation, planning, memory]
+  note: 'First-party: >20% average gain over per-task SOTA baselines.'
+  added: 2026-09-29
+
+- id: robopin
+  name: RoboPIN
+  title: 'RoboPIN: Grounded Embodied Reasoning via Pinned Chain-of-Thought'
+  date: 2026-06
+  org: Tianjin University
+  summary: >-
+    4B embodied reasoning VLM (Qwen3-VL-4B base) trained on PIN-170K with Pinned
+    Chain-of-Thought, where each reasoning step binds entities to visual anchors (name,
+    identity, view, location), plus process-supervised RL for grounding consistency.
+  links:
+    paper: https://arxiv.org/abs/2606.15753
+    code: https://github.com/quark404/RoboPIN
+    weights: https://huggingface.co/QwQ2/RoboPIN-4B
+    data: https://huggingface.co/datasets/QwQ2/RoboPIN-Datasets
+  access: open
+  tags: [spatial-reasoning, pointing, rl]
+  note: ACM MM 2026 (per repository).
+  added: 2026-09-29
+
+- id: embodied-r1-5
+  name: Embodied-R1.5
+  title: 'Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models'
+  date: 2026-06
+  org: Tianjin University, Tencent Hunyuan
+  summary: >-
+    8B embodied foundation model (Qwen3-VL-8B base) unifying embodied cognition, task
+    planning, correction and pointing, trained on a 15B-token data system with multi-task
+    balanced RL; a Planner-Grounder-Corrector loop enables self-correcting long-horizon
+    execution.
+  links:
+    paper: https://arxiv.org/abs/2606.11324
+    code: https://github.com/pickxiguapi/Embodied-R1.5
+    project: https://embodied-r.github.io/
+    weights: https://huggingface.co/IffYuan/Embodied-R1.5
+  access: open
+  tags: [pointing, planning, failure-recovery, rl]
+  added: 2026-09-29
+
+- id: molmo2-er
+  name: Molmo2-ER
+  title: 'MolmoAct2: Action Reasoning Models for Real-world Deployment'
+  date: 2026-05
+  org: Ai2
+  summary: >-
+    4B open VLM fine-tuned from Molmo2 for embodied perception (scene understanding,
+    pixel-accurate pointing, multi-image correspondence, video temporal reasoning);
+    introduced as MolmoER, the reasoning backbone of the MolmoAct2 action model.
+  links:
+    paper: https://arxiv.org/abs/2605.02881
+    code: https://github.com/allenai/molmo2
+    blog: https://allenai.org/blog/molmoact2
+    weights: https://huggingface.co/allenai/Molmo2-ER
+  access: open
+  tags: [pointing, spatial-reasoning, video]
+  note: Title is that of the MolmoAct2 report, which introduces the model.
+  added: 2026-09-29
+
+- id: affordance-agent-harness
+  name: Affordance Agent Harness
+  title: 'Affordance Agent Harness: Verification-Gated Skill Orchestration'
+  date: 2026-05
+  org: Knowin AI et al.
+  summary: >-
+    Closed-loop runtime for affordance grounding that routes among detection, segmentation
+    and imagination skills with an evidence store, cost control and episodic memory, and a
+    verifier that gates commitments and triggers targeted retries.
+  links:
+    paper: https://arxiv.org/abs/2605.00663
+    project: https://tenplusgood.github.io/a-harness-page/
+  access: closed
+  tags: [pointing, success-detection, memory]
+  note: Perception-level harness (no robot execution); code release marked TBD.
+  added: 2026-09-29
+
+- id: roboagent-capability-chaining
+  name: RoboAgent (capability chaining)
+  title: 'RoboAgent: Chaining Basic Capabilities for Embodied Task Planning'
+  date: 2026-04
+  org: Peking University
+  summary: >-
+    Capability-driven planner in which one VLM acts as scheduler and as each sub-capability,
+    decomposing embodied planning into basic vision-language problems; trained with behavior
+    cloning, DAgger and expert-guided RL.
+  links:
+    paper: https://arxiv.org/abs/2604.07774
+    code: https://github.com/woyut/RoboAgent_CVPR26
+  access: open
+  tags: [planning]
+  note: CVPR 2026; evaluated on ALFWorld and EB-ALFRED.
+  added: 2026-09-29
+
+- id: hy-embodied-0-5
+  name: HY-Embodied-0.5
+  title: 'HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents'
+  date: 2026-04
+  org: Tencent Robotics X, Tencent HY Vision Team
+  summary: >-
+    Embodied foundation-model suite using a Mixture-of-Transformers design with latent
+    tokens for fine-grained perception, in a 2B-activated edge variant and a 32B-activated
+    reasoning variant, with self-evolving post-training and on-policy distillation.
+  links:
+    paper: https://arxiv.org/abs/2604.07430
+    code: https://github.com/Tencent-Hunyuan/HY-Embodied
+    weights: https://huggingface.co/tencent/HY-Embodied-0.5
+  access: partial
+  tags: [spatial-reasoning, planning, on-device]
+  note: Only the MoT-2B weights are open.
+  added: 2026-09-29
+
+- id: gemini-robotics-er-1-6
+  name: Gemini Robotics-ER 1.6
+  date: 2026-04
+  org: Google DeepMind
+  summary: >-
+    Embodied-reasoning upgrade with more precise pointing, multi-view reasoning, success
+    detection, instrument and gauge reading (developed with Boston Dynamics) and native tool
+    use; available via the Gemini API and Google AI Studio.
+  links:
+    blog: https://deepmind.google/blog/gemini-robotics-er-1-6/
+    docs: https://ai.google.dev/gemini-api/docs/robotics-overview
+  access: api
+  tags: [pointing, spatial-reasoning, success-detection, tool-use]
+  added: 2026-09-29
+
+- id: ace-brain-0
+  name: ACE-Brain-0
+  title: 'ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments'
+  date: 2026-03
+  org: ACE Robotics, et al.
+  summary: >-
+    Generalist 'foundation brain' MLLM that treats spatial intelligence as a shared scaffold
+    across autonomous driving, robot manipulation and UAVs, trained with a
+    Scaffold-Specialize-Reconcile recipe (data-free merging of domain experts) plus GRPO.
+  links:
+    paper: https://arxiv.org/abs/2603.03198
+    code: https://github.com/ACE-BRAIN-Team/ACE-Brain-0
+    weights: https://huggingface.co/ACERobotics/ACE-Brain-0-8B
+  access: open
+  tags: [spatial-reasoning, cross-embodiment, driving, rl]
+  added: 2026-09-29
+
+- id: rynnbrain
+  name: RynnBrain
+  title: 'RynnBrain: Open Embodied Foundation Models'
+  date: 2026-02
+  org: Alibaba DAMO Academy
+  summary: >-
+    Open spatiotemporal embodied foundation models (2B, 8B, 30B-A3B MoE) for egocentric
+    understanding, spatiotemporal localization, physically grounded reasoning and
+    physics-aware planning, with post-trained Nav, Plan, CoP and VLA variants.
+  links:
+    paper: https://arxiv.org/abs/2602.14979
+    code: https://github.com/alibaba-damo-academy/RynnBrain
+    project: https://alibaba-damo-academy.github.io/RynnBrain.github.io
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-8B
+  access: open
+  tags: [spatial-reasoning, planning, navigation, video]
+  note: 8B model built on Qwen3-VL-8B (per model card).
+  added: 2026-09-29
+
+- id: robobrain-2-5
+  name: RoboBrain 2.5
+  title: 'RoboBrain 2.5: Depth in Sight, Time in Mind'
+  date: 2026-01
+  org: BAAI
+  summary: >-
+    RoboBrain generation adding depth-aware 3D spatial reasoning (metric constraints, full
+    3D manipulation traces as ordered keypoints) and dense temporal value estimation that
+    gives step-aware progress feedback for downstream learning.
+  links:
+    paper: https://arxiv.org/abs/2601.14352
+    code: https://github.com/FlagOpen/RoboBrain2.5
+    project: https://superrobobrain.github.io/
+    weights: https://huggingface.co/BAAI/RoboBrain2.5-8B-NV
+  access: open
+  tags: [spatial-reasoning, 3d, pointing, reward-model]
+  added: 2026-09-29
+
+- id: robotracer
+  name: RoboTracer
+  title: Towards Spatial Trace with Reasoning in Vision-Language Models for Robotics
+  date: 2025-12
+  org: Beihang University, BAAI, et al.
+  summary: >-
+    3D-aware VLM for spatial tracing (metric-grounded 3D traces from instructions) using a
+    universal spatial encoder, a regression-supervised decoder and RFT with metric-sensitive
+    process rewards; introduces TraceSpatial (30M QA pairs) and TraceSpatial-Bench.
+  links:
+    paper: https://arxiv.org/abs/2512.13660
+    code: https://github.com/Zhoues/RoboTracer
+    project: https://zhoues.github.io/RoboTracer/
+    data: https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench
+  access: partial
+  tags: [spatial-reasoning, pointing, 3d, rl]
+  note: ECCV 2026; model weights marked as forthcoming in the repository.
+  added: 2026-09-29
+
+- id: cosmos-reason2
+  name: Cosmos Reason 2
+  date: 2025-12
+  org: NVIDIA
+  summary: >-
+    Second-generation Cosmos reasoning VLM for physical AI and robotics (2B and 8B, later
+    32B), built on Qwen3-VL, adding spatio-temporal and embodied reasoning, 3D object
+    localization and robot-planning support with long chain-of-thought and up to 256K input
+    tokens.
+  links:
+    code: https://github.com/nvidia-cosmos/cosmos-reason2
+    blog: https://huggingface.co/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning
+    weights: https://huggingface.co/nvidia/Cosmos-Reason2-8B
+  access: open
+  tags: [spatial-reasoning, planning, video, 3d]
+  note: NVIDIA Open Model License; 32B weights added April 2026.
+  added: 2026-09-29
+
+- id: mimo-embodied
+  name: MiMo-Embodied
+  title: 'MiMo-Embodied: X-Embodied Foundation Model Technical Report'
+  date: 2025-11
+  org: Xiaomi
+  summary: >-
+    7B cross-embodiment VLM covering embodied AI (task planning, affordance prediction,
+    spatial understanding) and autonomous driving, trained with multi-stage learning and
+    CoT/RL fine-tuning; reports SOTA on 17 embodied and 12 driving benchmarks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2511.16518
+    code: https://github.com/XiaomiMiMo/MiMo-Embodied
+    weights: https://huggingface.co/XiaomiMiMo/MiMo-Embodied-7B
+  access: open
+  tags: [driving, planning, spatial-reasoning, cross-embodiment]
+  added: 2026-09-29
+
+- id: physvlm-avr
+  name: PhysVLM-AVR (CLEVR-AVR)
+  title: >-
+    PhysVLM-AVR: Active Visual Reasoning for Multimodal Large Language Models in Physical
+    Environments
+  date: 2025-10
+  org: Chinese Academy of Sciences et al.
+  summary: >-
+    Defines active visual reasoning in partially observable interactive scenes and
+    introduces the CLEVR-AVR benchmark, the AVR-152k chain-of-thought dataset and
+    PhysVLM-AVR, an MLLM that gathers information through actions before answering.
+  links:
+    paper: https://arxiv.org/abs/2510.21111
+  access: closed
+  tags: [benchmark, spatial-reasoning, planning]
+  note: >-
+    NeurIPS 2025. The CLEVR-AVR benchmark part could alternatively sit under benchmark.
+  added: 2026-09-29
+
+- id: pelican-vl-1-0
+  name: Pelican-VL 1.0
+  title: 'Pelican-VL 1.0: A Foundation Brain Model for Embodied Intelligence'
+  date: 2025-10
+  org: X-Humanoid (Beijing Innovation Center of Humanoid Robotics)
+  summary: >-
+    Open embodied 'brain' VLM family (7B and 72B at launch, later 3B and 235B-A22B variants)
+    trained with a metaloop data-distillation pipeline and DPPO (Deliberate Practice Policy
+    Optimization).
+  links:
+    paper: https://arxiv.org/abs/2511.00108
+    code: https://github.com/Open-X-Humanoid/pelican-vl
+    weights: https://huggingface.co/X-Humanoid/Pelican1.0-VL-72B
+  access: open
+  tags: [spatial-reasoning, planning, rl]
+  added: 2026-09-29
+
+- id: robix
+  name: Robix
+  title: 'Robix: A Unified Model for Robot Interaction, Reasoning and Planning'
+  date: 2025-09
+  org: ByteDance Seed
+  summary: >-
+    VLM that serves as the high-level cognitive layer of a hierarchical robot system,
+    emitting atomic commands for a low-level controller alongside dialogue, with proactive
+    dialogue and real-time interruption handling; trained via continued pretraining, SFT and
+    RL.
+  links:
+    paper: https://arxiv.org/abs/2509.01106
+    project: https://robix-seed.github.io/robix/
+  access: closed
+  tags: [planning, hitl, dual-system, rl]
+  added: 2026-09-29
+
+- id: gemini-robotics-er-1-5
+  name: Gemini Robotics-ER 1.5
+  title: >-
+    Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied
+    Reasoning, Thinking, and Motion Transfer
+  date: 2025-09
+  org: Google DeepMind
+  summary: >-
+    Embodied-reasoning model with Flash-class latency for pointing, spatial and temporal
+    reasoning, planning and success detection; it natively calls tools and user-defined
+    functions (e.g. a VLA) to run long-horizon task loops, with a tunable thinking budget.
+  links:
+    paper: https://arxiv.org/abs/2510.03342
+    blog: https://developers.googleblog.com/building-the-next-generation-of-physical-agents-with-gemini-robotics-er-15/
+    docs: https://ai.google.dev/gemini-api/docs/robotics-overview
+  access: api
+  tags: [pointing, planning, success-detection, tool-use]
+  note: Preview via the Gemini API and Google AI Studio from launch (2025-09-25).
+  added: 2026-09-29
+
+- id: rynnec
+  name: RynnEC
+  title: 'RynnEC: Bringing MLLMs into Embodied World'
+  date: 2025-08
+  org: Alibaba DAMO Academy
+  summary: >-
+    Region-centric video MLLM for embodied cognition with a region encoder and mask decoder
+    for region-level interaction, targeting object property understanding, segmentation and
+    spatial reasoning; releases an egocentric-video data pipeline and RynnEC-Bench.
+  links:
+    paper: https://arxiv.org/abs/2508.14160
+    code: https://github.com/alibaba-damo-academy/RynnEC
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnEC-7B
+  access: open
+  tags: [spatial-reasoning, video, benchmark]
+  added: 2026-09-29
+
+- id: embodied-r1
+  name: Embodied-R1
+  title: 'Embodied-R1: Reinforced Embodied Reasoning for General Robotic Manipulation'
+  date: 2025-08
+  org: Tianjin University
+  summary: >-
+    3B VLM that uses pointing as an embodiment-agnostic intermediate representation (four
+    embodied pointing abilities), trained with two-stage reinforced fine-tuning on
+    Embodied-Points-200K to bridge perception and low-level action primitives.
+  links:
+    paper: https://arxiv.org/abs/2508.13998
+    code: https://github.com/pickxiguapi/Embodied-R1
+    project: https://embodied-r1.github.io/
+    weights: https://huggingface.co/IffYuan/Embodied-R1-3B-v1
+    data: https://huggingface.co/datasets/IffYuan/Embodied-R1-Dataset
+  access: open
+  tags: [pointing, rl, manipulation, spatial-reasoning]
+  note: ICLR 2026.
+  added: 2026-09-29
+
+- id: robobrain-2-0
+  name: RoboBrain 2.0
+  title: RoboBrain 2.0 Technical Report
+  date: 2025-07
+  org: BAAI
+  summary: >-
+    Second-generation embodied VLM (7B and 32B) unifying spatial understanding (affordance,
+    spatial referring, trajectory forecasting) with temporal decision-making (closed-loop
+    interaction, multi-agent long-horizon planning, scene-graph updating).
+  links:
+    paper: https://arxiv.org/abs/2507.02029
+    code: https://github.com/FlagOpen/RoboBrain2.0
+    project: https://superrobobrain.github.io/robobrainv2/index.html
+    weights: https://huggingface.co/BAAI/RoboBrain2.0-7B
+  access: open
+  tags: [spatial-reasoning, planning, pointing, multi-robot]
+  added: 2026-09-29
+
+- id: roborefer
+  name: RoboRefer
+  title: >-
+    RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for
+    Robotics
+  date: 2025-06
+  org: Beihang University, BAAI, Peking University
+  summary: >-
+    3D-aware VLM for spatial referring that adds a dedicated depth encoder (SFT) and learns
+    multi-step spatial reasoning via RFT with metric-sensitive process rewards; releases
+    RefSpatial (20M QA pairs) and RefSpatial-Bench.
+  links:
+    paper: https://arxiv.org/abs/2506.04308
+    code: https://github.com/Zhoues/RoboRefer
+    project: https://zhoues.github.io/RoboRefer/
+    weights: https://huggingface.co/Zhoues/RoboRefer-8B-SFT
+  access: open
+  tags: [pointing, spatial-reasoning, rl, dataset]
+  note: NeurIPS 2025.
+  added: 2026-09-29
+
+- id: vebrain
+  name: VeBrain
+  title: >-
+    Visual Embodied Brain: Let Multimodal Large Language Models See, Think, and Control in
+    Spaces
+  date: 2025-05
+  org: Shanghai AI Lab (OpenGVLab), SenseTime, et al.
+  summary: >-
+    Unified MLLM for perception, spatial reasoning and control that recasts robot control as
+    text-based tasks in 2D image space, with a robotic adapter that turns textual outputs
+    into motion policies for real robots such as legged platforms; trained on VeBrain-600k.
+  links:
+    paper: https://arxiv.org/abs/2506.00123
+    code: https://github.com/OpenGVLab/VeBrain
+    project: https://internvl.github.io/blog/2025-05-26-VeBrain/
+    weights: https://huggingface.co/OpenGVLab/VeBrain
+  access: open
+  tags: [spatial-reasoning, legged, dataset]
+  added: 2026-09-29
+
+- id: robot-r1
+  name: Robot-R1
+  title: 'Robot-R1: Reinforcement Learning for Enhanced Embodied Reasoning in Robotics'
+  date: 2025-05
+  org: KAIST, RLWRLD, Yonsei University, UC Berkeley
+  summary: >-
+    R1-style RL framework that trains an LVLM to reason about and predict the next keypoint
+    state needed for task completion from the scene image and demonstration-derived
+    metadata; introduces a benchmark for control-oriented embodied reasoning.
+  links:
+    paper: https://arxiv.org/abs/2506.00070
+  access: closed
+  tags: [rl, spatial-reasoning, manipulation, benchmark]
+  note: >-
+    NeurIPS 2025. First-party: the 7B model beats GPT-4o on spatial and movement reasoning.
+  added: 2026-09-29
+
+- id: gemini-robotics-er
+  name: Gemini Robotics-ER
+  title: 'Gemini Robotics: Bringing AI into the Physical World'
+  date: 2025-03
+  org: Google DeepMind
+  summary: >-
+    Gemini 2.0-based embodied-reasoning model with stronger pointing and 3D detection, grasp
+    and trajectory prediction, and multi-view correspondence; it can drive a robot end to
+    end via perception, planning and code generation, or learn in context from
+    demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2503.20020
+    blog: https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/
+  access: closed
+  tags: [spatial-reasoning, pointing, planning, code-as-policy]
+  note: >-
+    Initially limited to trusted testers; the report also introduces the Gemini Robotics VLA
+    and the ERQA benchmark.
+  added: 2026-09-29
+
+- id: embodied-reasoner
+  name: Embodied-Reasoner
+  title: >-
+    Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied
+    Interactive Tasks
+  date: 2025-03
+  org: Zhejiang University
+  summary: >-
+    Extends o1-style long reasoning to interactive embodied search, training on 9.3k
+    synthesized observation-thought-action trajectories through imitation learning,
+    rejection-sampling self-exploration and reflection tuning in AI2-THOR scenes.
+  links:
+    paper: https://arxiv.org/abs/2503.21696
+    code: https://github.com/ZJU-OmniAI/Embodied-Omni
+    project: https://embodied-reasoner.github.io/
+    data: https://huggingface.co/datasets/zwq2018/embodied_reasoner
+  access: partial
+  tags: [planning, long-horizon, self-improving]
+  note: >-
+    ACL 2026 Main (per repository); code now lives in the ZJU-OmniAI Embodied-Omni repo.
+  added: 2026-09-29
+
+- id: cosmos-reason1
+  name: Cosmos-Reason1
+  title: 'Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning'
+  date: 2025-03
+  org: NVIDIA
+  summary: >-
+    Physical-AI reasoning VLMs (7B and 56B) trained with physical-AI SFT and RL to reason
+    with long chain-of-thought about physical common sense and next-step embodied decisions,
+    with accompanying ontologies and benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2503.15558
+    code: https://github.com/nvidia-cosmos/cosmos-reason1
+    weights: https://huggingface.co/nvidia/Cosmos-Reason1-7B
+  access: open
+  tags: [planning, video, rl]
+  note: Released weights are the 7B model, built on Qwen2.5-VL-7B.
+  added: 2026-09-29
+
+- id: robobrain
+  name: RoboBrain
+  title: >-
+    RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete
+  date: 2025-02
+  org: BAAI, Peking University, et al.
+  summary: >-
+    MLLM 'robotic brain' trained on ShareRobot, a dataset annotating task plans, object
+    affordances and end-effector trajectories, to decompose long-horizon manipulation
+    instructions and predict affordances and trajectories.
+  links:
+    paper: https://arxiv.org/abs/2502.21257
+    code: https://github.com/FlagOpen/RoboBrain
+    weights: https://huggingface.co/BAAI/RoboBrain
+  access: open
+  tags: [planning, manipulation, spatial-reasoning, dataset]
+  added: 2026-09-29
+
+- id: magma
+  name: Magma
+  title: 'Magma: A Foundation Model for Multimodal AI Agents'
+  date: 2025-02
+  org: Microsoft Research, et al.
+  summary: >-
+    Agentic foundation model for digital and physical tasks, pretrained on images, videos
+    and robot data labeled with Set-of-Mark (action grounding) and Trace-of-Mark (action
+    planning), covering UI navigation and robot manipulation.
+  links:
+    paper: https://arxiv.org/abs/2502.13130
+    code: https://github.com/microsoft/Magma
+    project: https://microsoft.github.io/Magma/
+    weights: https://huggingface.co/microsoft/Magma-8B
+  access: open
+  tags: [pointing, planning, manipulation, video]
+  added: 2026-09-29
+
+- id: spatialrgpt
+  name: SpatialRGPT
+  title: 'SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models'
+  date: 2024-06
+  org: UC San Diego, NVIDIA, et al.
+  summary: >-
+    Region-aware VLM for grounded spatial reasoning that learns regional representations
+    from 3D scene graphs and adds a depth plugin to the visual encoder, answering direction
+    and distance questions about user-specified regions; ships a 3D-annotated benchmark.
+  links:
+    paper: https://arxiv.org/abs/2406.01584
+    code: https://github.com/AnjieCheng/SpatialRGPT
+    project: https://anjiecheng.me/SpatialRGPT/
+    weights: https://huggingface.co/a8cheng/SpatialRGPT-VILA1.5-8B
+  access: open
+  tags: [spatial-reasoning, 3d, benchmark]
+  note: NeurIPS 2024.
+  added: 2026-09-29
+
+- id: robopoint
+  name: RoboPoint
+  title: >-
+    RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics
+  date: 2024-06
+  org: University of Washington, NVIDIA, et al.
+  summary: >-
+    VLM instruction-tuned on automatically generated synthetic data to predict image
+    keypoint affordances from language instructions, used for manipulation, navigation and
+    AR assistance without real-world data collection.
+  links:
+    paper: https://arxiv.org/abs/2406.10721
+    code: https://github.com/wentaoyuan/RoboPoint
+    project: https://robo-point.github.io/
+    weights: https://huggingface.co/wentao-yuan/robopoint-v1-vicuna-v1.5-13b
+  access: open
+  tags: [pointing, spatial-reasoning, manipulation, navigation]
+  added: 2026-09-29
+
+- id: spatialvlm
+  name: SpatialVLM
+  title: 'SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities'
+  date: 2024-01
+  org: Google DeepMind, MIT, et al.
+  summary: >-
+    Trains a VLM on an automatically generated internet-scale metric 3D spatial VQA dataset
+    (2B examples on 10M real images), improving qualitative and quantitative spatial
+    reasoning and enabling spatial chain-of-thought and robotics uses of its metric
+    estimates.
+  links:
+    paper: https://arxiv.org/abs/2401.12168
+    project: https://spatial-vlm.github.io/
+  access: closed
+  tags: [spatial-reasoning, dataset, reward-model]
+  note: CVPR 2024.
+  added: 2026-09-29
+
+- id: multiply
+  name: MultiPLY
+  title: >-
+    MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World
+  date: 2024-01
+  summary: >-
+    Multisensory, object-centric embodied LLM that actively interacts with objects in 3D
+    environments and reasons over visual, audio, tactile and thermal observations. Listed as
+    a multi-agent seed, but it is a single-agent model.
+  links:
+    paper: https://arxiv.org/abs/2401.08577
+    code: https://github.com/UMass-Foundation-Model/MultiPLY
+  access: open
+  tags: [3d, planning]
+  added: 2026-09-29
+
+- id: leo
+  name: LEO
+  title: An Embodied Generalist Agent in 3D World
+  date: 2023-11
+  org: BIGAI, Peking University, Tsinghua University, et al.
+  summary: >-
+    Embodied generalist that takes 3D scene inputs and is trained in two stages (3D
+    vision-language alignment, then 3D vision-language-action instruction tuning) to ground,
+    reason, plan and act in 3D environments.
+  links:
+    paper: https://arxiv.org/abs/2311.12871
+    code: https://github.com/embodied-generalist/embodied-generalist
+    project: https://embodied-generalist.github.io/
+  access: open
+  tags: [3d, planning, spatial-reasoning]
+  note: ICML 2024.
+  added: 2026-09-29
+
+- id: octopus-embodied-programmer
+  name: Octopus
+  title: 'Octopus: Embodied Vision-Language Programmer from Environmental Feedback'
+  date: 2023-10
+  summary: >-
+    Embodied VLM that generates plans and executable code from visual and textual goals,
+    trained on GPT-4-explored data from the OctoVerse environments (simulated chores, GTA,
+    Minecraft) with reinforcement learning from environment feedback.
+  links:
+    paper: https://arxiv.org/abs/2310.08588
+    code: https://github.com/dongyh20/Octopus
+    project: https://choiszt.github.io/Octopus/
+  access: partial
+  tags: [code-as-policy, rl]
+  note: Weights not verified.
+  added: 2026-09-29
+
+- id: tapa
+  name: TaPA
+  title: Embodied Task Planning with Large Language Models
+  date: 2023-07
+  summary: >-
+    Task-planning agent that fine-tunes an LLM on GPT-3.5-generated scene-instruction-plan
+    triplets and grounds plans in objects detected by open-vocabulary detectors on
+    multi-view RGB images.
+  links:
+    paper: https://arxiv.org/abs/2307.01848
+    code: https://github.com/Gary3410/TaPA
+    project: https://gary3410.github.io/TaPA/
+  access: partial
+  tags: [planning, dataset, open-vocabulary]
+  note: Weights not verified.
+  added: 2026-09-29
+
+- id: embodiedgpt
+  name: EmbodiedGPT
+  title: 'EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought'
+  date: 2023-05
+  summary: >-
+    Multimodal foundation model for embodied planning trained on EgoCOT, an Ego4D-derived
+    dataset of chain-of-thought sub-goal plans; features extracted from the generated plans
+    connect high-level planning to low-level control policies.
+  links:
+    paper: https://arxiv.org/abs/2305.15021
+    code: https://github.com/EmbodiedGPT/EmbodiedGPT_Pytorch
+    project: https://embodiedgpt.github.io/
+    weights: https://huggingface.co/Liang-ZX/Embodied_family_7b
+  access: open
+  tags: [planning, video, dataset]
+  added: 2026-09-29
+
+- id: palm-e
+  name: PaLM-E
+  title: 'PaLM-E: An Embodied Multimodal Language Model'
+  date: 2023-03
+  org: Google
+  summary: >-
+    Embodied multimodal language model that interleaves continuous sensor inputs (images,
+    state estimates) with text in a pretrained LLM, trained jointly on robot manipulation
+    planning, VQA and captioning; the largest model has 562B parameters.
+  links:
+    paper: https://arxiv.org/abs/2303.03378
+    project: https://palm-e.github.io/
+  access: closed
+  tags: [planning, manipulation, mobile-manipulation]
+  added: 2026-09-29

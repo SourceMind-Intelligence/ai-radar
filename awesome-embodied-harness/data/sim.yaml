@@ -1,1 +1,760 @@
-[]
+- id: lingjing
+  name: Lingjing
+  title: >-
+    Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities
+  date: 2026-08
+  org: Aerospace Information Research Institute (CAS), Shanghai Jiao Tong University
+  summary: >-
+    City-scale testbed for heterogeneous multi-agent embodied tasks (UAVs, ground robots,
+    vehicles) that rebuilds cities from geographic data, syncs several physics engines,
+    offers a Gym-like API for ReAct agents with configurable communication, and logs replays
+    for diagnosis.
+  links:
+    paper: https://arxiv.org/abs/2608.08045
+  access: closed
+  tags: [multi-robot, benchmark, navigation, agentic-loop]
+  note: >-
+    First-party evaluation of twelve VLMs on nine urban tasks; code release not verified.
+  added: 2026-09-29
+
+- id: simple-humanoid
+  name: SIMPLE
+  title: >-
+    SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation
+  date: 2026-06
+  summary: >-
+    Humanoid loco-manipulation testbed coupling MuJoCo contact dynamics with Isaac Sim
+    rendering: 60 whole-body tasks, 50 indoor scenes, 1,000+ assets, motion-planning and
+    VR-teleop data pipelines, and benchmarks of imitation, VLA and world-action models.
+  links:
+    paper: https://arxiv.org/abs/2606.08278
+    code: https://github.com/physical-superintelligence-lab/SIMPLE
+    project: https://psi-lab.ai/SIMPLE
+  access: open
+  tags: [humanoid, benchmark, sim2real, teleop, vla]
+  note: >-
+    First-party results report strong sim-real correlation and zero-shot transfer to
+    physical humanoids.
+  added: 2026-09-29
+
+- id: kamino
+  name: Kamino
+  title: >-
+    Kamino: GPU-based Massively Parallel Simulation of Multi-Body Systems with Challenging
+    Topologies
+  date: 2026-03
+  org: Disney Research, NVIDIA
+  summary: >-
+    GPU physics solver in NVIDIA Warp, integrated into Newton, that natively handles
+    kinematic loops and batched heterogeneous robots by solving constrained multibody
+    dynamics as a nonlinear complementarity problem; trains a biped with six nested loops in
+    4,096 envs.
+  links:
+    paper: https://arxiv.org/abs/2603.16536
+    code: https://github.com/newton-physics/newton
+  access: open
+  tags: [rl, legged]
+  note: Ships inside the Newton repo (Kamino examples under newton/examples/kamino).
+  added: 2026-09-29
+
+- id: scenesmith
+  name: SceneSmith
+  title: 'SceneSmith: Agentic Generation of Simulation-Ready Indoor Scenes'
+  date: 2026-02
+  org: MIT, Toyota Research Institute
+  summary: >-
+    VLM designer, critic and orchestrator agents build simulation-ready indoor scenes from
+    text in stages (layout, furniture, small objects), with text-to-3D and retrieved
+    articulated assets plus estimated physical properties. ICML 2026 spotlight.
+  links:
+    paper: https://arxiv.org/abs/2602.09153
+    code: https://github.com/nepfaff/scenesmith
+    project: https://scenesmith.github.io/
+  access: open
+  tags: [3d, agentic-loop, mobile-manipulation]
+  added: 2026-09-29
+
+- id: sage-scene-gen
+  name: SAGE
+  title: 'SAGE: Scalable Agentic 3D Scene Generation for Embodied AI'
+  date: 2026-02
+  org: NVIDIA, UIUC, Cornell, Stanford
+  summary: >-
+    Given an embodied task, an agent couples layout and object generators with critics for
+    semantics, realism and physical stability and self-refines until scenes are
+    simulation-ready; releases the SAGE-10k interactive scene dataset.
+  links:
+    paper: https://arxiv.org/abs/2602.10116
+    code: https://github.com/NVlabs/sage
+    project: https://research.nvidia.com/labs/dir/sage/
+    data: https://huggingface.co/datasets/nvidia/SAGE-10k
+  access: open
+  tags: [3d, agentic-loop, dataset]
+  added: 2026-09-29
+
+- id: robocasa365
+  name: RoboCasa365
+  title: >-
+    RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist
+    Robots
+  date: 2026-02
+  org: UT Austin, NVIDIA Research
+  summary: >-
+    Household mobile-manipulation benchmark on RoboCasa with 365 tasks, 2,500 kitchens, 600+
+    hours of human and 1,600+ hours of synthetic demos for multi-task, foundation-model and
+    lifelong-learning evaluation; has a public leaderboard. ICLR 2026.
+  links:
+    paper: https://arxiv.org/abs/2603.04356
+    code: https://github.com/robocasa/robocasa
+    project: https://robocasa.ai/
+  access: open
+  tags: [mobile-manipulation, benchmark, dataset, long-horizon, leaderboard]
+  note: v1.0 released in the RoboCasa repo in Feb 2026; arXiv version Mar 2026.
+  added: 2026-09-29
+
+- id: mjlab
+  name: mjlab
+  title: 'mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning'
+  date: 2026-01
+  org: UC Berkeley
+  summary: >-
+    Lightweight robot-learning framework that pairs Isaac Lab's manager-based environment
+    API with MuJoCo Warp GPU physics, installs with one command, exposes native MuJoCo data
+    structures, and ships velocity-tracking, motion-imitation and manipulation tasks.
+  links:
+    paper: https://arxiv.org/abs/2601.22074
+    code: https://github.com/mujocolab/mjlab
+    docs: https://mujocolab.github.io/mjlab/
+  access: open
+  tags: [rl, humanoid, legged, manipulation]
+  added: 2026-09-29
+
+- id: genie-sim-3
+  name: Genie Sim 3.0
+  title: >-
+    Genie Sim 3.0 : A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot
+  date: 2026-01
+  org: AgiBot
+  summary: >-
+    AgiBot's open simulation platform: an LLM-powered generator builds scenes from language,
+    3DGS-based reconstruction adds realism, a 10,000+ hour synthetic dataset is released,
+    and a benchmark uses LLM-generated scenarios with VLM-based auto-evaluation.
+  links:
+    paper: https://arxiv.org/abs/2601.02078
+    code: https://github.com/AgibotTech/genie_sim
+    project: https://agibot-world.com/genie-sim
+  access: open
+  tags: [benchmark, dataset, humanoid, success-detection, sim2real]
+  note: >-
+    The repo ships AGENTS.md and SKILL.md recipes so coding agents (e.g., Claude Code) can
+    drive the simulator.
+  added: 2026-09-29
+
+- id: tongsim
+  name: TongSIM
+  title: 'TongSIM: A General Platform for Simulating Intelligent Machines'
+  date: 2025-12
+  org: BIGAI
+  summary: >-
+    Unreal Engine-based general-purpose platform for training and evaluating embodied
+    agents, with 100+ multi-room indoor scenes, an open-ended outdoor town, a Python SDK and
+    benchmarks covering perception, decision-making, human-robot cooperation and social
+    reasoning.
+  links:
+    paper: https://arxiv.org/abs/2512.20206
+    code: https://github.com/bigai-ai/tongsim
+    project: https://tongsim-platform.github.io/tongsim/
+    docs: https://bigai-ai.github.io/tongsim/
+  access: open
+  tags: [navigation, hitl, multi-robot, benchmark]
+  note: >-
+    Per the README, indoor scenes are fully accessible while outdoor assets are being opened
+    gradually.
+  added: 2026-09-29
+
+- id: simworld
+  name: SimWorld
+  title: >-
+    SimWorld: An Open-ended Realistic Simulator for Autonomous Agents in Physical and Social
+    Worlds
+  date: 2025-11
+  summary: >-
+    Unreal Engine 5 simulator for building and evaluating LLM/VLM agents in open-ended
+    physical and social settings, with language-driven procedural city generation,
+    multimodal observations and open-vocabulary actions at several abstraction levels.
+  links:
+    paper: https://arxiv.org/abs/2512.01078
+    code: https://github.com/SimWorld-AI/SimWorld
+    project: https://simworld.org/
+  access: open
+  tags: [navigation, open-vocabulary, agentic-loop]
+  note: >-
+    Companion SimWorld-Robotics (arXiv 2512.10046, NeurIPS 2025;
+    github.com/SCAI-JHU/SimWorld-Robotics) adds urban robot navigation and two-robot
+    cooperative search benchmarks.
+  added: 2026-09-29
+
+- id: discoverse
+  name: DISCOVERSE
+  title: 'DISCOVERSE: Efficient Robot Simulation in Complex High-Fidelity Environments'
+  date: 2025-07
+  org: Tsinghua University et al.
+  summary: >-
+    Open-source Real2Sim2Real framework pairing 3D Gaussian Splatting rendering with MuJoCo
+    physics for parallel, photorealistic multi-sensor simulation with ROS plugins; reports
+    strong zero-shot sim-to-real for imitation learning (first-party). IROS 2025.
+  links:
+    paper: https://arxiv.org/abs/2507.21981
+    code: https://github.com/TATP-233/DISCOVERSE
+    project: https://air-discoverse.github.io/
+  access: open
+  tags: [sim2real, 3d, ros, manipulation]
+  added: 2026-09-29
+
+- id: robotwin-2
+  name: RoboTwin 2.0
+  title: >-
+    RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization
+    for Robust Bimanual Robotic Manipulation
+  date: 2025-06
+  summary: >-
+    Bimanual data generator and benchmark with a 731-object library, MLLM-written task code
+    refined by simulation-in-the-loop feedback, and randomization of clutter, lighting,
+    background, table height and language; 50 tasks, five embodiments.
+  links:
+    paper: https://arxiv.org/abs/2506.18088
+    code: https://github.com/RoboTwin-Platform/RoboTwin
+    project: https://robotwin-platform.github.io/
+    docs: https://robotwin-platform.github.io/doc/
+  access: open
+  tags: [manipulation, dataset, benchmark, code-as-policy, sim2real]
+  note: Earlier RoboTwin (1.0) is arXiv 2504.13059 (CVPR 2025).
+  added: 2026-09-29
+
+- id: roboverse
+  name: RoboVerse
+  title: >-
+    RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and
+    Generalizable Robot Learning
+  date: 2025-04
+  summary: >-
+    Unified platform, synthetic dataset and benchmarks whose MetaSim layer abstracts
+    multiple simulators and embodiments behind one interface, enabling environment transfer
+    and standardized imitation- and reinforcement-learning evaluation.
+  links:
+    paper: https://arxiv.org/abs/2504.18904
+    code: https://github.com/RoboVerseOrg/RoboVerse
+    project: https://roboverseorg.github.io/
+  access: open
+  tags: [cross-embodiment, benchmark, dataset, rl]
+  added: 2026-09-29
+
+- id: newton
+  name: Newton
+  date: 2025-03
+  org: NVIDIA, Google DeepMind, Disney Research (Linux Foundation)
+  summary: >-
+    Open-source, GPU-accelerated, differentiable physics engine built on NVIDIA Warp and
+    OpenUSD, with MuJoCo Warp as primary rigid-body backend plus the Kamino solver and
+    deformable solvers; a Linux Foundation project integrated with Isaac Lab and Isaac Sim.
+  links:
+    code: https://github.com/newton-physics/newton
+    blog: https://developer.nvidia.com/blog/newton-adds-contact-rich-manipulation-and-locomotion-capabilities-for-industrial-robotics
+    docs: https://newton-physics.github.io/newton/
+  access: open
+  tags: [rl, sim2real, dexterous, legged]
+  note: >-
+    Announced at GTC in Mar 2025 (code promised "later this year"); contributed to the Linux
+    Foundation with a public beta in Sep 2025; 1.0 GA announced at GTC in Mar 2026 (linked
+    blog). Kamino is described in arXiv 2603.16536.
+  added: 2026-09-29
+
+- id: mujoco-warp
+  name: MuJoCo Warp (MJWarp)
+  date: 2025-03
+  org: Google DeepMind, NVIDIA
+  summary: >-
+    GPU-optimized reimplementation of MuJoCo in NVIDIA Warp for massively parallel
+    simulation, maintained by Google DeepMind and NVIDIA as part of Newton; alpha released
+    March 2025 and officially released with MuJoCo 3.5.0 (Feb 2026).
+  links:
+    code: https://github.com/google-deepmind/mujoco_warp
+    docs: https://mujoco.readthedocs.io/en/latest/mjwarp/index.html
+  access: open
+  tags: [rl, sim2real]
+  added: 2026-09-29
+
+- id: mujoco-playground
+  name: MuJoCo Playground
+  title: MuJoCo Playground
+  date: 2025-02
+  org: Google DeepMind, UC Berkeley et al.
+  summary: >-
+    Open-source robot-learning framework on MJX bundling physics, a batch renderer and
+    training environments for quadrupeds, humanoids, dexterous hands and arms, aimed at
+    training in minutes on one GPU and zero-shot sim-to-real from state or pixels.
+  links:
+    paper: https://arxiv.org/abs/2502.08844
+    code: https://github.com/google-deepmind/mujoco_playground
+    project: https://playground.mujoco.org/
+  access: open
+  tags: [rl, sim2real, legged, humanoid, dexterous]
+  added: 2026-09-29
+
+- id: mega-blueprint
+  name: Mega (Omniverse Blueprint)
+  date: 2025-01
+  org: NVIDIA
+  summary: >-
+    Omniverse blueprint (reference architecture) for developing and testing fleets of mobile
+    robots, manipulators and humanoids in industrial digital twins, with Sensor RTX
+    simulation and software-in-the-loop testing via Isaac ROS before deployment.
+  links:
+    blog: https://blogs.nvidia.com/blog/mega-omniverse-blueprint/
+  access: closed
+  tags: [multi-robot, ros]
+  note: >-
+    Announced at CES 2025 with KION and Accenture; public code availability not verified.
+  added: 2026-09-29
+
+- id: gr00t-mimic-blueprint
+  name: Isaac GR00T-Mimic Blueprint
+  title: >-
+    NVIDIA Omniverse Blueprint: Synthetic Manipulation Motion Generation for Robotics
+  date: 2025-01
+  org: NVIDIA
+  summary: >-
+    Reference workflow on Omniverse, Isaac Lab and Cosmos that multiplies a few human
+    demonstrations into large synthetic manipulation-trajectory datasets; part of the Isaac
+    GR00T blueprint (GR00T-Teleop, -Mimic, -Gen) announced at CES 2025.
+  links:
+    code: https://github.com/NVIDIA-Omniverse-blueprints/synthetic-manipulation-motion-generation
+    blog: https://blogs.nvidia.com/blog/isaac-gr00t-blueprint-humanoid-robotics/
+  access: open
+  tags: [dataset, teleop, manipulation, humanoid]
+  note: Primarily a data-generation workflow; could also sit under data.
+  added: 2026-09-29
+
+- id: genesis
+  name: Genesis (Genesis World)
+  date: 2024-12
+  org: Genesis-Embodied-AI; Genesis AI
+  summary: >-
+    Python simulation platform that unifies rigid, FEM, MPM and particle (PBD/SPH) solvers
+    in one scene, with photorealistic rendering and a cross-backend kernel compiler; began
+    as an academic project in Dec 2024 and is now developed as Genesis World with Genesis AI
+    support.
+  links:
+    code: https://github.com/Genesis-Embodied-AI/genesis-world
+    project: https://genesis-embodied-ai.github.io/
+    docs: https://genesis-world.readthedocs.io/en/latest/
+  access: open
+  tags: [rl, dexterous, sim2real]
+  note: >-
+    The former Genesis-Embodied-AI/Genesis repo now serves the renamed genesis-world
+    project.
+  added: 2026-09-29
+
+- id: maniskill3
+  name: ManiSkill3
+  title: >-
+    ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable
+    Embodied AI
+  date: 2024-10
+  org: UC San Diego, Hillbot
+  summary: >-
+    Open-source GPU-parallelized simulator on SAPIEN that parallelizes physics, rendering
+    and heterogeneous scenes, with GPU environments across 12 domains including mobile
+    manipulation, humanoids and dexterous manipulation.
+  links:
+    paper: https://arxiv.org/abs/2410.00425
+    code: https://github.com/haosulab/ManiSkill
+    project: https://www.maniskill.ai/
+    docs: https://maniskill.readthedocs.io/en/latest/
+  access: open
+  tags: [manipulation, mobile-manipulation, humanoid, dexterous, rl, sim2real]
+  added: 2026-09-29
+
+- id: gensim2
+  name: GenSim2
+  title: 'GenSim2: Scaling Robot Data Generation with Multi-modal and Reasoning LLMs'
+  date: 2024-10
+  org: Tsinghua University, UC San Diego, SJTU, MIT CSAIL
+  summary: >-
+    Uses multimodal and reasoning coding LLMs to create complex simulation tasks, including
+    long-horizon tasks with articulated objects, and generates demonstrations with planning
+    and RL solvers for up to 100 articulated tasks and 200 objects. CoRL 2024.
+  links:
+    paper: https://arxiv.org/abs/2410.03645
+    code: https://github.com/GenSim2/GenSim2
+    project: https://gensim2.github.io/
+  access: open
+  tags: [code-as-policy, dataset, manipulation, long-horizon]
+  added: 2026-09-29
+
+- id: internutopia
+  name: InternUtopia (GRUtopia)
+  title: 'GRUtopia: Dream General Robots in a City at Scale'
+  date: 2024-07
+  org: Shanghai AI Laboratory
+  summary: >-
+    Isaac Sim-based simulated "3D society" for diverse robots, with GRScenes (100k
+    interactive annotated scenes), LLM-driven NPCs (GRResidents) for social interaction and
+    task generation, and benchmarks; renamed InternUtopia in 2025.
+  links:
+    paper: https://arxiv.org/abs/2407.10943
+    code: https://github.com/InternRobotics/InternUtopia
+    docs: https://internrobotics.github.io/user_guide/internutopia/
+  access: open
+  tags: [navigation, mobile-manipulation, benchmark, humanoid]
+  added: 2026-09-29
+
+- id: robocasa
+  name: RoboCasa
+  title: 'RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots'
+  date: 2024-06
+  org: UT Austin, NVIDIA Research
+  summary: >-
+    Kitchen-focused simulation framework for generalist robots with thousands of assets
+    across 150+ categories (including text-to-3D objects and AI-generated textures) and 100
+    tasks, some composed with LLM guidance. RSS 2024.
+  links:
+    paper: https://arxiv.org/abs/2406.02523
+    code: https://github.com/robocasa/robocasa
+    project: https://robocasa.ai/
+  access: open
+  tags: [mobile-manipulation, manipulation, benchmark, dataset]
+  added: 2026-09-29
+
+- id: holodeck
+  name: Holodeck
+  title: 'Holodeck: Language Guided Generation of 3D Embodied AI Environments'
+  date: 2023-12
+  org: University of Pennsylvania, Allen Institute for AI et al.
+  summary: >-
+    Generates full interactive 3D environments for embodied AI from a text prompt (e.g.,
+    arcades, spas, museums), using GPT-4 for layout knowledge and spatial-relation
+    constraints and Objaverse assets to populate scenes. CVPR 2024.
+  links:
+    paper: https://arxiv.org/abs/2312.09067
+    code: https://github.com/allenai/Holodeck
+    project: https://yueyang1996.github.io/holodeck/
+  access: open
+  tags: [3d, open-vocabulary, navigation]
+  added: 2026-09-29
+
+- id: robogen
+  name: RoboGen
+  title: >-
+    RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning via Generative
+    Simulation
+  date: 2023-11
+  org: CMU, MIT CSAIL, UMass Amherst et al.
+  summary: >-
+    Generative-simulation agent with a propose-generate-learn cycle: foundation models
+    propose skills, build matching scenes, decompose tasks, pick RL, motion planning or
+    trajectory optimization, and generate supervision to learn them. ICML 2024.
+  links:
+    paper: https://arxiv.org/abs/2311.01455
+    code: https://github.com/Genesis-Embodied-AI/RoboGen
+    project: https://robogen-ai.github.io/
+  access: open
+  tags: [self-improving, dataset, manipulation, rl]
+  added: 2026-09-29
+
+- id: mjx
+  name: MJX (MuJoCo XLA)
+  date: 2023-10
+  org: Google DeepMind
+  summary: >-
+    JAX reimplementation of MuJoCo, introduced in MuJoCo 3.0.0, that runs simulation on GPUs
+    and TPUs for on-device reinforcement learning; a Warp backend was added in 2025 (v3.3.5)
+    and it underpins MuJoCo Playground.
+  links:
+    code: https://github.com/google-deepmind/mujoco/tree/main/mjx
+    docs: https://mujoco.readthedocs.io/en/stable/mjx.html
+  access: open
+  tags: [rl, sim2real]
+  added: 2026-09-29
+
+- id: habitat-3
+  name: Habitat 3.0
+  title: 'Habitat 3.0: A Co-Habitat for Humans, Avatars and Robots'
+  date: 2023-10
+  org: Meta FAIR
+  summary: >-
+    Platform for human-robot collaboration in homes: fast humanoid-avatar simulation,
+    human-in-the-loop tools (mouse/keyboard or VR) to evaluate robot policies with real
+    people, and Social Navigation and Social Rearrangement tasks.
+  links:
+    paper: https://arxiv.org/abs/2310.13724
+    code: https://github.com/facebookresearch/habitat-lab
+    project: https://aihabitat.org/habitat3/
+  access: open
+  tags: [hitl, multi-robot, navigation, mobile-manipulation]
+  note: >-
+    Builds on Habitat (arXiv 1904.01201) and Habitat 2.0 (arXiv 2106.14405); the simulator
+    core is github.com/facebookresearch/habitat-sim.
+  added: 2026-09-29
+
+- id: gensim
+  name: GenSim
+  title: 'GenSim: Generating Robotic Simulation Tasks via Large Language Models'
+  date: 2023-10
+  org: MIT CSAIL, UC San Diego et al.
+  summary: >-
+    Uses an LLM's grounding and coding ability to write new simulation tasks and expert
+    demonstrations, in goal-directed (curriculum toward a target task) and exploratory
+    modes, to improve task-level generalization of multitask policies.
+  links:
+    paper: https://arxiv.org/abs/2310.01361
+    code: https://github.com/liruiw/GenSim
+    project: https://liruiw.github.io/gensim/
+  access: open
+  tags: [code-as-policy, dataset, manipulation]
+  added: 2026-09-29
+
+- id: isaac-lab
+  name: Isaac Lab
+  title: 'Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning'
+  date: 2023-01
+  org: NVIDIA
+  summary: >-
+    GPU-native robot-learning framework on Isaac Sim and successor to Isaac Gym, combining
+    parallel physics, photorealistic rendering, actuator and multi-rate sensor models, data
+    collection and domain randomization for RL and imitation learning.
+  links:
+    paper: https://arxiv.org/abs/2511.04831
+    code: https://github.com/isaac-sim/IsaacLab
+    docs: https://isaac-sim.github.io/IsaacLab/
+  access: open
+  tags: [rl, sim2real, humanoid, legged, dexterous]
+  note: >-
+    First released as Orbit (arXiv 2301.04195, Jan 2023) and renamed Isaac Lab in 2024; the
+    Isaac Lab paper appeared Nov 2025. Isaac Gym is arXiv 2108.10470.
+  added: 2026-09-29
+
+- id: procthor
+  name: ProcTHOR
+  title: 'ProcTHOR: Large-Scale Embodied AI Using Procedural Generation'
+  date: 2022-06
+  org: Allen Institute for AI
+  summary: >-
+    Procedurally generates arbitrarily many interactive, AI2-THOR-compatible houses
+    (demonstrated with 10,000) to train and evaluate embodied agents at scale on navigation,
+    rearrangement and arm manipulation.
+  links:
+    paper: https://arxiv.org/abs/2206.06994
+    code: https://github.com/allenai/procthor
+    project: https://procthor.allenai.org/
+  access: open
+  tags: [navigation, 3d, dataset]
+  added: 2026-09-29
+
+- id: isaac-gym
+  name: Isaac Gym
+  title: 'Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning'
+  date: 2021-08
+  org: NVIDIA
+  summary: >-
+    GPU robot-learning platform where physics simulation and policy training both run on the
+    GPU, passing physics buffers directly to PyTorch tensors; NVIDIA reported 2-3 orders of
+    magnitude faster training than CPU-simulator pipelines (first-party).
+  links:
+    paper: https://arxiv.org/abs/2108.10470
+    code: https://github.com/isaac-sim/IsaacGymEnvs
+    project: https://developer.nvidia.com/isaac-gym
+  access: partial
+  tags: [rl, sim2real]
+  note: >-
+    NVIDIA now labels Isaac Gym deprecated legacy software and recommends Isaac Lab; the
+    simulator is a download from NVIDIA, while the IsaacGymEnvs benchmark environments are
+    on GitHub. Date is the arXiv tech report.
+  added: 2026-09-29
+
+- id: isaac-sim
+  name: Isaac Sim
+  date: 2021-06
+  org: NVIDIA
+  summary: >-
+    Omniverse-based robotics simulator with RTX sensor rendering, GPU physics, URDF/MJCF/CAD
+    import, a ROS bridge and synthetic-data tools; Isaac Sim-specific extensions were
+    open-sourced on GitHub with 5.0 (2025), while Omniverse Kit stays closed.
+  links:
+    code: https://github.com/isaac-sim/IsaacSim
+    blog: https://developer.nvidia.com/blog/announcing-general-availability-for-nvidia-isaac-sim-5-0-and-nvidia-isaac-lab-2-2/
+    docs: https://docs.isaacsim.omniverse.nvidia.com/latest/index.html
+  access: partial
+  tags: [ros, sim2real, dataset]
+  note: >-
+    Date is the Omniverse Isaac Sim open beta (Jun 2021); 5.0 dev preview Jun 2025, GA Aug
+    2025.
+  added: 2026-09-29
+
+- id: igibson
+  name: iGibson
+  title: >-
+    iGibson 1.0: a Simulation Environment for Interactive Tasks in Large Realistic Scenes
+  date: 2020-12
+  org: Stanford University
+  summary: >-
+    Simulator of fully interactive replicas of real homes with rigid and articulated
+    objects, virtual sensors, domain randomization, motion planners and a human interface
+    for demonstrations; iGibson 2.0 (arXiv 2108.03272) added object-centric household-task
+    simulation.
+  links:
+    paper: https://arxiv.org/abs/2012.02924
+    code: https://github.com/StanfordVL/iGibson
+    project: https://svl.stanford.edu/igibson/
+  access: open
+  tags: [mobile-manipulation, navigation]
+  note: Superseded by OmniGibson (see BEHAVIOR-1K).
+  added: 2026-09-29
+
+- id: robosuite
+  name: robosuite
+  title: 'robosuite: A Modular Simulation Framework and Benchmark for Robot Learning'
+  date: 2020-09
+  org: ARISE Initiative
+  summary: >-
+    Modular MuJoCo-powered simulation framework and benchmark suite for robot learning with
+    reusable robot, controller and task modules; the arXiv report tracks the v1.5 release,
+    which RoboCasa uses as its backend.
+  links:
+    paper: https://arxiv.org/abs/2009.12293
+    code: https://github.com/ARISE-Initiative/robosuite
+    project: https://robosuite.ai/
+  access: open
+  tags: [manipulation, rl, benchmark]
+  added: 2026-09-29
+
+- id: sapien
+  name: SAPIEN
+  title: 'SAPIEN: A SimulAted Part-based Interactive ENvironment'
+  date: 2020-03
+  org: UC San Diego et al.
+  summary: >-
+    Physics-rich simulated environment built around a large set of part-annotated
+    articulated objects for part-level perception and interaction; its parallel rendering
+    system underpins ManiSkill3.
+  links:
+    paper: https://arxiv.org/abs/2003.08515
+    code: https://github.com/haosulab/SAPIEN
+  access: open
+  tags: [manipulation, 3d]
+  added: 2026-09-29
+
+- id: drake
+  name: Drake
+  date: 2019-09
+  org: MIT CSAIL, Toyota Research Institute
+  summary: >-
+    C++/Python toolbox for analyzing robot dynamics and building controllers, emphasizing
+    optimization-based design and exposing the structure of the governing equations
+    (contact, gradients); started at MIT CSAIL, with core development now led by TRI.
+  links:
+    code: https://github.com/RobotLocomotion/drake
+    docs: https://drake.mit.edu/
+  access: open
+  tags: [manipulation, planning]
+  note: Date is the first numbered release (v0.10.0, Sep 2019).
+  added: 2026-09-29
+
+- id: virtualhome
+  name: VirtualHome
+  title: 'VirtualHome: Simulating Household Activities via Programs'
+  date: 2018-06
+  summary: >-
+    Unity-based household simulator in which agents execute activities written as programs
+    of atomic actions and interactions; released with crowd-sourced activity programs and
+    used to learn programs from natural language or video. CVPR 2018.
+  links:
+    paper: https://arxiv.org/abs/1806.07011
+    code: https://github.com/xavierpuigf/virtualhome
+  access: open
+  tags: [planning, code-as-policy, dataset, benchmark]
+  added: 2026-09-29
+
+- id: ai2-thor
+  name: AI2-THOR
+  title: 'AI2-THOR: An Interactive 3D Environment for Visual AI'
+  date: 2017-12
+  org: Allen Institute for AI
+  summary: >-
+    Interactive 3D environment of near photo-realistic indoor scenes where agents navigate
+    and manipulate objects; many LLM multi-robot planners are evaluated in it (e.g.,
+    LaMMA-P's MAT-THOR, LLaMAR's MAP-THOR, Scale-Plan).
+  links:
+    paper: https://arxiv.org/abs/1712.05474
+    code: https://github.com/allenai/ai2thor
+    project: https://ai2thor.allenai.org/
+  access: open
+  tags: [navigation, manipulation, planning]
+  added: 2026-09-29
+
+- id: carla
+  name: CARLA
+  title: 'CARLA: An Open Urban Driving Simulator'
+  date: 2017-11
+  summary: >-
+    Open-source urban driving simulator with open digital assets and configurable sensor
+    suites and environmental conditions for developing, training and validating
+    autonomous-driving systems. CoRL 2017.
+  links:
+    paper: https://arxiv.org/abs/1711.03938
+    code: https://github.com/carla-simulator/carla
+    project: https://carla.org/
+  access: open
+  tags: [driving]
+  added: 2026-09-29
+
+- id: pybullet
+  name: PyBullet
+  date: 2017-04
+  summary: >-
+    Official Python interface to the Bullet Physics SDK, specialized for robotics simulation
+    and reinforcement learning; a lightweight, pip-installable CPU simulator.
+  links:
+    code: https://github.com/bulletphysics/bullet3
+  access: open
+  tags: [rl]
+  note: Date is the first PyPI release (0.1.1, Apr 2017).
+  added: 2026-09-29
+
+- id: mujoco
+  name: MuJoCo
+  title: 'MuJoCo: A physics engine for model-based control'
+  date: 2012-10
+  org: Google DeepMind
+  summary: >-
+    General-purpose physics engine for fast, accurate simulation of articulated bodies with
+    contact, a default substrate for robot learning and model-based control; now maintained
+    by Google DeepMind and fully open-source since v2.2.0 (May 2022).
+  links:
+    paper: https://doi.org/10.1109/IROS.2012.6386109
+    code: https://github.com/google-deepmind/mujoco
+    project: https://mujoco.org/
+    docs: https://mujoco.readthedocs.io/en/stable/
+  access: open
+  tags: [rl, sim2real]
+  note: Date is the IROS 2012 paper (Todorov, Erez, Tassa).
+  added: 2026-09-29
+
+- id: gazebo
+  name: Gazebo
+  title: Design and use paradigms for Gazebo, an open-source multi-robot simulator
+  date: 2004-09
+  summary: >-
+    Open-source multi-robot simulator first described at IROS 2004; today's Gazebo Sim
+    (gz-sim) succeeds Gazebo Classic and offers high-fidelity physics, rendering and sensor
+    models with GUI, plugin and message-passing entry points.
+  links:
+    paper: https://doi.org/10.1109/IROS.2004.1389727
+    code: https://github.com/gazebosim/gz-sim
+    project: https://gazebosim.org/
+  access: open
+  tags: [ros, multi-robot, navigation]
+  note: >-
+    IROS 2004 paper by Koenig and Howard; month per Semantic Scholar (IEEE Xplore online
+    date is 2005).
+  added: 2026-09-29

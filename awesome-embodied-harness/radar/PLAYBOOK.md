@@ -24,7 +24,9 @@ The playbook does not depend on any particular scheduler. The same prompt works 
 
 1. **Scripted feeds.** Run `python3 scripts/awesome.py scan`. It queries arXiv with the queries in `radar/sources.yaml`, reads the Hugging Face daily-papers feed, drops anything already listed or already in `radar/candidates.yaml`, and prints a ranked list with abstracts, upvotes and code/project links.
 2. **Web.** Run each query in `sources.yaml` → `web_searches` with the current month and year added. Skim `watch_pages` (labs, news, community) for posts inside the window. The industry announcements that matter most (new VLA or embodied-reasoning models, open-sourced stacks, robot platforms with agent SDKs) often appear here before they reach arXiv.
-3. **Candidates queue.** Re-check every item in `radar/candidates.yaml` whose `last_checked` is 3 or more days old. Did a paper, code or weights appear?
+3. **Candidates queue.**
+   - Re-triage every item in `radar/candidates.yaml` marked "over the daily cap" first. These were verified on an earlier run but did not fit its budget.
+   - Then re-check the other items whose `last_checked` is 3 or more days old. Did a paper, code or weights appear?
 4. **Weekly pass (Mondays only).**
    - Check the `github_watch` repos for new releases or major updates. Record notable ones as `updated` on the matching entry.
    - Run `python3 scripts/awesome.py check-links`. Fix links that are really broken: find the new canonical URL, or drop the link and say so in the log.
@@ -41,7 +43,9 @@ Give each candidate one of four outcomes:
 | **watch** | Looks important but cannot be verified yet (announced with no paper or code, rumor, or only a video). Add it to `radar/candidates.yaml`. |
 | **skip** | Out of scope, incremental, duplicate, or marketing with no technical content. |
 
-Rank the adds by significance and keep at most `max_additions_per_run` (see `sources.yaml`). Prefer, in order:
+Rank the adds by significance and keep at most `max_additions_per_run` (see `sources.yaml`). Queue the overflow in `radar/candidates.yaml` with the reason "Verified; over the daily cap on <date>". The next scan window starts after today, so anything not queued would never be seen again.
+
+Prefer, in order:
 
 1. new harness patterns;
 2. major-lab or widely used releases;

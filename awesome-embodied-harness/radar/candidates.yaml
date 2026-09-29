@@ -1,4 +1,99 @@
-# Items the radar has seen but cannot verify yet (see CONTRIBUTING.md).
-# The daily run re-checks entries whose last_checked is 3+ days old and
-# promotes them to data/ once a paper, code or official page appears.
-[]
+# Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
+# Two kinds: announcements that cannot be verified yet, and verified items that were over
+# a run's daily cap. The next run re-triages over-cap items first.
+
+- name: HappyWorld-Bench
+  url: https://arxiv.org/abs/2609.24308
+  title: HappyWorld-Bench
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-09-29. World-model benchmark that tests generated worlds under exploration, interaction and modification.
+
+- name: ActionPiece
+  url: https://arxiv.org/abs/2609.18487
+  title: 'ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: policy
+  reason: Verified; over the daily cap on 2026-09-29. Action-tokenizer study for autoregressive VLAs; code released.
+
+- name: THAW-VLA
+  url: https://arxiv.org/abs/2609.24682
+  title: 'Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: policy
+  reason: Verified; over the daily cap on 2026-09-29. Distils world-model representations into compact VLA policies.
+
+- name: COMPASS
+  url: https://arxiv.org/abs/2609.28247
+  title: Controlling Collectives of AI Agents in Reasoning Space with Spatial Transformers
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: multi-agent
+  reason: Verified; over the daily cap on 2026-09-29. Decentralized control of large collectives of LLM-driven robots.
+
+- name: MATE
+  url: https://arxiv.org/abs/2609.26520
+  title: 'MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: data
+  reason: Verified; over the daily cap on 2026-09-29. Multi-agent virtual teleoperation for humanoid collaboration data.
+
+- name: Generative Physical AI review
+  url: https://arxiv.org/abs/2609.18111
+  title: A Comprehensive Review of Generative Physical Artificial Intelligence
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: survey
+  reason: Verified; over the daily cap on 2026-09-29. Survey of generative physical AI systems.
+
+- name: DeformSmith
+  url: https://arxiv.org/abs/2609.18620
+  title: 'DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: sim
+  reason: Verified; over the daily cap on 2026-09-29. Physics-harness-guided generation of deformable assets; code released.
+
+- name: JRDB-AVR
+  url: https://arxiv.org/abs/2609.35032
+  title: 'JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-09-29. Active visual reasoning benchmark for embodied agents in real environments.
+
+- name: OmniEcho
+  url: https://arxiv.org/abs/2609.23407
+  title: 'OmniEcho: Audio-Visual Spatial Understanding for Omni-Modal Embodied Agents'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-09-29. Audio-visual spatial understanding benchmark for embodied agents; code released.
+
+- name: RoboIRGBench
+  url: https://arxiv.org/abs/2609.34384
+  title: 'RoboIRGBench: Benchmarking Implicit Referential Grounding in Vision-Language-Action Models'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-09-29. Implicit referential grounding benchmark for VLAs.
+
+- name: SciHorizon-eLab
+  url: https://arxiv.org/abs/2609.30971
+  title: 'SciHorizon-eLab: An Agentic Protocol-to-Task Compiler for Scalable Benchmarking of Scientific Embodied Agents'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-09-29. Agentic protocol-to-task compiler for benchmarking scientific embodied agents.
+
+- name: MimicAgent
+  url: https://arxiv.org/abs/2609.24145
+  title: 'MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation'
+  first_seen: 2026-09-29
+  last_checked: 2026-09-29
+  suggested_category: harness
+  reason: Verified; over the daily cap on 2026-09-29. Agentic prompt-to-trajectory generation of quadruped skills.
