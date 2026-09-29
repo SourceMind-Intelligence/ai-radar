@@ -123,6 +123,7 @@ tags:
   - open-vocabulary
   - planning
   - pointing
+  - protocol
   - real-world
   - reward-model
   - rl
@@ -132,10 +133,12 @@ tags:
   - security
   - self-improving
   - sim2real
+  - skill-library
   - spatial-reasoning
   - success-detection
   - teleop
   - tool-use
+  - uav
   - video
   - vla
   - world-model
