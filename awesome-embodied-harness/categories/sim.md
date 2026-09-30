@@ -3,12 +3,13 @@
 # Simulators & Environments
 
 > Physics simulators, rendering stacks and environment platforms for building and testing harnesses.  
-> Layer: L6 · 42 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
+> Layer: L6 · 43 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**DeformSmith**](https://arxiv.org/abs/2609.18620 "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation") · 2026-09 — Generates simulation-ready deformable assets from text or an image through hierarchical agentic construction around a shared physics harness that builds, tests and refines geometry, material behaviour and robot interaction, closing the loop with manipulation feedback. _Note: Code repository announced but not yet released (checked 2026-09-30)._ [project](https://can-lee.github.io/deformsmith-web/)
 - ⚪ [**Lingjing**](https://arxiv.org/abs/2608.08045 "Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities") · 2026-08 · Aerospace Information Research Institute (CAS), Shanghai Jiao Tong University — City-scale testbed for heterogeneous multi-agent embodied tasks (UAVs, ground robots, vehicles) that rebuilds cities from geographic data, syncs several physics engines, offers a Gym-like API for ReAct agents with configurable communication, and logs replays for diagnosis. _Note: First-party evaluation of twelve VLMs on nine urban tasks; code release not verified._
 - 🟢 [**SIMPLE**](https://arxiv.org/abs/2606.08278 "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation") · 2026-06 — Humanoid loco-manipulation testbed coupling MuJoCo contact dynamics with Isaac Sim rendering: 60 whole-body tasks, 50 indoor scenes, 1,000+ assets, motion-planning and VR-teleop data pipelines, and benchmarks of imitation, VLA and world-action models. _Note: First-party results report strong sim-real correlation and zero-shot transfer to physical humanoids._ [code](https://github.com/physical-superintelligence-lab/SIMPLE) · [project](https://psi-lab.ai/SIMPLE)
 - 🟢 [**Kamino**](https://arxiv.org/abs/2603.16536 "Kamino: GPU-based Massively Parallel Simulation of Multi-Body Systems with Challenging Topologies") · 2026-03 · Disney Research, NVIDIA — GPU physics solver in NVIDIA Warp, integrated into Newton, that natively handles kinematic loops and batched heterogeneous robots by solving constrained multibody dynamics as a nonlinear complementarity problem; trains a biped with six nested loops in 4,096 envs. _Note: Ships inside the Newton repo (Kamino examples under newton/examples/kamino)._ [code](https://github.com/newton-physics/newton)

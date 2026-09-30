@@ -1849,3 +1849,70 @@
   access: open
   tags: [benchmark, manipulation]
   added: 2026-09-29
+
+- id: rle-bench
+  name: RLE-Bench
+  title: 'RLE-Bench: A Qualifying Exam for Coding Agents as Robot Learning Engineers'
+  date: 2026-09
+  summary: >-
+    Benchmark that evaluates coding agents as robot-learning engineers across interactive
+    control, policy learning, perception and estimation, and mechanical design, scoring the
+    artifacts they submit (policies, harnesses, designs) into an overall RLE Index.
+  links:
+    paper: https://arxiv.org/abs/2609.34210
+    code: https://github.com/RLE-Bench/RLE-Bench
+    project: https://rle-bench.github.io/
+  access: open
+  tags: [benchmark, agentic-loop, code-as-policy]
+  added: 2026-09-30
+
+- id: scihorizon-elab
+  name: SciHorizon-eLab
+  title: >-
+    SciHorizon-eLab: An Agentic Protocol-to-Task Compiler for Scalable Benchmarking of
+    Scientific Embodied Agents
+  date: 2026-09
+  summary: >-
+    Agentic compiler that turns natural-language lab protocols into simulator-ready embodied
+    tasks (environment, executable skill program, step-level success specs) with multi-stage
+    certification; produces a 300-task benchmark with human-in-the-loop execution.
+  links:
+    paper: https://arxiv.org/abs/2609.30971
+    code: https://github.com/SciHorizon-elab/SciHorizon-elab
+  access: open
+  tags: [benchmark, data-generation, hitl, manipulation]
+  added: 2026-09-30
+
+- id: jrdb-avr
+  name: JRDB-AVR
+  title: >-
+    JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World
+    Environments
+  date: 2026-09
+  summary: >-
+    Active visual reasoning benchmark built from real JRDB robot data: agents request
+    bounded observations by timestamp and viewpoint and are scored on both the answer and
+    the grounded evidence; includes a reference agent with a graph-based world model.
+  links:
+    paper: https://arxiv.org/abs/2609.35032
+    code: https://github.com/ControlNet/JRDB-AVR
+  access: closed
+  tags: [benchmark, spatial-reasoning, real-world, world-model]
+  note: >-
+    NeurIPS 2026. The official repository held only a README stub when checked on
+    2026-09-30.
+  added: 2026-09-30
+
+- id: happyworld-bench
+  name: HappyWorld-Bench
+  title: HappyWorld-Bench
+  date: 2026-09
+  summary: >-
+    World-model benchmark that tests whether generated worlds stay consistent and responsive
+    under exploration, interaction and modification, with video, spatial and embodied
+    tracks, automated metrics and an Elo arena of human A/B comparisons.
+  links:
+    paper: https://arxiv.org/abs/2609.24308
+  access: closed
+  tags: [benchmark, world-model, leaderboard]
+  added: 2026-09-30

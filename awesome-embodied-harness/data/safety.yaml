@@ -720,3 +720,20 @@
   access: open
   tags: [safety, planning, mobile-manipulation]
   added: 2026-09-29
+
+- id: rcdh
+  name: RCDH
+  title: >-
+    Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in
+    Robotic Harvesting
+  aliases: [Rejectable and Calibrated Decision Heads]
+  date: 2026-09
+  summary: >-
+    Replaces a frozen VLA's output head with a typed decision schema that includes explicit
+    rejection, plus calibration for risk-aware abstention, so the policy can decline to act
+    under occlusion; tested on a robotic harvesting platform.
+  links:
+    paper: https://arxiv.org/abs/2609.35039
+  access: closed
+  tags: [safety, uncertainty, vla, real-world]
+  added: 2026-09-30

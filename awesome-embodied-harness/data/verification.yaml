@@ -746,3 +746,54 @@
   access: closed
   tags: [success-detection, reward-model, manipulation]
   added: 2026-09-29
+
+- id: sage-action-gating
+  name: SAGE
+  title: 'SAGE: Symbolic Action-Gating and Editing for LLM Task Planners'
+  aliases: [Symbolic Action-Gating and Editing]
+  date: 2026-09
+  summary: >-
+    LLM task planner with a model-free symbolic gate that blocks precondition-violating
+    actions with typed reasons before actuation, plus a local edit that regenerates only the
+    failed sub-goal's suffix; evaluated on a 75-task AI2-THOR benchmark and on a Jetson AGX
+    Orin.
+  links:
+    paper: https://arxiv.org/abs/2609.34268
+    code: https://github.com/mtbui2010/sage_release
+  access: open
+  tags: [planning, failure-recovery, safety, on-device]
+  added: 2026-09-30
+
+- id: actionground
+  name: ActionGround
+  title: 'ActionGround: Training-Free Runtime Refinement of Frozen VLA Policies'
+  date: 2026-09
+  summary: >-
+    Training-free runtime layer that wraps a frozen VLA without weight access: a phase-aware
+    finite-state machine applies per-phase rule-based corrections, and an Euler-Lagrange
+    term adds rigid-body dynamics to each control step, logging its residual as a
+    diagnostic.
+  links:
+    paper: https://arxiv.org/abs/2609.33256
+  access: closed
+  tags: [vla, manipulation]
+  note: >-
+    Evaluated on LIBERO-Spatial and Robosuite pick-and-place; the real-arm trial is
+    qualitative.
+  added: 2026-09-30
+
+- id: f4r
+  name: F4R
+  title: >-
+    F4R: Failure-Driven Recognition, Reconstruction, Refinement, and Redeployment for
+    Continual Robot Self-Improvement
+  date: 2026-09
+  summary: >-
+    Closed real-to-sim-to-real loop for VLA self-improvement: an agent detects and diagnoses
+    real-world failures, each failure is rebuilt as an interactive simulated scene, the
+    policy is refined with sim-real co-training and targeted RL, then redeployed.
+  links:
+    paper: https://arxiv.org/abs/2609.35575
+  access: closed
+  tags: [failure-recovery, self-improving, sim2real, vla, real-world]
+  added: 2026-09-30

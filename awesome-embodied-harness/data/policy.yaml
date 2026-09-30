@@ -1520,3 +1520,23 @@
   tags: [manipulation, mobile-manipulation]
   note: Repository ships TensorFlow checkpoints for three RT-1 variants.
   added: 2026-09-29
+
+- id: light-o1
+  name: Light-O1
+  aliases: [Light-O1-Preview]
+  date: 2026-09
+  org: Light Origins
+  summary: >-
+    Embodied foundation model pretrained on structured human action recovered from internet
+    video, then post-trained per embodiment; it states in language what an instruction needs
+    from the body before generating actions. The open Light-O1-Preview covers
+    text-to-whole-body action only.
+  links:
+    code: https://github.com/lightorigins/Light-O1
+    blog: https://www.lightorigins.com/en/blog/light-o1
+    weights: https://huggingface.co/LightOriginsHQ/Light-O1-Preview
+  access: open
+  tags: [humanoid, cross-embodiment, video]
+  note: >-
+    Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced.
+  added: 2026-09-30

@@ -2486,3 +2486,38 @@
   access: open
   tags: [planning, long-horizon]
   added: 2026-09-29
+
+- id: roboicl
+  name: RoboICL
+  title: 'RoboICL: Embodied In-Context Learning with GPT-6 Astra'
+  date: 2026-09
+  org: Mosi AI
+  summary: >-
+    In-context robot-control loop around a general VLM (GPT-6 Astra) with no VLA and no
+    robot-specific training: demonstrations and the model's own interaction history share an
+    observation-action-receipt-observation grammar, with bounded anchored memory across task
+    stages; evaluated on RoboDojo and three real-robot tasks.
+  links:
+    paper: https://arxiv.org/abs/2609.34261
+    code: https://github.com/Mosi-AI/RoboICL
+    project: https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/
+  access: open
+  tags: [agentic-loop, memory, manipulation, real-world]
+  added: 2026-09-30
+
+- id: mimicagent
+  name: MimicAgent
+  title: 'MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation'
+  date: 2026-09
+  summary: >-
+    Agentic harness in which coding agents turn a skill prompt into quadruped reference
+    trajectories, which then train example-guided RL policies deployed in simulation and on
+    a real robot; replaces LLM reward shaping (as in Eureka) with LLM-generated reference
+    motion.
+  links:
+    paper: https://arxiv.org/abs/2609.24145
+    project: https://luckykantnayak.github.io/mimic-agent/
+  access: closed
+  tags: [agentic-loop, code-as-policy, legged, rl, sim2real]
+  note: Code repository announced as "releasing soon" (checked 2026-09-30).
+  added: 2026-09-30

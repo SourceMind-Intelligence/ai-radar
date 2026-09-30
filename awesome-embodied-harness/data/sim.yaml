@@ -758,3 +758,22 @@
     IROS 2004 paper by Koenig and Howard; month per Semantic Scholar (IEEE Xplore online
     date is 2005).
   added: 2026-09-29
+
+- id: deformsmith
+  name: DeformSmith
+  title: >-
+    DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for
+    Robot Manipulation
+  date: 2026-09
+  summary: >-
+    Generates simulation-ready deformable assets from text or an image through hierarchical
+    agentic construction around a shared physics harness that builds, tests and refines
+    geometry, material behaviour and robot interaction, closing the loop with manipulation
+    feedback.
+  links:
+    paper: https://arxiv.org/abs/2609.18620
+    project: https://can-lee.github.io/deformsmith-web/
+  access: closed
+  tags: [agentic-loop, data-generation, manipulation]
+  note: Code repository announced but not yet released (checked 2026-09-30).
+  added: 2026-09-30
