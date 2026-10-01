@@ -3,12 +3,13 @@
 # VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 83 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
+> Layer: L1 · 84 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟡 [**Rho**](https://arxiv.org/abs/2609.38164 "Rho: A Foundation for Efficiently Adaptable VLA Models") · 2026-09 · Microsoft — Family of open-weight bimanual VLAs with embodiment midtraining for YAM Box, UR AI Trainer and FR3 Duo; a lightweight latent policy learns from corrective feedback to pick noise inputs for the frozen flow-matching action expert, adapting online from a few corrected episodes. _Note: Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training code link found._ [weights](https://huggingface.co/microsoft/rho-base)
 - 🟢 [**Light-O1**](https://www.lightorigins.com/en/blog/light-o1) · 2026-09 · Light Origins — Embodied foundation model pretrained on structured human action recovered from internet video, then post-trained per embodiment; it states in language what an instruction needs from the body before generating actions. The open Light-O1-Preview covers text-to-whole-body action only. _Note: Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced._ [code](https://github.com/lightorigins/Light-O1) · [weights](https://huggingface.co/LightOriginsHQ/Light-O1-Preview)
 - 🟢 [**Grounded Action Model**](https://arxiv.org/abs/2609.23863 "Grounded Action Model: 3D Grounding as a Foundation for Robotics") · 2026-09 — Robot foundation model built on 3D grounding: language, point or box prompts become an object-centric representation with metric geometry that a multi-stream transformer turns into action chunks; runs alone or as the low-level controller under a VLM planner. [code](https://github.com/GehaoZhang6/Grounded-Action-Model) · [project](https://grounded-action-model.github.io/)
 - ⚪ [**In-Context VLA**](https://arxiv.org/abs/2608.05738 "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use") · 2026-08 — Argues free-form chain-of-thought degrades VLA control and instead injects grounded perceptual evidence as context (supervising only actions), with an agentic tool-use interface the policy can query.

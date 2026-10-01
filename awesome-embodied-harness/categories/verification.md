@@ -3,7 +3,7 @@
 # Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 43 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
+> Layer: L5 · 44 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -11,6 +11,7 @@
 
 - 🟢 [**SAGE**](https://arxiv.org/abs/2609.34268 "SAGE: Symbolic Action-Gating and Editing for LLM Task Planners") · 2026-09 — LLM task planner with a model-free symbolic gate that blocks precondition-violating actions with typed reasons before actuation, plus a local edit that regenerates only the failed sub-goal's suffix; evaluated on a 75-task AI2-THOR benchmark and on a Jetson AGX Orin. [code](https://github.com/mtbui2010/sage_release)
 - ⚪ [**ROBORMBENCH**](https://arxiv.org/abs/2609.05401 "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models") · 2026-09 · Yonsei University et al. — Paraphrase-robustness benchmark for VLM reward models: 2,390 real-robot trajectories with progress labels and 21,673 verified instruction paraphrases; rewording alone can flip identical behavior between judged success and failure.
+- ⚪ [**ProgressCompass**](https://arxiv.org/abs/2609.36684 "ProgressCompass: Embodied Progress Reward Models Are Lost Without the Right Context") · 2026-09 — Shows that embodied progress reward models fail when progress depends on history, using a new ContextProgress-Bench (24 manipulation tasks), and proposes an agentic loop in which a general VLM supplies the missing context to a frozen progress reward model. [project](https://andyzworks.github.io/progresscompass/)
 - ⚪ [**GAVEL**](https://arxiv.org/abs/2609.19315 "GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning") · 2026-09 — Verifies and repairs LLM task plans against an explicit graph world model of object relations, action preconditions/effects and beliefs over unseen object locations: it predicts consequences before execution, fixes violations directly and saves LLM replanning for semantic errors. _Note: First-party: on BEHAVIOR-1K, Qwen3-8B single-task success rises from 41.2% to 91.8%._
 - ⚪ [**FailBench**](https://arxiv.org/abs/2609.03611 "FailBench: How Reliable are VLMs at Judging Robot Task Success?") · 2026-09 — Benchmark of 2,197 manipulation attempts from 14 public sources for VLM success/failure judges; the best of 13 detectors reaches 0.77 mean balanced accuracy, near chance on contact-rich assembly, with a bias toward predicting success. _Note: First-party numbers; a direct check on VLM-as-judge reliability._ [project](https://metric-ai-lab.github.io/failbench/)
 - ⚪ [**F4R**](https://arxiv.org/abs/2609.35575 "F4R: Failure-Driven Recognition, Reconstruction, Refinement, and Redeployment for Continual Robot Self-Improvement") · 2026-09 — Closed real-to-sim-to-real loop for VLA self-improvement: an agent detects and diagnoses real-world failures, each failure is rebuilt as an interactive simulated scene, the policy is refined with sim-real co-training and targeted RL, then redeployed.

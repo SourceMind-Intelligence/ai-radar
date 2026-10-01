@@ -1540,3 +1540,23 @@
   note: >-
     Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced.
   added: 2026-09-30
+
+- id: rho-vla
+  name: Rho
+  title: 'Rho: A Foundation for Efficiently Adaptable VLA Models'
+  date: 2026-09
+  org: Microsoft
+  summary: >-
+    Family of open-weight bimanual VLAs with embodiment midtraining for YAM Box, UR AI
+    Trainer and FR3 Duo; a lightweight latent policy learns from corrective feedback to pick
+    noise inputs for the frozen flow-matching action expert, adapting online from a few
+    corrected episodes.
+  links:
+    paper: https://arxiv.org/abs/2609.38164
+    weights: https://huggingface.co/microsoft/rho-base
+  access: partial
+  tags: [vla, manipulation, cross-embodiment]
+  note: >-
+    Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training
+    code link found.
+  added: 2026-10-01

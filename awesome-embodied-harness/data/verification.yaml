@@ -797,3 +797,20 @@
   access: closed
   tags: [failure-recovery, self-improving, sim2real, vla, real-world]
   added: 2026-09-30
+
+- id: progresscompass
+  name: ProgressCompass
+  title: >-
+    ProgressCompass: Embodied Progress Reward Models Are Lost Without the Right Context
+  aliases: [ContextProgress-Bench]
+  date: 2026-09
+  summary: >-
+    Shows that embodied progress reward models fail when progress depends on history, using
+    a new ContextProgress-Bench (24 manipulation tasks), and proposes an agentic loop in
+    which a general VLM supplies the missing context to a frozen progress reward model.
+  links:
+    paper: https://arxiv.org/abs/2609.36684
+    project: https://andyzworks.github.io/progresscompass/
+  access: closed
+  tags: [reward-model, success-detection, benchmark, long-horizon, agentic-loop]
+  added: 2026-10-01

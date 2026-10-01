@@ -737,3 +737,21 @@
   access: closed
   tags: [safety, uncertainty, vla, real-world]
   added: 2026-09-30
+
+- id: predictive-semantic-safety
+  name: Predictive Semantic Safety
+  title: >-
+    Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control
+  aliases: [PSS]
+  date: 2026-09
+  summary: >-
+    A VLM predicts physical events such as falling fixtures and their timing; conformal
+    prediction turns them into calibrated future object occupancy, which a backup-based
+    safety filter uses to minimally modify the robot's commands; evaluated in MuJoCo with a
+    Unitree Go1.
+  links:
+    paper: https://arxiv.org/abs/2609.34356
+    project: https://www.taekyung.me/pss
+  access: closed
+  tags: [safety, uncertainty, legged]
+  added: 2026-10-01

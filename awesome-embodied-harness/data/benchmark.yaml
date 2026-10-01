@@ -1916,3 +1916,54 @@
   access: closed
   tags: [benchmark, world-model, leaderboard]
   added: 2026-09-30
+
+- id: libero-max
+  name: LIBERO-MAX
+  title: 'LIBERO-MAX: Do Robot Policies Adapt When the World Changes?'
+  date: 2026-09
+  summary: >-
+    8,000 paired cases that inject a mid-task change (moved target, viewpoint shift,
+    clutter, obstacle, and more) and compare against the same rollout without it, isolating
+    event-caused regressions across 14 VLA, hybrid and world-action policies.
+  links:
+    paper: https://arxiv.org/abs/2609.36518
+    code: https://github.com/liberomax/LIBERO-MAX
+    project: https://liberomax.github.io/
+  access: open
+  tags: [benchmark, vla, manipulation]
+  added: 2026-10-01
+
+- id: vla-acceleration-benchmark-bugs
+  name: VLA acceleration benchmark audit
+  title: >-
+    Faster and Better? Benchmark Bugs and Design Limitations Distort the Evaluation of
+    Vision-Language-Action Acceleration
+  date: 2026-09
+  summary: >-
+    Audits seven simulated manipulation benchmarks, including RoboTwin, LIBERO-Plus and
+    VLABench, finding 22 bugs and 4 design limitations that let VLA acceleration methods
+    beat their own baselines; fixes can reverse method rankings.
+  links:
+    paper: https://arxiv.org/abs/2609.37771
+  access: closed
+  tags: [benchmark, vla]
+  note: >-
+    The paper says the fixes are released; no repository link was found (checked
+    2026-10-01).
+  added: 2026-10-01
+
+- id: video2skill
+  name: Video2Skill
+  title: 'Video2Skill: From Streaming Experience to Reusable Embodied Skills'
+  date: 2026-09
+  summary: >-
+    Benchmark for streaming embodied skill discovery: a VLM watches robot and human
+    manipulation videos in sequence and must locate events, group same-transformation events
+    and decide when to reuse or create a skill in a persistent library.
+  links:
+    paper: https://arxiv.org/abs/2609.36691
+    project: https://andyzworks.github.io/video2skill/
+    data: https://huggingface.co/datasets/Sterzhang/video2skill-bench
+  access: partial
+  tags: [benchmark, skill-library, video, manipulation]
+  added: 2026-10-01

@@ -918,3 +918,22 @@
     RSS 2022; extended in 'Foundations of Spatial Perception for Robotics' (arXiv
     2305.07154, submitted to IJRR).
   added: 2026-09-29
+
+- id: simplearm
+  name: SimpleARM
+  title: Simple Agentic Memory for Generalist Robot Policies
+  aliases: [Simple Agentic Robot Memory]
+  date: 2026-09
+  org: CMU; Tulane
+  summary: >-
+    Training-free memory layer for frozen generalist robot policies: from the instruction it
+    decides what to monitor, frozen perception tools keep compact typed state online, and
+    that state is retrieved and re-grounded in the current view only when a subgoal depends
+    on history; evaluated on RoboMME.
+  links:
+    paper: https://arxiv.org/abs/2609.36595
+    project: https://simplearm.github.io/
+  access: closed
+  tags: [memory, manipulation, long-horizon]
+  note: Code repository says "Code will be released soon" (checked 2026-10-01).
+  added: 2026-10-01

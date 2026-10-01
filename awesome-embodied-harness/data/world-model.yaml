@@ -1153,3 +1153,19 @@
   access: open
   tags: [world-model, rl, legged, manipulation]
   added: 2026-09-29
+
+- id: empiric
+  name: EMPIRIC
+  title: 'EMPIRIC: Experiment-Driven Learning of Residual World Models for Robot Planning'
+  date: 2026-09
+  summary: >-
+    Agent that learns a residual world model by experiment: a physics engine extended with
+    learned code for missing mechanisms (new forces, constraints, hidden state), with
+    Bayesian inference over parameters, used to plan, pick informative experiments and
+    revise hypotheses.
+  links:
+    paper: https://arxiv.org/abs/2609.35047
+    project: https://yichao-liang.github.io/empiric
+  access: closed
+  tags: [world-model, planning, code-as-policy, real-world]
+  added: 2026-10-01

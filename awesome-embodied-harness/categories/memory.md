@@ -3,13 +3,14 @@
 # World State, Memory & Spatial Context
 
 > Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.  
-> Layer: L3 · 51 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
+> Layer: L3 · 52 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**Workspace Models**](https://arxiv.org/abs/2609.20820 "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision") · 2026-09 · MIT, CMU — Moves VLM calls to training time: a VLM labels task-salient current and past information, which is distilled into a lightweight latent 'workspace token' that policies use at deployment to solve memory-intensive tasks without in-the-loop VLM reasoning. _Note: CoRL 2026._
+- ⚪ [**SimpleARM**](https://arxiv.org/abs/2609.36595 "Simple Agentic Memory for Generalist Robot Policies") · 2026-09 · CMU; Tulane — Training-free memory layer for frozen generalist robot policies: from the instruction it decides what to monitor, frozen perception tools keep compact typed state online, and that state is retrieved and re-grounded in the current view only when a subgoal depends on history; evaluated on RoboMME. _Note: Code repository says "Code will be released soon" (checked 2026-10-01)._ [project](https://simplearm.github.io/)
 - ⚪ [**ME-Brain-1.0**](https://arxiv.org/abs/2609.24271 "ME-Brain-1.0: Memory, Cognition and Action for Evolving Embodied Intelligence") · 2026-09 · MachEmbodied — Self-evolving embodied system built as a loop of execution, experience acquisition and evolution: an evolvable hierarchical memory of multimodal trajectories, a cognitive core that turns experience into skills, and an event-driven action model. _Note: Repository is a project page (report and videos); the MachEmbodied GitHub org also hosts Li Auto's ME-VLM._ [project](https://github.com/MachEmbodied/ME-Brain-1.0)
 - ⚪ [**Ledger**](https://arxiv.org/abs/2609.34554 "Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs") · 2026-09 · Harvard University — Harness that keeps short-term perceptual memory inside a fine-tuned pi0.5 policy and long-term object memory outside it, as a spatio-temporal object ledger built from a SAM3 tracker and VLM captions that an LLM planner reads at step boundaries. _Note: First-party: 64.3% four-suite average on RoboMME._
 - 🟡 [**PonderPounce**](https://arxiv.org/abs/2608.24115 "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control") · 2026-08 · MAUM.AI, Seoul National University, Georgia Tech — Uses a pretrained System-2 MLLM's native context as episode memory: it folds execution history and demonstrations into continuously refreshed 'cognition' that an asynchronous System-1 action model conditions on; evaluated on RoboMME. [project](https://worv-ai.github.io/ponderpounce/) · [weights](https://huggingface.co/worv-ai/ponderpounce-9b-robomme)
