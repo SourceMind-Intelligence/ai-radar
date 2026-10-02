@@ -814,3 +814,20 @@
   access: closed
   tags: [reward-model, success-detection, benchmark, long-horizon, agentic-loop]
   added: 2026-10-01
+
+- id: failbank
+  name: FailBank
+  title: >-
+    Learning from Runtime Feedback through Failure-Bank Self-Evolution for
+    Vision-Language-Action Models
+  date: 2026-09
+  summary: >-
+    Turns runtime safety feedback into persistent VLA improvement: a CBF safety module acts
+    as an observe-only teacher producing counterfactual corrections, outcome-aware admission
+    selects corrective targets and quiet anchors, and guarded LoRA updates fix the
+    policy-shield mismatch; evaluated on VLA-Arena.
+  links:
+    paper: https://arxiv.org/abs/2609.39820
+  access: closed
+  tags: [self-improving, safety, failure-recovery, vla]
+  added: 2026-10-02

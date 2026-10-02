@@ -3,12 +3,13 @@
 # World Models
 
 > Learned world models and simulators used for planning, policy evaluation and data generation.  
-> Layer: L6 · 65 entries · [overview](../README.md#world-model) · [survey](../SURVEY.md)
+> Layer: L6 · 66 entries · [overview](../README.md#world-model) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟢 [**RoboCoach**](https://arxiv.org/abs/2609.39685 "RoboCoach: World Models as Active Coaches for Compositional Robot Skills") · 2026-09 — Route-Imagine-Diagnose-Improve loop that runs reusable skill experts inside a shared action-conditioned world model (CoachWorld), uses a progress judge to find the first failing subtask, and targets new demonstrations and adapter updates there; tested on Franka and AgileX. [code](https://github.com/RoboCoach-AI/CoachWorld) · [project](https://robocoach-ai.github.io/) · [weights](https://huggingface.co/JEdward/CoachWorld)
 - 🟢 [**OpenWAM**](https://arxiv.org/abs/2609.07398 "OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining") · 2026-09 — Open modular research stack for world-action model pretraining with controlled studies of what to inherit from video priors and how world and action learning interact; its OpenWAM-α model is pretrained on about 6,400 hours of egocentric human and robot data. [code](https://github.com/OpenWAM-Official/OpenWAM) · [project](https://openwam-official.github.io/) · [weights](https://huggingface.co/OpenWAM/OpenWAM-Alpha-Pretrain-Foundation-Model)
 - ⚪ [**InternW0-Δ**](https://arxiv.org/abs/2609.31394 "InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data") · 2026-09 · Shanghai AI Laboratory — World action model that combines a pretrained video expert and an action expert under frozen-VLM guidance, distills 4D geometry and motion priors during training, and pretrains on a 20K+ hour open corpus of robot, UMI and egocentric human data. _Note: Authors state code, weights and processed data will be open-sourced._ [project](https://internrobotics.github.io/InternW0-Delta/)
 - ⚪ [**GE-Act 2.0**](https://arxiv.org/abs/2609.05588 "GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation") · 2026-09 · AgiBot — World-action model trained from scratch on manipulation data (control-oriented autoencoder, single-step visual planner, inverse dynamics model); scaling co-training data from 300 to 30,000 hours raised zero-shot success from 17.1% to 44.1% on its G1-OP evaluation. _Note: Successor to GE-Act in Genie Envisioner; first-party results; no code or weights found._ [project](https://ge-act-v2.github.io/)

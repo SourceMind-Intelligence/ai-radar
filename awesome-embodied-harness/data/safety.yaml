@@ -755,3 +755,35 @@
   access: closed
   tags: [safety, uncertainty, legged]
   added: 2026-10-01
+
+- id: refusals-that-bend
+  name: Refusals That Bend
+  title: >-
+    Refusals That Bend: Measuring and Predicting Task Malleability in Embodied VLM Planners
+  date: 2026-09
+  summary: >-
+    Shows that placing one ordinary object in the scene flips 20.2% of tasks a
+    constitution-guarded embodied VLM planner initially refused into compliance, with no
+    adversarial pixels or prompts, and predicts which tasks are malleable using signals from
+    a small open VLM.
+  links:
+    paper: https://arxiv.org/abs/2609.38971
+  access: closed
+  tags: [safety, security, planning]
+  added: 2026-10-02
+
+- id: multilink-safety-filter
+  name: Multi-Link Safety Filter
+  title: Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
+  date: 2026-09
+  summary: >-
+    Training-free run-time shield for a pretrained VLA: five ellipsoids cover gripper, wrist
+    and forearm, and one barrier program filters every command against a keep-out ellipsoid
+    that sparse optical flow moves with the hazard; runs on edge CPUs alongside pi0.5 and on
+    an SO-101 arm.
+  links:
+    paper: https://arxiv.org/abs/2609.40007
+    project: https://yathag.github.io/multilink-safety-filter/
+  access: closed
+  tags: [safety, vla, manipulation, on-device, real-world]
+  added: 2026-10-02

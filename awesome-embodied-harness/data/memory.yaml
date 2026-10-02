@@ -937,3 +937,21 @@
   tags: [memory, manipulation, long-horizon]
   note: Code repository says "Code will be released soon" (checked 2026-10-01).
   added: 2026-10-01
+
+- id: chronograph
+  name: ChronoGraph
+  title: >-
+    ChronoGraph: Functional 4D Scene Graphs with Vision-Language Models for Interaction
+    Understanding and Grounded Planning
+  aliases: [ChronoGraphBench, ChronoGraphVLM]
+  date: 2026-09
+  summary: >-
+    Functional 4D scene graph linking actions on affordance parts to semantic and geometric
+    state changes, used for both explaining past interactions and planning future ones;
+    comes with ChronoGraphBench and a ChronoGraphVLM trained with graph-as-chain-of-thought
+    SFT and graph RL.
+  links:
+    paper: https://arxiv.org/abs/2609.39665
+  access: closed
+  tags: [scene-graph, planning, mobile-manipulation, benchmark]
+  added: 2026-10-02

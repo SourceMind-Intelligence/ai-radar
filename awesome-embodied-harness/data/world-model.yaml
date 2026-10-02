@@ -1169,3 +1169,22 @@
   access: closed
   tags: [world-model, planning, code-as-policy, real-world]
   added: 2026-10-01
+
+- id: robocoach
+  name: RoboCoach
+  title: 'RoboCoach: World Models as Active Coaches for Compositional Robot Skills'
+  aliases: [CoachWorld]
+  date: 2026-09
+  summary: >-
+    Route-Imagine-Diagnose-Improve loop that runs reusable skill experts inside a shared
+    action-conditioned world model (CoachWorld), uses a progress judge to find the first
+    failing subtask, and targets new demonstrations and adapter updates there; tested on
+    Franka and AgileX.
+  links:
+    paper: https://arxiv.org/abs/2609.39685
+    code: https://github.com/RoboCoach-AI/CoachWorld
+    project: https://robocoach-ai.github.io/
+    weights: https://huggingface.co/JEdward/CoachWorld
+  access: open
+  tags: [world-model, self-improving, skill-library, long-horizon, real-world]
+  added: 2026-10-02

@@ -2588,3 +2588,86 @@
   access: closed
   tags: [code-as-policy, agentic-loop, manipulation, real-world]
   added: 2026-10-01
+
+- id: dynaharness
+  name: DynaHarness
+  title: 'DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents'
+  date: 2026-09
+  summary: >-
+    Slow-brain/fast-brain harness bound by a physical execution contract: the planner
+    proposes capabilities, the fast layer grounds, monitors, refuses or substitutes commands
+    across analytic skills, recovery skills and a frozen VLA, and failure attribution drives
+    revisions admitted only after paired regression checks.
+  links:
+    paper: https://arxiv.org/abs/2609.40306
+    project: https://denghaoyuan123.github.io/Dynaharness_page/
+  access: closed
+  tags: [agentic-loop, self-improving, failure-recovery, skill-library, vla, long-horizon]
+  added: 2026-10-02
+
+- id: asena
+  name: ASENA
+  title: 'ASENA: Self-evolving Agents for Embodied Navigation'
+  date: 2026-09
+  summary: >-
+    Connects general-purpose coding agents to robot sensing, supervised execution and a
+    persistent workspace of notes and executable skills, so agents write, run and repair
+    programs with fixed weights; ships ASENA-VLN, a 4B monocular navigation policy used as
+    an optional tool, and runs on a Unitree G1.
+  links:
+    paper: https://arxiv.org/abs/2609.39207
+    project: https://asena-bot.github.io/
+  access: closed
+  tags: [agentic-loop, code-as-policy, self-improving, skill-library, navigation, humanoid]
+  added: 2026-10-02
+
+- id: simex
+  name: SimEX
+  title: 'SimEX: Simulation-Integrated Robotics AutoResearch'
+  date: 2026-09
+  summary: >-
+    Robotics autoresearch loop for coding agents: probe-and-optimize iterations in
+    simulation build a robot toolbox, then a few physical trials jointly correct the
+    simulator and the toolbox, with the corrected simulator used to diagnose failures and
+    screen repairs; no demonstrations needed.
+  links:
+    paper: https://arxiv.org/abs/2609.38982
+    project: https://robo-simex.github.io/
+  access: closed
+  tags: [agentic-loop, code-as-policy, self-improving, sim2real, real-world]
+  added: 2026-10-02
+
+- id: harness-evolution-scale-selection
+  name: Scale and Selection
+  title: >-
+    Scale and Selection: What Makes Automatic Harness Evolution Work for Visual-Interface
+    Robot Agents
+  date: 2026-09
+  summary: >-
+    Studies an optimizer coding agent that rewrites the prompts, tools and control rules of
+    a coding-agent robot policy: rollouts per round govern whether revisions generalize, and
+    Champion-Challenger selection is needed to stop unconditional edits from degrading
+    performance.
+  links:
+    paper: https://arxiv.org/abs/2609.39304
+  access: closed
+  tags: [agentic-loop, self-improving, manipulation]
+  added: 2026-10-02
+
+- id: navharness-adaptive-goals
+  name: NavHarness (adaptive goals)
+  title: 'NavHarness: Adaptive Goals for Agentic Vision-Language Navigation'
+  date: 2026-09
+  summary: >-
+    Agentic VLN framework with a Goal Agent that sets adaptive local goals, a Verify Agent
+    that checks each goal with a goal-specific question, a Memory Agent that compresses
+    history at verified boundaries, and a Visuomotor Agent that executes; evaluated on
+    R2R-CE, RxR-CE and real routes.
+  links:
+    paper: https://arxiv.org/abs/2609.39915
+  access: closed
+  tags: [agentic-loop, navigation, memory, success-detection, real-world]
+  note: >-
+    A different paper from the NavHarness lifelong-navigation entry, despite the shared
+    name.
+  added: 2026-10-02

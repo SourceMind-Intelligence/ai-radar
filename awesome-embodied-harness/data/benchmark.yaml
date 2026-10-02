@@ -1967,3 +1967,34 @@
   access: partial
   tags: [benchmark, skill-library, video, manipulation]
   added: 2026-10-01
+
+- id: gpt6-astra-embodied-policies
+  name: GPT-6 Astra as embodied policies
+  title: Systematically Exploring the Capabilities of GPT-6 Astra as Embodied Policies
+  date: 2026-09
+  org: Galbot
+  summary: >-
+    Evaluates GPT-6 Astra as a direct and hybrid robot policy across gripper, dexterous and
+    mobile manipulation, navigation, locomotion and humanoid loco-manipulation, finding
+    useful task decisions but unreliable low-level control and heavy token and latency
+    costs.
+  links:
+    paper: https://arxiv.org/abs/2609.38537
+  access: closed
+  tags: [benchmark, manipulation, navigation, humanoid, dual-system]
+  added: 2026-10-02
+
+- id: libero-agent
+  name: LIBERO-Agent
+  title: 'LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation'
+  date: 2026-09
+  summary: >-
+    Agent-native manipulation benchmark built on 200 LIBERO tasks, with a 30-task primary
+    suite split into perception, short-horizon and long-horizon composition: agents choose
+    which observations to inspect, process them with their own tools and issue native action
+    commands.
+  links:
+    paper: https://arxiv.org/abs/2609.39507
+  access: closed
+  tags: [benchmark, agentic-loop, tool-use, manipulation, long-horizon]
+  added: 2026-10-02
