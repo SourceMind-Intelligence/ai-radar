@@ -3,12 +3,13 @@
 # Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 45 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
+> Layer: L5 · 46 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**Self-compensating VLA**](https://arxiv.org/abs/2609.37334 "Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing") · 2026-09 — Deployment-time adaptation that updates a VLA online from the residual between commanded and executed motion, without rewards or labels, to pre-compensate for wear, backlash and payload; adds the RoboStress simulated execution-error benchmark.
 - 🟢 [**SAGE**](https://arxiv.org/abs/2609.34268 "SAGE: Symbolic Action-Gating and Editing for LLM Task Planners") · 2026-09 — LLM task planner with a model-free symbolic gate that blocks precondition-violating actions with typed reasons before actuation, plus a local edit that regenerates only the failed sub-goal's suffix; evaluated on a 75-task AI2-THOR benchmark and on a Jetson AGX Orin. [code](https://github.com/mtbui2010/sage_release)
 - ⚪ [**ROBORMBENCH**](https://arxiv.org/abs/2609.05401 "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models") · 2026-09 · Yonsei University et al. — Paraphrase-robustness benchmark for VLM reward models: 2,390 real-robot trajectories with progress labels and 21,673 verified instruction paraphrases; rewording alone can flip identical behavior between judged success and failure.
 - ⚪ [**ProgressCompass**](https://arxiv.org/abs/2609.36684 "ProgressCompass: Embodied Progress Reward Models Are Lost Without the Right Context") · 2026-09 — Shows that embodied progress reward models fail when progress depends on history, using a new ContextProgress-Bench (24 manipulation tasks), and proposes an agentic loop in which a general VLM supplies the missing context to a frozen progress reward model. [project](https://andyzworks.github.io/progresscompass/)

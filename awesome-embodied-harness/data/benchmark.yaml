@@ -1998,3 +1998,42 @@
   access: closed
   tags: [benchmark, agentic-loop, tool-use, manipulation, long-horizon]
   added: 2026-10-02
+
+- id: embodied-agent-arena
+  name: Embodied Agent Arena
+  title: >-
+    Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the
+    Embodied Agent Arena
+  aliases: [GeoProbe]
+  date: 2026-10
+  summary: >-
+    1,000-case arena drawn from 32 sources plus a new GeoProbe geometry benchmark, run
+    through a minimal harness that separates metric precision, functional grounding and
+    native goal completion across geometry, spatial reasoning, affordance, planning and
+    manipulation; seven VLMs evaluated.
+  links:
+    paper: https://arxiv.org/abs/2610.00854
+    code: https://github.com/embodied-agent-arena/embodied-agent-arena
+    project: https://embodied-agent-arena.github.io/embodied-agent-arena/
+  access: open
+  tags: [benchmark, spatial-reasoning, manipulation, planning]
+  added: 2026-10-03
+
+- id: humanoidtoolbench
+  name: HumanoidToolBench
+  title: >-
+    HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution
+  aliases: [ToolBook]
+  date: 2026-10
+  summary: >-
+    18-task benchmark of humanoid tool use from tool selection to mobile execution, with the
+    ToolBook dataset of 3.1k demonstrations from simulation and a real Unitree G1; finds
+    large gaps between picking a suitable tool and completing the task.
+  links:
+    paper: https://arxiv.org/abs/2610.02089
+    code: https://github.com/SNU-PI/HumanoidToolBench
+    project: https://snu-pi.github.io/HumanoidToolBench/
+    data: https://huggingface.co/datasets/snupilab/humanoidtoolbench-teleop
+  access: open
+  tags: [benchmark, humanoid, tool-use, dataset, mobile-manipulation]
+  added: 2026-10-03

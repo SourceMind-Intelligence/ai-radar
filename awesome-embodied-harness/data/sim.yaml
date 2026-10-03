@@ -777,3 +777,20 @@
   tags: [agentic-loop, data-generation, manipulation]
   note: Code repository announced but not yet released (checked 2026-09-30).
   added: 2026-09-30
+
+- id: litereality-agent
+  name: LiteReality-Agent
+  title: >-
+    LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction
+  date: 2026-10
+  summary: >-
+    Treats real-to-sim scene reconstruction as coding: a coding agent gathers evidence from
+    RGB-D scans with specialised tools and edits an executable Room.py inside an
+    observe-edit-verify harness, producing articulated, simulation-ready digital twins.
+  links:
+    paper: https://arxiv.org/abs/2610.01863
+    code: https://github.com/LiteReality/LiteReality-Agent
+    project: https://litereality.github.io/agent/
+  access: open
+  tags: [agentic-loop, code-as-policy, data-generation, sim2real]
+  added: 2026-10-03

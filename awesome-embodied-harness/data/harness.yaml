@@ -2671,3 +2671,85 @@
     A different paper from the NavHarness lifelong-navigation entry, despite the shared
     name.
   added: 2026-10-02
+
+- id: rpg-robot
+  name: RPG
+  title: 'Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents'
+  aliases: [Reconstruct, Practice, Go Real]
+  date: 2026-10
+  summary: >-
+    Improves a multimodal-LLM robot execution system without weight updates: it builds
+    simulated practice tasks from an offline dataset, diagnoses failures with execution
+    feedback and privileged state, then creates or refines symbolic skills and revises the
+    system prompt, keeping only changes that pass cross-task checks.
+  links:
+    paper: https://arxiv.org/abs/2610.02204
+    project: https://rpg-robot.github.io/
+  access: closed
+  tags: [agentic-loop, self-improving, skill-library, sim2real, real-world]
+  added: 2026-10-03
+
+- id: recova
+  name: Recova
+  title: 'Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation'
+  date: 2026-10
+  summary: >-
+    Agent-guided framework that develops task and recovery behaviours in a reconstructed
+    digital twin, then monitors deployment, invokes learned or programmatic recoveries,
+    verifies scene restoration and routes real rollouts and human fixes into DAgger
+    training.
+  links:
+    paper: https://arxiv.org/abs/2610.01178
+    project: https://www.liuisabella.com/Recova
+  access: closed
+  tags: [failure-recovery, agentic-loop, self-improving, hitl, real-world]
+  added: 2026-10-03
+
+- id: pyrua-lean
+  name: PyRUA-Lean
+  title: >-
+    Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but
+    65% Fewer Tokens
+  date: 2026-10
+  summary: >-
+    Code-execution harness for VLM robot agents: the agent composes classical primitives and
+    VLA policies into Python cells with conditional checks and local retries, and requests
+    only the images and state it needs; compared with tool calling on LIBERO-PRO, RoboTwin
+    2.0 and RoboCasa365.
+  links:
+    paper: https://arxiv.org/abs/2610.01939
+  access: closed
+  tags: [agentic-loop, code-as-policy, tool-use, vla, manipulation]
+  added: 2026-10-03
+
+- id: interevolve
+  name: InterEvolve
+  title: >-
+    InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation
+  date: 2026-10
+  summary: >-
+    Test-time evolution for humanoid loco-manipulation: an LLM agent revises staged reward
+    programs, using execution feedback and a library of verified programs, that drive an
+    object-aware forward-backward behavioural foundation model, while an optimizer tunes
+    constants; no retraining.
+  links:
+    paper: https://arxiv.org/abs/2610.02196
+    project: https://sirui-xu.github.io/InterEvolve
+  access: closed
+  tags: [agentic-loop, self-improving, skill-library, humanoid, rl]
+  added: 2026-10-03
+
+- id: embodirsi
+  name: EmbodiRSI
+  title: 'EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation'
+  date: 2026-09
+  summary: >-
+    Agentic real-to-sim-to-real recursive self-improvement: task-specific simulations built
+    from deployment scenes host collaborative error correction and adaptive data collection
+    aimed at the policy's current weaknesses, then transfer with a few real refinement
+    trajectories.
+  links:
+    paper: https://arxiv.org/abs/2609.38905
+  access: closed
+  tags: [self-improving, sim2real, data-generation, manipulation, real-world]
+  added: 2026-10-03

@@ -789,3 +789,20 @@
     First-party result that GPT-4-driven CoELA beat planning-based baselines; open LLMs
     lagged.
   added: 2026-09-29
+
+- id: duomind
+  name: DuoMind
+  title: >-
+    DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication
+  aliases: [RoboPoly]
+  date: 2026-10
+  summary: >-
+    Distributed hierarchical multi-robot framework: each robot pairs a VLM orchestrator,
+    which reasons over its observations and peer messages, with a VLA executor, and robots
+    coordinate through semantic messages; introduces the RoboPoly long-horizon coordination
+    benchmark.
+  links:
+    paper: https://arxiv.org/abs/2610.02161
+  access: closed
+  tags: [multi-robot, dual-system, vla, benchmark, long-horizon]
+  added: 2026-10-03

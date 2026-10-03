@@ -3,12 +3,13 @@
 # Safety, Guardrails & Security
 
 > Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.  
-> Layer: L5 · 45 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
+> Layer: L5 · 46 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**WBAG**](https://arxiv.org/abs/2610.01083 "WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation") · 2026-10 — Inference-time VLA safety layer that models the whole arm plus grasp-dependent attached-object geometry as a changing safe set and turns it into differentiable CBF constraints that minimally modify the VLA's operational-space action; evaluated on SafeLIBERO.
 - ⚪ [**Verify-Adapt-Hold**](https://arxiv.org/abs/2609.30523 "Containing Behavioral Cascades from Manipulated Claims in LLM-Powered Multi-Robot Systems") · 2026-09 — Active verification for LLM-powered robot fleets after a false world-state claim is accepted: a Verify-Adapt-Hold plan sends some robots to inspect, lets a few adapt and keeps the rest on trusted plans, containing fleet-wide replanning cascades.
 - ⚪ [**ShieldVLA**](https://arxiv.org/abs/2609.13231 "ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models") · 2026-09 — Safety-aligned VLA fine-tuning based on Hamilton-Jacobi reachability: a safety critic learned from visual observations gates policy optimization, separating reward seeking in feasible regions from recovery near unsafe states, with rubric-based VLM safety scores as supervision.
 - 🟢 [**SafeLoop**](https://arxiv.org/abs/2609.26313 "SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation") · 2026-09 · Nanjing University et al. — External wrapper that adds hazard prediction and rollback to a VLA without changing its weights: a risk predictor estimates probability and time-to-hazard for collisions and object failures, and a controller continues, saves a safety checkpoint or rolls back in joint space. IROS 2026. [code](https://github.com/Loule0-0/SafeLoop)

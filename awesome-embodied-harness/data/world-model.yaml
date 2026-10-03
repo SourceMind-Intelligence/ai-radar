@@ -1188,3 +1188,18 @@
   access: open
   tags: [world-model, self-improving, skill-library, long-horizon, real-world]
   added: 2026-10-02
+
+- id: planning-limits-latent-world-models
+  name: Planning Limits of Latent World Models
+  title: The Planning Limits of Latent World Models
+  date: 2026-09
+  summary: >-
+    Shows that action-conditioned predictors on frozen visual backbones (V-JEPA 2, DINOv2
+    and others) rank actions reliably only for goals within about their imagined horizon,
+    even with perfect prediction; within that range, reranking VLA proposals improves
+    success.
+  links:
+    paper: https://arxiv.org/abs/2609.39235
+  access: closed
+  tags: [world-model, planning, vla, manipulation]
+  added: 2026-10-03

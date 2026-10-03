@@ -3,12 +3,13 @@
 # Simulators & Environments
 
 > Physics simulators, rendering stacks and environment platforms for building and testing harnesses.  
-> Layer: L6 · 43 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
+> Layer: L6 · 44 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟢 [**LiteReality-Agent**](https://arxiv.org/abs/2610.01863 "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction") · 2026-10 — Treats real-to-sim scene reconstruction as coding: a coding agent gathers evidence from RGB-D scans with specialised tools and edits an executable Room.py inside an observe-edit-verify harness, producing articulated, simulation-ready digital twins. [code](https://github.com/LiteReality/LiteReality-Agent) · [project](https://litereality.github.io/agent/)
 - ⚪ [**DeformSmith**](https://arxiv.org/abs/2609.18620 "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation") · 2026-09 — Generates simulation-ready deformable assets from text or an image through hierarchical agentic construction around a shared physics harness that builds, tests and refines geometry, material behaviour and robot interaction, closing the loop with manipulation feedback. _Note: Code repository announced but not yet released (checked 2026-09-30)._ [project](https://can-lee.github.io/deformsmith-web/)
 - ⚪ [**Lingjing**](https://arxiv.org/abs/2608.08045 "Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities") · 2026-08 · Aerospace Information Research Institute (CAS), Shanghai Jiao Tong University — City-scale testbed for heterogeneous multi-agent embodied tasks (UAVs, ground robots, vehicles) that rebuilds cities from geographic data, syncs several physics engines, offers a Gym-like API for ReAct agents with configurable communication, and logs replays for diagnosis. _Note: First-party evaluation of twelve VLMs on nine urban tasks; code release not verified._
 - 🟢 [**SIMPLE**](https://arxiv.org/abs/2606.08278 "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation") · 2026-06 — Humanoid loco-manipulation testbed coupling MuJoCo contact dynamics with Isaac Sim rendering: 60 whole-body tasks, 50 indoor scenes, 1,000+ assets, motion-planning and VR-teleop data pipelines, and benchmarks of imitation, VLA and world-action models. _Note: First-party results report strong sim-real correlation and zero-shot transfer to physical humanoids._ [code](https://github.com/physical-superintelligence-lab/SIMPLE) · [project](https://psi-lab.ai/SIMPLE)

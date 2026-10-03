@@ -6,7 +6,7 @@
   url: https://arxiv.org/abs/2609.18487
   title: 'ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models'
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: policy
   reason: Verified; over the daily cap on 2026-09-29. Action-tokenizer study for autoregressive VLAs; code released.
 
@@ -14,7 +14,7 @@
   url: https://arxiv.org/abs/2609.24682
   title: 'Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies'
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: policy
   reason: Verified; over the daily cap on 2026-09-29. Distils world-model representations into compact VLA policies.
 
@@ -22,7 +22,7 @@
   url: https://arxiv.org/abs/2609.28247
   title: Controlling Collectives of AI Agents in Reasoning Space with Spatial Transformers
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: multi-agent
   reason: Verified; over the daily cap on 2026-09-29. Decentralized control of large collectives of LLM-driven robots.
 
@@ -30,7 +30,7 @@
   url: https://arxiv.org/abs/2609.26520
   title: 'MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection'
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: data
   reason: Verified; over the daily cap on 2026-09-29. Multi-agent virtual teleoperation for humanoid collaboration data.
 
@@ -38,7 +38,7 @@
   url: https://arxiv.org/abs/2609.18111
   title: A Comprehensive Review of Generative Physical Artificial Intelligence
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: survey
   reason: Verified; over the daily cap on 2026-09-29. Survey of generative physical AI systems.
 
@@ -46,7 +46,7 @@
   url: https://arxiv.org/abs/2609.23407
   title: 'OmniEcho: Audio-Visual Spatial Understanding for Omni-Modal Embodied Agents'
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: benchmark
   reason: Verified; over the daily cap on 2026-09-29. Audio-visual spatial understanding benchmark for embodied agents; code released.
 
@@ -54,55 +54,31 @@
   url: https://arxiv.org/abs/2609.34384
   title: 'RoboIRGBench: Benchmarking Implicit Referential Grounding in Vision-Language-Action Models'
   first_seen: 2026-09-29
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: benchmark
   reason: Verified; over the daily cap on 2026-09-29. Implicit referential grounding benchmark for VLAs.
-
-- name: Self-compensating VLA / RoboStress
-  url: https://arxiv.org/abs/2609.37334
-  title: 'Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing'
-  first_seen: 2026-10-01
-  last_checked: 2026-10-02
-  suggested_category: verification
-  reason: Verified; over the daily cap on 2026-10-01. Online label-free VLA adaptation from commanded-vs-executed action residuals, plus the RoboStress execution-error benchmark.
 
 - name: T2Mem
   url: https://arxiv.org/abs/2609.36720
   title: 'T$^2$Mem: Learning Test-Time Memory for Robotics'
   first_seen: 2026-10-01
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: memory
   reason: Verified; over the daily cap on 2026-10-01. Test-time-training fast-weight memory inside a pretrained VLA; evaluated on RoboMME.
-
-- name: EmbodiRSI
-  url: https://arxiv.org/abs/2609.38905
-  title: 'EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation'
-  first_seen: 2026-10-02
-  last_checked: 2026-10-02
-  suggested_category: harness
-  reason: Verified; over the daily cap on 2026-10-02. Agentic real-to-sim-to-real recursive self-improvement with collaborative error correction and adaptive data collection.
 
 - name: EvolvingNav / EvoWorld-Bench
   url: https://arxiv.org/abs/2609.39166
   title: 'Beyond the Remembered World: Predictive 4D Belief for Persistent Navigation in Evolving Worlds'
   first_seen: 2026-10-02
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: memory
   reason: Verified; over the daily cap on 2026-10-02. Time-indexed 4D belief over moved objects driving a frozen VLM navigation controller, plus EvoWorld-Bench.
-
-- name: Planning Limits of Latent World Models
-  url: https://arxiv.org/abs/2609.39235
-  title: The Planning Limits of Latent World Models
-  first_seen: 2026-10-02
-  last_checked: 2026-10-02
-  suggested_category: world-model
-  reason: Verified; over the daily cap on 2026-10-02. Shows latent world models rank actions reliably only within their imagined horizon; reranking VLA proposals helps.
 
 - name: Universal Adversarial Object
   url: https://arxiv.org/abs/2609.39178
   title: 'Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics'
   first_seen: 2026-10-02
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: safety
   reason: Verified; over the daily cap on 2026-10-02. Physical adversarial sphere that degrades Pi0 and RDT; ICRA 2026.
 
@@ -110,7 +86,7 @@
   url: https://arxiv.org/abs/2609.40325
   title: 'WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents'
   first_seen: 2026-10-02
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: benchmark
   reason: Verified; over the daily cap on 2026-10-02. Benchmark of 213 anomaly-auditing tasks for multimodal agents in UE5 and Three.js worlds.
 
@@ -118,6 +94,22 @@
   url: https://arxiv.org/abs/2609.39145
   title: 'Blackout vs. Freeze: Analyzing Physical Failure Modes of VLAs under Camera Faults'
   first_seen: 2026-10-02
-  last_checked: 2026-10-02
+  last_checked: 2026-10-03
   suggested_category: safety
   reason: Verified; over the daily cap on 2026-10-02. Physical failure modes of pi0.5 and GR00T under camera blackout and freezing.
+
+- name: Divide-and-Remember
+  url: https://arxiv.org/abs/2610.00982
+  title: 'Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies'
+  first_seen: 2026-10-03
+  last_checked: 2026-10-03
+  suggested_category: memory
+  reason: Verified; over the daily cap on 2026-10-03. Learned recursive top-K memory selector for VLAs, motivated by conditional mutual information; evaluated on RoboMME.
+
+- name: VLA behavioural robustness (Is Success All You Need?)
+  url: https://arxiv.org/abs/2610.01351
+  title: 'Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks'
+  first_seen: 2026-10-03
+  last_checked: 2026-10-03
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-10-03. Behavioural robustness metrics (smoothness, efficiency, gripper use) on LIBERO and LIBERO-Plus beyond task success.

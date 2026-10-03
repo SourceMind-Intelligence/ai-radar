@@ -831,3 +831,18 @@
   access: closed
   tags: [self-improving, safety, failure-recovery, vla]
   added: 2026-10-02
+
+- id: self-compensating-vla
+  name: Self-compensating VLA
+  title: 'Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing'
+  aliases: [RoboStress]
+  date: 2026-09
+  summary: >-
+    Deployment-time adaptation that updates a VLA online from the residual between commanded
+    and executed motion, without rewards or labels, to pre-compensate for wear, backlash and
+    payload; adds the RoboStress simulated execution-error benchmark.
+  links:
+    paper: https://arxiv.org/abs/2609.37334
+  access: closed
+  tags: [vla, failure-recovery, benchmark, real-world]
+  added: 2026-10-03

@@ -787,3 +787,20 @@
   access: closed
   tags: [safety, vla, manipulation, on-device, real-world]
   added: 2026-10-02
+
+- id: wbag
+  name: WBAG
+  title: >-
+    WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Inference-time VLA safety layer that models the whole arm plus grasp-dependent
+    attached-object geometry as a changing safe set and turns it into differentiable CBF
+    constraints that minimally modify the VLA's operational-space action; evaluated on
+    SafeLIBERO.
+  links:
+    paper: https://arxiv.org/abs/2610.01083
+  access: closed
+  tags: [safety, vla, manipulation]
+  added: 2026-10-03
