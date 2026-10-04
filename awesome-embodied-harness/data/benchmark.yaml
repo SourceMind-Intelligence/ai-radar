@@ -2037,3 +2037,67 @@
   access: open
   tags: [benchmark, humanoid, tool-use, dataset, mobile-manipulation]
   added: 2026-10-03
+
+- id: worldauditbench
+  name: WorldAuditBench
+  title: 'WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents'
+  date: 2026-09
+  summary: >-
+    213 anomaly-auditing tasks in 13 Unreal Engine 5 and Three.js worlds (floating objects,
+    traversable walls and more) that test whether multimodal agents can couple exploration
+    with visual reasoning; frontier models score well below humans.
+  links:
+    paper: https://arxiv.org/abs/2609.40325
+  access: closed
+  tags: [benchmark, navigation, spatial-reasoning]
+  added: 2026-10-04
+
+- id: roboirgbench
+  name: RoboIRGBench
+  title: >-
+    RoboIRGBench: Benchmarking Implicit Referential Grounding in Vision-Language-Action
+    Models
+  date: 2026-09
+  summary: >-
+    Manipulation benchmark built on RoboMME (40 variants of 11 tasks) testing whether VLAs
+    recover implicitly referenced objects, quantities and relations from context; finds
+    sharp drops versus explicit instructions.
+  links:
+    paper: https://arxiv.org/abs/2609.34384
+    project: https://aernar.github.io/RoboIRGBench/
+  access: closed
+  tags: [benchmark, vla, memory, manipulation]
+  added: 2026-10-04
+
+- id: omniecho
+  name: OmniEcho
+  title: 'OmniEcho: Audio-Visual Spatial Understanding for Omni-Modal Embodied Agents'
+  aliases: [OmniEchoBench]
+  date: 2026-09
+  summary: >-
+    OmniEchoBench: six spatial audio-visual tasks over 197 real scenes plus 900 sound-guided
+    navigation samples with first-order ambisonics audio; also an omni-modal model with an
+    FOA spatial encoder.
+  links:
+    paper: https://arxiv.org/abs/2609.23407
+    code: https://github.com/PKU-VaLuE-Lab/OmniEcho
+  access: closed
+  tags: [benchmark, navigation, spatial-reasoning]
+  note: Repository lists data and evaluation code as coming soon (checked 2026-10-04).
+  added: 2026-10-04
+
+- id: vla-behavioural-robustness
+  name: VLA behavioural robustness
+  title: >-
+    Is Success All You Need? Investigating the Impact of Input Perturbations on VLA
+    Behaviour in Tabletop Manipulation Tasks
+  date: 2026-10
+  summary: >-
+    Benchmark-agnostic evaluation extending LIBERO and LIBERO-Plus that measures how
+    perturbations change successful trajectories (smoothness, efficiency, gripper
+    behaviour), showing that equal success rates can hide divergent behaviour.
+  links:
+    paper: https://arxiv.org/abs/2610.01351
+  access: closed
+  tags: [benchmark, vla, manipulation]
+  added: 2026-10-04

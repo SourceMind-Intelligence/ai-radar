@@ -1236,3 +1236,17 @@
   access: closed
   tags: [navigation, benchmark]
   added: 2026-09-29
+
+- id: generative-physical-ai-review
+  name: Generative Physical AI review
+  title: A Comprehensive Review of Generative Physical Artificial Intelligence
+  date: 2026-09
+  summary: >-
+    Survey of generative physical AI organized into robot foundation models, VLAs, large
+    behaviour models, diffusion policies and world foundation models, covering how they
+    complement each other and where they are applied.
+  links:
+    paper: https://arxiv.org/abs/2609.18111
+  access: closed
+  tags: [vla, world-model]
+  added: 2026-10-04

@@ -3,7 +3,7 @@
 # Data, Teleoperation & Training Infrastructure
 
 > Datasets, data-collection and teleoperation systems, and training frameworks.  
-> Layer: L6 · 89 entries · [overview](../README.md#data) · [survey](../SURVEY.md)
+> Layer: L6 · 90 entries · [overview](../README.md#data) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -12,6 +12,7 @@
 - ⚪ [**SPOT**](https://arxiv.org/abs/2609.07933 "SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation") · 2026-09 · UMass Amherst / MIT — VR humanoid teleoperation that renders a stabilized robot-mounted fisheye stereo view on a virtual hemisphere, letting operators look around without moving the robot, for long-horizon loco-manipulation data collection.
 - ⚪ [**Robot Data Factory**](https://arxiv.org/abs/2609.16705 "The Robot Data Factory") · 2026-09 · MBZUAI — Proposes mission-driven robot training grounds that continuously generate, validate, benchmark and reuse robot experience in a Deploy-Measure-Learn-Repeat loop, with an agentic robot network and living benchmarks. [project](https://agentic-robotics-lab.github.io/robot-data-factory/)
 - ⚪ [**RoboDrop**](https://arxiv.org/abs/2609.10021 "RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility") · 2026-09 — Curation method that scores each VLA post-training sample by gradient compatibility with matched validation samples during a one-epoch warm-up, to filter execution mistakes, sensor drift and misaligned timestamps.
+- ⚪ [**MATE**](https://arxiv.org/abs/2609.26520 "MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection") · 2026-09 — Virtual teleoperation platform where geographically distributed operators jointly control whole-body humanoids in one physics simulation, producing a 24.1-hour multi-humanoid collaboration dataset; adds execution-aligned interaction sampling for learning.
 - ⚪ [**DexAgent**](https://arxiv.org/abs/2609.35318 "DexAgent: An Agentic Human2Sim2Robot Framework for Dexterous Manipulation with Self-Evolving Tool Library") · 2026-09 · Stanford University; Columbia University — Agentic pipeline that turns one egocentric human video and a prompt into physically grounded robot training trajectories, choosing or writing tools at each stage with property-specific verifiers, and keeping new skills in a self-evolving tool library. [project](https://dexagent123.github.io/)
 - ⚪ [**ARSTAG**](https://arxiv.org/abs/2609.24563 "ARSTAG: An Agentic Real2Sim2Real System for Task-Specific Robot Data Generation") · 2026-09 — Hierarchy of language agents turns one RGB image and an instruction into a sim scene, feasible demos and task-consistent randomization, with a coordinator for cross-stage recovery; pi0.5 reached 74.6% real success (first-party). [project](https://boweili666.github.io/ARSTAG/)
 - ⚪ [**WorldSample**](https://arxiv.org/abs/2607.02431 "WorldSample: Closed-loop Real-robot RL with World Modelling") · 2026-07 — Augments real-robot RL with transitions from a world model post-trained on real rollouts, using Policy-Paced Learning to select and schedule synthetic samples and limit hallucination-induced errors.

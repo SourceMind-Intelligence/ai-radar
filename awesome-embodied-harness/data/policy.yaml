@@ -1560,3 +1560,21 @@
     Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training
     code link found.
   added: 2026-10-01
+
+- id: actionpiece
+  name: ActionPiece
+  title: >-
+    ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action
+    Models
+  date: 2026-09
+  summary: >-
+    Action tokenizer for autoregressive VLAs that preserves near-far relations between
+    actions through joint supervision of representation learning and quantization;
+    introduces a physical rank consistency metric for tokenizer fidelity.
+  links:
+    paper: https://arxiv.org/abs/2609.18487
+    code: https://github.com/DeepCybo-PhysAI/ActionPiece
+    project: https://deepcybo-physai.github.io/ActionPiece/
+  access: open
+  tags: [vla, manipulation]
+  added: 2026-10-04

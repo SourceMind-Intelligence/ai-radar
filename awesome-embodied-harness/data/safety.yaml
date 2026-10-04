@@ -804,3 +804,35 @@
   access: closed
   tags: [safety, vla, manipulation]
   added: 2026-10-03
+
+- id: universal-adversarial-object
+  name: Universal Adversarial Object
+  title: >-
+    Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action
+    Models in Robotics
+  date: 2026-09
+  summary: >-
+    Physical adversarial attack: a textured sphere placed in view, optimized with a
+    multi-level objective over planning, execution and action control, sharply degrades Pi0
+    and RDT in simulation and on a real robot.
+  links:
+    paper: https://arxiv.org/abs/2609.39178
+  access: closed
+  tags: [security, vla, manipulation, real-world]
+  note: ICRA 2026.
+  added: 2026-10-04
+
+- id: blackout-vs-freeze
+  name: Blackout vs. Freeze
+  title: >-
+    Blackout vs. Freeze: Analyzing Physical Failure Modes of VLAs under Camera Faults
+  date: 2026-09
+  summary: >-
+    Shows that camera blackout and frame freezing cause different physical failure modes in
+    pi0.5 and GR00T (extreme joint motion versus object drops), and that mitigations can
+    raise success while increasing unintended contact.
+  links:
+    paper: https://arxiv.org/abs/2609.39145
+  access: closed
+  tags: [safety, vla, manipulation, real-world]
+  added: 2026-10-04

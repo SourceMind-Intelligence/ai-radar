@@ -806,3 +806,19 @@
   access: closed
   tags: [multi-robot, dual-system, vla, benchmark, long-horizon]
   added: 2026-10-03
+
+- id: compass-collectives
+  name: COMPASS
+  title: >-
+    Controlling Collectives of AI Agents in Reasoning Space with Spatial Transformers
+  date: 2026-09
+  summary: >-
+    Decentralized architecture for large collectives of LLM-driven robots: on each robot a
+    spatial transformer aggregates multi-hop messages into a learned feedback token for
+    reasoning-space feedback control; commands flocks of up to 1,024 simulated drones in
+    natural language.
+  links:
+    paper: https://arxiv.org/abs/2609.28247
+  access: closed
+  tags: [multi-robot, uav]
+  added: 2026-10-04

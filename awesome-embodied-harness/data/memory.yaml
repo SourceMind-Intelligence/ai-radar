@@ -955,3 +955,35 @@
   access: closed
   tags: [scene-graph, planning, mobile-manipulation, benchmark]
   added: 2026-10-02
+
+- id: evolvingnav
+  name: EvolvingNav
+  title: >-
+    Beyond the Remembered World: Predictive 4D Belief for Persistent Navigation in Evolving
+    Worlds
+  aliases: [EvoWorld-Bench]
+  date: 2026-09
+  summary: >-
+    Time-indexed 4D belief over objects that may move while unobserved, propagated by an
+    event-driven filter with visibility-aware negative evidence, used by a frozen VLM
+    controller to navigate; introduces EvoWorld-Bench (54 scenes).
+  links:
+    paper: https://arxiv.org/abs/2609.39166
+  access: closed
+  tags: [memory, navigation, uncertainty, benchmark]
+  added: 2026-10-04
+
+- id: t2mem
+  name: T2Mem
+  title: 'T$^2$Mem: Learning Test-Time Memory for Robotics'
+  aliases: [T²Mem]
+  date: 2026-09
+  summary: >-
+    Test-time-training memory inside a pretrained VLA: observation history is encoded into
+    compact fast weights by online self-supervised updates and fed to the action expert,
+    with no external reasoning model; evaluated on RoboMME.
+  links:
+    paper: https://arxiv.org/abs/2609.36720
+  access: closed
+  tags: [memory, vla, manipulation, long-horizon]
+  added: 2026-10-04

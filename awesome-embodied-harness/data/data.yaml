@@ -1520,3 +1520,20 @@
   access: partial
   tags: [teleop, dataset, manipulation]
   added: 2026-09-29
+
+- id: mate-teleop
+  name: MATE
+  title: >-
+    MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data
+    Collection
+  date: 2026-09
+  summary: >-
+    Virtual teleoperation platform where geographically distributed operators jointly
+    control whole-body humanoids in one physics simulation, producing a 24.1-hour
+    multi-humanoid collaboration dataset; adds execution-aligned interaction sampling for
+    learning.
+  links:
+    paper: https://arxiv.org/abs/2609.26520
+  access: closed
+  tags: [teleop, humanoid, multi-robot, dataset, data-collection]
+  added: 2026-10-04

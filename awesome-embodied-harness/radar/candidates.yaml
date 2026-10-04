@@ -2,114 +2,18 @@
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
 
-- name: ActionPiece
-  url: https://arxiv.org/abs/2609.18487
-  title: 'ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models'
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: policy
-  reason: Verified; over the daily cap on 2026-09-29. Action-tokenizer study for autoregressive VLAs; code released.
-
 - name: THAW-VLA
   url: https://arxiv.org/abs/2609.24682
   title: 'Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies'
   first_seen: 2026-09-29
-  last_checked: 2026-10-03
+  last_checked: 2026-10-04
   suggested_category: policy
   reason: Verified; over the daily cap on 2026-09-29. Distils world-model representations into compact VLA policies.
-
-- name: COMPASS
-  url: https://arxiv.org/abs/2609.28247
-  title: Controlling Collectives of AI Agents in Reasoning Space with Spatial Transformers
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: multi-agent
-  reason: Verified; over the daily cap on 2026-09-29. Decentralized control of large collectives of LLM-driven robots.
-
-- name: MATE
-  url: https://arxiv.org/abs/2609.26520
-  title: 'MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection'
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: data
-  reason: Verified; over the daily cap on 2026-09-29. Multi-agent virtual teleoperation for humanoid collaboration data.
-
-- name: Generative Physical AI review
-  url: https://arxiv.org/abs/2609.18111
-  title: A Comprehensive Review of Generative Physical Artificial Intelligence
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: survey
-  reason: Verified; over the daily cap on 2026-09-29. Survey of generative physical AI systems.
-
-- name: OmniEcho
-  url: https://arxiv.org/abs/2609.23407
-  title: 'OmniEcho: Audio-Visual Spatial Understanding for Omni-Modal Embodied Agents'
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: benchmark
-  reason: Verified; over the daily cap on 2026-09-29. Audio-visual spatial understanding benchmark for embodied agents; code released.
-
-- name: RoboIRGBench
-  url: https://arxiv.org/abs/2609.34384
-  title: 'RoboIRGBench: Benchmarking Implicit Referential Grounding in Vision-Language-Action Models'
-  first_seen: 2026-09-29
-  last_checked: 2026-10-03
-  suggested_category: benchmark
-  reason: Verified; over the daily cap on 2026-09-29. Implicit referential grounding benchmark for VLAs.
-
-- name: T2Mem
-  url: https://arxiv.org/abs/2609.36720
-  title: 'T$^2$Mem: Learning Test-Time Memory for Robotics'
-  first_seen: 2026-10-01
-  last_checked: 2026-10-03
-  suggested_category: memory
-  reason: Verified; over the daily cap on 2026-10-01. Test-time-training fast-weight memory inside a pretrained VLA; evaluated on RoboMME.
-
-- name: EvolvingNav / EvoWorld-Bench
-  url: https://arxiv.org/abs/2609.39166
-  title: 'Beyond the Remembered World: Predictive 4D Belief for Persistent Navigation in Evolving Worlds'
-  first_seen: 2026-10-02
-  last_checked: 2026-10-03
-  suggested_category: memory
-  reason: Verified; over the daily cap on 2026-10-02. Time-indexed 4D belief over moved objects driving a frozen VLM navigation controller, plus EvoWorld-Bench.
-
-- name: Universal Adversarial Object
-  url: https://arxiv.org/abs/2609.39178
-  title: 'Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics'
-  first_seen: 2026-10-02
-  last_checked: 2026-10-03
-  suggested_category: safety
-  reason: Verified; over the daily cap on 2026-10-02. Physical adversarial sphere that degrades Pi0 and RDT; ICRA 2026.
-
-- name: WorldAuditBench
-  url: https://arxiv.org/abs/2609.40325
-  title: 'WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents'
-  first_seen: 2026-10-02
-  last_checked: 2026-10-03
-  suggested_category: benchmark
-  reason: Verified; over the daily cap on 2026-10-02. Benchmark of 213 anomaly-auditing tasks for multimodal agents in UE5 and Three.js worlds.
-
-- name: Blackout vs. Freeze
-  url: https://arxiv.org/abs/2609.39145
-  title: 'Blackout vs. Freeze: Analyzing Physical Failure Modes of VLAs under Camera Faults'
-  first_seen: 2026-10-02
-  last_checked: 2026-10-03
-  suggested_category: safety
-  reason: Verified; over the daily cap on 2026-10-02. Physical failure modes of pi0.5 and GR00T under camera blackout and freezing.
 
 - name: Divide-and-Remember
   url: https://arxiv.org/abs/2610.00982
   title: 'Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies'
   first_seen: 2026-10-03
-  last_checked: 2026-10-03
+  last_checked: 2026-10-04
   suggested_category: memory
   reason: Verified; over the daily cap on 2026-10-03. Learned recursive top-K memory selector for VLAs, motivated by conditional mutual information; evaluated on RoboMME.
-
-- name: VLA behavioural robustness (Is Success All You Need?)
-  url: https://arxiv.org/abs/2610.01351
-  title: 'Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks'
-  first_seen: 2026-10-03
-  last_checked: 2026-10-03
-  suggested_category: benchmark
-  reason: Verified; over the daily cap on 2026-10-03. Behavioural robustness metrics (smoothness, efficiency, gripper use) on LIBERO and LIBERO-Plus beyond task success.
