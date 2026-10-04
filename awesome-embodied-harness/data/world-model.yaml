@@ -1,0 +1,1205 @@
+- id: openwam
+  name: OpenWAM
+  title: >-
+    OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining
+  date: 2026-09
+  summary: >-
+    Open modular research stack for world-action model pretraining with controlled studies
+    of what to inherit from video priors and how world and action learning interact; its
+    OpenWAM-α model is pretrained on about 6,400 hours of egocentric human and robot data.
+  links:
+    paper: https://arxiv.org/abs/2609.07398
+    code: https://github.com/OpenWAM-Official/OpenWAM
+    project: https://openwam-official.github.io/
+    weights: https://huggingface.co/OpenWAM/OpenWAM-Alpha-Pretrain-Foundation-Model
+  access: open
+  tags: [world-model, vla, dexterous, benchmark]
+  added: 2026-09-29
+
+- id: internw0-delta
+  name: InternW0-Δ
+  title: >-
+    InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+
+    Hours of Open Data
+  date: 2026-09
+  org: Shanghai AI Laboratory
+  summary: >-
+    World action model that combines a pretrained video expert and an action expert under
+    frozen-VLM guidance, distills 4D geometry and motion priors during training, and
+    pretrains on a 20K+ hour open corpus of robot, UMI and egocentric human data.
+  links:
+    paper: https://arxiv.org/abs/2609.31394
+    project: https://internrobotics.github.io/InternW0-Delta/
+  access: closed
+  tags: [world-model, vla, dataset, cross-embodiment]
+  note: Authors state code, weights and processed data will be open-sourced.
+  added: 2026-09-29
+
+- id: ge-act-2
+  name: GE-Act 2.0
+  title: >-
+    GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation
+  date: 2026-09
+  org: AgiBot
+  summary: >-
+    World-action model trained from scratch on manipulation data (control-oriented
+    autoencoder, single-step visual planner, inverse dynamics model); scaling co-training
+    data from 300 to 30,000 hours raised zero-shot success from 17.1% to 44.1% on its G1-OP
+    evaluation.
+  links:
+    paper: https://arxiv.org/abs/2609.05588
+    project: https://ge-act-v2.github.io/
+  access: closed
+  tags: [world-model, vla, cross-embodiment, manipulation]
+  note: >-
+    Successor to GE-Act in Genie Envisioner; first-party results; no code or weights found.
+  added: 2026-09-29
+
+- id: flux-3-action
+  name: FLUX 3 Action
+  date: 2026-09
+  org: Black Forest Labs
+  summary: >-
+    Open-weights 7B world action model that takes camera frames, robot state and a text
+    instruction and returns the next action chunk denoised jointly with predicted video
+    frames; ships DROID and SO-101 policies, LeRobot integration and fine-tuning code.
+  links:
+    code: https://github.com/black-forest-labs/flux-action
+    weights: https://huggingface.co/black-forest-labs/flux-3-action-base
+    docs: https://docs.bfl.ai/flux_3/flux3_action_overview
+  access: open
+  tags: [world-model, vla, manipulation]
+  note: >-
+    Released Sept 22, 2026 under the FLUX Kommunity License; no paper found. The model card
+    warns it does not bound joint velocity, force or workspace.
+  added: 2026-09-29
+
+- id: motus2
+  name: Motus2
+  title: 'Motus2: A Self-Evolving General World Model for Dexterous Manipulation'
+  date: 2026-08
+  org: Tsinghua University, Shengshu AI
+  summary: >-
+    One shared-weight model exposes a policy (world-action model), a simulator
+    (action-conditioned world model) and an evaluator (value model) that form a closed
+    decision-and-learning loop; scales egocentric stereo data and adds tactile feedback on a
+    dual-hand platform.
+  links:
+    paper: https://arxiv.org/abs/2608.30237
+    code: https://github.com/shengshu-ai/Motus2
+    project: https://motus-robotics.github.io/motus2/
+  access: partial
+  tags: [world-model, vla, dexterous, self-improving]
+  note: Code and checkpoints announced for progressive release from September 2026.
+  added: 2026-09-29
+
+- id: dreamx-phi
+  name: DreamX-Phi 1.0
+  title: 'DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation'
+  date: 2026-08
+  org: Alibaba AMAP
+  summary: >-
+    Action-conditioned video world model that injects per-arm SE(3) transforms into
+    attention, adds a depth branch and object-consistency supervision, and is distilled to a
+    few-step generator; placed first on WorldArena 2.0 Track 1.
+  links:
+    paper: https://arxiv.org/abs/2608.13489
+    code: https://github.com/AMAP-ML/DreamX-Phi
+  access: closed
+  tags: [world-model, video, manipulation]
+  note: Repository says weights and inference code will be released later.
+  added: 2026-09-29
+
+- id: rynnworld-4d
+  name: RynnWorld-4D
+  title: 'RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation'
+  date: 2026-07
+  org: Alibaba DAMO Academy
+  summary: >-
+    Diffusion world model that co-generates future RGB, depth and optical flow from one
+    RGB-D image and an instruction, trained on the 254M-frame Rynn4DDataset; an
+    inverse-dynamics head reads its internal 4D features to act in closed loop.
+  links:
+    paper: https://arxiv.org/abs/2607.06559
+    code: https://github.com/alibaba-damo-academy/RynnWorld-4D
+    project: https://alibaba-damo-academy.github.io/RynnWorld-4D.github.io/
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnWorld-4D
+  access: open
+  tags: [world-model, 3d, dexterous, manipulation]
+  added: 2026-09-29
+
+- id: roboworld
+  name: RoboWorld
+  title: >-
+    RoboWorld: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation
+  date: 2026-07
+  org: KAIST
+  summary: >-
+    Automated policy-evaluation pipeline pairing a fast autoregressive video world model
+    with a task-progress-aware VLM judge; Step Forcing keeps long-horizon action-conditioned
+    rollouts stable, reaching Pearson r = 0.989 against real-world evaluation.
+  links:
+    paper: https://arxiv.org/abs/2607.01060
+    project: https://byeongguks.github.io/RoboWorld/
+  access: closed
+  tags: [world-model, benchmark, success-detection]
+  note: Correlation numbers are first-party.
+  added: 2026-09-29
+
+- id: gigaworld-policy-0-5
+  name: GigaWorld-Policy-0.5
+  title: 'GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch'
+  date: 2026-07
+  org: GigaAI
+  summary: >-
+    Action-centered world action model that uses future visual dynamics only during training
+    and decodes actions alone at inference (85 ms on an RTX 4090), with separate dynamics
+    and action experts and an agent-based AutoResearch loop for tuning training
+    configurations.
+  links:
+    paper: https://arxiv.org/abs/2607.13960
+    code: https://github.com/open-gigaai/giga-world-policy
+    project: https://open-gigaai.github.io/giga-world-policy/
+    weights: https://huggingface.co/open-gigaai/Giga-World-Policy-0.5
+  access: open
+  tags: [world-model, vla, manipulation]
+  added: 2026-09-29
+
+- id: gigaworld-1
+  name: GigaWorld-1
+  title: 'GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation'
+  date: 2026-07
+  org: GigaAI
+  summary: >-
+    Systematic study of world models as policy evaluators with WMBench (7 video world
+    models, 324k+ simulated rollouts paired with real executions); finds long-horizon,
+    action-faithful consistency matters more than visual realism, and releases the
+    GigaWorld-1 evaluator.
+  links:
+    paper: https://arxiv.org/abs/2607.02642
+    code: https://github.com/open-gigaai/giga-world-1
+    project: https://open-gigaai.github.io/giga-world-1/
+    weights: https://huggingface.co/open-gigaai/Giga-World-1
+    data: https://huggingface.co/datasets/open-gigaai/CVPR-2026-WorldModel-Track-Dataset
+  access: open
+  tags: [world-model, benchmark, vla]
+  note: Code release is partial per the README.
+  added: 2026-09-29
+
+- id: wall-wm
+  name: WALL-WM
+  title: 'WALL-WM: Carving World Action Modeling at the Event Joints'
+  date: 2026-06
+  org: X Square Robot
+  summary: >-
+    World action model pretrained on semantically coherent action events instead of
+    fixed-length chunks, supporting an event mode with variable-length execution chunks and
+    a unified mode that conditions standard chunk inference on a VLM.
+  links:
+    paper: https://arxiv.org/abs/2606.01955
+    code: https://github.com/X-Square-Robot/wall-wm
+  access: partial
+  tags: [world-model, vla, long-horizon]
+  note: Training and evaluation code released; checkpoints listed as coming soon.
+  added: 2026-09-29
+
+- id: robotrustbench
+  name: RoboTrustBench
+  title: >-
+    RoboTrustBench: Benchmarking the Trustworthiness of Video World Models for Robotic
+    Manipulation
+  date: 2026-06
+  org: Fudan University et al.
+  summary: >-
+    Trustworthiness benchmark for robotic video world models built from DROID episodes:
+    1,207 expert-validated instruction-image pairs across normal, constraint-sensitive,
+    counterfactual and adversarial scenarios, scored on six dimensions with 13 criteria.
+  links:
+    paper: https://arxiv.org/abs/2606.01600
+    project: https://huiqiongli.github.io/RoboTrustBench/
+    data: https://huggingface.co/datasets/Huiqiong0124/RoboTrustBench_Dataset
+  access: partial
+  tags: [benchmark, world-model, safety]
+  note: EMNLP 2026 Findings.
+  added: 2026-09-29
+
+- id: qwen-robotworld
+  name: Qwen-RobotWorld
+  title: >-
+    Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through
+    Language-Conditioned Video Generation
+  date: 2026-06
+  org: Alibaba (Qwen Team)
+  summary: >-
+    Language-conditioned video world model that uses natural language as a unified action
+    interface across manipulation, driving, navigation and human-to-robot transfer, pairing
+    a 60-layer double-stream MMDiT with frozen Qwen2.5-VL on an 8.6M-clip embodied corpus.
+  links:
+    paper: https://arxiv.org/abs/2606.17030
+  access: closed
+  tags: [world-model, video, driving, navigation]
+  note: >-
+    Reports first place on EWMBench and DreamGen Bench (first-party); no code or weights
+    found.
+  added: 2026-09-29
+
+- id: cosmos-3
+  name: Cosmos 3 (incl. Cosmos 3 Edge)
+  title: 'Cosmos 3: Omnimodal World Models for Physical AI'
+  date: 2026-05
+  org: NVIDIA
+  summary: >-
+    Omnimodal mixture-of-transformers world models that understand and generate language,
+    images, video, audio and actions, acting as VLM, video generator, simulator or
+    world-action model; the 4B Cosmos 3 Edge (Jul 2026) outputs robot actions at 15 Hz on
+    Jetson Thor.
+  links:
+    paper: https://arxiv.org/abs/2606.02800
+    code: https://github.com/NVIDIA/cosmos
+    project: https://research.nvidia.com/labs/cosmos-lab/cosmos3/
+    blog: https://huggingface.co/blog/nvidia/cosmos3edge
+    weights: https://huggingface.co/collections/nvidia/cosmos3
+  access: open
+  tags: [world-model, vla, video, on-device]
+  note: >-
+    Previewed at GTC (March 2026) and released May 31, 2026 under OpenMDW-1.1; Cosmos 3 Edge
+    released at SIGGRAPH on July 20, 2026.
+  added: 2026-09-29
+
+- id: motubrain
+  name: Motubrain
+  title: 'Motubrain: An Advanced World Action Model for Robot Control'
+  date: 2026-04
+  org: Shengshu AI
+  summary: >-
+    World action model building on Motus with a three-stream mixture-of-transformers under a
+    UniDiffuser formulation, multiview modeling and a shared cross-embodiment action space;
+    its optimized inference stack reaches up to 11 Hz for closed-loop control.
+  links:
+    paper: https://arxiv.org/abs/2604.27792
+  access: closed
+  tags: [world-model, vla, cross-embodiment, humanoid]
+  note: Reports 95.8%/96.1% on RoboTwin 2.0 (first-party); no code or weights found.
+  added: 2026-09-29
+
+- id: ge-sim-2
+  name: GE-Sim 2.0
+  title: >-
+    GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for
+    Robotic Manipulation
+  date: 2026-04
+  org: AgiBot
+  summary: >-
+    Closed-loop video world simulator retrained on thousands of hours of real robot data,
+    adding a state expert for VLA next-chunk prediction, a world judge that emits success
+    signals and rewards, and acceleration to 25 frames in 2.3 s on one H100.
+  links:
+    paper: https://arxiv.org/abs/2605.27491
+    code: https://github.com/AgibotTech/GE-Sim-V2
+    project: https://ge-sim-v2.github.io/
+    weights: https://huggingface.co/agibot-world/Genie-Envisioner-Sim-v2.0
+  access: open
+  tags: [world-model, benchmark, success-detection, reward-model]
+  note: Project page April 2026, arXiv May 2026, code and weights June 2026.
+  added: 2026-09-29
+
+- id: being-h0-7
+  name: Being-H0.7
+  title: 'Being-H0.7: A Latent World-Action Model from Egocentric Videos'
+  date: 2026-04
+  org: BeingBeyond
+  summary: >-
+    Latent world-action model that inserts learnable latent queries between perception and
+    action and trains them against future observations through a training-only posterior
+    branch, gaining future-aware reasoning without generating frames at inference.
+  links:
+    paper: https://arxiv.org/abs/2605.00078
+    blog: https://research.beingbeyond.com/being-h07
+  access: closed
+  tags: [world-model, vla, video]
+  note: Code and checkpoints announced as coming soon.
+  added: 2026-09-29
+
+- id: v-jepa-2-1
+  name: V-JEPA 2.1
+  title: 'V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning'
+  date: 2026-03
+  org: Meta FAIR
+  summary: >-
+    V-JEPA successor that learns dense, temporally consistent video features using a dense
+    predictive loss, deep self-supervision across encoder layers and multimodal tokenizers;
+    reports a 20-point real-robot grasping gain over V-JEPA 2-AC.
+  links:
+    paper: https://arxiv.org/abs/2603.14482
+    code: https://github.com/facebookresearch/vjepa2
+  access: open
+  tags: [world-model, video, planning]
+  note: Released March 2026 in the V-JEPA 2 repository.
+  added: 2026-09-29
+
+- id: interactive-world-simulator
+  name: Interactive World Simulator
+  title: Interactive World Simulator for Robot Policy Training and Evaluation
+  date: 2026-03
+  org: Columbia University, Toyota Research Institute
+  summary: >-
+    Builds fast interactive world models from moderate robot datasets using consistency
+    models for decoding and latent dynamics (10+ minutes stable at 15 FPS on one RTX 4090);
+    policies trained on its generated demos match those trained on equal real data.
+  links:
+    paper: https://arxiv.org/abs/2603.08546
+    code: https://github.com/WangYixuan12/interactive_world_sim
+    project: https://www.yixuanwang.me/interactive_world_sim/
+  access: open
+  tags: [world-model, benchmark, dataset, manipulation]
+  added: 2026-09-29
+
+- id: worldarena
+  name: WorldArena
+  title: >-
+    WorldArena: A Unified Benchmark for Evaluating Perception and Functional Utility of
+    Embodied World Models
+  date: 2026-02
+  org: Tsinghua University et al.
+  summary: >-
+    Benchmark for embodied world models that scores video perception quality (16 metrics)
+    and functional utility as data engines, policy evaluators and action planners, combined
+    into an EWMScore; built on a RoboTwin 2.0 subset with a public leaderboard.
+  links:
+    paper: https://arxiv.org/abs/2602.08971
+    code: https://github.com/tsinghua-fib-lab/WorldArena
+    project: https://world-arena.ai/
+  access: open
+  tags: [benchmark, world-model, leaderboard]
+  note: >-
+    WorldArena 2.0 (arXiv 2605.17912) adds visuotactile modalities, RL-environment use and
+    real-platform evaluation.
+  added: 2026-09-29
+
+- id: navdreamer
+  name: NavDreamer
+  title: 'NavDreamer: Video Models as Zero-Shot 3D Navigators'
+  date: 2026-02
+  summary: >-
+    Uses generative video models as the interface between language instructions and 3D
+    navigation: sampled video plans are scored by a VLM and an inverse dynamics model
+    decodes waypoints; ships a benchmark spanning object navigation, grounding and scene
+    reasoning.
+  links:
+    paper: https://arxiv.org/abs/2602.09765
+    project: https://xinjiu612.github.io/NavDreamer/
+  access: closed
+  tags: [world-model, navigation, video, benchmark]
+  added: 2026-09-29
+
+- id: dreamzero
+  name: DreamZero
+  title: World Action Models are Zero-shot Policies
+  date: 2026-02
+  org: NVIDIA
+  summary: >-
+    14B world action model on a pretrained video diffusion backbone that jointly predicts
+    future video and actions; reports 2x better generalization to new tasks and environments
+    than VLAs, 7 Hz real-time closed-loop control and few-shot embodiment transfer.
+  links:
+    paper: https://arxiv.org/abs/2602.15922
+    code: https://github.com/dreamzero0/dreamzero
+    project: https://dreamzero0.github.io/
+    weights: https://huggingface.co/GEAR-Dreams/DreamZero-DROID
+  access: open
+  tags: [world-model, vla, cross-embodiment, video]
+  note: >-
+    First-party results. NVIDIA says GR00T N2 (previewed at GTC, March 2026; slated for late
+    2026) is based on DreamZero research.
+  added: 2026-09-29
+
+- id: dreamdojo
+  name: DreamDojo
+  title: 'DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos'
+  date: 2026-02
+  org: NVIDIA
+  summary: >-
+    Robot world model pretrained on 44k hours of egocentric human video with continuous
+    latent actions as proxy labels, post-trained on target-robot data and distilled to about
+    10 FPS for live teleoperation, policy evaluation and model-based planning.
+  links:
+    paper: https://arxiv.org/abs/2602.06949
+    code: https://github.com/NVIDIA/DreamDojo
+    project: https://dreamdojo-world.github.io/
+    weights: https://huggingface.co/nvidia/DreamDojo
+  access: open
+  tags: [world-model, video, dexterous, planning]
+  added: 2026-09-29
+
+- id: lingbot-world
+  name: LingBot-World
+  title: Advancing Open-source World Models
+  date: 2026-01
+  org: Robbyant (Ant Group)
+  summary: >-
+    Open interactive world simulator built from video generation with minute-level
+    consistency and under 1 s latency at 16 fps, trained on a hybrid of real footage, game
+    recordings and Unreal Engine data; positioned for content creation, games and robot
+    learning.
+  links:
+    paper: https://arxiv.org/abs/2601.20540
+    code: https://github.com/Robbyant/lingbot-world
+    weights: https://huggingface.co/robbyant/lingbot-world-base-cam
+  access: open
+  tags: [world-model, video]
+  note: General-purpose world simulator rather than robot-specific.
+  added: 2026-09-29
+
+- id: lingbot-va
+  name: LingBot-VA
+  title: Causal World Modeling for Robot Control
+  date: 2026-01
+  org: Robbyant (Ant Group)
+  summary: >-
+    Autoregressive diffusion video-action world model that interleaves frame prediction and
+    action inference in a shared latent space (mixture-of-transformers), with closed-loop
+    rollout on real observations and asynchronous inference for real-time control.
+  links:
+    paper: https://arxiv.org/abs/2601.21998
+    code: https://github.com/Robbyant/lingbot-va
+    weights: https://huggingface.co/robbyant/lingbot-va-base
+  access: open
+  tags: [world-model, vla, manipulation, long-horizon]
+  added: 2026-09-29
+
+- id: cosmos-policy
+  name: Cosmos Policy
+  title: 'Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning'
+  date: 2026-01
+  org: NVIDIA, Stanford University
+  summary: >-
+    Turns the Cosmos-Predict2 video model into a robot policy with one post-training stage
+    by encoding actions, future states and values as latent frames, which also enables
+    test-time planning; reports 98.5% on LIBERO and 67.1% on RoboCasa.
+  links:
+    paper: https://arxiv.org/abs/2601.16163
+    code: https://github.com/NVlabs/cosmos-policy
+    project: https://research.nvidia.com/labs/cosmos-lab/cosmos-policy/
+    weights: https://huggingface.co/collections/nvidia/cosmos-policy
+  access: open
+  tags: [world-model, vla, planning, manipulation]
+  note: Benchmark numbers are first-party.
+  added: 2026-09-29
+
+- id: 1xwm
+  name: 1XWM (world-model policy for NEO)
+  date: 2026-01
+  org: 1X Technologies
+  summary: >-
+    Text-conditioned video world model pretrained on web video, mid-trained on egocentric
+    human data and fine-tuned on ~70 hours of NEO data; an inverse dynamics model turns its
+    generated future frames into actions, so the world model itself serves as NEO's policy.
+  links:
+    blog: https://www.1x.tech/discover/world-model-self-learning
+  access: closed
+  tags: [world-model, humanoid, video]
+  added: 2026-09-29
+
+- id: veo-world-simulator
+  name: Veo World Simulator (Gemini Robotics policy evaluation)
+  title: Evaluating Gemini Robotics Policies in a Veo World Simulator
+  date: 2025-12
+  org: Google DeepMind
+  summary: >-
+    Action-conditioned, multi-view world model built on the Veo video model, with generative
+    scene editing, used to predict nominal and out-of-distribution performance of Gemini
+    Robotics policies and to red-team safety; validated against 1,600+ real-world trials.
+  links:
+    paper: https://arxiv.org/abs/2512.10675
+    project: https://veo-robotics.github.io/
+  access: closed
+  tags: [world-model, benchmark, safety, video]
+  added: 2026-09-29
+
+- id: motus
+  name: Motus
+  title: 'Motus: A Unified Latent Action World Model'
+  date: 2025-12
+  org: Tsinghua University, Peking University, Horizon Robotics
+  summary: >-
+    Mixture-of-transformers model combining understanding, video-generation and action
+    experts with a UniDiffuser-style scheduler, so one network can act as world model, VLA,
+    inverse dynamics model or video generator; pretrains actions via optical-flow latent
+    actions.
+  links:
+    paper: https://arxiv.org/abs/2512.13030
+    code: https://github.com/thu-ml/Motus
+    project: https://motus-robotics.github.io/motus
+    weights: https://huggingface.co/motus-robotics/Motus
+  access: open
+  tags: [world-model, vla, video, manipulation]
+  note: >-
+    Motus2 (arXiv 2608.30237, Aug 2026) couples policy, simulator and value model in one
+    self-improving loop.
+  added: 2026-09-29
+
+- id: rynnvla-002
+  name: RynnVLA-002
+  title: 'RynnVLA-002: A Unified Vision-Language-Action and World Model'
+  date: 2025-11
+  org: Alibaba DAMO Academy
+  summary: >-
+    Follow-up to WorldVLA that jointly learns a VLA and an action-conditioned image world
+    model so each improves the other; reports 97.4% on LIBERO without pretraining and a 50%
+    real-robot gain from the integrated world model.
+  links:
+    paper: https://arxiv.org/abs/2511.17502
+    code: https://github.com/alibaba-damo-academy/RynnVLA-002
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnVLA-002
+  access: open
+  tags: [world-model, vla, manipulation]
+  note: Results are first-party.
+  added: 2026-09-29
+
+- id: physworld
+  name: PhysWorld
+  title: Robot Learning from a Physical World Model
+  date: 2025-11
+  summary: >-
+    Generates a task-conditioned video from one image and command, reconstructs the
+    underlying physical world, and grounds the video's motions into executable actions with
+    object-centric residual RL, enabling zero-shot manipulation without real robot data.
+  links:
+    paper: https://arxiv.org/abs/2511.07416
+    project: https://jiageng.me/PhysWorld_Web/
+  access: closed
+  tags: [world-model, video, rl, sim2real]
+  added: 2026-09-29
+
+- id: gigaworld-0
+  name: GigaWorld-0
+  title: 'GigaWorld-0: World Models as Data Engine to Empower Embodied AI'
+  date: 2025-11
+  org: GigaAI
+  summary: >-
+    World-model data engine for VLA training that combines a controllable video-generation
+    branch with a 3D branch (Gaussian splatting, system identification, motion planning);
+    GigaBrain-0 trained on its synthetic data is reported to perform well on real robots.
+  links:
+    paper: https://arxiv.org/abs/2511.19861
+    code: https://github.com/open-gigaai/giga-world-0
+    project: https://giga-world-0.github.io/
+    weights: https://huggingface.co/open-gigaai/GigaWorld-0-Video-Pretrain-2b
+  access: open
+  tags: [world-model, dataset, sim2real, video]
+  added: 2026-09-29
+
+- id: ctrl-world
+  name: Ctrl-World
+  title: 'Ctrl-World: A Controllable Generative World Model for Robot Manipulation'
+  date: 2025-10
+  org: Stanford University, Tsinghua University
+  summary: >-
+    Controllable multi-view world model trained on DROID with pose-conditioned memory
+    retrieval and frame-level action conditioning; ranks generalist policies without real
+    rollouts and improves them by fine-tuning on imagined successful trajectories.
+  links:
+    paper: https://arxiv.org/abs/2510.10125
+    code: https://github.com/Robert-gyj/Ctrl-World
+    project: https://ctrl-world.github.io/
+    weights: https://huggingface.co/yjguo/Ctrl-World
+  access: open
+  tags: [world-model, benchmark, manipulation, self-improving]
+  added: 2026-09-29
+
+- id: cosmos-predict-2-5
+  name: Cosmos-Predict2.5 / Transfer2.5
+  title: World Simulation with Video Foundation Models for Physical AI
+  date: 2025-10
+  org: NVIDIA
+  summary: >-
+    Next Cosmos generation: flow-based Predict2.5 unifies text-, image- and video-to-world
+    generation (2B and 14B, trained on 200M curated clips with RL post-training), and the
+    smaller Transfer2.5 handles sim2real and real2real translation for synthetic data and
+    policy evaluation.
+  links:
+    paper: https://arxiv.org/abs/2511.00062
+    code: https://github.com/nvidia-cosmos/cosmos-predict2.5
+    weights: https://huggingface.co/nvidia/Cosmos-Predict2.5-2B
+  access: open
+  tags: [world-model, video, sim2real]
+  note: >-
+    Transfer2.5 code is at github.com/nvidia-cosmos/cosmos-transfer2.5; weights are gated on
+    Hugging Face.
+  added: 2026-09-29
+
+- id: wow-world-model
+  name: WoW
+  title: 'WoW: Towards a World omniscient World model Through Embodied Interaction'
+  date: 2025-09
+  org: X-Humanoid
+  summary: >-
+    14B generative world model trained on 2M robot interaction trajectories; VLM agents
+    (SOPHIA) critique and refine its generated rollouts, a co-trained inverse dynamics model
+    turns plans into actions, and WoWBench tests physical consistency.
+  links:
+    paper: https://arxiv.org/abs/2509.22642
+    code: https://github.com/wow-world-model/wow-world-model
+    project: https://wow-world-model.github.io/
+    weights: https://huggingface.co/X-Humanoid/WoW-1-Wan-14B-2M
+  access: open
+  tags: [world-model, video, benchmark, manipulation]
+  added: 2026-09-29
+
+- id: unifolm-wma-0
+  name: UnifoLM-WMA-0
+  date: 2025-09
+  org: Unitree Robotics
+  summary: >-
+    Unitree's open world-model-action architecture across embodiments: the world model acts
+    as a simulation engine that generates synthetic data and, attached to an action head, as
+    a policy enhancer that predicts future interactions; includes deployment code for
+    Unitree robots.
+  links:
+    code: https://github.com/unitreerobotics/unifolm-world-model-action
+    project: https://unigen-x.github.io/unifolm-world-model-action.github.io/
+    weights: https://huggingface.co/unitreerobotics/UnifoLM-WMA-0-Base
+  access: open
+  tags: [world-model, vla, humanoid, dataset]
+  note: No paper found; weights are gated on Hugging Face.
+  added: 2026-09-29
+
+- id: genie-envisioner
+  name: Genie Envisioner
+  title: 'Genie Envisioner: A Unified World Foundation Platform for Robotic Manipulation'
+  date: 2025-08
+  org: AgiBot
+  summary: >-
+    Unified video-generative platform for manipulation: the GE-Base instruction-conditioned
+    video world model, the GE-Act flow-matching action decoder, the GE-Sim
+    action-conditioned neural simulator for closed-loop evaluation, and the EWMBench
+    benchmark.
+  links:
+    paper: https://arxiv.org/abs/2508.05635
+    code: https://github.com/AgibotTech/Genie-Envisioner
+    project: https://genie-envisioner.github.io/
+    weights: https://huggingface.co/agibot-world/Genie-Envisioner-v1.0
+  access: open
+  tags: [world-model, vla, benchmark, manipulation]
+  note: >-
+    2026 follow-ups GE-Act 2.0 (arXiv 2609.05588) and GE-Sim 2.0 extend the platform.
+  added: 2026-09-29
+
+- id: genie-3
+  name: Genie 3
+  date: 2025-08
+  org: Google DeepMind
+  summary: >-
+    Real-time interactive world model that generates navigable environments at 720p and 24
+    fps from text prompts, keeps them consistent for several minutes and supports promptable
+    world events; demonstrated as a training ground for the SIMA embodied agent.
+  links:
+    project: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/
+    blog: https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/
+  access: api
+  tags: [world-model, video]
+  note: >-
+    Launched as a limited research preview; offered as the Project Genie prototype to Google
+    AI Ultra subscribers since January 2026. No weights.
+  added: 2026-09-29
+
+- id: vidar
+  name: Vidar
+  title: 'Vidar: Embodied Video Diffusion Model for Generalist Manipulation'
+  date: 2025-07
+  org: Tsinghua University
+  summary: >-
+    Embodied video diffusion prior continuously pretrained on 750K multi-view trajectories
+    from three robots, paired with a masked inverse dynamics model that grounds generated
+    video in a new robot's action space from about 20 minutes of demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2507.12898
+  access: closed
+  tags: [world-model, video, cross-embodiment]
+  note: No code link found in the paper.
+  added: 2026-09-29
+
+- id: worldvla
+  name: WorldVLA
+  title: 'WorldVLA: Towards Autoregressive Action World Model'
+  date: 2025-06
+  org: Alibaba DAMO Academy
+  summary: >-
+    Autoregressive action world model that unifies a VLA and an image-prediction world model
+    in one network so each improves the other; masks prior actions in attention to reduce
+    error propagation when generating action chunks.
+  links:
+    paper: https://arxiv.org/abs/2506.21539
+    code: https://github.com/alibaba-damo-academy/WorldVLA
+  access: open
+  tags: [world-model, vla, manipulation]
+  note: Follow-up RynnVLA-002 (arXiv 2511.17502) is released in the same repository.
+  added: 2026-09-29
+
+- id: v-jepa-2
+  name: V-JEPA 2
+  title: >-
+    V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning
+  date: 2025-06
+  org: Meta FAIR
+  summary: >-
+    Self-supervised joint-embedding predictive video model pretrained on 1M+ hours of
+    internet video; its action-conditioned variant V-JEPA 2-AC, post-trained on under 62
+    hours of DROID video, plans pick-and-place toward image goals zero-shot on Franka arms.
+  links:
+    paper: https://arxiv.org/abs/2506.09985
+    code: https://github.com/facebookresearch/vjepa2
+    blog: https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
+    weights: https://huggingface.co/facebook/vjepa2-vitg-fpc64-256
+  access: open
+  tags: [world-model, planning, manipulation, video]
+  added: 2026-09-29
+
+- id: roboscape
+  name: RoboScape
+  title: 'RoboScape: Physics-informed Embodied World Model'
+  date: 2025-06
+  org: Tsinghua University
+  summary: >-
+    Physics-informed world model that jointly learns robot video generation with temporal
+    depth prediction and keypoint dynamics to improve 3D consistency and contact-rich
+    motion; used to generate policy training data and to evaluate policies.
+  links:
+    paper: https://arxiv.org/abs/2506.23135
+    code: https://github.com/tsinghua-fib-lab/RoboScape
+  access: partial
+  tags: [world-model, video, manipulation]
+  note: Code released; pretrained weights not found.
+  added: 2026-09-29
+
+- id: worldgym
+  name: WorldGym
+  title: 'WorldGym: World Model as An Environment for Policy Evaluation'
+  date: 2025-05
+  summary: >-
+    Autoregressive action-conditioned video model used as an evaluation environment:
+    policies run Monte Carlo rollouts from a single real start frame with a VLM providing
+    rewards, and success rates correlate with real-world results.
+  links:
+    paper: https://arxiv.org/abs/2506.00613
+    project: https://world-model-eval.github.io/
+  access: closed
+  tags: [world-model, benchmark, reward-model]
+  added: 2026-09-29
+
+- id: worldeval
+  name: WorldEval
+  title: 'WorldEval: World Model as Real-World Robot Policies Evaluator'
+  date: 2025-05
+  org: Midea Group, East China Normal University
+  summary: >-
+    Turns a video generation model into a latent-action-following world simulator
+    (Policy2Vec) and builds an automated pipeline that ranks real-robot policies and
+    checkpoints and flags dangerous actions, correlating with real-world performance.
+  links:
+    paper: https://arxiv.org/abs/2505.19017
+    code: https://github.com/liyaxuanliyaxuan/Worldeval
+    project: https://worldeval.github.io/
+  access: partial
+  tags: [world-model, benchmark, safety]
+  note: Code and evaluated policy weights released; world-model weights not found.
+  added: 2026-09-29
+
+- id: ewmbench
+  name: EWMBench
+  title: >-
+    EWMBench: Evaluating Scene, Motion, and Semantic Quality in Embodied World Models
+  date: 2025-05
+  org: AgiBot
+  summary: >-
+    Embodied World Model Benchmark that scores text-to-video world models on visual scene
+    consistency, motion correctness and semantic alignment using a curated
+    robot-manipulation dataset and a multi-dimensional evaluation toolkit.
+  links:
+    paper: https://arxiv.org/abs/2505.09694
+    code: https://github.com/AgibotTech/EWMBench
+  access: open
+  tags: [benchmark, world-model, video]
+  added: 2026-09-29
+
+- id: enerverse-ac
+  name: EnerVerse-AC
+  title: 'EnerVerse-AC: Envisioning Embodied Environments with Action Condition'
+  date: 2025-05
+  org: AgiBot
+  summary: >-
+    Action-conditioned multi-view world model with multi-level action conditioning and
+    ray-map encoding, trained with failure trajectories; serves both as a data engine that
+    augments demonstrations and as an evaluator for policy testing.
+  links:
+    paper: https://arxiv.org/abs/2505.09723
+    code: https://github.com/AgibotTech/EnerVerse-AC
+    project: https://annaj2178.github.io/EnerverseAC.github.io/
+    weights: https://huggingface.co/agibot-world/EnerVerse-AC
+  access: open
+  tags: [world-model, benchmark, dataset, manipulation]
+  added: 2026-09-29
+
+- id: dreamgen
+  name: DreamGen (GR00T-Dreams)
+  title: 'DreamGen: Unlocking Generalization in Robot Learning through Video World Models'
+  date: 2025-05
+  org: NVIDIA
+  summary: >-
+    Four-stage pipeline that adapts image-to-video world models to a target robot, generates
+    synthetic "neural trajectories", labels them with latent-action or inverse-dynamics
+    models and trains policies; a humanoid learned 22 new behaviors from single-task teleop
+    data.
+  links:
+    paper: https://arxiv.org/abs/2505.12705
+    code: https://github.com/NVIDIA/GR00T-Dreams
+    project: https://research.nvidia.com/labs/gear/dreamgen/
+  access: open
+  tags: [world-model, video, humanoid, dataset, data-generation]
+  added: 2026-09-29
+
+- id: unified-world-models
+  name: Unified World Models (UWM)
+  title: >-
+    Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large
+    Robotic Datasets
+  date: 2025-04
+  org: University of Washington, Toyota Research Institute
+  summary: >-
+    Transformer coupling action and video diffusion with independent timesteps, so one model
+    acts as policy, forward or inverse dynamics model or video generator and can pretrain on
+    both robot trajectories and action-free video.
+  links:
+    paper: https://arxiv.org/abs/2504.02792
+    code: https://github.com/WEIRDLabUW/unified-world-model
+    project: https://weirdlabuw.github.io/uwm/
+  access: open
+  tags: [world-model, video, manipulation]
+  added: 2026-09-29
+
+- id: tesseract
+  name: TesserAct
+  title: 'TesserAct: Learning 4D Embodied World Models'
+  date: 2025-04
+  org: UMass Amherst
+  summary: >-
+    4D embodied world model that fine-tunes a video generator to predict RGB, depth and
+    normal frames, converts them into temporally coherent 4D scenes, and uses them to learn
+    inverse dynamics that beat prior video-based world models for policy learning.
+  links:
+    paper: https://arxiv.org/abs/2504.20995
+    code: https://github.com/UMass-Embodied-AGI/TesserAct
+    project: https://tesseractworld.github.io/
+    weights: https://huggingface.co/anyeZHY/tesseract
+  access: open
+  tags: [world-model, 3d, video, manipulation]
+  added: 2026-09-29
+
+- id: cosmos-transfer1
+  name: Cosmos-Transfer1
+  title: 'Cosmos-Transfer1: Conditional World Generation with Adaptive Multimodal Control'
+  date: 2025-03
+  org: NVIDIA
+  summary: >-
+    Conditional world-generation model driven by spatially weighted control inputs
+    (segmentation, depth, edges) for world-to-world transfer, used for robotics sim2real and
+    driving data enrichment.
+  links:
+    paper: https://arxiv.org/abs/2503.14492
+    code: https://github.com/nvidia-cosmos/cosmos-transfer1
+  access: open
+  tags: [world-model, sim2real, video]
+  added: 2026-09-29
+
+- id: unified-video-action
+  name: Unified Video Action Model (UVA)
+  title: Unified Video Action Model
+  date: 2025-02
+  org: Stanford University
+  summary: >-
+    Learns a joint video-action latent with decoupled lightweight diffusion heads, so
+    actions can be decoded quickly without generating video; masking lets one model serve as
+    policy, forward or inverse dynamics model and video predictor.
+  links:
+    paper: https://arxiv.org/abs/2503.00200
+    code: https://github.com/ShuangLI59/unified_video_action
+    project: https://unified-video-action-model.github.io/
+  access: open
+  tags: [world-model, video, manipulation]
+  added: 2026-09-29
+
+- id: cosmos
+  name: NVIDIA Cosmos
+  title: Cosmos World Foundation Model Platform for Physical AI
+  date: 2025-01
+  org: NVIDIA
+  summary: >-
+    Open platform of world foundation models for physical AI: video curation pipeline, video
+    tokenizers, pretrained diffusion and autoregressive world models and post-training
+    examples; later Predict2.5/Transfer2.5 target synthetic data, policy evaluation and
+    sim2real.
+  links:
+    paper: https://arxiv.org/abs/2501.03575
+    code: https://github.com/nvidia-cosmos/cosmos-predict1
+    project: https://www.nvidia.com/en-us/ai/cosmos/
+    weights: https://huggingface.co/nvidia/Cosmos-Predict1-7B-Video2World
+  access: open
+  tags: [world-model, video, sim2real]
+  note: >-
+    Cosmos-Predict2.5 and Cosmos-Transfer2.5 are described in arXiv 2511.00062 (Oct 2025).
+  added: 2026-09-29
+
+- id: enerverse
+  name: EnerVerse
+  title: 'EnerVerse: Envisioning Embodied Future Space for Robotics Manipulation'
+  date: 2025-01
+  org: AgiBot
+  summary: >-
+    Generative robotics model that predicts future multi-view embodied space with chunk-wise
+    autoregressive video diffusion and sparse memory, couples it with a 4D
+    Gaussian-splatting data engine, and decodes actions through a policy head.
+  links:
+    paper: https://arxiv.org/abs/2501.01895
+    project: https://sites.google.com/view/enerverse
+  access: closed
+  tags: [world-model, video, 3d, manipulation]
+  added: 2026-09-29
+
+- id: video-prediction-policy
+  name: Video Prediction Policy (VPP)
+  title: >-
+    Video Prediction Policy: A Generalist Robot Policy with Predictive Visual
+    Representations
+  date: 2024-12
+  org: Tsinghua University, Robotera
+  summary: >-
+    Fine-tunes a video diffusion model on robot and human manipulation video and learns an
+    implicit inverse dynamics policy conditioned on its predicted future representations;
+    reports +18.6% on CALVIN ABC-D and +31.6% on real dexterous tasks.
+  links:
+    paper: https://arxiv.org/abs/2412.14803
+    code: https://github.com/roboterax/video-prediction-policy
+    project: https://video-prediction-policy.github.io/
+    weights: https://huggingface.co/yjguo/svd-robot
+  access: open
+  tags: [world-model, video, dexterous]
+  added: 2026-09-29
+
+- id: navigation-world-models
+  name: Navigation World Models (NWM)
+  title: Navigation World Models
+  date: 2024-12
+  org: Meta FAIR, New York University, UC Berkeley
+  summary: >-
+    1B-parameter conditional diffusion transformer trained on egocentric human and robot
+    videos that predicts future views from past observations and navigation actions; plans
+    by simulating and ranking trajectories and can add constraints at planning time.
+  links:
+    paper: https://arxiv.org/abs/2412.03572
+    code: https://github.com/facebookresearch/nwm
+    project: https://www.amirbar.net/nwm/
+    weights: https://huggingface.co/facebook/nwm
+  access: open
+  tags: [world-model, navigation, planning, video]
+  note: Weights are gated on Hugging Face (manual approval).
+  added: 2026-09-29
+
+- id: genie-2
+  name: Genie 2
+  date: 2024-12
+  org: Google DeepMind
+  summary: >-
+    Large-scale foundation world model that generates action-controllable, playable 3D
+    environments from a single prompt image with up to a minute of consistency and
+    long-horizon memory; used to test the SIMA instruction-following agent.
+  links:
+    blog: https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/
+  access: closed
+  tags: [world-model, video]
+  added: 2026-09-29
+
+- id: dino-wm
+  name: DINO-WM
+  title: 'DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning'
+  date: 2024-11
+  org: New York University, Meta FAIR
+  summary: >-
+    World model that predicts future DINOv2 patch features from offline trajectories instead
+    of reconstructing pixels, enabling task-agnostic zero-shot planning toward goal images
+    by optimizing action sequences in maze, pushing and particle tasks.
+  links:
+    paper: https://arxiv.org/abs/2411.04983
+    code: https://github.com/gaoyuezhou/dino_wm
+    project: https://dino-wm.github.io/
+  access: open
+  tags: [world-model, planning, manipulation, navigation]
+  added: 2026-09-29
+
+- id: 1x-world-model
+  name: 1X World Model
+  date: 2024-09
+  org: 1X Technologies
+  summary: >-
+    Learned simulator trained on thousands of hours of EVE humanoid data that predicts
+    future observations from action sequences for reproducible policy evaluation; 1X
+    released 100+ hours of tokenized video and baselines for its 1X World Model Challenge.
+  links:
+    code: https://github.com/1x-technologies/1xgpt
+    blog: https://www.1x.tech/discover/1x-world-model
+    data: https://huggingface.co/datasets/1x-technologies/world_model_tokenized_data
+  access: partial
+  tags: [world-model, humanoid, benchmark, dataset]
+  note: >-
+    1X's production world model is closed; the dataset and baseline models are public.
+  added: 2026-09-29
+
+- id: irasim
+  name: IRASim
+  title: 'IRASim: A Fine-Grained World Model for Robot Manipulation'
+  date: 2024-06
+  org: ByteDance Research
+  summary: >-
+    Action-conditioned video diffusion transformer with frame-level action conditioning that
+    renders fine-grained robot-object interaction; policy evaluations inside it correlate
+    with a ground-truth simulator, and model-based planning with it improves Push-T results.
+  links:
+    paper: https://arxiv.org/abs/2406.14540
+    code: https://github.com/bytedance/IRASim
+    project: https://gen-irasim.github.io/
+  access: open
+  tags: [world-model, video, manipulation, planning]
+  note: 'arXiv v1 was titled "IRASim: Learning Interactive Real-Robot Action Simulators".'
+  added: 2026-09-29
+
+- id: genie
+  name: Genie
+  title: 'Genie: Generative Interactive Environments'
+  date: 2024-02
+  org: Google DeepMind
+  summary: >-
+    11B foundation world model trained without action labels on internet videos (video
+    tokenizer, autoregressive dynamics model and latent action model) that generates
+    action-controllable worlds; its latent actions can help agents imitate unseen videos.
+  links:
+    paper: https://arxiv.org/abs/2402.15391
+    project: https://sites.google.com/view/genie-2024/
+  access: closed
+  tags: [world-model, video]
+  added: 2026-09-29
+
+- id: video-language-planning
+  name: Video Language Planning (VLP)
+  title: Video Language Planning
+  date: 2023-10
+  summary: >-
+    Tree search over generated video and language plans, using VLMs as policies and value
+    functions and text-to-video models as dynamics models; plans are executed via
+    goal-conditioned policies on each generated frame.
+  links:
+    paper: https://arxiv.org/abs/2310.10625
+    code: https://github.com/video-language-planning/vlp_code
+    project: https://video-language-planning.github.io/
+  access: partial
+  tags: [world-model, planning, video, long-horizon]
+  note: Released code scope (models/weights) not verified.
+  added: 2026-09-29
+
+- id: unisim
+  name: UniSim
+  title: Learning Interactive Real-World Simulators
+  date: 2023-10
+  org: UC Berkeley, Google DeepMind, MIT
+  summary: >-
+    Learned universal simulator that renders the visual outcome of high-level language
+    actions and low-level controls by orchestrating diverse datasets; used to train
+    vision-language planners and RL policies purely in simulation that transfer zero-shot to
+    real robots.
+  links:
+    paper: https://arxiv.org/abs/2310.06114
+    project: https://universal-simulator.github.io/unisim/
+  access: closed
+  tags: [world-model, video, sim2real, rl]
+  added: 2026-09-29
+
+- id: unipi
+  name: UniPi
+  title: Learning Universal Policies via Text-Guided Video Generation
+  date: 2023-01
+  org: MIT, Google DeepMind
+  summary: >-
+    Casts decision making as text-conditioned video generation: a video model synthesizes a
+    plan as future frames and an inverse dynamics model extracts actions, enabling
+    combinatorial generalization to new goals and knowledge transfer from internet video.
+  links:
+    paper: https://arxiv.org/abs/2302.00111
+    project: https://universal-policy.github.io/unipi/
+  access: closed
+  tags: [world-model, video, planning, manipulation]
+  added: 2026-09-29
+
+- id: daydreamer
+  name: DayDreamer
+  title: 'DayDreamer: World Models for Physical Robot Learning'
+  date: 2022-06
+  org: UC Berkeley
+  summary: >-
+    Applies Dreamer world-model RL directly on four physical robots without simulators: a
+    quadruped learns to stand up and walk in about an hour, and robot arms learn
+    pick-and-place from camera images and sparse rewards.
+  links:
+    paper: https://arxiv.org/abs/2206.14176
+    code: https://github.com/danijar/daydreamer
+    project: https://danijar.com/daydreamer/
+  access: open
+  tags: [world-model, rl, legged, manipulation]
+  added: 2026-09-29
+
+- id: empiric
+  name: EMPIRIC
+  title: 'EMPIRIC: Experiment-Driven Learning of Residual World Models for Robot Planning'
+  date: 2026-09
+  summary: >-
+    Agent that learns a residual world model by experiment: a physics engine extended with
+    learned code for missing mechanisms (new forces, constraints, hidden state), with
+    Bayesian inference over parameters, used to plan, pick informative experiments and
+    revise hypotheses.
+  links:
+    paper: https://arxiv.org/abs/2609.35047
+    project: https://yichao-liang.github.io/empiric
+  access: closed
+  tags: [world-model, planning, code-as-policy, real-world]
+  added: 2026-10-01
+
+- id: robocoach
+  name: RoboCoach
+  title: 'RoboCoach: World Models as Active Coaches for Compositional Robot Skills'
+  aliases: [CoachWorld]
+  date: 2026-09
+  summary: >-
+    Route-Imagine-Diagnose-Improve loop that runs reusable skill experts inside a shared
+    action-conditioned world model (CoachWorld), uses a progress judge to find the first
+    failing subtask, and targets new demonstrations and adapter updates there; tested on
+    Franka and AgileX.
+  links:
+    paper: https://arxiv.org/abs/2609.39685
+    code: https://github.com/RoboCoach-AI/CoachWorld
+    project: https://robocoach-ai.github.io/
+    weights: https://huggingface.co/JEdward/CoachWorld
+  access: open
+  tags: [world-model, self-improving, skill-library, long-horizon, real-world]
+  added: 2026-10-02
+
+- id: planning-limits-latent-world-models
+  name: Planning Limits of Latent World Models
+  title: The Planning Limits of Latent World Models
+  date: 2026-09
+  summary: >-
+    Shows that action-conditioned predictors on frozen visual backbones (V-JEPA 2, DINOv2
+    and others) rank actions reliably only for goals within about their imagined horizon,
+    even with perfect prediction; within that range, reranking VLA proposals improves
+    success.
+  links:
+    paper: https://arxiv.org/abs/2609.39235
+  access: closed
+  tags: [world-model, planning, vla, manipulation]
+  added: 2026-10-03

@@ -1,0 +1,805 @@
+- id: nav-mcp-representation-layer
+  name: MCP Navigation Representation Layer
+  title: Spatial and Semantic Reasoning for LLM-Driven Robot Navigation via MCP
+  date: 2026-09
+  summary: >-
+    Non-invasive layer that turns ROS navigation data into LLM-usable context exposed as MCP
+    tools: occupancy grids become metric, pose-aware map images for goal reasoning, and
+    waypoint-level semantic annotations record observations with robot poses.
+  links:
+    paper: https://arxiv.org/abs/2609.27340
+  access: closed
+  tags: [mcp, ros, navigation, spatial-reasoning]
+  note: >-
+    First-party simulation results (over 97% map coverage; spatial and semantic goal
+    selection).
+  added: 2026-09-29
+
+- id: isaac-ros-agent-skills
+  name: Isaac ROS 5.0 agent skills
+  date: 2026-09
+  org: NVIDIA
+  summary: >-
+    Isaac ROS 5.0 adds skills in the open Agent Skills format so coding assistants can run
+    Isaac ROS workflows, e.g. Mission Control skills that bring up the fleet stack, change
+    maps or fleets and submit and verify missions; more Isaac skills sit in NVIDIA's skills
+    catalog.
+  links:
+    code: https://github.com/NVIDIA/skills
+    blog: https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/
+    docs: https://nvidia-isaac-ros.github.io/v/release-5.0/releases/index.html
+  access: open
+  tags: [skill-library, ros, tool-use, mcp]
+  note: >-
+    Developer-facing: the skills target coding assistants that build and operate Isaac ROS
+    systems rather than a runtime robot action space. The docs also cover Mission Control
+    and Mission Dispatch MCP servers, and the blog announces a standalone agent-ready
+    pick-and-place skill.
+  added: 2026-09-29
+
+- id: robotstudio-mcp
+  name: RobotStudio MCP (RAPID program generation)
+  title: >-
+    Retrieval-grounded robot program generation and simulation-based correction via Model
+    Context Protocol
+  date: 2026-08
+  summary: >-
+    Generates ABB RAPID programs from language with dual-stream RAG over documentation and
+    production templates, and uses an MCP server into ABB RobotStudio to upload code, run
+    simulations and return diagnostics for iterative correction of a pick-and-place cell.
+  links:
+    paper: https://arxiv.org/abs/2608.21417
+    code: https://github.com/zhou-zhichao/robotstudio-mcp
+  access: open
+  tags: [mcp, code-as-policy, failure-recovery]
+  note: >-
+    Accepted at CIE53 (2026). The repository ("RobotStudio Agent Bridge") exposes
+    RobotStudio to agents through a Skill-guided CLI or an MCP server.
+  added: 2026-09-29
+
+- id: pointing-vla
+  name: Pointing-VLA
+  title: >-
+    Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation
+  date: 2026-08
+  summary: >-
+    Replaces text-serialized coordinates with typed hidden-state readout heads (points,
+    object-functional grounding heatmaps, visual trajectories) on Embodied-R1 plus an
+    explicit PICK/PLACE execution contract; also used as spatial guidance for a pi0.5
+    policy.
+  links:
+    paper: https://arxiv.org/abs/2608.23138
+  access: closed
+  tags: [pointing, vla, manipulation]
+  note: First-party results on Bridge/WidowX and a physical pick-and-place setup.
+  added: 2026-09-29
+
+- id: model-hardware-standard
+  name: Model Hardware Standard (MHS)
+  date: 2026-08
+  org: Anthropic
+  summary: >-
+    Driver standard that wraps lab, robotics and manufacturing hardware as discoverable
+    devices with simple read/write operations plus natural-language metadata on states,
+    procedures and limits, reachable via MCP, CLI or code and guarded by deterministic
+    device-level safeguards.
+  links:
+    project: https://www.modelhardwarestandard.com/
+    blog: https://www.anthropic.com/news/model-hardware-standard-research-preview
+  access: closed
+  tags: [protocol, mcp, tool-use, safety]
+  note: >-
+    Research preview shared with partners (e.g. Genentech, CMU, HHMI Janelia; vendor support
+    announced by Universal Robots, Doosan Robotics, AWS Strands Robots and Hugging Face
+    LeRobot); Anthropic states it plans to open-source the standard.
+  added: 2026-09-29
+
+- id: open-robot-skills
+  name: open-robot-skills (MORSL)
+  date: 2026-07
+  org: UC Berkeley; NVIDIA
+  summary: >-
+    Modular Open Robot Skill Library used by the GaP coding harness: manipulation skills and
+    model-backed tool bundles packaged in the Anthropic Agent Skills (SKILL.md) format, each
+    with scripts and declared exit conditions that generated robot graphs route on.
+  links:
+    paper: https://arxiv.org/abs/2607.05369
+    code: https://github.com/graph-robots/open-robot-skills
+    project: https://graph-robots.github.io/gap
+  access: open
+  tags: [skill-library, tool-use, manipulation]
+  note: >-
+    Described in the GaP paper (see the GaP entry under other); listed separately as the
+    reusable skill artifact.
+  added: 2026-09-29
+
+- id: contract-grounded-bt
+  name: Contract-Grounded BT Synthesis
+  title: Contract-Grounded Behavior Tree Synthesis via Coding Agents
+  date: 2026-07
+  summary: >-
+    A coding agent queries a robot-side MCP server for an explicit contract (skill library,
+    permitted behavior-tree operators, optional templates) before synthesizing a behavior
+    tree, which a runtime validation gate checks before execution.
+  links:
+    paper: https://arxiv.org/abs/2607.12220
+    project: https://jsalfity.github.io/agentic-bt-gen-webviewer/
+  access: closed
+  tags: [mcp, ros, planning, navigation, safety]
+  note: >-
+    Evaluated on 110 PyRoboSim tasks and 14 tasks on a Husarion Panther (first-party).
+  added: 2026-09-29
+
+- id: acp-hri
+  name: Agent-Client Protocol for HRI
+  title: Human-Robot Interaction in GenAI Architectures via the Agent-Client Protocol
+  date: 2026-07
+  org: University of Malaga (MAPIRlab)
+  summary: >-
+    Uses the Agent-Client Protocol (from coding agents) for the human-to-agent link and MCP
+    for the agent-to-robot link, giving a three-layer architecture with real-time
+    observability, explicit human authorization and task interruption; tested on a mobile
+    robot with three UIs.
+  links:
+    paper: https://arxiv.org/abs/2607.14919
+    code: https://github.com/MAPIRlab/sancho-acp-clients
+  access: open
+  tags: [hitl, mcp, protocol, ros]
+  note: >-
+    Robot-side ROS 2 code for the Sancho platform is in github.com/MAPIRlab/sancho_robot.
+  added: 2026-09-29
+
+- id: recent-skill-grounding
+  name: RECENT
+  title: Efficient Skill Grounding via Code Refactoring with Small Language Models
+  date: 2026-06
+  summary: >-
+    Represents skills as executable code and re-grounds them to new embodiments or
+    environments by locally refactoring only their execution bindings with a small language
+    model, rather than regenerating the program; reported to match LLM-based
+    code-as-policies.
+  links:
+    paper: https://arxiv.org/abs/2606.07999
+  access: closed
+  tags: [code-as-policy, skill-library, on-device, cross-embodiment]
+  note: ICML 2026; first-party results.
+  added: 2026-09-29
+
+- id: lab-agent-protocol
+  name: Lab Agent Protocol (LAP)
+  title: 'LAP: An Agent-to-Instrument Protocol for Autonomous Science'
+  date: 2026-06
+  summary: >-
+    Protocol design for the agent-to-instrument edge: extends A2A-style discovery and task
+    lifecycles with signed InstrumentCards (capabilities, physical limits), exclusive
+    reservation, safety-fence confirmation tokens for hazardous steps and physically typed
+    measurement results.
+  links:
+    paper: https://arxiv.org/abs/2606.03755
+  access: closed
+  tags: [protocol, safety, tool-use]
+  note: >-
+    Targets self-driving labs; designed to be transport-compatible with A2A/MCP and to wrap
+    device standards such as SiLA 2 and OPC-UA. Specification only; no reference
+    implementation found.
+  added: 2026-09-29
+
+- id: vlas-as-tools
+  name: VLAs-as-Tools (TAPT)
+  title: >-
+    Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models
+  date: 2026-05
+  summary: >-
+    A VLM agent plans and recovers while a family of specialized VLA tools executes bounded
+    subtasks through an interface with explicit tool selection and in-execution progress
+    feedback; Tool-Aligned Post-Training makes the VLA tools follow agent invocations.
+  links:
+    paper: https://arxiv.org/abs/2605.13119
+  access: closed
+  tags: [vla, tool-use, dual-system, long-horizon]
+  note: >-
+    First-party gains reported on LIBERO-Long and RoboTwin with pi0.5; code announced but
+    not yet released.
+  added: 2026-09-29
+
+- id: octopus-protocol
+  name: Octopus Protocol
+  title: >-
+    Octopus Protocol: One-Shot Hardware Discovery and Control for AI Agents via
+    Infrastructure-as-Prompts
+  date: 2026-05
+  summary: >-
+    Hardware onboarding in which a coding agent follows markdown specs to enumerate attached
+    devices, infer their capabilities, generate typed MCP tools plus the driver code behind
+    them, deploy the endpoint and keep repairing it; demonstrated with an SO-ARM101 arm and
+    camera.
+  links:
+    paper: https://arxiv.org/abs/2605.09055
+    code: https://github.com/qsimeon/octopus-hw
+    project: https://qsimeon.github.io/octopus-hw/
+  access: open
+  tags: [mcp, tool-use, self-improving]
+  note: >-
+    The authors also report a failure mode of unattended repair loops over 11 hours of
+    operation.
+  added: 2026-09-29
+
+- id: embodied-tool-protocol
+  name: Embodied Tool Protocol (ETP) / EmbodiedToolBench
+  title: Enabling Extensible Embodied Capabilities with Tools
+  date: 2026-05
+  summary: >-
+    Externalizes perception, cognition, reasoning and execution capabilities into 100+ tools
+    under a protocol for registration, discovery, invocation and execution, and benchmarks
+    when, which and how models call them; gains are large for perception and cognition,
+    small for execution.
+  links:
+    paper: https://arxiv.org/abs/2605.26637
+    project: https://racingemperor.github.io/manip-tool-hub/
+  access: closed
+  tags: [protocol, tool-use, benchmark]
+  note: >-
+    The code URL given in the paper (github.com/Zxy-MLlab/EmbodiedTool) returned 404 when
+    checked in Sep 2026.
+  added: 2026-09-29
+
+- id: rosclaw-openclaw
+  name: ROSClaw (OpenClaw-ROS 2)
+  title: 'ROSClaw: An OpenClaw ROS 2 Framework for Agentic Robot Control and Interaction'
+  date: 2026-03
+  org: Kent State University, PlaiPin
+  summary: >-
+    Model-agnostic executive layer connecting the OpenClaw agent runtime to ROS 2: dynamic
+    capability discovery, observation normalization, pre-execution action validation in a
+    configurable safety envelope, and audit logging; deployed on wheeled, quadruped and
+    humanoid robots.
+  links:
+    paper: https://arxiv.org/abs/2603.26997
+    code: https://github.com/PlaiPin/rosclaw
+  access: open
+  tags: [ros, safety, tool-use, agentic-loop, cross-embodiment]
+  note: >-
+    Date is the repo's first commit (2026-02); paper posted 2026-03. Repo (messaging-app
+    control via rosbridge) says it is being re-architected; the paper states a full
+    de-anonymized release upon acceptance.
+  added: 2026-09-29
+
+- id: agenticros
+  name: AgenticROS
+  date: 2026-03
+  org: AgenticROS (sponsored by RealSense)
+  summary: >-
+    Agent-agnostic interface layer for ROS 2 robots with an OpenClaw/NemoClaw plugin, an MCP
+    server for Claude Code, Codex and Hermes, and Gemini function calling; robots advertise
+    typed capability verbs (drive_base, find_object, ...) extended by skill packages.
+  links:
+    code: https://github.com/agenticros/agenticros
+    project: https://agenticros.com/
+    blog: https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/
+  access: open
+  tags: [mcp, ros, tool-use, navigation]
+  note: >-
+    Highlighted in NVIDIA's Isaac ROS 5.0 announcement (Sep 2026) as connecting Isaac ROS
+    with Nemotron models and NemoClaw blueprints.
+  added: 2026-09-29
+
+- id: droneserver
+  name: DroneServer
+  title: >-
+    An LLM-Agnostic, MAVLink-Based Drone Command and Control Interface and Agentic Harness
+    Using the Model Context Protocol
+  date: 2026-01
+  summary: >-
+    MCP server exposing 98 MAVLink/MAVSDK tools (commands, telemetry, missions) for
+    ArduPilot and PX4 to any MCP-capable LLM, treating the model as an untrusted commander
+    with server-side criticality tiers, confirmation handshakes, geofence and audit log.
+  links:
+    paper: https://arxiv.org/abs/2601.15486
+    code: https://github.com/PeterJBurke/droneserver
+  access: open
+  tags: [mcp, safety, uav, benchmark]
+  note: >-
+    First-party evaluation over 1,000+ simulated flights (11 models) and three real
+    quadcopters.
+  added: 2026-09-29
+
+- id: roboneuron
+  name: RoboNeuron
+  title: >-
+    RoboNeuron: A Middle-Layer Infrastructure for Agent-Driven Orchestration in Embodied AI
+  date: 2025-12
+  summary: >-
+    Middleware between MCP-speaking LLM agents and ROS 2 that derives agent-callable tools
+    directly from ROS message schemas, routes semantic tasks to swappable VLA backends and
+    sends basic commands straight to ROS modules.
+  links:
+    paper: https://arxiv.org/abs/2512.10394
+    code: https://github.com/guanweifan/RoboNeuron
+  access: open
+  tags: [mcp, ros, vla, tool-use]
+  added: 2026-09-29
+
+- id: embodied-context-protocol
+  name: Embodied Context Protocol (ECP)
+  title: >-
+    Orchestrating Embodied Systems through the Embodied Context Protocol: Motivation,
+    Progress, and Directions
+  date: 2025-12
+  org: Shenyang Institute of Automation (CAS); Peking University
+  summary: >-
+    Perspective proposing a layered interface protocol (semantic, interaction, adapter and
+    workflow layers) that specifies how embodied task context is represented, how modules
+    report progress and failures, and how heterogeneous backends are composed into
+    workflows.
+  links:
+    paper: https://doi.org/10.34133/research.1047
+  access: closed
+  tags: [protocol, tool-use]
+  note: >-
+    Published in the journal Research (Dec 2025); no public specification or code found.
+  added: 2026-09-29
+
+- id: skillwrapper
+  name: SkillWrapper
+  title: 'SkillWrapper: Generative Predicate Invention for Task-level Robot Planning'
+  date: 2025-11
+  org: Brown University
+  summary: >-
+    Uses foundation models to actively execute black-box robot skills, invent symbolic
+    predicates from before/after RGB images and build PDDL-style operators with soundness
+    and completeness conditions, so a planner can compose the skills for unseen long-horizon
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2511.18203
+    code: https://github.com/YzyLmc/skill_wrapper
+    project: https://yzylmc.github.io/skill-wrapper/
+  access: open
+  tags: [planning, skill-library, long-horizon]
+  added: 2026-09-29
+
+- id: seam
+  name: SEAM
+  title: Rethinking Intermediate Representation for VLM-based Robot Manipulation
+  date: 2025-11
+  org: CUHK
+  summary: >-
+    Semantic Assembly representation that splits the VLM-to-action interface into a concise
+    vocabulary of semantically rich operations and a VLM-friendly grammar, balancing VLM
+    comprehensibility and action generalizability; adds retrieval-augmented part
+    segmentation.
+  links:
+    paper: https://arxiv.org/abs/2511.19315
+  access: closed
+  tags: [manipulation, open-vocabulary, planning]
+  note: CVPR 2026; first-party real-robot results.
+  added: 2026-09-29
+
+- id: rosbag-mcp-server
+  name: ROSBag MCP Server
+  title: >-
+    ROSBag MCP Server: Analyzing Robot Data with LLMs for Agentic Embodied AI Applications
+  date: 2025-11
+  summary: >-
+    MCP server that lets LLMs and VLMs query, filter and analyse ROS/ROS 2 bags
+    (trajectories, laser scans, TF, time series) through robotics-specific tools, with a UI
+    used to benchmark tool calling across eight proprietary and open models.
+  links:
+    paper: https://arxiv.org/abs/2511.03497
+    code: https://github.com/binabik-ai/mcp-rosbags
+  access: open
+  tags: [mcp, ros, tool-use, benchmark]
+  note: >-
+    First-party finding that tool-description schema, argument count and number of available
+    tools all affect tool-calling success.
+  added: 2026-09-29
+
+- id: ros-mcp-server
+  name: ROS MCP Server
+  date: 2025-09
+  org: RobotMCP
+  summary: >-
+    MCP server connecting LLM clients (Claude, GPT, Gemini and others) to ROS 1 and ROS 2
+    robots through rosbridge, exposing topics, services, actions and parameters with type
+    discovery, without changes to robot code.
+  links:
+    code: https://github.com/robotmcp/ros-mcp-server
+    blog: https://robotmcp.ai/blog/ros-mcp-server-release
+  access: open
+  tags: [mcp, ros, tool-use]
+  note: >-
+    Open-source release announced on ROS Discourse in Sep 2025 (PyPI package ros-mcp);
+    earlier versions were public as lpigeon/ros-mcp-server, which now redirects here.
+  added: 2026-09-29
+
+- id: lyra
+  name: LYRA
+  title: >-
+    Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework
+    for Long-Horizon Manipulation Skills
+  date: 2025-09
+  org: Technical University of Munich
+  summary: >-
+    Human-in-the-loop lifelong code generation that encodes human corrections into reusable
+    code skills kept in external memory and retrieved with RAG plus user hints; reports
+    solving very long-horizon tasks such as "build a house" (20+ primitives).
+  links:
+    paper: https://arxiv.org/abs/2509.18597
+  access: closed
+  tags: [code-as-policy, skill-library, hitl, memory, long-horizon]
+  note: >-
+    First-party results on Ravens, Franka Kitchen, MetaWorld and real-world settings.
+  added: 2026-09-29
+
+- id: robot-context-protocol
+  name: Robot Context Protocol (RCP)
+  title: >-
+    Robot Context Protocol (RCP): A Runtime-Agnostic Interface for Agent-Aware Robot Control
+  date: 2025-06
+  summary: >-
+    Middleware-agnostic protocol over HTTP/WebSocket with schema-driven read, write, execute
+    and subscribe operations, runtime introspection, asynchronous feedback and namespace
+    isolation, letting web clients or LLM agents drive robots, simulators or cloud backends
+    via adapters.
+  links:
+    paper: https://arxiv.org/abs/2506.11650
+  access: closed
+  tags: [protocol, tool-use]
+  added: 2026-09-29
+
+- id: kuda
+  name: KUDA
+  title: >-
+    KUDA: Keypoints to Unify Dynamics Learning and Visual Prompting for Open-Vocabulary
+    Robotic Manipulation
+  date: 2025-03
+  org: Tsinghua University; UIUC; Columbia University
+  summary: >-
+    Keypoint-based target specification that a VLM fills in from language and a
+    keypoint-annotated image, converted into cost functions optimized with a learned neural
+    dynamics model, extending VLM-driven manipulation to deformable and granular objects.
+  links:
+    paper: https://arxiv.org/abs/2503.10546
+    code: https://github.com/StoreBlank/KUDA
+    project: https://kuda-dynamics.github.io/
+  access: open
+  tags: [manipulation, pointing, world-model, open-vocabulary]
+  note: ICRA 2025.
+  added: 2026-09-29
+
+- id: iker
+  name: IKER
+  title: >-
+    A Real-to-Sim-to-Real Approach to Robotic Manipulation with VLM-Generated Iterative
+    Keypoint Rewards
+  date: 2025-02
+  org: UIUC; Stanford University; Amazon; Columbia University
+  summary: >-
+    A VLM writes Python reward functions over scene keypoints (Iterative Keypoint Rewards)
+    as a refinable task specification; the rewards train RL policies in a simulated
+    reconstruction of the real scene, which are then deployed back on the real robot.
+  links:
+    paper: https://arxiv.org/abs/2502.08643
+    code: https://github.com/shivanshpatel35/IKER
+    project: https://iker-robot.github.io/
+  access: open
+  tags: [manipulation, reward-model, rl, sim2real]
+  note: ICRA 2025.
+  added: 2026-09-29
+
+- id: omnimanip
+  name: OmniManip
+  title: >-
+    OmniManip: Towards General Robotic Manipulation via Object-Centric Interaction
+    Primitives as Spatial Constraints
+  date: 2025-01
+  org: Peking University; AgiBot
+  summary: >-
+    Defines interaction primitives (points and directions) in an object's canonical,
+    affordance-based frame so a VLM can express actions as 3D spatial constraints; a dual
+    closed loop resamples primitives with VLM checking and tracks 6D object pose during
+    execution.
+  links:
+    paper: https://arxiv.org/abs/2501.03841
+    project: https://omnimanip.github.io/
+  access: closed
+  tags: [manipulation, 3d, spatial-reasoning]
+  note: CVPR 2025 Highlight; project page lists code as coming soon.
+  added: 2026-09-29
+
+- id: geomanip
+  name: GeoManip
+  title: 'GeoManip: Geometric Constraints as General Interfaces for Robot Manipulation'
+  date: 2025-01
+  org: CUHK
+  summary: >-
+    Training-free system in which foundation models emit stage-wise geometric constraints
+    between object parts (e.g. knife blade perpendicular to a carrot) in symbolic form, a
+    parser grounds the parts, and a solver optimizes trajectories that satisfy them.
+  links:
+    paper: https://arxiv.org/abs/2501.09783
+    project: https://geoconstraintmanip.github.io/
+  access: closed
+  tags: [manipulation, 3d, spatial-reasoning]
+  note: >-
+    The linked repository currently states the code is under refactoring and not usable.
+  added: 2026-09-29
+
+- id: rekep
+  name: ReKep
+  title: >-
+    ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic
+    Manipulation
+  date: 2024-09
+  org: Stanford University; Columbia University
+  summary: >-
+    Represents manipulation tasks as VLM-generated Python functions mapping 3D keypoints to
+    costs (relational keypoint constraints); a hierarchical optimizer solves them for SE(3)
+    end-effector poses in a real-time perception-action loop.
+  links:
+    paper: https://arxiv.org/abs/2409.01652
+    code: https://github.com/huangwl18/ReKep
+    project: https://rekep-robot.github.io/
+  access: open
+  tags: [manipulation, code-as-policy, 3d, long-horizon, spatial-reasoning]
+  added: 2026-09-29
+
+- id: kalie
+  name: KALIE
+  title: >-
+    KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data
+  date: 2024-09
+  org: UC Berkeley; Cornell University
+  summary: >-
+    Fine-tunes a VLM to predict point-based affordance representations rather than motor
+    commands, using an affordance-aware synthetic-data pipeline seeded with about 50
+    human-labelled examples instead of robot data.
+  links:
+    paper: https://arxiv.org/abs/2409.14066
+    code: https://github.com/gractang/kalie
+    project: https://kalie-vlm.github.io/
+    data: https://huggingface.co/datasets/sr2022/KALIE_Original_Images
+  access: partial
+  tags: [pointing, manipulation]
+  note: Code and human-annotated data are released; fine-tuned weights were not found.
+  added: 2026-09-29
+
+- id: lrll
+  name: LRLL
+  title: >-
+    Lifelong Robot Library Learning: Bootstrapping Composable and Generalizable Skills for
+    Embodied Control with Language Models
+  date: 2024-06
+  org: University of Groningen
+  summary: >-
+    Lifelong LLM agent that grows a code skill library over vision and control primitives
+    instead of using a fixed one: soft memory of experiences, self-proposed tasks in
+    simulation, and a skill abstractor that distils experience into new reusable library
+    functions.
+  links:
+    paper: https://arxiv.org/abs/2406.18746
+    project: https://gtziafas.github.io/LRLL_project/
+  access: closed
+  tags: [code-as-policy, skill-library, self-improving, memory]
+  note: ICRA 2024.
+  added: 2026-09-29
+
+- id: agentic-skill-discovery
+  name: Agentic Skill Discovery
+  title: Agentic Skill Discovery
+  date: 2024-05
+  org: University of Hamburg
+  summary: >-
+    LLM-driven skill discovery from zero skills: the LLM proposes tasks from the scene and
+    robot description and writes reward and success functions for RL training of each skill,
+    and a VLM verifies behaviours before they join the growing skill library.
+  links:
+    paper: https://arxiv.org/abs/2405.15019
+    code: https://github.com/xf-zhao/Agentic-Skill-Discovery
+    project: https://agentic-skill-discovery.github.io/
+  access: open
+  tags: [skill-library, rl, self-improving, success-detection]
+  added: 2026-09-29
+
+- id: moka
+  name: MOKA
+  title: 'MOKA: Open-World Robotic Manipulation through Mark-Based Visual Prompting'
+  date: 2024-03
+  org: UC Berkeley
+  summary: >-
+    Uses a compact point-based affordance representation as the bridge between a VLM and
+    robot motion, eliciting it zero- or few-shot by annotating marks (candidate points,
+    grids) on images and posing affordance reasoning as visual question answering.
+  links:
+    paper: https://arxiv.org/abs/2403.03174
+    code: https://github.com/moka-manipulation/moka
+    project: https://moka-manipulation.github.io/
+  access: open
+  tags: [pointing, manipulation, open-vocabulary, spatial-reasoning]
+  note: RSS 2024.
+  added: 2026-09-29
+
+- id: keypoint-action-tokens
+  name: KAT (Keypoint Action Tokens)
+  title: Keypoint Action Tokens Enable In-Context Imitation Learning in Robotics
+  date: 2024-03
+  org: Imperial College London
+  summary: >-
+    Encodes visual observations as keypoint tokens and action trajectories as token
+    sequences so an off-the-shelf text LLM (GPT-4 Turbo) performs few-shot in-context
+    imitation, mapping keypoints to action trajectories without additional training.
+  links:
+    paper: https://arxiv.org/abs/2403.19578
+    project: https://www.robot-learning.uk/keypoint-action-tokens
+  access: partial
+  tags: [manipulation]
+  note: >-
+    RSS 2024. A Colab notebook is linked from the project page. The primary contribution is
+    in-context imitation learning, so it could also be filed under policy.
+  added: 2026-09-29
+
+- id: copa
+  name: CoPa
+  title: >-
+    CoPa: General Robotic Manipulation through Spatial Constraints of Parts with Foundation
+    Models
+  date: 2024-03
+  org: Tsinghua University; Shanghai Qi Zhi Institute
+  summary: >-
+    VLMs ground task-relevant object parts for task-oriented grasping, then emit spatial
+    geometry constraints on those parts from which post-grasp 6-DoF end-effector poses are
+    solved; training-free and composable with high-level planners.
+  links:
+    paper: https://arxiv.org/abs/2403.08248
+    code: https://github.com/HaoxuHuang/copa
+    project: https://copa-2024.github.io/
+  access: open
+  tags: [manipulation, spatial-reasoning, 3d]
+  added: 2026-09-29
+
+- id: roboscript
+  name: RoboScript
+  title: >-
+    RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation
+  date: 2024-02
+  org: Shanghai AI Laboratory; HKU
+  summary: >-
+    Platform pairing a deployable code-generation manipulation pipeline, built on a unified
+    ROS-based interface to Gazebo and real arms (Franka, UR5), with a benchmark of free-form
+    tasks that probes physical-space and constraint reasoning in LLM-generated code.
+  links:
+    paper: https://arxiv.org/abs/2402.14623
+  access: closed
+  tags: [code-as-policy, ros, benchmark, manipulation]
+  note: No official code link found in the paper or via search (checked Sep 2026).
+  added: 2026-09-29
+
+- id: robocodex
+  name: RoboCodeX
+  title: 'RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis'
+  date: 2024-02
+  org: HKU; Shanghai AI Laboratory
+  summary: >-
+    Tree-structured multimodal code generation that decomposes instructions into
+    object-centric manipulation units carrying affordance and safety constraints, then emits
+    robot code; the model is fine-tuned on a collected multimodal reasoning dataset and runs
+    on a ROS/Gazebo stack.
+  links:
+    paper: https://arxiv.org/abs/2402.16117
+    code: https://github.com/RoboCodeX-source/RoboCodeX_code
+    project: https://sites.google.com/view/robocodexplus
+  access: partial
+  tags: [code-as-policy, manipulation, ros, navigation]
+  note: >-
+    The released repository is the ROS/Gazebo code-generation pipeline; availability of the
+    fine-tuned model weights was not confirmed.
+  added: 2026-09-29
+
+- id: pivot
+  name: PIVOT
+  title: 'PIVOT: Iterative Visual Prompting Elicits Actionable Knowledge for VLMs'
+  date: 2024-02
+  org: Google DeepMind
+  summary: >-
+    Zero-shot pointing interface: candidate actions or waypoints are drawn as labelled marks
+    on the image, the VLM selects the best ones and the proposal distribution is iteratively
+    refined; shown on real navigation and manipulation without robot training data.
+  links:
+    paper: https://arxiv.org/abs/2402.07872
+    project: https://pivot-prompt.github.io/
+  access: closed
+  tags: [pointing, navigation, manipulation, spatial-reasoning]
+  note: A Hugging Face demo Space (pivot-prompt/pivot-prompt-demo) is available.
+  added: 2026-09-29
+
+- id: manipllm
+  name: ManipLLM
+  title: >-
+    ManipLLM: Embodied Multimodal Large Language Model for Object-Centric Robotic
+    Manipulation
+  date: 2023-12
+  org: Peking University
+  summary: >-
+    Adapter-tunes a multimodal LLM to output an object-centric action interface, a contact
+    point and gripper direction reasoned by chain of thought, which an active
+    impedance-adaptation policy then executes in closed loop.
+  links:
+    paper: https://arxiv.org/abs/2312.16217
+    code: https://github.com/clorislili/ManipLLM
+    project: https://sites.google.com/view/manipllm
+  access: open
+  tags: [manipulation, spatial-reasoning]
+  added: 2026-09-29
+
+- id: codebotler
+  name: CodeBotler / RoboEval
+  title: Deploying and Evaluating LLMs to Program Service Mobile Robots
+  date: 2023-11
+  org: UT Austin; Northeastern University
+  summary: >-
+    CodeBotler generates service-robot programs from language against a robot-agnostic
+    Python embedded DSL of navigation, perception and human-interaction skills; RoboEval
+    checks the programs by executing them and testing traces against temporal-logic
+    specifications.
+  links:
+    paper: https://arxiv.org/abs/2311.11183
+    code: https://github.com/ut-amrl/codebotler
+    project: https://amrl.cs.utexas.edu/codebotler/
+  access: open
+  tags: [code-as-policy, navigation, benchmark]
+  added: 2026-09-29
+
+- id: boss
+  name: BOSS
+  title: >-
+    Bootstrap Your Own Skills: Learning to Solve New Tasks with Large Language Model
+    Guidance
+  date: 2023-10
+  org: University of Southern California; KAIST
+  summary: >-
+    Grows a learned skill library from primitive skills by LLM-guided skill bootstrapping:
+    the LLM proposes meaningful skill chains to practise without task rewards, and the
+    resulting long-horizon behaviours are added to the library for unseen tasks.
+  links:
+    paper: https://arxiv.org/abs/2310.10021
+    code: https://github.com/clvrai/boss
+    project: https://clvrai.github.io/boss/
+  access: open
+  tags: [skill-library, rl, long-horizon, self-improving]
+  note: >-
+    CoRL 2023 oral. Skills are learned policies rather than code, so it could also be filed
+    under policy.
+  added: 2026-09-29
+
+- id: saytap
+  name: SayTap
+  title: 'SayTap: Language to Quadrupedal Locomotion'
+  date: 2023-06
+  org: Google DeepMind; University of Tokyo
+  summary: >-
+    Uses foot-contact patterns as the interface between an LLM and a learned quadruped
+    locomotion controller: the LLM turns language into contact-pattern templates that an RL
+    policy executes, transferred to real hardware.
+  links:
+    paper: https://arxiv.org/abs/2306.07580
+    project: https://saytap.github.io/
+  access: closed
+  tags: [legged, rl, sim2real]
+  added: 2026-09-29
+
+- id: language-to-rewards
+  name: Language to Rewards (L2R)
+  title: Language to Rewards for Robotic Skill Synthesis
+  date: 2023-06
+  org: Google DeepMind
+  summary: >-
+    Has an LLM specify reward parameters instead of calling hand-built primitives; a
+    real-time optimizer (MuJoCo MPC) turns them into motion, making reward the interface
+    between language and low-level control for a simulated quadruped, a dexterous hand and a
+    real arm.
+  links:
+    paper: https://arxiv.org/abs/2306.08647
+    code: https://github.com/google-deepmind/language_to_reward_2023
+    project: https://language-to-reward.github.io/
+  access: open
+  tags: [reward-model, manipulation, legged, hitl, dexterous]
+  added: 2026-09-29

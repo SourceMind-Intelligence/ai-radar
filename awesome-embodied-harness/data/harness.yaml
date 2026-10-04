@@ -1,0 +1,2755 @@
+- id: world-action-agent
+  name: World Action Agent (WAA)
+  title: >-
+    World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal
+  date: 2026-09
+  org: HKUST (Guangzhou); CUHK; Knowin AI
+  summary: >-
+    Multi-agent harness where VLMs pilot robots inside a visual action workspace:
+    auto-selected contact views, action rehearsal that previews and edits each action before
+    execution, and in-view correction; skills evolve from expert videos and human teaching.
+  links:
+    paper: https://arxiv.org/abs/2609.29964
+  access: closed
+  tags: [agentic-loop, spatial-reasoning, self-improving, video, manipulation]
+  note: Work in progress per arXiv comment; first-party 75.6% average on LIBERO-Pro.
+  added: 2026-09-29
+
+- id: rsi-lessons-agentic-skill-discovery
+  name: What Stops Recursive Self-Improvement in Robotics?
+  title: >-
+    What Stops Recursive Self-Improvement in Robotics? Lessons from 123 Rounds of Agentic
+    Skill Discovery
+  date: 2026-09
+  org: National University of Singapore
+  summary: >-
+    Report on an agent that watches a robot fail, writes skills or installs models, tests in
+    simulation and repeats for 123 rounds; gains did not compound, with bottlenecks in
+    relational perception, skill chains that stall early, and the harness's evaluator and
+    memory.
+  links:
+    paper: https://arxiv.org/abs/2609.31760
+  access: closed
+  tags: [self-improving, code-as-policy, manipulation]
+  note: Single-author technical report; a negative-results case study.
+  added: 2026-09-29
+
+- id: show-harness
+  name: Show-Harness
+  title: 'Show-Harness: Just a VLM Agent Can Play Robots'
+  date: 2026-09
+  org: Show Lab, National University of Singapore
+  summary: >-
+    Embodied harness where a VLM picks discrete semantic action units that
+    embodiment-specific interpreters deterministically ground into robot motion, enabling
+    zero-shot control by frontier VLMs and cheap fine-tuning of small VLMs; GUMI reuses the
+    interface for GUI demo collection.
+  links:
+    paper: https://arxiv.org/abs/2609.10522
+    code: https://github.com/showlab/Show-Harness
+    project: https://showlab.github.io/Show-Harness/
+    weights: https://huggingface.co/showlab/Show-Harness-VLMs
+    data: https://huggingface.co/datasets/showlab/Show-Harness-Data
+  access: open
+  tags: [agentic-loop, manipulation, cross-embodiment, sim2real, teleop, dataset, tool-use]
+  added: 2026-09-29
+
+- id: sees
+  name: SEES
+  title: 'SEES: A Self-Evolving Embodied System via Failure-Guided VLA Policy Adaptation'
+  date: 2026-09
+  summary: >-
+    Routes atomic sub-tasks of long-horizon jobs to families of VLA skill adapters, monitors
+    which atomic skills fail most, then builds targeted RL tasks in simulation (restored
+    states, LLM-written success criteria) to improve them without new expert demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2609.32698
+  access: closed
+  tags: [self-improving, vla, rl, long-horizon, failure-recovery]
+  added: 2026-09-29
+
+- id: safeharness
+  name: SafeHarness
+  title: Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation
+  date: 2026-09
+  org: USC; UCF; UCSB
+  summary: >-
+    Shows coding-agent controllers usually touch obstacles they were told to avoid, then
+    adds obstacle-aware route planning (bounding boxes, candidate waypoint routes, verify
+    and replan before executing) and obstacle-aware contact selection.
+  links:
+    paper: https://arxiv.org/abs/2609.20822
+  access: closed
+  tags: [safety, code-as-policy, planning, manipulation]
+  note: >-
+    First-party SafeLIBERO simulation results using GPT-6 over a frozen pi0.5 with Harness
+    VLA skills (71.9% success, 87.5% collision avoidance). Could also go under safety.
+  added: 2026-09-29
+
+- id: robofoundry
+  name: RoboFoundry
+  title: 'RoboFoundry: System-as-Policy Evolution for Self-Learning Embodied Agents'
+  date: 2026-09
+  org: Nanyang Technological University; Beihang University; NUS et al.
+  summary: >-
+    Treats the agent's supporting system as the policy to evolve: it diagnoses capability
+    gaps, turns execution traces into validated updates to a context/file-system memory and
+    a hierarchical skill system with failure-conditioned recovery, and transfers across
+    robots.
+  links:
+    paper: https://arxiv.org/abs/2609.32862
+    project: https://jingsongliang.com/robofoundry
+  access: closed
+  tags: [self-improving, memory, failure-recovery, cross-embodiment]
+  note: Code repository lists evaluation code as TODO.
+  added: 2026-09-29
+
+- id: robodawn
+  name: RoboDawn
+  title: Transferring the Intelligence of VLMs to Robotic Control
+  date: 2026-09
+  org: Tsinghua University; Tencent Hunyuan
+  summary: >-
+    Exposes robot control to a frozen agentic VLM through a compact set of discrete
+    translation, rotation and gripper commands in a closed observe-reason-act loop, plus
+    in-context learning from a few demonstrations; evaluated on RoboTwin 2.0, RoboDojo and a
+    real Franka.
+  links:
+    paper: https://arxiv.org/abs/2609.22966
+    code: https://github.com/Hugo-AGI/RoboDawn
+    project: https://robodawn.top/
+  access: open
+  tags: [agentic-loop, manipulation]
+  added: 2026-09-29
+
+- id: robo-harness-k1
+  name: Robo-Harness K1
+  title: 'Robo-Harness K1: Harnessing Robot-Use Agents via Perception Augmentation'
+  date: 2026-09
+  summary: >-
+    Robot-use agent framework that exposes perception as tools (calibrated depth, persistent
+    visual anchors, spatial measurements, grasp hypotheses) so a VLM picks generic motions
+    from returned 3D evidence; its tool-call traces also train a small student VLM.
+  links:
+    paper: https://arxiv.org/abs/2609.29389
+  access: closed
+  tags: [tool-use, spatial-reasoning, 3d, manipulation]
+  added: 2026-09-29
+
+- id: regenharness
+  name: RegenHarness
+  title: >-
+    RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement
+  date: 2026-09
+  org: AI Lab, Country Garden Services; HUST; Omni AI
+  summary: >-
+    Harness coupling a model loop for proposals with an agent loop for dispatch,
+    verification, commit and bounded recovery, with role-isolated contexts and versioned
+    memory; an evidence-gated self-improvement protocol revises the harness config with
+    regression checks and rollback.
+  links:
+    paper: https://arxiv.org/abs/2609.27612
+  access: closed
+  tags: [self-improving, success-detection, memory, legged, safety]
+  note: Demonstrated on a real quadruped for voice-triggered warehouse inspection.
+  added: 2026-09-29
+
+- id: recursive-harness-distillation
+  name: Recursive Harness Distillation
+  title: Recursive Harness Distillation across Agents for Robot Manipulation
+  date: 2026-09
+  org: Seoul National University; KAIST
+  summary: >-
+    A strong agent distills its experience intervening on a VLA into a playbook for a
+    lighter agent, then recursively refines the playbook from the light agent's execution
+    feedback, so intervention knowledge is reused without updating model weights.
+  links:
+    paper: https://arxiv.org/abs/2609.33378
+  access: closed
+  tags: [vla, self-improving, memory, manipulation]
+  note: >-
+    First-party: real-world success 37.3% to 64.0%; SimplerEnv Bridge with a GR00T policy.
+  added: 2026-09-29
+
+- id: re-0
+  name: RE-0
+  title: >-
+    RE-0: Verified Recursive Improvement of Embodied Code-as-Policy Agents through Local
+    On-Policy Distillation
+  date: 2026-09
+  org: Jilin University; Dalian University of Technology
+  summary: >-
+    Improves a code-as-policy student with an imperfect stronger teacher: it asks for local
+    corrections on the student's own failures, keeps only corrections verified in the
+    environment, and distills those verified interventions on-policy (RE-OPD).
+  links:
+    paper: https://arxiv.org/abs/2609.32416
+  access: closed
+  tags: [code-as-policy, self-improving, long-horizon]
+  added: 2026-09-29
+
+- id: rapid
+  name: RAPID
+  title: 'RAPID: Robot Agentic Programming from Demonstrations'
+  date: 2026-09
+  org: MIT; National University of Singapore
+  summary: >-
+    From one visual human demonstration, infers a testable task spec, action primitives and
+    an interactive environment, then has a coding agent generate, verify and refine
+    object-centric relational robot programs over trajectory-optimization primitives;
+    deployed on a Franka.
+  links:
+    paper: https://arxiv.org/abs/2609.30249
+    project: https://yuyaoliu.me/projects/rapid
+  access: closed
+  tags: [code-as-policy, planning, manipulation, video]
+  added: 2026-09-29
+
+- id: racap
+  name: RACaP
+  title: >-
+    RACaP: Agentic Reasoning, Acting, and Coding as Policies for Evolvable Robot Learning
+  date: 2026-09
+  org: CUHK; HKUST (Guangzhou); Knowin AI
+  summary: >-
+    Moves coding to an evolution phase and uses a ReAct loop over frozen, typed Policy APIs
+    at deployment; curriculum learning and self-evolution improve the APIs, harness and
+    experience memory, and ReAct decisions are distilled into a small VLM for on-robot
+    speed.
+  links:
+    paper: https://arxiv.org/abs/2609.29394
+  access: closed
+  tags: [agentic-loop, code-as-policy, self-improving, memory, failure-recovery]
+  added: 2026-09-29
+
+- id: navharness
+  name: NavHarness
+  title: 'NavHarness: Towards Lifelong Embodied Navigation'
+  date: 2026-09
+  org: Adelaide University; Australian Institute for Machine Learning; CSIRO Data61
+  summary: >-
+    Training-free harness for lifelong navigation that makes memory processing part of the
+    loop: each session reads maps, task records and house knowledge, checks them against
+    observations, records corrections, and hands over verified outcomes and summaries to
+    later sessions.
+  links:
+    paper: https://arxiv.org/abs/2609.34276
+    code: https://github.com/billzhao1030/NavHarness
+    project: https://billzhao1030.github.io/NavHarness/
+  access: open
+  tags: [navigation, memory, agentic-loop, success-detection, long-horizon, failure-recovery]
+  note: First-party GOAT-Bench and IR2R-CE results with GPT-6 Astra and Opus 5.
+  added: 2026-09-29
+
+- id: metatool-ros-agent
+  name: MetaTool ROS-Agent
+  title: >-
+    Bridging Thought and Action: Taming Long-Horizon Instability in Open-Source LLM Agents
+    with a MetaTool-Enhanced ROS Framework
+  date: 2026-09
+  summary: >-
+    Adds a MetaTool to a ROS agent that makes an open-source LLM write a pseudo-code plan of
+    intended tool calls into a persistent scratchpad before acting, separating planning from
+    execution; up to ~24% gains on complex real mobile-robot tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.13335
+  access: closed
+  tags: [ros, planning, tool-use]
+  added: 2026-09-29
+
+- id: maskharness-wam
+  name: MaskHarness-WAM
+  title: >-
+    MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation
+  date: 2026-09
+  org: Tongji University; Midea Group
+  summary: >-
+    Connects high-level planning to a low-level world-action policy through target instance
+    masks, re-observing the scene and generating and verifying a new mask at each subtask
+    boundary so the policy acts on the right one of several identical objects.
+  links:
+    paper: https://arxiv.org/abs/2609.19974
+  access: closed
+  tags: [world-model, success-detection, long-horizon, manipulation]
+  added: 2026-09-29
+
+- id: local-coding-agent-manipulation
+  name: Local coding agent (UR3e)
+  title: Generalizing Manipulation Skills with a Local Coding Agent
+  date: 2026-09
+  org: Ghent University (IDLab-AIRO); imec
+  summary: >-
+    A local open-weight VLM (Qwen3.8-27B) drives a UR3e from a coding-agent harness, writing
+    and running code above a service providing kinematics, safety limits and classic vision;
+    it generalized in 30 of 45 trials on toy-based tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.26499
+    project: https://rtalwar2.github.io/agentic-coding-for-robot-manipulation/
+  access: closed
+  tags: [code-as-policy, on-device, manipulation, safety]
+  added: 2026-09-29
+
+- id: knowbody
+  name: KnowBody
+  title: 'Know Your Body: A Harness for Direct and Self-Improving Robot Control with VLMs'
+  date: 2026-09
+  org: Nanjing University; Ant Group; Zhejiang University
+  summary: >-
+    Harness that gives a frozen VLM an explicit, queryable and revisable model of the
+    robot's action-relevant body relations, initialized from one off-task trajectory and
+    refined from new evidence, with dependent knowledge rechecked before reuse.
+  links:
+    paper: https://arxiv.org/abs/2609.28530
+    project: https://loule0-0.github.io/KnowBody/
+  access: closed
+  tags: [self-improving, memory, manipulation]
+  note: >-
+    First-party real-robot study: 75% vs 25% completion over 32 trials; code release pending
+    per README.
+  added: 2026-09-29
+
+- id: hugo
+  name: HuGo
+  title: 'HuGo: LLMs as Whole-Body Policy Code Designers for Humanoid Loco-Manipulation'
+  date: 2026-09
+  summary: >-
+    An LLM writes closed-loop high-level policy code on top of a frozen whole-body humanoid
+    controller from task, observation and command specifications, then refines it from
+    rollout trajectories and video frames; transfers zero-shot from simulation to hardware.
+  links:
+    paper: https://arxiv.org/abs/2609.30594
+    code: https://github.com/labicon/HuGo
+    project: https://iconlab.negarmehr.com/HuGo/
+  access: open
+  tags: [code-as-policy, humanoid, sim2real, self-improving]
+  added: 2026-09-29
+
+- id: hexaanything
+  name: HexaAnything (Physical Coding)
+  title: >-
+    Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence
+  date: 2026-09
+  org: HexaFuture
+  summary: >-
+    Physical Coding represents task state as code (Code as World) and execution as code
+    (Code as Policy); the HexaAnything agent calls perception, planning and control tools
+    including VLA/WAM policies, and verified traces become data and memory for
+    self-evolution.
+  links:
+    paper: https://arxiv.org/abs/2609.35432
+    project: https://hexafuture.ai
+  access: closed
+  tags: [code-as-policy, agentic-loop, self-improving, vla, memory]
+  note: >-
+    Technical report; evaluated on RoboCasa365, PhyBench and a dual-arm AgileX robot
+    (first-party).
+  added: 2026-09-29
+
+- id: harnessvln
+  name: HarnessVLN
+  title: 'HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness'
+  date: 2026-09
+  org: Nanjing University; AgiBot; Tsinghua University
+  summary: >-
+    Zero-shot agent harness for instruction-following and object-goal navigation: it
+    coordinates perception, memory and execution tools, checks planner proposals for
+    evidence, geometric feasibility and subgoal consistency before dispatch, and keeps a
+    spatiotemporal graph.
+  links:
+    paper: https://arxiv.org/abs/2609.15195
+    project: https://agibot-harnessvln.netlify.app/
+  access: closed
+  tags: [navigation, memory, tool-use, failure-recovery, humanoid, agentic-loop, scene-graph]
+  note: Code announced as forthcoming.
+  added: 2026-09-29
+
+- id: harnesspai
+  name: HarnessPAI
+  title: 'HarnessPAI: An Evolving Harness for Physical AI'
+  date: 2026-09
+  org: Darwin Agent Team
+  summary: >-
+    Uses code as the executable, evolvable interface over action primitives: a fixed program
+    guides and checks each rollout, while across rollouts a coding agent revises programs
+    from feedback and distills failures into skills; tested from arms to a robot vacuum and
+    a legged agent.
+  links:
+    paper: https://arxiv.org/abs/2609.29166
+    project: https://darwin-agent.github.io/HarnessPAI
+  access: closed
+  tags: [code-as-policy, self-improving, cross-embodiment, vla, legged]
+  note: Repository is a project page only; code not yet released.
+  added: 2026-09-29
+
+- id: harness-robotic-os
+  name: Harness Robotic OS (HROS)
+  title: >-
+    Harness Robotic OS: A Unified Embodied-Agent Runtime for Closed-Loop Quadruped
+    Inspection
+  date: 2026-09
+  org: AI Lab, Country Garden Services; East China Normal University
+  summary: >-
+    Embodied-agent runtime split into robot runtime, autonomy skills, cognitive agent and
+    interaction/operations planes, with shared context, streaming voice interaction,
+    hierarchical memory and a safety-gated self-evolution loop; deployed on a quadruped for
+    property inspection.
+  links:
+    paper: https://arxiv.org/abs/2609.11225
+  access: closed
+  tags: [legged, navigation, memory, hitl, safety, self-improving]
+  added: 2026-09-29
+
+- id: grid-auto-engineering
+  name: GRID Auto Engineering
+  title: Introducing Auto Engineering for Robotics
+  date: 2026-09
+  org: General Robotics
+  summary: >-
+    Platform feature in which agents run the robotics engineering loop: integrating hardware
+    across 50+ robot types, building task-specific simulations, creating or adapting skills
+    and validating deployments while keeping engineering knowledge for reuse; framed as a
+    robotics harness.
+  links:
+    blog: https://www.generalrobotics.company/post/introducing-auto-engineering-for-robotics
+    docs: https://docs.generalrobotics.dev/
+  access: api
+  tags: [agentic-loop, tool-use, sim2real]
+  note: Company announcement; no independent evaluation.
+  added: 2026-09-29
+
+- id: gpt-policy
+  name: GPT-Policy
+  title: In-Context Robot Learning with VLM Agents
+  date: 2026-09
+  org: Shanghai Innovation Institute et al.
+  summary: >-
+    Framework for in-context robot learning with commercial VLMs: a context compiler keeps
+    task-relevant visual transitions from demos, goal images and history, the VLM proposes
+    robot-tool actions, and a constrained controller verifies, executes and reports each
+    one.
+  links:
+    paper: https://arxiv.org/abs/2609.19138
+    code: https://github.com/cheng-haha/GPT-Policy
+    project: https://cheng-haha.github.io/GPT-Policy/
+  access: partial
+  tags: [agentic-loop, manipulation, video]
+  note: Research-preview code with license pending (per README).
+  added: 2026-09-29
+
+- id: embodiedskills
+  name: EmbodiedSkills
+  title: >-
+    EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA
+    Agents
+  date: 2026-09
+  summary: >-
+    Agent loop that treats each skill decision as an execution proposal: a fixed
+    executable-skill interface checks prerequisites, runs a bounded VLA (pi0.5) and verifies
+    the outcome, logging planning, execution, verification and recovery events as training
+    trajectories.
+  links:
+    paper: https://arxiv.org/abs/2609.01281
+  access: closed
+  tags: [agentic-loop, vla, success-detection, failure-recovery]
+  added: 2026-09-29
+
+- id: aquacap
+  name: AquaCap
+  title: 'AquaCap: A Training-Free Underwater Embodied Agent with Code-as-Policy'
+  date: 2026-09
+  org: Sun Yat-sen University et al.
+  summary: >-
+    Training-free code-as-policy agent for underwater navigation and manipulation: a
+    dual-layer agent writes condition-aware plans and control programs over
+    reliability-aware perception, and a failure-aware memory drives replanning and code
+    revision; demonstrated on an ROV.
+  links:
+    paper: https://arxiv.org/abs/2609.23133
+  access: closed
+  tags: [code-as-policy, failure-recovery, memory, navigation, manipulation]
+  added: 2026-09-29
+
+- id: agent-as-policy
+  name: AGP (Agent as Policy)
+  title: Agent as Policy for Robotic Manipulation
+  date: 2026-09
+  org: University of Notre Dame; UC San Diego
+  summary: >-
+    A general-purpose coding agent drives a physical robot throughout execution: it reads
+    camera evidence, writes and runs programs, issues Cartesian or joint commands and
+    revises from physical outcomes, on tasks such as assembly from human video, dice
+    flipping and towel folding.
+  links:
+    paper: https://arxiv.org/abs/2609.12541
+    code: https://github.com/agent-as-policy-2026/agent-as-policy
+    project: https://agent-as-policy-2026.github.io/
+    data: https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy
+  access: open
+  tags: [code-as-policy, agentic-loop, manipulation, memory]
+  added: 2026-09-29
+
+- id: adahvla
+  name: AdaHVLA
+  title: 'AdaHVLA: Adaptive Harnesses for Long-Horizon Vision-Language-Action Execution'
+  date: 2026-09
+  org: UNC; USTC; HKUST; CUHK
+  summary: >-
+    Adaptive harness that refines code-based coordination policies between agent reasoning,
+    memory and VLA execution from robot experience, separating evidence analysis, harness
+    revision and assessment and tracking revisions in a stateful revision graph.
+  links:
+    paper: https://arxiv.org/abs/2609.29204
+    code: https://github.com/Haaareally/AdaHVLA-Adaptive_Harness_VLA
+  access: open
+  tags: [vla, self-improving, memory, long-horizon, code-as-policy]
+  added: 2026-09-29
+
+- id: zetta
+  name: Zetta
+  title: >-
+    Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical
+    Intelligence
+  date: 2026-08
+  org: AIR, Tsinghua University; Z-Trans AI
+  summary: >-
+    Evolves code-based runtime critics and recovery skills online around a frozen base
+    policy through three timescale-separated loops (action-rate governance, rollout-level
+    proposals, validation-gated skill updates), with Z-Infra decoupling agent logic from
+    execution resources.
+  links:
+    paper: https://arxiv.org/abs/2608.16590
+    code: https://github.com/air-embodied-brain/Zetta-Embodiment
+    project: https://air-embodied-brain.github.io/zetta/
+  access: open
+  tags: [self-improving, failure-recovery, success-detection, vla, code-as-policy, agentic-loop]
+  note: 'First-party: 90.8% on LIBERO-Pro and 93.6% on RoboCasa.'
+  added: 2026-09-29
+
+- id: thea
+  name: Thea
+  title: Towards the Harness of Embodied Agents
+  date: 2026-08
+  org: Eastern Institute of Technology, Ningbo
+  summary: >-
+    Carries the coding-agent harness to robots: an agentic loop calls robot capabilities
+    (navigation, grasping via CaP-X, ACT or pi0.5) as tools, keeps a persistent Scene Graph
+    as Context, and uses Evaluation as Exit Codes to judge termination and success and
+    diagnose failures.
+  links:
+    paper: https://arxiv.org/abs/2608.11246
+    code: https://github.com/EIT-HAI/Thea
+    project: https://eit-hai.github.io/thea/
+  access: open
+  tags: [agentic-loop, tool-use, scene-graph, success-detection, failure-recovery, memory, cross-embodiment]
+  note: >-
+    The same loop runs on Astribot S1, AgileX Cobot Magic and Unitree G1 (first-party).
+  added: 2026-09-29
+
+- id: teach-and-grow
+  name: Teach and Grow (TGL)
+  title: 'Teach and Grow: An Agent-Centered Architecture for General Robot Learning'
+  date: 2026-08
+  org: Shanghai Jiao Tong University
+  summary: >-
+    Training-free architecture (GPT-6 Astra reasoning, Codex connecting to robot tools) that
+    turns a few demonstrations into closed-loop Skill Blocks, grounds them in the scene,
+    checks physical outcomes and stores verified skills and repairs in a Skill Library and
+    Experience Memory.
+  links:
+    paper: https://arxiv.org/abs/2608.17209
+    code: https://github.com/IRMVLab/TGL
+    project: https://tgl.changnie.top
+  access: partial
+  tags: [code-as-policy, memory, self-improving, manipulation, agentic-loop]
+  note: Public snapshot lacks the full skill-induction runtime (per README).
+  added: 2026-09-29
+
+- id: sun-kuafu
+  name: SUN / Kuafu
+  title: 'SUN: Agentic Robot Policy Learning with Persistent Task Programs'
+  date: 2026-08
+  org: UCLA; CMU; Robotics and AI Institute
+  summary: >-
+    Typed SUN programs compile grounded relations into control objectives, success
+    predicates and RL rewards; the Kuafu harness lets a foundation-model agent orchestrate
+    scene setup, verification, residual RL and data production, repairing programs from
+    feedback.
+  links:
+    paper: https://arxiv.org/abs/2608.31167
+    project: https://kuafu-robo.github.io/
+  access: closed
+  tags: [agentic-loop, rl, success-detection, reward-model, dataset, sim2real]
+  note: >-
+    First-party: 82.03% average over nine multi-stage tasks; zero-shot transfer to Franka
+    and Kinova.
+  added: 2026-09-29
+
+- id: shaper
+  name: SHAPER
+  title: Self-Evolving Embodied Agents via Skill-Harness Evolution
+  date: 2026-08
+  org: Microsoft Research; Northeastern University
+  summary: >-
+    Train-free adaptation that keeps model weights frozen and evolves reusable skills plus a
+    context-code harness from target-environment rollouts, with the same frozen model as
+    planner and optimizer; evaluated on VLABench and ESI-Bench against fine-tuning and
+    test-time scaling.
+  links:
+    paper: https://arxiv.org/abs/2608.11350
+  access: closed
+  tags: [self-improving, agentic-loop, memory, code-as-policy]
+  added: 2026-09-29
+
+- id: openeta
+  name: ETA / OpenETA
+  title: 'ETA: A New Agentic Paradigm for Embodied Tasks'
+  date: 2026-08
+  org: Fudan University (OpenMOSS) et al.
+  summary: >-
+    Embodied Task Agent: a Planner picks one tool call at a time, an Interface controls
+    execution and the World returns results and fresh observations, so the agent can verify,
+    replan and keep experience; OpenETA adds replaceable planners, auditable memory and a
+    Codex plugin.
+  links:
+    paper: https://arxiv.org/abs/2608.03924
+    code: https://github.com/OpenMOSS/OpenETA
+    project: https://openmoss.ai/OpenETA/
+  access: open
+  tags: [agentic-loop, tool-use, memory, sim2real]
+  added: 2026-09-29
+
+- id: agentic-robotics-loop
+  name: AgenticRobotics
+  title: >-
+    You Don't Need To Stay in The Loop: An Agentic Robotics Loop for Robot-Policy
+    Improvement
+  date: 2026-08
+  org: Independent researcher
+  summary: >-
+    Control plane in which an LLM controller drives disposable workers through durable
+    train-evaluate-improve transactions, with controller-owned measurement, crash recovery,
+    an evidence-graded skill library and a recorded tool registry, so policy promotion is
+    evidence-gated.
+  links:
+    paper: https://arxiv.org/abs/2608.07555
+  access: closed
+  tags: [agentic-loop, self-improving, success-detection]
+  note: >-
+    Preview version; the code link in the paper did not resolve (GitHub 404 on 2026-09-29).
+  added: 2026-09-29
+
+- id: waddle
+  name: Waddle
+  title: 'Introducing Waddle: agents that control robots'
+  date: 2026-07
+  org: Waddle Labs
+  summary: >-
+    Startup system in which LLM agents decompose tasks, write robot-control code and call
+    action models such as VLAs as tools, aiming to generalize across embodiments without
+    per-deployment robot data collection.
+  links:
+    blog: https://www.waddlelabs.ai/research/introducing-waddle
+  access: closed
+  tags: [agentic-loop, code-as-policy, vla, tool-use]
+  note: Company announcement with early-access sign-up; no independent evaluation.
+  added: 2026-09-29
+
+- id: roboharness-policy-orchestration
+  name: RoboHarness
+  title: >-
+    RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for
+    Long-Horizon Planning
+  date: 2026-07
+  org: Huawei Noah's Ark Lab et al.
+  summary: >-
+    Wraps independently built controllers (VLAs, RL policies, TAMP) as agentic skills, uses
+    multimodal execution memory to learn their capability boundaries for routing, and a
+    Memory Bridge that moves the robot into the next policy's in-distribution region at
+    handoffs.
+  links:
+    paper: https://arxiv.org/abs/2607.18060
+    project: https://www.robo-harness.com/
+  access: closed
+  tags: [vla, memory, planning, long-horizon, failure-recovery, agentic-loop, tool-use]
+  added: 2026-09-29
+
+- id: real-embodied-agent
+  name: REAL
+  title: >-
+    Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World
+    Mobile Manipulation
+  date: 2026-07
+  org: InternRobotics (Shanghai AI Laboratory)
+  summary: >-
+    Agentic mobile-manipulation framework with sim-to-real-consistent tool APIs (no oracle
+    perception), a simulated user for intent clarification, and SFT plus online RL of the
+    tool-using agent; adds the 241-task REAL-Bench and a dual-arm mobile robot deployment.
+  links:
+    paper: https://arxiv.org/abs/2607.13653
+    code: https://github.com/InternRobotics/REAL
+    project: https://internrobotics.github.io/REAL/
+  access: open
+  tags: [mobile-manipulation, tool-use, mcp, hitl, rl, benchmark, sim2real]
+  note: ECCV 2026.
+  added: 2026-09-29
+
+- id: pigey
+  name: Pigey
+  title: Addressing the Orchestration Gap in Generalist Robots via Physical Agency
+  date: 2026-07
+  org: Princeton University; Together AI
+  summary: >-
+    Closed-loop VLM orchestrator that decomposes goals, commands frozen VLA policies or
+    parameterized skills, verifies outcomes from observations and recovers from failures
+    without new data or post-training; calls the gain over frozen skills alone the
+    orchestration gap.
+  links:
+    paper: https://arxiv.org/abs/2607.21725
+    code: https://github.com/lianegalanti/Pigey
+    project: https://lianegalanti.github.io/Pigey/
+  access: open
+  tags: [agentic-loop, vla, success-detection, failure-recovery, memory]
+  note: 'First-party: LIBERO-PRO 12.8% to 53.3% with no task-specific fine-tuning.'
+  added: 2026-09-29
+
+- id: harness-vla
+  name: Harness VLA
+  title: >-
+    Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via
+    Memory-Guided Agents
+  date: 2026-07
+  org: Tsinghua University et al. (RLinf)
+  summary: >-
+    Exposes a frozen VLA as a retryable contact-rich primitive alongside a small fixed
+    library of analytic primitives; a memory-guided agentic planner learns each primitive's
+    operating range from execution traces, success rules and failure models, with no VLA
+    fine-tuning.
+  links:
+    paper: https://arxiv.org/abs/2607.08448
+    code: https://github.com/RLinf/RPent
+    project: https://harnessvla.github.io/
+  access: open
+  tags: [vla, tool-use, memory, failure-recovery, manipulation, long-horizon]
+  note: Implemented in the RPent framework; its skills are reused by SafeHarness.
+  added: 2026-09-29
+
+- id: graph-as-policy
+  name: GaP (Graph-as-Policy)
+  title: >-
+    GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation
+    Tasks
+  date: 2026-07
+  org: UC Berkeley
+  summary: >-
+    Multi-agent coding harness that compiles instructions into directed graphs of
+    perception, planning and control nodes from an open robot skill library, then rehearses
+    task variants in a generated simulation to refine graph structure and parameters for
+    industrial tasks.
+  links:
+    paper: https://arxiv.org/abs/2607.05369
+    code: https://github.com/graph-robots/graph-as-policy
+    project: https://graph-robots.github.io/gap/
+  access: open
+  tags: [code-as-policy, self-improving, planning, manipulation, agentic-loop]
+  added: 2026-09-29
+
+- id: embodied-agents-take-control
+  name: Embodied Agents Take Control (MIP)
+  title: >-
+    Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale
+    Policies in Vision-and-Language Navigation
+  date: 2026-07
+  org: Australian Institute for Machine Learning, Adelaide University
+  summary: >-
+    Gives off-the-shelf coding-agent harnesses only a monocular RGB camera and discrete
+    moves for zero-shot VLN, so the model steers every action; model choice dominates,
+    harness differences are modest, and forced waypoints help weak models but can hinder
+    strong ones.
+  links:
+    paper: https://arxiv.org/abs/2607.26148
+    code: https://github.com/jianzhou0420/MIP
+    project: https://jianzhou0420.github.io/mip/
+  access: open
+  tags: [agentic-loop, navigation, tool-use]
+  added: 2026-09-29
+
+- id: cortex
+  name: Cortex
+  title: >-
+    Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation
+  date: 2026-07
+  org: Shanghai AI Laboratory; Tsinghua University
+  summary: >-
+    Aligns a high-level VLM planner with a low-level VLA through 32 canonical skill
+    primitives and tractability-aware subtask plans, auto-annotating 4k+ hours of open video
+    for training and adding harness engineering from task context to skill constraints at
+    inference.
+  links:
+    paper: https://arxiv.org/abs/2607.05377
+    code: https://github.com/InternRobotics/Cortex
+    project: https://steinate.github.io/cortex.github.io/
+    weights: https://huggingface.co/Steinate/Cortex
+  access: open
+  tags: [dual-system, vla, planning, long-horizon, dataset]
+  added: 2026-09-29
+
+- id: claude-plays-robotics
+  name: Claude Plays Robotics
+  title: Claude plays robotics
+  date: 2026-07
+  org: Anthropic
+  summary: >-
+    Tests Claude on control, locomotion and manipulation (Unitree Go2 and G1, Franka) via
+    direct torque commands, generated controllers, pretrained-policy supervision and RL;
+    torque control lags higher-level interfaces, and humanoids still need a pretrained
+    policy.
+  links:
+    blog: https://www.anthropic.com/research/claude-plays-robotics
+  access: closed
+  tags: [agentic-loop, benchmark, humanoid, legged, manipulation]
+  note: >-
+    Company research post; the announced 'Embody' evaluation code was not yet public (repo
+    404 on 2026-09-29).
+  added: 2026-09-29
+
+- id: volo
+  name: VoLo
+  title: 'VoLo: A Physical Orchestrator for Open-Vocabulary Long-Horizon Manipulation'
+  date: 2026-06
+  org: NVIDIA; University of Michigan
+  summary: >-
+    VoLoAgent is a VLM that plans, monitors and recovers while steering a VLA or
+    world-action model as an interruptible tool mid-rollout, since the world does not pause
+    for reasoning; ships the RoboVoLo long-horizon benchmark with failure-mode diagnostics.
+  links:
+    paper: https://arxiv.org/abs/2606.07723
+    code: https://github.com/NVlabs/VoLoAgent
+    project: https://chicychen.github.io/VoLo/
+  access: open
+  tags: [agentic-loop, vla, tool-use, failure-recovery, long-horizon, benchmark]
+  added: 2026-09-29
+
+- id: rho
+  name: RHO
+  title: 'RHO: Your Coding Agent is Secretly a Roboticist'
+  date: 2026-06
+  org: UC Berkeley; AMD
+  summary: >-
+    Robotics Harness Optimization: at training time, coding agents search over multi-file
+    repositories-as-policies that compose perception, planning and control primitives using
+    reward and execution feedback, so deployment needs no multi-turn LLM loop.
+  links:
+    paper: https://arxiv.org/abs/2606.16458
+  access: closed
+  tags: [code-as-policy, self-improving, manipulation]
+  note: >-
+    Also optimizes a deployed agent's harness (prompts, tools, control code) on RAI's O3DE
+    benchmark.
+  added: 2026-09-29
+
+- id: playful-agentic-robot-learning
+  name: RATs (Playful Agentic Robot Learning)
+  title: Playful Agentic Robot Learning
+  date: 2026-06
+  org: UC Berkeley
+  summary: >-
+    Robotics Agent Teams let an embodied coding agent play before tasks arrive: it proposes
+    exploratory tasks, writes and runs robot code, verifies progress, diagnoses failures and
+    distills successes into a persistent code-skill library reused on new tasks.
+  links:
+    paper: https://arxiv.org/abs/2606.19419
+    code: https://github.com/Playful-RATs/RATs
+    project: https://playful-rats.github.io/
+  access: open
+  tags: [code-as-policy, self-improving, memory, failure-recovery, manipulation]
+  added: 2026-09-29
+
+- id: project-fetch-phase-two
+  name: 'Project Fetch: Phase two'
+  title: 'Project Fetch: Phase two'
+  date: 2026-06
+  org: Anthropic
+  summary: >-
+    Claude Opus 4.7 autonomously programmed an off-the-shelf quadruped (connecting sensors
+    and video, detecting a ball) with humans only approving commands; it far outpaced the
+    Phase One human teams on software tasks but struggled with precise autonomous retrieval.
+  links:
+    blog: https://www.anthropic.com/research/project-fetch-phase-two
+  access: closed
+  tags: [code-as-policy, agentic-loop, legged]
+  note: >-
+    Company research post. Phase One (2025-11) was a human-uplift study; listed under other.
+  added: 2026-09-29
+
+- id: hi-vla-orchestration-study
+  name: Hi-VLA design study
+  title: >-
+    What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA
+    Agents
+  date: 2026-06
+  org: Google DeepMind
+  summary: >-
+    Unifies hierarchical VLA agents (a VLM planner issuing language subgoals to a VLA
+    controller) in an options-style framework and benchmarks planner and controller choice,
+    switching mechanisms, and observation and memory representations, validated in sim and
+    on ALOHA.
+  links:
+    paper: https://arxiv.org/abs/2606.10267
+    project: https://jiahenghu.github.io/hi-vla/
+  access: closed
+  tags: [dual-system, vla, planning, memory, long-horizon]
+  added: 2026-09-29
+
+- id: guava
+  name: Guava
+  title: >-
+    Guava: Distilling Frontier VLM Agents into a Compact Model with a Manipulation Harness
+  date: 2026-06
+  org: University of Maryland; UIUC; University of Waterloo; MBZUAI; UPenn
+  summary: >-
+    Searches the harness design space (agent workflow, action space, observation space) for
+    embodied tool use, finding iterative perception-reasoning-action loops, semantic action
+    abstractions and multimodal observations key; distills the harness into a 4B open model.
+  links:
+    paper: https://arxiv.org/abs/2606.18363
+    code: https://github.com/hdacnw/guava-release
+    project: https://guava-harness.github.io/
+  access: partial
+  tags: [agentic-loop, tool-use, manipulation, sim2real]
+  note: >-
+    v1 title: 'Guava: An Effective and Universal Harness for Embodied Manipulation'. Code
+    and training pipeline are public; distilled weights were not found.
+  added: 2026-09-29
+
+- id: enpire
+  name: ENPIRE
+  title: 'ENPIRE: Agentic Robot Policy Self-Improvement in the Real World'
+  date: 2026-06
+  org: NVIDIA; CMU; UC Berkeley
+  summary: >-
+    Harness that lets coding agents run the physical research loop: automatic reset and
+    outcome verification, policy-improvement jobs, rollouts on one or more robots, and an
+    evolution module where agents read logs and revise training code; 99% on dexterous tasks
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2606.19980
+    code: https://github.com/NVlabs/ENPIRE
+    project: https://research.nvidia.com/labs/gear/enpire/
+  access: open
+  tags: [agentic-loop, self-improving, success-detection, rl, dexterous, multi-robot]
+  note: CoRL 2026.
+  added: 2026-09-29
+
+- id: aspire
+  name: ASPIRE
+  title: 'ASPIRE: Agentic /Skills Discovery for Robotics'
+  date: 2026-06
+  org: NVIDIA; UC Berkeley; CMU; UMich; UIUC
+  summary: >-
+    Continual code-as-policy system that writes and repairs robot control programs from
+    fine-grained multimodal execution traces, distills validated fixes into a reusable skill
+    library, and uses evolutionary search over tasks and programs; skills transfer across
+    sim, real and robots.
+  links:
+    paper: https://arxiv.org/abs/2607.00272
+    code: https://github.com/NVlabs/ASPIRE
+    project: https://research.nvidia.com/labs/gear/aspire/
+  access: open
+  tags: [code-as-policy, self-improving, failure-recovery, memory, long-horizon, skill-library, sim2real]
+  added: 2026-09-29
+
+- id: agenticnav
+  name: AgenticNav
+  title: 'AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness'
+  date: 2026-06
+  org: Shanghai Jiao Tong University
+  summary: >-
+    Lightweight VLN-CE harness exposing action, depth and memory as tools: the VLM picks a
+    target pixel that becomes motion, queries metric depth on demand, and reads a compact
+    trajectory map with a recall tool instead of long histories; validated on R2R-CE and a
+    real robot.
+  links:
+    paper: https://arxiv.org/abs/2606.10577
+  access: closed
+  tags: [navigation, tool-use, memory, pointing]
+  added: 2026-09-29
+
+- id: embodiskill
+  name: EmbodiSkill
+  title: 'EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents'
+  date: 2026-05
+  org: Microsoft Research; AIR, Tsinghua University et al.
+  summary: >-
+    Training-free skill self-evolution that reads each trajectory against the current skill,
+    revises the skill on skill-changing evidence and reinforces valid guidance on execution
+    lapses; evaluated with frozen executors on ALFWorld and EmbodiedBench.
+  links:
+    paper: https://arxiv.org/abs/2605.10332
+    code: https://github.com/air-embodied-brain/EmbodiSkill
+    project: https://air-embodied-brain.github.io/EmbodiSkill/
+  access: open
+  tags: [self-improving, memory, planning]
+  note: Simulated household benchmarks, not physical robots.
+  added: 2026-09-29
+
+- id: vap-tamp
+  name: VAP-TAMP
+  title: Robot Planning and Situation Handling with Active Perception
+  date: 2026-04
+  org: Ford Research et al.
+  summary: >-
+    Planning and situation-handling framework that uses action knowledge to prompt VLMs for
+    active view selection and situation assessment during execution, and reasons over scene
+    graphs for task and motion planning when unforeseen situations arise.
+  links:
+    paper: https://arxiv.org/abs/2604.26988
+    project: https://vap-tamp.github.io/vap-tamp/
+  access: closed
+  tags: [planning, scene-graph, failure-recovery, mobile-manipulation]
+  note: IROS 2026.
+  added: 2026-09-29
+
+- id: aeros
+  name: AEROS
+  title: 'AEROS: A Single-Agent Operating Architecture with Embodied Capability Modules'
+  date: 2026-04
+  org: Harbin Institute of Technology et al.
+  summary: >-
+    Models each robot as one persistent agent whose capabilities come from installable
+    Embodied Capability Modules, with execution constraints and safety enforced by a
+    policy-separated runtime; a PyBullet Franka reference implementation tests replanning,
+    recovery and hot-swapping.
+  links:
+    paper: https://arxiv.org/abs/2604.07039
+    code: https://github.com/s20sc/aeros
+  access: open
+  tags: [agentic-loop, tool-use, safety, failure-recovery]
+  added: 2026-09-29
+
+- id: abot-claw
+  name: ABot-Claw
+  title: >-
+    ABot-Claw: A Foundation for Persistent, Cooperative, and Self-Evolving Robotic Agents
+  date: 2026-04
+  summary: >-
+    Embodied extension of the OpenClaw agent runtime with a unified embodiment interface and
+    capability-driven scheduling across heterogeneous robots, cross-embodiment multimodal
+    memory, and a critic/reward-model loop for progress checks and replanning.
+  links:
+    paper: https://arxiv.org/abs/2604.10096
+  access: closed
+  tags: [agentic-loop, multi-robot, memory, reward-model, self-improving]
+  added: 2026-09-29
+
+- id: roboharness-vla-memory
+  name: RoboHarness
+  title: >-
+    RoboHarness: A Memory-Augmented Policy Harness for Vision-Language-Action Model
+    Robustness via In-Context Adaptation
+  date: 2026-03
+  summary: >-
+    Wraps frozen VLA policies (pi0, pi0.5, SmolVLA) with contrastive dual-memory RAG, an
+    MLLM orchestrator that attributes failures, and MCP-based interventions, plus offline
+    consolidation of execution traces into priors, without fine-tuning the policy.
+  links:
+    paper: https://arxiv.org/abs/2603.24060
+    code: https://github.com/LZY-1021/RoboHarness
+  access: open
+  tags: [vla, memory, failure-recovery, mcp]
+  note: >-
+    IROS 2026; first-party results on LIBERO-PRO and a new LIBERO-RoboHarness benchmark.
+  added: 2026-09-29
+
+- id: roboclaw
+  name: RoboClaw
+  title: 'RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks'
+  date: 2026-03
+  org: AgiBot et al.
+  summary: >-
+    One VLM agent loop spans data collection, policy learning and deployment: Entangled
+    Action Pairs give each skill a reset behavior for self-resetting collection; the agent
+    triggers policies through MCP-style tools, monitors progress, retries, replans or
+    escalates to humans.
+  links:
+    paper: https://arxiv.org/abs/2603.11558
+    code: https://github.com/RoboClaw-Robotics/RoboClaw
+    project: https://roboclaw-agibot.github.io/
+  access: open
+  tags: [agentic-loop, vla, mcp, self-improving, failure-recovery, long-horizon, hitl]
+  added: 2026-09-29
+
+- id: agentic-control-flexible-fragile
+  name: Flexible but Fragile
+  title: 'Agentic AI for Robot Control: Flexible but still Fragile'
+  date: 2026-02
+  org: DFKI; Osnabrueck University
+  summary: >-
+    A reasoning LLM plans and invokes robot skills in an iterative planner-executor loop
+    with explicit event checks and operator interventions on a mobile manipulator and an
+    agricultural robot; it transfers by re-prompting but shows non-determinism and prompt
+    sensitivity.
+  links:
+    paper: https://arxiv.org/abs/2602.13081
+  access: closed
+  tags: [agentic-loop, tool-use, mobile-manipulation, navigation, hitl]
+  added: 2026-09-29
+
+- id: faea
+  name: FAEA
+  title: Demonstration-Free Robotic Control via LLM Agents
+  date: 2026-01
+  org: Independent researchers
+  summary: >-
+    Frontier Agent as Embodied Agent: runs an unmodified coding-agent framework (Claude
+    Agent SDK) that writes, executes and debugs manipulation scripts over perception and
+    control tools in LIBERO, ManiSkill3 and MetaWorld, with no demonstrations or
+    fine-tuning.
+  links:
+    paper: https://arxiv.org/abs/2601.20334
+  access: closed
+  tags: [agentic-loop, code-as-policy, manipulation, self-improving]
+  note: >-
+    Simulation only, with privileged environment state and simulator motion primitives;
+    first-party results.
+  added: 2026-09-29
+
+- id: alrm
+  name: ALRM
+  title: 'ALRM: Agentic LLM for Robotic Manipulation'
+  date: 2026-01
+  org: Technology Innovation Institute
+  summary: >-
+    ReAct-style agentic framework with two modes, Code-as-Policy (generate executable
+    control code) and Tool-as-Policy (iterative planning with tool calls), plus a 56-task
+    simulation benchmark with linguistically varied instructions used to compare ten LLMs.
+  links:
+    paper: https://arxiv.org/abs/2601.19510
+    project: https://tiiuae.github.io/ALRM
+  access: closed
+  tags: [agentic-loop, code-as-policy, tool-use, benchmark, manipulation]
+  added: 2026-09-29
+
+- id: leo-robotagent
+  name: LEO-RobotAgent
+  title: >-
+    LEO-RobotAgent: A General-purpose Robotic Agent for Language-driven Embodied Operator
+  date: 2025-12
+  org: Zhejiang University
+  summary: >-
+    Streamlined agent framework in which an LLM thinks, plans and acts through a modular,
+    registrable toolset with a human-robot interaction mechanism; adapted to UAVs, robot
+    arms and wheeled robots.
+  links:
+    paper: https://arxiv.org/abs/2512.10605
+    code: https://github.com/LegendLeoChen/LEO-RobotAgent
+  access: open
+  tags: [agentic-loop, tool-use, hitl, cross-embodiment]
+  added: 2026-09-29
+
+- id: vla-squared
+  name: VLA²
+  title: >-
+    VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen
+    Concept Manipulation
+  date: 2025-10
+  org: Zhejiang University; Westlake University et al.
+  summary: >-
+    Agentic framework that keeps OpenVLA as the executor and adds web retrieval, object
+    detection and VLM verification modules that supply visual and textual knowledge about
+    unfamiliar target objects; evaluated on a LIBERO-based benchmark with novel objects.
+  links:
+    paper: https://arxiv.org/abs/2510.14902
+    code: https://github.com/zhangjiaxuan-Xuan/VLA-2
+    project: https://vla-2.github.io
+  access: open
+  tags: [vla, tool-use, open-vocabulary, manipulation]
+  added: 2026-09-29
+
+- id: maniagent
+  name: ManiAgent
+  title: 'ManiAgent: An Agentic Framework for General Robotic Manipulation'
+  date: 2025-10
+  org: Dexmal; Beijing University of Technology et al.
+  summary: >-
+    Multi-agent architecture whose agents communicate to handle perception, sub-task
+    decomposition and action generation from task description to robot actions; also used as
+    an automatic data collector for training VLAs (first-party SimplerEnv and real
+    pick-and-place results).
+  links:
+    paper: https://arxiv.org/abs/2510.11660
+    project: https://yi-yang929.github.io/ManiAgent/
+  access: closed
+  tags: [agentic-loop, planning, manipulation, dataset]
+  added: 2026-09-29
+
+- id: physiagent
+  name: PhysiAgent
+  title: 'PhysiAgent: An Embodied Agent Framework in Physical World'
+  date: 2025-09
+  org: AIR, Tsinghua University; Peking University
+  summary: >-
+    Scaffolding that prompts a VLM to organize a VLA and lightweight off-the-shelf tools
+    using monitoring, memory and self-reflection driven by real-time proficiency feedback
+    from the VLA, instead of a rigid plan-then-execute pipeline; evaluated on real-robot
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2509.24524
+  access: closed
+  tags: [agentic-loop, vla, memory, tool-use, failure-recovery]
+  added: 2026-09-29
+
+- id: growing-with-your-embodied-agent
+  name: Growing with Your Embodied Agent
+  title: >-
+    Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework
+    for Long-Horizon Manipulation Skills
+  date: 2025-09
+  org: Technical University of Munich et al.
+  summary: >-
+    Human-in-the-loop code-generation framework that encodes human corrections into reusable
+    skills kept in external memory and retrieved with RAG and hints, so an LLM can compose
+    20+ primitives for tasks like 'build a house'; tested in Ravens, Franka Kitchen,
+    MetaWorld and real.
+  links:
+    paper: https://arxiv.org/abs/2509.18597
+  access: closed
+  tags: [code-as-policy, hitl, memory, long-horizon, manipulation]
+  added: 2026-09-29
+
+- id: agentic-uavs
+  name: Agentic UAVs
+  title: >-
+    Agentic UAVs: LLM-Driven Autonomy with Integrated Tool-Calling and Cognitive Reasoning
+  date: 2025-09
+  summary: >-
+    Five-layer UAV agent architecture (perception, reasoning, action, integration, learning)
+    with LLM tool calling for database queries and third-party systems; ROS 2/Gazebo
+    prototype with YOLOv11, GPT-4 and a local Gemma 3 for simulated search and rescue.
+  links:
+    paper: https://arxiv.org/abs/2509.13352
+  access: closed
+  tags: [uav, tool-use, ros]
+  added: 2026-09-29
+
+- id: agentic-scene-policies
+  name: Agentic Scene Policies (ASP)
+  title: >-
+    Agentic Scene Policies: Unifying Space, Semantics, and Affordances for Robot Action
+  date: 2025-09
+  org: Mila; Universite de Montreal
+  summary: >-
+    Agentic framework that uses the semantic, spatial and affordance queries of a modern
+    scene representation as the interface between robot and world, executing open-vocabulary
+    instructions zero-shot; compared with VLAs on tabletop tasks and extended to room-level
+    navigation.
+  links:
+    paper: https://arxiv.org/abs/2509.19571
+    code: https://github.com/montrealrobotics/agentic-scene-policies
+    project: https://montrealrobotics.ca/agentic-scene-policies.github.io/
+  access: open
+  tags: [agentic-loop, open-vocabulary, 3d, tool-use, manipulation, navigation]
+  added: 2026-09-29
+
+- id: hycodepolicy
+  name: HyCodePolicy
+  title: >-
+    HyCodePolicy: Hybrid Language Controllers for Multimodal Monitoring and Decision in
+    Embodied Agents
+  date: 2025-08
+  org: Shanghai AI Lab; HKU MMLab; SJTU ScaleLab; D-Robotics
+  summary: >-
+    Closed-loop programming cycle: decomposes an instruction into subgoals, generates a
+    program over object-centric geometric primitives, runs it in simulation while a VLM
+    watches checkpoints to localize failures, and repairs the code from fused execution
+    traces and visual feedback.
+  links:
+    paper: https://arxiv.org/abs/2508.02629
+  access: closed
+  tags: [code-as-policy, failure-recovery, success-detection, manipulation]
+  note: ICCV 2025 workshop paper.
+  added: 2026-09-29
+
+- id: urosa
+  name: UROSA
+  title: Distributed AI Agents for Cognitive Underwater Robot Autonomy
+  date: 2025-07
+  summary: >-
+    ROS 2 architecture of distributed LLM agents for autonomous underwater vehicles covering
+    perception, reasoning, mission planning and decisions, with RAG over vector databases
+    and on-the-fly ROS 2 node generation; validated in simulation and real deployments.
+  links:
+    paper: https://arxiv.org/abs/2507.23735
+  access: closed
+  tags: [ros, agentic-loop, memory]
+  added: 2026-09-29
+
+- id: ros2-px4-drone-agent
+  name: PX4 Drone Agent (ros2-agent-ws)
+  title: >-
+    Taking Flight with Dialogue: Enabling Natural Language Control for PX4-based Drone Agent
+  date: 2025-06
+  summary: >-
+    Open-source agentic framework combining PX4 flight control, ROS 2 and locally hosted
+    Ollama LLMs/VLMs for natural-language drone control; benchmarks four LLM and three VLM
+    families in simulation and on a custom quadcopter.
+  links:
+    paper: https://arxiv.org/abs/2506.07509
+    code: https://github.com/limshoonkit/ros2-agent-ws
+  access: open
+  tags: [uav, ros, on-device]
+  added: 2026-09-29
+
+- id: agentic-robot
+  name: Agentic Robot
+  title: >-
+    Agentic Robot: A Brain-Inspired Framework for Vision-Language-Action Models in Embodied
+    Agents
+  date: 2025-05
+  org: Jilin University et al.
+  summary: >-
+    A Standardized Action Procedure coordinates a large reasoning model that splits
+    instructions into subgoals, a VLA executor, and a temporal verifier that checks progress
+    and triggers recovery; reports 79.6% average success on LIBERO (first-party).
+  links:
+    paper: https://arxiv.org/abs/2505.23450
+    code: https://github.com/Agentic-Robot/agentic-robot
+    project: https://agentic-robot.github.io
+  access: open
+  tags: [vla, planning, success-detection, failure-recovery, long-horizon]
+  added: 2026-09-29
+
+- id: clea
+  name: CLEA
+  title: >-
+    CLEA: Closed-Loop Embodied Agent for Enhancing Task Execution in Dynamic Environments
+  date: 2025-03
+  org: CUHK-Shenzhen (FNii-Shenzhen) et al.
+  summary: >-
+    Closed-loop architecture of four functionally decoupled open-source LLMs: an interactive
+    planner generates subtasks from environmental memory, and a multimodal execution critic
+    scores action feasibility and triggers hierarchical replanning; tested on two real
+    robots.
+  links:
+    paper: https://arxiv.org/abs/2503.00729
+    project: https://sp4595.github.io/CLEA/
+  access: closed
+  tags: [agentic-loop, planning, memory, failure-recovery, multi-robot]
+  added: 2026-09-29
+
+- id: being-0
+  name: Being-0
+  title: 'Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills'
+  date: 2025-03
+  org: Peking University; BeingBeyond
+  summary: >-
+    Humanoid agent in which a foundation model plans and reasons while a lightweight
+    on-board VLM Connector turns plans into skill commands and coordinates locomotion and
+    dexterous manipulation from a modular skill library.
+  links:
+    paper: https://arxiv.org/abs/2503.12533
+    project: https://beingbeyond.github.io/Being-0
+  access: closed
+  tags: [humanoid, dexterous, mobile-manipulation, on-device, long-horizon]
+  note: Code repository announced but code not yet released per its README.
+  added: 2026-09-29
+
+- id: hi-robot
+  name: Hi Robot
+  title: >-
+    Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action
+    Models
+  date: 2025-02
+  org: Physical Intelligence
+  summary: >-
+    A high-level VLM reasons over open-ended prompts and situated user feedback ("that's not
+    trash") to choose the next step as a language command that a low-level VLA executes;
+    shown on single-arm, dual-arm and mobile robots.
+  links:
+    paper: https://arxiv.org/abs/2502.19417
+    project: https://www.pi.website/research/hirobot
+  access: closed
+  tags: [dual-system, vla, hitl, long-horizon, mobile-manipulation, planning]
+  note: >-
+    The high-level model is a trained VLM, so this also fits policy (hierarchical VLA).
+  added: 2026-09-29
+
+- id: vlmnav
+  name: VLMnav
+  title: >-
+    End-to-End Navigation with Vision Language Models: Transforming Spatial Reasoning into
+    Question-Answering
+  date: 2024-11
+  org: UC Berkeley; University of Pennsylvania
+  summary: >-
+    Uses an off-the-shelf VLM as a zero-shot end-to-end navigation policy that selects
+    actions in one step by casting spatial reasoning as question answering, without
+    fine-tuning or navigation data; includes a design analysis.
+  links:
+    paper: https://arxiv.org/abs/2411.05755
+    code: https://github.com/Jirl-upenn/VLMnav
+    project: https://jirl-upenn.github.io/VLMnav/
+  access: open
+  tags: [navigation, spatial-reasoning]
+  added: 2026-09-29
+
+- id: robomatrix
+  name: RoboMatrix
+  title: >-
+    RoboMatrix: A Skill-centric Hierarchical Framework for Scalable Robot Task Planning and
+    Execution in Open-World
+  date: 2024-11
+  org: MEGVII; Waseda University
+  summary: >-
+    Skill-centric hierarchy with an LLM scheduling layer for task decomposition, a
+    meta-skill layer that includes a unified VLA for both movement and manipulation, and a
+    hardware layer; demonstrated on DJI RoboMaster robots.
+  links:
+    paper: https://arxiv.org/abs/2412.00171
+    code: https://github.com/WayneMao/RoboMatrix
+    project: https://robo-matrix.github.io/
+  access: partial
+  tags: [vla, dual-system, mobile-manipulation, ros]
+  note: >-
+    SFT dataset and data-collection code released (ROS 2); model weights not released as of
+    2026-09.
+  added: 2026-09-29
+
+- id: malmm
+  name: MALMM
+  title: 'MALMM: Multi-Agent Large Language Models for Zero-Shot Robotics Manipulation'
+  date: 2024-11
+  org: MBZUAI
+  summary: >-
+    Splits manipulation between specialized LLM agents for high-level planning and low-level
+    control code, coordinated by a supervisor agent that uses post-step observations to
+    handle failures and replan; zero-shot on nine RLBench tasks.
+  links:
+    paper: https://arxiv.org/abs/2411.17636
+    code: https://github.com/malmm1/prompts
+    project: https://malmm1.github.io/
+  access: partial
+  tags: [code-as-policy, failure-recovery, manipulation, agentic-loop]
+  note: >-
+    Only the agent prompts are released; the main code repo (malmm1/MALMM) says 'code coming
+    soon'.
+  added: 2026-09-29
+
+- id: conceptagent
+  name: ConceptAgent
+  title: >-
+    ConceptAgent: LLM-Driven Precondition Grounding and Tree Search for Robust Task Planning
+    and Execution
+  date: 2024-10
+  org: JHU; JHU APL; MIT
+  summary: >-
+    Natural-language robot platform that adds predicate grounding to prevent and recover
+    from infeasible LLM-planned actions and an embodied, LLM-guided Monte Carlo Tree Search
+    with self-reflection.
+  links:
+    paper: https://arxiv.org/abs/2410.06108
+  access: closed
+  tags: [planning, failure-recovery]
+  added: 2026-09-29
+
+- id: bumble
+  name: BUMBLE
+  title: >-
+    BUMBLE: Unifying Reasoning and Acting with Vision-Language Models for Building-wide
+    Mobile Manipulation
+  date: 2024-10
+  org: UT Austin
+  summary: >-
+    VLM-driven framework for building-wide mobile manipulation that combines open-world RGBD
+    perception, a library of gross-to-fine motor skills and dual-layered memory; 47.1%
+    success over 70 multi-room, multi-floor trials (first-party).
+  links:
+    paper: https://arxiv.org/abs/2410.06237
+    code: https://github.com/UT-Austin-RobIn/BUMBLE
+    project: https://robin-lab.cs.utexas.edu/BUMBLE/
+  access: open
+  tags: [mobile-manipulation, memory, long-horizon, tool-use]
+  added: 2026-09-29
+
+- id: robi-butler
+  name: Robi Butler
+  title: 'Robi Butler: Multimodal Remote Interaction with a Household Robot Assistant'
+  date: 2024-09
+  org: National University of Singapore
+  summary: >-
+    Household robot assistant operated remotely over Zoom: an LLM behavior module turns
+    voice, text and hand-pointing inputs into multistep plans of open-vocabulary, VLM-backed
+    primitives; includes a user study.
+  links:
+    paper: https://arxiv.org/abs/2409.20548
+    code: https://github.com/threefruits/zoom_robot_interface
+    project: https://robibutler.github.io/
+  access: partial
+  tags: [hitl, mobile-manipulation, pointing, open-vocabulary]
+  note: Released code is a minimal Zoom-interface implementation of the system.
+  added: 2026-09-29
+
+- id: wonderful-team
+  name: Wonderful Team
+  title: 'Wonderful Team: Zero-Shot Physical Task Planning with Visual LLMs'
+  date: 2024-07
+  org: Northwestern University; University of Virginia
+  summary: >-
+    Multi-agent VLLM framework that performs the whole zero-shot planning process, from a
+    scene image and task description to an action sequence, inside VLLM agents rather than
+    separate vision systems; evaluated on VimaBench and real-world planning tasks.
+  links:
+    paper: https://arxiv.org/abs/2407.19094
+    code: https://github.com/wonderful-team-robotics/wonderful_team_robotics
+    project: https://wonderful-team-robotics.github.io/
+  access: open
+  tags: [planning, manipulation, agentic-loop]
+  note: Published in TMLR (2025).
+  added: 2026-09-29
+
+- id: vlm-pc
+  name: VLM-PC
+  title: Commonsense Reasoning for Legged Robot Adaptation with Vision-Language Models
+  date: 2024-07
+  org: Stanford University
+  summary: >-
+    VLM-Predictive Control prompts a VLM with the history of prior interactions to choose
+    and plan several locomotion skills ahead with replanning, letting a Go1 quadruped get
+    past dead ends and climb or crawl through real obstacle courses.
+  links:
+    paper: https://arxiv.org/abs/2407.02666
+    code: https://github.com/stanford-iris-lab/vlm-pc
+    project: https://anniesch.github.io/vlm-pc/
+  access: open
+  tags: [legged, agentic-loop, failure-recovery]
+  added: 2026-09-29
+
+- id: soar-autonomous-improvement
+  name: SOAR
+  title: Autonomous Improvement of Instruction Following Skills via Foundation Models
+  date: 2024-07
+  org: UC Berkeley
+  summary: >-
+    VLMs propose and evaluate semantically meaningful tasks for autonomous data collection
+    in new environments, and an instruction-following policy (image-goal generation plus
+    goal reaching) improves from that data without human labels; about 2x gains
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2407.20635
+    code: https://github.com/rail-berkeley/soar
+    project: https://auto-improvement.github.io/
+  access: open
+  tags: [self-improving, success-detection, dataset]
+  added: 2026-09-29
+
+- id: replanvlm
+  name: ReplanVLM
+  title: 'ReplanVLM: Replanning Robotic Tasks with Visual Language Models'
+  date: 2024-07
+  org: Fudan University
+  summary: >-
+    VLM task-planning framework with internal and external error-correction mechanisms and a
+    replanning strategy that revises tasks or corrects error code when execution fails;
+    evaluated on real robots and in simulation.
+  links:
+    paper: https://arxiv.org/abs/2407.21762
+  access: closed
+  tags: [failure-recovery, planning, code-as-policy]
+  added: 2026-09-29
+
+- id: quadrupedgpt
+  name: QuadrupedGPT
+  title: 'QuadrupedGPT: Towards a Versatile Quadruped Agent in Open-ended Worlds'
+  date: 2024-06
+  org: BAAI; Renmin University of China
+  summary: >-
+    Quadruped agent that interprets commands and multimodal context with a large multimodal
+    model, sets parameters of adaptive locomotion policies, plans safe paths, and decomposes
+    long-term goals into executable subgoals.
+  links:
+    paper: https://arxiv.org/abs/2406.16578
+  access: closed
+  tags: [legged, navigation, planning]
+  added: 2026-09-29
+
+- id: instructnav
+  name: InstructNav
+  title: >-
+    InstructNav: Zero-shot System for Generic Instruction Navigation in Unexplored
+    Environment
+  date: 2024-06
+  org: Peking University
+  summary: >-
+    Zero-shot navigation system using Dynamic Chain-of-Navigation planning and multi-sourced
+    value maps to handle object-goal, demand-driven and VLN-CE instructions without
+    navigation training or prebuilt maps; also tested on real robots.
+  links:
+    paper: https://arxiv.org/abs/2406.04882
+    code: https://github.com/LYX0501/InstructNav
+    project: https://sites.google.com/view/instructnav
+  access: open
+  tags: [navigation, planning]
+  added: 2026-09-29
+
+- id: plan-seq-learn
+  name: Plan-Seq-Learn (PSL)
+  title: 'Plan-Seq-Learn: Language Model Guided RL for Solving Long Horizon Robotics Tasks'
+  date: 2024-05
+  org: CMU; Mistral AI
+  summary: >-
+    An LLM produces a high-level plan, motion planning moves the robot between plan stages,
+    and RL policies learned online handle fine-grained low-level control; solves 25+
+    long-horizon tasks from raw visual input at over 85% success (first-party).
+  links:
+    paper: https://arxiv.org/abs/2405.01534
+    code: https://github.com/mihdalal/planseqlearn
+    project: https://mihdalal.github.io/planseqlearn/
+  access: open
+  tags: [rl, planning, long-horizon, manipulation]
+  added: 2026-09-29
+
+- id: meta-control
+  name: Meta-Control
+  title: >-
+    Meta-Control: Automatic Model-based Control Synthesis for Heterogeneous Robot Skills
+  date: 2024-05
+  org: CMU; Tsinghua University
+  summary: >-
+    LLM-driven synthesis of task-specific state representations and model-based hierarchical
+    controllers for manipulation tasks with differing requirements (precision, compliance,
+    avoidance), mimicking how experts design control systems.
+  links:
+    paper: https://arxiv.org/abs/2405.11380
+    project: https://meta-control-paper.github.io/
+  access: closed
+  tags: [manipulation, planning]
+  added: 2026-09-29
+
+- id: labor-agent
+  name: LABOR
+  title: Large Language Models for Orchestrating Bimanual Robots
+  date: 2024-04
+  org: University of Hamburg
+  summary: >-
+    LLM agent that analyzes task configurations and generates coordination control policies
+    for long-horizon bimanual tasks, evaluated in simulation on the NICOL humanoid with a
+    failure-case analysis.
+  links:
+    paper: https://arxiv.org/abs/2404.02018
+    code: https://github.com/Kchu/LABOR-Agent
+    project: https://labor-agent.github.io/
+  access: open
+  tags: [manipulation, humanoid, long-horizon]
+  added: 2026-09-29
+
+- id: delta-planner
+  name: DELTA
+  title: >-
+    DELTA: Decomposed Efficient Long-Term Robot Task Planning using Large Language Models
+  date: 2024-04
+  org: Bosch; University of Stuttgart
+  summary: >-
+    Uses LLMs with 3D scene graphs to generate PDDL domain and problem files, prune
+    task-irrelevant graph items, and decompose long-term goals into an autoregressive
+    sequence of sub-goals solved by a classical planner.
+  links:
+    paper: https://arxiv.org/abs/2404.03275
+    code: https://github.com/boschresearch/DELTA
+    project: https://delta-llm.github.io/
+  access: open
+  tags: [scene-graph, planning, tool-use]
+  added: 2026-09-29
+
+- id: come-robot
+  name: COME-robot
+  title: Closed-Loop Open-Vocabulary Mobile Manipulation with GPT-4V
+  date: 2024-04
+  org: BIGAI
+  summary: >-
+    Closed-loop GPT-4V system for open-vocabulary mobile manipulation with multi-level
+    perception for exploration and target identification, plus a feedback-and-restoration
+    loop that checks feasibility, monitors execution and traces failure causes for recovery.
+  links:
+    paper: https://arxiv.org/abs/2404.10220
+    project: https://come-robot.github.io/
+  access: closed
+  tags: [mobile-manipulation, failure-recovery, success-detection, agentic-loop]
+  added: 2026-09-29
+
+- id: llm3-tamp
+  name: LLM^3
+  title: >-
+    LLM3: Large Language Model-based Task and Motion Planning with Motion Failure Reasoning
+  date: 2024-03
+  org: UCLA; BIGAI
+  summary: >-
+    LLM-based task-and-motion planning in which the LLM proposes symbolic action sequences
+    and continuous parameters, then iteratively refines them by reasoning over
+    motion-planning failure feedback returned through the prompt.
+  links:
+    paper: https://arxiv.org/abs/2403.11552
+    code: https://github.com/AssassinWS/LLM-TAMP
+  access: open
+  tags: [planning, failure-recovery, manipulation]
+  added: 2026-09-29
+
+- id: btgenbot
+  name: BTGenBot
+  title: 'BTGenBot: Behavior Tree Generation for Robotic Tasks with Lightweight LLMs'
+  date: 2024-03
+  org: Politecnico di Milano
+  summary: >-
+    Fine-tunes LLMs of at most 7B parameters (Llama-2 chat, CodeLlama) on a GPT-3.5-built
+    dataset to generate robot behavior trees, checked by static analysis, a validator,
+    simulation and a real robot; dataset and LoRA adapters released.
+  links:
+    paper: https://arxiv.org/abs/2403.12761
+    code: https://github.com/AIRLab-POLIMI/BTGenBot
+  access: open
+  tags: [planning, on-device]
+  added: 2026-09-29
+
+- id: autogpt-p
+  name: AutoGPT+P
+  title: 'AutoGPT+P: Affordance-based Task Planning with Large Language Models'
+  date: 2024-02
+  org: KIT (H2T)
+  summary: >-
+    Derives the planning domain from an affordance-based scene representation (object
+    detection plus ChatGPT-generated object-affordance mappings) and runs an LLM-driven
+    planning tool with error correction that can also explore, suggest alternatives or
+    return partial plans.
+  links:
+    paper: https://arxiv.org/abs/2402.10778
+    code: https://git.h2t.iar.kit.edu/birr/autogpt-p-standalone
+  access: open
+  tags: [planning, tool-use, failure-recovery]
+  added: 2026-09-29
+
+- id: replan
+  name: RePLan
+  title: 'RePLan: Robotic Replanning with Perception and Language Models'
+  date: 2024-01
+  org: University of Toronto; Vector Institute; Georgia Tech; NVIDIA
+  summary: >-
+    Uses a VLM's grounded understanding of world state to detect when an LLM-generated plan
+    (with LLM-generated low-level rewards) fails to reach its goal and to replan online;
+    introduces an eight-task Reasoning and Control (RC) benchmark.
+  links:
+    paper: https://arxiv.org/abs/2401.04157
+    project: https://replan-lm.github.io/replan.github.io/
+  access: closed
+  tags: [failure-recovery, success-detection, planning, long-horizon]
+  added: 2026-09-29
+
+- id: ok-robot
+  name: OK-Robot
+  title: 'OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics'
+  date: 2024-01
+  org: NYU; Meta
+  summary: >-
+    Training-free open-knowledge system that combines VLM-based object detection and
+    semantic memory with navigation and grasping primitives for open-vocabulary
+    pick-and-drop in homes; 58.5% success across 10 real homes (first-party).
+  links:
+    paper: https://arxiv.org/abs/2401.12202
+    code: https://github.com/ok-robot/ok-robot
+    project: https://ok-robot.github.io/
+  access: open
+  tags: [mobile-manipulation, open-vocabulary, memory]
+  note: >-
+    Modular VLM pipeline rather than an LLM agent loop; included as a foundational
+    open-knowledge integration study.
+  added: 2026-09-29
+
+- id: mapgpt
+  name: MapGPT
+  title: >-
+    MapGPT: Map-Guided Prompting with Adaptive Path Planning for Vision-and-Language
+    Navigation
+  date: 2024-01
+  org: HKU; Sun Yat-sen University; Meituan
+  summary: >-
+    Zero-shot VLN agent that feeds GPT-4/GPT-4V an online linguistic map of nodes and
+    topology plus an adaptive multi-step path-planning mechanism, improving zero-shot
+    success on R2R and REVERIE (first-party).
+  links:
+    paper: https://arxiv.org/abs/2401.07314
+    code: https://github.com/chen-judge/MapGPT
+    project: https://chen-judge.github.io/MapGPT/
+  access: open
+  tags: [navigation, memory, planning]
+  added: 2026-09-29
+
+- id: typefly
+  name: TypeFly
+  title: 'TypeFly: Flying Drones with Large Language Model'
+  date: 2023-12
+  org: Yale University
+  summary: >-
+    LLM drone-control system in which the model writes plans in MiniSpec, a token-efficient
+    language that is interpreted while it streams, over a skill set and a YOLO-based scene
+    description, cutting response time by up to 62% (first-party).
+  links:
+    paper: https://arxiv.org/abs/2312.14950
+    code: https://github.com/typefly/TypeFly
+    project: https://typefly.github.io/
+  access: open
+  tags: [code-as-policy, navigation, uav]
+  added: 2026-09-29
+
+- id: alter3
+  name: Alter3 (GPT-4)
+  title: 'From Text to Motion: Grounding GPT-4 in a Humanoid Robot "Alter3"'
+  date: 2023-12
+  org: University of Tokyo; Alternative Machine
+  summary: >-
+    Maps GPT-4's linguistic descriptions of human actions onto the Alter3 android's body
+    through generated program code, producing poses and motion sequences zero-shot and
+    adjusting them from verbal feedback.
+  links:
+    paper: https://arxiv.org/abs/2312.06571
+    project: https://tnoinkwms.github.io/ALTER-LLM/
+  access: closed
+  tags: [humanoid, code-as-policy, hitl]
+  added: 2026-09-29
+
+- id: vila-robot-planning
+  name: ViLa
+  title: >-
+    Look Before You Leap: Unveiling the Power of GPT-4V in Robotic Vision-Language Planning
+  date: 2023-11
+  org: Tsinghua University
+  summary: >-
+    Uses GPT-4V directly as the robot task planner, reasoning over camera images to emit
+    actionable steps, accepting multimodal goal specifications, and incorporating visual
+    feedback to re-plan in real and simulated open-world manipulation.
+  links:
+    paper: https://arxiv.org/abs/2311.17842
+    project: https://robot-vila.github.io/
+  access: closed
+  tags: [planning, manipulation, agentic-loop]
+  added: 2026-09-29
+
+- id: robogpt-agent
+  name: RoboGPT
+  title: >-
+    RoboGPT: an intelligent agent of making embodied long-term decisions for daily
+    instruction tasks
+  date: 2023-11
+  org: CASIA
+  summary: >-
+    Agent pairing a Llama planner fine-tuned on a 67k-task robotic dataset (with a low-cost
+    re-plan module) with RoboSkill navigation and manipulation skills per sub-goal;
+    outperforms prior methods on ALFRED (first-party).
+  links:
+    paper: https://arxiv.org/abs/2311.15649
+  access: closed
+  tags: [planning, long-horizon, navigation]
+  note: Paper states code and dataset 'will be released soon'; not found as of 2026-09.
+  added: 2026-09-29
+
+- id: real-aerial-llm
+  name: REAL
+  title: >-
+    REAL: Resilience and Adaptation using Large Language Models on Autonomous Aerial Robots
+  date: 2023-11
+  org: MIT
+  summary: >-
+    Places an offboard LLM (queried at 0.1-1 Hz) in a multirotor's mission-planning and
+    control loops to supply prior knowledge, interpret logs and diagnostics, and adapt
+    control inputs; real flights show reduced position-tracking error.
+  links:
+    paper: https://arxiv.org/abs/2311.01403
+  access: closed
+  tags: [uav, failure-recovery]
+  added: 2026-09-29
+
+- id: gpt4v-for-robotics
+  name: GPT-4V(ision) for Robotics
+  title: 'GPT-4V(ision) for Robotics: Multimodal Task Planning from Human Demonstration'
+  date: 2023-11
+  org: Microsoft
+  summary: >-
+    GPT-4V describes a human demonstration video, GPT-4 turns it into a symbolic task plan,
+    and vision modules ground grasp/release moments and affordances (grasp types, waypoints)
+    so real robots can execute from one-shot demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2311.12015
+    code: https://github.com/microsoft/GPT4Vision-Robot-Manipulation-Prompts
+    project: https://microsoft.github.io/GPT4Vision-Robot-Manipulation-Prompts/
+  access: partial
+  tags: [planning, manipulation, video]
+  note: Repository contains prompts and sample code for the task-recognition stage only.
+  added: 2026-09-29
+
+- id: droc
+  name: DROC
+  title: >-
+    Distilling and Retrieving Generalizable Knowledge for Robot Manipulation via Language
+    Corrections
+  date: 2023-11
+  org: Stanford University
+  summary: >-
+    LLM-based system that responds to online language corrections at both plan and
+    skill-parameter level, distills them into a knowledge base, and retrieves relevant past
+    corrections by textual and visual similarity when facing new tasks.
+  links:
+    paper: https://arxiv.org/abs/2311.10678
+    code: https://github.com/Stanford-ILIAD/droc
+    project: https://sites.google.com/stanford.edu/droc
+  access: open
+  tags: [memory, hitl, failure-recovery, code-as-policy]
+  added: 2026-09-29
+
+- id: agent-driver
+  name: Agent-Driver
+  title: A Language Agent for Autonomous Driving
+  date: 2023-11
+  org: USC; Stanford University; NVIDIA
+  summary: >-
+    Recasts the driving pipeline as an LLM agent with a function-call tool library, a
+    cognitive memory of common sense and past experience, and a reasoning engine for
+    chain-of-thought, task and motion planning and self-reflection; evaluated on nuScenes.
+  links:
+    paper: https://arxiv.org/abs/2311.10813
+    code: https://github.com/physical-superintelligence-lab/Agent-Driver
+    project: https://psi-lab.ai/Agent-Driver/
+  access: open
+  tags: [driving, tool-use, memory, agentic-loop]
+  added: 2026-09-29
+
+- id: tree-planner
+  name: Tree-Planner
+  title: 'Tree-Planner: Efficient Close-loop Task Planning with Large Language Models'
+  date: 2023-10
+  org: HKU; Shanghai AI Laboratory
+  summary: >-
+    Splits closed-loop LLM task planning into plan sampling, action-tree construction and
+    grounded top-down decisions with backtracking, cutting token consumption by 92.2% versus
+    the previous best-performing method (first-party).
+  links:
+    paper: https://arxiv.org/abs/2310.08582
+  access: closed
+  tags: [planning, failure-recovery]
+  added: 2026-09-29
+
+- id: robotool
+  name: RoboTool
+  title: Creative Robot Tool Use with Large Language Models
+  date: 2023-10
+  org: CMU; Google DeepMind
+  summary: >-
+    LLM pipeline with Analyzer, Planner, Calculator and Coder modules that turns
+    instructions into executable robot code for tasks with implicit physical constraints
+    that require creative tool use, in simulation and on real robots.
+  links:
+    paper: https://arxiv.org/abs/2310.13065
+    project: https://creative-robotool.github.io/
+  access: closed
+  tags: [code-as-policy, manipulation, legged]
+  added: 2026-09-29
+
+- id: interactive-task-planning
+  name: ITP
+  title: Interactive Task Planning with Language Models
+  date: 2023-10
+  org: UC Berkeley
+  summary: >-
+    Couples LLM high-level planning with low-level skill execution through function calling
+    and grounds the scene in language with pretrained vision models; replans mid-execution
+    when users send new requests, shown on a real milk-tea-making robot.
+  links:
+    paper: https://arxiv.org/abs/2310.10645
+    code: https://github.com/Boyiliee/ITP
+    project: https://wuphilipp.github.io/itp_site/
+  access: open
+  tags: [tool-use, hitl, planning, manipulation]
+  note: Published in TMLR (2025).
+  added: 2026-09-29
+
+- id: helper-agent
+  name: HELPER
+  title: >-
+    Open-Ended Instructable Embodied Agents with Memory-Augmented Large Language Models
+  date: 2023-10
+  org: CMU
+  summary: >-
+    Parses free-form human-robot dialogue into action programs via retrieval-augmented
+    prompting over an external memory of language-program pairs that grows during deployment
+    to personalize to users; state of the art on TEACh (first-party).
+  links:
+    paper: https://arxiv.org/abs/2310.15127
+    code: https://github.com/Gabesarch/HELPER
+    project: https://helper-agent-llm.github.io/
+  access: open
+  tags: [memory, code-as-policy, hitl]
+  added: 2026-09-29
+
+- id: copal
+  name: CoPAL
+  title: 'CoPAL: Corrective Planning of Robot Actions with Large Language Models'
+  date: 2023-10
+  org: Honda Research Institute Europe
+  summary: >-
+    Architecture linking reasoning, planning and motion generation with a replanning loop
+    that feeds physically grounded, logical and semantic plan errors back to the LLM;
+    evaluated in simulation and real blocks-world, barman and pizza-preparation scenarios.
+  links:
+    paper: https://arxiv.org/abs/2310.07263
+    code: https://github.com/HRI-EU/Loom
+    project: https://hri-eu.github.io/Loom/
+  access: open
+  tags: [failure-recovery, planning, manipulation]
+  added: 2026-09-29
+
+- id: saynav
+  name: SayNav
+  title: >-
+    SayNav: Grounding Large Language Models for Dynamic Planning to Navigation in New
+    Environments
+  date: 2023-09
+  org: SRI International
+  summary: >-
+    Incrementally builds a 3D scene graph of the explored area as LLM context to generate
+    and continually refine step-by-step navigation plans, executed by a pretrained
+    point-goal planner; evaluated on multi-object navigation in ProcTHOR houses.
+  links:
+    paper: https://arxiv.org/abs/2309.04077
+    project: https://www.sri.com/publication/saynav-grounding-large-language-models-for-dynamic-planning-to-navigation-in-new-environments/
+  access: closed
+  tags: [scene-graph, navigation, planning]
+  added: 2026-09-29
+
+- id: dilu
+  name: DiLu
+  title: >-
+    DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models
+  date: 2023-09
+  org: Shanghai AI Laboratory
+  summary: >-
+    Closed-loop LLM driver agent with Reasoning and Reflection modules and a growing memory
+    of past driving experience; makes common-sense decisions in the highway-env simulator
+    and generalizes better than RL baselines (first-party).
+  links:
+    paper: https://arxiv.org/abs/2309.16292
+    code: https://github.com/PJLab-ADG/DiLu
+    project: https://pjlab-adg.github.io/DiLu/
+  access: open
+  tags: [driving, memory, self-improving, failure-recovery]
+  note: >-
+    Evaluated in highway-env (an abstracted traffic simulator), not on a physical vehicle;
+    ICLR 2024.
+  added: 2026-09-29
+
+- id: saycanpay
+  name: SayCanPay
+  title: >-
+    SayCanPay: Heuristic Planning with Large Language Models using Learnable Domain
+    Knowledge
+  date: 2023-08
+  summary: >-
+    Combines LLM action generation (Say) with learned estimators of feasibility (Can) and
+    long-term payoff (Pay) inside heuristic search to produce plans that are both grounded
+    and cost-effective.
+  links:
+    paper: https://arxiv.org/abs/2308.12682
+    code: https://github.com/RishiHazra/saycanpay
+    project: https://rishihazra.github.io/SayCanPay/
+  access: open
+  tags: [planning]
+  added: 2026-09-29
+
+- id: voxposer
+  name: VoxPoser
+  title: 'VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models'
+  date: 2023-07
+  org: Stanford University
+  summary: >-
+    An LLM writes code that queries a VLM to compose 3D affordance and constraint value maps
+    in the robot's observation space; a model-based planner uses them to synthesize
+    closed-loop 6-DoF end-effector trajectories zero-shot.
+  links:
+    paper: https://arxiv.org/abs/2307.05973
+    code: https://github.com/huangwl18/VoxPoser
+    project: https://voxposer.github.io/
+  access: open
+  tags: [code-as-policy, manipulation, 3d, spatial-reasoning]
+  note: >-
+    Released code is the RLBench implementation; the real-world perception pipeline is not
+    included.
+  added: 2026-09-29
+
+- id: autotamp
+  name: AutoTAMP
+  title: >-
+    AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers
+  date: 2023-06
+  org: MIT; Harvard University
+  summary: >-
+    Few-shot LLM translation of natural-language tasks into an intermediate task
+    representation that a TAMP algorithm solves jointly with motion, with autoregressive
+    re-prompting that detects and corrects syntactic and semantic translation errors.
+  links:
+    paper: https://arxiv.org/abs/2306.06531
+    code: https://github.com/yongchao98/AutoTAMP
+    project: https://yongchao98.github.io/MIT-REALM-AutoTAMP/
+  access: open
+  tags: [planning, failure-recovery]
+  added: 2026-09-29
+
+- id: tidybot
+  name: TidyBot
+  title: 'TidyBot: Personalized Robot Assistance with Large Language Models'
+  date: 2023-05
+  org: Princeton University; Stanford University; Google
+  summary: >-
+    Uses LLM few-shot summarization to infer generalizable user preferences for where
+    objects belong from a handful of examples, combined with language-based planning and
+    perception on a real mobile manipulator that tidies rooms.
+  links:
+    paper: https://arxiv.org/abs/2305.05658
+    code: https://github.com/jimmyyhwu/tidybot
+    project: https://tidybot.cs.princeton.edu/
+  access: open
+  tags: [mobile-manipulation, memory, hitl, open-vocabulary]
+  added: 2026-09-29
+
+- id: navgpt
+  name: NavGPT
+  title: >-
+    NavGPT: Explicit Reasoning in Vision-and-Language Navigation with Large Language Models
+  date: 2023-05
+  org: University of Adelaide
+  summary: >-
+    Purely LLM-based VLN agent that, at each step, reasons over textual descriptions of
+    observations, navigation history and explorable directions, showing explicit sub-goal
+    planning and progress tracking; zero-shot R2R results still trail trained models.
+  links:
+    paper: https://arxiv.org/abs/2305.16986
+    code: https://github.com/GengzeZhou/NavGPT
+  access: open
+  tags: [navigation, planning]
+  added: 2026-09-29
+
+- id: instruct2act
+  name: Instruct2Act
+  title: >-
+    Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language
+    Model
+  date: 2023-05
+  org: Shanghai AI Laboratory
+  summary: >-
+    An LLM writes Python programs that call perception APIs backed by foundation models (SAM
+    to locate objects, CLIP to classify them) and robot action primitives, mapping
+    multimodal instructions to tabletop manipulation zero-shot.
+  links:
+    paper: https://arxiv.org/abs/2305.11176
+    code: https://github.com/OpenGVLab/Instruct2Act
+  access: open
+  tags: [code-as-policy, tool-use, manipulation]
+  added: 2026-09-29
+
+- id: demo2code
+  name: Demo2Code
+  title: >-
+    Demo2Code: From Summarizing Demonstrations to Synthesizing Code via Extended
+    Chain-of-Thought
+  date: 2023-05
+  org: Cornell University
+  summary: >-
+    Generates robot task code from demonstrations by recursively summarizing them into a
+    concise latent specification and then recursively expanding code functions from it;
+    evaluated on robot task benchmarks including the Robotouille cooking game.
+  links:
+    paper: https://arxiv.org/abs/2305.16744
+    code: https://github.com/portal-cornell/demo2code
+    project: https://portal-cornell.github.io/demo2code/
+  access: open
+  tags: [code-as-policy, planning]
+  added: 2026-09-29
+
+- id: llm-brain
+  name: LLM-Brain
+  title: 'LLM as A Robotic Brain: Unifying Egocentric Memory and Control'
+  date: 2023-04
+  summary: >-
+    Uses an LLM as the robot's brain in closed-loop, multi-round natural-language dialogues
+    among multimodal models covering perception, planning, control and egocentric memory;
+    demonstrated on active exploration and embodied question answering.
+  links:
+    paper: https://arxiv.org/abs/2304.09349
+  access: closed
+  tags: [memory, agentic-loop, navigation]
+  note: >-
+    Later integrated into 'Mindstorms in Natural Language-Based Societies of Mind' (arXiv
+    2305.17066).
+  added: 2026-09-29
+
+- id: llm-plus-p
+  name: LLM+P
+  title: 'LLM+P: Empowering Large Language Models with Optimal Planning Proficiency'
+  date: 2023-04
+  org: UT Austin
+  summary: >-
+    The LLM translates a natural-language planning problem into PDDL, a classical planner
+    solves it, and the plan is translated back to language, giving correct or optimal plans
+    on problems where LLMs alone fail to find feasible ones.
+  links:
+    paper: https://arxiv.org/abs/2304.11477
+    code: https://github.com/Cranial-XIX/llm-pddl
+  access: open
+  tags: [planning, tool-use]
+  added: 2026-09-29
+
+- id: chatgpt-long-step-robot-control
+  name: ChatGPT Long-Step Robot Control
+  title: >-
+    ChatGPT Empowered Long-Step Robot Control in Various Environments: A Case Application
+  date: 2023-04
+  org: Microsoft
+  summary: >-
+    Few-shot ChatGPT prompts that turn instructions into sequences of predefined robot
+    actions, represent the environment in a formalized style and infer its updated state;
+    users adjust the output with natural-language feedback before execution.
+  links:
+    paper: https://arxiv.org/abs/2304.03893
+    code: https://github.com/microsoft/ChatGPT-Robot-Manipulation-Prompts
+  access: open
+  tags: [planning, hitl, manipulation, memory]
+  added: 2026-09-29
+
+- id: text2motion
+  name: Text2Motion
+  title: 'Text2Motion: From Natural Language Instructions to Feasible Plans'
+  date: 2023-03
+  org: Stanford University
+  summary: >-
+    Guides LLM task planning with feasibility heuristics from the Q-functions of a skill
+    library and runs geometric feasibility planning across whole skill sequences, returning
+    task- and motion-level plans verified to reach inferred symbolic goals.
+  links:
+    paper: https://arxiv.org/abs/2303.12153
+    project: https://sites.google.com/stanford.edu/text2motion
+  access: closed
+  tags: [planning, manipulation, long-horizon]
+  added: 2026-09-29
+
+- id: matcha
+  name: Matcha
+  title: >-
+    Chat with the Environment: Interactive Multimodal Perception Using Large Language Models
+  date: 2023-03
+  org: University of Hamburg
+  summary: >-
+    LLM-backboned interactive-perception agent that issues epistemic actions to sample
+    vision, sound, haptic and proprioceptive feedback in a partially observable task,
+    reasons over the returned descriptions, and then plans the task execution.
+  links:
+    paper: https://arxiv.org/abs/2303.08268
+    code: https://github.com/xf-zhao/Matcha
+    project: https://matcha-agent.github.io/
+  access: open
+  tags: [agentic-loop, tool-use, manipulation]
+  added: 2026-09-29
+
+- id: llm-grop
+  name: LLM-GROP
+  title: Task and Motion Planning with Large Language Models for Object Rearrangement
+  date: 2023-03
+  org: SUNY Binghamton; Meta AI
+  summary: >-
+    Prompts an LLM for commonsense, semantically valid object configurations and
+    instantiates them with a task and motion planner that adapts to scene geometry, turning
+    language commands into human-aligned rearrangements on a real mobile manipulator.
+  links:
+    paper: https://arxiv.org/abs/2303.06247
+    project: https://sites.google.com/view/llm-grop
+  access: closed
+  tags: [planning, mobile-manipulation]
+  added: 2026-09-29
+
+- id: grounded-decoding
+  name: Grounded Decoding
+  title: >-
+    Grounded Decoding: Guiding Text Generation with Grounded Models for Embodied Agents
+  date: 2023-03
+  org: Robotics at Google
+  summary: >-
+    Treats LLM planning like probabilistic filtering: decodes action sequences that are
+    likely under the LLM and also under grounded models of the environment (e.g., affordance
+    or safety objectives), solving long-horizon tasks across three simulated and real robot
+    domains.
+  links:
+    paper: https://arxiv.org/abs/2303.00855
+    project: https://grounded-decoding.github.io/
+  access: closed
+  tags: [planning, safety, long-horizon]
+  added: 2026-09-29
+
+- id: chatgpt-for-robotics
+  name: ChatGPT for Robotics (PromptCraft)
+  title: 'ChatGPT for Robotics: Design Principles and Model Abilities'
+  date: 2023-02
+  org: Microsoft
+  summary: >-
+    Study of driving robots with ChatGPT via prompt-engineering principles and a high-level
+    robot function library, using dialogue for closed-loop correction and code synthesis
+    across drones, manipulators and embodied agents; released PromptCraft with a sample
+    simulator integration.
+  links:
+    paper: https://arxiv.org/abs/2306.17582
+    code: https://github.com/microsoft/PromptCraft-Robotics
+    blog: https://www.microsoft.com/en-us/research/articles/chatgpt-for-robotics/
+  access: open
+  tags: [code-as-policy, tool-use, hitl, uav, planning]
+  note: >-
+    Blog post and arXiv v1 both dated 2023-02-20 (despite the 2306 arXiv identifier).
+  added: 2026-09-29
+
+- id: llm-planner
+  name: LLM-Planner
+  title: >-
+    LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models
+  date: 2022-12
+  org: Ohio State University
+  summary: >-
+    Uses an LLM as a few-shot high-level planner for embodied instruction following and
+    grounds it by re-planning with objects observed in the environment; competitive on
+    ALFRED with under 0.5% of the paired training data (first-party).
+  links:
+    paper: https://arxiv.org/abs/2212.04088
+    code: https://github.com/OSU-NLP-Group/LLM-Planner
+    project: https://dki-lab.github.io/LLM-Planner/
+  access: open
+  tags: [planning, long-horizon]
+  added: 2026-09-29
+
+- id: cape
+  name: CAPE
+  title: 'CAPE: Corrective Actions from Precondition Errors using Large Language Models'
+  date: 2022-11
+  org: Brown University; UT Austin
+  summary: >-
+    When an LLM-planned action fails its precondition check, CAPE re-prompts the LLM with
+    the precondition error to propose corrective actions instead of blindly retrying;
+    improves plan correctness over SayCan in VirtualHome and on a Boston Dynamics Spot
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2211.09935
+    project: https://shreyas-s-raman.github.io/CAPE/
+  access: closed
+  tags: [planning, failure-recovery, legged]
+  added: 2026-09-29
+
+- id: cowp
+  name: COWP
+  title: Robot Task Planning and Situation Handling in Open Worlds
+  date: 2022-10
+  org: SUNY Binghamton
+  summary: >-
+    Open-world task planner that augments a classical planner's action knowledge with
+    task-oriented common sense queried from an LLM when unforeseen execution-time situations
+    break a plan; evaluated on 561 dining-domain situations and on a mobile manipulator.
+  links:
+    paper: https://arxiv.org/abs/2210.01287
+    code: https://github.com/yding25/GPT-Planner
+    project: https://cowplanning.github.io/
+  access: open
+  tags: [planning, failure-recovery, mobile-manipulation]
+  added: 2026-09-29
+
+- id: progprompt
+  name: ProgPrompt
+  title: 'ProgPrompt: Generating Situated Robot Task Plans using Large Language Models'
+  date: 2022-09
+  org: USC; NVIDIA
+  summary: >-
+    Prompts LLMs with program-like specifications of the available actions and objects plus
+    example programs, so generated plans are executable in the current environment;
+    state-of-the-art on VirtualHome tasks (first-party) and deployed on a physical tabletop
+    arm.
+  links:
+    paper: https://arxiv.org/abs/2209.11302
+    code: https://github.com/NVlabs/progprompt-vh
+    project: https://progprompt.github.io/
+  access: open
+  tags: [code-as-policy, planning]
+  added: 2026-09-29
+
+- id: code-as-policies
+  name: Code as Policies
+  title: 'Code as Policies: Language Model Programs for Embodied Control'
+  date: 2022-09
+  org: Robotics at Google
+  summary: >-
+    Few-shot prompts code-writing LLMs to generate Python policy code that processes
+    perception outputs and parameterizes control-primitive APIs, with hierarchical
+    generation of undefined functions; demonstrated on multiple real robot platforms.
+  links:
+    paper: https://arxiv.org/abs/2209.07753
+    code: https://github.com/google-research/google-research/tree/master/code_as_policies
+    project: https://code-as-policies.github.io/
+  access: open
+  tags: [code-as-policy, manipulation, tool-use]
+  note: Released code is a set of Colabs incl. an interactive simulated tabletop domain.
+  added: 2026-09-29
+
+- id: lm-nav
+  name: LM-Nav
+  title: >-
+    LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action
+  date: 2022-07
+  org: UC Berkeley; Google
+  summary: >-
+    Builds a language-guided navigation system entirely from pretrained models without
+    fine-tuning: GPT-3 extracts landmarks from instructions, CLIP grounds them in images,
+    and the ViNG navigation model executes long-horizon outdoor routes on a real robot.
+  links:
+    paper: https://arxiv.org/abs/2207.04429
+    code: https://github.com/blazejosinski/lm_nav
+    project: https://sites.google.com/view/lmnav
+  access: open
+  tags: [navigation, planning, long-horizon]
+  added: 2026-09-29
+
+- id: inner-monologue
+  name: Inner Monologue
+  title: 'Inner Monologue: Embodied Reasoning through Planning with Language Models'
+  date: 2022-07
+  org: Robotics at Google
+  summary: >-
+    Closes the loop for LLM planners by feeding textual environment feedback (success
+    detection, scene description, human answers) back into the prompt, so the model
+    re-plans; tested on simulated and real tabletop rearrangement and real kitchen mobile
+    manipulation.
+  links:
+    paper: https://arxiv.org/abs/2207.05608
+    project: https://innermonologue.github.io/
+  access: closed
+  tags: [agentic-loop, success-detection, failure-recovery, hitl, planning, mobile-manipulation]
+  added: 2026-09-29
+
+- id: socratic-models
+  name: Socratic Models
+  title: 'Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language'
+  date: 2022-04
+  org: Google
+  summary: >-
+    Modular framework that composes pretrained VLMs, LMs and audio models zero-shot by
+    having them exchange information through language prompts; applications include
+    egocentric video QA, assistive dialogue that calls external APIs, and robot perception
+    and planning.
+  links:
+    paper: https://arxiv.org/abs/2204.00598
+    code: https://github.com/google-research/google-research/tree/master/socraticmodels
+    project: https://socraticmodels.github.io/
+  access: open
+  tags: [planning, tool-use]
+  added: 2026-09-29
+
+- id: saycan
+  name: SayCan
+  title: 'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances'
+  date: 2022-04
+  org: Robotics at Google; Everyday Robots
+  summary: >-
+    An LLM scores candidate natural-language skills for usefulness while pretrained skill
+    value functions score their feasibility in the current state, so the robot executes
+    plans that are both relevant and possible; demonstrated on long-horizon real mobile
+    manipulation.
+  links:
+    paper: https://arxiv.org/abs/2204.01691
+    code: https://github.com/google-research/google-research/tree/master/saycan
+    project: https://say-can.github.io/
+  access: partial
+  tags: [planning, tool-use, mobile-manipulation, long-horizon]
+  note: >-
+    Released code is a self-contained simulated tabletop implementation; the real-robot
+    skills and value functions are not released.
+  added: 2026-09-29
+
+- id: lm-zero-shot-planners
+  name: LM Zero-Shot Planners
+  title: >-
+    Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied
+    Agents
+  date: 2022-01
+  org: UC Berkeley; CMU; Google
+  summary: >-
+    Shows that large LMs prompted with examples can decompose high-level household tasks
+    into mid-level step plans, and adds a procedure that semantically translates each
+    generated step into an admissible environment action; evaluated in VirtualHome.
+  links:
+    paper: https://arxiv.org/abs/2201.07207
+    code: https://github.com/huangwl18/language-planner
+    project: https://wenlonghuang.com/language-planner/
+  access: open
+  tags: [planning, long-horizon]
+  added: 2026-09-29
+
+- id: roboicl
+  name: RoboICL
+  title: 'RoboICL: Embodied In-Context Learning with GPT-6 Astra'
+  date: 2026-09
+  org: Mosi AI
+  summary: >-
+    In-context robot-control loop around a general VLM (GPT-6 Astra) with no VLA and no
+    robot-specific training: demonstrations and the model's own interaction history share an
+    observation-action-receipt-observation grammar, with bounded anchored memory across task
+    stages; evaluated on RoboDojo and three real-robot tasks.
+  links:
+    paper: https://arxiv.org/abs/2609.34261
+    code: https://github.com/Mosi-AI/RoboICL
+    project: https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/
+  access: open
+  tags: [agentic-loop, memory, manipulation, real-world]
+  added: 2026-09-30
+
+- id: mimicagent
+  name: MimicAgent
+  title: 'MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation'
+  date: 2026-09
+  summary: >-
+    Agentic harness in which coding agents turn a skill prompt into quadruped reference
+    trajectories, which then train example-guided RL policies deployed in simulation and on
+    a real robot; replaces LLM reward shaping (as in Eureka) with LLM-generated reference
+    motion.
+  links:
+    paper: https://arxiv.org/abs/2609.24145
+    project: https://luckykantnayak.github.io/mimic-agent/
+  access: closed
+  tags: [agentic-loop, code-as-policy, legged, rl, sim2real]
+  note: Code repository announced as "releasing soon" (checked 2026-09-30).
+  added: 2026-09-30
+
+- id: motormind
+  name: MotorMind
+  title: >-
+    MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation
+  date: 2026-09
+  org: UIUC
+  summary: >-
+    Manipulation harness in which a general VLM proposes parameterized mid-level actions
+    (translations, rotations, gripper commands) that deterministic controllers execute, with
+    asynchronous monitoring and background memory updates; no action expert, coding agent or
+    external grounding model.
+  links:
+    paper: https://arxiv.org/abs/2609.38078
+    project: https://motor-mind.github.io/
+  access: closed
+  tags: [agentic-loop, memory, manipulation, real-world]
+  note: Code repository says it will be released before 2026-10-15 (checked 2026-10-01).
+  added: 2026-10-01
+
+- id: roboharn-evo
+  name: RoboHarn-Evo
+  title: >-
+    RoboHarn-Evo: Evolving Hierarchical Physical Knowledge for Self-Improving Robotic
+    Manipulation
+  date: 2026-09
+  summary: >-
+    Dual-loop harness that accumulates Hierarchical Physical Knowledge from interaction,
+    with task knowledge (which subtask, when it is done) and action knowledge
+    (object-relative strategies and their observed effects), revising it across episodes
+    without updating the base VLM.
+  links:
+    paper: https://arxiv.org/abs/2609.37583
+  access: closed
+  tags: [agentic-loop, self-improving, memory, manipulation, long-horizon]
+  added: 2026-10-01
+
+- id: roboskill
+  name: RoboSkill
+  title: 'Explore, Execute, Evolve: A Skill Acquisition and Reuse Loop for Embodied Agents'
+  aliases: [Explore, Execute, Evolve]
+  date: 2026-09
+  summary: >-
+    Explore-Execute-Evolve loop for multimodal robot agents: the agent explores for
+    task-relevant information, executes with feedback (including touch), and evolves a skill
+    library of textual guidance and reusable code from execution records to cut later
+    reasoning and runtime.
+  links:
+    paper: https://arxiv.org/abs/2609.37810
+  access: closed
+  tags: [agentic-loop, skill-library, self-improving, code-as-policy, real-world]
+  added: 2026-10-01
+
+- id: encore
+  name: ENCORE
+  title: 'Encore: Few-Shot Agentic Discovery of Manipulation Strategies'
+  date: 2026-09
+  summary: >-
+    A coding agent reads a few demonstrations, distilled into packs of keyframes, gripper
+    events and trajectories, as evidence, writes a policy program against a fixed perception
+    and action API, refines it over development rollouts, then freezes it for sealed
+    evaluation.
+  links:
+    paper: https://arxiv.org/abs/2609.37359
+  access: closed
+  tags: [code-as-policy, agentic-loop, manipulation, real-world]
+  added: 2026-10-01
+
+- id: dynaharness
+  name: DynaHarness
+  title: 'DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents'
+  date: 2026-09
+  summary: >-
+    Slow-brain/fast-brain harness bound by a physical execution contract: the planner
+    proposes capabilities, the fast layer grounds, monitors, refuses or substitutes commands
+    across analytic skills, recovery skills and a frozen VLA, and failure attribution drives
+    revisions admitted only after paired regression checks.
+  links:
+    paper: https://arxiv.org/abs/2609.40306
+    project: https://denghaoyuan123.github.io/Dynaharness_page/
+  access: closed
+  tags: [agentic-loop, self-improving, failure-recovery, skill-library, vla, long-horizon]
+  added: 2026-10-02
+
+- id: asena
+  name: ASENA
+  title: 'ASENA: Self-evolving Agents for Embodied Navigation'
+  date: 2026-09
+  summary: >-
+    Connects general-purpose coding agents to robot sensing, supervised execution and a
+    persistent workspace of notes and executable skills, so agents write, run and repair
+    programs with fixed weights; ships ASENA-VLN, a 4B monocular navigation policy used as
+    an optional tool, and runs on a Unitree G1.
+  links:
+    paper: https://arxiv.org/abs/2609.39207
+    project: https://asena-bot.github.io/
+  access: closed
+  tags: [agentic-loop, code-as-policy, self-improving, skill-library, navigation, humanoid]
+  added: 2026-10-02
+
+- id: simex
+  name: SimEX
+  title: 'SimEX: Simulation-Integrated Robotics AutoResearch'
+  date: 2026-09
+  summary: >-
+    Robotics autoresearch loop for coding agents: probe-and-optimize iterations in
+    simulation build a robot toolbox, then a few physical trials jointly correct the
+    simulator and the toolbox, with the corrected simulator used to diagnose failures and
+    screen repairs; no demonstrations needed.
+  links:
+    paper: https://arxiv.org/abs/2609.38982
+    project: https://robo-simex.github.io/
+  access: closed
+  tags: [agentic-loop, code-as-policy, self-improving, sim2real, real-world]
+  added: 2026-10-02
+
+- id: harness-evolution-scale-selection
+  name: Scale and Selection
+  title: >-
+    Scale and Selection: What Makes Automatic Harness Evolution Work for Visual-Interface
+    Robot Agents
+  date: 2026-09
+  summary: >-
+    Studies an optimizer coding agent that rewrites the prompts, tools and control rules of
+    a coding-agent robot policy: rollouts per round govern whether revisions generalize, and
+    Champion-Challenger selection is needed to stop unconditional edits from degrading
+    performance.
+  links:
+    paper: https://arxiv.org/abs/2609.39304
+  access: closed
+  tags: [agentic-loop, self-improving, manipulation]
+  added: 2026-10-02
+
+- id: navharness-adaptive-goals
+  name: NavHarness (adaptive goals)
+  title: 'NavHarness: Adaptive Goals for Agentic Vision-Language Navigation'
+  date: 2026-09
+  summary: >-
+    Agentic VLN framework with a Goal Agent that sets adaptive local goals, a Verify Agent
+    that checks each goal with a goal-specific question, a Memory Agent that compresses
+    history at verified boundaries, and a Visuomotor Agent that executes; evaluated on
+    R2R-CE, RxR-CE and real routes.
+  links:
+    paper: https://arxiv.org/abs/2609.39915
+  access: closed
+  tags: [agentic-loop, navigation, memory, success-detection, real-world]
+  note: >-
+    A different paper from the NavHarness lifelong-navigation entry, despite the shared
+    name.
+  added: 2026-10-02
+
+- id: rpg-robot
+  name: RPG
+  title: 'Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents'
+  aliases: [Reconstruct, Practice, Go Real]
+  date: 2026-10
+  summary: >-
+    Improves a multimodal-LLM robot execution system without weight updates: it builds
+    simulated practice tasks from an offline dataset, diagnoses failures with execution
+    feedback and privileged state, then creates or refines symbolic skills and revises the
+    system prompt, keeping only changes that pass cross-task checks.
+  links:
+    paper: https://arxiv.org/abs/2610.02204
+    project: https://rpg-robot.github.io/
+  access: closed
+  tags: [agentic-loop, self-improving, skill-library, sim2real, real-world]
+  added: 2026-10-03
+
+- id: recova
+  name: Recova
+  title: 'Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation'
+  date: 2026-10
+  summary: >-
+    Agent-guided framework that develops task and recovery behaviours in a reconstructed
+    digital twin, then monitors deployment, invokes learned or programmatic recoveries,
+    verifies scene restoration and routes real rollouts and human fixes into DAgger
+    training.
+  links:
+    paper: https://arxiv.org/abs/2610.01178
+    project: https://www.liuisabella.com/Recova
+  access: closed
+  tags: [failure-recovery, agentic-loop, self-improving, hitl, real-world]
+  added: 2026-10-03
+
+- id: pyrua-lean
+  name: PyRUA-Lean
+  title: >-
+    Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but
+    65% Fewer Tokens
+  date: 2026-10
+  summary: >-
+    Code-execution harness for VLM robot agents: the agent composes classical primitives and
+    VLA policies into Python cells with conditional checks and local retries, and requests
+    only the images and state it needs; compared with tool calling on LIBERO-PRO, RoboTwin
+    2.0 and RoboCasa365.
+  links:
+    paper: https://arxiv.org/abs/2610.01939
+  access: closed
+  tags: [agentic-loop, code-as-policy, tool-use, vla, manipulation]
+  added: 2026-10-03
+
+- id: interevolve
+  name: InterEvolve
+  title: >-
+    InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation
+  date: 2026-10
+  summary: >-
+    Test-time evolution for humanoid loco-manipulation: an LLM agent revises staged reward
+    programs, using execution feedback and a library of verified programs, that drive an
+    object-aware forward-backward behavioural foundation model, while an optimizer tunes
+    constants; no retraining.
+  links:
+    paper: https://arxiv.org/abs/2610.02196
+    project: https://sirui-xu.github.io/InterEvolve
+  access: closed
+  tags: [agentic-loop, self-improving, skill-library, humanoid, rl]
+  added: 2026-10-03
+
+- id: embodirsi
+  name: EmbodiRSI
+  title: 'EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation'
+  date: 2026-09
+  summary: >-
+    Agentic real-to-sim-to-real recursive self-improvement: task-specific simulations built
+    from deployment scenes host collaborative error correction and adaptive data collection
+    aimed at the policy's current weaknesses, then transfer with a few real refinement
+    trajectories.
+  links:
+    paper: https://arxiv.org/abs/2609.38905
+  access: closed
+  tags: [self-improving, sim2real, data-generation, manipulation, real-world]
+  added: 2026-10-03

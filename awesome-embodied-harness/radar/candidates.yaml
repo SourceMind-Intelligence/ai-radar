@@ -1,0 +1,19 @@
+# Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
+# Two kinds: announcements that cannot be verified yet, and verified items that were over
+# a run's daily cap. The next run re-triages over-cap items first.
+
+- name: THAW-VLA
+  url: https://arxiv.org/abs/2609.24682
+  title: 'Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies'
+  first_seen: 2026-09-29
+  last_checked: 2026-10-04
+  suggested_category: policy
+  reason: Verified; over the daily cap on 2026-09-29. Distils world-model representations into compact VLA policies.
+
+- name: Divide-and-Remember
+  url: https://arxiv.org/abs/2610.00982
+  title: 'Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies'
+  first_seen: 2026-10-03
+  last_checked: 2026-10-04
+  suggested_category: memory
+  reason: Verified; over the daily cap on 2026-10-03. Learned recursive top-K memory selector for VLAs, motivated by conditional mutual information; evaluated on RoboMME.
