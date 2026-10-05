@@ -987,3 +987,38 @@
   access: closed
   tags: [memory, vla, manipulation, long-horizon]
   added: 2026-10-04
+
+- id: beyondsce
+  name: BeyondSCe
+  title: 'Beyond the Current Scene: Event-Referential Grasping with Active View Selection'
+  date: 2026-09
+  summary: >-
+    Zero-shot grasping system for requests that refer to an object's role in a previously
+    observed human interaction; combines an event prior from the history with current
+    geometry to choose camera views that reveal occluded targets, using only pretrained
+    models.
+  links:
+    paper: https://arxiv.org/abs/2609.39375
+    project: https://www.haebeom.com/BeyondCSe/
+  access: closed
+  tags: [memory, open-vocabulary, manipulation, real-world]
+  note: >-
+    Official repository (SNU-VGILab/BeyondCSe) says code is coming soon (checked
+    2026-10-05).
+  added: 2026-10-05
+
+- id: divide-and-remember
+  name: Divide-and-Remember
+  title: >-
+    Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies
+  aliases: [D&R]
+  date: 2026-10
+  summary: >-
+    Learned VLA memory that keeps history information relevant to the action but absent from
+    the current observation, using a recursive top-K selector shared across blocks so a
+    fixed-size module covers unbounded history; evaluated on RoboMME.
+  links:
+    paper: https://arxiv.org/abs/2610.00982
+  access: closed
+  tags: [memory, vla, long-horizon]
+  added: 2026-10-05

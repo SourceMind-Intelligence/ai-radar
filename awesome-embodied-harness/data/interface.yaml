@@ -803,3 +803,19 @@
   access: open
   tags: [reward-model, manipulation, legged, hitl, dexterous]
   added: 2026-09-29
+
+- id: appl
+  name: APPL
+  title: Agent Priors-guided Policy Learning
+  aliases: [Agent Priors-guided Policy Learning]
+  date: 2026-09
+  summary: >-
+    Uses each skill policy's structural prior (what a behaviour depends on, such as gripper
+    pose relative to an object) both to shape training and, stated in language, as the
+    interface a composing agent reads to decide where the skill applies; a construction
+    agent segments demonstrations into skills.
+  links:
+    paper: https://arxiv.org/abs/2609.35690
+  access: closed
+  tags: [skill-library, agentic-loop, manipulation]
+  added: 2026-10-05

@@ -1578,3 +1578,19 @@
   access: open
   tags: [vla, manipulation]
   added: 2026-10-04
+
+- id: thaw-vla
+  name: THAW-VLA
+  title: >-
+    Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into
+    Compact Robot Policies
+  date: 2026-09
+  summary: >-
+    Adds one feature-alignment term to VLA training so the policy matches cached features
+    from a frozen world model; no teacher at training time or deployment, so the deployed
+    policy keeps the baseline's size and latency.
+  links:
+    paper: https://arxiv.org/abs/2609.24682
+  access: closed
+  tags: [vla, world-model, manipulation]
+  added: 2026-10-05

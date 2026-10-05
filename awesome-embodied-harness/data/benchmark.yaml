@@ -2101,3 +2101,37 @@
   access: closed
   tags: [benchmark, vla, manipulation]
   added: 2026-10-04
+
+- id: hide-seek-memory
+  name: HIDE / SEEK
+  title: >-
+    Benchmarking and Enhancing Skill-Level Memory for Partially Observable Robotic
+    Manipulation
+  date: 2026-09
+  summary: >-
+    HIDE: 15 partially observable manipulation tasks (repetition counting, historical-state
+    recall, progress tracking) with decision points where similar observations need
+    different actions; SEEK combines three memory mechanisms and is tested in simulation and
+    the real world.
+  links:
+    paper: https://arxiv.org/abs/2609.38886
+    project: https://nanamma.github.io/HIDE-SEEK/
+  access: closed
+  tags: [benchmark, memory, manipulation]
+  note: Different from the Hide-and-Seek runtime-monitoring entry.
+  added: 2026-10-05
+
+- id: ego2act
+  name: Ego2Act
+  title: 'Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation'
+  aliases: [Ego2ActJudge]
+  date: 2026-10
+  summary: >-
+    Benchmark of 2,640 videos from 110 real-world tasks testing whether video generation
+    models, used as world simulators, can produce egocentric videos of multi-step
+    goal-directed hand manipulation; adds an automatic judge, Ego2ActJudge.
+  links:
+    paper: https://arxiv.org/abs/2610.01092
+  access: closed
+  tags: [benchmark, world-model, video, manipulation]
+  added: 2026-10-05
