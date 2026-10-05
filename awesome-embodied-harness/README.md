@@ -63,7 +63,7 @@ flowchart TB
 Every day a scheduled agent scans arXiv, Hugging Face, GitHub, lab blogs and news. It checks each find against primary sources, adds qualifying systems to [`data/`](data), and writes a log to [`radar/log/`](radar/log). The procedure is in [radar/PLAYBOOK.md](radar/PLAYBOOK.md) and the watch list is in [radar/sources.yaml](radar/sources.yaml).
 
 <!-- BEGIN GENERATED: radar -->
-- [2026-10-05](radar/log/2026-10-05.md) — Quiet arXiv Monday, queue cleared: six memory-and-interface papers added, with history-dependent manipulation (HIDE, Divide-and-Remember, BeyondSCe) now a crowded sub-area (6 added, 1 candidates)
+- [2026-10-05](radar/log/2026-10-05.md) — Quiet arXiv Monday, queue cleared: six memory-and-interface papers added, with history-dependent manipulation (HIDE, Divide-and-Remember, BeyondSCe) now a crowded sub-area (6 added, 1 updated, 1 candidates)
 - [2026-10-04](radar/log/2026-10-04.md) — Weekend queue drain: 12 verified over-cap papers promoted; the theme is robustness evaluation, with five new probes of how VLAs and embodied agents fail under change, faults and attack (12 added, 2 candidates)
 - [2026-10-03](radar/log/2026-10-03.md) — Practice in simulation, keep what passes: RPG, Recova, InterEvolve and EmbodiRSI turn simulated practice and failures into verified skills, prompts and reward programs, with no or minimal weight updates (12 added, 14 candidates)
 - [2026-10-02](radar/log/2026-10-02.md) — Harnesses now evolve themselves under regression gates: DynaHarness, ASENA, SimEX and a harness-evolution study show self-revision only works with admission checks and enough rollouts (12 added, 15 candidates)

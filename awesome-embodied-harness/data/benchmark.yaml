@@ -319,7 +319,6 @@
     split.
   links:
     paper: https://arxiv.org/abs/2606.13040
-    project: https://processbench-2026.github.io/RoboProcessBench-Web/
   access: closed
   tags: [benchmark, success-detection, reward-model, manipulation]
   note: >-

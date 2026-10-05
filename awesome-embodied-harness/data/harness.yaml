@@ -903,7 +903,8 @@
 - id: guava
   name: Guava
   title: >-
-    Guava: Distilling Frontier VLM Agents into a Compact Model with a Manipulation Harness
+    Guava: Distilling Frontier VLMs into a Compact Agent through a Robotic Manipulation
+    Harness
   date: 2026-06
   org: University of Maryland; UIUC; University of Waterloo; MBZUAI; UPenn
   summary: >-
@@ -920,6 +921,7 @@
     v1 title: 'Guava: An Effective and Universal Harness for Embodied Manipulation'. Code
     and training pipeline are public; distilled weights were not found.
   added: 2026-09-29
+  updated: 2026-10-05
 
 - id: enpire
   name: ENPIRE
