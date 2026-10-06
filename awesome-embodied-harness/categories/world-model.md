@@ -3,12 +3,14 @@
 # World Models
 
 > Learned world models and simulators used for planning, policy evaluation and data generation.  
-> Layer: L6 · 67 entries · [overview](../README.md#world-model) · [survey](../SURVEY.md)
+> Layer: L6 · 69 entries · [overview](../README.md#world-model) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**Spatial Memory Intelligence**](https://arxiv.org/abs/2610.02521 "Spatial Memory Intelligence: Endowing World Models with Understanding-Driven Long-Term Memory") · 2026-10 — Uses a multimodal understanding model to manage long-range spatial memory in long-video world models through four operations: spatial clustering, within-cluster sparsification, action-aware retrieval and reliability-aware filtering. _Note: Repository lists training and evaluation code as coming soon (checked 2026-10-06)._ [project](https://spatial-memory-intelligence.github.io/)
+- ⚪ [**DeltaWorld**](https://arxiv.org/abs/2610.02691 "DeltaWorld: Physically Consistent Interactive World Simulators via Action-Conditioned Latent Increment Learning") · 2026-10 — Interactive world simulator for manipulation that predicts action-induced latent changes added to the current state, rather than the whole next state, with measures against object interpenetration and excessive deformation over long horizons.
 - 🟢 [**RoboCoach**](https://arxiv.org/abs/2609.39685 "RoboCoach: World Models as Active Coaches for Compositional Robot Skills") · 2026-09 — Route-Imagine-Diagnose-Improve loop that runs reusable skill experts inside a shared action-conditioned world model (CoachWorld), uses a progress judge to find the first failing subtask, and targets new demonstrations and adapter updates there; tested on Franka and AgileX. [code](https://github.com/RoboCoach-AI/CoachWorld) · [project](https://robocoach-ai.github.io/) · [weights](https://huggingface.co/JEdward/CoachWorld)
 - ⚪ [**Planning Limits of Latent World Models**](https://arxiv.org/abs/2609.39235 "The Planning Limits of Latent World Models") · 2026-09 — Shows that action-conditioned predictors on frozen visual backbones (V-JEPA 2, DINOv2 and others) rank actions reliably only for goals within about their imagined horizon, even with perfect prediction; within that range, reranking VLA proposals improves success.
 - 🟢 [**OpenWAM**](https://arxiv.org/abs/2609.07398 "OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining") · 2026-09 — Open modular research stack for world-action model pretraining with controlled studies of what to inherit from video priors and how world and action learning interact; its OpenWAM-α model is pretrained on about 6,400 hours of egocentric human and robot data. [code](https://github.com/OpenWAM-Official/OpenWAM) · [project](https://openwam-official.github.io/) · [weights](https://huggingface.co/OpenWAM/OpenWAM-Alpha-Pretrain-Foundation-Model)

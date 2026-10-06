@@ -794,3 +794,19 @@
   access: open
   tags: [agentic-loop, code-as-policy, data-generation, sim2real]
   added: 2026-10-03
+
+- id: robochemgym
+  name: RoboChemGym
+  title: >-
+    RoboChemGym: A Protocol-Driven Generative Simulation Framework for Long-Horizon Chemical
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Generates simulated demonstrations aligned with real chemistry protocols, with
+    self-improving task synthesis that refines execution and scene configuration for
+    multi-object protocols of more than 10 steps; includes a hierarchical benchmark.
+  links:
+    paper: https://arxiv.org/abs/2610.02708
+  access: closed
+  tags: [data-generation, long-horizon, manipulation, benchmark]
+  added: 2026-10-06

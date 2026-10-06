@@ -1203,3 +1203,39 @@
   access: closed
   tags: [world-model, planning, vla, manipulation]
   added: 2026-10-03
+
+- id: deltaworld
+  name: DeltaWorld
+  title: >-
+    DeltaWorld: Physically Consistent Interactive World Simulators via Action-Conditioned
+    Latent Increment Learning
+  date: 2026-10
+  summary: >-
+    Interactive world simulator for manipulation that predicts action-induced latent changes
+    added to the current state, rather than the whole next state, with measures against
+    object interpenetration and excessive deformation over long horizons.
+  links:
+    paper: https://arxiv.org/abs/2610.02691
+  access: closed
+  tags: [world-model, manipulation, video]
+  added: 2026-10-06
+
+- id: spatial-memory-intelligence
+  name: Spatial Memory Intelligence
+  title: >-
+    Spatial Memory Intelligence: Endowing World Models with Understanding-Driven Long-Term
+    Memory
+  aliases: [SMI]
+  date: 2026-10
+  summary: >-
+    Uses a multimodal understanding model to manage long-range spatial memory in long-video
+    world models through four operations: spatial clustering, within-cluster sparsification,
+    action-aware retrieval and reliability-aware filtering.
+  links:
+    paper: https://arxiv.org/abs/2610.02521
+    project: https://spatial-memory-intelligence.github.io/
+  access: closed
+  tags: [world-model, memory, video]
+  note: >-
+    Repository lists training and evaluation code as coming soon (checked 2026-10-06).
+  added: 2026-10-06

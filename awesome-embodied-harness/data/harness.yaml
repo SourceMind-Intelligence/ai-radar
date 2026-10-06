@@ -2755,3 +2755,72 @@
   access: closed
   tags: [self-improving, sim2real, data-generation, manipulation, real-world]
   added: 2026-10-03
+
+- id: mobiagent
+  name: MobiAgent
+  title: >-
+    MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Dual-loop agent for long-horizon mobile manipulation: an inner loop uses a VLM for
+    receding-horizon planning and visual reflection over composable atomic skills, run by
+    flow-matching experts on a shared VLM backbone; an outer loop drives lifelong policy
+    self-improvement.
+  links:
+    paper: https://arxiv.org/abs/2610.03476
+    project: https://kaiknower.github.io/mobiagent
+    weights: https://huggingface.co/Liukaikai/MobiAgent
+  access: partial
+  tags: [agentic-loop, self-improving, mobile-manipulation, skill-library, long-horizon]
+  note: >-
+    CoRL 2026. Checkpoint on Hugging Face; the code repository linked from the project page
+    did not resolve (checked 2026-10-06).
+  added: 2026-10-06
+
+- id: skill2real
+  name: Skill2Real
+  title: 'Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation'
+  date: 2026-10
+  summary: >-
+    Frontier-model agents learn executable skills against a shared robot API through a
+    Proposer-Verifier-Governor loop that uses privileged simulation evidence to validate
+    updates; a Cerebellum skill memory and a Brain composition memory transfer to a real
+    robot without fine-tuning.
+  links:
+    paper: https://arxiv.org/abs/2610.02788
+  access: closed
+  tags: [agentic-loop, code-as-policy, skill-library, sim2real, self-improving]
+  added: 2026-10-06
+
+- id: robobridge
+  name: RoboBridge
+  title: 'RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer'
+  date: 2026-10
+  summary: >-
+    Treats sim-to-real transfer as continued adaptation of executable task skills: a
+    tool-using agent represents tasks as procedures linking intent, observations, tool
+    operations and outcome verification, and revises them from interaction feedback in
+    simulation and reality.
+  links:
+    paper: https://arxiv.org/abs/2610.02717
+  access: closed
+  tags: [agentic-loop, skill-library, self-improving, sim2real, tool-use]
+  added: 2026-10-06
+
+- id: frontier-to-local-bridge
+  name: Frontier-to-local bridge
+  title: >-
+    Bridging Frontier Reasoning and Robot Execution: From Autonomous Demonstration
+    Generation to Dense Language Supervision
+  date: 2026-10
+  summary: >-
+    Connects slow frontier models to fast local policies in two ways: the frontier model
+    generates demonstrations, with corrective segments in context, to train a local policy;
+    and at deployment a harness pairs frontier-generated instructions with the local policy,
+    trained with dense language supervision to follow them.
+  links:
+    paper: https://arxiv.org/abs/2610.03615
+  access: closed
+  tags: [dual-system, data-generation, agentic-loop, manipulation]
+  added: 2026-10-06

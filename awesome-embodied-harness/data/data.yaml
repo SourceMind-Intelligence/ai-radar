@@ -1537,3 +1537,22 @@
   access: closed
   tags: [teleop, humanoid, multi-robot, dataset, data-collection]
   added: 2026-10-04
+
+- id: robo-valuerl
+  name: Robo-ValueRL
+  title: >-
+    Robo-ValueRL: Reliable Value Estimation for Offline-to-Online Reinforcement Learning
+  date: 2026-07
+  org: Beijing Humanoid Robot Innovation Center; Renmin University of China
+  summary: >-
+    Open offline-to-online RL framework for real-robot manipulation: a history-conditioned
+    value estimator, checked with global-progress and local-preference reliability metrics,
+    drives quality-conditioned policy pretraining and stabilizes online improvement from
+    real rollouts.
+  links:
+    paper: https://arxiv.org/abs/2607.09866
+    code: https://github.com/Open-X-Humanoid/Robo-ValueRL
+    project: https://gewu-lab.github.io/Robo-ValueRL/
+  access: open
+  tags: [rl, reward-model, manipulation, humanoid, real-world]
+  added: 2026-10-06

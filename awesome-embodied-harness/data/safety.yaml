@@ -836,3 +836,19 @@
   access: closed
   tags: [safety, vla, manipulation, real-world]
   added: 2026-10-04
+
+- id: detect-and-suppress
+  name: Detect and Suppress
+  title: >-
+    Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
+  date: 2026-10
+  summary: >-
+    Finds, with a sparse autoencoder, a VLA feature tied to adversarial patches and
+    suppresses it at inference only when a linear probe detects an attack; no fine-tuning
+    needed, and conditional rather than continuous intervention is key; evaluated on
+    LIBERO-10.
+  links:
+    paper: https://arxiv.org/abs/2610.03498
+  access: closed
+  tags: [security, vla, manipulation]
+  added: 2026-10-06

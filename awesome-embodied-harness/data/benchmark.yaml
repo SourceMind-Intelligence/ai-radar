@@ -2134,3 +2134,20 @@
   access: closed
   tags: [benchmark, world-model, video, manipulation]
   added: 2026-10-05
+
+- id: maniphysicsbench
+  name: ManiPhysicsBench
+  title: >-
+    ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation
+  aliases: [ManiPhysicsZoo]
+  date: 2026-10
+  summary: >-
+    Assesses whether VLAs preserve objects: ManiPhysicsZoo assets with literature-backed
+    material properties feed a solver that turns recorded grasp forces into deformation and
+    fracture checks in LIBERO and SimplerEnv, exposing a gap between task success and safe
+    success.
+  links:
+    paper: https://arxiv.org/abs/2610.02802
+  access: closed
+  tags: [benchmark, safety, vla, manipulation]
+  added: 2026-10-06

@@ -273,20 +273,20 @@ Counts by category and year of first release, generated from `data/`.
 | Category | Layer | Total | ≤2021 | 2022 | 2023 | 2024 | 2025 | 2026 | open |
 |---|---|---|---|---|---|---|---|---|---|
 | [Surveys & Position Papers](categories/survey.md) | meta | 84 | 1 | 1 | 8 | 10 | 30 | 34 | 12 |
-| [Embodied Harnesses](categories/harness.md) | L4 | 156 | 0 | 10 | 30 | 23 | 14 | 79 | 68 |
+| [Embodied Harnesses](categories/harness.md) | L4 | 160 | 0 | 10 | 30 | 23 | 14 | 83 | 68 |
 | [Open-Source Frameworks & Runtimes](categories/framework.md) | L0-L4 | 26 | 0 | 1 | 5 | 11 | 5 | 4 | 25 |
 | [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 44 | 0 | 0 | 5 | 10 | 12 | 17 | 22 |
 | [World State, Memory & Spatial Context](categories/memory.md) | L3 | 57 | 0 | 4 | 6 | 15 | 10 | 22 | 31 |
 | [Embodied Reasoning Models & Planners](categories/brain.md) | L4 | 47 | 0 | 0 | 5 | 4 | 18 | 20 | 28 |
 | [VLA Models & Skill Policies](categories/policy.md) | L1 | 86 | 0 | 1 | 5 | 7 | 42 | 31 | 55 |
-| [World Models](categories/world-model.md) | L6 | 67 | 0 | 1 | 3 | 7 | 26 | 30 | 39 |
+| [World Models](categories/world-model.md) | L6 | 69 | 0 | 1 | 3 | 7 | 26 | 32 | 39 |
 | [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 46 | 0 | 0 | 4 | 7 | 14 | 21 | 25 |
-| [Safety, Guardrails & Security](categories/safety.md) | L5 | 48 | 0 | 0 | 1 | 9 | 15 | 23 | 21 |
+| [Safety, Guardrails & Security](categories/safety.md) | L5 | 49 | 0 | 0 | 1 | 9 | 15 | 24 | 21 |
 | [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 46 | 0 | 0 | 5 | 8 | 13 | 20 | 22 |
-| [Simulators & Environments](categories/sim.md) | L6 | 44 | 12 | 1 | 6 | 5 | 10 | 10 | 39 |
-| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 115 | 5 | 1 | 4 | 19 | 31 | 55 | 76 |
-| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 90 | 5 | 0 | 9 | 18 | 35 | 23 | 63 |
-| **Total** |  | **956** | 23 | 20 | 96 | 153 | 275 | 389 | 526 |
+| [Simulators & Environments](categories/sim.md) | L6 | 45 | 12 | 1 | 6 | 5 | 10 | 11 | 39 |
+| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 116 | 5 | 1 | 4 | 19 | 31 | 56 | 76 |
+| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 91 | 5 | 0 | 9 | 18 | 35 | 24 | 64 |
+| **Total** |  | **966** | 23 | 20 | 96 | 153 | 275 | 399 | 527 |
 <!-- END GENERATED: stats -->
 
 ---

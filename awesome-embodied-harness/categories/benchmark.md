@@ -3,13 +3,14 @@
 # Benchmarks & Evaluation
 
 > Benchmarks, evaluation suites and leaderboards for embodied agents, reasoning models and VLAs.  
-> Layer: L6 · 115 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
+> Layer: L6 · 116 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**VLA behavioural robustness**](https://arxiv.org/abs/2610.01351 "Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks") · 2026-10 — Benchmark-agnostic evaluation extending LIBERO and LIBERO-Plus that measures how perturbations change successful trajectories (smoothness, efficiency, gripper behaviour), showing that equal success rates can hide divergent behaviour.
+- ⚪ [**ManiPhysicsBench**](https://arxiv.org/abs/2610.02802 "ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation") · 2026-10 — Assesses whether VLAs preserve objects: ManiPhysicsZoo assets with literature-backed material properties feed a solver that turns recorded grasp forces into deformation and fracture checks in LIBERO and SimplerEnv, exposing a gap between task success and safe success.
 - 🟢 [**HumanoidToolBench**](https://arxiv.org/abs/2610.02089 "HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution") · 2026-10 — 18-task benchmark of humanoid tool use from tool selection to mobile execution, with the ToolBook dataset of 3.1k demonstrations from simulation and a real Unitree G1; finds large gaps between picking a suitable tool and completing the task. [code](https://github.com/SNU-PI/HumanoidToolBench) · [project](https://snu-pi.github.io/HumanoidToolBench/) · [data](https://huggingface.co/datasets/snupilab/humanoidtoolbench-teleop)
 - 🟢 [**Embodied Agent Arena**](https://arxiv.org/abs/2610.00854 "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena") · 2026-10 — 1,000-case arena drawn from 32 sources plus a new GeoProbe geometry benchmark, run through a minimal harness that separates metric precision, functional grounding and native goal completion across geometry, spatial reasoning, affordance, planning and manipulation; seven VLMs evaluated. [code](https://github.com/embodied-agent-arena/embodied-agent-arena) · [project](https://embodied-agent-arena.github.io/embodied-agent-arena/)
 - ⚪ [**Ego2Act**](https://arxiv.org/abs/2610.01092 "Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation") · 2026-10 — Benchmark of 2,640 videos from 110 real-world tasks testing whether video generation models, used as world simulators, can produce egocentric videos of multi-step goal-directed hand manipulation; adds an automatic judge, Ego2ActJudge.
