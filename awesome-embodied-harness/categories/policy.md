@@ -3,12 +3,13 @@
 # VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 86 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
+> Layer: L1 · 87 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**TUD**](https://arxiv.org/abs/2610.05025 "Triggering Generalist Reasoning via Predictive Uncertainty for Dual-System VLA") · 2026-10 — Adaptive inference for dual-system VLAs: calls the slow generalist only when the dispersion of re-predicted future actions under the cached context signals rising uncertainty, skipping calls in easy phases with no extra model. _Note: NeurIPS 2026._
 - ⚪ [**THAW-VLA**](https://arxiv.org/abs/2609.24682 "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies") · 2026-09 — Adds one feature-alignment term to VLA training so the policy matches cached features from a frozen world model; no teacher at training time or deployment, so the deployed policy keeps the baseline's size and latency.
 - 🟡 [**Rho**](https://arxiv.org/abs/2609.38164 "Rho: A Foundation for Efficiently Adaptable VLA Models") · 2026-09 · Microsoft — Family of open-weight bimanual VLAs with embodiment midtraining for YAM Box, UR AI Trainer and FR3 Duo; a lightweight latent policy learns from corrective feedback to pick noise inputs for the frozen flow-matching action expert, adapting online from a few corrected episodes. _Note: Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training code link found._ [weights](https://huggingface.co/microsoft/rho-base)
 - 🟢 [**Light-O1**](https://www.lightorigins.com/en/blog/light-o1) · 2026-09 · Light Origins — Embodied foundation model pretrained on structured human action recovered from internet video, then post-trained per embodiment; it states in language what an instruction needs from the body before generating actions. The open Light-O1-Preview covers text-to-whole-body action only. _Note: Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced._ [code](https://github.com/lightorigins/Light-O1) · [weights](https://huggingface.co/LightOriginsHQ/Light-O1-Preview)

@@ -3,12 +3,13 @@
 # World State, Memory & Spatial Context
 
 > Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.  
-> Layer: L3 · 57 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
+> Layer: L3 · 58 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**EvoMem-VLA**](https://arxiv.org/abs/2610.05418 "EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation") · 2026-10 — VLA memory that encodes observed changes between historical states as directional delta tokens tied to their state evidence, so the policy can track interaction outcomes and task progress rather than isolated keyframes.
 - ⚪ [**Divide-and-Remember**](https://arxiv.org/abs/2610.00982 "Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies") · 2026-10 — Learned VLA memory that keeps history information relevant to the action but absent from the current observation, using a recursive top-K selector shared across blocks so a fixed-size module covers unbounded history; evaluated on RoboMME.
 - ⚪ [**Workspace Models**](https://arxiv.org/abs/2609.20820 "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision") · 2026-09 · MIT, CMU — Moves VLM calls to training time: a VLM labels task-salient current and past information, which is distilled into a lightweight latent 'workspace token' that policies use at deployment to solve memory-intensive tasks without in-the-loop VLM reasoning. _Note: CoRL 2026._
 - ⚪ [**T2Mem**](https://arxiv.org/abs/2609.36720 "T$^2$Mem: Learning Test-Time Memory for Robotics") · 2026-09 — Test-time-training memory inside a pretrained VLA: observation history is encoded into compact fast weights by online self-supervised updates and fed to the action expert, with no external reasoning model; evaluated on RoboMME.

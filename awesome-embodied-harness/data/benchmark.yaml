@@ -328,18 +328,22 @@
 
 - id: inspect-robots
   name: Inspect Robots
+  title: 'Inspect Robots: Evaluating the Capabilities and Safety of Embodied AI'
   date: 2026-06
   org: robocurve
   summary: >-
-    Early-stage open-source evaluation framework for physical AI, modeled on Inspect AI:
-    define a benchmark once and run any LLM agent or VLA on real or simulated embodiments
-    with auditable logs (grader scores, transcripts, config) and Rerun visualization.
+    Open-source evaluation framework for physical AI, modeled on Inspect AI: define a
+    benchmark once and run any LLM agent or VLA on real or simulated embodiments with
+    auditable logs and Rerun visualization; the paper evaluates the capabilities and safety
+    of six frontier-LLM policies.
   links:
+    paper: https://arxiv.org/abs/2610.06306
     code: https://github.com/robocurve/inspect-robots
     docs: https://docs.inspectrobots.org/
   access: open
-  tags: [benchmark, vla]
+  tags: [benchmark, vla, safety]
   added: 2026-09-29
+  updated: 2026-10-07
 
 - id: embodied-benchclaw
   name: Embodied-BenchClaw
@@ -2151,3 +2155,34 @@
   access: closed
   tags: [benchmark, safety, vla, manipulation]
   added: 2026-10-06
+
+- id: rmmbench
+  name: RMMBench
+  title: 'RMMBench: A Comprehensive Benchmark for Robotic Mobile Manipulation'
+  date: 2026-10
+  summary: >-
+    Benchmark of 70 navigation-manipulation scenarios in continuous space, from local
+    manipulation to long-horizon composite navigation, unifying high- and low-level embodied
+    tasks to evaluate VLM-driven robots with fine-grained metrics.
+  links:
+    paper: https://arxiv.org/abs/2610.05414
+  access: closed
+  tags: [benchmark, mobile-manipulation, navigation, long-horizon]
+  note: CoRL 2026.
+  added: 2026-10-07
+
+- id: grounding-gap
+  name: Grounding gap (Encoded but Not in Control)
+  title: >-
+    Encoded but Not in Control: Revealing the Grounding Gap in Vision-Language Robot
+    Policies
+  date: 2026-10
+  summary: >-
+    Scene-preserving instruction interventions (target substitutions, arbitrary nouns,
+    unrelated sentences) show VLAs and world-action models mostly pick the scene's original
+    target regardless of instruction, in simulation and on real robots.
+  links:
+    paper: https://arxiv.org/abs/2610.06235
+  access: closed
+  tags: [benchmark, vla, manipulation, real-world]
+  added: 2026-10-07

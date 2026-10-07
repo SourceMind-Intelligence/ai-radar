@@ -1022,3 +1022,17 @@
   access: closed
   tags: [memory, vla, long-horizon]
   added: 2026-10-05
+
+- id: evomem-vla
+  name: EvoMem-VLA
+  title: 'EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation'
+  date: 2026-10
+  summary: >-
+    VLA memory that encodes observed changes between historical states as directional delta
+    tokens tied to their state evidence, so the policy can track interaction outcomes and
+    task progress rather than isolated keyframes.
+  links:
+    paper: https://arxiv.org/abs/2610.05418
+  access: closed
+  tags: [memory, vla, long-horizon, manipulation]
+  added: 2026-10-07

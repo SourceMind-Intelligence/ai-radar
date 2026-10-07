@@ -3,13 +3,14 @@
 # Safety, Guardrails & Security
 
 > Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.  
-> Layer: L5 · 49 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
+> Layer: L5 · 50 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**WBAG**](https://arxiv.org/abs/2610.01083 "WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation") · 2026-10 — Inference-time VLA safety layer that models the whole arm plus grasp-dependent attached-object geometry as a changing safe set and turns it into differentiable CBF constraints that minimally modify the VLA's operational-space action; evaluated on SafeLIBERO.
+- ⚪ [**Feasible-Future Decoding**](https://arxiv.org/abs/2610.05166 "A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies") · 2026-10 — Shows that a locally safe, likely action can still leave no policy-supported route to safe completion, derives the feasible-future mass under a frozen VLA, and approximates it with a selective finite-candidate decoder that also serves as an alarm.
 - ⚪ [**Detect and Suppress**](https://arxiv.org/abs/2610.03498 "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models") · 2026-10 — Finds, with a sparse autoencoder, a VLA feature tied to adversarial patches and suppresses it at inference only when a linear probe detects an attack; no fine-tuning needed, and conditional rather than continuous intervention is key; evaluated on LIBERO-10.
 - ⚪ [**Verify-Adapt-Hold**](https://arxiv.org/abs/2609.30523 "Containing Behavioral Cascades from Manipulated Claims in LLM-Powered Multi-Robot Systems") · 2026-09 — Active verification for LLM-powered robot fleets after a false world-state claim is accepted: a Verify-Adapt-Hold plan sends some robots to inspect, lets a few adapt and keeps the rest on trusted plans, containing fleet-wide replanning cascades.
 - ⚪ [**Universal Adversarial Object**](https://arxiv.org/abs/2609.39178 "Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics") · 2026-09 — Physical adversarial attack: a textured sphere placed in view, optimized with a multi-level objective over planning, execution and action control, sharply degrades Pi0 and RDT in simulation and on a real robot. _Note: ICRA 2026._

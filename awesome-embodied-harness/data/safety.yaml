@@ -852,3 +852,19 @@
   access: closed
   tags: [security, vla, manipulation]
   added: 2026-10-06
+
+- id: feasible-future-decoding
+  name: Feasible-Future Decoding
+  title: >-
+    A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action
+    Policies
+  date: 2026-10
+  summary: >-
+    Shows that a locally safe, likely action can still leave no policy-supported route to
+    safe completion, derives the feasible-future mass under a frozen VLA, and approximates
+    it with a selective finite-candidate decoder that also serves as an alarm.
+  links:
+    paper: https://arxiv.org/abs/2610.05166
+  access: closed
+  tags: [safety, vla, uncertainty]
+  added: 2026-10-07

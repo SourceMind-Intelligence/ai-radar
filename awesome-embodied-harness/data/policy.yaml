@@ -1594,3 +1594,18 @@
   access: closed
   tags: [vla, world-model, manipulation]
   added: 2026-10-05
+
+- id: tud-dual-system
+  name: TUD
+  title: Triggering Generalist Reasoning via Predictive Uncertainty for Dual-System VLA
+  date: 2026-10
+  summary: >-
+    Adaptive inference for dual-system VLAs: calls the slow generalist only when the
+    dispersion of re-predicted future actions under the cached context signals rising
+    uncertainty, skipping calls in easy phases with no extra model.
+  links:
+    paper: https://arxiv.org/abs/2610.05025
+  access: closed
+  tags: [dual-system, vla, uncertainty]
+  note: NeurIPS 2026.
+  added: 2026-10-07

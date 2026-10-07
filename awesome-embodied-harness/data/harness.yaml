@@ -2824,3 +2824,66 @@
   access: closed
   tags: [dual-system, data-generation, agentic-loop, manipulation]
   added: 2026-10-06
+
+- id: robotuse
+  name: RobotUse
+  title: 'RobotUse: Allocating Computation, Context, and Decisions'
+  date: 2026-10
+  summary: >-
+    Robot-agent harness where the agent visually selects targets and poses while the backend
+    handles geometry, motion planning and control; subagents keep per-subgoal detail out of
+    the main context, and continual harnessing updates a persistent playbook from execution;
+    evaluated on RoboLab against CaP-X.
+  links:
+    paper: https://arxiv.org/abs/2610.04929
+    code: https://github.com/robotuse-team/RobotUse
+    project: https://robotuse-team.github.io/
+  access: open
+  tags: [agentic-loop, tool-use, memory, self-improving, manipulation]
+  added: 2026-10-07
+
+- id: rv-icl
+  name: RV-ICL
+  title: Recursive Video In-Context Learning for Agentic Robot
+  aliases: [Recursive Video In-Context Learning]
+  date: 2026-10
+  summary: >-
+    Training-free method that turns a demonstration video into a hierarchy (whole-task
+    keyframes, phases, moments, clips around contacts) that an LLM agent orchestrating
+    frozen VLAs navigates through read-only tools, reading coarse levels to plan and fine
+    levels during execution.
+  links:
+    paper: https://arxiv.org/abs/2610.06843
+  access: closed
+  tags: [agentic-loop, memory, video, vla, manipulation]
+  added: 2026-10-07
+
+- id: preact-nav
+  name: PreAct-Nav
+  title: 'PreAct-Nav: Agentic Reasoning Before Action for Urban Navigation'
+  date: 2026-10
+  summary: >-
+    Agentic urban navigation framework that adds anticipatory reasoning to frozen policies:
+    local decisions are anchored to persistent medium-horizon subgoals, predicted actions
+    are assessed before execution, and a navigation memory updates the reasoning context
+    with actual outcomes.
+  links:
+    paper: https://arxiv.org/abs/2610.04916
+  access: closed
+  tags: [agentic-loop, navigation, memory, planning]
+  added: 2026-10-07
+
+- id: arise-social
+  name: ARISE
+  title: >-
+    From Social Reasoning to Embodied Interaction: An Agentic Framework for Social Robots
+  date: 2026-10
+  summary: >-
+    Agentic framework on the Sophia humanoid that combines multimodal context understanding,
+    long-term memory and reactive or proactive interaction to decide when and what to
+    communicate, and turns social intent into gestures, speech and facial expressions.
+  links:
+    paper: https://arxiv.org/abs/2610.05964
+  access: closed
+  tags: [agentic-loop, memory, humanoid, hitl]
+  added: 2026-10-07
