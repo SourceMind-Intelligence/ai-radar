@@ -1036,3 +1036,21 @@
   access: closed
   tags: [memory, vla, long-horizon, manipulation]
   added: 2026-10-07
+
+- id: ontoplan
+  name: OntoPlan
+  title: >-
+    OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable
+    Robot Task Planning
+  date: 2026-10
+  summary: >-
+    Ontology-grounded scene representation aligning objects, spaces, relations and states in
+    one symbolic vocabulary, plus an agentic planner that retrieves only task-relevant scene
+    facts, formalizes goals and constraints, and emits executable plans for large
+    environments.
+  links:
+    paper: https://arxiv.org/abs/2610.07649
+  access: closed
+  tags: [scene-graph, planning, long-horizon, agentic-loop]
+  note: NeurIPS 2026.
+  added: 2026-10-08

@@ -868,3 +868,31 @@
   access: closed
   tags: [safety, vla, uncertainty]
   added: 2026-10-07
+
+- id: embodied-jailbreak-guardrails
+  name: Embodied jailbreak guardrails benchmark
+  title: Benchmarking Jailbreak Guardrails for Embodied Agents
+  date: 2026-10
+  summary: >-
+    Pluggable evaluation that treats the embodied agent as a fixed backend and each
+    guardrail as a module intervening at perception, planning or control, testing six
+    representative guardrails against template-based and automated jailbreaks.
+  links:
+    paper: https://arxiv.org/abs/2610.06122
+  access: closed
+  tags: [security, safety, benchmark]
+  added: 2026-10-08
+
+- id: implied-harm-vla
+  name: Implied Harm in VLA Instructions
+  title: 'What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions'
+  date: 2026-10
+  summary: >-
+    Holds robot tasks fixed while varying how explicitly harmful intent is stated: pi0.5
+    completes tasks regardless, text guards miss most implied-harm requests, and
+    harmful/harmless separability in activations weakens after robot training.
+  links:
+    paper: https://arxiv.org/abs/2610.05818
+  access: closed
+  tags: [safety, security, vla]
+  added: 2026-10-08

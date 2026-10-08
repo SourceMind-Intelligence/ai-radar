@@ -2186,3 +2186,33 @@
   access: closed
   tags: [benchmark, vla, manipulation, real-world]
   added: 2026-10-07
+
+- id: bigym-2
+  name: BiGym 2.0
+  title: >-
+    BiGym 2.0: Benchmarking Learned and Agent-Developed Policies for Humanoid Household
+    Manipulation
+  date: 2026-10
+  summary: >-
+    20 household tasks on a simulated Unitree G1 with a unified whole-body controller and 60
+    VR demonstrations per task, benchmarking VLA fine-tuning, imitation learning,
+    demo-driven RL and cold-start coding agents under the same budget.
+  links:
+    paper: https://arxiv.org/abs/2610.07594
+  access: closed
+  tags: [benchmark, humanoid, code-as-policy, manipulation]
+  added: 2026-10-08
+
+- id: wm-last-exam-physics
+  name: World Models' Last Exam in Physics
+  title: World Models' Last Exam in Physics
+  date: 2026-10
+  summary: >-
+    Measurement-based benchmark of 40 controlled tasks across mechanics, optics, fluids,
+    thermal and phase change, electromagnetism and surface tension, scoring physical
+    consistency of video world models without reference videos.
+  links:
+    paper: https://arxiv.org/abs/2610.08791
+  access: closed
+  tags: [benchmark, world-model, video]
+  added: 2026-10-08

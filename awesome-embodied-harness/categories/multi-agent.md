@@ -3,12 +3,13 @@
 # Multi-Robot & Fleet Orchestration
 
 > Coordinating multiple robots, fleets and human-robot teams with language-model agents.  
-> Layer: L4 · 46 entries · [overview](../README.md#multi-agent) · [survey](../SURVEY.md)
+> Layer: L4 · 47 entries · [overview](../README.md#multi-agent) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**MRPilot**](https://arxiv.org/abs/2610.07477 "MRPilot: Supervising and Intervening LLM-Based Multi-Robot Teams through Mixed Reality") · 2026-10 — Mixed-reality interface for supervising LLM-directed heterogeneous robot teams: plans and execution states are shown as structured commitments across situated and overview views, supporting forming, reviewing, following and repairing; evaluated in a 20-participant VR study.
 - ⚪ [**DuoMind**](https://arxiv.org/abs/2610.02161 "DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication") · 2026-10 — Distributed hierarchical multi-robot framework: each robot pairs a VLM orchestrator, which reasons over its observations and peer messages, with a VLA executor, and robots coordinate through semantic messages; introduces the RoboPoly long-horizon coordination benchmark.
 - ⚪ [**RoboTalk**](https://arxiv.org/abs/2609.23997 "RoboTalk: Learning Multi-Robot Communication and Coordination from Multimodal Demonstrations") · 2026-09 · UMass Amherst et al. — Synthetic data pipeline and dataset of 7,950 multimodal trajectories over 53 kitchen mobile-manipulation tasks, with leader-follower planning, tool calls, rationales and natural-language messages, for training small on-device VLMs to communicate and coordinate. _Note: First-party result of 77% success on held-out tasks after fine-tuning vs ~2% untuned; dataset release not verified._
 - ⚪ [**Robion**](https://arxiv.org/abs/2609.12075 "Efficient Vision-Language-Action Management and Serving for Robot Factories") · 2026-09 · Max Planck Institute for Software Systems — Serving and management system for fleet-scale VLA inference on multi-GPU edge servers under latency SLOs, co-scheduling VLM and action-diffusion stages on one GPU and placing multiple models; reports up to 64 robots served from a 4-GPU server (first-party).

@@ -3,12 +3,13 @@
 # Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 48 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
+> Layer: L5 · 49 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**VeriFine**](https://arxiv.org/abs/2610.08761 "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning") · 2026-10 — Agent harness that co-evolves policy, curriculum and judge for embodied reasoning: a rubric judge diagnoses failures and builds an adaptive curriculum, and when progress plateaus a judge-improvement loop queries humans on informative failures to refine the judge. [project](https://veri-fine.github.io/)
 - ⚪ [**OGAM**](https://arxiv.org/abs/2610.05878 "OGAM: Connecting Systematic Testing to Runtime Assurance through Object-Grounded Attention Monitoring for VLA Policies") · 2026-10 — Systematic out-of-benchmark testing of VLAs (OpenVLA, OpenVLA-OFT, UniVLA, pi0.5) with scene-grounded instructions and paraphrases, plus a runtime monitor that flags failures from gradient-weighted attention projected onto object masks.
 - ⚪ [**DiVeR**](https://arxiv.org/abs/2610.04933 "DiVeR: Decision-Critical Verifier Learning for VLA Test-Time Scaling") · 2026-10 — Verifier for VLA test-time scaling that estimates decision criticality from the dispersion of sampled action candidates and reweights verifier learning toward the sparse states where action choice changes outcomes.
 - ⚪ [**Self-compensating VLA**](https://arxiv.org/abs/2609.37334 "Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing") · 2026-09 — Deployment-time adaptation that updates a VLA online from the residual between commanded and executed motion, without rewards or labels, to pre-compensate for wear, backlash and payload; adds the RoboStress simulated execution-error benchmark.

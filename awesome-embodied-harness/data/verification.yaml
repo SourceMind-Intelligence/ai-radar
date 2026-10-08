@@ -876,3 +876,19 @@
   access: closed
   tags: [success-detection, reward-model, vla]
   added: 2026-10-07
+
+- id: verifine
+  name: VeriFine
+  title: 'VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning'
+  date: 2026-10
+  summary: >-
+    Agent harness that co-evolves policy, curriculum and judge for embodied reasoning: a
+    rubric judge diagnoses failures and builds an adaptive curriculum, and when progress
+    plateaus a judge-improvement loop queries humans on informative failures to refine the
+    judge.
+  links:
+    paper: https://arxiv.org/abs/2610.08761
+    project: https://veri-fine.github.io/
+  access: closed
+  tags: [reward-model, self-improving, hitl, spatial-reasoning]
+  added: 2026-10-08

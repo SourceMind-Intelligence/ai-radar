@@ -822,3 +822,19 @@
   access: closed
   tags: [multi-robot, uav]
   added: 2026-10-04
+
+- id: mrpilot
+  name: MRPilot
+  title: >-
+    MRPilot: Supervising and Intervening LLM-Based Multi-Robot Teams through Mixed Reality
+  date: 2026-10
+  summary: >-
+    Mixed-reality interface for supervising LLM-directed heterogeneous robot teams: plans
+    and execution states are shown as structured commitments across situated and overview
+    views, supporting forming, reviewing, following and repairing; evaluated in a
+    20-participant VR study.
+  links:
+    paper: https://arxiv.org/abs/2610.07477
+  access: closed
+  tags: [multi-robot, hitl, planning]
+  added: 2026-10-08

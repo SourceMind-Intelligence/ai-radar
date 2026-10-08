@@ -810,3 +810,36 @@
   access: closed
   tags: [data-generation, long-horizon, manipulation, benchmark]
   added: 2026-10-06
+
+- id: embodiedsmith
+  name: EmbodiedSmith
+  title: >-
+    EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in
+    Simulation
+  date: 2026-10
+  summary: >-
+    Unifies asset, scene and task generation for embodied data in an agentic refinement loop
+    where scene generation anticipates task needs and task generation drives targeted scene
+    edits, improving long-horizon task generation success.
+  links:
+    paper: https://arxiv.org/abs/2610.07969
+  access: closed
+  tags: [data-generation, self-improving, agentic-loop, long-horizon]
+  added: 2026-10-08
+
+- id: smart-articulated
+  name: SMART
+  title: >-
+    SMART: Zero-Shot Sim-to-Real Articulated Object Manipulation via Large-Scale Synthetic
+    Pretraining
+  aliases: [SMART-Sim]
+  date: 2026-10
+  summary: >-
+    Large-scale synthesis of articulated-object manipulation demonstrations on an
+    articulation-aware simulation platform (SMART-Sim) with part-level semantics and agentic
+    task generation, used to pretrain policies that transfer zero-shot to real robots.
+  links:
+    paper: https://arxiv.org/abs/2610.07652
+  access: closed
+  tags: [data-generation, sim2real, manipulation, dataset]
+  added: 2026-10-08

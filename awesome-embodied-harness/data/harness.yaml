@@ -2887,3 +2887,19 @@
   access: closed
   tags: [agentic-loop, memory, humanoid, hitl]
   added: 2026-10-07
+
+- id: emho
+  name: EMHO
+  title: 'EMHO: EMbodied Agent Harness Optimization via Experience Traces'
+  aliases: [EMbodied Agent Harness Optimization, EMHO-Merge]
+  date: 2026-10
+  summary: >-
+    Keeps the embodied model frozen and iteratively rewrites its harness (progress
+    monitoring, vision-tool use, grounding, failure responses) by analysing execution traces
+    and prior harness versions under sparse feedback; EMHO-Merge combines per-subtask gains
+    into one shared harness.
+  links:
+    paper: https://arxiv.org/abs/2610.08432
+  access: closed
+  tags: [agentic-loop, self-improving, tool-use]
+  added: 2026-10-08

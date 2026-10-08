@@ -2,10 +2,18 @@
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
 
-- name: RACE (When to Switch)
-  url: https://arxiv.org/abs/2610.05719
-  title: 'When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models'
-  first_seen: 2026-10-07
-  last_checked: 2026-10-07
+- name: Attacca
+  url: https://arxiv.org/abs/2610.07785
+  title: 'Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents'
+  first_seen: 2026-10-08
+  last_checked: 2026-10-08
   suggested_category: policy
-  reason: Verified; over the daily cap on 2026-10-07. Predicts subskill transition timing to make long action chunks reliable.
+  reason: Verified; over the daily cap on 2026-10-08. Goal-conditioned policies trained on full search-to-interact sequences for chained long-horizon tasks; project page attacca-project.github.io.
+
+- name: VOMMI
+  url: https://arxiv.org/abs/2610.08220
+  title: 'VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation'
+  first_seen: 2026-10-08
+  last_checked: 2026-10-08
+  suggested_category: data
+  reason: Verified; over the daily cap on 2026-10-08. Portable RGB demonstration collection with visual-odometry conditioning for mobile-manipulation VLA post-training.

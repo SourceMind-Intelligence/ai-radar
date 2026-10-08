@@ -1609,3 +1609,19 @@
   tags: [dual-system, vla, uncertainty]
   note: NeurIPS 2026.
   added: 2026-10-07
+
+- id: race-chunk-extension
+  name: RACE
+  title: >-
+    When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models
+  aliases: [Reliable Action-Chunk Extension]
+  date: 2026-10
+  summary: >-
+    Finds that errors in long VLA action chunks concentrate at subskill transitions, and
+    predicts transition timing from an auxiliary one-step denoising pass to condition action
+    generation, enabling longer chunks with fewer pauses.
+  links:
+    paper: https://arxiv.org/abs/2610.05719
+  access: closed
+  tags: [vla, manipulation]
+  added: 2026-10-08
