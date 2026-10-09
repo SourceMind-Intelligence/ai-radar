@@ -3,13 +3,15 @@
 # Safety, Guardrails & Security
 
 > Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.  
-> Layer: L5 · 52 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
+> Layer: L5 · 54 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**WBAG**](https://arxiv.org/abs/2610.01083 "WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation") · 2026-10 — Inference-time VLA safety layer that models the whole arm plus grasp-dependent attached-object geometry as a changing safe set and turns it into differentiable CBF constraints that minimally modify the VLA's operational-space action; evaluated on SafeLIBERO.
+- ⚪ [**TMT**](https://arxiv.org/abs/2610.09462 "TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks") · 2026-10 — Runtime backdoor detector for VLAs trained only on benign rollouts: a token-manifold branch flags suspicious input structure and a latent-transition branch confirms it through adjacent-layer prediction errors; also explores purification by self-distillation.
+- ⚪ [**SOUL**](https://arxiv.org/abs/2610.09496 "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models") · 2026-10 — Identifies state hallucination, a VLA acting as if an unrealized robot-object state had been reached, links it to sparse-autoencoder features and weakened attention, and selectively unlearns the associated policy knowledge.
 - ⚪ [**Implied Harm in VLA Instructions**](https://arxiv.org/abs/2610.05818 "What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions") · 2026-10 — Holds robot tasks fixed while varying how explicitly harmful intent is stated: pi0.5 completes tasks regardless, text guards miss most implied-harm requests, and harmful/harmless separability in activations weakens after robot training.
 - ⚪ [**Feasible-Future Decoding**](https://arxiv.org/abs/2610.05166 "A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies") · 2026-10 — Shows that a locally safe, likely action can still leave no policy-supported route to safe completion, derives the feasible-future mass under a frozen VLA, and approximates it with a selective finite-candidate decoder that also serves as an alarm.
 - ⚪ [**Embodied jailbreak guardrails benchmark**](https://arxiv.org/abs/2610.06122 "Benchmarking Jailbreak Guardrails for Embodied Agents") · 2026-10 — Pluggable evaluation that treats the embodied agent as a fixed backend and each guardrail as a module intervening at perception, planning or control, testing six representative guardrails against template-based and automated jailbreaks.

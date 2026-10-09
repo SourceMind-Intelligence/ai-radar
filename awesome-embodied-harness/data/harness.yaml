@@ -2903,3 +2903,84 @@
   access: closed
   tags: [agentic-loop, self-improving, tool-use]
   added: 2026-10-08
+
+- id: robo-cop
+  name: Robo-COP
+  title: Co-Evolving Robot Orchestrators and Policies through Deployment
+  date: 2026-10
+  summary: >-
+    Co-evolves a VLM orchestrator and the VLA it calls during deployment: the system curates
+    skill demonstrations from its own rollouts to fine-tune the policy and retunes the
+    orchestrator to the updated policy, so the policy stops being the system's fixed
+    bottleneck.
+  links:
+    paper: https://arxiv.org/abs/2610.09228
+  access: closed
+  tags: [agentic-loop, self-improving, vla, dual-system]
+  added: 2026-10-09
+
+- id: physevo
+  name: PhysEvo
+  title: 'PhysEvo: Astra Can Act, Let It'
+  date: 2026-10
+  summary: >-
+    Physical recursive self-improvement around one frozen model (GPT-6 Astra): a task agent
+    runs robot tasks and a meta-agent diagnoses failures from trajectories, revises tools,
+    skills and its own diagnostic tools, and tests corrections, with no weight updates or
+    separate action policy; evaluated on 42 RoboDojo tasks.
+  links:
+    paper: https://arxiv.org/abs/2610.08995
+  access: closed
+  tags: [agentic-loop, self-improving, skill-library, manipulation]
+  added: 2026-10-09
+
+- id: embodiedrsi
+  name: EmbodiedRSI
+  title: >-
+    EmbodiedRSI: Active Continual Robot Learning Through Hypothesis-Guided Co-Evolution
+  date: 2026-10
+  summary: >-
+    Self-evolving harness that keeps competing code and skill hypotheses in a hypothesis
+    graph and chooses physical experiments by value of information to tell them apart,
+    turning robot trials into improved code and skills under a fast-slow dual-system
+    architecture.
+  links:
+    paper: https://arxiv.org/abs/2610.10498
+  access: closed
+  tags: [agentic-loop, self-improving, code-as-policy, skill-library]
+  note: A different paper from EmbodiRSI (2609.38905), despite the similar name.
+  added: 2026-10-09
+
+- id: agentic-rsr
+  name: Agentic RSR
+  title: >-
+    Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded
+    Robot Policies
+  date: 2026-10
+  summary: >-
+    From a workspace video, task description and robot model, an agent reconstructs a metric
+    MuJoCo scene with visual-feedback refinement, then a coding agent develops an executable
+    policy that moves from privileged poses to visual observations and randomized simulation
+    before real-robot execution.
+  links:
+    paper: https://arxiv.org/abs/2610.10479
+  access: closed
+  tags: [agentic-loop, code-as-policy, sim2real, real-world]
+  added: 2026-10-09
+
+- id: hart-anomaly-triage
+  name: Evidence-driven HART for anomaly triage
+  title: >-
+    Toward Evidence-Driven Human-Agent-Robot Teaming for Earth-Independent Anomaly Triage
+  date: 2026-10
+  summary: >-
+    Architecture for deep-space anomaly triage where an agentic coordinator manages
+    hypotheses, evidence provenance and uncertainty over bounded, typed services, a
+    crew-facing embodied agent elicits observations, and a mobile robot gathers targeted
+    evidence.
+  links:
+    paper: https://arxiv.org/abs/2610.08933
+  access: closed
+  tags: [agentic-loop, hitl, safety, protocol]
+  note: IROS 2026 Space Robotics Workshop.
+  added: 2026-10-09

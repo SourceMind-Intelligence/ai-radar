@@ -2216,3 +2216,66 @@
   access: closed
   tags: [benchmark, world-model, video]
   added: 2026-10-08
+
+- id: roboquest
+  name: RoboQuest
+  title: 'RoboQuest: Generalist Physical Agents that Search, Inspect and Test'
+  date: 2026-10
+  summary: >-
+    Benchmark of ten mobile-manipulation tasks for goal-directed embodied exploration, where
+    agents must search, inspect unobserved properties or test unfamiliar tools, use the
+    evidence to adapt, and decide when to commit; frontier models evaluated.
+  links:
+    paper: https://arxiv.org/abs/2610.10388
+  access: closed
+  tags: [benchmark, mobile-manipulation, agentic-loop]
+  added: 2026-10-09
+
+- id: rt-safe
+  name: RT-Safe
+  title: 'RT-Safe: Benchmarking Agent Safety in Real-Time Embodied Environment'
+  date: 2026-10
+  summary: >-
+    Simulated urban benchmark of embodied-agent safety under real-time constraints, with
+    moving actors, hazards and traffic rules, where the world keeps moving during inference,
+    so safety depends on both decision quality and latency.
+  links:
+    paper: https://arxiv.org/abs/2610.09294
+  access: closed
+  tags: [benchmark, safety, navigation]
+  added: 2026-10-09
+
+- id: openvitac
+  name: OpenViTac
+  title: >-
+    OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real
+    Framework
+  date: 2026-10
+  summary: >-
+    Visuo-tactile manipulation benchmark with paired simulation and real settings across
+    four tactile capability dimensions for evaluating VLA, world-action and VTLA policies,
+    plus a study of tactile representations and integration strategies.
+  links:
+    paper: https://arxiv.org/abs/2610.10384
+    project: https://fvl-repo.github.io/OpenViTac/
+  access: closed
+  tags: [benchmark, manipulation, vla, sim2real]
+  added: 2026-10-09
+
+- id: rephrase-before-you-act
+  name: Rephrase Before You Act
+  title: >-
+    Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in
+    Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Shows single-word instruction edits swing VLA success by tens of points (first-party,
+    LIBERO) and reduces it without changing the policy: an LLM distils scored phrasings of a
+    few training tasks into explicit rewrite rules applied before execution.
+  links:
+    paper: https://arxiv.org/abs/2610.10526
+    code: https://github.com/sttawm/phrase-rl
+    project: https://sttawm.github.io/rephrase-before-you-act
+  access: open
+  tags: [benchmark, vla, manipulation]
+  added: 2026-10-09

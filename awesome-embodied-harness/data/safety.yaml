@@ -896,3 +896,36 @@
   access: closed
   tags: [safety, security, vla]
   added: 2026-10-08
+
+- id: tmt-backdoor
+  name: TMT
+  title: >-
+    TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks
+  date: 2026-10
+  summary: >-
+    Runtime backdoor detector for VLAs trained only on benign rollouts: a token-manifold
+    branch flags suspicious input structure and a latent-transition branch confirms it
+    through adjacent-layer prediction errors; also explores purification by
+    self-distillation.
+  links:
+    paper: https://arxiv.org/abs/2610.09462
+  access: closed
+  tags: [security, vla]
+  added: 2026-10-09
+
+- id: soul-unlearning
+  name: SOUL
+  title: >-
+    Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action
+    Models
+  aliases: [Sparse feature pOlicy UnLearning]
+  date: 2026-10
+  summary: >-
+    Identifies state hallucination, a VLA acting as if an unrealized robot-object state had
+    been reached, links it to sparse-autoencoder features and weakened attention, and
+    selectively unlearns the associated policy knowledge.
+  links:
+    paper: https://arxiv.org/abs/2610.09496
+  access: closed
+  tags: [safety, vla, failure-recovery]
+  added: 2026-10-09

@@ -892,3 +892,19 @@
   access: closed
   tags: [reward-model, self-improving, hitl, spatial-reasoning]
   added: 2026-10-08
+
+- id: aeroeval
+  name: AeroEval
+  title: >-
+    AeroEval: Staged Program and Execution Validation for AI-Generated Drone Missions
+  date: 2026-10
+  summary: >-
+    Middleware for staged validation of LLM-generated drone missions, combining
+    deterministic program analysis (syntax, platform API use, mission intent) with
+    context-grounded LLM agents that check realized behaviour from execution trajectories
+    and localize failures.
+  links:
+    paper: https://arxiv.org/abs/2610.09764
+  access: closed
+  tags: [code-as-policy, success-detection, uav]
+  added: 2026-10-09
