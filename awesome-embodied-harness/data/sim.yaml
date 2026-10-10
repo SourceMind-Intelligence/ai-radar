@@ -843,3 +843,20 @@
   access: closed
   tags: [data-generation, sim2real, manipulation, dataset]
   added: 2026-10-08
+
+- id: usdcraft
+  name: USDCraft
+  title: >-
+    USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for
+    Simulation
+  date: 2026-10
+  summary: >-
+    A pretrained LLM writes and revises executable programs that build simulation-ready
+    articulated assets from partial or corrupted meshes, guided by a metric textual analysis
+    of the source geometry; no task-specific training.
+  links:
+    paper: https://arxiv.org/abs/2610.11322
+    project: https://xingyoujun.github.io/usdcraft
+  access: closed
+  tags: [data-generation, code-as-policy, sim2real]
+  added: 2026-10-10

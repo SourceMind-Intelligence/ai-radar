@@ -3,12 +3,13 @@
 # Simulators & Environments
 
 > Physics simulators, rendering stacks and environment platforms for building and testing harnesses.  
-> Layer: L6 · 47 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
+> Layer: L6 · 48 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**USDCraft**](https://arxiv.org/abs/2610.11322 "USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for Simulation") · 2026-10 — A pretrained LLM writes and revises executable programs that build simulation-ready articulated assets from partial or corrupted meshes, guided by a metric textual analysis of the source geometry; no task-specific training. [project](https://xingyoujun.github.io/usdcraft)
 - ⚪ [**SMART**](https://arxiv.org/abs/2610.07652 "SMART: Zero-Shot Sim-to-Real Articulated Object Manipulation via Large-Scale Synthetic Pretraining") · 2026-10 — Large-scale synthesis of articulated-object manipulation demonstrations on an articulation-aware simulation platform (SMART-Sim) with part-level semantics and agentic task generation, used to pretrain policies that transfer zero-shot to real robots.
 - ⚪ [**RoboChemGym**](https://arxiv.org/abs/2610.02708 "RoboChemGym: A Protocol-Driven Generative Simulation Framework for Long-Horizon Chemical Manipulation") · 2026-10 — Generates simulated demonstrations aligned with real chemistry protocols, with self-improving task synthesis that refines execution and scene configuration for multi-object protocols of more than 10 steps; includes a hierarchical benchmark.
 - 🟢 [**LiteReality-Agent**](https://arxiv.org/abs/2610.01863 "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction") · 2026-10 — Treats real-to-sim scene reconstruction as coding: a coding agent gathers evidence from RGB-D scans with specialised tools and edits an executable Room.py inside an observe-edit-verify harness, producing articulated, simulation-ready digital twins. [code](https://github.com/LiteReality/LiteReality-Agent) · [project](https://litereality.github.io/agent/)

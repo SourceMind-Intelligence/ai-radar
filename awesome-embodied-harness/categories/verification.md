@@ -3,13 +3,15 @@
 # Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 50 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
+> Layer: L5 · 52 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**VeriFine**](https://arxiv.org/abs/2610.08761 "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning") · 2026-10 — Agent harness that co-evolves policy, curriculum and judge for embodied reasoning: a rubric judge diagnoses failures and builds an adaptive curriculum, and when progress plateaus a judge-improvement loop queries humans on informative failures to refine the judge. [project](https://veri-fine.github.io/)
+- ⚪ [**Skill-seam observation-space shift**](https://arxiv.org/abs/2610.10810 "Diagnosing and Recovering from Observation-Space Shift at Long-Horizon Skill Seams") · 2026-10 — Finds that chained-skill failures mostly come from scene state displaced by earlier skills (e.g., an open drawer), not robot configuration, and builds a learned detect-restore-resume system: a progress monitor detects stalls and a policy restores the scene before resuming.
+- ⚪ [**RESETTLE**](https://arxiv.org/abs/2610.12185 "RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control") · 2026-10 — Model-agnostic recovery at the action interface of frozen policies: persistent disagreement between two independently sampled action proposals triggers retrieval of a same-task demonstration (V-JEPA features), followed by a state-servo prior plus guarded visual residual correction.
 - ⚪ [**OGAM**](https://arxiv.org/abs/2610.05878 "OGAM: Connecting Systematic Testing to Runtime Assurance through Object-Grounded Attention Monitoring for VLA Policies") · 2026-10 — Systematic out-of-benchmark testing of VLAs (OpenVLA, OpenVLA-OFT, UniVLA, pi0.5) with scene-grounded instructions and paraphrases, plus a runtime monitor that flags failures from gradient-weighted attention projected onto object masks.
 - ⚪ [**DiVeR**](https://arxiv.org/abs/2610.04933 "DiVeR: Decision-Critical Verifier Learning for VLA Test-Time Scaling") · 2026-10 — Verifier for VLA test-time scaling that estimates decision criticality from the dispersion of sampled action candidates and reweights verifier learning toward the sparse states where action choice changes outcomes.
 - ⚪ [**AeroEval**](https://arxiv.org/abs/2610.09764 "AeroEval: Staged Program and Execution Validation for AI-Generated Drone Missions") · 2026-10 — Middleware for staged validation of LLM-generated drone missions, combining deterministic program analysis (syntax, platform API use, mission intent) with context-grounded LLM agents that check realized behaviour from execution trajectories and localize failures.

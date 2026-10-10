@@ -3,12 +3,13 @@
 # Action Interfaces, Skills & Tool Protocols
 
 > How robot capabilities are exposed to models: skills as tools, code-as-action APIs, MCP servers, semantic action spaces, keypoint and affordance constraints.  
-> Layer: L2 · 44 entries · [overview](../README.md#interface) · [survey](../SURVEY.md)
+> Layer: L2 · 45 entries · [overview](../README.md#interface) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**iAm.md**](https://arxiv.org/abs/2610.10962 "iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown Open-Vocabulary Domains") · 2026-10 — Markdown standard and generation framework in which a robot describes its own capabilities so an agent can check, before generating behaviour code, whether the robot and environment actually support a requested operation, reducing grounding failures. _Note: AIRO 2026 workshop._ [project](https://yurimachine.github.io/iAm.md/)
 - ⚪ [**MCP Navigation Representation Layer**](https://arxiv.org/abs/2609.27340 "Spatial and Semantic Reasoning for LLM-Driven Robot Navigation via MCP") · 2026-09 — Non-invasive layer that turns ROS navigation data into LLM-usable context exposed as MCP tools: occupancy grids become metric, pose-aware map images for goal reasoning, and waypoint-level semantic annotations record observations with robot poses. _Note: First-party simulation results (over 97% map coverage; spatial and semantic goal selection)._
 - 🟢 [**Isaac ROS 5.0 agent skills**](https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/) · 2026-09 · NVIDIA — Isaac ROS 5.0 adds skills in the open Agent Skills format so coding assistants can run Isaac ROS workflows, e.g. Mission Control skills that bring up the fleet stack, change maps or fleets and submit and verify missions; more Isaac skills sit in NVIDIA's skills catalog. _Note: Developer-facing: the skills target coding assistants that build and operate Isaac ROS systems rather than a runtime robot action space. The docs also cover Mission Control and Mission Dispatch MCP servers, and the blog announces a standalone agent-ready pick-and-place skill._ [code](https://github.com/NVIDIA/skills) · [docs](https://nvidia-isaac-ros.github.io/v/release-5.0/releases/index.html)
 - ⚪ [**APPL**](https://arxiv.org/abs/2609.35690 "Agent Priors-guided Policy Learning") · 2026-09 — Uses each skill policy's structural prior (what a behaviour depends on, such as gripper pose relative to an object) both to shape training and, stated in language, as the interface a composing agent reads to decide where the skill applies; a construction agent segments demonstrations into skills.

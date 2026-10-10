@@ -908,3 +908,36 @@
   access: closed
   tags: [code-as-policy, success-detection, uav]
   added: 2026-10-09
+
+- id: resettle
+  name: RESETTLE
+  title: >-
+    RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient
+    Corrective Control
+  date: 2026-10
+  summary: >-
+    Model-agnostic recovery at the action interface of frozen policies: persistent
+    disagreement between two independently sampled action proposals triggers retrieval of a
+    same-task demonstration (V-JEPA features), followed by a state-servo prior plus guarded
+    visual residual correction.
+  links:
+    paper: https://arxiv.org/abs/2610.12185
+  access: closed
+  tags: [failure-recovery, uncertainty, vla, manipulation]
+  added: 2026-10-10
+
+- id: skill-seams-oss
+  name: Skill-seam observation-space shift
+  title: >-
+    Diagnosing and Recovering from Observation-Space Shift at Long-Horizon Skill Seams
+  date: 2026-10
+  summary: >-
+    Finds that chained-skill failures mostly come from scene state displaced by earlier
+    skills (e.g., an open drawer), not robot configuration, and builds a learned
+    detect-restore-resume system: a progress monitor detects stalls and a policy restores
+    the scene before resuming.
+  links:
+    paper: https://arxiv.org/abs/2610.10810
+  access: closed
+  tags: [failure-recovery, success-detection, long-horizon, manipulation]
+  added: 2026-10-10

@@ -819,3 +819,21 @@
   access: closed
   tags: [skill-library, agentic-loop, manipulation]
   added: 2026-10-05
+
+- id: iam-md
+  name: iAm.md
+  title: >-
+    iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown
+    Open-Vocabulary Domains
+  date: 2026-10
+  summary: >-
+    Markdown standard and generation framework in which a robot describes its own
+    capabilities so an agent can check, before generating behaviour code, whether the robot
+    and environment actually support a requested operation, reducing grounding failures.
+  links:
+    paper: https://arxiv.org/abs/2610.10962
+    project: https://yurimachine.github.io/iAm.md/
+  access: closed
+  tags: [protocol, code-as-policy, open-vocabulary]
+  note: AIRO 2026 workshop.
+  added: 2026-10-10

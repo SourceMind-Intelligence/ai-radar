@@ -1254,3 +1254,23 @@
   access: closed
   tags: [world-model, self-improving, navigation, rl]
   added: 2026-10-08
+
+- id: dreamtrue
+  name: DreamTrue
+  title: 'DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training'
+  date: 2026-10
+  org: CASIA; Amap (Alibaba)
+  summary: >-
+    Multi-view, cross-embodiment robot world model that renders actions into calibrated
+    image-space conditions and uses counterfactual post-training on modified trajectories to
+    cover failures and varied contacts, for action-faithful video prediction.
+  links:
+    paper: https://arxiv.org/abs/2610.12468
+    code: https://github.com/brave-eai/DreamTrue
+    project: https://brave-eai.github.io/DreamTrue
+    data: https://modelscope.cn/datasets/huoxingdawang/DreamTrue
+  access: open
+  tags: [world-model, cross-embodiment, video, manipulation]
+  note: >-
+    Calibration, video-model and reward code plus checkpoints released; full data to follow.
+  added: 2026-10-10

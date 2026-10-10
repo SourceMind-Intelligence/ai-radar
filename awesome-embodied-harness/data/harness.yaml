@@ -2984,3 +2984,97 @@
   tags: [agentic-loop, hitl, safety, protocol]
   note: IROS 2026 Space Robotics Workshop.
   added: 2026-10-09
+
+- id: navgpt-3
+  name: NavGPT-3
+  title: 'NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime'
+  date: 2026-10
+  summary: >-
+    Navigation harness with an OS-like runtime: reasoning, acting and monitoring run as
+    threads with their own context, tools and permissions, and the runtime schedules which
+    thread drives the robot so it can react through interruption; underneath, a NavGPT VLA
+    trained on 19.28M examples.
+  links:
+    paper: https://arxiv.org/abs/2610.10787
+    code: https://github.com/metacognitionai/NavGPT-3
+    project: https://metacognitionai.github.io/NavGPT3/
+    weights: https://huggingface.co/Metacognition-AI/NavGPT3-8B
+  access: open
+  tags: [agentic-loop, dual-system, navigation, vla]
+  added: 2026-10-10
+
+- id: supernav
+  name: SuperNav
+  title: 'SuperNav: An Agentic Navigation System for Any Task in Any Scene'
+  date: 2026-10
+  summary: >-
+    Equips a pretrained multimodal LLM with a navigation agent harness, with no
+    navigation-specific fine-tuning: the model interprets requests, understands scenes and
+    decides, while motion execution is delegated to navigation tools.
+  links:
+    paper: https://arxiv.org/abs/2610.12126
+    code: https://github.com/zju3dv/SuperNav
+    project: https://zju3dv.github.io/SuperNav/
+  access: open
+  tags: [agentic-loop, tool-use, navigation, open-vocabulary]
+  added: 2026-10-10
+
+- id: spatialharness
+  name: SpatialHarness
+  title: 'SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation'
+  date: 2026-10
+  summary: >-
+    Test-time harness for frontier multimodal policies (e.g., GPT-6 Astra): keeps an online
+    simulated scene synchronized with real execution, finds task-critical spatial
+    relationships and renders virtual views that expose them, with no fine-tuning or new
+    cameras.
+  links:
+    paper: https://arxiv.org/abs/2610.12457
+  access: closed
+  tags: [agentic-loop, spatial-reasoning, manipulation, real-world]
+  added: 2026-10-10
+
+- id: embodied-turing-machines
+  name: Embodied Turing Machines (COAP)
+  title: 'Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement'
+  aliases: [COAP, Code-Only-as-Policy]
+  date: 2026-10
+  summary: >-
+    Argues decision making can be written entirely in code if robot, environment and task
+    state are tracked accurately: Code-Only-as-Policy (COAP) measures state from images and
+    proprioception and decides in code, with a shared library across tasks and no VLM or VLA
+    in the loop at run time.
+  links:
+    paper: https://arxiv.org/abs/2610.12369
+  access: closed
+  tags: [code-as-policy, self-improving, skill-library]
+  added: 2026-10-10
+
+- id: roboaware
+  name: RoboAware
+  title: 'RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes'
+  date: 2026-10
+  summary: >-
+    Adds a learned state-conditioned coordinator to a coding agent's skill orchestration,
+    deciding which policy family (modular skills or frozen end-to-end policies) should act;
+    trained on counterfactual outcomes from state-locked branching that executes each
+    admissible family from the same state.
+  links:
+    paper: https://arxiv.org/abs/2610.11480
+  access: closed
+  tags: [code-as-policy, skill-library, agentic-loop, manipulation]
+  added: 2026-10-10
+
+- id: skill-slm
+  name: Skill-SLM
+  title: 'Skill-SLM: Agent Skill-driven Small Language Models for Reliable Robot Operation'
+  date: 2026-10
+  summary: >-
+    Reframes onboard small-language-model robot operation as task decomposition plus skill
+    composition from a skill library, constrained by a skill-aware context-free grammar so
+    outputs are executable robot operations.
+  links:
+    paper: https://arxiv.org/abs/2610.10812
+  access: closed
+  tags: [skill-library, on-device, planning]
+  added: 2026-10-10

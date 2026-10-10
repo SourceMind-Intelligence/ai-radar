@@ -2279,3 +2279,17 @@
   access: open
   tags: [benchmark, vla, manipulation]
   added: 2026-10-09
+
+- id: maniunit
+  name: ManiUnit
+  title: 'ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks'
+  date: 2026-10
+  summary: >-
+    Skill-level dataset (137,899 segments, 21 skill types, 417 subtasks) and 1,260-instance
+    benchmark built from 50 BEHAVIOR-1K activities, designed to diagnose skill selection and
+    inherited-state deviation in long-horizon mobile manipulation.
+  links:
+    paper: https://arxiv.org/abs/2610.12089
+  access: closed
+  tags: [benchmark, dataset, mobile-manipulation, long-horizon]
+  added: 2026-10-10
