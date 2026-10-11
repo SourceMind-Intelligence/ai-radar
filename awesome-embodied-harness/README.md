@@ -1,7 +1,7 @@
 # Awesome Embodied Harness [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <!-- BEGIN GENERATED: badges -->
-![entries](https://img.shields.io/badge/entries-1013-blue) ![categories](https://img.shields.io/badge/categories-14-blueviolet) ![last radar](https://img.shields.io/badge/last%20radar-2026--10--10-success) ![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)
+![entries](https://img.shields.io/badge/entries-1017-blue) ![categories](https://img.shields.io/badge/categories-14-blueviolet) ![last radar](https://img.shields.io/badge/last%20radar-2026--10--11-success) ![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)
 <!-- END GENERATED: badges -->
 
 > A curated, continuously updated survey of the **embodied harness** stack: everything around a foundation model that turns it into an agent acting in the physical world. A daily radar agent keeps it current.
@@ -47,14 +47,14 @@ flowchart TB
 - [Action Interfaces, Skills & Tool Protocols](#interface) (45)
 - [World State, Memory & Spatial Context](#memory) (59)
 - [Embodied Reasoning Models & Planners](#brain) (47)
-- [VLA Models & Skill Policies](#policy) (88)
+- [VLA Models & Skill Policies](#policy) (91)
 - [World Models](#world-model) (71)
 - [Verification, Failure Detection & Recovery](#verification) (52)
 - [Safety, Guardrails & Security](#safety) (54)
 - [Multi-Robot & Fleet Orchestration](#multi-agent) (47)
 - [Simulators & Environments](#sim) (48)
 - [Benchmarks & Evaluation](#benchmark) (125)
-- [Data, Teleoperation & Training Infrastructure](#data) (91)
+- [Data, Teleoperation & Training Infrastructure](#data) (92)
 <!-- END GENERATED: toc -->
 - [Daily radar](#daily-radar) · [Recently added](#recently-added) · [Contributing](#contributing) · [Citation](#citation)
 
@@ -63,20 +63,24 @@ flowchart TB
 Every day a scheduled agent scans arXiv, Hugging Face, GitHub, lab blogs and news. It checks each find against primary sources, adds qualifying systems to [`data/`](data), and writes a log to [`radar/log/`](radar/log). The procedure is in [radar/PLAYBOOK.md](radar/PLAYBOOK.md) and the watch list is in [radar/sources.yaml](radar/sources.yaml).
 
 <!-- BEGIN GENERATED: radar -->
+- [2026-10-11](radar/log/2026-10-11.md) — Weekend queue drain: four verified policy and data papers promoted (SimVLA, Attacca and NegaAlign among them); simulation-only VLA training reaches real homes (4 added)
 - [2026-10-10](radar/log/2026-10-10.md) — Harnesses get operating systems: NavGPT-3 runs reasoning, acting and monitoring as scheduled threads; SpatialHarness renders virtual views for frozen policies; COAP argues for no model in the loop at all (12 added, 4 candidates)
 - [2026-10-09](radar/log/2026-10-09.md) — The list passes 1,000 entries as self-evolving harnesses start updating the policy too: Robo-COP co-evolves orchestrator and VLA; PhysEvo and EmbodiedRSI improve frozen models through meta-agents and value-of-information experiments (12 added, 2 candidates)
 - [2026-10-08](radar/log/2026-10-08.md) — The harness optimizes itself, and so does its judge: EMHO rewrites a frozen agent's harness from traces while VeriFine co-evolves policy, curriculum and verifier; guardrails for embodied agents look weak (12 added, 2 candidates)
 - [2026-10-07](radar/log/2026-10-07.md) — Context engineering for robot agents: RobotUse, RV-ICL and PreAct-Nav decide what the agent sees, when, and through which subagent or tool (11 added, 1 updated, 1 candidates)
 - [2026-10-06](radar/log/2026-10-06.md) — Sim-to-real becomes a harness problem: Skill2Real, RoboBridge and MobiAgent transfer verified skills and procedures instead of retraining policies (10 added)
 - [2026-10-05](radar/log/2026-10-05.md) — Quiet arXiv Monday, queue cleared: six memory-and-interface papers added, with history-dependent manipulation (HIDE, Divide-and-Remember, BeyondSCe) now a crowded sub-area (6 added, 1 updated, 1 candidates)
-- [2026-10-04](radar/log/2026-10-04.md) — Weekend queue drain: 12 verified over-cap papers promoted; the theme is robustness evaluation, with five new probes of how VLAs and embodied agents fail under change, faults and attack (12 added, 2 candidates)
 <!-- END GENERATED: radar -->
 
 ## Recently added
 
 <!-- BEGIN GENERATED: recent -->
-Added in the 30 days up to 2026-10-10:
+Added in the 30 days up to 2026-10-11:
 
+- 🟢 [**SimVLA**](https://arxiv.org/abs/2610.11248 "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation") · 2026-10 — VLA for mobile manipulation trained only on simulation data: SimAction (35 tasks composed from atomic skills), SimVQA (privileged-state spatial and subtask supervision) and SimDeploy rollouts, transferring zero-shot to real homes for restocking, pouring and cleaning. [code](https://github.com/kyounginbaik/SimVLA) · [project](https://kyounginbaik.github.io/simvla/) · [data](https://huggingface.co/datasets/kyounginbaik/SimVLA-assets) _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
+- ⚪ [**NegaAlign**](https://arxiv.org/abs/2610.11952 "Tell Robot What Not to Do: A Negation Understanding Perspective") · 2026-10 — Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone, trained with teacher-guided alignment, so the policy completes goals while respecting explicit exclusions; introduces the NegaBench simulation benchmark. _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
+- 🟢 [**Attacca**](https://arxiv.org/abs/2610.07785 "Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents") · 2026-10 — Trains visual goal-conditioned policies on full search-to-interact trajectories with goal images decoupled from the execution scene and a target-mask grounding head, so chained tasks can start from wherever the previous task left the agent. [code](https://github.com/attacca-project/attacca) · [project](https://attacca-project.github.io) · [weights](https://huggingface.co/willsuh/attacca) _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
+- ⚪ [**VOMMI**](https://arxiv.org/abs/2610.08220 "VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation") · 2026-10 — Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand views are synchronized, trajectories refined offline with sparse geometric anchors, and local-motion tokens condition VLA post-training through a residual adapter. _(added 2026-10-11 to [Data, Teleoperation & Training Infrastructure](#data))_
 - 🟢 [**NavGPT-3**](https://arxiv.org/abs/2610.10787 "NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime") · 2026-10 — Navigation harness with an OS-like runtime: reasoning, acting and monitoring run as threads with their own context, tools and permissions, and the runtime schedules which thread drives the robot so it can react through interruption; underneath, a NavGPT VLA trained on 19.28M examples. [code](https://github.com/metacognitionai/NavGPT-3) · [project](https://metacognitionai.github.io/NavGPT3/) · [weights](https://huggingface.co/Metacognition-AI/NavGPT3-8B) _(added 2026-10-10 to [Embodied Harnesses](#harness))_
 - 🟢 [**SuperNav**](https://arxiv.org/abs/2610.12126 "SuperNav: An Agentic Navigation System for Any Task in Any Scene") · 2026-10 — Equips a pretrained multimodal LLM with a navigation agent harness, with no navigation-specific fine-tuning: the model interprets requests, understands scenes and decides, while motion execution is delegated to navigation tools. [code](https://github.com/zju3dv/SuperNav) · [project](https://zju3dv.github.io/SuperNav/) _(added 2026-10-10 to [Embodied Harnesses](#harness))_
 - ⚪ [**SpatialHarness**](https://arxiv.org/abs/2610.12457 "SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation") · 2026-10 — Test-time harness for frontier multimodal policies (e.g., GPT-6 Astra): keeps an online simulated scene synchronized with real execution, finds task-critical spatial relationships and renders virtual views that expose them, with no fine-tuning or new cameras. _(added 2026-10-10 to [Embodied Harnesses](#harness))_
@@ -321,20 +325,20 @@ Added in the 30 days up to 2026-10-10:
 ## VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 88 entries · **[full list →](categories/policy.md)**
+> Layer: L1 · 91 entries · **[full list →](categories/policy.md)**
 
 - ⚪ [**TUD**](https://arxiv.org/abs/2610.05025 "Triggering Generalist Reasoning via Predictive Uncertainty for Dual-System VLA") · 2026-10 — Adaptive inference for dual-system VLAs: calls the slow generalist only when the dispersion of re-predicted future actions under the cached context signals rising uncertainty, skipping calls in easy phases with no extra model. _Note: NeurIPS 2026._
+- 🟢 [**SimVLA**](https://arxiv.org/abs/2610.11248 "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation") · 2026-10 — VLA for mobile manipulation trained only on simulation data: SimAction (35 tasks composed from atomic skills), SimVQA (privileged-state spatial and subtask supervision) and SimDeploy rollouts, transferring zero-shot to real homes for restocking, pouring and cleaning. [code](https://github.com/kyounginbaik/SimVLA) · [project](https://kyounginbaik.github.io/simvla/) · [data](https://huggingface.co/datasets/kyounginbaik/SimVLA-assets)
 - ⚪ [**RACE**](https://arxiv.org/abs/2610.05719 "When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models") · 2026-10 — Finds that errors in long VLA action chunks concentrate at subskill transitions, and predicts transition timing from an auxiliary one-step denoising pass to condition action generation, enabling longer chunks with fewer pauses.
+- ⚪ [**NegaAlign**](https://arxiv.org/abs/2610.11952 "Tell Robot What Not to Do: A Negation Understanding Perspective") · 2026-10 — Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone, trained with teacher-guided alignment, so the policy completes goals while respecting explicit exclusions; introduces the NegaBench simulation benchmark.
+- 🟢 [**Attacca**](https://arxiv.org/abs/2610.07785 "Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents") · 2026-10 — Trains visual goal-conditioned policies on full search-to-interact trajectories with goal images decoupled from the execution scene and a target-mask grounding head, so chained tasks can start from wherever the previous task left the agent. [code](https://github.com/attacca-project/attacca) · [project](https://attacca-project.github.io) · [weights](https://huggingface.co/willsuh/attacca)
 - ⚪ [**THAW-VLA**](https://arxiv.org/abs/2609.24682 "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies") · 2026-09 — Adds one feature-alignment term to VLA training so the policy matches cached features from a frozen world model; no teacher at training time or deployment, so the deployed policy keeps the baseline's size and latency.
 - 🟡 [**Rho**](https://arxiv.org/abs/2609.38164 "Rho: A Foundation for Efficiently Adaptable VLA Models") · 2026-09 · Microsoft — Family of open-weight bimanual VLAs with embodiment midtraining for YAM Box, UR AI Trainer and FR3 Duo; a lightweight latent policy learns from corrective feedback to pick noise inputs for the frozen flow-matching action expert, adapting online from a few corrected episodes. _Note: Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training code link found._ [weights](https://huggingface.co/microsoft/rho-base)
 - 🟢 [**Light-O1**](https://www.lightorigins.com/en/blog/light-o1) · 2026-09 · Light Origins — Embodied foundation model pretrained on structured human action recovered from internet video, then post-trained per embodiment; it states in language what an instruction needs from the body before generating actions. The open Light-O1-Preview covers text-to-whole-body action only. _Note: Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced._ [code](https://github.com/lightorigins/Light-O1) · [weights](https://huggingface.co/LightOriginsHQ/Light-O1-Preview)
 - 🟢 [**Grounded Action Model**](https://arxiv.org/abs/2609.23863 "Grounded Action Model: 3D Grounding as a Foundation for Robotics") · 2026-09 — Robot foundation model built on 3D grounding: language, point or box prompts become an object-centric representation with metric geometry that a multi-stream transformer turns into action chunks; runs alone or as the low-level controller under a VLM planner. [code](https://github.com/GehaoZhang6/Grounded-Action-Model) · [project](https://grounded-action-model.github.io/)
 - 🟢 [**ActionPiece**](https://arxiv.org/abs/2609.18487 "ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models") · 2026-09 — Action tokenizer for autoregressive VLAs that preserves near-far relations between actions through joint supervision of representation learning and quantization; introduces a physical rank consistency metric for tokenizer fidelity. [code](https://github.com/DeepCybo-PhysAI/ActionPiece) · [project](https://deepcybo-physai.github.io/ActionPiece/)
-- ⚪ [**In-Context VLA**](https://arxiv.org/abs/2608.05738 "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use") · 2026-08 — Argues free-form chain-of-thought degrades VLA control and instead injects grounded perceptual evidence as context (supervising only actions), with an agentic tool-use interface the policy can query.
-- 🟢 [**GigaBrain-0.7**](https://arxiv.org/abs/2608.15875 "GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture") · 2026-08 · GigaAI — Embodied foundation model with a three-system architecture unifying understanding, prediction and action, pretrained on 37,000+ hours of heterogeneous embodied data with one-stage alignment training; reports gains over GigaBrain-0 and π0.5 in zero-shot and post-training settings. _Note: Comparisons are first-party._ [code](https://github.com/open-gigaai/giga-brain-0) · [blog](https://gigaai.cc/blog/gigabrain07) · [weights](https://huggingface.co/open-gigaai/GigaBrain-0.7-3.5B-Base)
-- 🟢 [**Xiaomi-Robotics-1**](https://arxiv.org/abs/2607.15330 "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories") · 2026-07 · Xiaomi — VLA pretrained on 100k+ hours of UMI trajectories auto-labeled with language describing state transitions, then post-trained on ~10k hours of cross-embodiment robot data for out-of-the-box mobile manipulation in unseen homes; reports scaling with data and model size. _Note: Reports 57.4% on RoboCasa365 (first-party); code and checkpoints released August 2026._ [code](https://github.com/XiaomiRobotics/Xiaomi-Robotics-1) · [weights](https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B)
 
-<sub>[+ 78 more in the full list](categories/policy.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 81 more in the full list](categories/policy.md) · [↑ back to contents](#contents)</sub>
 
 <a id="world-model"></a>
 ## World Models
@@ -454,8 +458,9 @@ Added in the 30 days up to 2026-10-10:
 ## Data, Teleoperation & Training Infrastructure
 
 > Datasets, data-collection and teleoperation systems, and training frameworks.  
-> Layer: L6 · 91 entries · **[full list →](categories/data.md)**
+> Layer: L6 · 92 entries · **[full list →](categories/data.md)**
 
+- ⚪ [**VOMMI**](https://arxiv.org/abs/2610.08220 "VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation") · 2026-10 — Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand views are synchronized, trajectories refined offline with sparse geometric anchors, and local-motion tokens condition VLA post-training through a residual adapter.
 - ⚪ [**SPOT**](https://arxiv.org/abs/2609.07933 "SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation") · 2026-09 · UMass Amherst / MIT — VR humanoid teleoperation that renders a stabilized robot-mounted fisheye stereo view on a virtual hemisphere, letting operators look around without moving the robot, for long-horizon loco-manipulation data collection.
 - ⚪ [**Robot Data Factory**](https://arxiv.org/abs/2609.16705 "The Robot Data Factory") · 2026-09 · MBZUAI — Proposes mission-driven robot training grounds that continuously generate, validate, benchmark and reuse robot experience in a Deploy-Measure-Learn-Repeat loop, with an agentic robot network and living benchmarks. [project](https://agentic-robotics-lab.github.io/robot-data-factory/)
 - ⚪ [**RoboDrop**](https://arxiv.org/abs/2609.10021 "RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility") · 2026-09 — Curation method that scores each VLA post-training sample by gradient compatibility with matched validation samples during a one-epoch warm-up, to filter execution mistakes, sensor drift and misaligned timestamps.
@@ -465,9 +470,8 @@ Added in the 30 days up to 2026-10-10:
 - ⚪ [**WorldSample**](https://arxiv.org/abs/2607.02431 "WorldSample: Closed-loop Real-robot RL with World Modelling") · 2026-07 — Augments real-robot RL with transitions from a world model post-trained on real rollouts, using Policy-Paced Learning to select and schedule synthetic samples and limit hallucination-induced errors.
 - 🟢 [**Robo-ValueRL**](https://arxiv.org/abs/2607.09866 "Robo-ValueRL: Reliable Value Estimation for Offline-to-Online Reinforcement Learning") · 2026-07 · Beijing Humanoid Robot Innovation Center; Renmin University of China — Open offline-to-online RL framework for real-robot manipulation: a history-conditioned value estimator, checked with global-progress and local-preference reliability metrics, drives quality-conditioned policy pretraining and stabilizes online improvement from real rollouts. [code](https://github.com/Open-X-Humanoid/Robo-ValueRL) · [project](https://gewu-lab.github.io/Robo-ValueRL/)
 - 🟢 [**MEVION**](https://arxiv.org/abs/2607.17970 "MEVION: Low-Cost Open-Source Data Collection System for Powerful and High-Speed Dual-Arm Manipulation") · 2026-07 · University of Tokyo — ALOHA-style open-source dual-arm data-collection system built from e-commerce parts and welded sheet metal, with four 6-DoF arms (60 Nm peak torque) for heavier and faster tasks, at about USD 14,000 (first-party). [code](https://github.com/haraduka/mevion) · [project](https://haraduka.github.io/mevion-hardware/)
-- ⚪ [**UniIntervene**](https://arxiv.org/abs/2606.12372 "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning") · 2026-06 — Takes over most human interventions in human-in-the-loop RL with a model that estimates action value, detects stagnating progress via a value-risk critic, and steers the policy back toward high-value states. [project](https://denghaoyuan123.github.io/UniIntervene-project/)
 
-<sub>[+ 81 more in the full list](categories/data.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 82 more in the full list](categories/data.md) · [↑ back to contents](#contents)</sub>
 <!-- END GENERATED: list -->
 
 ## Contributing

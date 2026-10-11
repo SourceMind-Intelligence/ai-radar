@@ -1625,3 +1625,54 @@
   access: closed
   tags: [vla, manipulation]
   added: 2026-10-08
+
+- id: simvla
+  name: SimVLA
+  title: 'SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation'
+  date: 2026-10
+  summary: >-
+    VLA for mobile manipulation trained only on simulation data: SimAction (35 tasks
+    composed from atomic skills), SimVQA (privileged-state spatial and subtask supervision)
+    and SimDeploy rollouts, transferring zero-shot to real homes for restocking, pouring and
+    cleaning.
+  links:
+    paper: https://arxiv.org/abs/2610.11248
+    code: https://github.com/kyounginbaik/SimVLA
+    project: https://kyounginbaik.github.io/simvla/
+    data: https://huggingface.co/datasets/kyounginbaik/SimVLA-assets
+  access: open
+  tags: [vla, sim2real, mobile-manipulation, data-generation]
+  added: 2026-10-11
+
+- id: negaalign
+  name: NegaAlign
+  title: 'Tell Robot What Not to Do: A Negation Understanding Perspective'
+  aliases: [NegaBench]
+  date: 2026-10
+  summary: >-
+    Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone,
+    trained with teacher-guided alignment, so the policy completes goals while respecting
+    explicit exclusions; introduces the NegaBench simulation benchmark.
+  links:
+    paper: https://arxiv.org/abs/2610.11952
+  access: closed
+  tags: [vla, safety, manipulation]
+  added: 2026-10-11
+
+- id: attacca
+  name: Attacca
+  title: >-
+    Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents
+  date: 2026-10
+  summary: >-
+    Trains visual goal-conditioned policies on full search-to-interact trajectories with
+    goal images decoupled from the execution scene and a target-mask grounding head, so
+    chained tasks can start from wherever the previous task left the agent.
+  links:
+    paper: https://arxiv.org/abs/2610.07785
+    code: https://github.com/attacca-project/attacca
+    project: https://attacca-project.github.io
+    weights: https://huggingface.co/willsuh/attacca
+  access: open
+  tags: [long-horizon, navigation, mobile-manipulation]
+  added: 2026-10-11

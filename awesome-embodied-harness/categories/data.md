@@ -3,12 +3,13 @@
 # Data, Teleoperation & Training Infrastructure
 
 > Datasets, data-collection and teleoperation systems, and training frameworks.  
-> Layer: L6 · 91 entries · [overview](../README.md#data) · [survey](../SURVEY.md)
+> Layer: L6 · 92 entries · [overview](../README.md#data) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**VOMMI**](https://arxiv.org/abs/2610.08220 "VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation") · 2026-10 — Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand views are synchronized, trajectories refined offline with sparse geometric anchors, and local-motion tokens condition VLA post-training through a residual adapter.
 - ⚪ [**SPOT**](https://arxiv.org/abs/2609.07933 "SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation") · 2026-09 · UMass Amherst / MIT — VR humanoid teleoperation that renders a stabilized robot-mounted fisheye stereo view on a virtual hemisphere, letting operators look around without moving the robot, for long-horizon loco-manipulation data collection.
 - ⚪ [**Robot Data Factory**](https://arxiv.org/abs/2609.16705 "The Robot Data Factory") · 2026-09 · MBZUAI — Proposes mission-driven robot training grounds that continuously generate, validate, benchmark and reuse robot experience in a Deploy-Measure-Learn-Repeat loop, with an agentic robot network and living benchmarks. [project](https://agentic-robotics-lab.github.io/robot-data-factory/)
 - ⚪ [**RoboDrop**](https://arxiv.org/abs/2609.10021 "RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility") · 2026-09 — Curation method that scores each VLA post-training sample by gradient compatibility with matched validation samples during a one-epoch warm-up, to filter execution mistakes, sensor drift and misaligned timestamps.

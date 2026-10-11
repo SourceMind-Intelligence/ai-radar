@@ -278,15 +278,15 @@ Counts by category and year of first release, generated from `data/`.
 | [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 45 | 0 | 0 | 5 | 10 | 12 | 18 | 22 |
 | [World State, Memory & Spatial Context](categories/memory.md) | L3 | 59 | 0 | 4 | 6 | 15 | 10 | 24 | 31 |
 | [Embodied Reasoning Models & Planners](categories/brain.md) | L4 | 47 | 0 | 0 | 5 | 4 | 18 | 20 | 28 |
-| [VLA Models & Skill Policies](categories/policy.md) | L1 | 88 | 0 | 1 | 5 | 7 | 42 | 33 | 55 |
+| [VLA Models & Skill Policies](categories/policy.md) | L1 | 91 | 0 | 1 | 5 | 7 | 42 | 36 | 57 |
 | [World Models](categories/world-model.md) | L6 | 71 | 0 | 1 | 3 | 7 | 26 | 34 | 40 |
 | [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 52 | 0 | 0 | 4 | 7 | 14 | 27 | 25 |
 | [Safety, Guardrails & Security](categories/safety.md) | L5 | 54 | 0 | 0 | 1 | 9 | 15 | 29 | 21 |
 | [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 47 | 0 | 0 | 5 | 8 | 13 | 21 | 22 |
 | [Simulators & Environments](categories/sim.md) | L6 | 48 | 12 | 1 | 6 | 5 | 10 | 14 | 39 |
 | [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 125 | 5 | 1 | 4 | 19 | 31 | 65 | 77 |
-| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 91 | 5 | 0 | 9 | 18 | 35 | 24 | 64 |
-| **Total** |  | **1013** | 23 | 20 | 96 | 153 | 275 | 446 | 532 |
+| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 92 | 5 | 0 | 9 | 18 | 35 | 25 | 64 |
+| **Total** |  | **1017** | 23 | 20 | 96 | 153 | 275 | 450 | 534 |
 <!-- END GENERATED: stats -->
 
 ---

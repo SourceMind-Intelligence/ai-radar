@@ -1556,3 +1556,17 @@
   access: open
   tags: [rl, reward-model, manipulation, humanoid, real-world]
   added: 2026-10-06
+
+- id: vommi
+  name: VOMMI
+  title: 'VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation'
+  date: 2026-10
+  summary: >-
+    Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand
+    views are synchronized, trajectories refined offline with sparse geometric anchors, and
+    local-motion tokens condition VLA post-training through a residual adapter.
+  links:
+    paper: https://arxiv.org/abs/2610.08220
+  access: closed
+  tags: [data-collection, mobile-manipulation, vla]
+  added: 2026-10-11
