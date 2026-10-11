@@ -1,0 +1,1572 @@
+- id: spot-humanoid-teleop
+  name: SPOT
+  title: 'SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation'
+  date: 2026-09
+  org: UMass Amherst / MIT
+  summary: >-
+    VR humanoid teleoperation that renders a stabilized robot-mounted fisheye stereo view on
+    a virtual hemisphere, letting operators look around without moving the robot, for
+    long-horizon loco-manipulation data collection.
+  links:
+    paper: https://arxiv.org/abs/2609.07933
+  access: closed
+  tags: [teleop, humanoid, long-horizon]
+  added: 2026-09-29
+
+- id: robot-data-factory
+  name: Robot Data Factory
+  title: The Robot Data Factory
+  date: 2026-09
+  org: MBZUAI
+  summary: >-
+    Proposes mission-driven robot training grounds that continuously generate, validate,
+    benchmark and reuse robot experience in a Deploy-Measure-Learn-Repeat loop, with an
+    agentic robot network and living benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2609.16705
+    project: https://agentic-robotics-lab.github.io/robot-data-factory/
+  access: closed
+  tags: [dataset, benchmark, multi-robot]
+  added: 2026-09-29
+
+- id: robodrop
+  name: RoboDrop
+  title: 'RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility'
+  date: 2026-09
+  summary: >-
+    Curation method that scores each VLA post-training sample by gradient compatibility with
+    matched validation samples during a one-epoch warm-up, to filter execution mistakes,
+    sensor drift and misaligned timestamps.
+  links:
+    paper: https://arxiv.org/abs/2609.10021
+  access: closed
+  tags: [dataset, vla]
+  added: 2026-09-29
+
+- id: dexagent
+  name: DexAgent
+  title: >-
+    DexAgent: An Agentic Human2Sim2Robot Framework for Dexterous Manipulation with
+    Self-Evolving Tool Library
+  date: 2026-09
+  org: Stanford University; Columbia University
+  summary: >-
+    Agentic pipeline that turns one egocentric human video and a prompt into physically
+    grounded robot training trajectories, choosing or writing tools at each stage with
+    property-specific verifiers, and keeping new skills in a self-evolving tool library.
+  links:
+    paper: https://arxiv.org/abs/2609.35318
+    project: https://dexagent123.github.io/
+  access: closed
+  tags: [dexterous, dataset, sim2real, self-improving, video]
+  added: 2026-09-29
+
+- id: arstag
+  name: ARSTAG
+  title: 'ARSTAG: An Agentic Real2Sim2Real System for Task-Specific Robot Data Generation'
+  date: 2026-09
+  summary: >-
+    Hierarchy of language agents turns one RGB image and an instruction into a sim scene,
+    feasible demos and task-consistent randomization, with a coordinator for cross-stage
+    recovery; pi0.5 reached 74.6% real success (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.24563
+    project: https://boweili666.github.io/ARSTAG/
+  access: closed
+  tags: [data-generation, agentic-loop, sim2real, dataset]
+  added: 2026-09-29
+
+- id: worldsample
+  name: WorldSample
+  title: 'WorldSample: Closed-loop Real-robot RL with World Modelling'
+  date: 2026-07
+  summary: >-
+    Augments real-robot RL with transitions from a world model post-trained on real
+    rollouts, using Policy-Paced Learning to select and schedule synthetic samples and limit
+    hallucination-induced errors.
+  links:
+    paper: https://arxiv.org/abs/2607.02431
+  access: closed
+  tags: [rl, world-model, data-generation]
+  added: 2026-09-29
+
+- id: mevion
+  name: MEVION
+  title: >-
+    MEVION: Low-Cost Open-Source Data Collection System for Powerful and High-Speed Dual-Arm
+    Manipulation
+  date: 2026-07
+  org: University of Tokyo
+  summary: >-
+    ALOHA-style open-source dual-arm data-collection system built from e-commerce parts and
+    welded sheet metal, with four 6-DoF arms (60 Nm peak torque) for heavier and faster
+    tasks, at about USD 14,000 (first-party).
+  links:
+    paper: https://arxiv.org/abs/2607.17970
+    code: https://github.com/haraduka/mevion
+    project: https://haraduka.github.io/mevion-hardware/
+  access: open
+  tags: [teleop, manipulation]
+  added: 2026-09-29
+
+- id: uniintervene
+  name: UniIntervene
+  title: >-
+    UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning
+  date: 2026-06
+  summary: >-
+    Takes over most human interventions in human-in-the-loop RL with a model that estimates
+    action value, detects stagnating progress via a value-risk critic, and steers the policy
+    back toward high-value states.
+  links:
+    paper: https://arxiv.org/abs/2606.12372
+    project: https://denghaoyuan123.github.io/UniIntervene-project/
+  access: closed
+  tags: [rl, hitl, failure-recovery]
+  added: 2026-09-29
+
+- id: robotacdex
+  name: RoboTacDex
+  title: 'RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation'
+  date: 2026-06
+  summary: >-
+    6k Unitree G1 dexterous bimanual trajectories over 19 tasks with multi-view RGB-D,
+    tactile feedback and semantic annotations, recorded with millisecond-synchronized
+    multi-camera capture.
+  links:
+    paper: https://arxiv.org/abs/2606.31836
+  access: closed
+  tags: [dataset, humanoid, dexterous]
+  note: Data release status not verified.
+  added: 2026-09-29
+
+- id: hats
+  name: HATS
+  title: 'HATS: A Human-Agent Teleoperation System for Multi-Arm Data Collection'
+  date: 2026-06
+  summary: >-
+    One operator teleoperates two primary arms while a training-free MLLM agent runs two
+    assistive arms, with voice commands for correction; collection efficiency comparable to
+    two-person teams (first-party).
+  links:
+    paper: https://arxiv.org/abs/2606.16491
+  access: closed
+  tags: [teleop, hitl, multi-robot, agentic-loop]
+  added: 2026-09-29
+
+- id: harbor
+  name: HARBOR
+  title: 'HARBOR: A Harness Framework for Agentic Robot Reinforcement Learning'
+  date: 2026-06
+  org: TU Darmstadt et al.
+  summary: >-
+    Treats robot RL automation as harness engineering: specialized agents take a simulator
+    codebase from environment setup to trained policy through standardized commands,
+    persistent artifacts, executable gates and parallel trials, across 16 tasks.
+  links:
+    paper: https://arxiv.org/abs/2606.08610
+  access: closed
+  tags: [rl, self-improving]
+  added: 2026-09-29
+
+- id: egoengine
+  name: EgoEngine
+  title: >-
+    EgoEngine: From Egocentric Human Videos to High-Fidelity Dexterous Robot Demonstrations
+  date: 2026-06
+  org: Georgia Tech et al.
+  summary: >-
+    Converts an egocentric RGB video into a robot-rendered observation video plus a
+    feasibility-constrained robot action trajectory; reports zero-shot dexterous visuomotor
+    policies without real-robot demos (first-party).
+  links:
+    paper: https://arxiv.org/abs/2606.12604
+    project: https://egoengine.github.io
+  access: closed
+  tags: [data-generation, dexterous, video, humanoid]
+  added: 2026-09-29
+
+- id: learning-while-deploying
+  name: Learning While Deploying (LWD)
+  title: >-
+    Learning While Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot
+    Policies
+  date: 2026-05
+  summary: >-
+    Offline-to-online RL that post-trains a flow-based VLA from autonomous rollouts and
+    human interventions pooled across a 16-robot fleet; reports 95% average success on eight
+    real tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2605.00416
+    project: https://learning-while-deploying.github.io/
+  access: closed
+  tags: [rl, hitl, vla, long-horizon, multi-robot, self-improving]
+  added: 2026-09-29
+
+- id: humannet
+  name: HumanNet
+  title: 'HumanNet: Scaling Human-centric Video Learning to One Million Hours'
+  date: 2026-05
+  org: Peking University
+  summary: >-
+    One-million-hour corpus of first- and third-person human activity video with captions,
+    motion descriptions and hand/body signals, curated as a pretraining source for embodied
+    learning.
+  links:
+    paper: https://arxiv.org/abs/2605.06747
+    code: https://github.com/DAGroup-PKU/HumanNet
+    project: https://dagroup-pku.github.io/HumanNet/
+  access: closed
+  tags: [dataset, video]
+  note: >-
+    As of 2026-09 the repo lists the corpus and curation pipeline release as pending.
+  added: 2026-09-29
+
+- id: d-vla
+  name: D-VLA
+  title: >-
+    D-VLA: A High-Concurrency Distributed Asynchronous Reinforcement Learning Framework for
+    Vision-Language-Action Models
+  date: 2026-05
+  summary: >-
+    Distributed RL framework for large VLAs that separates simulation data flow from weight
+    control and overlaps sampling, inference, gradient computation and parameter sync in an
+    asynchronous four-thread pipeline.
+  links:
+    paper: https://arxiv.org/abs/2605.13276
+  access: closed
+  tags: [rl, vla]
+  note: Code release status not verified.
+  added: 2026-09-29
+
+- id: open-h-embodiment
+  name: Open-H-Embodiment
+  title: >-
+    Open-H-Embodiment: A Large-Scale Dataset for Enabling Foundation Models in Medical
+    Robotics
+  date: 2026-04
+  org: Open-H-Embodiment Consortium (50+ institutions)
+  summary: >-
+    Open medical-robotics dataset of video with synchronized kinematics across platforms
+    such as da Vinci, dVRK and CMR Versius (surgery, ultrasound, endoscopy); used to train
+    the GR00T-H VLA and a Cosmos-H surgical world model.
+  links:
+    paper: https://arxiv.org/abs/2604.21017
+    code: https://github.com/open-h/open-h-embodiment
+    project: https://open-h.github.io/open-h-embodiment/
+    data: https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment
+  access: open
+  tags: [dataset, cross-embodiment, manipulation]
+  note: >-
+    v1 data on Hugging Face (CC BY 4.0); the GitHub repo now hosts the v2 contribution
+    guide. Model-weight release not checked.
+  added: 2026-09-29
+
+- id: egoverse
+  name: EgoVerse
+  title: 'EgoVerse: An Egocentric Human Dataset for Robot Learning from Around the World'
+  date: 2026-04
+  org: Georgia Tech, Stanford, UCSD, ETH Zurich, MIT, Meta + industry partners
+  summary: >-
+    Shared platform and dataset of 1,362 h (80k episodes) of egocentric human demos over
+    1,965 tasks, with academic and industry splits, standardized processing and human-robot
+    co-training studies.
+  links:
+    paper: https://arxiv.org/abs/2604.07607
+    code: https://github.com/GaTech-RL2/EgoVerse
+  access: open
+  tags: [dataset, video, manipulation, cross-embodiment]
+  added: 2026-09-29
+
+- id: egolive
+  name: EgoLive
+  title: 'EgoLive: A Large-Scale Egocentric Dataset from Real-World Human Tasks'
+  date: 2026-04
+  summary: >-
+    1,680 h of 60 fps stereo egocentric video (65,866 episodes, 346 tasks) from
+    home-service, retail and other real workplaces, captured with a custom head-mounted rig
+    and annotated with hand poses, depth and sub-task captions.
+  links:
+    paper: https://arxiv.org/abs/2604.23570
+  access: open
+  tags: [dataset, video, manipulation]
+  note: >-
+    Paper calls it open-source with distribution via JD Cloud's robot-data market (link did
+    not load for automated checks); corresponding author uses a jd.com address.
+  added: 2026-09-29
+
+- id: agibot-world-2026
+  name: AGIBOT WORLD 2026
+  date: 2026-04
+  org: AgiBot
+  summary: >-
+    Real-world dataset collected by free-form teleoperation on the AgiBot G2 in homes and
+    commercial spaces, with force/tactile streams, annotated error-recovery trajectories and
+    1:1 digital-twin sim data.
+  links:
+    blog: https://www.agibot.com/article/231/detail/54.html
+    data: https://huggingface.co/datasets/agibot-world/AgiBotWorld2026
+  access: partial
+  tags: [dataset, manipulation, humanoid, failure-recovery]
+  note: Released in phases (phase 1 targets imitation learning); CC BY-NC-SA 4.0.
+  added: 2026-09-29
+
+- id: f-acil-data-flywheel
+  name: F-ACIL
+  title: >-
+    Towards Generalizable Robotic Data Flywheel: High-Dimensional Factorization and
+    Composition
+  date: 2026-03
+  summary: >-
+    Factor-aware data collection and iterative training that decomposes task diversity into
+    object, action and environment factors; reports 45%+ gains with 5-10x fewer
+    demonstrations (first-party).
+  links:
+    paper: https://arxiv.org/abs/2603.25583
+  access: closed
+  tags: [dataset, manipulation]
+  added: 2026-09-29
+
+- id: robointer
+  name: RoboInter
+  title: >-
+    RoboInter: A Holistic Intermediate Representation Suite Towards Robotic Manipulation
+  date: 2026-02
+  summary: >-
+    Suite for plan-then-execute manipulation: an annotation GUI, a 230k-episode dataset with
+    dense per-frame labels for 10+ intermediate representations, embodied VQA benchmarks and
+    a plan-then-execute VLA framework.
+  links:
+    paper: https://arxiv.org/abs/2602.09973
+    code: https://github.com/InternRobotics/RoboInter
+    project: https://lihaohn.github.io/RoboInter.github.io/
+    data: https://huggingface.co/datasets/InternRobotics/RoboInter-Data
+  access: open
+  tags: [dataset, benchmark, vla, manipulation]
+  note: ICLR 2026.
+  added: 2026-09-29
+
+- id: egoscale
+  name: EgoScale
+  title: 'EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data'
+  date: 2026-02
+  org: NVIDIA
+  summary: >-
+    Trains a VLA on 20,854 hours of action-labeled egocentric human video and finds a
+    log-linear scaling law between human-data scale and validation loss that predicts
+    real-robot performance; a two-stage recipe transfers to a 22-DoF dexterous hand.
+  links:
+    paper: https://arxiv.org/abs/2602.16710
+    project: https://research.nvidia.com/labs/gear/egoscale/
+  access: closed
+  tags: [dataset, dexterous, video]
+  note: Used for GR00T N1.7 pretraining; code listed as coming soon.
+  added: 2026-09-29
+
+- id: robomind-2
+  name: RoboMIND 2.0
+  title: >-
+    RoboMIND 2.0: A Multimodal, Bimanual Mobile Manipulation Dataset for Generalizable
+    Embodied Intelligence
+  date: 2025-12
+  org: X-Humanoid / Peking University
+  summary: >-
+    310K+ dual-arm trajectories over six embodiments and 739 tasks, incl. 12K tactile and
+    20K mobile-manipulation episodes plus a 20K-trajectory digital-twin set; paired with the
+    MIND-2 VLM-planner/VLA-executor system.
+  links:
+    paper: https://arxiv.org/abs/2512.24653
+    data: https://modelscope.cn/datasets/X-Humanoid/RoboMIND2.0
+  access: open
+  tags: [dataset, mobile-manipulation, cross-embodiment, dual-system]
+  added: 2026-09-29
+
+- id: twist2
+  name: TWIST2
+  title: 'TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System'
+  date: 2025-11
+  org: Amazon FAR et al.
+  summary: >-
+    Mocap-free whole-body humanoid teleoperation using a PICO VR headset and a ~$250 2-DoF
+    robot neck for egocentric vision, for portable collection of holistic loco-manipulation
+    demos on a Unitree G1.
+  links:
+    paper: https://arxiv.org/abs/2511.02832
+    code: https://github.com/amazon-far/TWIST2
+    project: https://yanjieze.com/TWIST2
+  access: open
+  tags: [teleop, humanoid, mobile-manipulation]
+  added: 2026-09-29
+
+- id: robocoin
+  name: RoboCOIN
+  title: >-
+    RoboCOIN: An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation
+  date: 2025-11
+  org: BAAI (FlagOpen) et al.
+  summary: >-
+    180K+ bimanual demonstrations from 15 robot platforms, 16 environments and 421 tasks
+    with trajectory-, segment- and frame-level annotations, plus the CoRobot/RTML toolkit
+    for quality checks and data management.
+  links:
+    paper: https://arxiv.org/abs/2511.17441
+    code: https://github.com/FlagOpen/RoboCOIN
+    project: https://flagopen.github.io/RoboCOIN/
+  access: open
+  tags: [dataset, cross-embodiment, manipulation]
+  added: 2026-09-29
+
+- id: interndata-a1
+  name: InternData-A1
+  title: >-
+    InternData-A1: Pioneering High-Fidelity Synthetic Data for Pre-training Generalist
+    Policy
+  date: 2025-11
+  org: Shanghai AI Lab (InternRobotics)
+  summary: >-
+    Simulation-generated dataset of 630k+ trajectories (7,433 h) over 4 embodiments, 70
+    tasks and 227 scenes; a pi0-architecture model pre-trained only on it matched official
+    pi0 (first-party).
+  links:
+    paper: https://arxiv.org/abs/2511.16651
+    data: https://huggingface.co/datasets/InternRobotics/InternData-A1
+  access: open
+  tags: [dataset, data-generation, sim2real, cross-embodiment]
+  added: 2026-09-29
+
+- id: egocentric-10k
+  name: Egocentric-10K
+  date: 2025-11
+  org: Build AI
+  summary: >-
+    10,000 hours (1.08B frames) of head-mounted egocentric video of factory workers across
+    85 sites, Apache-2.0 on Hugging Face; followed in late 2025 by the ~100K-hour
+    Egocentric-100K release.
+  links:
+    data: https://huggingface.co/datasets/builddotai/Egocentric-10K
+  access: open
+  tags: [dataset, video, manipulation]
+  note: No paper; gated download (contact-info agreement).
+  added: 2026-09-29
+
+- id: starvla
+  name: StarVLA
+  title: 'StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing'
+  date: 2025-10
+  org: StarVLA Community
+  summary: >-
+    Modular VLA codebase where VLM or world-model backbones and several action heads swap
+    independently, with shared co-training recipes and one eval interface for LIBERO,
+    SimplerEnv, RoboTwin 2.0, RoboCasa and BEHAVIOR-1K.
+  links:
+    paper: https://arxiv.org/abs/2604.05014
+    code: https://github.com/starVLA/starVLA
+  access: open
+  tags: [vla, world-model, cross-embodiment]
+  note: Code public since Oct 2025; technical report Apr 2026.
+  added: 2026-09-29
+
+- id: rlinf-vla
+  name: RLinf-VLA
+  title: >-
+    RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of
+    Vision-Language-Action Models
+  date: 2025-10
+  org: RLinf team
+  summary: >-
+    Unified interface for RL training across VLA architectures, RL algorithms and simulators
+    with flexible allocation of rendering, inference and training; reports 98.11% on 130
+    LIBERO tasks (first-party). RSS 2026.
+  links:
+    paper: https://arxiv.org/abs/2510.06710
+    code: https://github.com/RLinf/RLinf
+    docs: https://rlinf.readthedocs.io/en/latest/rst_source/resources/publications/rlinf_vla.html
+  access: open
+  tags: [rl, vla]
+  added: 2026-09-29
+
+- id: pi-rl
+  name: piRL
+  title: 'πRL: Online RL Fine-tuning for Flow-based Vision-Language-Action Models'
+  date: 2025-10
+  org: RLinf team (Tsinghua, PKU, CASIA, CMU, Infinigence AI, Zhongguancun Academy)
+  summary: >-
+    Online RL for flow-matching VLAs (pi0, pi0.5): Flow-Noise adds a learnable noise network
+    for exact log-likelihoods and Flow-SDE turns denoising into an SDE for exploration;
+    implemented in RLinf.
+  links:
+    paper: https://arxiv.org/abs/2510.25889
+    code: https://github.com/RLinf/RLinf
+    docs: https://rlinf.readthedocs.io/en/latest/rst_source/resources/publications/pi_rl.html
+  access: open
+  tags: [rl, vla]
+  added: 2026-09-29
+
+- id: humanoid-everyday
+  name: Humanoid Everyday
+  title: >-
+    Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation
+  date: 2025-10
+  org: USC
+  summary: >-
+    10.3k teleoperated humanoid trajectories (3M+ frames) over 260 tasks spanning dexterous
+    manipulation, human-humanoid interaction and loco-manipulation, with RGB, depth, LiDAR
+    and tactile data and a cloud eval platform.
+  links:
+    paper: https://arxiv.org/abs/2510.08807
+    data: https://huggingface.co/datasets/USC-PSI-Lab/humanoid-everyday
+  access: open
+  tags: [dataset, humanoid, dexterous, teleop]
+  added: 2026-09-29
+
+- id: dexbotic
+  name: Dexbotic
+  title: 'Dexbotic: Open-Source Vision-Language-Action Toolbox'
+  date: 2025-10
+  org: Dexmal
+  summary: >-
+    PyTorch VLA toolbox that reproduces several mainstream policies (e.g. pi0, CogACT, OFT)
+    in one environment via experiment scripts, with pretrained checkpoints and a unified
+    data format and deployment for UR5, Franka and ALOHA.
+  links:
+    paper: https://arxiv.org/abs/2510.23511
+    code: https://github.com/Dexmal/dexbotic
+    project: https://dexbotic.com/
+  access: open
+  tags: [vla, cross-embodiment]
+  added: 2026-09-29
+
+- id: rlinf
+  name: RLinf
+  title: >-
+    RLinf: Flexible and Efficient Large-scale Reinforcement Learning via Macro-to-Micro Flow
+    Transformation
+  date: 2025-09
+  org: RLinf team
+  summary: >-
+    Open-source RL infrastructure for embodied and agentic models that decomposes RL
+    workflows and reschedules them for hardware efficiency; supports RL/SFT of VLAs such as
+    pi0/pi0.5 in simulators and on real robots.
+  links:
+    paper: https://arxiv.org/abs/2509.15965
+    code: https://github.com/RLinf/RLinf
+    docs: https://rlinf.readthedocs.io/en/latest/
+  access: open
+  tags: [rl, vla]
+  note: >-
+    Companion papers RLinf-VLA (arXiv 2510.06710) and piRL (arXiv 2510.25889) cover
+    VLA-specific RL.
+  added: 2026-09-29
+
+- id: galaxea-open-world-dataset
+  name: Galaxea Open-World Dataset
+  title: Galaxea Open-World Dataset and G0 Dual-System VLA Model
+  date: 2025-08
+  org: Galaxea AI
+  summary: >-
+    Large mobile-manipulation dataset recorded in real homes and workplaces on one
+    consistent embodiment with subtask-level language labels, released with G0, a
+    VLM-planner plus VLA-executor dual-system model.
+  links:
+    paper: https://arxiv.org/abs/2509.00576
+    code: https://github.com/OpenGalaxea/GalaxeaVLA
+    project: https://opengalaxea.github.io/G0/
+    data: https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset
+  access: open
+  tags: [dataset, mobile-manipulation, dual-system]
+  added: 2026-09-29
+
+- id: dataset-composition-study
+  name: What Matters in Learning from Large-Scale Datasets
+  title: What Matters in Learning from Large-Scale Datasets for Robot Manipulation
+  date: 2025-06
+  summary: >-
+    Procedurally generated datasets with controlled diversity (sensor placement, object
+    types, layouts) are used to study which diversity to prioritize when collecting data and
+    how to retrieve from existing datasets.
+  links:
+    paper: https://arxiv.org/abs/2506.13536
+  access: closed
+  tags: [dataset, data-generation, manipulation]
+  added: 2026-09-29
+
+- id: safari-sdk
+  name: Safari SDK (Gemini Robotics SDK)
+  date: 2025-06
+  org: Google DeepMind
+  summary: >-
+    pip-installable SDK for Gemini Robotics models covering robot data logging, model
+    serving and inference interfaces, robot/sim evaluation examples, data upload and
+    fine-tuning via a flywheel CLI.
+  links:
+    code: https://github.com/google-deepmind/gemini-robotics-sdk
+    project: https://deepmind.google/models/gemini-robotics/
+  access: partial
+  tags: [vla, dataset]
+  note: Most functionality requires the Gemini Robotics Trusted Tester program.
+  added: 2026-09-29
+
+- id: rl-vla-generalization-study
+  name: What Can RL Bring to VLA Generalization?
+  title: What Can RL Bring to VLA Generalization? An Empirical Study
+  date: 2025-05
+  summary: >-
+    Benchmark and study finding PPO fine-tuning improves VLA semantic and execution
+    generalization over SFT while matching visual robustness, outperforming DPO/GRPO, with
+    an efficient PPO recipe. NeurIPS 2025.
+  links:
+    paper: https://arxiv.org/abs/2505.19789
+  access: closed
+  tags: [rl, vla, benchmark]
+  note: Code release status not verified.
+  added: 2026-09-29
+
+- id: vla-rl
+  name: VLA-RL
+  title: >-
+    VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement
+    Learning
+  date: 2025-05
+  summary: >-
+    Online RL framework for auto-regressive VLAs that treats trajectories as multi-turn
+    conversations and uses a VLM-based process reward model; built on Ray, vLLM, LoRA and
+    FSDP for OpenVLA-7B.
+  links:
+    paper: https://arxiv.org/abs/2505.18719
+    code: https://github.com/GuanxingLu/vlarl
+  access: open
+  tags: [rl, vla, reward-model]
+  added: 2026-09-29
+
+- id: twist
+  name: TWIST
+  title: 'TWIST: Teleoperated Whole-Body Imitation System'
+  date: 2025-05
+  summary: >-
+    Humanoid whole-body teleoperation by motion imitation: human mocap is retargeted and
+    tracked by an RL+BC whole-body controller, covering manipulation, legged manipulation
+    and locomotion; predecessor of TWIST2.
+  links:
+    paper: https://arxiv.org/abs/2505.02833
+    code: https://github.com/YanjieZe/TWIST
+    project: https://humanoid-teleop.github.io/
+  access: open
+  tags: [teleop, humanoid, rl]
+  added: 2026-09-29
+
+- id: simplevla-rl
+  name: SimpleVLA-RL
+  title: 'SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning'
+  date: 2025-05
+  summary: >-
+    veRL-based RL framework for VLAs with VLA-specific trajectory sampling, parallel
+    multi-environment rendering and binary outcome rewards; applied to OpenVLA-OFT on LIBERO
+    and RoboTwin.
+  links:
+    paper: https://arxiv.org/abs/2509.09674
+    code: https://github.com/PRIME-RL/SimpleVLA-RL
+  access: open
+  tags: [rl, vla]
+  note: Code released May 2025; paper Sep 2025.
+  added: 2026-09-29
+
+- id: genie-centurion
+  name: Genie Centurion
+  title: >-
+    Genie Centurion: Accelerating Scalable Real-World Robot Training with Human
+    Rewind-and-Refine Guidance
+  date: 2025-05
+  org: AgiBot
+  summary: >-
+    Deployment-time data collection where a failing robot rewinds to an earlier state and a
+    teleoperator supplies a correction; a Task Sentinel predicts success and requests help
+    so one human can supervise many robots.
+  links:
+    paper: https://arxiv.org/abs/2505.18793
+    project: https://genie-centurion.github.io/
+  access: partial
+  tags: [hitl, teleop, success-detection, failure-recovery]
+  note: Project page links datasets; no code release found.
+  added: 2026-09-29
+
+- id: egozero
+  name: EgoZero
+  title: 'EgoZero: Robot Learning from Smart Glasses'
+  date: 2025-05
+  org: NYU / UC Berkeley
+  summary: >-
+    Learns manipulation policies from Project Aria smart-glasses demonstrations with zero
+    robot data by extracting executable actions and morphology-agnostic states; 70%
+    zero-shot success over 7 Franka tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2505.20290
+    code: https://github.com/vliu15/egozero
+    project: https://egozero-robot.github.io/
+  access: open
+  tags: [data-collection, video, manipulation]
+  added: 2026-09-29
+
+- id: egodex
+  name: EgoDex
+  title: 'EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video'
+  date: 2025-05
+  org: Apple
+  summary: >-
+    829 hours of Apple Vision Pro egocentric video with on-device 3D tracking of every hand
+    joint across 194 tabletop manipulation tasks, with baselines for hand-trajectory
+    prediction.
+  links:
+    paper: https://arxiv.org/abs/2505.11709
+    code: https://github.com/apple/ml-egodex
+  access: open
+  tags: [dataset, dexterous, video]
+  added: 2026-09-29
+
+- id: dexwild
+  name: DexWild
+  title: 'DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies'
+  date: 2025-05
+  org: Carnegie Mellon University
+  summary: >-
+    Low-cost mobile DexWild-System for recording dexterous human hand interactions in many
+    environments; co-training on this human data plus robot demos improves generalization to
+    new environments, tasks and embodiments.
+  links:
+    paper: https://arxiv.org/abs/2505.07813
+    code: https://github.com/dexwild/dexwild
+    project: https://dexwild.github.io/
+    data: https://huggingface.co/datasets/boardd/dexwild-dataset
+  access: open
+  tags: [data-collection, dexterous, cross-embodiment]
+  added: 2026-09-29
+
+- id: dexumi
+  name: DexUMI
+  title: >-
+    DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous
+    Manipulation
+  date: 2025-05
+  org: Stanford / Columbia / J.P. Morgan AI Research / CMU / NVIDIA
+  summary: >-
+    Uses the human hand, fitted with a wearable exoskeleton matched to the target robot
+    hand, as the data-collection interface and inpaints the robot hand into video; 86%
+    average success on two robot hands (first-party).
+  links:
+    paper: https://arxiv.org/abs/2505.21864
+    code: https://github.com/real-stanford/DexUMI
+    project: https://dex-umi.github.io/
+  access: open
+  tags: [data-collection, dexterous, cross-embodiment]
+  added: 2026-09-29
+
+- id: echo-teleop
+  name: Echo
+  title: >-
+    Echo: An Open-Source, Low-Cost Teleoperation System with Force Feedback for Dataset
+    Collection in Robot Learning
+  date: 2025-04
+  org: Skolkovo Institute of Science and Technology
+  summary: >-
+    Joint-matching teleoperation controller for UR arms with force feedback, adjustable
+    sensitivity and a dataset-recording interface for bimanual imitation-learning data.
+  links:
+    paper: https://arxiv.org/abs/2504.07939
+    project: https://eterwait.github.io/Echo/
+  access: open
+  tags: [teleop, manipulation]
+  added: 2026-09-29
+
+- id: gr00t-x-embodiment-sim-dataset
+  name: PhysicalAI-Robotics-GR00T-X-Embodiment-Sim
+  date: 2025-03
+  org: NVIDIA
+  summary: >-
+    NVIDIA's open collection of simulated robot trajectories across embodiments and tasks
+    used for post-training GR00T N1, released CC BY 4.0 on Hugging Face.
+  links:
+    data: https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim
+  access: open
+  tags: [dataset, cross-embodiment, humanoid]
+  note: Date is the Hugging Face repo creation (2025-03-18).
+  added: 2026-09-29
+
+- id: humanoid-policy-human-policy
+  name: PH2D / HAT
+  title: Humanoid Policy ~ Human Policy
+  date: 2025-03
+  summary: >-
+    Collects PH2D, an egocentric human task dataset aligned with humanoid demonstrations,
+    and trains the Human Action Transformer (HAT) on a unified human-humanoid state-action
+    space, co-trained with smaller robot data.
+  links:
+    paper: https://arxiv.org/abs/2503.13441
+    project: https://human-as-robot.github.io/
+  access: open
+  tags: [dataset, humanoid, cross-embodiment, video]
+  added: 2026-09-29
+
+- id: kaiwu
+  name: Kaiwu
+  title: >-
+    Kaiwu: A Multimodal Manipulation Dataset and Framework for Robot Learning and
+    Human-Robot Interaction
+  date: 2025-03
+  summary: >-
+    11,664 human assembly demonstrations by 20 subjects with synchronized hand motion,
+    pressure, audio, multi-view video, mocap, eye gaze and EMG, plus fine-grained
+    annotations.
+  links:
+    paper: https://arxiv.org/abs/2503.05231
+  access: closed
+  tags: [dataset, manipulation, dexterous]
+  note: Data release status not verified.
+  added: 2026-09-29
+
+- id: behavior-robot-suite
+  name: BEHAVIOR Robot Suite (BRS)
+  title: >-
+    BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday
+    Household Activities
+  date: 2025-03
+  org: Stanford
+  summary: >-
+    Household whole-body manipulation framework on a wheeled bimanual robot with a 4-DoF
+    torso, combining a low-cost whole-body teleoperation interface for data collection with
+    a whole-body visuomotor policy learner.
+  links:
+    paper: https://arxiv.org/abs/2503.05652
+    code: https://github.com/behavior-robot-suite/brs-algo
+    project: https://behavior-robot-suite.github.io/
+    data: https://huggingface.co/datasets/behavior-robot-suite/data
+  access: open
+  tags: [teleop, mobile-manipulation, dataset]
+  added: 2026-09-29
+
+- id: airexo-2
+  name: AirExo-2
+  title: >-
+    AirExo-2: Scaling up Generalizable Robotic Imitation Learning with Low-Cost Exoskeletons
+  date: 2025-03
+  org: Shanghai Jiao Tong University
+  summary: >-
+    Low-cost exoskeleton for in-the-wild demonstration capture with adaptors that turn
+    recordings into pseudo-robot demonstrations, plus the RISE-2 policy fusing 3D spatial
+    and 2D semantic perception.
+  links:
+    paper: https://arxiv.org/abs/2503.03081
+    code: https://github.com/AirExo/AirExo-2
+    project: https://airexo.tech/airexo2/
+  access: open
+  tags: [data-collection, manipulation, 3d]
+  added: 2026-09-29
+
+- id: aharobot
+  name: AhaRobot
+  title: 'AhaRobot: A Low-Cost Open-Source Bimanual Mobile Manipulator for Embodied AI'
+  date: 2025-03
+  org: Tianjin University
+  summary: >-
+    About $1,000 open-source bimanual mobile manipulator with SCARA-like arms and the
+    RoboPilot teleop interface (26-faced marker handle) for long-horizon remote data
+    collection.
+  links:
+    paper: https://arxiv.org/abs/2503.10070
+    code: https://github.com/hilookas/astra_ws
+    project: https://aha-robot.github.io
+  access: open
+  tags: [teleop, mobile-manipulation]
+  added: 2026-09-29
+
+- id: openpi
+  name: openpi
+  date: 2025-02
+  org: Physical Intelligence
+  summary: >-
+    Physical Intelligence's open repo of pi0, pi0-FAST and pi0.5 VLA weights (base models
+    pre-trained on 10k+ h of robot data) with fine-tuning code, DROID/ALOHA checkpoints and
+    JAX and PyTorch training.
+  links:
+    code: https://github.com/Physical-Intelligence/openpi
+  access: open
+  tags: [vla, cross-embodiment]
+  added: 2026-09-29
+
+- id: homie
+  name: HOMIE
+  title: 'HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit'
+  date: 2025-02
+  org: Shanghai AI Lab / CUHK
+  summary: >-
+    Semi-autonomous humanoid teleop cockpit combining a pedal-driven RL locomotion policy,
+    isomorphic exoskeleton arms and Hall-sensor gloves (~$500) for whole-body
+    loco-manipulation data collection.
+  links:
+    paper: https://arxiv.org/abs/2502.13013
+    code: https://github.com/InternRobotics/OpenHomie
+    project: https://homietele.github.io/
+  access: open
+  tags: [teleop, humanoid, mobile-manipulation, rl]
+  added: 2026-09-29
+
+- id: demogen
+  name: DemoGen
+  title: >-
+    DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy
+    Learning
+  date: 2025-02
+  org: Tsinghua University / Shanghai Qi Zhi Institute / Shanghai AI Lab
+  summary: >-
+    Generates spatially augmented demonstrations from one human demo per task by adapting
+    the action trajectory to new object configurations and synthesizing point-cloud
+    observations via 3D scene editing.
+  links:
+    paper: https://arxiv.org/abs/2502.16932
+    code: https://github.com/TEA-Lab/DemoGen
+    project: https://demo-generation.github.io/
+  access: open
+  tags: [data-generation, manipulation, 3d]
+  added: 2026-09-29
+
+- id: phosphobot
+  name: phosphobot
+  date: 2025-01
+  org: phospho
+  summary: >-
+    Open-source robot control server and UI for recording datasets via teleoperation (VR,
+    keyboard, leader arm), one-click training of ACT/SmolVLA/pi0.5/GR00T policies and
+    running them; LeRobot compatible, supports SO-100/101, Piper, Unitree Go2.
+  links:
+    code: https://github.com/phospho-app/phosphobot
+    docs: https://docs.phospho.ai/
+  access: open
+  tags: [teleop, dataset, vla]
+  added: 2026-09-29
+
+- id: isaac-gr00t-mimic
+  name: Isaac GR00T-Mimic (Isaac Lab Mimic)
+  date: 2025-01
+  org: NVIDIA
+  summary: >-
+    NVIDIA blueprint that multiplies a few teleoperated demos (GR00T-Teleop) into large
+    synthetic trajectory sets in Isaac Lab, with Cosmos-based augmentation; exposed in Isaac
+    Lab as the Mimic imitation-learning workflow.
+  links:
+    code: https://github.com/NVIDIA-Omniverse-blueprints/synthetic-manipulation-motion-generation
+    blog: https://blogs.nvidia.com/blog/isaac-gr00t-blueprint-humanoid-robotics/
+    docs: https://isaac-sim.github.io/IsaacLab/main/source/overview/imitation-learning/teleop_imitation.html
+  access: open
+  tags: [data-generation, humanoid, manipulation, teleop]
+  added: 2026-09-29
+
+- id: robomind
+  name: RoboMIND
+  title: >-
+    RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot
+    Manipulation
+  date: 2024-12
+  org: X-Humanoid / Peking University
+  summary: >-
+    107k teleoperated trajectories over 479 tasks on Franka, UR5e, AgileX dual-arm and a
+    dexterous humanoid, including 5k failure demonstrations annotated with causes and an
+    Isaac Sim digital twin.
+  links:
+    paper: https://arxiv.org/abs/2412.13877
+    project: https://x-humanoid-robomind.github.io/
+    data: https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND
+  access: open
+  tags: [dataset, manipulation, cross-embodiment, failure-recovery]
+  added: 2026-09-29
+
+- id: agibot-world
+  name: AgiBot World
+  title: >-
+    AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent
+    Embodied Systems
+  date: 2024-12
+  org: AgiBot / Shanghai AI Lab (OpenDriveLab)
+  summary: >-
+    1M+ real-robot trajectories over 217 tasks in five deployment scenarios, collected with
+    a standardized pipeline and human-in-the-loop verification; released as AgiBot World
+    Alpha/Beta with the GO-1 policy.
+  links:
+    paper: https://arxiv.org/abs/2503.06669
+    code: https://github.com/OpenDriveLab/AgiBot-World
+    project: https://agibot-world.com/
+    data: https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta
+  access: open
+  tags: [dataset, manipulation, humanoid, dexterous]
+  note: Alpha data released Dec 2024, technical report Mar 2025, GO-1 weights Sep 2025.
+  added: 2026-09-29
+
+- id: skillmimicgen
+  name: SkillMimicGen (SkillGen)
+  title: >-
+    SkillMimicGen: Automated Demonstration Generation for Efficient Skill Learning and
+    Deployment
+  date: 2024-10
+  summary: >-
+    Segments a few human demos into skills, adapts them to new scenes and stitches them with
+    planned free-space motions to generate datasets, plus a Hybrid Skill Policy that
+    sequences learned skills with motion planning.
+  links:
+    paper: https://arxiv.org/abs/2410.18907
+  access: closed
+  tags: [data-generation, manipulation, planning]
+  note: Code release status not verified.
+  added: 2026-09-29
+
+- id: hil-serl
+  name: HIL-SERL
+  title: >-
+    Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning
+  date: 2024-10
+  org: UC Berkeley
+  summary: >-
+    Real-world vision-based RL system built on the SERL suite that combines demos, human
+    corrections and sample-efficient RL, reaching near-perfect success on dexterous tasks in
+    1-2.5 h of training (first-party).
+  links:
+    paper: https://arxiv.org/abs/2410.21845
+    code: https://github.com/rail-berkeley/hil-serl
+    project: https://hil-serl.github.io/
+  access: open
+  tags: [rl, hitl, manipulation]
+  added: 2026-09-29
+
+- id: egomimic
+  name: EgoMimic
+  title: 'EgoMimic: Scaling Imitation Learning via Egocentric Video'
+  date: 2024-10
+  org: Georgia Tech
+  summary: >-
+    Full-stack pipeline that records egocentric human demos with Project Aria glasses and 3D
+    hand tracking, aligns them to a low-cost bimanual robot, and co-trains one policy on
+    human and robot data.
+  links:
+    paper: https://arxiv.org/abs/2410.24221
+    code: https://github.com/SimarKareer/EgoMimic
+    project: https://egomimic.github.io/
+  access: open
+  tags: [data-collection, video, manipulation, cross-embodiment]
+  added: 2026-09-29
+
+- id: dexmimicgen
+  name: DexMimicGen
+  title: >-
+    DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation
+    Learning
+  date: 2024-10
+  org: NVIDIA / UT Austin / UCSD
+  summary: >-
+    Extends MimicGen-style synthesis to bimanual humanoids with dexterous hands (21K sim
+    demos from 60 human demos) and shows a real-to-sim-to-real pipeline on a humanoid
+    can-sorting task.
+  links:
+    paper: https://arxiv.org/abs/2410.24185
+    code: https://github.com/NVlabs/dexmimicgen
+    project: https://dexmimicgen.github.io/
+  access: open
+  tags: [data-generation, dexterous, humanoid]
+  added: 2026-09-29
+
+- id: fastumi
+  name: FastUMI
+  title: >-
+    FastUMI: A Scalable and Hardware-Independent Universal Manipulation Interface with
+    Dataset
+  date: 2024-09
+  org: Shanghai AI Lab et al.
+  summary: >-
+    UMI redesign with decoupled hardware and an off-the-shelf tracking module instead of VIO
+    for easier deployment across arms, released with 10,000+ real-world demonstrations over
+    22 everyday tasks.
+  links:
+    paper: https://arxiv.org/abs/2409.19499
+  access: partial
+  tags: [data-collection, dataset, manipulation]
+  note: >-
+    Project site (fastumi.com) was unreachable during verification; release details not
+    re-checked.
+  added: 2026-09-29
+
+- id: ario
+  name: ARIO
+  title: >-
+    All Robots in One: A New Standard and Unified Dataset for Versatile, General-Purpose
+    Embodied Agents
+  date: 2024-08
+  org: Peng Cheng Laboratory / SUSTech / Sun Yat-sen University et al.
+  summary: >-
+    Unified embodied data standard (format, sensor modalities, real plus simulated data) and
+    a converted dataset of about 3M episodes from 258 series and 321,064 tasks.
+  links:
+    paper: https://arxiv.org/abs/2408.10899
+    project: https://imaei.github.io/project_pages/ario/
+    data: https://openi.pcl.ac.cn/ARIO/ARIO_Dataset
+  access: open
+  tags: [dataset, cross-embodiment]
+  added: 2026-09-29
+
+- id: open-television
+  name: Open-TeleVision
+  title: 'Open-TeleVision: Teleoperation with Immersive Active Visual Feedback'
+  date: 2024-07
+  org: UC San Diego / MIT
+  summary: >-
+    Open-source VR teleoperation that streams stereo video from an actively moving robot
+    head and mirrors the operator's arm and hand motion; used to collect long-horizon
+    humanoid demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2407.01512
+    code: https://github.com/OpenTeleVision/TeleVision
+    project: https://robot-tv.github.io/
+  access: open
+  tags: [teleop, humanoid, dexterous]
+  added: 2026-09-29
+
+- id: manipulate-anything
+  name: Manipulate-Anything
+  title: 'Manipulate-Anything: Automating Real-World Robots using Vision-Language Models'
+  date: 2024-06
+  org: University of Washington; NVIDIA; Allen Institute for AI
+  summary: >-
+    VLM-driven system that generates real-world manipulation trajectories without privileged
+    state or hand-designed skills; its demonstrations train behavior-cloning policies that
+    beat ones trained on human or VoxPoser/CaP-generated data (first-party).
+  links:
+    paper: https://arxiv.org/abs/2406.18915
+    code: https://github.com/Robot-MA/manipulate-anything
+    project: https://robot-ma.github.io/
+  access: open
+  tags: [manipulation, dataset]
+  added: 2026-09-29
+
+- id: so-arm100
+  name: SO-100 / SO-101 arms
+  date: 2024-05
+  org: The Robot Studio / Hugging Face
+  summary: >-
+    Open-hardware low-cost leader-follower arm pair designed for LeRobot teleoperation and
+    data collection; SO-101 is the revised version with easier assembly and updated leader
+    motors.
+  links:
+    code: https://github.com/TheRobotStudio/SO-ARM100
+  access: open
+  tags: [teleop, manipulation]
+  note: Date is repository creation (2024-05); public-release timing not confirmed.
+  added: 2026-09-29
+
+- id: lerobot
+  name: LeRobot
+  title: 'LeRobot: An Open-Source Library for End-to-End Robot Learning'
+  date: 2024-05
+  org: Hugging Face
+  summary: >-
+    PyTorch library covering hardware-agnostic robot and teleop control (SO-100 arms to
+    humanoids), the LeRobotDataset format with Hub streaming, reference policies and an
+    asynchronous inference stack.
+  links:
+    paper: https://arxiv.org/abs/2602.22818
+    code: https://github.com/huggingface/lerobot
+    docs: https://huggingface.co/docs/lerobot/index
+  access: open
+  tags: [dataset, teleop, vla, rl]
+  note: Library launched May 2024; arXiv paper Feb 2026 (ICLR 2026).
+  added: 2026-09-29
+
+- id: droid
+  name: DROID
+  title: 'DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset'
+  date: 2024-03
+  org: Stanford / UC Berkeley / TRI et al.
+  summary: >-
+    76k teleoperated demonstration trajectories (~350 h) collected across 564 scenes and 84
+    tasks by 50 collectors in North America, Asia and Europe; released with policy code and
+    a hardware build guide.
+  links:
+    paper: https://arxiv.org/abs/2403.12945
+    code: https://github.com/droid-dataset/droid
+    project: https://droid-dataset.github.io/
+  access: open
+  tags: [dataset, manipulation, teleop]
+  added: 2026-09-29
+
+- id: dexcap
+  name: DexCap
+  title: >-
+    DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation
+  date: 2024-03
+  org: Stanford
+  summary: >-
+    Portable hand mocap (SLAM plus electromagnetic finger tracking with 3D scene capture)
+    paired with DexIL, which learns point-cloud dexterous policies from human mocap, with
+    optional human-in-the-loop correction in rollouts.
+  links:
+    paper: https://arxiv.org/abs/2403.07788
+    code: https://github.com/j96w/DexCap
+    project: https://dex-cap.github.io/
+    data: https://huggingface.co/datasets/chenwangj/DexCap-Data
+  access: open
+  tags: [data-collection, dexterous, hitl]
+  added: 2026-09-29
+
+- id: umi
+  name: UMI
+  title: >-
+    Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots
+  date: 2024-02
+  org: Stanford / Columbia / TRI
+  summary: >-
+    Hand-held gripper kit for portable in-the-wild demonstration capture plus a policy
+    interface (latency matching, relative-trajectory actions) that yields hardware-agnostic
+    robot policies.
+  links:
+    paper: https://arxiv.org/abs/2402.10329
+    code: https://github.com/real-stanford/universal_manipulation_interface
+    project: https://umi-gripper.github.io/
+  access: open
+  tags: [data-collection, manipulation, cross-embodiment]
+  added: 2026-09-29
+
+- id: aloha-2
+  name: ALOHA 2
+  title: 'ALOHA 2: An Enhanced Low-Cost Hardware for Bimanual Teleoperation'
+  date: 2024-02
+  org: Google DeepMind
+  summary: >-
+    Redesign of ALOHA with better performance, ergonomics and robustness; all hardware
+    designs, a build tutorial and a system-identified MuJoCo model are open-sourced.
+  links:
+    paper: https://arxiv.org/abs/2405.02292
+    project: https://aloha-2.github.io/
+  access: open
+  tags: [teleop, manipulation]
+  note: arXiv v1 is dated Feb 2024 although the ID is 2405.
+  added: 2026-09-29
+
+- id: serl
+  name: SERL
+  title: 'SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning'
+  date: 2024-01
+  org: UC Berkeley / University of Washington / Stanford / Intrinsic
+  summary: >-
+    Library bundling a sample-efficient off-policy RL method, reward and reset tooling and a
+    Franka controller; learned PCB insertion, cable routing and relocation in 25-50 min per
+    policy (first-party). Basis of HIL-SERL.
+  links:
+    paper: https://arxiv.org/abs/2401.16013
+    code: https://github.com/rail-berkeley/serl
+    project: https://serl-robot.github.io/
+  access: open
+  tags: [rl, manipulation]
+  added: 2026-09-29
+
+- id: mobile-aloha
+  name: Mobile ALOHA
+  title: >-
+    Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body
+    Teleoperation
+  date: 2024-01
+  org: Stanford
+  summary: >-
+    Adds a mobile base and whole-body teleoperation to ALOHA for collecting bimanual
+    mobile-manipulation data; co-training with static ALOHA data improved success on tasks
+    such as cooking and calling an elevator.
+  links:
+    paper: https://arxiv.org/abs/2401.02117
+    code: https://github.com/MarkFzp/mobile-aloha
+    project: https://mobile-aloha.github.io/
+  access: open
+  tags: [teleop, mobile-manipulation]
+  added: 2026-09-29
+
+- id: ego-exo4d
+  name: Ego-Exo4D
+  title: >-
+    Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person
+    Perspectives
+  date: 2023-11
+  summary: >-
+    1,286 h of simultaneously captured egocentric and exocentric video of skilled activities
+    by 740 participants in 13 cities, with audio, gaze, 3D point clouds, camera poses, IMU
+    and expert commentary, plus benchmark tasks.
+  links:
+    paper: https://arxiv.org/abs/2311.18259
+    project: https://ego-exo4d-data.org/
+  access: open
+  tags: [dataset, video]
+  added: 2026-09-29
+
+- id: dobb-e
+  name: Dobb-E
+  title: On Bringing Robots Home
+  date: 2023-11
+  summary: >-
+    Home-robot system built around 'The Stick', an iPhone-based demo collector used to
+    gather 13 h of data in 22 NYC homes for pretrained representations; learned new tasks on
+    Hello Robot Stretch from ~5 min of demos.
+  links:
+    paper: https://arxiv.org/abs/2311.16098
+    code: https://github.com/notmahi/dobb-e
+    project: https://dobb-e.com/
+    docs: https://docs.dobb-e.com
+  access: open
+  tags: [data-collection, dataset, mobile-manipulation]
+  added: 2026-09-29
+
+- id: open-x-embodiment
+  name: Open X-Embodiment
+  title: 'Open X-Embodiment: Robotic Learning Datasets and RT-X Models'
+  date: 2023-10
+  org: Open X-Embodiment Collaboration (21 institutions, Google DeepMind et al.)
+  summary: >-
+    Standardized pooling of real-robot datasets from 22 robot embodiments and 21
+    institutions (527 skills, 160k+ tasks), released with RT-X models that show positive
+    transfer across robots.
+  links:
+    paper: https://arxiv.org/abs/2310.08864
+    code: https://github.com/google-deepmind/open_x_embodiment
+    project: https://robotics-transformer-x.github.io/
+  access: open
+  tags: [dataset, cross-embodiment, manipulation]
+  added: 2026-09-29
+
+- id: mimicgen
+  name: MimicGen
+  title: >-
+    MimicGen: A Data Generation System for Scalable Robot Learning using Human
+    Demonstrations
+  date: 2023-10
+  org: NVIDIA / UT Austin
+  summary: >-
+    Synthesizes large demonstration sets by splitting a few human demos into object-centric
+    subtasks and adapting them to new scenes; generated 50K+ demos over 18 tasks from ~200
+    human demos.
+  links:
+    paper: https://arxiv.org/abs/2310.17596
+    code: https://github.com/NVlabs/mimicgen
+    project: https://mimicgen.github.io/
+  access: open
+  tags: [data-generation, manipulation, long-horizon]
+  added: 2026-09-29
+
+- id: gello
+  name: GELLO
+  title: >-
+    GELLO: A General, Low-Cost, and Intuitive Teleoperation Framework for Robot Manipulators
+  date: 2023-09
+  org: UC Berkeley
+  summary: >-
+    Recipe for 3D-printed, kinematically matched leader arms built from off-the-shelf motors
+    (Franka, UR5, xArm); a user study found it more reliable than VR controllers or
+    SpaceMouse for demo collection.
+  links:
+    paper: https://arxiv.org/abs/2309.13037
+    code: https://github.com/wuphilipp/gello_software
+    project: https://wuphilipp.github.io/gello_site/
+  access: open
+  tags: [teleop, manipulation]
+  added: 2026-09-29
+
+- id: bridgedata-v2
+  name: BridgeData V2
+  title: 'BridgeData V2: A Dataset for Robot Learning at Scale'
+  date: 2023-08
+  org: UC Berkeley et al.
+  summary: >-
+    60,096 trajectories across 24 environments on a publicly available low-cost arm,
+    conditioned on goal images or language; benchmarks six imitation and offline-RL methods
+    and their scaling with data.
+  links:
+    paper: https://arxiv.org/abs/2308.12952
+    code: https://github.com/rail-berkeley/bridge_data_v2
+    project: https://rail-berkeley.github.io/bridgedata/
+  access: open
+  tags: [dataset, manipulation]
+  added: 2026-09-29
+
+- id: rh20t
+  name: RH20T
+  title: 'RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot'
+  date: 2023-07
+  org: Shanghai Jiao Tong University
+  summary: >-
+    110k+ contact-rich real-world manipulation sequences across skills, robots and camera
+    views, each with visual, force, audio and action streams plus a paired human
+    demonstration video and language.
+  links:
+    paper: https://arxiv.org/abs/2307.00595
+    code: https://github.com/rh20t/rh20t_api
+    project: https://rh20t.github.io/
+  access: open
+  tags: [dataset, manipulation, cross-embodiment]
+  added: 2026-09-29
+
+- id: anyteleop
+  name: AnyTeleop
+  title: 'AnyTeleop: A General Vision-Based Dexterous Robot Arm-Hand Teleoperation System'
+  date: 2023-07
+  org: UC San Diego / NVIDIA
+  summary: >-
+    Camera-based teleoperation stack supporting many arm, hand, simulator and camera
+    configurations in one system; its hand-retargeting component is released as the
+    dex-retargeting library.
+  links:
+    paper: https://arxiv.org/abs/2307.04577
+    code: https://github.com/dexsuite/dex-retargeting
+    project: https://yzqin.github.io/anyteleop/
+  access: partial
+  tags: [teleop, dexterous, cross-embodiment]
+  note: >-
+    Project page links component code (retargeting, web visualizer) rather than the full
+    system.
+  added: 2026-09-29
+
+- id: aloha
+  name: ALOHA
+  title: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
+  date: 2023-04
+  org: Stanford / Meta / UC Berkeley
+  summary: >-
+    Low-cost open-source bimanual leader-follower teleoperation rig plus the ACT (Action
+    Chunking with Transformers) algorithm; learned tasks like slotting a battery from ~10
+    min of demos (first-party).
+  links:
+    paper: https://arxiv.org/abs/2304.13705
+    code: https://github.com/tonyzhaozh/aloha
+    project: https://tonyzhaozh.github.io/aloha/
+  access: open
+  tags: [teleop, manipulation]
+  added: 2026-09-29
+
+- id: rlds
+  name: RLDS
+  title: 'RLDS: an Ecosystem to Generate, Share and Use Datasets in Reinforcement Learning'
+  date: 2021-11
+  org: Google Research
+  summary: >-
+    Lossless standard format and tools for recording, replaying, transforming and sharing
+    sequential decision-making datasets (RL, imitation, offline RL), integrated with TFDS;
+    used by Open X-Embodiment.
+  links:
+    paper: https://arxiv.org/abs/2111.02767
+    code: https://github.com/google-research/rlds
+  access: open
+  tags: [dataset, rl]
+  added: 2026-09-29
+
+- id: ego4d
+  name: Ego4D
+  title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'
+  date: 2021-10
+  org: Meta AI + university consortium
+  summary: >-
+    3,670 hours of daily-life egocentric video from 931 camera wearers in 74 locations with
+    benchmarks on episodic memory, hand-object interaction and forecasting; a common
+    pretraining source for robot visual encoders.
+  links:
+    paper: https://arxiv.org/abs/2110.07058
+    code: https://github.com/facebookresearch/Ego4d
+    project: https://ego4d-data.org/
+  access: open
+  tags: [dataset, video]
+  note: Download requires signing the Ego4D license agreement.
+  added: 2026-09-29
+
+- id: robomimic
+  name: robomimic
+  title: >-
+    What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
+  date: 2021-08
+  org: Stanford / UT Austin
+  summary: >-
+    Modular framework and demo datasets for robot learning from demonstrations, introduced
+    with a study of six offline IL/RL algorithms on sim and real tasks; later versions add
+    Diffusion Policy and language conditioning.
+  links:
+    paper: https://arxiv.org/abs/2108.03298
+    code: https://github.com/ARISE-Initiative/robomimic
+    project: https://robomimic.github.io/
+  access: open
+  tags: [dataset, manipulation]
+  added: 2026-09-29
+
+- id: robonet
+  name: RoboNet
+  title: 'RoboNet: Large-Scale Multi-Robot Learning'
+  date: 2019-10
+  summary: >-
+    Open database for sharing robot experience with an initial 15M video frames from 7 robot
+    platforms, used to study generalizable vision-based manipulation models across robots.
+  links:
+    paper: https://arxiv.org/abs/1910.11215
+    project: https://www.robonet.wiki/
+  access: open
+  tags: [dataset, cross-embodiment, video]
+  added: 2026-09-29
+
+- id: roboturk
+  name: RoboTurk
+  title: 'RoboTurk: A Crowdsourcing Platform for Robotic Skill Learning through Imitation'
+  date: 2018-11
+  org: Stanford
+  summary: >-
+    Early crowdsourcing platform for 6-DoF robot teleoperation from smartphones, showing
+    remote users can collect demonstrations efficiently even over poor network links; its
+    sim and real datasets were released.
+  links:
+    paper: https://arxiv.org/abs/1811.02790
+    project: https://roboturk.stanford.edu/
+  access: partial
+  tags: [teleop, dataset, manipulation]
+  added: 2026-09-29
+
+- id: mate-teleop
+  name: MATE
+  title: >-
+    MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data
+    Collection
+  date: 2026-09
+  summary: >-
+    Virtual teleoperation platform where geographically distributed operators jointly
+    control whole-body humanoids in one physics simulation, producing a 24.1-hour
+    multi-humanoid collaboration dataset; adds execution-aligned interaction sampling for
+    learning.
+  links:
+    paper: https://arxiv.org/abs/2609.26520
+  access: closed
+  tags: [teleop, humanoid, multi-robot, dataset, data-collection]
+  added: 2026-10-04
+
+- id: robo-valuerl
+  name: Robo-ValueRL
+  title: >-
+    Robo-ValueRL: Reliable Value Estimation for Offline-to-Online Reinforcement Learning
+  date: 2026-07
+  org: Beijing Humanoid Robot Innovation Center; Renmin University of China
+  summary: >-
+    Open offline-to-online RL framework for real-robot manipulation: a history-conditioned
+    value estimator, checked with global-progress and local-preference reliability metrics,
+    drives quality-conditioned policy pretraining and stabilizes online improvement from
+    real rollouts.
+  links:
+    paper: https://arxiv.org/abs/2607.09866
+    code: https://github.com/Open-X-Humanoid/Robo-ValueRL
+    project: https://gewu-lab.github.io/Robo-ValueRL/
+  access: open
+  tags: [rl, reward-model, manipulation, humanoid, real-world]
+  added: 2026-10-06
+
+- id: vommi
+  name: VOMMI
+  title: 'VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation'
+  date: 2026-10
+  summary: >-
+    Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand
+    views are synchronized, trajectories refined offline with sparse geometric anchors, and
+    local-motion tokens condition VLA post-training through a residual adapter.
+  links:
+    paper: https://arxiv.org/abs/2610.08220
+  access: closed
+  tags: [data-collection, mobile-manipulation, vla]
+  added: 2026-10-11

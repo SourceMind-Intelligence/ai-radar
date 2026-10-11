@@ -1,0 +1,931 @@
+- id: verify-adapt-hold
+  name: Verify-Adapt-Hold
+  title: >-
+    Containing Behavioral Cascades from Manipulated Claims in LLM-Powered Multi-Robot
+    Systems
+  date: 2026-09
+  summary: >-
+    Active verification for LLM-powered robot fleets after a false world-state claim is
+    accepted: a Verify-Adapt-Hold plan sends some robots to inspect, lets a few adapt and
+    keeps the rest on trusted plans, containing fleet-wide replanning cascades.
+  links:
+    paper: https://arxiv.org/abs/2609.30523
+  access: closed
+  tags: [security, multi-robot, success-detection]
+  added: 2026-09-29
+
+- id: shieldvla
+  name: ShieldVLA
+  title: 'ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models'
+  date: 2026-09
+  summary: >-
+    Safety-aligned VLA fine-tuning based on Hamilton-Jacobi reachability: a safety critic
+    learned from visual observations gates policy optimization, separating reward seeking in
+    feasible regions from recovery near unsafe states, with rubric-based VLM safety scores
+    as supervision.
+  links:
+    paper: https://arxiv.org/abs/2609.13231
+  access: closed
+  tags: [safety, vla, rl]
+  added: 2026-09-29
+
+- id: safeloop
+  name: SafeLoop
+  title: 'SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation'
+  date: 2026-09
+  org: Nanjing University et al.
+  summary: >-
+    External wrapper that adds hazard prediction and rollback to a VLA without changing its
+    weights: a risk predictor estimates probability and time-to-hazard for collisions and
+    object failures, and a controller continues, saves a safety checkpoint or rolls back in
+    joint space. IROS 2026.
+  links:
+    paper: https://arxiv.org/abs/2609.26313
+    code: https://github.com/Loule0-0/SafeLoop
+  access: open
+  tags: [safety, failure-recovery, vla, manipulation]
+  added: 2026-09-29
+
+- id: planguard
+  name: PlanGuard
+  title: 'PlanGuard: A Guardrail for Multi-Step Plan Safety in Embodied Agents'
+  date: 2026-09
+  summary: >-
+    Pre-execution guardrail that judges the physical safety of a complete multi-step plan in
+    its environment, trained on the MSP-Safe dataset and distilled into a 2B model with
+    on-policy strong-teacher distillation.
+  links:
+    paper: https://arxiv.org/abs/2609.32801
+  access: closed
+  tags: [safety, planning]
+  note: Code and data announced but not yet released.
+  added: 2026-09-29
+
+- id: humanoid-orchestrator-safety-bench
+  name: Humanoid LLM-Orchestrator Safety Benchmark
+  title: >-
+    How Long Until Your Robot Ignores You? A Safety Benchmark for LLM Orchestrators in
+    Human-Humanoid Collaboration
+  date: 2026-09
+  summary: >-
+    MCP-based benchmark for LLMs orchestrating a humanoid, with five safety invariants
+    grounded in ISO 10218-2:2025, a four-level compliance taxonomy (over- to
+    under-compliance) and text, simulation and Unitree G1 evaluation layers.
+  links:
+    paper: https://arxiv.org/abs/2609.07288
+  access: closed
+  tags: [safety, mcp, humanoid, benchmark, hitl]
+  note: >-
+    Only text-layer results reported so far; tests long sessions under different
+    context-management budgets.
+  added: 2026-09-29
+
+- id: physical-prompt-injection
+  name: Physical Prompt Injection Study
+  title: >-
+    Hijacking Robots with a Piece of Paper: A Systematic Study of Physical Prompt Injection
+    in VLM-Controlled Robots
+  date: 2026-08
+  org: Singapore University of Technology and Design
+  summary: >-
+    Tests adversarial signage in the camera view as indirect prompt injection against
+    VLM-planned robot sorting (5,670 trials on GPT-4o, Gemini 2.5 Flash, Qwen3-VL-32B) and
+    evaluates prompt defences, two-stage verification and text masking.
+  links:
+    paper: https://arxiv.org/abs/2608.05715
+  access: closed
+  tags: [security, manipulation]
+  note: First-party attack success of 27.0%, 29.4% and 5.0% for the three models.
+  added: 2026-09-29
+
+- id: multi-robot-comm-attacks
+  name: Multi-Robot Communication Attacks
+  title: >-
+    When Coordination Becomes a Threat: Communication Attacks in LLM-Controlled Multi-Robot
+    Systems
+  date: 2026-08
+  summary: >-
+    Formulates external-entry and privileged in-system communication attacks and shows
+    unsafe messages turn into unsafe actions across decentralized and hybrid (DMAS, HMAS-1,
+    HMAS-2) LLM multi-robot architectures.
+  links:
+    paper: https://arxiv.org/abs/2608.06830
+  access: closed
+  tags: [security, safety, multi-robot]
+  added: 2026-09-29
+
+- id: edge-skillguard
+  name: Edge Skillguard
+  title: 'Auto-Policy, not Auto-Skill: Compiled Agent Skills for the Physical World'
+  date: 2026-08
+  summary: >-
+    Names 'Borrowed Authority' attacks in which malicious agent skills drive physical
+    actuation, and proposes Edge Skillguard, a typed authority layer inside skill artifacts
+    that decides which behaviors may become actions.
+  links:
+    paper: https://arxiv.org/abs/2608.25091
+  access: closed
+  tags: [security, safety]
+  added: 2026-09-29
+
+- id: saferelbench
+  name: SafeRelBench
+  title: >-
+    SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven
+    Embodied Agents
+  date: 2026-07
+  org: Beijing University of Posts and Telecommunications
+  summary: >-
+    Process-level safety benchmark for VLM-driven embodied agents with 507 executable
+    samples (248 spatial-relation, 259 controls) testing whether agents check support,
+    containment and proximity conditions before risky actions, not just final task success.
+  links:
+    paper: https://arxiv.org/abs/2607.14543
+  access: closed
+  tags: [benchmark, safety, spatial-reasoning]
+  added: 2026-09-29
+
+- id: nvidia-halos-robotics
+  name: NVIDIA Halos for Robotics
+  date: 2026-06
+  org: NVIDIA
+  summary: >-
+    Full-stack functional-safety system for physical AI: IGX Thor compute and Holoscan
+    Sensor Bridge, the Halos OS safety stack (Halos Core, open-source Outside-In Safety
+    Blueprint) and an ANAB-accredited AI Systems Inspection Lab; Agility is the lead
+    partner.
+  links:
+    code: https://github.com/NVIDIA/halos-outside-in-safety
+    blog: https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai
+    docs: https://www.nvidia.com/en-us/ai-trust-center/halos/robotics/
+  access: partial
+  tags: [safety, humanoid]
+  note: >-
+    Announced at Automate 2026 (2026-06-22). Blueprint is early access; its README says it
+    is not for production safety use without a certified safety layer.
+  added: 2026-09-29
+
+- id: libero-safety
+  name: LIBERO-Safety
+  title: >-
+    LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in
+    Vision-Language-Action Models
+  date: 2026-06
+  summary: >-
+    Parametric benchmark that procedurally generates safety-critical manipulation scenarios,
+    with a keypose-driven pipeline yielding 19,664 collision-free demonstrations and an
+    evaluation of eight VLAs and two embodied foundation models.
+  links:
+    paper: https://arxiv.org/abs/2606.23686
+    code: https://github.com/LIBERO-SAFETY/LIBERO-Safety
+    project: https://libero-safety.github.io/
+    data: https://huggingface.co/datasets/LIBERO-Safety/libero_safety
+  access: open
+  tags: [safety, benchmark, vla, dataset, manipulation]
+  note: ECCV 2026.
+  added: 2026-09-29
+
+- id: multi-robot-single-compromise
+  name: Single-Robot Compromise Propagation
+  title: >-
+    Propagating Unsafe Actions in LLM Controlled Multi-Robot Collaboration via Single Robot
+    Compromise
+  date: 2026-05
+  summary: >-
+    Attack paradigm where an adversary interacts with only one entry robot, which then
+    spreads malicious intent over inter-robot communication, causing coordinated unsafe
+    actions in LLM-planned multi-robot teams. IJCAI 2026.
+  links:
+    paper: https://arxiv.org/abs/2605.15641
+  access: closed
+  tags: [security, safety, multi-robot]
+  added: 2026-09-29
+
+- id: safevla-bench
+  name: SafeVLA-Bench
+  title: >-
+    SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
+  date: 2026-05
+  org: University of Pennsylvania
+  summary: >-
+    Post-hoc safety layer for simulator VLA benchmarks that encodes task-aware safety
+    requirements in Signal Temporal Logic and reports succeeded-but-unsafe rates and
+    violation severity on LIBERO and RoboCasa-365.
+  links:
+    paper: https://arxiv.org/abs/2606.00773
+    project: https://safevla.org/
+  access: closed
+  tags: [safety, benchmark, vla]
+  note: >-
+    First-party: 36-56% of successful RoboCasa-365 rollouts violate at least one safety
+    clause. Project page hosts a leaderboard.
+  added: 2026-09-29
+
+- id: runtime-governance-embodied-agents
+  name: Runtime governance for embodied agents
+  title: 'Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution'
+  date: 2026-04
+  summary: >-
+    Moves governance out of the agent loop into a runtime layer that performs policy checks,
+    capability admission, execution monitoring, rollback and human override, evaluated in
+    randomized simulated trials against AutoRT-style constitution filtering and other
+    baselines.
+  links:
+    paper: https://arxiv.org/abs/2604.07833
+    code: https://github.com/s20sc/harnessing-embodied-agents
+  access: open
+  tags: [safety, hitl, failure-recovery]
+  added: 2026-09-29
+
+- id: hazardarena
+  name: HazardArena
+  title: 'HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models'
+  date: 2026-04
+  summary: >-
+    VLA semantic-safety benchmark of matched safe/unsafe twin scenarios (same objects,
+    layout and motion, different risk context), with 2,000+ assets and 51 tasks; finds
+    safe-only fine-tuning also raises hazardous execution.
+  links:
+    paper: https://arxiv.org/abs/2604.12447
+    code: https://github.com/HazardArena-Team/HazardArena
+  access: open
+  tags: [safety, benchmark, vla, manipulation]
+  added: 2026-09-29
+
+- id: modular-safety-guardrails
+  name: Modular Safety Guardrails (position)
+  title: >-
+    Modular Safety Guardrails Are Necessary for Foundation-Model-Enabled Robots in the Real
+    World
+  date: 2026-02
+  summary: >-
+    Position paper that splits foundation-model robot safety into action, decision and
+    human-centred safety and argues for modular monitoring and intervention guardrail layers
+    across the autonomy stack, with cross-layer co-design.
+  links:
+    paper: https://arxiv.org/abs/2602.04056
+  access: closed
+  tags: [safety]
+  added: 2026-09-29
+
+- id: robosafe
+  name: RoboSafe
+  title: 'RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic'
+  date: 2025-12
+  summary: >-
+    Runtime guardrail for VLM-driven embodied agents that keeps a long/short-term safety
+    memory, infers temporal safety predicates from recent trajectories and forecasts
+    upcoming risks, all as executable predicate code that triggers replanning.
+  links:
+    paper: https://arxiv.org/abs/2512.21220
+  access: closed
+  tags: [safety, memory, code-as-policy]
+  note: Code promised upon acceptance.
+  added: 2026-09-29
+
+- id: aegis-vlsa
+  name: AEGIS (VLSA)
+  title: 'VLSA: Vision-Language-Action Models with Plug-and-Play Safety Constraint Layer'
+  date: 2025-12
+  org: Tsinghua University
+  summary: >-
+    Adds a plug-and-play control-barrier-function safety constraint layer to existing VLAs
+    for collision avoidance with theoretical guarantees, and introduces the SafeLIBERO
+    benchmark of obstacle-intervention manipulation scenarios.
+  links:
+    paper: https://arxiv.org/abs/2512.11891
+    code: https://github.com/THU-RCSCT/vlsa-aegis
+    project: https://vlsa-aegis.github.io/
+  access: open
+  tags: [safety, vla, manipulation, benchmark]
+  note: IROS 2026. Source of the SafeLIBERO benchmark.
+  added: 2026-09-29
+
+- id: shawshank-iej
+  name: SHAWSHANK
+  title: >-
+    The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect
+    Environmental Jailbreaks
+  date: 2025-11
+  summary: >-
+    Introduces indirect environmental jailbreaks, where instructions placed in the scene
+    (e.g. written on a wall) hijack VLM-driven embodied agents, plus automatic attack
+    (SHAWSHANK) and benchmark-generation (SHAWSHANK-FORGE) frameworks.
+  links:
+    paper: https://arxiv.org/abs/2511.16347
+    project: https://shawshankiej.github.io/
+  access: closed
+  tags: [security, benchmark]
+  note: >-
+    Authors report compromising all six tested VLMs and responsible disclosure to vendors;
+    no code link found.
+  added: 2026-09-29
+
+- id: unitree-g1-security-assessment
+  name: Unitree G1 Security Assessment
+  title: 'Cybersecurity AI: Humanoid Robots as Attack Vectors'
+  date: 2025-09
+  org: Alias Robotics
+  summary: >-
+    Security assessment of the Unitree G1 humanoid reporting a BLE provisioning
+    command-injection flaw with hardcoded shared keys, weak proprietary encryption layers,
+    and periodic telemetry exfiltration to remote servers without operator notice.
+  links:
+    paper: https://arxiv.org/abs/2509.14139
+  access: closed
+  tags: [security, humanoid]
+  note: >-
+    Platform-level (non-model) attack surface of a humanoid widely used as an LLM/VLA
+    testbed.
+  added: 2026-09-29
+
+- id: homesafebench
+  name: HomeSafeBench
+  title: >-
+    HomeSafeBench: Benchmarking Embodied Vision-Language Models in Free-Exploration Home
+    Safety Inspection
+  date: 2025-09
+  summary: >-
+    Free-exploration home-safety inspection benchmark on VirtualHome: an embodied VLM agent
+    navigates and adjusts its viewpoint to report hazards across five categories in 1,000
+    human-validated tasks; first-party best VLM F1 is ~35% vs 98% for humans.
+  links:
+    paper: https://arxiv.org/abs/2509.23690
+    code: https://github.com/BITHLP/HomeSafeBench
+  access: open
+  tags: [benchmark, safety, navigation]
+  added: 2026-09-29
+
+- id: asimov-2
+  name: ASIMOV-2.0
+  title: Can AI Perceive Physical Danger and Intervene?
+  date: 2025-09
+  org: Google DeepMind
+  summary: >-
+    Second ASIMOV release: turns real injury narratives and operational constraints into
+    photorealistic images and videos of safe-to-unsafe transitions for continuous
+    physical-safety benchmarking, plus post-training for explicit safety-constraint
+    reasoning.
+  links:
+    paper: https://arxiv.org/abs/2509.21651
+    project: https://asimov-benchmark.github.io/v2/
+  access: partial
+  tags: [safety, benchmark, video, dataset]
+  note: >-
+    Data distributed via a Colab linked from the project page; post-trained models not
+    released.
+  added: 2026-09-29
+
+- id: robogcg
+  name: RoboGCG
+  title: Adversarial Attacks on Robotic Vision Language Action Models
+  date: 2025-06
+  summary: >-
+    Adapts LLM jailbreak optimisation to VLAs and shows a single textual prompt at the start
+    of a rollout can give an attacker full control over the action space of common VLAs,
+    often persisting over long horizons.
+  links:
+    paper: https://arxiv.org/abs/2506.03350
+    code: https://github.com/eliotjones1/robogcg
+  access: open
+  tags: [security, vla]
+  added: 2026-09-29
+
+- id: is-bench
+  name: IS-Bench
+  title: >-
+    IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household
+    Tasks
+  date: 2025-06
+  org: Shanghai AI Laboratory
+  summary: >-
+    Interactive-safety benchmark of 161 household scenarios with 388 safety risks in a
+    high-fidelity simulator; process-oriented evaluation checks whether mitigation steps
+    happen before/after the risky step, not just the final outcome.
+  links:
+    paper: https://arxiv.org/abs/2506.16402
+    code: https://github.com/AI45Lab/IS-Bench
+  access: open
+  tags: [safety, benchmark, planning]
+  added: 2026-09-29
+
+- id: agentsafe
+  name: AGENTSAFE
+  title: 'AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions'
+  date: 2025-06
+  org: Beihang University et al.
+  summary: >-
+    Safety benchmark for VLM embodied agents: SAFE-THOR adversarial sandbox with a universal
+    high-to-low-level adapter, SAFE-VERSE (45 scenarios, 1,350 hazardous tasks, 9,900
+    instructions) and SAFE-DIAGNOSE scoring perception, planning and execution.
+  links:
+    paper: https://arxiv.org/abs/2506.14697
+  access: closed
+  tags: [benchmark, safety, planning]
+  note: >-
+    CVPR 2026; finds agents that recognize hazards still plan and execute unsafe actions. No
+    code link found.
+  added: 2026-09-29
+
+- id: shield-humanoid
+  name: SHIELD
+  title: 'SHIELD: Safety on Humanoids via CBFs In Expectation on Learned Dynamics'
+  date: 2025-05
+  summary: >-
+    Minimally invasive safety layer for learned humanoid controllers: a generative
+    stochastic dynamics residual trained on hardware data feeds a stochastic discrete-time
+    control barrier function that enforces constraints in probability; shown on a Unitree
+    G1.
+  links:
+    paper: https://arxiv.org/abs/2505.11494
+  access: closed
+  tags: [safety, humanoid, legged, navigation]
+  note: IROS 2025.
+  added: 2026-09-29
+
+- id: iso-25785-1
+  name: ISO 25785-1
+  title: >-
+    Robotics - Safety requirements for dynamically stable industrial mobile robots (legged,
+    wheeled, or other forms of locomotion) - Part 1: Robots
+  date: 2025-05
+  org: ISO/TC 299
+  summary: >-
+    First ISO safety standard being written for industrial mobile robots with actively
+    controlled stability (humanoids, quadrupeds, balancing wheeled robots), whose safe state
+    itself requires power and active control.
+  links:
+    docs: https://www.iso.org/standard/91469.html
+  access: closed
+  tags: [safety, humanoid, legged]
+  note: >-
+    Under development (ISO/CD stage on iso.org). Date = public working-draft milestone
+    announced by the A3/Agility/Boston Dynamics-led working group (May 2025). iso.org blocks
+    automated fetches; page confirmed via search listing.
+  added: 2026-09-29
+
+- id: badvla
+  name: BadVLA
+  title: >-
+    BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via
+    Objective-Decoupled Optimization
+  date: 2025-05
+  summary: >-
+    First backdoor attack on VLAs: objective-decoupled optimisation isolates trigger
+    features so a trigger induces control deviations while clean-task performance is
+    preserved; near-100% attack success reported on several VLA benchmarks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2505.16640
+    code: https://github.com/Zxy-MLlab/BadVLA
+    project: https://badvla-project.github.io/
+    data: https://huggingface.co/datasets/Lostgreen/BadVLA
+  access: open
+  tags: [security, vla]
+  added: 2026-09-29
+
+- id: safevla
+  name: SafeVLA
+  title: >-
+    SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained
+    Learning
+  date: 2025-03
+  org: Peking University
+  summary: >-
+    Integrated safety approach that models safety requirements, elicits unsafe behaviours
+    and aligns VLAs with constrained RL (a CMDP min-max objective) for long-horizon mobile
+    manipulation, with targeted safety evaluations.
+  links:
+    paper: https://arxiv.org/abs/2503.03480
+    code: https://github.com/PKU-Alignment/SafeVLA
+    project: https://pku-safevla.github.io/
+  access: open
+  tags: [safety, vla, rl, mobile-manipulation]
+  note: >-
+    NeurIPS 2025 spotlight; first-party 83.58% reduction in cumulative safety cost vs. prior
+    SOTA.
+  added: 2026-09-29
+
+- id: roboguard
+  name: RoboGuard
+  title: Safety Guardrails for LLM-Enabled Robots
+  date: 2025-03
+  org: University of Pennsylvania
+  summary: >-
+    Two-stage guardrail: a root-of-trust LLM grounds predefined safety rules in the current
+    scene as temporal-logic specs, then control synthesis resolves conflicts with the
+    proposed plan; unsafe plan execution fell from >92% to <3% under jailbreaks
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2503.07885
+    code: https://github.com/KumarRobotics/RoboGuard
+    project: https://robo-guard.github.io/
+  access: open
+  tags: [safety, security, planning]
+  added: 2026-09-29
+
+- id: asimov
+  name: ASIMOV Benchmark
+  title: Generating Robot Constitutions & Benchmarks for Semantic Safety
+  date: 2025-03
+  org: Google DeepMind
+  summary: >-
+    Releases the ASIMOV benchmark for semantic safety of VLM robot "brains", generated from
+    real images and hospital injury reports, and a method to auto-generate and auto-amend
+    robot constitutions that steer behaviour via Constitutional AI.
+  links:
+    paper: https://arxiv.org/abs/2503.08663
+    code: https://github.com/asimov-benchmark/code
+    project: https://asimov-benchmark.github.io/v1/
+  access: open
+  tags: [safety, benchmark, dataset]
+  note: >-
+    First-party top alignment rate 84.3% with generated constitutions. Constitution idea
+    first used in AutoRT (see other).
+  added: 2026-09-29
+
+- id: safeagentbench
+  name: SafeAgentBench
+  title: 'SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents'
+  date: 2024-12
+  org: Shanghai Jiao Tong University
+  summary: >-
+    750 executable tasks covering 10 hazard types in SafeAgentEnv (17 high-level actions),
+    scored by execution and semantics; the most safety-conscious baseline rejected only 10%
+    of detailed hazardous tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2412.13178
+    code: https://github.com/shengyin1224/SafeAgentBench
+    project: https://safeagentbench.github.io/
+    data: https://huggingface.co/datasets/safeagentbench/SafeAgentBench
+  access: open
+  tags: [safety, benchmark, planning]
+  added: 2026-09-29
+
+- id: poef
+  name: POEF
+  title: >-
+    Easier Said Than Done: Unpacking Intent-Behavior Gap in Jailbreaking LLM-based Robots
+  date: 2024-12
+  org: Zhejiang University
+  summary: >-
+    Shows most LLM jailbreaks yield malicious-looking but non-executable robot policies and
+    introduces POEF, automated red teaming that optimises jailbreaks under control-API and
+    physical-feasibility constraints; tested on Unitree G1, Franka and simulators.
+  links:
+    paper: https://arxiv.org/abs/2412.16633
+    project: https://zjushine.github.io/poef.github.io/
+  access: closed
+  tags: [security, humanoid, manipulation, code-as-policy]
+  note: >-
+    Accepted to NDSS 2027; arXiv v1 was titled 'POEX: Policy Executable Embodied AI
+    Jailbreak Attacks'.
+  added: 2026-09-29
+
+- id: vla-adversarial-patches
+  name: RoboticAttack
+  title: >-
+    Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
+  date: 2024-11
+  summary: >-
+    Systematic robustness study of VLAs with untargeted objectives that destabilise actions
+    and a targeted trajectory-hijacking objective, realised as small adversarial patches
+    that work in simulation and the physical world.
+  links:
+    paper: https://arxiv.org/abs/2411.13587
+    code: https://github.com/William-wAng618/roboticAttack
+    project: https://vlaattacker.github.io/
+  access: open
+  tags: [security, vla, manipulation]
+  note: ICCV 2025.
+  added: 2026-09-29
+
+- id: embodied-red-teaming
+  name: Embodied Red Teaming (ERT)
+  title: Embodied Red Teaming for Auditing Robotic Foundation Models
+  date: 2024-11
+  org: MIT
+  summary: >-
+    Automated red teaming that uses VLMs to generate diverse, contextually grounded
+    instructions that make language-conditioned robot policies fail or act unsafely,
+    exposing gaps left by fixed-instruction benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2411.18676
+    code: https://github.com/Improbable-AI/embodied-red-teaming
+    project: https://s-karnik.github.io/embodied-red-team-project-page/
+  access: open
+  tags: [safety, benchmark, vla, manipulation]
+  added: 2026-09-29
+
+- id: robopair
+  name: RoboPAIR
+  title: Jailbreaking LLM-Controlled Robots
+  date: 2024-10
+  org: University of Pennsylvania
+  summary: >-
+    First algorithm for jailbreaking LLM-controlled robots into harmful physical actions,
+    shown white-box (NVIDIA Dolphins driving LLM), gray-box (Jackal UGV with GPT-4o) and
+    black-box (Unitree Go2), the first jailbreak of a deployed commercial robot.
+  links:
+    paper: https://arxiv.org/abs/2410.13691
+    code: https://github.com/arobey1/robopair
+    project: https://robopair.org/
+  access: open
+  tags: [security, safety, legged, driving]
+  added: 2026-09-29
+
+- id: selp
+  name: SELP
+  title: >-
+    SELP: Generating Safe and Efficient Task Plans for Robot Agents with Large Language
+    Models
+  date: 2024-09
+  org: Purdue University
+  summary: >-
+    LLM planner that samples LTL translations of a command and keeps the majority-equivalent
+    formula (equivalence voting), then uses it for constrained plan decoding plus domain
+    fine-tuning; evaluated on drone navigation and manipulation.
+  links:
+    paper: https://arxiv.org/abs/2409.19471
+    code: https://github.com/lt-asset/selp
+  access: open
+  tags: [safety, planning, navigation, manipulation]
+  note: ICRA 2025.
+  added: 2026-09-29
+
+- id: earbench
+  name: EARBench
+  title: >-
+    EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation
+    Model-based Embodied AI Agents
+  date: 2024-08
+  summary: >-
+    Multi-agent framework that generates safety guidelines and risk-prone text/visual
+    scenarios and scores the physical risk of plans from foundation-model agents; evaluated
+    models had a 95.75% average task risk rate (first-party).
+  links:
+    paper: https://arxiv.org/abs/2408.04449
+    code: https://github.com/zihao-ai/EARBench
+  access: open
+  tags: [safety, benchmark, planning]
+  added: 2026-09-29
+
+- id: badrobot
+  name: BadRobot
+  title: 'BadRobot: Jailbreaking Embodied LLM Agents in the Physical World'
+  date: 2024-07
+  org: Huazhong University of Science and Technology
+  summary: >-
+    Voice-based attack paradigm that makes embodied LLM agents violate safety and ethical
+    constraints by exploiting jailbroken LLMs, language-action misalignment and
+    world-knowledge flaws; benchmarked on VoxPoser, Code as Policies and ProgPrompt.
+  links:
+    paper: https://arxiv.org/abs/2407.20242
+    code: https://github.com/ZhangHangTao/BadRobot
+    project: https://embodied-llms-safety.github.io/
+  access: open
+  tags: [security, safety, benchmark, code-as-policy]
+  note: ICLR 2025.
+  added: 2026-09-29
+
+- id: llm-robot-harms-audit
+  name: LLM Robot Harms Audit
+  title: LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions
+  date: 2024-06
+  org: King's College London, Carnegie Mellon University
+  summary: >-
+    HRI-focused audit showing that popular LLMs produce directly discriminatory outputs
+    across protected characteristics and accept dangerous, violent or unlawful
+    open-vocabulary instructions when used for robot tasks.
+  links:
+    paper: https://arxiv.org/abs/2406.08824
+    code: https://github.com/rumaisa-azeem/llm-robots-discrimination-safety
+  access: open
+  tags: [safety, benchmark, hitl]
+  note: Published in the International Journal of Social Robotics (2025).
+  added: 2026-09-29
+
+- id: safety-chip
+  name: Safety Chip
+  title: 'Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents'
+  date: 2023-09
+  org: Brown University
+  summary: >-
+    Queryable safety-constraint module that translates natural-language rules into linear
+    temporal logic, explains violations and prunes unsafe actions proposed by an LLM agent;
+    tested in VirtualHome and on a real robot.
+  links:
+    paper: https://arxiv.org/abs/2309.09919
+    code: https://github.com/YzyLmc/ltl_safety
+    project: https://yzylmc.github.io/safety-chip/
+  access: open
+  tags: [safety, planning, mobile-manipulation]
+  added: 2026-09-29
+
+- id: rcdh
+  name: RCDH
+  title: >-
+    Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in
+    Robotic Harvesting
+  aliases: [Rejectable and Calibrated Decision Heads]
+  date: 2026-09
+  summary: >-
+    Replaces a frozen VLA's output head with a typed decision schema that includes explicit
+    rejection, plus calibration for risk-aware abstention, so the policy can decline to act
+    under occlusion; tested on a robotic harvesting platform.
+  links:
+    paper: https://arxiv.org/abs/2609.35039
+  access: closed
+  tags: [safety, uncertainty, vla, real-world]
+  added: 2026-09-30
+
+- id: predictive-semantic-safety
+  name: Predictive Semantic Safety
+  title: >-
+    Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control
+  aliases: [PSS]
+  date: 2026-09
+  summary: >-
+    A VLM predicts physical events such as falling fixtures and their timing; conformal
+    prediction turns them into calibrated future object occupancy, which a backup-based
+    safety filter uses to minimally modify the robot's commands; evaluated in MuJoCo with a
+    Unitree Go1.
+  links:
+    paper: https://arxiv.org/abs/2609.34356
+    project: https://www.taekyung.me/pss
+  access: closed
+  tags: [safety, uncertainty, legged]
+  added: 2026-10-01
+
+- id: refusals-that-bend
+  name: Refusals That Bend
+  title: >-
+    Refusals That Bend: Measuring and Predicting Task Malleability in Embodied VLM Planners
+  date: 2026-09
+  summary: >-
+    Shows that placing one ordinary object in the scene flips 20.2% of tasks a
+    constitution-guarded embodied VLM planner initially refused into compliance, with no
+    adversarial pixels or prompts, and predicts which tasks are malleable using signals from
+    a small open VLM.
+  links:
+    paper: https://arxiv.org/abs/2609.38971
+  access: closed
+  tags: [safety, security, planning]
+  added: 2026-10-02
+
+- id: multilink-safety-filter
+  name: Multi-Link Safety Filter
+  title: Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
+  date: 2026-09
+  summary: >-
+    Training-free run-time shield for a pretrained VLA: five ellipsoids cover gripper, wrist
+    and forearm, and one barrier program filters every command against a keep-out ellipsoid
+    that sparse optical flow moves with the hazard; runs on edge CPUs alongside pi0.5 and on
+    an SO-101 arm.
+  links:
+    paper: https://arxiv.org/abs/2609.40007
+    project: https://yathag.github.io/multilink-safety-filter/
+  access: closed
+  tags: [safety, vla, manipulation, on-device, real-world]
+  added: 2026-10-02
+
+- id: wbag
+  name: WBAG
+  title: >-
+    WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Inference-time VLA safety layer that models the whole arm plus grasp-dependent
+    attached-object geometry as a changing safe set and turns it into differentiable CBF
+    constraints that minimally modify the VLA's operational-space action; evaluated on
+    SafeLIBERO.
+  links:
+    paper: https://arxiv.org/abs/2610.01083
+  access: closed
+  tags: [safety, vla, manipulation]
+  added: 2026-10-03
+
+- id: universal-adversarial-object
+  name: Universal Adversarial Object
+  title: >-
+    Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action
+    Models in Robotics
+  date: 2026-09
+  summary: >-
+    Physical adversarial attack: a textured sphere placed in view, optimized with a
+    multi-level objective over planning, execution and action control, sharply degrades Pi0
+    and RDT in simulation and on a real robot.
+  links:
+    paper: https://arxiv.org/abs/2609.39178
+  access: closed
+  tags: [security, vla, manipulation, real-world]
+  note: ICRA 2026.
+  added: 2026-10-04
+
+- id: blackout-vs-freeze
+  name: Blackout vs. Freeze
+  title: >-
+    Blackout vs. Freeze: Analyzing Physical Failure Modes of VLAs under Camera Faults
+  date: 2026-09
+  summary: >-
+    Shows that camera blackout and frame freezing cause different physical failure modes in
+    pi0.5 and GR00T (extreme joint motion versus object drops), and that mitigations can
+    raise success while increasing unintended contact.
+  links:
+    paper: https://arxiv.org/abs/2609.39145
+  access: closed
+  tags: [safety, vla, manipulation, real-world]
+  added: 2026-10-04
+
+- id: detect-and-suppress
+  name: Detect and Suppress
+  title: >-
+    Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
+  date: 2026-10
+  summary: >-
+    Finds, with a sparse autoencoder, a VLA feature tied to adversarial patches and
+    suppresses it at inference only when a linear probe detects an attack; no fine-tuning
+    needed, and conditional rather than continuous intervention is key; evaluated on
+    LIBERO-10.
+  links:
+    paper: https://arxiv.org/abs/2610.03498
+  access: closed
+  tags: [security, vla, manipulation]
+  added: 2026-10-06
+
+- id: feasible-future-decoding
+  name: Feasible-Future Decoding
+  title: >-
+    A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action
+    Policies
+  date: 2026-10
+  summary: >-
+    Shows that a locally safe, likely action can still leave no policy-supported route to
+    safe completion, derives the feasible-future mass under a frozen VLA, and approximates
+    it with a selective finite-candidate decoder that also serves as an alarm.
+  links:
+    paper: https://arxiv.org/abs/2610.05166
+  access: closed
+  tags: [safety, vla, uncertainty]
+  added: 2026-10-07
+
+- id: embodied-jailbreak-guardrails
+  name: Embodied jailbreak guardrails benchmark
+  title: Benchmarking Jailbreak Guardrails for Embodied Agents
+  date: 2026-10
+  summary: >-
+    Pluggable evaluation that treats the embodied agent as a fixed backend and each
+    guardrail as a module intervening at perception, planning or control, testing six
+    representative guardrails against template-based and automated jailbreaks.
+  links:
+    paper: https://arxiv.org/abs/2610.06122
+  access: closed
+  tags: [security, safety, benchmark]
+  added: 2026-10-08
+
+- id: implied-harm-vla
+  name: Implied Harm in VLA Instructions
+  title: 'What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions'
+  date: 2026-10
+  summary: >-
+    Holds robot tasks fixed while varying how explicitly harmful intent is stated: pi0.5
+    completes tasks regardless, text guards miss most implied-harm requests, and
+    harmful/harmless separability in activations weakens after robot training.
+  links:
+    paper: https://arxiv.org/abs/2610.05818
+  access: closed
+  tags: [safety, security, vla]
+  added: 2026-10-08
+
+- id: tmt-backdoor
+  name: TMT
+  title: >-
+    TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks
+  date: 2026-10
+  summary: >-
+    Runtime backdoor detector for VLAs trained only on benign rollouts: a token-manifold
+    branch flags suspicious input structure and a latent-transition branch confirms it
+    through adjacent-layer prediction errors; also explores purification by
+    self-distillation.
+  links:
+    paper: https://arxiv.org/abs/2610.09462
+  access: closed
+  tags: [security, vla]
+  added: 2026-10-09
+
+- id: soul-unlearning
+  name: SOUL
+  title: >-
+    Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action
+    Models
+  aliases: [Sparse feature pOlicy UnLearning]
+  date: 2026-10
+  summary: >-
+    Identifies state hallucination, a VLA acting as if an unrealized robot-object state had
+    been reached, links it to sparse-autoencoder features and weakened attention, and
+    selectively unlearns the associated policy knowledge.
+  links:
+    paper: https://arxiv.org/abs/2610.09496
+  access: closed
+  tags: [safety, vla, failure-recovery]
+  added: 2026-10-09

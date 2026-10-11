@@ -1,0 +1,426 @@
+- id: quackd
+  name: quackd
+  date: 2026-08
+  summary: >-
+    CLI that registers heterogeneous robots through capability manifests and lets an LLM
+    (hosted or local) choose one declared skill at a time in a camera-feedback loop, under a
+    contract on allowed skills, step budgets and human approval; supports multi-robot
+    'flocks'.
+  links:
+    code: https://github.com/rokbenko/quackd
+  access: open
+  tags: [tool-use, multi-robot, safety, hitl]
+  note: >-
+    Very early single-developer project; README reports only one real robot (SO-101 arm)
+    tested, other bodies simulated or mocked.
+  added: 2026-09-29
+
+- id: abot-agentos
+  name: ABot-AgentOS
+  title: 'ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory'
+  date: 2026-07
+  summary: >-
+    Robotic agent operating system above low-level controllers providing scene-conditioned
+    planning, context-isolated skill execution, multi-stage verification, a persistent
+    multimodal graph memory and edge-cloud collaboration; introduces EmbodiedWorldBench.
+  links:
+    paper: https://arxiv.org/abs/2607.10350
+  access: closed
+  tags: [agentic-loop, memory, success-detection, benchmark]
+  note: >-
+    arXiv metadata lists a GitHub repo and project page under amap-cvlab; neither could be
+    verified from this sandbox.
+  added: 2026-09-29
+
+- id: holoagent-0
+  name: HoloAgent-0
+  title: 'HoloAgent-0: A Unified Embodied Agent Framework with 3D Spatial Memory'
+  date: 2026-06
+  org: Horizon Robotics
+  summary: >-
+    Embodied agent framework whose AgentOS turns instructions into executable skill graphs,
+    schedules robot resources, monitors execution and triggers clarification or replanning,
+    coordinating heterogeneous robot models around a 3D spatial memory.
+  links:
+    paper: https://arxiv.org/abs/2606.23565
+    code: https://github.com/HorizonRobotics/HoloAgent
+    project: https://horizonrobotics.github.io/robot_lab/holoagent
+  access: open
+  tags: [agentic-loop, memory, 3d, failure-recovery]
+  added: 2026-09-29
+
+- id: phyagentos
+  name: PhyAgentOS
+  title: >-
+    PhyAgentOS: A Self-Evolving Operating System for Embodied Agents with Decoupled
+    Cognitive Planning and Physical Execution
+  date: 2026-03
+  org: Sun Yat-sen University (HCP Lab); Peng Cheng Laboratory; X-Era Lab
+  summary: >-
+    Agent runtime that routes planner tool calls through one versioned gateway to Dora-based
+    robot and simulator endpoints, captures before/after evidence, and lets a task-level
+    verifier accept, fail or trigger bounded replanning; verified episodes become reusable
+    skills.
+  links:
+    paper: https://arxiv.org/abs/2607.16636
+    code: https://github.com/PhyAgentOS/PhyAgentOS-core
+    project: https://phy-agent-os.net/
+  access: open
+  tags: [success-detection, failure-recovery, self-improving, memory, safety]
+  note: Code public from 2026-03; technical report posted 2026-07.
+  added: 2026-09-29
+
+- id: strands-robots
+  name: Strands Robots
+  date: 2025-11
+  org: Strands Labs (Strands Agents)
+  summary: >-
+    Gives a Strands agent a Robot() tool backed by MuJoCo/Newton/Isaac simulation or real
+    hardware; the agent invokes policies (e.g., GR00T, LeRobot ACT/pi0/SmolVLA) that return
+    action chunks, with the same natural-language control in sim and on robots.
+  links:
+    code: https://github.com/strands-labs/robots
+    blog: https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware
+    docs: https://strandsagents.com/
+  access: open
+  tags: [vla, tool-use, sim2real, multi-robot]
+  added: 2026-09-29
+
+- id: bob-llm
+  name: bob_llm
+  date: 2025-11
+  summary: >-
+    ROS 2 node that runs an agentic loop against any OpenAI-compatible LLM endpoint, keeping
+    conversation state, loading Python tools dynamically, supporting Agent Skills (SKILL.md)
+    discovery and execution, and streaming reasoning tokens to topics.
+  links:
+    code: https://github.com/bob-ros2/bob_llm
+  access: open
+  tags: [ros, tool-use, agentic-loop]
+  added: 2026-09-29
+
+- id: robocrew
+  name: RoboCrew
+  date: 2025-10
+  summary: >-
+    Python library (pip install robocrew) for LLM agents on low-cost robots
+    (XLeRobot/LeKiwi, Earth Rover, Unitree Go2): the LLM loops over augmented camera views
+    and calls movement tools and VLA policies as tools, with voice I/O and LiDAR mapping.
+  links:
+    code: https://github.com/Grigorij-Dudnik/RoboCrew
+  access: open
+  tags: [vla, tool-use, agentic-loop, mobile-manipulation]
+  note: Used by the XLeRobot (LeRobot-based) project for LLM agent control.
+  added: 2026-09-29
+
+- id: innate-os
+  name: Innate OS
+  date: 2025-10
+  org: Innate
+  summary: >-
+    Agentic OS for Innate's MARS home robot: Python skills (code, motions or learned
+    policies), agents that combine skills, a prompt and input streams in an observe-act loop
+    that can interrupt running skills, a browser simulator, and LeRobot dataset/policy
+    integration.
+  links:
+    code: https://github.com/innate-inc/innate-os
+    docs: https://docs.innate.bot/
+  access: open
+  tags: [tool-use, agentic-loop, mobile-manipulation]
+  note: Date is the first tagged release (0.0.1, 2025-10).
+  added: 2026-09-29
+
+- id: reachy-mini-conversation-app
+  name: Reachy Mini Conversation App
+  date: 2025-09
+  org: Pollen Robotics (Hugging Face)
+  summary: >-
+    Open-source conversational agent app for the Reachy Mini robot: a realtime voice/vision
+    LLM backend calls async tools for choreographed motion, camera capture and MCP tool
+    spaces, with a layered motion system and selectable personalities.
+  links:
+    code: https://github.com/pollen-robotics/reachy_mini_conversation_app
+    project: https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app
+  access: open
+  tags: [tool-use, mcp, hitl]
+  added: 2026-09-29
+
+- id: om1
+  name: OM1
+  date: 2024-12
+  org: OpenMind
+  summary: >-
+    Modular runtime (Go; earlier Python) for multimodal AI agents on robots and simulators:
+    plugins turn sensor inputs into LLM/VLM calls and actions (motion, navigation, speech)
+    over ROS 2, Zenoh or CycloneDDS; supports humanoids, quadrupeds, TurtleBot 4, Gazebo and
+    Isaac Sim.
+  links:
+    paper: https://arxiv.org/abs/2412.18588
+    code: https://github.com/OpenMind/OM1
+    docs: https://docs.openmind.com/
+  access: open
+  tags: [ros, tool-use, humanoid, legged]
+  note: >-
+    Linked technical paper (Dec 2024) describes the natural-language data-bus design;
+    default configs call OpenMind-hosted endpoints (API key).
+  added: 2026-09-29
+
+- id: dimos
+  name: dimOS
+  date: 2024-10
+  org: Dimensional
+  summary: >-
+    Python robotics SDK ('agentive operating system', no ROS required) where LLM agents run
+    as modules over perception, spatio-temporal memory, navigation and control streams,
+    exposed via a CLI and MCP; supports Unitree Go2/G1, arms and drones (pre-release beta).
+  links:
+    code: https://github.com/dimensionalOS/dimos
+    docs: https://docs.dimensionalos.com
+  access: open
+  tags: [agentic-loop, mcp, memory, legged, humanoid]
+  added: 2026-09-29
+
+- id: embodied-agents-automatika
+  name: EmbodiedAgents (EMOS)
+  date: 2024-09
+  org: Automatika Robotics
+  summary: >-
+    ROS 2 framework for composing LLM, VLM, speech and vision components into event-driven
+    agent graphs with spatio-temporal semantic memory, semantic routing, offline local
+    models and auto-generated web UIs; the intelligence layer of Automatika's EMOS.
+  links:
+    code: https://github.com/automatika-robotics/embodied-agents
+    docs: https://agents.automatikarobotics.com/
+  access: open
+  tags: [ros, memory, on-device, tool-use]
+  note: >-
+    Initial release 0.1.1 on 2024-09-05 (formerly ros-agents); EMOS umbrella repo at
+    github.com/automatika-robotics/emos (2026).
+  added: 2026-09-29
+
+- id: stretch-ai
+  name: Stretch AI
+  date: 2024-08
+  org: Hello Robot
+  summary: >-
+    Open-source software for the Stretch 3 mobile manipulator combining grasping, mapping,
+    navigation, LLM agents, speech I/O and embodied question answering, including
+    dynamic-scene agents (DynaMem); parts derive from Meta's HomeRobot and OK-Robot.
+  links:
+    code: https://github.com/hello-robot/stretch_ai
+  access: open
+  tags: [mobile-manipulation, memory, open-vocabulary]
+  added: 2026-09-29
+
+- id: rosa
+  name: ROSA
+  title: >-
+    Enabling Novel Mission Operations and Interactions with ROSA: The Robot Operating System
+    Agent
+  date: 2024-08
+  org: NASA JPL
+  summary: >-
+    LangChain-based agent (pip install jpl-rosa) that lets users inspect, diagnose and
+    operate ROS 1 and ROS 2 systems with natural-language queries by calling ROS tools;
+    extensible with robot-specific tools and prompts (TurtleSim demo, NeBula-Spot).
+  links:
+    paper: https://arxiv.org/abs/2410.06472
+    code: https://github.com/nasa-jpl/rosa
+  access: open
+  tags: [ros, tool-use, agentic-loop]
+  note: >-
+    Date is the first release (v1.0.0 on GitHub/PyPI, 2024-08); paper posted 2024-10.
+  added: 2026-09-29
+
+- id: rai
+  name: RAI
+  title: 'RAI: Flexible Agent Framework for Embodied AI'
+  date: 2024-08
+  org: Robotec.ai
+  summary: >-
+    ROS 2-native multi-agent framework for embodied AI: LLM/VLM agents with ROS 2 tools,
+    speech (ASR/TTS), open-set perception, NoMaD navigation, simulation connectors,
+    embodiment self-description (whoami) and the rai_bench benchmarking suite.
+  links:
+    paper: https://arxiv.org/abs/2505.07532
+    code: https://github.com/RobotecAI/rai
+    docs: https://robotecai.github.io/rai/
+  access: open
+  tags: [ros, tool-use, agentic-loop, benchmark, multi-robot]
+  note: First tagged release 2024-08 (0.8.0-beta); paper posted 2025-05.
+  added: 2026-09-29
+
+- id: ros-llm-noah
+  name: ROS-LLM
+  title: >-
+    ROS-LLM: A ROS framework for embodied AI with task feedback and structured reasoning
+  date: 2024-06
+  org: Huawei Noah's Ark Lab
+  summary: >-
+    ROS framework linking a chat interface and many open/commercial LLMs to ROS actions and
+    services: extracts behaviors from LLM output as sequences, behavior trees or state
+    machines, adds skills via imitation learning, and reflects on human and environment
+    feedback.
+  links:
+    paper: https://arxiv.org/abs/2406.19741
+    code: https://github.com/huawei-noah/HEBO/tree/master/ROSLLM
+  access: open
+  tags: [ros, planning, hitl, failure-recovery]
+  note: >-
+    Journal version published in Nature Machine Intelligence (2026),
+    doi:10.1038/s42256-026-01186-z.
+  added: 2026-09-29
+
+- id: mbodied-agents
+  name: Embodied Agents (Mbodi)
+  date: 2024-06
+  org: Mbodi AI
+  summary: >-
+    Python toolkit (pip install mbodied) for adding large multimodal models to existing
+    robot stacks: language, sensory and motor agents (e.g., an OpenVLA motor agent),
+    configurable observation/action spaces and automatic dataset recording.
+  links:
+    code: https://github.com/mbodiai/embodied-agents
+  access: open
+  tags: [vla, tool-use, dataset]
+  added: 2026-09-29
+
+- id: nanollm
+  name: NanoLLM
+  date: 2024-03
+  org: NVIDIA (Jetson AI Lab)
+  summary: >-
+    Library for optimized local inference of quantized LLMs and VLMs on Jetson, with speech,
+    vector DB/RAG, web front ends and composable agent pipelines; ROS 2 nodes for it are
+    provided in NVIDIA-AI-IOT/ros2_nanollm.
+  links:
+    code: https://github.com/dusty-nv/NanoLLM
+    docs: https://dusty-nv.github.io/NanoLLM/
+  access: open
+  tags: [on-device, ros]
+  note: No commits since 2024-10.
+  added: 2026-09-29
+
+- id: tcc-ironl
+  name: TCC-IRoNL
+  title: >-
+    The Conversation is the Command: Interacting with Real-World Autonomous Robot Through
+    Natural Language
+  date: 2024-01
+  summary: >-
+    ROS framework that uses LLMs to turn conversational instructions into robot commands or
+    queries and VLMs for scene understanding, with demos on a Unitree Go1 quadruped and a
+    wheeled robot in simulation and the real world.
+  links:
+    paper: https://arxiv.org/abs/2401.11838
+    code: https://github.com/LinusNEP/TCC-IRoNL
+  access: open
+  tags: [ros, navigation, hitl]
+  added: 2026-09-29
+
+- id: machinascript
+  name: MachinaScript for Robots
+  date: 2024-01
+  summary: >-
+    Hobbyist toolkit and LLM-JSON action language: an LLM (optionally with vision) emits
+    MachinaScript sequences that a parser turns into commands for Arduino/Raspberry Pi
+    servos, cameras and sensors.
+  links:
+    code: https://github.com/babycommando/machinascript-for-robots
+  access: open
+  tags: [tool-use]
+  note: Early beta; no commits since 2024-09.
+  added: 2026-09-29
+
+- id: ros2ai
+  name: ros2ai
+  date: 2023-11
+  summary: >-
+    ros2 CLI extension ('ros2 ai query/exec') that answers ROS 2 questions and executes the
+    matching ros2 commands from natural-language requests, using OpenAI-compatible APIs or
+    local Ollama models; installable as a ROS 2 package.
+  links:
+    code: https://github.com/fujitatomoya/ros2ai
+  access: open
+  tags: [ros, tool-use]
+  added: 2026-09-29
+
+- id: rosgpt-vision
+  name: ROSGPT_Vision
+  title: 'ROSGPT_Vision: Commanding Robots Using Only Language Models'' Prompts'
+  date: 2023-08
+  org: Prince Sultan University (RIOTU Lab)
+  summary: >-
+    ROS 2 framework built on a 'Prompting Robotic Modalities' pattern: a visual prompt
+    drives a VLM (e.g., LLaVA, MiniGPT-4) and an LLM prompt regulates the robot's reaction;
+    demonstrated with CarMate, a driver-distraction monitor.
+  links:
+    paper: https://arxiv.org/abs/2308.11236
+    code: https://github.com/bilel-bj/ROSGPT_Vision
+  access: open
+  tags: [ros, tool-use]
+  added: 2026-09-29
+
+- id: ros-llm-auromix
+  name: ROS-LLM (Auromix)
+  date: 2023-06
+  org: Auromix
+  summary: >-
+    ROS 2 Humble package that lets GPT-4/ChatGPT drive robot motion and navigation from text
+    or speech (cloud ASR or local Whisper) by calling robot functions that users expose
+    through a simple interface; keeps local chat history.
+  links:
+    code: https://github.com/Auromix/ROS-LLM
+  access: open
+  tags: [ros, tool-use]
+  note: No commits since 2023-07.
+  added: 2026-09-29
+
+- id: rosgpt
+  name: ROSGPT
+  title: 'ROSGPT: Next-Generation Human-Robot Interaction with ChatGPT and ROS'
+  date: 2023-04
+  org: Prince Sultan University
+  summary: >-
+    ROS 2 package that uses ChatGPT to convert unstructured natural-language commands into
+    structured JSON robot commands, demonstrated on Turtlesim and TurtleBot3.
+  links:
+    paper: https://doi.org/10.20944/preprints202304.0827.v2
+    code: https://github.com/aniskoubaa/rosgpt
+  access: open
+  tags: [ros, tool-use]
+  note: >-
+    Preprints.org preprint (Apr 2023); journal version in Software - Practice and Experience
+    (2024).
+  added: 2026-09-29
+
+- id: llama-ros
+  name: llama_ros
+  date: 2023-04
+  summary: >-
+    ROS 2 packages that run GGUF LLMs and VLMs locally through llama.cpp, exposing
+    generation, embeddings, GBNF-grammar-constrained output, runtime LoRA swapping and a
+    LangChain integration to ROS 2 nodes.
+  links:
+    code: https://github.com/mgonzs13/llama_ros
+  access: open
+  tags: [ros, on-device]
+  added: 2026-09-29
+
+- id: dora-rs
+  name: dora-rs
+  date: 2022-11
+  org: dora-rs community
+  summary: >-
+    Rust dataflow framework ('Agentic Dataflow-Oriented Robotic Architecture') for real-time
+    robotics and AI apps: Rust, Python and C++ nodes exchange messages over zero-copy shared
+    memory and Zenoh, with a node hub for cameras, YOLO, LLMs, TTS and more.
+  links:
+    code: https://github.com/dora-rs/dora
+    docs: https://dora-rs.ai/
+  access: open
+  tags: [on-device]
+  note: >-
+    Middleware layer rather than an agent loop; used as the execution backend by PhyAgentOS.
+    dora 1.0 released 2026-09.
+  added: 2026-09-29

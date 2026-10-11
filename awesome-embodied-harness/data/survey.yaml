@@ -1,0 +1,1252 @@
+- id: world-action-models-robot-survey
+  name: World-Action Models survey
+  title: 'World-Action Models for Robot Learning and Control: A Survey'
+  date: 2026-09
+  summary: >-
+    Robotics-oriented review of world-action models that couple future-world prediction with
+    action generation: taxonomy over representations, architectures, training and data;
+    applications in manipulation, navigation and driving; and evaluation protocols.
+  links:
+    paper: https://arxiv.org/abs/2609.16074
+    project: https://rcl-robotics.github.io/Awesome-World-Action-Models/
+  access: closed
+  tags: [world-model, vla]
+  added: 2026-09-29
+
+- id: world-models-plausible-controllable-actionable
+  name: 'World Models for Embodied Intelligence: Plausible, Controllable, Actionable'
+  title: >-
+    World Models for Embodied Intelligence: From Plausible to Controllable to Actionable
+  date: 2026-09
+  summary: >-
+    Surveys embodied world models by which predictive capabilities improve behavior
+    (plausible, controllable, actionable) across manipulation, navigation, locomotion and
+    driving, and argues evaluation should move from visual plausibility to closed-loop
+    impact.
+  links:
+    paper: https://arxiv.org/abs/2609.16697
+    project: https://3dagentworld.github.io/EmbodiedWM/
+  access: closed
+  tags: [world-model]
+  added: 2026-09-29
+
+- id: unified-robot-learning-survey
+  name: Toward Unified Robot Learning
+  title: >-
+    Toward Unified Robot Learning: Bridging Representation, Vision-Language-Action, and
+    World Models
+  date: 2026-09
+  summary: >-
+    Organizes robot learning along representation learning (understanding), VLAs (acting)
+    and world models (reasoning), and argues that robustness requires integrating the three.
+  links:
+    paper: https://arxiv.org/abs/2609.03927
+  access: closed
+  tags: [vla, world-model]
+  added: 2026-09-29
+
+- id: robot-use-agents-essay
+  name: Robot-use agents
+  title: Robot-use agents
+  date: 2026-09
+  org: MIT (Phillip Isola)
+  summary: >-
+    Perspective arguing that general-purpose LLM agents can now use robots as tools through
+    sensor and actuator APIs, with discussion of deployment, latency and reliability limits.
+  links:
+    blog: https://web.mit.edu/phillipi/www/writing/robot-use-agents.html
+  access: closed
+  tags: [agentic-loop, tool-use]
+  added: 2026-09-29
+
+- id: no-free-checker
+  name: No Free Checker
+  title: 'No Free Checker: A Survey of Verifiers for Robot Policies'
+  date: 2026-09
+  summary: >-
+    Survey of about 150 robot-policy verifiers (success detectors, reward models, runtime
+    monitors, safety filters, temporal-logic specs) compared by availability and
+    credibility, finding credibility falls as verdicts get cheaper and denser.
+  links:
+    paper: https://arxiv.org/abs/2609.09250
+    code: https://github.com/ZJUSCL/Awesome-Robot-Verifier
+  access: open
+  tags: [success-detection, reward-model, safety]
+  note: Most directly relevant survey for the verification category.
+  added: 2026-09-29
+
+- id: awesome-multimodal-embodied-agents
+  name: Awesome Multimodal Embodied Agents
+  title: 'Awesome Multimodal Embodied Agents: From Computer-Use to Robot-Use'
+  date: 2026-09
+  org: Show Lab, National University of Singapore
+  summary: >-
+    Survey and curated list that treats computer-use and robot-use agents in one capability
+    framework (Perceive, Anticipate, Plan, Act, Verify) and maps the agent-plus-robot
+    landscape.
+  links:
+    code: https://github.com/showlab/Awesome-Multimodal-Embodied-Agent
+    project: https://showlab.github.io/Awesome-Multimodal-Embodied-Agent/
+  access: open
+  tags: [agentic-loop]
+  note: No arXiv version found; the README links a figshare DOI.
+  added: 2026-09-29
+
+- id: embodied-agent-security-survey
+  name: Security of FM-powered embodied agents
+  title: >-
+    Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks,
+    Defenses, and Evaluation
+  date: 2026-08
+  summary: >-
+    Trust-boundary survey locating where attacks enter the embodied control loop: five
+    layers and twelve surfaces incl. context/memory, world state, action interfaces,
+    middleware and multi-agent links (58 attack, 61 defense records).
+  links:
+    paper: https://arxiv.org/abs/2608.16843
+  access: closed
+  tags: [security, safety]
+  added: 2026-09-29
+
+- id: language-grounding-roles-survey
+  name: Functional roles of language in embodied agents
+  title: >-
+    What Language Does and What the Evidence Supports: A Functional Role Taxonomy and
+    Evidence Audit of Language Grounding in Embodied Agents
+  date: 2026-08
+  summary: >-
+    Defines five roles for language in embodied agents (specification, representation,
+    action orchestration, grounding regulation, execution coupling) and audits whether
+    reported evidence supports each claimed role.
+  links:
+    paper: https://arxiv.org/abs/2608.03099
+  access: closed
+  tags: [planning, agentic-loop]
+  added: 2026-09-29
+
+- id: world-model-security-survey
+  name: Security of World-Model-Based Embodied AI
+  title: >-
+    Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and
+    Evaluation
+  date: 2026-07
+  summary: >-
+    Traces attacks on world-model-based embodied agents across the lifecycle, from data and
+    representation learning through state grounding and imagination to execution and
+    memory/tool-based adaptation.
+  links:
+    paper: https://arxiv.org/abs/2607.28226
+  access: closed
+  tags: [security, world-model]
+  added: 2026-09-29
+
+- id: harness-engineering-coding-agents
+  name: Harness Engineering source-code study
+  title: >-
+    Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents -- A
+    Source-Code Study of Eleven Systems
+  date: 2026-07
+  summary: >-
+    Source-code anatomy of eleven production coding harnesses (Claude Code, Codex CLI,
+    Gemini CLI, OpenHands, etc.) mapping seven canonical subsystems and 29 recurring design
+    patterns, the reference point for the embodied analogy.
+  links:
+    paper: https://arxiv.org/abs/2609.00006
+  access: closed
+  tags: [agentic-loop, tool-use, mcp]
+  note: Not embodied. arXiv v1 dated Jul 2026 although the ID is 2609.
+  added: 2026-09-29
+
+- id: data-pyramid-survey
+  name: Data Pyramid for Embodied Manipulation
+  title: 'Data Pyramid for Embodied Manipulation: A Survey'
+  date: 2026-07
+  summary: >-
+    Organizes embodied training data into a pyramid (real-robot, UMI-style,
+    egocentric/exocentric human, simulation, web vision-language) and analyzes the data
+    recipes of embodied brain models, VLAs and world-action models.
+  links:
+    paper: https://arxiv.org/abs/2607.24744
+    code: https://github.com/worldbench/awesome-embodied-data-pyramid
+    project: https://jasper-aaa.github.io/embodied-data-pyramid/
+  access: partial
+  tags: [dataset, vla, world-model]
+  added: 2026-09-29
+
+- id: sok-fm-robots-security
+  name: 'SoK: Security and Privacy of FM-Powered Robots'
+  title: 'SoK: Security and Privacy of Foundation-Model-Powered Robots'
+  date: 2026-06
+  org: Nanyang Technological University / Wuhan University
+  summary: >-
+    Systematizes 96 papers on security and privacy of FM-powered robots with a four-layer
+    boundary framework (foundation model, embodied system, supporting ecosystem, governance)
+    and a threat/mitigation taxonomy.
+  links:
+    paper: https://arxiv.org/abs/2606.16788
+  access: closed
+  tags: [security, safety]
+  added: 2026-09-29
+
+- id: safe-long-horizon-manipulation-survey
+  name: Safe Embodied AI for Long-horizon Tasks
+  title: >-
+    Safe Embodied AI for Long-horizon Tasks: A Cross-layer Analysis of Robotic Manipulation
+  date: 2026-06
+  summary: >-
+    Organizes safety work for long-horizon manipulation by intervention point
+    (planning-time, policy-time, execution-time), covering misgrounding, error propagation,
+    execution drift and contact risk.
+  links:
+    paper: https://arxiv.org/abs/2606.05660
+  access: closed
+  tags: [safety, long-horizon, failure-recovery]
+  added: 2026-09-29
+
+- id: harness-engineering-physical-ai
+  name: Robot middleware as harness
+  title: 'Harness Engineering for Physical AI: Robot Middleware Is the Harness Layer'
+  date: 2026-06
+  summary: >-
+    Position paper arguing that robot middleware should be the Physical-AI harness,
+    mediating learned policies at the control, computing and communication layers at once
+    rather than only at tool-call boundaries.
+  links:
+    paper: https://arxiv.org/abs/2606.09416
+  access: closed
+  tags: [ros, safety]
+  added: 2026-09-29
+
+- id: agent-harness-design-survey
+  name: Agent System and Harness Design survey
+  title: >-
+    From Question Answering to Task Completion: A Survey on Agent System and Harness Design
+  date: 2026-06
+  org: CityU Hong Kong / University of Sydney / Peking University
+  summary: >-
+    Model-harness view of LLM agents that splits the execution harness into observation,
+    context, control, action, state and verification, and maps task properties to harness
+    configurations and evaluation practice.
+  links:
+    paper: https://arxiv.org/abs/2606.20683
+    code: https://github.com/ggjy/Awesome-Agent-Engineering
+  access: partial
+  tags: [agentic-loop, tool-use, memory]
+  note: Mostly software agents; embodied settings discussed briefly.
+  added: 2026-09-29
+
+- id: world-models-physical-ai-tutorial
+  name: A Tutorial on World Models and Physical AI
+  title: A Tutorial on World Models and Physical AI
+  date: 2026-06
+  summary: >-
+    Tutorial contrasting explicit world models (structured dynamics for rollout-based
+    planning) with implicit ones (predictive representations) and their role in robotics and
+    autonomous driving.
+  links:
+    paper: https://arxiv.org/abs/2606.12783
+  access: closed
+  tags: [world-model]
+  added: 2026-09-29
+
+- id: 3d-scene-graphs-review
+  name: '3D Scene Graphs: Open Challenges'
+  title: '3D Scene Graphs: Open Challenges and Future Directions'
+  date: 2026-06
+  summary: >-
+    Invited Annual Review of Control, Robotics, and Autonomous Systems article that surveys
+    3D scene graph formulations, construction pipelines and evaluation across robotics and
+    vision, and lays out open challenges.
+  links:
+    paper: https://arxiv.org/abs/2606.19383
+  access: closed
+  tags: [scene-graph, memory, 3d]
+  added: 2026-09-29
+
+- id: world-action-models-frontier
+  name: World Action Models survey
+  title: 'World Action Models: The Next Frontier in Embodied AI'
+  date: 2026-05
+  summary: >-
+    Defines World Action Models, embodied foundation models that jointly predict future
+    states and actions, and organizes them into cascaded vs joint designs with analysis of
+    data sources and evaluation.
+  links:
+    paper: https://arxiv.org/abs/2605.12090
+  access: closed
+  tags: [world-model, vla]
+  added: 2026-09-29
+
+- id: code-as-agent-harness
+  name: Code as Agent Harness
+  title: Code as Agent Harness
+  date: 2026-05
+  org: UIUC / Meta / Stanford
+  summary: >-
+    Survey framing code as the substrate of agent harnesses (interfaces for reasoning and
+    action; planning, memory and tool-use mechanisms; multi-agent coordination), covering
+    embodied code-as-policy agents alongside coding agents.
+  links:
+    paper: https://arxiv.org/abs/2605.18747
+    code: https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers
+    project: https://code-as-harness.github.io/code-as-harness-webpage/
+  access: partial
+  tags: [code-as-policy, agentic-loop, tool-use, memory]
+  added: 2026-09-29
+
+- id: world-model-robot-learning-survey
+  name: World Model for Robot Learning survey
+  title: 'World Model for Robot Learning: A Comprehensive Survey'
+  date: 2026-04
+  summary: >-
+    Reviews world models from a robot-learning perspective: coupling with policies, learned
+    simulators for RL and evaluation, the progression of robotic video world models, links
+    to navigation and driving, and datasets and benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2605.00080
+  access: closed
+  tags: [world-model]
+  added: 2026-09-29
+
+- id: vla-safety-survey
+  name: VLA Safety Survey
+  title: 'Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms'
+  date: 2026-04
+  summary: >-
+    Survey organising VLA safety by attack and defence timing (training vs. inference),
+    covering poisoning and backdoors, adversarial patches, jailbreaks, runtime defences,
+    benchmarks and deployment domains.
+  links:
+    paper: https://arxiv.org/abs/2604.23775
+  access: closed
+  tags: [safety, security, vla]
+  added: 2026-09-29
+
+- id: vla-data-benchmarks-survey
+  name: VLA datasets, benchmarks and data engines survey
+  title: >-
+    Vision-Language-Action in Robotics: A Survey of Datasets, Benchmarks, and Data Engines
+  date: 2026-04
+  summary: >-
+    Data-centric survey of VLA research organized around datasets, benchmarks and data
+    engines, analyzing benchmark task complexity and environment structure and identifying
+    gaps in compositional-generalization and long-horizon evaluation.
+  links:
+    paper: https://arxiv.org/abs/2604.23001
+  access: closed
+  tags: [vla, benchmark, dataset]
+  note: Accepted to TMLR (per arXiv comment).
+  added: 2026-09-29
+
+- id: fm-robotics-review-2026
+  name: Foundation Models in Robotics review (2026)
+  title: >-
+    Foundation Models in Robotics: A Comprehensive Review of Methods, Models, Datasets,
+    Challenges and Future Research Directions
+  date: 2026-04
+  summary: >-
+    Systematic review tracing five phases of foundation models in robotics and classifying
+    work by FM type (LLM, VFM, VLM, VLA), architecture, learning paradigm, task and
+    application, with a dataset report.
+  links:
+    paper: https://arxiv.org/abs/2604.15395
+  access: closed
+  tags: [vla, planning, dataset]
+  added: 2026-09-29
+
+- id: externalization-llm-agents
+  name: Externalization in LLM Agents
+  title: >-
+    Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness
+    Engineering
+  date: 2026-04
+  org: Shanghai Jiao Tong University et al.
+  summary: >-
+    Argues agent capability is increasingly externalized into memory, reusable skills and
+    interaction protocols, with harness engineering as the layer that coordinates them into
+    governed execution (weights to context to harness).
+  links:
+    paper: https://arxiv.org/abs/2604.08224
+  access: closed
+  tags: [memory, tool-use, agentic-loop]
+  note: Software-agent focus; provides the harness vocabulary reused for embodiment.
+  added: 2026-09-29
+
+- id: awesome-agent-harness
+  name: Agent Harness for LLM Agents (survey + list)
+  title: 'Agent Harness for Large Language Model Agents: A Survey'
+  date: 2026-04
+  summary: >-
+    Survey repository formalizing the agent execution harness as a six-component tuple and
+    reviewing 110+ papers, blogs and reports across 23 systems on tool registries, context
+    management, state and execution loops.
+  links:
+    code: https://github.com/Gloriaameng/Awesome-Agent-Harness
+  access: open
+  tags: [awesome-list, agentic-loop, tool-use]
+  note: >-
+    Survey is a preprints.org preprint (DOI 10.20944/preprints202604.0428); that site
+    blocked automated fetches. Not embodied.
+  added: 2026-09-29
+
+- id: paxton-world-models-essay
+  name: Will World Models Allow Robots to Think?
+  title: Will World Models Allow Robots to Think?
+  date: 2026-03
+  org: Chris Paxton (essay)
+  summary: >-
+    Essay grouping robot world models into action-conditioned, video-plus-inverse-dynamics
+    and joint world-action approaches, arguing that better video models, data and
+    architectures now make them compelling for robotics.
+  links:
+    blog: https://itcanthink.substack.com/p/will-world-models-allow-robots-to
+  access: closed
+  tags: [world-model, video]
+  added: 2026-09-29
+
+- id: embodied-ai-safety-survey
+  name: Safety in Embodied AI
+  title: 'Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses'
+  date: 2026-03
+  summary: >-
+    500+-paper survey of attacks and defenses across perception, cognition, planning,
+    action, interaction and agentic layers of embodied systems, incl. adversarial, backdoor,
+    jailbreak and hardware attacks.
+  links:
+    paper: https://arxiv.org/abs/2605.02900
+    code: https://github.com/x-zheng16/Awesome-Embodied-AI-Safety
+    project: https://x-zheng16.github.io/Awesome-Embodied-AI-Safety/
+  access: partial
+  tags: [safety, security]
+  note: arXiv v1 dated Mar 2026 although the ID is 2605.
+  added: 2026-09-29
+
+- id: industrial-rfm-survey
+  name: Robotic Foundation Models for Industrial Control
+  title: >-
+    Robotic Foundation Models for Industrial Control: A Comprehensive Survey and Readiness
+    Assessment Framework
+  date: 2026-03
+  summary: >-
+    Turns eleven industrial deployment implications into a 149-criterion readiness framework
+    and evaluates 324 manipulation-capable robotic foundation models against it.
+  links:
+    paper: https://arxiv.org/abs/2603.06749
+  access: closed
+  tags: [manipulation, safety]
+  added: 2026-09-29
+
+- id: awesome-harness-engineering
+  name: awesome-harness-engineering
+  date: 2026-03
+  summary: >-
+    Awesome list for AI-agent harness engineering: tools, patterns, evals, memory, MCP,
+    permissions, observability and orchestration; the software-agent reference for embodied
+    harness design.
+  links:
+    code: https://github.com/ai-boost/awesome-harness-engineering
+  access: open
+  tags: [awesome-list, mcp, agentic-loop]
+  added: 2026-09-29
+
+- id: awesome-harness-engineering-walkinglabs
+  name: Awesome Harness Engineering (walkinglabs)
+  date: 2026-03
+  summary: >-
+    Curated articles, playbooks, benchmarks, specs and projects on harness engineering, the
+    practice of shaping the environment around AI agents (context, evaluation,
+    observability, orchestration, safe autonomy).
+  links:
+    code: https://github.com/walkinglabs/awesome-harness-engineering
+  access: open
+  tags: [awesome-list, agentic-loop]
+  note: Software agents; not embodied.
+  added: 2026-09-29
+
+- id: self-evolving-embodied-ai
+  name: Self-evolving Embodied AI
+  title: Self-evolving Embodied AI
+  date: 2026-02
+  summary: >-
+    Defines self-evolving embodied AI (memory self-updating, task self-switching,
+    environment self-prediction, embodiment self-adaptation, model self-evolution) and
+    reviews work realizing each component.
+  links:
+    paper: https://arxiv.org/abs/2602.04411
+  access: closed
+  tags: [self-improving, memory]
+  added: 2026-09-29
+
+- id: openai-harness-engineering
+  name: Harness engineering (OpenAI)
+  title: 'Harness engineering: leveraging Codex in an agent-first world'
+  date: 2026-02
+  org: OpenAI
+  summary: >-
+    Report on shipping a product whose code was written entirely by Codex agents, recasting
+    engineering as harness design: repository legibility, context maps, enforced invariants
+    and feedback loops.
+  links:
+    blog: https://openai.com/index/harness-engineering/
+  access: closed
+  tags: [agentic-loop, tool-use]
+  note: >-
+    Page blocks automated fetches (403); URL/title confirmed via search index, date
+    (2026-02-11) from a secondary summary. Not embodied.
+  added: 2026-09-29
+
+- id: awesome-physical-ai
+  name: Awesome Physical AI
+  date: 2026-01
+  summary: >-
+    Curated list of papers and resources on Physical AI, focusing on VLA models, world
+    models, embodied AI and robotic foundation models.
+  links:
+    code: https://github.com/keon/awesome-physical-ai
+  access: open
+  tags: [awesome-list, vla, world-model]
+  added: 2026-09-29
+
+- id: embodied-manipulation-fm-era-survey
+  name: Embodied Robot Manipulation in the Era of Foundation Models
+  title: >-
+    Embodied Robot Manipulation in the Era of Foundation Models: Planning and Learning
+    Perspectives
+  date: 2025-12
+  summary: >-
+    Condensed companion to the unified manipulation survey, organizing methods into
+    high-level planning (language, code, affordances, geometry, 3D) and low-level learned
+    action models.
+  links:
+    paper: https://arxiv.org/abs/2512.22983
+  access: closed
+  tags: [manipulation, planning]
+  added: 2026-09-29
+
+- id: vla-anatomy-survey
+  name: Anatomy of VLA Models
+  title: >-
+    An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges
+  date: 2025-12
+  summary: >-
+    Guide that moves from VLA modules through milestones to five challenge areas:
+    representation, execution, generalization, safety, and datasets/evaluation.
+  links:
+    paper: https://arxiv.org/abs/2512.11362
+    project: https://suyuz1.github.io/VLA-Survey-Anatomy/
+  access: closed
+  tags: [vla, safety]
+  added: 2026-09-29
+
+- id: project-fetch
+  name: Project Fetch
+  title: 'Project Fetch: Can Claude train a robot dog?'
+  date: 2025-11
+  org: Anthropic
+  summary: >-
+    Uplift study in which two teams of non-roboticist staff, one with Claude and one
+    without, programmed quadrupeds to fetch a beach ball; the Claude-assisted team completed
+    more tasks in about half the time.
+  links:
+    blog: https://www.anthropic.com/research/project-fetch-robot-dog
+  access: closed
+  tags: [legged, code-as-policy]
+  note: >-
+    Claude assisted humans rather than acting autonomously; see project-fetch-phase-two.
+  added: 2026-09-29
+
+- id: anthropic-long-running-harnesses
+  name: Effective harnesses for long-running agents
+  title: Effective harnesses for long-running agents
+  date: 2025-11
+  org: Anthropic
+  summary: >-
+    Engineering post on a two-part harness (initializer agent plus incremental coding agent)
+    that carries state across context windows with feature lists, progress files, git
+    history and end-to-end tests.
+  links:
+    blog: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
+  access: closed
+  tags: [agentic-loop, memory, long-horizon]
+  note: Coding-agent source of the harness framing; not embodied.
+  added: 2026-09-29
+
+- id: world-models-embodied-ai-survey
+  name: World models for embodied AI survey
+  title: A Comprehensive Survey on World Models for Embodied AI
+  date: 2025-10
+  summary: >-
+    Three-axis taxonomy of embodied world models (decision-coupled vs general-purpose,
+    temporal modeling, spatial representation) with datasets, metrics and quantitative
+    comparisons across robotics, driving and video.
+  links:
+    paper: https://arxiv.org/abs/2510.16732
+    code: https://github.com/Li-Zn-H/AwesomeWorldModels
+  access: partial
+  tags: [world-model]
+  added: 2026-09-29
+
+- id: vla-review-real-world
+  name: VLA review towards real-world applications
+  title: >-
+    Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications
+  date: 2025-10
+  org: University of Tokyo et al.
+  summary: >-
+    Full-stack VLA review: architectures, modality processing and learning paradigms
+    together with robot platforms, data-collection strategies, datasets, augmentation and
+    evaluation benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2510.07077
+    project: https://vla-survey.github.io/
+  access: closed
+  tags: [vla, dataset, benchmark]
+  added: 2026-09-29
+
+- id: robot-manipulation-survey
+  name: Unified robot manipulation survey
+  title: 'Towards a Unified Understanding of Robot Manipulation: A Comprehensive Survey'
+  date: 2025-10
+  summary: >-
+    Manipulation survey that widens high-level planning to language, code, motion,
+    affordance and 3D representations, adds a taxonomy of learned low-level control, and
+    catalogs data and generalization bottlenecks.
+  links:
+    paper: https://arxiv.org/abs/2510.10903
+    code: https://github.com/BaiShuanghao/Awesome-Robotics-Manipulation
+  access: partial
+  tags: [manipulation, planning, code-as-policy]
+  added: 2026-09-29
+
+- id: robot-learning-tutorial
+  name: 'Robot Learning: A Tutorial'
+  title: 'Robot Learning: A Tutorial'
+  date: 2025-10
+  org: Hugging Face
+  summary: >-
+    Tutorial from RL and behavior cloning to generalist language-conditioned,
+    cross-embodiment policies, with runnable examples implemented in LeRobot.
+  links:
+    paper: https://arxiv.org/abs/2510.12403
+  access: closed
+  tags: [rl, vla]
+  added: 2026-09-29
+
+- id: efficient-vla-survey
+  name: Efficient VLA survey
+  title: A Survey on Efficient Vision-Language-Action Models
+  date: 2025-10
+  org: Tongji University et al.
+  summary: >-
+    Taxonomy of VLA efficiency across the model-training-data pipeline: efficient model
+    design (architectures, compression), efficient training, and efficient data collection.
+    Accepted to IEEE TPAMI.
+  links:
+    paper: https://arxiv.org/abs/2510.24795
+    project: https://evla-survey.github.io/
+  access: closed
+  tags: [vla, on-device]
+  added: 2026-09-29
+
+- id: world-models-manipulation-survey
+  name: A Step Toward World Models
+  title: 'A Step Toward World Models: A Survey on Robotic Manipulation'
+  date: 2025-10
+  summary: >-
+    Reviews manipulation methods that exhibit core world-model capabilities (state encoding,
+    dynamics, prediction, planning) rather than only methods explicitly labeled as world
+    models.
+  links:
+    paper: https://arxiv.org/abs/2511.02097
+  access: closed
+  tags: [world-model, manipulation]
+  added: 2026-09-29
+
+- id: brooks-humanoid-dexterity
+  name: Why Today's Humanoids Won't Learn Dexterity
+  title: Why Today's Humanoids Won't Learn Dexterity
+  date: 2025-09
+  org: Rodney Brooks (essay)
+  summary: >-
+    Essay arguing humanoids will not learn dexterity from visual demonstration data alone
+    without rich touch sensing, noting that learning successes in speech and vision relied
+    on engineered data front-ends.
+  links:
+    blog: https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/
+  access: closed
+  tags: [humanoid, dexterous]
+  added: 2026-09-29
+
+- id: pure-vla-survey
+  name: Pure VLA survey
+  title: 'Pure Vision Language Action (VLA) Models: A Comprehensive Survey'
+  date: 2025-09
+  summary: >-
+    Taxonomy of VLA methods into autoregression-, diffusion- and reinforcement-based, hybrid
+    and specialized approaches, plus datasets, benchmarks and simulation platforms.
+  links:
+    paper: https://arxiv.org/abs/2509.19012
+  access: closed
+  tags: [vla]
+  added: 2026-09-29
+
+- id: embodied-ai-llms-to-world-models
+  name: 'Embodied AI: From LLMs to World Models'
+  title: 'Embodied AI: From LLMs to World Models'
+  date: 2025-09
+  summary: >-
+    Reviews embodied AI driven by (M)LLMs for semantic reasoning and task decomposition and
+    by world models for physically consistent prediction, and argues for joint
+    MLLM-world-model architectures. IEEE CASM.
+  links:
+    paper: https://arxiv.org/abs/2509.20021
+  access: closed
+  tags: [world-model, planning]
+  added: 2026-09-29
+
+- id: embodied-agentic-ai-review
+  name: Towards Embodied Agentic AI
+  title: >-
+    Towards Embodied Agentic AI: Review and Classification of LLM- and VLM-Driven Robot
+    Autonomy and Interaction
+  date: 2025-08
+  summary: >-
+    Reviews agentic robot architectures in which LLM/VLM agents act as coordinators,
+    planners, perception actors or interfaces that invoke APIs, incl. community ROS
+    packages, with a taxonomy of integration approaches.
+  links:
+    paper: https://arxiv.org/abs/2508.05294
+  access: closed
+  tags: [agentic-loop, tool-use, ros, mcp, planning]
+  added: 2026-09-29
+
+- id: vla-embodied-manipulation-survey-zh
+  name: Survey of VLA Models for Embodied Manipulation (Chinese)
+  title: Survey of Vision-Language-Action Models for Embodied Manipulation
+  date: 2025-08
+  summary: >-
+    Chinese-language VLA survey covering architecture history, model structures, training
+    datasets, pre- and post-training methods, and evaluation.
+  links:
+    paper: https://arxiv.org/abs/2508.15201
+  access: closed
+  tags: [vla, manipulation]
+  added: 2026-09-29
+
+- id: vla-survey-large-vlm
+  name: Large VLM-based VLA survey
+  title: 'Large VLM-based Vision-Language-Action Models for Robotic Manipulation: A Survey'
+  date: 2025-08
+  org: Harbin Institute of Technology (Shenzhen)
+  summary: >-
+    Splits VLM-based VLAs into monolithic (single- and dual-system) and hierarchical models
+    that decouple planning from execution via interpretable intermediates, and covers RL,
+    human-video and world-model integration.
+  links:
+    paper: https://arxiv.org/abs/2508.13073
+    code: https://github.com/JiuTian-VL/Large-VLM-based-VLA-for-Robotic-Manipulation
+  access: partial
+  tags: [vla, dual-system]
+  added: 2026-09-29
+
+- id: large-model-embodied-ai-survey
+  name: Large Model Empowered Embodied AI
+  title: >-
+    Large Model Empowered Embodied AI: A Survey on Decision-Making and Embodied Learning
+  date: 2025-08
+  summary: >-
+    Surveys hierarchical (planning, execution, feedback) and end-to-end VLA decision-making,
+    how large models enhance imitation learning and RL, and the role of world models in
+    embodied decision-making and learning.
+  links:
+    paper: https://arxiv.org/abs/2508.10399
+  access: closed
+  tags: [planning, vla, world-model, rl]
+  added: 2026-09-29
+
+- id: vla-survey-action-tokenization
+  name: VLA survey (action tokenization)
+  title: 'A Survey on Vision-Language-Action Models: An Action Tokenization Perspective'
+  date: 2025-07
+  org: Peking University / PsiBot
+  summary: >-
+    Unifies VLAs as chains of action tokens and categorizes them as language, code,
+    affordance, trajectory, goal state, latent, raw action or reasoning, analyzing strengths
+    and limits of each type.
+  links:
+    paper: https://arxiv.org/abs/2507.01925
+    code: https://github.com/Psi-Robot/Awesome-VLA-Papers
+  access: partial
+  tags: [vla, code-as-policy]
+  added: 2026-09-29
+
+- id: vla-manipulation-systematic-review
+  name: VLA Models in Robotic Manipulation (systematic review)
+  title: 'Vision Language Action Models in Robotic Manipulation: A Systematic Review'
+  date: 2025-07
+  summary: >-
+    Systematic review of 102 VLA models, 26 datasets and 12 simulation platforms for
+    manipulation, with a dataset comparison criterion based on task complexity, modalities
+    and scale.
+  links:
+    paper: https://arxiv.org/abs/2507.10672
+  access: closed
+  tags: [vla, dataset, benchmark]
+  added: 2026-09-29
+
+- id: levine-sporks-of-agi
+  name: Sporks of AGI
+  title: Sporks of AGI
+  date: 2025-07
+  org: Sergey Levine (essay)
+  summary: >-
+    Essay arguing that surrogate data (simulation, human video, hand-held grippers) cannot
+    replace real robot experience for robotic foundation models and should complement it
+    rather than substitute for it.
+  links:
+    blog: https://sergeylevine.substack.com/p/sporks-of-agi
+  access: closed
+  tags: [dataset, sim2real]
+  added: 2026-09-29
+
+- id: sim-world-model-survey
+  name: Physical Simulators and World Models (survey)
+  title: >-
+    A Survey: Learning Embodied Intelligence from Physical Simulators and World Models
+  date: 2025-07
+  summary: >-
+    Survey of how physical simulators and learned world models complement each other for
+    training and evaluating embodied agents.
+  links:
+    paper: https://arxiv.org/abs/2507.00917
+  access: closed
+  tags: [world-model, sim2real]
+  added: 2026-09-29
+
+- id: embodied-ai-agents-meta
+  name: 'Embodied AI Agents: Modeling the World'
+  title: 'Embodied AI Agents: Modeling the World'
+  date: 2025-06
+  org: Meta
+  summary: >-
+    Meta paper proposing that world models of the physical world and of users' mental states
+    are central to embodied agents (avatars, wearables, robots), integrating perception,
+    planning, memory and control.
+  links:
+    paper: https://arxiv.org/abs/2506.22355
+  access: closed
+  tags: [world-model, memory, planning]
+  added: 2026-09-29
+
+- id: vla-concepts-progress-survey
+  name: 'VLA Models: Concepts, Progress, Applications and Challenges'
+  title: >-
+    Vision-Language-Action (VLA) Models: Concepts, Progress, Applications and Challenges
+  date: 2025-05
+  org: Cornell University et al.
+  summary: >-
+    Review of 80+ VLA models from the past three years covering architectures, efficient
+    training, real-time inference and applications (driving, medical, agriculture,
+    humanoids, AR), with proposed agentic directions.
+  links:
+    paper: https://arxiv.org/abs/2505.04769
+    code: https://github.com/Applied-AI-Research-Lab/Vision-Language-Action-Models-Concepts-Progress-Applications-and-Challenges
+  access: partial
+  tags: [vla]
+  added: 2026-09-29
+
+- id: neural-brain-embodied-agents
+  name: Neural Brain
+  title: 'Neural Brain: A Neuroscience-inspired Framework for Embodied Agents'
+  date: 2025-05
+  summary: >-
+    Neuroscience-inspired framework and review for an embodied agent 'brain' integrating
+    active multimodal sensing, perception-cognition-action, plasticity-based memory, and
+    neuromorphic hardware/software.
+  links:
+    paper: https://arxiv.org/abs/2505.07634
+  access: closed
+  tags: [memory, planning]
+  added: 2026-09-29
+
+- id: mobile-service-robots-fm-review
+  name: Embodied AI with FMs for Mobile Service Robots
+  title: >-
+    Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review
+  date: 2025-05
+  summary: >-
+    Systematic review of LLMs, VLMs, MLLMs and VLAs for mobile service robots, focused on
+    instruction-to-action translation, multimodal perception, uncertainty for safe decisions
+    and onboard compute limits.
+  links:
+    paper: https://arxiv.org/abs/2505.20503
+  access: closed
+  tags: [mobile-manipulation, navigation, on-device]
+  added: 2026-09-29
+
+- id: embodied-ai-guide
+  name: Embodied-AI-Guide
+  date: 2025-03
+  org: Lumina Embodied AI community
+  summary: >-
+    Chinese-language, encyclopedia-style guide to embodied AI with a hands-on RoboTwin 2.0
+    tutorial walking through data, policy training and evaluation.
+  links:
+    code: https://github.com/TianxingChen/Embodied-AI-Guide
+  access: open
+  tags: [awesome-list]
+  added: 2026-09-29
+
+- id: robust-secure-embodied-ai-survey
+  name: Towards Robust and Secure Embodied AI
+  title: 'Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks'
+  date: 2025-02
+  summary: >-
+    Classifies embodied-AI vulnerabilities as exogenous or endogenous and reviews
+    adversarial attacks on perception, decision-making and interaction, including jailbreaks
+    of LLM/LVLM planners.
+  links:
+    paper: https://arxiv.org/abs/2502.13175
+  access: closed
+  tags: [security, safety]
+  added: 2026-09-29
+
+- id: llm-multi-robot-survey
+  name: LLMs for Multi-Robot Systems (survey)
+  title: 'Large Language Models for Multi-Robot Systems: A Survey'
+  date: 2025-02
+  summary: >-
+    Survey of LLM use in multi-robot systems across task allocation, motion planning, action
+    generation and human intervention, covering domains such as household, construction and
+    formation control, plus open challenges.
+  links:
+    paper: https://arxiv.org/abs/2502.03814
+  access: closed
+  tags: [multi-robot, planning]
+  added: 2026-09-29
+
+- id: humanoid-loco-manipulation-survey
+  name: Humanoid Locomotion and Manipulation survey
+  title: >-
+    Humanoid Locomotion and Manipulation: Current Progress and Challenges in Control,
+    Planning, and Learning
+  date: 2025-01
+  summary: >-
+    Covers model-based contact planning and whole-body control, learning-based RL and
+    imitation, foundation models for generalist humanoids, and whole-body tactile sensing
+    for humanoid loco-manipulation.
+  links:
+    paper: https://arxiv.org/abs/2501.02116
+  access: closed
+  tags: [humanoid, rl, planning]
+  added: 2026-09-29
+
+- id: awesome-embodied-vla-va-vln
+  name: Awesome Embodied VLA / VA / VLN
+  date: 2025-01
+  summary: >-
+    Curated collection of 700+ papers on VLA and world-action models, vision-language
+    navigation, vision-action policies, MLLM-based embodied learning, sim-to-real,
+    benchmarks and simulators.
+  links:
+    code: https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln
+  access: open
+  tags: [awesome-list, vla, navigation]
+  added: 2026-09-29
+
+- id: world-models-survey-ding
+  name: Understanding World or Predicting Future?
+  title: Understanding World or Predicting Future? A Comprehensive Survey of World Models
+  date: 2024-11
+  org: Tsinghua University
+  summary: >-
+    Categorizes world models by function, building internal representations of world
+    mechanisms versus predicting future states for decision-making, and reviews their use in
+    games, driving, robotics and social simulation.
+  links:
+    paper: https://arxiv.org/abs/2411.14499
+    code: https://github.com/tsinghua-fib-lab/World-Model
+  access: partial
+  tags: [world-model]
+  added: 2026-09-29
+
+- id: awesome-world-models-robotics
+  name: Awesome World Models for Robotics
+  date: 2024-11
+  summary: >-
+    Curated list of world-model papers for general video generation, embodied AI and
+    autonomous driving.
+  links:
+    code: https://github.com/leofan90/Awesome-World-Models
+  access: open
+  tags: [awesome-list, world-model]
+  added: 2026-09-29
+
+- id: awesome-humanoid-robot-learning
+  name: Awesome Humanoid Robot Learning
+  date: 2024-10
+  summary: >-
+    Paper list for humanoid robot learning organized by task (loco-manipulation and
+    whole-body control, manipulation, teleoperation, locomotion), preferring works with
+    real-robot experiments and open code.
+  links:
+    code: https://github.com/YanjieZe/awesome-humanoid-robot-learning
+  access: open
+  tags: [awesome-list, humanoid]
+  added: 2026-09-29
+
+- id: embodied-ai-survey-cyber-physical
+  name: Aligning Cyber Space with Physical World
+  title: 'Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI'
+  date: 2024-07
+  org: Sun Yat-sen University
+  summary: >-
+    Broad embodied-AI survey of robots and simulators, embodied perception, interaction,
+    agents and sim-to-real adaptation, emphasizing multimodal large models and world models
+    as agent architectures.
+  links:
+    paper: https://arxiv.org/abs/2407.06886
+    code: https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List
+  access: partial
+  tags: [world-model, sim2real, awesome-list]
+  added: 2026-09-29
+
+- id: vla-survey-embodied-ai
+  name: VLA survey (Ma et al.)
+  title: A Survey on Vision-Language-Action Models for Embodied AI
+  date: 2024-05
+  org: CUHK
+  summary: >-
+    Early VLA taxonomy spanning VLA components, low-level control policies and high-level
+    task planners that decompose long-horizon tasks for VLAs, plus datasets, simulators and
+    benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2405.14093
+    code: https://github.com/yueen-ma/Awesome-VLA
+  access: partial
+  tags: [vla, planning]
+  added: 2026-09-29
+
+- id: neural-scaling-laws-robotics
+  name: Neural Scaling Laws in Robotics
+  title: Neural Scaling Laws in Robotics
+  date: 2024-05
+  summary: >-
+    Meta-analysis of 327 papers quantifying how data, model size and compute affect robot
+    foundation models and LLMs on robotics tasks, finding power-law improvements.
+  links:
+    paper: https://arxiv.org/abs/2405.14005
+  access: closed
+  tags: [vla]
+  added: 2026-09-29
+
+- id: is-sora-world-simulator-survey
+  name: Is Sora a World Simulator?
+  title: >-
+    Is Sora a World Simulator? A Comprehensive Survey on General World Models and Beyond
+  date: 2024-05
+  summary: >-
+    Survey of general world models spanning video generation, autonomous-driving world
+    models and world models inside autonomous agents, with challenges and future directions.
+  links:
+    paper: https://arxiv.org/abs/2405.03520
+    code: https://github.com/GigaAI-research/General-World-Models-Survey
+  access: partial
+  tags: [world-model, video, driving]
+  added: 2026-09-29
+
+- id: real-world-robot-fm-review
+  name: Real-World Robot Applications of FMs
+  title: 'Real-World Robot Applications of Foundation Models: A Review'
+  date: 2024-02
+  org: University of Tokyo et al.
+  summary: >-
+    Reviews practical use of LLMs/VLMs in real robot systems, organized by which existing
+    component (perception, motion planning, control) a model replaces and by its
+    input-output interface.
+  links:
+    paper: https://arxiv.org/abs/2402.05741
+  access: closed
+  tags: [planning]
+  added: 2026-09-29
+
+- id: robotics-fm-embodied-ai-survey
+  name: A Survey on Robotics with Foundation Models
+  title: 'A Survey on Robotics with Foundation Models: toward Embodied AI'
+  date: 2024-02
+  summary: >-
+    Overview of foundation models in robotics focused on autonomous manipulation, spanning
+    high-level planning and low-level control, and how they help scale robot learning.
+  links:
+    paper: https://arxiv.org/abs/2402.02385
+  access: closed
+  tags: [manipulation, planning]
+  added: 2026-09-29
+
+- id: llm-robotics-opportunities
+  name: 'LLMs for Robotics: Opportunities, Challenges, and Perspectives'
+  title: 'Large Language Models for Robotics: Opportunities, Challenges, and Perspectives'
+  date: 2024-01
+  summary: >-
+    Overview of LLM and multimodal-LLM integration into robot tasks, plus a GPT-4V framework
+    that combines language instructions with visual perception for embodied task planning.
+  links:
+    paper: https://arxiv.org/abs/2401.04334
+  access: closed
+  tags: [planning]
+  added: 2026-09-29
+
+- id: general-purpose-robots-fm-survey
+  name: General-Purpose Robots via Foundation Models
+  title: 'Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis'
+  date: 2023-12
+  org: CMU et al.
+  summary: >-
+    Taxonomy of reusing NLP/CV foundation models in robotics versus building
+    robotics-specific ones, plus a meta-analysis and discussion of the main barriers to
+    generalist robots.
+  links:
+    paper: https://arxiv.org/abs/2312.08782
+    code: https://github.com/JeffreyYH/Awesome-Generalist-Robots-via-Foundation-Models
+    project: https://robotics-fm-survey.github.io/
+  access: partial
+  tags: [planning, cross-embodiment]
+  added: 2026-09-29
+
+- id: fm-robotics-survey
+  name: Foundation Models in Robotics survey
+  title: 'Foundation Models in Robotics: Applications, Challenges, and the Future'
+  date: 2023-12
+  org: Stanford et al.
+  summary: >-
+    Surveys where pretrained LLMs/VLMs enter the robot autonomy stack (perception,
+    decision-making, control) and flags data scarcity, safety and uncertainty
+    quantification, and real-time execution as open problems.
+  links:
+    paper: https://arxiv.org/abs/2312.07843
+    code: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models
+  access: partial
+  tags: [planning, safety]
+  added: 2026-09-29
+
+- id: language-conditioned-manipulation-survey
+  name: Bridging Language and Action
+  title: >-
+    Bridging Language and Action: A Survey of Language-Conditioned Robot Manipulation
+  date: 2023-12
+  summary: >-
+    Categorizes how language enters manipulation systems: for state evaluation, as a policy
+    condition, for planning and reasoning, and inside unified vision-language-action models.
+  links:
+    paper: https://arxiv.org/abs/2312.10807
+  access: closed
+  tags: [manipulation, planning, vla]
+  added: 2026-09-29
+
+- id: robot-learning-fm-era-survey
+  name: Robot Learning in the Era of Foundation Models
+  title: 'Robot Learning in the Era of Foundation Models: A Survey'
+  date: 2023-11
+  summary: >-
+    Reviews foundation-model techniques for robot learning (simulators, datasets,
+    frameworks) across manipulation, navigation, planning and reasoning, and flags gaps such
+    as hardware-software decoupling and dynamic data.
+  links:
+    paper: https://arxiv.org/abs/2311.14379
+  access: closed
+  tags: [planning, manipulation, navigation]
+  added: 2026-09-29
+
+- id: llm-robotics-survey
+  name: LLMs for Robotics survey
+  title: 'Large Language Models for Robotics: A Survey'
+  date: 2023-11
+  summary: >-
+    Reviews LLM use across robot perception, decision-making, planning, control and
+    human-robot interaction, and outlines challenges for LLM-based embodied intelligence.
+  links:
+    paper: https://arxiv.org/abs/2311.07226
+  access: closed
+  tags: [planning]
+  added: 2026-09-29
+
+- id: awesome-embodied-robotics-and-agent
+  name: Awesome Embodied Robotics and Agent
+  date: 2023-07
+  summary: >-
+    Curated list of embodied robotics and agent research built on VLMs and LLMs, covering
+    VLAs, benchmarks and self-evolving agents; maintained since 2023.
+  links:
+    code: https://github.com/zchoi/Awesome-Embodied-Robotics-and-Agent
+  access: open
+  tags: [awesome-list]
+  added: 2026-09-29
+
+- id: generative-simulation-paradigm
+  name: Generative Simulation (position paper)
+  title: 'Towards Generalist Robots: A Promising Paradigm via Generative Simulation'
+  date: 2023-05
+  summary: >-
+    Position paper arguing for generative simulation, in which foundation and generative
+    models create tasks, scenes and training supervision at scale, as a path toward
+    generalist robots.
+  links:
+    paper: https://arxiv.org/abs/2305.10455
+  access: closed
+  tags: [self-improving, dataset]
+  added: 2026-09-29
+
+- id: fm-decision-making-survey
+  name: Foundation Models for Decision Making
+  title: 'Foundation Models for Decision Making: Problems, Methods, and Opportunities'
+  date: 2023-03
+  org: Google / UC Berkeley
+  summary: >-
+    Frames how foundation models enter sequential decision making (prompting, generative
+    modeling, planning, optimal control, RL) across dialogue, driving and robotics, and
+    lists open problems for acting agents.
+  links:
+    paper: https://arxiv.org/abs/2303.04129
+  access: closed
+  tags: [planning, rl]
+  added: 2026-09-29
+
+- id: awesome-llm-robotics
+  name: Awesome-LLM-Robotics
+  date: 2022-08
+  org: Georgia Tech (RIPL)
+  summary: >-
+    Long-running curated list of papers using LLMs and multimodal models for robotics and
+    RL, organized by reasoning, planning, manipulation, navigation, simulation and safety.
+  links:
+    code: https://github.com/GT-RIPL/Awesome-LLM-Robotics
+  access: open
+  tags: [awesome-list]
+  added: 2026-09-29
+
+- id: embodied-ai-survey-simulators
+  name: 'A Survey of Embodied AI: From Simulators to Research Tasks'
+  title: 'A Survey of Embodied AI: From Simulators to Research Tasks'
+  date: 2021-03
+  summary: >-
+    Pre-foundation-model survey that evaluates nine embodied-AI simulators on seven features
+    and reviews visual exploration, visual navigation and embodied question answering.
+  links:
+    paper: https://arxiv.org/abs/2103.04918
+  access: closed
+  tags: [navigation, benchmark]
+  added: 2026-09-29
+
+- id: generative-physical-ai-review
+  name: Generative Physical AI review
+  title: A Comprehensive Review of Generative Physical Artificial Intelligence
+  date: 2026-09
+  summary: >-
+    Survey of generative physical AI organized into robot foundation models, VLAs, large
+    behaviour models, diffusion policies and world foundation models, covering how they
+    complement each other and where they are applied.
+  links:
+    paper: https://arxiv.org/abs/2609.18111
+  access: closed
+  tags: [vla, world-model]
+  added: 2026-10-04
