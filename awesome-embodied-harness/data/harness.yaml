@@ -70,7 +70,7 @@
 
 - id: safeharness
   name: SafeHarness
-  title: Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation
+  title: Coding Agents with Harness for Safe Robot Control
   date: 2026-09
   org: USC; UCF; UCSB
   summary: >-
@@ -85,6 +85,7 @@
     First-party SafeLIBERO simulation results using GPT-6 over a frozen pi0.5 with Harness
     VLA skills (71.9% success, 87.5% collision avoidance). Could also go under safety.
   added: 2026-09-29
+  updated: 2026-10-12
 
 - id: robofoundry
   name: RoboFoundry
@@ -1203,8 +1204,8 @@
 - id: growing-with-your-embodied-agent
   name: Growing with Your Embodied Agent
   title: >-
-    Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework
-    for Long-Horizon Manipulation Skills
+    Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation
+  aliases: [LYRA, Growing with Your Embodied Agent]
   date: 2025-09
   org: Technical University of Munich et al.
   summary: >-
@@ -1215,8 +1216,11 @@
   links:
     paper: https://arxiv.org/abs/2509.18597
   access: closed
-  tags: [code-as-policy, hitl, memory, long-horizon, manipulation]
+  tags: [code-as-policy, hitl, memory, skill-library, long-horizon, manipulation]
+  note: >-
+    RA-L 2026. Earlier arXiv versions used the title 'Growing with Your Embodied Agent'.
   added: 2026-09-29
+  updated: 2026-10-12
 
 - id: agentic-uavs
   name: Agentic UAVs
@@ -1235,8 +1239,7 @@
 
 - id: agentic-scene-policies
   name: Agentic Scene Policies (ASP)
-  title: >-
-    Agentic Scene Policies: Unifying Space, Semantics, and Affordances for Robot Action
+  title: Agentic Scene Policies
   date: 2025-09
   org: Mila; Universite de Montreal
   summary: >-
@@ -1250,7 +1253,9 @@
     project: https://montrealrobotics.ca/agentic-scene-policies.github.io/
   access: open
   tags: [agentic-loop, open-vocabulary, 3d, tool-use, manipulation, navigation]
+  note: IROS 2026.
   added: 2026-09-29
+  updated: 2026-10-12
 
 - id: hycodepolicy
   name: HyCodePolicy
@@ -2537,11 +2542,12 @@
     external grounding model.
   links:
     paper: https://arxiv.org/abs/2609.38078
+    code: https://github.com/Motor-Mind/MotorMind-Code
     project: https://motor-mind.github.io/
-  access: closed
+  access: open
   tags: [agentic-loop, memory, manipulation, real-world]
-  note: Code repository says it will be released before 2026-10-15 (checked 2026-10-01).
   added: 2026-10-01
+  updated: 2026-10-12
 
 - id: roboharn-evo
   name: RoboHarn-Evo
@@ -2762,6 +2768,7 @@
     MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile
     Manipulation
   date: 2026-10
+  org: HKU; Astribot; SUSTech
   summary: >-
     Dual-loop agent for long-horizon mobile manipulation: an inner loop uses a VLM for
     receding-horizon planning and visual reflection over composable atomic skills, run by
@@ -2769,14 +2776,14 @@
     self-improvement.
   links:
     paper: https://arxiv.org/abs/2610.03476
+    code: https://github.com/kaiknower/MobiAgent
     project: https://kaiknower.github.io/mobiagent
     weights: https://huggingface.co/Liukaikai/MobiAgent
-  access: partial
+  access: open
   tags: [agentic-loop, self-improving, mobile-manipulation, skill-library, long-horizon]
-  note: >-
-    CoRL 2026. Checkpoint on Hugging Face; the code repository linked from the project page
-    did not resolve (checked 2026-10-06).
+  note: CoRL 2026. Hugging Face checkpoint is gated behind manual access approval.
   added: 2026-10-06
+  updated: 2026-10-12
 
 - id: skill2real
   name: Skill2Real

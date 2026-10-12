@@ -1899,12 +1899,13 @@
   links:
     paper: https://arxiv.org/abs/2609.35032
     code: https://github.com/ControlNet/JRDB-AVR
-  access: closed
+  access: partial
   tags: [benchmark, spatial-reasoning, real-world, world-model]
   note: >-
-    NeurIPS 2026. The official repository held only a README stub when checked on
-    2026-09-30.
+    NeurIPS 2026. The repository now documents the released benchmark (2,098 questions) and
+    observation interface; the underlying JRDB data must be obtained separately.
   added: 2026-09-30
+  updated: 2026-10-12
 
 - id: happyworld-bench
   name: HappyWorld-Bench

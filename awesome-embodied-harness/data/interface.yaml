@@ -49,13 +49,14 @@
     simulations and return diagnostics for iterative correction of a pick-and-place cell.
   links:
     paper: https://arxiv.org/abs/2608.21417
-    code: https://github.com/zhou-zhichao/robotstudio-mcp
-  access: open
+  access: closed
   tags: [mcp, code-as-policy, failure-recovery]
   note: >-
-    Accepted at CIE53 (2026). The repository ("RobotStudio Agent Bridge") exposes
-    RobotStudio to agents through a Skill-guided CLI or an MCP server.
+    Accepted at CIE53 (2026). The previously linked repository
+    (zhou-zhichao/robotstudio-mcp) no longer resolves (checked 2026-10-12), so the code link
+    was removed.
   added: 2026-09-29
+  updated: 2026-10-12
 
 - id: pointing-vla
   name: Pointing-VLA
@@ -409,25 +410,6 @@
   note: >-
     Open-source release announced on ROS Discourse in Sep 2025 (PyPI package ros-mcp);
     earlier versions were public as lpigeon/ros-mcp-server, which now redirects here.
-  added: 2026-09-29
-
-- id: lyra
-  name: LYRA
-  title: >-
-    Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework
-    for Long-Horizon Manipulation Skills
-  date: 2025-09
-  org: Technical University of Munich
-  summary: >-
-    Human-in-the-loop lifelong code generation that encodes human corrections into reusable
-    code skills kept in external memory and retrieved with RAG plus user hints; reports
-    solving very long-horizon tasks such as "build a house" (20+ primitives).
-  links:
-    paper: https://arxiv.org/abs/2509.18597
-  access: closed
-  tags: [code-as-policy, skill-library, hitl, memory, long-horizon]
-  note: >-
-    First-party results on Ravens, Franka Kitchen, MetaWorld and real-world settings.
   added: 2026-09-29
 
 - id: robot-context-protocol
