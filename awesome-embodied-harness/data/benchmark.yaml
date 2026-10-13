@@ -2294,3 +2294,66 @@
   access: closed
   tags: [benchmark, dataset, mobile-manipulation, long-horizon]
   added: 2026-10-10
+
+- id: embodiedclbench
+  name: EmbodiedCLBench
+  title: 'EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents'
+  date: 2026-10
+  summary: >-
+    Embodied simulation benchmark for continual learning of self-evolving agents: agents
+    learn basic tasks, then must recombine acquired skills for unseen compositional tasks;
+    evaluates multiple agent harnesses and learning methods.
+  links:
+    paper: https://arxiv.org/abs/2610.13021
+  access: closed
+  tags: [benchmark, self-improving, skill-library]
+  added: 2026-10-13
+
+- id: magma-bench
+  name: MAGMA-Bench
+  title: >-
+    MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution
+    Failures
+  date: 2026-10
+  summary: >-
+    Architecture-agnostic benchmark for persistent task reasoning across heterogeneous robot
+    teams, with growing horizons and controlled online perturbations (execution failures,
+    interruptions, mission updates) over a structured skill-level interface.
+  links:
+    paper: https://arxiv.org/abs/2610.13534
+  access: closed
+  tags: [benchmark, multi-robot, long-horizon, failure-recovery]
+  added: 2026-10-13
+
+- id: autobio-plus
+  name: AutoBio+
+  title: >-
+    AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in
+    Realistic Laboratories
+  date: 2026-10
+  summary: >-
+    Simulation benchmark of 14 biology-lab tasks across 4 embodiments (tool use, precision
+    manipulation, language grounding, instrument operation) with controllable dynamic
+    phenomena such as flames, vapor and bubbles.
+  links:
+    paper: https://arxiv.org/abs/2610.13643
+  access: closed
+  tags: [benchmark, dexterous, manipulation]
+  added: 2026-10-13
+
+- id: jittervla
+  name: JitterVLA
+  title: >-
+    JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation
+  date: 2026-10
+  summary: >-
+    Replays identical VLA commands and arrival-delay traces through alternative controllers
+    to isolate the controller's effect on jerk near people, across synthetic reaches, human
+    hand trajectories, three open VLA pipelines and a physical UR3.
+  links:
+    paper: https://arxiv.org/abs/2610.13628
+    project: https://faithogunwoye.github.io/JitterVLA/
+    data: https://huggingface.co/datasets/armteam/JitterVLA-teleop-episodes
+  access: partial
+  tags: [benchmark, safety, vla]
+  added: 2026-10-13

@@ -3085,3 +3085,35 @@
   access: closed
   tags: [skill-library, on-device, planning]
   added: 2026-10-10
+
+- id: bt-agent
+  name: BT-Agent
+  title: >-
+    BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity
+    Evaluation
+  date: 2026-10
+  summary: >-
+    Onboard agent architecture where a 9B LLM makes task decisions over predefined
+    behavior-tree skills that enforce execution conditions and return structured failure
+    feedback, so local checks can stop navigation without another model call; adds a
+    161-task multi-fidelity (text and Habitat) benchmark.
+  links:
+    paper: https://arxiv.org/abs/2610.13862
+  access: closed
+  tags: [agentic-loop, on-device, legged, benchmark]
+  added: 2026-10-13
+
+- id: joyinside-vlm-agent
+  name: JoyInside-VLM-Agent
+  title: >-
+    JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents
+  date: 2026-10
+  summary: >-
+    ReAct-style multimodal agent for robots and smart hardware trained on sandbox-generated
+    trajectories with goal revisions and failure recovery, via SFT, multi-teacher on-policy
+    distillation and RL with privileged token-level self-distillation (DPER).
+  links:
+    paper: https://arxiv.org/abs/2610.12957
+  access: closed
+  tags: [agentic-loop, failure-recovery, rl]
+  added: 2026-10-13

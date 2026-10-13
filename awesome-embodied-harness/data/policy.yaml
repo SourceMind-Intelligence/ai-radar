@@ -1676,3 +1676,20 @@
   access: open
   tags: [long-horizon, navigation, mobile-manipulation]
   added: 2026-10-11
+
+- id: ogpo
+  name: OGPO
+  title: >-
+    OGPO: Offline Goal-conditioned Policy Optimization for Recoverable
+    Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Post-trains VLAs to recover toward task progress rather than replay demonstrated paths,
+    by relabelling offline trajectories with semantic key states and optimizing a
+    goal-conditioned objective.
+  links:
+    paper: https://arxiv.org/abs/2610.12914
+  access: closed
+  tags: [vla, failure-recovery, rl]
+  note: NeurIPS 2026.
+  added: 2026-10-13

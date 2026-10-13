@@ -273,20 +273,20 @@ Counts by category and year of first release, generated from `data/`.
 | Category | Layer | Total | ≤2021 | 2022 | 2023 | 2024 | 2025 | 2026 | open |
 |---|---|---|---|---|---|---|---|---|---|
 | [Surveys & Position Papers](categories/survey.md) | meta | 84 | 1 | 1 | 8 | 10 | 30 | 34 | 12 |
-| [Embodied Harnesses](categories/harness.md) | L4 | 176 | 0 | 10 | 30 | 23 | 14 | 99 | 73 |
+| [Embodied Harnesses](categories/harness.md) | L4 | 178 | 0 | 10 | 30 | 23 | 14 | 101 | 73 |
 | [Open-Source Frameworks & Runtimes](categories/framework.md) | L0-L4 | 26 | 0 | 1 | 5 | 11 | 5 | 4 | 25 |
-| [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 44 | 0 | 0 | 5 | 10 | 11 | 18 | 21 |
+| [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 45 | 0 | 0 | 5 | 10 | 11 | 19 | 21 |
 | [World State, Memory & Spatial Context](categories/memory.md) | L3 | 59 | 0 | 4 | 6 | 15 | 10 | 24 | 31 |
 | [Embodied Reasoning Models & Planners](categories/brain.md) | L4 | 47 | 0 | 0 | 5 | 4 | 18 | 20 | 28 |
-| [VLA Models & Skill Policies](categories/policy.md) | L1 | 91 | 0 | 1 | 5 | 7 | 42 | 36 | 57 |
+| [VLA Models & Skill Policies](categories/policy.md) | L1 | 92 | 0 | 1 | 5 | 7 | 42 | 37 | 57 |
 | [World Models](categories/world-model.md) | L6 | 71 | 0 | 1 | 3 | 7 | 26 | 34 | 40 |
-| [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 52 | 0 | 0 | 4 | 7 | 14 | 27 | 25 |
+| [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 53 | 0 | 0 | 4 | 7 | 14 | 28 | 25 |
 | [Safety, Guardrails & Security](categories/safety.md) | L5 | 54 | 0 | 0 | 1 | 9 | 15 | 29 | 21 |
 | [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 47 | 0 | 0 | 5 | 8 | 13 | 21 | 22 |
-| [Simulators & Environments](categories/sim.md) | L6 | 48 | 12 | 1 | 6 | 5 | 10 | 14 | 39 |
-| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 125 | 5 | 1 | 4 | 19 | 31 | 65 | 77 |
-| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 92 | 5 | 0 | 9 | 18 | 35 | 25 | 64 |
-| **Total** |  | **1016** | 23 | 20 | 96 | 153 | 274 | 450 | 535 |
+| [Simulators & Environments](categories/sim.md) | L6 | 49 | 12 | 1 | 6 | 5 | 10 | 15 | 39 |
+| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 129 | 5 | 1 | 4 | 19 | 31 | 69 | 77 |
+| [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 93 | 5 | 0 | 9 | 18 | 35 | 26 | 65 |
+| **Total** |  | **1027** | 23 | 20 | 96 | 153 | 274 | 461 | 536 |
 <!-- END GENERATED: stats -->
 
 ---

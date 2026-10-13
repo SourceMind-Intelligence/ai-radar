@@ -941,3 +941,19 @@
   access: closed
   tags: [failure-recovery, success-detection, long-horizon, manipulation]
   added: 2026-10-10
+
+- id: robot-watchdog
+  name: Robot-WATCHDOG
+  title: 'Robot-WATCHDOG : failure detection through object-centric graph representation'
+  date: 2026-10
+  summary: >-
+    Self-supervised failure detection from nominal demonstrations only, modelling scenes as
+    object-centric spatio-temporal graphs and scoring deviation with a non-parametric
+    trajectory measure (TPC) and a graph-attention transformer that predicts future object
+    states.
+  links:
+    paper: https://arxiv.org/abs/2610.13403
+  access: closed
+  tags: [success-detection, scene-graph, manipulation]
+  note: CoRL 2026.
+  added: 2026-10-13

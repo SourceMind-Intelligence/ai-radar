@@ -1,7 +1,7 @@
 # Awesome Embodied Harness [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <!-- BEGIN GENERATED: badges -->
-![entries](https://img.shields.io/badge/entries-1016-blue) ![categories](https://img.shields.io/badge/categories-14-blueviolet) ![last radar](https://img.shields.io/badge/last%20radar-2026--10--12-success) ![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)
+![entries](https://img.shields.io/badge/entries-1027-blue) ![categories](https://img.shields.io/badge/categories-14-blueviolet) ![last radar](https://img.shields.io/badge/last%20radar-2026--10--13-success) ![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)
 <!-- END GENERATED: badges -->
 
 > A curated, continuously updated survey of the **embodied harness** stack: everything around a foundation model that turns it into an agent acting in the physical world. A daily radar agent keeps it current.
@@ -42,19 +42,19 @@ flowchart TB
 
 <!-- BEGIN GENERATED: toc -->
 - [Surveys & Position Papers](#survey) (84)
-- [Embodied Harnesses](#harness) (176)
+- [Embodied Harnesses](#harness) (178)
 - [Open-Source Frameworks & Runtimes](#framework) (26)
-- [Action Interfaces, Skills & Tool Protocols](#interface) (44)
+- [Action Interfaces, Skills & Tool Protocols](#interface) (45)
 - [World State, Memory & Spatial Context](#memory) (59)
 - [Embodied Reasoning Models & Planners](#brain) (47)
-- [VLA Models & Skill Policies](#policy) (91)
+- [VLA Models & Skill Policies](#policy) (92)
 - [World Models](#world-model) (71)
-- [Verification, Failure Detection & Recovery](#verification) (52)
+- [Verification, Failure Detection & Recovery](#verification) (53)
 - [Safety, Guardrails & Security](#safety) (54)
 - [Multi-Robot & Fleet Orchestration](#multi-agent) (47)
-- [Simulators & Environments](#sim) (48)
-- [Benchmarks & Evaluation](#benchmark) (125)
-- [Data, Teleoperation & Training Infrastructure](#data) (92)
+- [Simulators & Environments](#sim) (49)
+- [Benchmarks & Evaluation](#benchmark) (129)
+- [Data, Teleoperation & Training Infrastructure](#data) (93)
 <!-- END GENERATED: toc -->
 - [Daily radar](#daily-radar) · [Recently added](#recently-added) · [Contributing](#contributing) · [Citation](#citation)
 
@@ -63,20 +63,31 @@ flowchart TB
 Every day a scheduled agent scans arXiv, Hugging Face, GitHub, lab blogs and news. It checks each find against primary sources, adds qualifying systems to [`data/`](data), and writes a log to [`radar/log/`](radar/log). The procedure is in [radar/PLAYBOOK.md](radar/PLAYBOOK.md) and the watch list is in [radar/sources.yaml](radar/sources.yaml).
 
 <!-- BEGIN GENERATED: radar -->
+- [2026-10-13](radar/log/2026-10-13.md) — Self-evolving embodied agents get their own benchmarks: EmbodiedCLBench tests whether harnesses compose learned skills, MAGMA-Bench stresses multi-robot plans under failures; BT-Agent puts a 9B agent fully onboard (11 added)
 - [2026-10-12](radar/log/2026-10-12.md) — Monday maintenance: promised code lands for MotorMind and MobiAgent, the weekly link check catches a duplicate entry and a vanished repo; no new arXiv listing yet (7 updated)
 - [2026-10-11](radar/log/2026-10-11.md) — Weekend queue drain: four verified policy and data papers promoted (SimVLA, Attacca and NegaAlign among them); simulation-only VLA training reaches real homes (4 added)
 - [2026-10-10](radar/log/2026-10-10.md) — Harnesses get operating systems: NavGPT-3 runs reasoning, acting and monitoring as scheduled threads; SpatialHarness renders virtual views for frozen policies; COAP argues for no model in the loop at all (12 added, 4 candidates)
 - [2026-10-09](radar/log/2026-10-09.md) — The list passes 1,000 entries as self-evolving harnesses start updating the policy too: Robo-COP co-evolves orchestrator and VLA; PhysEvo and EmbodiedRSI improve frozen models through meta-agents and value-of-information experiments (12 added, 2 candidates)
 - [2026-10-08](radar/log/2026-10-08.md) — The harness optimizes itself, and so does its judge: EMHO rewrites a frozen agent's harness from traces while VeriFine co-evolves policy, curriculum and verifier; guardrails for embodied agents look weak (12 added, 2 candidates)
 - [2026-10-07](radar/log/2026-10-07.md) — Context engineering for robot agents: RobotUse, RV-ICL and PreAct-Nav decide what the agent sees, when, and through which subagent or tool (11 added, 1 updated, 1 candidates)
-- [2026-10-06](radar/log/2026-10-06.md) — Sim-to-real becomes a harness problem: Skill2Real, RoboBridge and MobiAgent transfer verified skills and procedures instead of retraining policies (10 added)
 <!-- END GENERATED: radar -->
 
 ## Recently added
 
 <!-- BEGIN GENERATED: recent -->
-Added in the 30 days up to 2026-10-11:
+Added in the 30 days up to 2026-10-13:
 
+- ⚪ [**BT-Agent**](https://arxiv.org/abs/2610.13862 "BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation") · 2026-10 — Onboard agent architecture where a 9B LLM makes task decisions over predefined behavior-tree skills that enforce execution conditions and return structured failure feedback, so local checks can stop navigation without another model call; adds a 161-task multi-fidelity (text and Habitat) benchmark. _(added 2026-10-13 to [Embodied Harnesses](#harness))_
+- ⚪ [**JoyInside-VLM-Agent**](https://arxiv.org/abs/2610.12957 "JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents") · 2026-10 — ReAct-style multimodal agent for robots and smart hardware trained on sandbox-generated trajectories with goal revisions and failure recovery, via SFT, multi-teacher on-policy distillation and RL with privileged token-level self-distillation (DPER). _(added 2026-10-13 to [Embodied Harnesses](#harness))_
+- ⚪ [**EASG**](https://arxiv.org/abs/2610.12832 "VLMs are Native Action Models: Unleashing the Manipulation Capabilities of VLMs with Explicit Action-Space Grounding") · 2026-10 — Turns a pretrained VLM into a continuous-action manipulation policy through explicit action-space grounding instead of learned action tokens or experts, keeping it end-to-end trainable while exposing its spatial and reasoning abilities. [project](https://general-robo.github.io/EASG/) _(added 2026-10-13 to [Action Interfaces, Skills & Tool Protocols](#interface))_
+- ⚪ [**OGPO**](https://arxiv.org/abs/2610.12914 "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models") · 2026-10 — Post-trains VLAs to recover toward task progress rather than replay demonstrated paths, by relabelling offline trajectories with semantic key states and optimizing a goal-conditioned objective. _Note: NeurIPS 2026._ _(added 2026-10-13 to [VLA Models & Skill Policies](#policy))_
+- ⚪ [**Robot-WATCHDOG**](https://arxiv.org/abs/2610.13403 "Robot-WATCHDOG : failure detection through object-centric graph representation") · 2026-10 — Self-supervised failure detection from nominal demonstrations only, modelling scenes as object-centric spatio-temporal graphs and scoring deviation with a non-parametric trajectory measure (TPC) and a graph-attention transformer that predicts future object states. _Note: CoRL 2026._ _(added 2026-10-13 to [Verification, Failure Detection & Recovery](#verification))_
+- ⚪ [**Splat2Act**](https://arxiv.org/abs/2610.13945 "Splat2Act: From Captured Scenes to Personalized VLA Manipulation") · 2026-10 — Automated real-to-sim-to-real pipeline that personalizes a pretrained VLA (pi0.5) to a user's building-scale space from a phone scan and object images, building a 3D Gaussian Splatting digital twin to generate adaptation data. [project](https://splat2act.github.io) _(added 2026-10-13 to [Simulators & Environments](#sim))_
+- ⚪ [**EmbodiedCLBench**](https://arxiv.org/abs/2610.13021 "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents") · 2026-10 — Embodied simulation benchmark for continual learning of self-evolving agents: agents learn basic tasks, then must recombine acquired skills for unseen compositional tasks; evaluates multiple agent harnesses and learning methods. _(added 2026-10-13 to [Benchmarks & Evaluation](#benchmark))_
+- ⚪ [**MAGMA-Bench**](https://arxiv.org/abs/2610.13534 "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures") · 2026-10 — Architecture-agnostic benchmark for persistent task reasoning across heterogeneous robot teams, with growing horizons and controlled online perturbations (execution failures, interruptions, mission updates) over a structured skill-level interface. _(added 2026-10-13 to [Benchmarks & Evaluation](#benchmark))_
+- ⚪ [**AutoBio+**](https://arxiv.org/abs/2610.13643 "AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories") · 2026-10 — Simulation benchmark of 14 biology-lab tasks across 4 embodiments (tool use, precision manipulation, language grounding, instrument operation) with controllable dynamic phenomena such as flames, vapor and bubbles. _(added 2026-10-13 to [Benchmarks & Evaluation](#benchmark))_
+- 🟡 [**JitterVLA**](https://arxiv.org/abs/2610.13628 "JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation") · 2026-10 — Replays identical VLA commands and arrival-delay traces through alternative controllers to isolate the controller's effect on jerk near people, across synthetic reaches, human hand trajectories, three open VLA pipelines and a physical UR3. [project](https://faithogunwoye.github.io/JitterVLA/) · [data](https://huggingface.co/datasets/armteam/JitterVLA-teleop-episodes) _(added 2026-10-13 to [Benchmarks & Evaluation](#benchmark))_
+- 🟢 [**TouchScale**](https://arxiv.org/abs/2610.10288 "TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning") · 2026-10 — 500-hour dataset of contact-rich human interaction recorded with one unified wearable vision-and-touch setup across about 2K task descriptions, designed to study how visual-tactile learning scales. [code](https://github.com/phai-lab/touchscale) · [project](https://touch-scale.github.io/) · [data](https://huggingface.co/datasets/2077AIDataFoundation/TouchScale) _(added 2026-10-13 to [Data, Teleoperation & Training Infrastructure](#data))_
 - 🟢 [**SimVLA**](https://arxiv.org/abs/2610.11248 "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation") · 2026-10 — VLA for mobile manipulation trained only on simulation data: SimAction (35 tasks composed from atomic skills), SimVQA (privileged-state spatial and subtask supervision) and SimDeploy rollouts, transferring zero-shot to real homes for restocking, pouring and cleaning. [code](https://github.com/kyounginbaik/SimVLA) · [project](https://kyounginbaik.github.io/simvla/) · [data](https://huggingface.co/datasets/kyounginbaik/SimVLA-assets) _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
 - ⚪ [**NegaAlign**](https://arxiv.org/abs/2610.11952 "Tell Robot What Not to Do: A Negation Understanding Perspective") · 2026-10 — Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone, trained with teacher-guided alignment, so the policy completes goals while respecting explicit exclusions; introduces the NegaBench simulation benchmark. _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
 - 🟢 [**Attacca**](https://arxiv.org/abs/2610.07785 "Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents") · 2026-10 — Trains visual goal-conditioned policies on full search-to-interact trajectories with goal images decoupled from the execution scene and a target-mask grounding head, so chained tasks can start from wherever the previous task left the agent. [code](https://github.com/attacca-project/attacca) · [project](https://attacca-project.github.io) · [weights](https://huggingface.co/willsuh/attacca) _(added 2026-10-11 to [VLA Models & Skill Policies](#policy))_
@@ -230,7 +241,7 @@ Added in the 30 days up to 2026-10-11:
 ## Embodied Harnesses
 
 > Systems where an LLM/VLM-driven agent loop orchestrates robot capabilities (skills, VLAs, motion primitives, generated code) and closes the loop on feedback.  
-> Layer: L4 · 176 entries · **[full list →](categories/harness.md)**
+> Layer: L4 · 178 entries · **[full list →](categories/harness.md)**
 
 - 🟢 [**SuperNav**](https://arxiv.org/abs/2610.12126 "SuperNav: An Agentic Navigation System for Any Task in Any Scene") · 2026-10 — Equips a pretrained multimodal LLM with a navigation agent harness, with no navigation-specific fine-tuning: the model interprets requests, understands scenes and decides, while motion execution is delegated to navigation tools. [code](https://github.com/zju3dv/SuperNav) · [project](https://zju3dv.github.io/SuperNav/)
 - ⚪ [**SpatialHarness**](https://arxiv.org/abs/2610.12457 "SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation") · 2026-10 — Test-time harness for frontier multimodal policies (e.g., GPT-6 Astra): keeps an online simulated scene synchronized with real execution, finds task-critical spatial relationships and renders virtual views that expose them, with no fine-tuning or new cameras.
@@ -243,7 +254,7 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**RoboAware**](https://arxiv.org/abs/2610.11480 "RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes") · 2026-10 — Adds a learned state-conditioned coordinator to a coding agent's skill orchestration, deciding which policy family (modular skills or frozen end-to-end policies) should act; trained on counterfactual outcomes from state-locked branching that executes each admissible family from the same state.
 - ⚪ [**Robo-COP**](https://arxiv.org/abs/2610.09228 "Co-Evolving Robot Orchestrators and Policies through Deployment") · 2026-10 — Co-evolves a VLM orchestrator and the VLA it calls during deployment: the system curates skill demonstrations from its own rollouts to fine-tune the policy and retunes the orchestrator to the updated policy, so the policy stops being the system's fixed bottleneck.
 
-<sub>[+ 166 more in the full list](categories/harness.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 168 more in the full list](categories/harness.md) · [↑ back to contents](#contents)</sub>
 
 <a id="framework"></a>
 ## Open-Source Frameworks & Runtimes
@@ -268,9 +279,10 @@ Added in the 30 days up to 2026-10-11:
 ## Action Interfaces, Skills & Tool Protocols
 
 > How robot capabilities are exposed to models: skills as tools, code-as-action APIs, MCP servers, semantic action spaces, keypoint and affordance constraints.  
-> Layer: L2 · 44 entries · **[full list →](categories/interface.md)**
+> Layer: L2 · 45 entries · **[full list →](categories/interface.md)**
 
 - ⚪ [**iAm.md**](https://arxiv.org/abs/2610.10962 "iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown Open-Vocabulary Domains") · 2026-10 — Markdown standard and generation framework in which a robot describes its own capabilities so an agent can check, before generating behaviour code, whether the robot and environment actually support a requested operation, reducing grounding failures. _Note: AIRO 2026 workshop._ [project](https://yurimachine.github.io/iAm.md/)
+- ⚪ [**EASG**](https://arxiv.org/abs/2610.12832 "VLMs are Native Action Models: Unleashing the Manipulation Capabilities of VLMs with Explicit Action-Space Grounding") · 2026-10 — Turns a pretrained VLM into a continuous-action manipulation policy through explicit action-space grounding instead of learned action tokens or experts, keeping it end-to-end trainable while exposing its spatial and reasoning abilities. [project](https://general-robo.github.io/EASG/)
 - ⚪ [**MCP Navigation Representation Layer**](https://arxiv.org/abs/2609.27340 "Spatial and Semantic Reasoning for LLM-Driven Robot Navigation via MCP") · 2026-09 — Non-invasive layer that turns ROS navigation data into LLM-usable context exposed as MCP tools: occupancy grids become metric, pose-aware map images for goal reasoning, and waypoint-level semantic annotations record observations with robot poses. _Note: First-party simulation results (over 97% map coverage; spatial and semantic goal selection)._
 - 🟢 [**Isaac ROS 5.0 agent skills**](https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/) · 2026-09 · NVIDIA — Isaac ROS 5.0 adds skills in the open Agent Skills format so coding assistants can run Isaac ROS workflows, e.g. Mission Control skills that bring up the fleet stack, change maps or fleets and submit and verify missions; more Isaac skills sit in NVIDIA's skills catalog. _Note: Developer-facing: the skills target coding assistants that build and operate Isaac ROS systems rather than a runtime robot action space. The docs also cover Mission Control and Mission Dispatch MCP servers, and the blog announces a standalone agent-ready pick-and-place skill._ [code](https://github.com/NVIDIA/skills) · [docs](https://nvidia-isaac-ros.github.io/v/release-5.0/releases/index.html)
 - ⚪ [**APPL**](https://arxiv.org/abs/2609.35690 "Agent Priors-guided Policy Learning") · 2026-09 — Uses each skill policy's structural prior (what a behaviour depends on, such as gripper pose relative to an object) both to shape training and, stated in language, as the interface a composing agent reads to decide where the skill applies; a construction agent segments demonstrations into skills.
@@ -279,9 +291,8 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**Model Hardware Standard (MHS)**](https://www.modelhardwarestandard.com/) · 2026-08 · Anthropic — Driver standard that wraps lab, robotics and manufacturing hardware as discoverable devices with simple read/write operations plus natural-language metadata on states, procedures and limits, reachable via MCP, CLI or code and guarded by deterministic device-level safeguards. _Note: Research preview shared with partners (e.g. Genentech, CMU, HHMI Janelia; vendor support announced by Universal Robots, Doosan Robotics, AWS Strands Robots and Hugging Face LeRobot); Anthropic states it plans to open-source the standard._ [blog](https://www.anthropic.com/news/model-hardware-standard-research-preview)
 - 🟢 [**open-robot-skills (MORSL)**](https://arxiv.org/abs/2607.05369) · 2026-07 · UC Berkeley; NVIDIA — Modular Open Robot Skill Library used by the GaP coding harness: manipulation skills and model-backed tool bundles packaged in the Anthropic Agent Skills (SKILL.md) format, each with scripts and declared exit conditions that generated robot graphs route on. _Note: Described in the GaP paper (see the GaP entry under other); listed separately as the reusable skill artifact._ [code](https://github.com/graph-robots/open-robot-skills) · [project](https://graph-robots.github.io/gap)
 - ⚪ [**Contract-Grounded BT Synthesis**](https://arxiv.org/abs/2607.12220 "Contract-Grounded Behavior Tree Synthesis via Coding Agents") · 2026-07 — A coding agent queries a robot-side MCP server for an explicit contract (skill library, permitted behavior-tree operators, optional templates) before synthesizing a behavior tree, which a runtime validation gate checks before execution. _Note: Evaluated on 110 PyRoboSim tasks and 14 tasks on a Husarion Panther (first-party)._ [project](https://jsalfity.github.io/agentic-bt-gen-webviewer/)
-- 🟢 [**Agent-Client Protocol for HRI**](https://arxiv.org/abs/2607.14919 "Human-Robot Interaction in GenAI Architectures via the Agent-Client Protocol") · 2026-07 · University of Malaga (MAPIRlab) — Uses the Agent-Client Protocol (from coding agents) for the human-to-agent link and MCP for the agent-to-robot link, giving a three-layer architecture with real-time observability, explicit human authorization and task interruption; tested on a mobile robot with three UIs. _Note: Robot-side ROS 2 code for the Sancho platform is in github.com/MAPIRlab/sancho_robot._ [code](https://github.com/MAPIRlab/sancho-acp-clients)
 
-<sub>[+ 34 more in the full list](categories/interface.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 35 more in the full list](categories/interface.md) · [↑ back to contents](#contents)</sub>
 
 <a id="memory"></a>
 ## World State, Memory & Spatial Context
@@ -325,20 +336,20 @@ Added in the 30 days up to 2026-10-11:
 ## VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 91 entries · **[full list →](categories/policy.md)**
+> Layer: L1 · 92 entries · **[full list →](categories/policy.md)**
 
 - ⚪ [**TUD**](https://arxiv.org/abs/2610.05025 "Triggering Generalist Reasoning via Predictive Uncertainty for Dual-System VLA") · 2026-10 — Adaptive inference for dual-system VLAs: calls the slow generalist only when the dispersion of re-predicted future actions under the cached context signals rising uncertainty, skipping calls in easy phases with no extra model. _Note: NeurIPS 2026._
 - 🟢 [**SimVLA**](https://arxiv.org/abs/2610.11248 "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation") · 2026-10 — VLA for mobile manipulation trained only on simulation data: SimAction (35 tasks composed from atomic skills), SimVQA (privileged-state spatial and subtask supervision) and SimDeploy rollouts, transferring zero-shot to real homes for restocking, pouring and cleaning. [code](https://github.com/kyounginbaik/SimVLA) · [project](https://kyounginbaik.github.io/simvla/) · [data](https://huggingface.co/datasets/kyounginbaik/SimVLA-assets)
 - ⚪ [**RACE**](https://arxiv.org/abs/2610.05719 "When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models") · 2026-10 — Finds that errors in long VLA action chunks concentrate at subskill transitions, and predicts transition timing from an auxiliary one-step denoising pass to condition action generation, enabling longer chunks with fewer pauses.
+- ⚪ [**OGPO**](https://arxiv.org/abs/2610.12914 "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models") · 2026-10 — Post-trains VLAs to recover toward task progress rather than replay demonstrated paths, by relabelling offline trajectories with semantic key states and optimizing a goal-conditioned objective. _Note: NeurIPS 2026._
 - ⚪ [**NegaAlign**](https://arxiv.org/abs/2610.11952 "Tell Robot What Not to Do: A Negation Understanding Perspective") · 2026-10 — Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone, trained with teacher-guided alignment, so the policy completes goals while respecting explicit exclusions; introduces the NegaBench simulation benchmark.
 - 🟢 [**Attacca**](https://arxiv.org/abs/2610.07785 "Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents") · 2026-10 — Trains visual goal-conditioned policies on full search-to-interact trajectories with goal images decoupled from the execution scene and a target-mask grounding head, so chained tasks can start from wherever the previous task left the agent. [code](https://github.com/attacca-project/attacca) · [project](https://attacca-project.github.io) · [weights](https://huggingface.co/willsuh/attacca)
 - ⚪ [**THAW-VLA**](https://arxiv.org/abs/2609.24682 "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies") · 2026-09 — Adds one feature-alignment term to VLA training so the policy matches cached features from a frozen world model; no teacher at training time or deployment, so the deployed policy keeps the baseline's size and latency.
 - 🟡 [**Rho**](https://arxiv.org/abs/2609.38164 "Rho: A Foundation for Efficiently Adaptable VLA Models") · 2026-09 · Microsoft — Family of open-weight bimanual VLAs with embodiment midtraining for YAM Box, UR AI Trainer and FR3 Duo; a lightweight latent policy learns from corrective feedback to pick noise inputs for the frozen flow-matching action expert, adapting online from a few corrected episodes. _Note: Base and embodiment-specific checkpoints released on Hugging Face (MIT); no training code link found._ [weights](https://huggingface.co/microsoft/rho-base)
 - 🟢 [**Light-O1**](https://www.lightorigins.com/en/blog/light-o1) · 2026-09 · Light Origins — Embodied foundation model pretrained on structured human action recovered from internet video, then post-trained per embodiment; it states in language what an instruction needs from the body before generating actions. The open Light-O1-Preview covers text-to-whole-body action only. _Note: Preview release (Apache 2.0) lacks vision and manipulation; the full model is announced._ [code](https://github.com/lightorigins/Light-O1) · [weights](https://huggingface.co/LightOriginsHQ/Light-O1-Preview)
 - 🟢 [**Grounded Action Model**](https://arxiv.org/abs/2609.23863 "Grounded Action Model: 3D Grounding as a Foundation for Robotics") · 2026-09 — Robot foundation model built on 3D grounding: language, point or box prompts become an object-centric representation with metric geometry that a multi-stream transformer turns into action chunks; runs alone or as the low-level controller under a VLM planner. [code](https://github.com/GehaoZhang6/Grounded-Action-Model) · [project](https://grounded-action-model.github.io/)
-- 🟢 [**ActionPiece**](https://arxiv.org/abs/2609.18487 "ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models") · 2026-09 — Action tokenizer for autoregressive VLAs that preserves near-far relations between actions through joint supervision of representation learning and quantization; introduces a physical rank consistency metric for tokenizer fidelity. [code](https://github.com/DeepCybo-PhysAI/ActionPiece) · [project](https://deepcybo-physai.github.io/ActionPiece/)
 
-<sub>[+ 81 more in the full list](categories/policy.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 82 more in the full list](categories/policy.md) · [↑ back to contents](#contents)</sub>
 
 <a id="world-model"></a>
 ## World Models
@@ -363,10 +374,11 @@ Added in the 30 days up to 2026-10-11:
 ## Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 52 entries · **[full list →](categories/verification.md)**
+> Layer: L5 · 53 entries · **[full list →](categories/verification.md)**
 
 - ⚪ [**VeriFine**](https://arxiv.org/abs/2610.08761 "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning") · 2026-10 — Agent harness that co-evolves policy, curriculum and judge for embodied reasoning: a rubric judge diagnoses failures and builds an adaptive curriculum, and when progress plateaus a judge-improvement loop queries humans on informative failures to refine the judge. [project](https://veri-fine.github.io/)
 - ⚪ [**Skill-seam observation-space shift**](https://arxiv.org/abs/2610.10810 "Diagnosing and Recovering from Observation-Space Shift at Long-Horizon Skill Seams") · 2026-10 — Finds that chained-skill failures mostly come from scene state displaced by earlier skills (e.g., an open drawer), not robot configuration, and builds a learned detect-restore-resume system: a progress monitor detects stalls and a policy restores the scene before resuming.
+- ⚪ [**Robot-WATCHDOG**](https://arxiv.org/abs/2610.13403 "Robot-WATCHDOG : failure detection through object-centric graph representation") · 2026-10 — Self-supervised failure detection from nominal demonstrations only, modelling scenes as object-centric spatio-temporal graphs and scoring deviation with a non-parametric trajectory measure (TPC) and a graph-attention transformer that predicts future object states. _Note: CoRL 2026._
 - ⚪ [**RESETTLE**](https://arxiv.org/abs/2610.12185 "RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control") · 2026-10 — Model-agnostic recovery at the action interface of frozen policies: persistent disagreement between two independently sampled action proposals triggers retrieval of a same-task demonstration (V-JEPA features), followed by a state-servo prior plus guarded visual residual correction.
 - ⚪ [**OGAM**](https://arxiv.org/abs/2610.05878 "OGAM: Connecting Systematic Testing to Runtime Assurance through Object-Grounded Attention Monitoring for VLA Policies") · 2026-10 — Systematic out-of-benchmark testing of VLAs (OpenVLA, OpenVLA-OFT, UniVLA, pi0.5) with scene-grounded instructions and paraphrases, plus a runtime monitor that flags failures from gradient-weighted attention projected onto object masks.
 - ⚪ [**DiVeR**](https://arxiv.org/abs/2610.04933 "DiVeR: Decision-Critical Verifier Learning for VLA Test-Time Scaling") · 2026-10 — Verifier for VLA test-time scaling that estimates decision criticality from the dispersion of sampled action candidates and reweights verifier learning toward the sparse states where action choice changes outcomes.
@@ -374,9 +386,8 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**Self-compensating VLA**](https://arxiv.org/abs/2609.37334 "Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing") · 2026-09 — Deployment-time adaptation that updates a VLA online from the residual between commanded and executed motion, without rewards or labels, to pre-compensate for wear, backlash and payload; adds the RoboStress simulated execution-error benchmark.
 - 🟢 [**SAGE**](https://arxiv.org/abs/2609.34268 "SAGE: Symbolic Action-Gating and Editing for LLM Task Planners") · 2026-09 — LLM task planner with a model-free symbolic gate that blocks precondition-violating actions with typed reasons before actuation, plus a local edit that regenerates only the failed sub-goal's suffix; evaluated on a 75-task AI2-THOR benchmark and on a Jetson AGX Orin. [code](https://github.com/mtbui2010/sage_release)
 - ⚪ [**ROBORMBENCH**](https://arxiv.org/abs/2609.05401 "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models") · 2026-09 · Yonsei University et al. — Paraphrase-robustness benchmark for VLM reward models: 2,390 real-robot trajectories with progress labels and 21,673 verified instruction paraphrases; rewording alone can flip identical behavior between judged success and failure.
-- ⚪ [**ProgressCompass**](https://arxiv.org/abs/2609.36684 "ProgressCompass: Embodied Progress Reward Models Are Lost Without the Right Context") · 2026-09 — Shows that embodied progress reward models fail when progress depends on history, using a new ContextProgress-Bench (24 manipulation tasks), and proposes an agentic loop in which a general VLM supplies the missing context to a frozen progress reward model. [project](https://andyzworks.github.io/progresscompass/)
 
-<sub>[+ 42 more in the full list](categories/verification.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 43 more in the full list](categories/verification.md) · [↑ back to contents](#contents)</sub>
 
 <a id="safety"></a>
 ## Safety, Guardrails & Security
@@ -420,9 +431,10 @@ Added in the 30 days up to 2026-10-11:
 ## Simulators & Environments
 
 > Physics simulators, rendering stacks and environment platforms for building and testing harnesses.  
-> Layer: L6 · 48 entries · **[full list →](categories/sim.md)**
+> Layer: L6 · 49 entries · **[full list →](categories/sim.md)**
 
 - ⚪ [**USDCraft**](https://arxiv.org/abs/2610.11322 "USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for Simulation") · 2026-10 — A pretrained LLM writes and revises executable programs that build simulation-ready articulated assets from partial or corrupted meshes, guided by a metric textual analysis of the source geometry; no task-specific training. [project](https://xingyoujun.github.io/usdcraft)
+- ⚪ [**Splat2Act**](https://arxiv.org/abs/2610.13945 "Splat2Act: From Captured Scenes to Personalized VLA Manipulation") · 2026-10 — Automated real-to-sim-to-real pipeline that personalizes a pretrained VLA (pi0.5) to a user's building-scale space from a phone scan and object images, building a 3D Gaussian Splatting digital twin to generate adaptation data. [project](https://splat2act.github.io)
 - ⚪ [**SMART**](https://arxiv.org/abs/2610.07652 "SMART: Zero-Shot Sim-to-Real Articulated Object Manipulation via Large-Scale Synthetic Pretraining") · 2026-10 — Large-scale synthesis of articulated-object manipulation demonstrations on an articulation-aware simulation platform (SMART-Sim) with part-level semantics and agentic task generation, used to pretrain policies that transfer zero-shot to real robots.
 - ⚪ [**RoboChemGym**](https://arxiv.org/abs/2610.02708 "RoboChemGym: A Protocol-Driven Generative Simulation Framework for Long-Horizon Chemical Manipulation") · 2026-10 — Generates simulated demonstrations aligned with real chemistry protocols, with self-improving task synthesis that refines execution and scene configuration for multi-object protocols of more than 10 steps; includes a hierarchical benchmark.
 - 🟢 [**LiteReality-Agent**](https://arxiv.org/abs/2610.01863 "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction") · 2026-10 — Treats real-to-sim scene reconstruction as coding: a coding agent gathers evidence from RGB-D scans with specialised tools and edits an executable Room.py inside an observe-edit-verify harness, producing articulated, simulation-ready digital twins. [code](https://github.com/LiteReality/LiteReality-Agent) · [project](https://litereality.github.io/agent/)
@@ -431,15 +443,14 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**Lingjing**](https://arxiv.org/abs/2608.08045 "Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities") · 2026-08 · Aerospace Information Research Institute (CAS), Shanghai Jiao Tong University — City-scale testbed for heterogeneous multi-agent embodied tasks (UAVs, ground robots, vehicles) that rebuilds cities from geographic data, syncs several physics engines, offers a Gym-like API for ReAct agents with configurable communication, and logs replays for diagnosis. _Note: First-party evaluation of twelve VLMs on nine urban tasks; code release not verified._
 - 🟢 [**SIMPLE**](https://arxiv.org/abs/2606.08278 "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation") · 2026-06 — Humanoid loco-manipulation testbed coupling MuJoCo contact dynamics with Isaac Sim rendering: 60 whole-body tasks, 50 indoor scenes, 1,000+ assets, motion-planning and VR-teleop data pipelines, and benchmarks of imitation, VLA and world-action models. _Note: First-party results report strong sim-real correlation and zero-shot transfer to physical humanoids._ [code](https://github.com/physical-superintelligence-lab/SIMPLE) · [project](https://psi-lab.ai/SIMPLE)
 - 🟢 [**Kamino**](https://arxiv.org/abs/2603.16536 "Kamino: GPU-based Massively Parallel Simulation of Multi-Body Systems with Challenging Topologies") · 2026-03 · Disney Research, NVIDIA — GPU physics solver in NVIDIA Warp, integrated into Newton, that natively handles kinematic loops and batched heterogeneous robots by solving constrained multibody dynamics as a nonlinear complementarity problem; trains a biped with six nested loops in 4,096 envs. _Note: Ships inside the Newton repo (Kamino examples under newton/examples/kamino)._ [code](https://github.com/newton-physics/newton)
-- 🟢 [**SceneSmith**](https://arxiv.org/abs/2602.09153 "SceneSmith: Agentic Generation of Simulation-Ready Indoor Scenes") · 2026-02 · MIT, Toyota Research Institute — VLM designer, critic and orchestrator agents build simulation-ready indoor scenes from text in stages (layout, furniture, small objects), with text-to-3D and retrieved articulated assets plus estimated physical properties. ICML 2026 spotlight. [code](https://github.com/nepfaff/scenesmith) · [project](https://scenesmith.github.io/)
 
-<sub>[+ 38 more in the full list](categories/sim.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 39 more in the full list](categories/sim.md) · [↑ back to contents](#contents)</sub>
 
 <a id="benchmark"></a>
 ## Benchmarks & Evaluation
 
 > Benchmarks, evaluation suites and leaderboards for embodied agents, reasoning models and VLAs.  
-> Layer: L6 · 125 entries · **[full list →](categories/benchmark.md)**
+> Layer: L6 · 129 entries · **[full list →](categories/benchmark.md)**
 
 - ⚪ [**World Models' Last Exam in Physics**](https://arxiv.org/abs/2610.08791) · 2026-10 — Measurement-based benchmark of 40 controlled tasks across mechanics, optics, fluids, thermal and phase change, electromagnetism and surface tension, scoring physical consistency of video world models without reference videos.
 - ⚪ [**VLA behavioural robustness**](https://arxiv.org/abs/2610.01351 "Is Success All You Need? Investigating the Impact of Input Perturbations on VLA Behaviour in Tabletop Manipulation Tasks") · 2026-10 — Benchmark-agnostic evaluation extending LIBERO and LIBERO-Plus that measures how perturbations change successful trajectories (smoothness, efficiency, gripper behaviour), showing that equal success rates can hide divergent behaviour.
@@ -450,17 +461,18 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**OpenViTac**](https://arxiv.org/abs/2610.10384 "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework") · 2026-10 — Visuo-tactile manipulation benchmark with paired simulation and real settings across four tactile capability dimensions for evaluating VLA, world-action and VTLA policies, plus a study of tactile representations and integration strategies. [project](https://fvl-repo.github.io/OpenViTac/)
 - ⚪ [**ManiUnit**](https://arxiv.org/abs/2610.12089 "ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks") · 2026-10 — Skill-level dataset (137,899 segments, 21 skill types, 417 subtasks) and 1,260-instance benchmark built from 50 BEHAVIOR-1K activities, designed to diagnose skill selection and inherited-state deviation in long-horizon mobile manipulation.
 - ⚪ [**ManiPhysicsBench**](https://arxiv.org/abs/2610.02802 "ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation") · 2026-10 — Assesses whether VLAs preserve objects: ManiPhysicsZoo assets with literature-backed material properties feed a solver that turns recorded grasp forces into deformation and fracture checks in LIBERO and SimplerEnv, exposing a gap between task success and safe success.
-- 🟢 [**HumanoidToolBench**](https://arxiv.org/abs/2610.02089 "HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution") · 2026-10 — 18-task benchmark of humanoid tool use from tool selection to mobile execution, with the ToolBook dataset of 3.1k demonstrations from simulation and a real Unitree G1; finds large gaps between picking a suitable tool and completing the task. [code](https://github.com/SNU-PI/HumanoidToolBench) · [project](https://snu-pi.github.io/HumanoidToolBench/) · [data](https://huggingface.co/datasets/snupilab/humanoidtoolbench-teleop)
+- ⚪ [**MAGMA-Bench**](https://arxiv.org/abs/2610.13534 "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures") · 2026-10 — Architecture-agnostic benchmark for persistent task reasoning across heterogeneous robot teams, with growing horizons and controlled online perturbations (execution failures, interruptions, mission updates) over a structured skill-level interface.
 
-<sub>[+ 115 more in the full list](categories/benchmark.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 119 more in the full list](categories/benchmark.md) · [↑ back to contents](#contents)</sub>
 
 <a id="data"></a>
 ## Data, Teleoperation & Training Infrastructure
 
 > Datasets, data-collection and teleoperation systems, and training frameworks.  
-> Layer: L6 · 92 entries · **[full list →](categories/data.md)**
+> Layer: L6 · 93 entries · **[full list →](categories/data.md)**
 
 - ⚪ [**VOMMI**](https://arxiv.org/abs/2610.08220 "VOMMI: Collecting and Leveraging Portable Demonstrations for Mobile Manipulation") · 2026-10 — Portable, robot-free RGB demonstration collection for mobile manipulation: body and hand views are synchronized, trajectories refined offline with sparse geometric anchors, and local-motion tokens condition VLA post-training through a residual adapter.
+- 🟢 [**TouchScale**](https://arxiv.org/abs/2610.10288 "TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning") · 2026-10 — 500-hour dataset of contact-rich human interaction recorded with one unified wearable vision-and-touch setup across about 2K task descriptions, designed to study how visual-tactile learning scales. [code](https://github.com/phai-lab/touchscale) · [project](https://touch-scale.github.io/) · [data](https://huggingface.co/datasets/2077AIDataFoundation/TouchScale)
 - ⚪ [**SPOT**](https://arxiv.org/abs/2609.07933 "SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation") · 2026-09 · UMass Amherst / MIT — VR humanoid teleoperation that renders a stabilized robot-mounted fisheye stereo view on a virtual hemisphere, letting operators look around without moving the robot, for long-horizon loco-manipulation data collection.
 - ⚪ [**Robot Data Factory**](https://arxiv.org/abs/2609.16705 "The Robot Data Factory") · 2026-09 · MBZUAI — Proposes mission-driven robot training grounds that continuously generate, validate, benchmark and reuse robot experience in a Deploy-Measure-Learn-Repeat loop, with an agentic robot network and living benchmarks. [project](https://agentic-robotics-lab.github.io/robot-data-factory/)
 - ⚪ [**RoboDrop**](https://arxiv.org/abs/2609.10021 "RoboDrop: Curating VLA Post-Training Data via Local Gradient Compatibility") · 2026-09 — Curation method that scores each VLA post-training sample by gradient compatibility with matched validation samples during a one-epoch warm-up, to filter execution mistakes, sensor drift and misaligned timestamps.
@@ -469,9 +481,8 @@ Added in the 30 days up to 2026-10-11:
 - ⚪ [**ARSTAG**](https://arxiv.org/abs/2609.24563 "ARSTAG: An Agentic Real2Sim2Real System for Task-Specific Robot Data Generation") · 2026-09 — Hierarchy of language agents turns one RGB image and an instruction into a sim scene, feasible demos and task-consistent randomization, with a coordinator for cross-stage recovery; pi0.5 reached 74.6% real success (first-party). [project](https://boweili666.github.io/ARSTAG/)
 - ⚪ [**WorldSample**](https://arxiv.org/abs/2607.02431 "WorldSample: Closed-loop Real-robot RL with World Modelling") · 2026-07 — Augments real-robot RL with transitions from a world model post-trained on real rollouts, using Policy-Paced Learning to select and schedule synthetic samples and limit hallucination-induced errors.
 - 🟢 [**Robo-ValueRL**](https://arxiv.org/abs/2607.09866 "Robo-ValueRL: Reliable Value Estimation for Offline-to-Online Reinforcement Learning") · 2026-07 · Beijing Humanoid Robot Innovation Center; Renmin University of China — Open offline-to-online RL framework for real-robot manipulation: a history-conditioned value estimator, checked with global-progress and local-preference reliability metrics, drives quality-conditioned policy pretraining and stabilizes online improvement from real rollouts. [code](https://github.com/Open-X-Humanoid/Robo-ValueRL) · [project](https://gewu-lab.github.io/Robo-ValueRL/)
-- 🟢 [**MEVION**](https://arxiv.org/abs/2607.17970 "MEVION: Low-Cost Open-Source Data Collection System for Powerful and High-Speed Dual-Arm Manipulation") · 2026-07 · University of Tokyo — ALOHA-style open-source dual-arm data-collection system built from e-commerce parts and welded sheet metal, with four 6-DoF arms (60 Nm peak torque) for heavier and faster tasks, at about USD 14,000 (first-party). [code](https://github.com/haraduka/mevion) · [project](https://haraduka.github.io/mevion-hardware/)
 
-<sub>[+ 82 more in the full list](categories/data.md) · [↑ back to contents](#contents)</sub>
+<sub>[+ 83 more in the full list](categories/data.md) · [↑ back to contents](#contents)</sub>
 <!-- END GENERATED: list -->
 
 ## Contributing

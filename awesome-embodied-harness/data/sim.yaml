@@ -860,3 +860,18 @@
   access: closed
   tags: [data-generation, code-as-policy, sim2real]
   added: 2026-10-10
+
+- id: splat2act
+  name: Splat2Act
+  title: 'Splat2Act: From Captured Scenes to Personalized VLA Manipulation'
+  date: 2026-10
+  summary: >-
+    Automated real-to-sim-to-real pipeline that personalizes a pretrained VLA (pi0.5) to a
+    user's building-scale space from a phone scan and object images, building a 3D Gaussian
+    Splatting digital twin to generate adaptation data.
+  links:
+    paper: https://arxiv.org/abs/2610.13945
+    project: https://splat2act.github.io
+  access: closed
+  tags: [sim2real, data-generation, vla, real-world]
+  added: 2026-10-13

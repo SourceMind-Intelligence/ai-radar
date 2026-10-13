@@ -1570,3 +1570,20 @@
   access: closed
   tags: [data-collection, mobile-manipulation, vla]
   added: 2026-10-11
+
+- id: touchscale
+  name: TouchScale
+  title: 'TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning'
+  date: 2026-10
+  summary: >-
+    500-hour dataset of contact-rich human interaction recorded with one unified wearable
+    vision-and-touch setup across about 2K task descriptions, designed to study how
+    visual-tactile learning scales.
+  links:
+    paper: https://arxiv.org/abs/2610.10288
+    code: https://github.com/phai-lab/touchscale
+    project: https://touch-scale.github.io/
+    data: https://huggingface.co/datasets/2077AIDataFoundation/TouchScale
+  access: open
+  tags: [dataset, dexterous, data-collection]
+  added: 2026-10-13
