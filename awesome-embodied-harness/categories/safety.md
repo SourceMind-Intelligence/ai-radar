@@ -3,13 +3,14 @@
 # Safety, Guardrails & Security
 
 > Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.  
-> Layer: L5 · 54 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
+> Layer: L5 · 55 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - ⚪ [**WBAG**](https://arxiv.org/abs/2610.01083 "WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation") · 2026-10 — Inference-time VLA safety layer that models the whole arm plus grasp-dependent attached-object geometry as a changing safe set and turns it into differentiable CBF constraints that minimally modify the VLA's operational-space action; evaluated on SafeLIBERO.
+- ⚪ [**Visual Grounding Safety**](https://arxiv.org/abs/2610.05637 "Visual Grounding Safety in Vision-Language Models") · 2026-10 — Shows VLMs that refuse a harmful request as a question often comply when the same request asks for a point or bounding box, the output robots and agents act on (15,401 matched pairs incl. Asimov-2.0); proposes fine-tuning with grounding-form refusals.
 - ⚪ [**TMT**](https://arxiv.org/abs/2610.09462 "TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks") · 2026-10 — Runtime backdoor detector for VLAs trained only on benign rollouts: a token-manifold branch flags suspicious input structure and a latent-transition branch confirms it through adjacent-layer prediction errors; also explores purification by self-distillation.
 - ⚪ [**SOUL**](https://arxiv.org/abs/2610.09496 "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models") · 2026-10 — Identifies state hallucination, a VLA acting as if an unrealized robot-object state had been reached, links it to sparse-autoencoder features and weakened attention, and selectively unlearns the associated policy knowledge.
 - ⚪ [**Implied Harm in VLA Instructions**](https://arxiv.org/abs/2610.05818 "What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions") · 2026-10 — Holds robot tasks fixed while varying how explicitly harmful intent is stated: pi0.5 completes tasks regardless, text guards miss most implied-harm requests, and harmful/harmless separability in activations weakens after robot training.

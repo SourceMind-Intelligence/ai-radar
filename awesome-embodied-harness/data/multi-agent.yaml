@@ -838,3 +838,21 @@
   access: closed
   tags: [multi-robot, hitl, planning]
   added: 2026-10-08
+
+- id: mavln-triss
+  name: MAVLN / TRISS
+  title: >-
+    Systematic Multi-Agent Vision-and-Language Navigation: Formulation, Benchmark, and
+    Method
+  aliases: [MAVLN, TRISS]
+  date: 2026-09
+  summary: >-
+    Formalizes multi-agent VLN as constrained coordination with subtask dependencies and
+    resource locks, releases the MAVLN benchmark (11,724 episodes, 145 scenes, teams of up
+    to four), and proposes TRISS: an LLM subtask scheduler, shared topological memory and
+    conflict-aware execution.
+  links:
+    paper: https://arxiv.org/abs/2609.35965
+  access: closed
+  tags: [multi-robot, navigation, benchmark, memory]
+  added: 2026-10-14

@@ -929,3 +929,17 @@
   access: closed
   tags: [safety, vla, failure-recovery]
   added: 2026-10-09
+
+- id: visual-grounding-safety
+  name: Visual Grounding Safety
+  title: Visual Grounding Safety in Vision-Language Models
+  date: 2026-10
+  summary: >-
+    Shows VLMs that refuse a harmful request as a question often comply when the same
+    request asks for a point or bounding box, the output robots and agents act on (15,401
+    matched pairs incl. Asimov-2.0); proposes fine-tuning with grounding-form refusals.
+  links:
+    paper: https://arxiv.org/abs/2610.05637
+  access: closed
+  tags: [safety, pointing, security]
+  added: 2026-10-14

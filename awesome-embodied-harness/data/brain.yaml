@@ -854,3 +854,23 @@
   access: closed
   tags: [planning, manipulation, mobile-manipulation]
   added: 2026-09-29
+
+- id: groundingpi
+  name: GroundingPI
+  title: >-
+    GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual
+    Primitives
+  date: 2026-09
+  summary: >-
+    4B grounding foundation model that outputs points and boxes as quantized coordinates in
+    a shared vocabulary, trained with spatial pretraining, SFT and GRPO, and used as a fast
+    visual backbone for manipulation and driving policies; evaluated on 34 grounding
+    benchmarks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2609.39601
+    code: https://github.com/groundingpi/GroundingPI
+    project: https://groundingpi.github.io/
+    weights: https://huggingface.co/GroundingPI/GroundingPI
+  access: open
+  tags: [pointing, spatial-reasoning, vla]
+  added: 2026-10-14
