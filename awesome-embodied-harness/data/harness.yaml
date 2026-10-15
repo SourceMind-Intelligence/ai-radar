@@ -3117,3 +3117,79 @@
   access: closed
   tags: [agentic-loop, failure-recovery, rl]
   added: 2026-10-13
+
+- id: embodied-astra-robomme
+  name: Frontier VLM as memory policy
+  title: Can a Frontier VLM Serve as a Robot Policy for Memory-Dependent Manipulation?
+  date: 2026-10
+  summary: >-
+    Uses a frozen GPT-6 Astra directly as the robot policy on RoboMME, keeping the whole
+    episode in context and emitting every end-effector waypoint and gripper command with no
+    task-specific training; reports 92.1% on 800 test episodes (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.17350
+    code: https://github.com/jackbjed/embodied-astra-robomme
+    project: https://embodied-astra.github.io
+  access: open
+  tags: [agentic-loop, memory, manipulation, long-horizon]
+  added: 2026-10-15
+
+- id: sear
+  name: SEAR
+  title: 'SEAR: Self-Evolving Agentic Robotics'
+  date: 2026-10
+  summary: >-
+    Framework and benchmark for self-evolving agents that improve robots in three modes
+    (code-as-policy, agent-as-policy, auto-research fine-tuning a VLA), with controls that
+    separate genuine learning from more attempts and tests transfer to new tasks, a new
+    simulator and a real robot.
+  links:
+    paper: https://arxiv.org/abs/2610.18792
+  access: closed
+  tags: [agentic-loop, self-improving, code-as-policy, benchmark]
+  added: 2026-10-15
+
+- id: embodiedevo
+  name: EmbodiedEvo
+  title: 'EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence'
+  date: 2026-10
+  summary: >-
+    Treats code as both policy and workspace: a SWE-style coding agent inspects robot state,
+    revises and executes code and chooses next steps from feedback rather than following a
+    fixed plan-execute-verify workflow, and improves itself across physical tasks.
+  links:
+    paper: https://arxiv.org/abs/2610.18867
+  access: closed
+  tags: [code-as-policy, agentic-loop, self-improving]
+  added: 2026-10-15
+
+- id: chunkact
+  name: ChunkAct
+  title: 'ChunkAct: Action Chunking for Agentic Robotics'
+  date: 2026-10
+  summary: >-
+    Brings action chunking to LLM-agent robot control: once a sub-goal is chosen, a single
+    call launches a chunk of primitives prescribed by memory instead of re-reasoning over
+    full history for every primitive, cutting cost per episode.
+  links:
+    paper: https://arxiv.org/abs/2610.18874
+  access: closed
+  tags: [agentic-loop, memory, tool-use]
+  added: 2026-10-15
+
+- id: d-world
+  name: D-World
+  title: >-
+    D-World: An Explicit World-Language-Action Model with Recursive Self-Improvement under
+    Dual Control
+  date: 2026-10
+  summary: >-
+    Explicit world-language-action model on a sense-plan-act split: a perception agent
+    writes the scene as an executable digital twin in code, a planning agent searches
+    actions in simulation, and twin parameters are revised from measurements, accepted only
+    if replay matches.
+  links:
+    paper: https://arxiv.org/abs/2610.17114
+  access: closed
+  tags: [code-as-policy, world-model, self-improving, agentic-loop]
+  added: 2026-10-15

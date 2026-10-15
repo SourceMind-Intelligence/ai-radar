@@ -1250,3 +1250,18 @@
   access: closed
   tags: [vla, world-model]
   added: 2026-10-04
+
+- id: physical-rsi-levels
+  name: Physical RSI (L0-L5)
+  title: Who Improves the Robot? Toward Physical Recursive Self-Improvement
+  date: 2026-10
+  summary: >-
+    Position and study of Physical Recursive Self-Improvement with an L0-L5 framework
+    separating capability-level from meta-level updates and within-task from cross-task
+    gains, reserving L5 for independently verified recursive gain; analyses existing
+    harness-based methods.
+  links:
+    paper: https://arxiv.org/abs/2610.18842
+  access: closed
+  tags: [self-improving, agentic-loop]
+  added: 2026-10-15

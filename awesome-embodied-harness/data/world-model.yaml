@@ -1274,3 +1274,21 @@
   note: >-
     Calibration, video-model and reward code plus checkpoints released; full data to follow.
   added: 2026-10-10
+
+- id: greenwam
+  name: GreenWAM
+  title: 'GreenWAM: A World Foundation Model for Robotics'
+  date: 2026-10
+  org: Sber Robotics Center
+  summary: >-
+    Robot world foundation model trained jointly in visual, action-conditioned and
+    world-action modes over a shared anatomical action space covering 20 robot families, so
+    one model serves as both world model and policy across bodies.
+  links:
+    paper: https://arxiv.org/abs/2610.18774
+    code: https://github.com/greenvla/GreenWAM
+    project: https://greenvla.github.io/GreenWAM
+    weights: https://huggingface.co/SberRoboticsCenter/GreenWAM
+  access: open
+  tags: [world-model, cross-embodiment, vla]
+  added: 2026-10-15

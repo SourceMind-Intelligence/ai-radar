@@ -1,3 +1,67 @@
 # Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
+
+- name: WorldOracle
+  url: https://arxiv.org/abs/2610.18826
+  title: 'WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-10-15. Benchmarks action-conditioned world models against paired real-world executions on four fidelity dimensions.
+
+- name: ABot-ER
+  url: https://arxiv.org/abs/2610.18355
+  title: 'ABot-ER: Unified Embodied Reasoning through Agentic Data-Model Co-Evolution'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: brain
+  reason: Verified; over the daily cap on 2026-10-15. Unified embodied reasoning model with an agentic data-model self-evolution engine.
+
+- name: VLA-GAUGE
+  url: https://arxiv.org/abs/2610.16567
+  title: 'VLA-GAUGE: Systematically Evaluating Generalization and Robustness in Vision-Language-Action Models'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-10-15. Paired ID/OOD capability suites with combinatorial perturbation screening for VLAs.
+
+- name: LIBERO-Industry
+  url: https://arxiv.org/abs/2610.16782
+  title: 'LIBERO-Industry: Benchmarking Robotic Manipulation under Industrial Process Constraints'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-10-15. LIBERO extension with product variants, moving material flows, execution windows and tight tolerances.
+
+- name: MultINav-Bench
+  url: https://arxiv.org/abs/2610.17089
+  title: 'Interactive Navigation Beyond Reachability: Benchmark and Agentic Framework'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: benchmark
+  reason: Verified; over the daily cap on 2026-10-15. 3K-episode interactive ObjectGoal navigation benchmark requiring door/container interaction, plus an agentic framework.
+
+- name: CoSMO
+  url: https://arxiv.org/abs/2610.18321
+  title: 'CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: safety
+  reason: Verified; over the daily cap on 2026-10-15. Open-world conformal semantic mapping for category-dependent safety clearances (CoRL 2026).
+
+- name: RoboFQE
+  url: https://arxiv.org/abs/2610.18699
+  title: 'RoboFQE: Rollout-Free Evaluation of Visual Robot Policies from Offline Trajectories'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: verification
+  reason: Verified; over the daily cap on 2026-10-15. Off-policy, rollout-free evaluation of visual robot policies with fitted Q-evaluation.
+
+- name: Observe, Share, or Predict?
+  url: https://arxiv.org/abs/2610.16895
+  title: 'Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent Collaboration'
+  first_seen: 2026-10-15
+  last_checked: 2026-10-15
+  suggested_category: multi-agent
+  reason: Verified; over the daily cap on 2026-10-15. Disentangles observing, sharing and predicting partner information for LLM planners on PARTNR.

@@ -3,12 +3,13 @@
 # Surveys & Position Papers
 
 > Surveys, position papers and essays that frame embodied agents and their harnesses.  
-> Layer: meta · 84 entries · [overview](../README.md#survey) · [survey](../SURVEY.md)
+> Layer: meta · 85 entries · [overview](../README.md#survey) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**Physical RSI (L0-L5)**](https://arxiv.org/abs/2610.18842 "Who Improves the Robot? Toward Physical Recursive Self-Improvement") · 2026-10 — Position and study of Physical Recursive Self-Improvement with an L0-L5 framework separating capability-level from meta-level updates and within-task from cross-task gains, reserving L5 for independently verified recursive gain; analyses existing harness-based methods.
 - ⚪ [**World-Action Models survey**](https://arxiv.org/abs/2609.16074 "World-Action Models for Robot Learning and Control: A Survey") · 2026-09 — Robotics-oriented review of world-action models that couple future-world prediction with action generation: taxonomy over representations, architectures, training and data; applications in manipulation, navigation and driving; and evaluation protocols. [project](https://rcl-robotics.github.io/Awesome-World-Action-Models/)
 - ⚪ [**World Models for Embodied Intelligence: Plausible, Controllable, Actionable**](https://arxiv.org/abs/2609.16697 "World Models for Embodied Intelligence: From Plausible to Controllable to Actionable") · 2026-09 — Surveys embodied world models by which predictive capabilities improve behavior (plausible, controllable, actionable) across manipulation, navigation, locomotion and driving, and argues evaluation should move from visual plausibility to closed-loop impact. [project](https://3dagentworld.github.io/EmbodiedWM/)
 - ⚪ [**Toward Unified Robot Learning**](https://arxiv.org/abs/2609.03927 "Toward Unified Robot Learning: Bridging Representation, Vision-Language-Action, and World Models") · 2026-09 — Organizes robot learning along representation learning (understanding), VLAs (acting) and world models (reasoning), and argues that robustness requires integrating the three.

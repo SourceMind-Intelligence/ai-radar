@@ -957,3 +957,20 @@
   tags: [success-detection, scene-graph, manipulation]
   note: CoRL 2026.
   added: 2026-10-13
+
+- id: forkcast
+  name: ForkCast
+  title: >-
+    ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual
+    Futures
+  date: 2026-10
+  summary: >-
+    Predictive recovery around a frozen VLA: at each decision point a candidate-conditioned
+    world model imagines committing the nominal chunk, re-observing from a new viewpoint, or
+    replanning the arm, and the best counterfactual future decides whether and how to
+    intervene.
+  links:
+    paper: https://arxiv.org/abs/2610.18650
+  access: closed
+  tags: [failure-recovery, world-model, vla]
+  added: 2026-10-15

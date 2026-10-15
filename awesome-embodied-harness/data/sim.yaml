@@ -875,3 +875,19 @@
   access: closed
   tags: [sim2real, data-generation, vla, real-world]
   added: 2026-10-13
+
+- id: code2worlds-2
+  name: Code2Worlds-2
+  title: 'Code2Worlds-2: Physically Plausible Agent Harness for Embodied World Simulation'
+  date: 2026-10
+  summary: >-
+    Extends LLM-coded 4D world generation into physics-engine-loadable embodied simulation,
+    adding collision geometry, mass, friction, inertia and joint structure so generated
+    worlds resolve contact physically.
+  links:
+    paper: https://arxiv.org/abs/2610.17651
+    code: https://github.com/AIGeeksGroup/Code2Worlds-2
+    project: https://aigeeksgroup.github.io/Code2Worlds-2
+  access: open
+  tags: [data-generation, code-as-policy, agentic-loop]
+  added: 2026-10-15

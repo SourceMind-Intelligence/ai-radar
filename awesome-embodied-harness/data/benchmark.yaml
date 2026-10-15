@@ -2357,3 +2357,51 @@
   access: partial
   tags: [benchmark, safety, vla]
   added: 2026-10-13
+
+- id: scoper
+  name: SCOPER
+  title: Towards a Systematic Study of Embodied System 2 over Full Task Execution Cycles
+  aliases: [SCOPER-bench]
+  date: 2026-10
+  summary: >-
+    Suite for studying an embodied System 2 over full execution cycles: 870 tasks with
+    high-level goals, ongoing observations, a shared rule-based System 1 and controlled
+    execution failures, testing observation-grounded planning, execution checking and
+    recovery.
+  links:
+    paper: https://arxiv.org/abs/2610.17657
+  access: closed
+  tags: [benchmark, planning, failure-recovery, dual-system]
+  added: 2026-10-15
+
+- id: embodied-skill-bench
+  name: EmbodiedSkillBench
+  title: >-
+    Embodied Skill Bench: Benchmarking How Well Agents with Embodied Skills Perform on
+    Physical Tasks
+  date: 2026-10
+  summary: >-
+    Packages 250 action, perception and experience skills (from 1,052 resources) with
+    explicit embodiment assumptions, and benchmarks agents in a closed loop under native
+    control, skill-only and mixed modes, recording success, tokens and time.
+  links:
+    paper: https://arxiv.org/abs/2610.16238
+    code: https://github.com/HanZhi306/EmbodiedSkill-Bench
+  access: open
+  tags: [benchmark, skill-library, agentic-loop, tool-use]
+  added: 2026-10-15
+
+- id: ladder
+  name: LADDER
+  title: 'LADDER: A Long-Horizon Robot Manipulation Benchmark'
+  date: 2026-10
+  summary: >-
+    Long-horizon manipulation benchmark scaling from 1 to 10 subgoals in the same
+    environment across three suites (145 tasks, two embodiments), comparing text-subgoal
+    orchestration of learned policies with tool-selection orchestration (CaP-X and others).
+  links:
+    paper: https://arxiv.org/abs/2610.18053
+    project: https://ladder.insait.ai
+  access: closed
+  tags: [benchmark, long-horizon, manipulation, agentic-loop]
+  added: 2026-10-15
