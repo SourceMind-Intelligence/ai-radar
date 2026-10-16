@@ -874,3 +874,18 @@
   access: open
   tags: [pointing, spatial-reasoning, vla]
   added: 2026-10-14
+
+- id: abot-er
+  name: ABot-ER
+  title: 'ABot-ER: Unified Embodied Reasoning through Agentic Data-Model Co-Evolution'
+  date: 2026-10
+  summary: >-
+    Unified embodied reasoning model covering perception (spatial, scene, temporal
+    reasoning), planning (long-horizon action organization) and execution (point grounding,
+    affordance), trained with an agentic data-model self-evolution engine that adapts data
+    to model weaknesses.
+  links:
+    paper: https://arxiv.org/abs/2610.18355
+  access: closed
+  tags: [spatial-reasoning, planning, pointing, self-improving]
+  added: 2026-10-16

@@ -3,7 +3,7 @@
 # Safety, Guardrails & Security
 
 > Guardrails, permissions, constitutions, red-teaming and security of model-driven robots.  
-> Layer: L5 · 55 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
+> Layer: L5 · 56 entries · [overview](../README.md#safety) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -17,6 +17,7 @@
 - ⚪ [**Feasible-Future Decoding**](https://arxiv.org/abs/2610.05166 "A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies") · 2026-10 — Shows that a locally safe, likely action can still leave no policy-supported route to safe completion, derives the feasible-future mass under a frozen VLA, and approximates it with a selective finite-candidate decoder that also serves as an alarm.
 - ⚪ [**Embodied jailbreak guardrails benchmark**](https://arxiv.org/abs/2610.06122 "Benchmarking Jailbreak Guardrails for Embodied Agents") · 2026-10 — Pluggable evaluation that treats the embodied agent as a fixed backend and each guardrail as a module intervening at perception, planning or control, testing six representative guardrails against template-based and automated jailbreaks.
 - ⚪ [**Detect and Suppress**](https://arxiv.org/abs/2610.03498 "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models") · 2026-10 — Finds, with a sparse autoencoder, a VLA feature tied to adversarial patches and suppresses it at inference only when a linear probe detects an attack; no fine-tuning needed, and conditional rather than continuous intervention is key; evaluated on LIBERO-10.
+- ⚪ [**CoSMO**](https://arxiv.org/abs/2610.18321 "CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation") · 2026-10 — Builds VLM-based semantic maps with conformal prediction that adapts to an expanding, non-stationary label set, so category-dependent safety clearances keep coverage guarantees during open-world navigation. _Note: CoRL 2026._
 - ⚪ [**Verify-Adapt-Hold**](https://arxiv.org/abs/2609.30523 "Containing Behavioral Cascades from Manipulated Claims in LLM-Powered Multi-Robot Systems") · 2026-09 — Active verification for LLM-powered robot fleets after a false world-state claim is accepted: a Verify-Adapt-Hold plan sends some robots to inspect, lets a few adapt and keeps the rest on trusted plans, containing fleet-wide replanning cascades.
 - ⚪ [**Universal Adversarial Object**](https://arxiv.org/abs/2609.39178 "Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics") · 2026-09 — Physical adversarial attack: a textured sphere placed in view, optimized with a multi-level objective over planning, execution and action control, sharply degrades Pi0 and RDT in simulation and on a real robot. _Note: ICRA 2026._
 - ⚪ [**ShieldVLA**](https://arxiv.org/abs/2609.13231 "ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models") · 2026-09 — Safety-aligned VLA fine-tuning based on Hamilton-Jacobi reachability: a safety critic learned from visual observations gates policy optimization, separating reward seeking in feasible regions from recovery near unsafe states, with rubric-based VLM safety scores as supervision.

@@ -856,3 +856,19 @@
   access: closed
   tags: [multi-robot, navigation, benchmark, memory]
   added: 2026-10-14
+
+- id: observe-share-predict
+  name: Observe, Share, or Predict?
+  title: >-
+    Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent
+    Collaboration
+  date: 2026-10
+  summary: >-
+    Under strictly individual perception on PARTNR, disentangles how observing a partner's
+    state, sharing object knowledge and predicting the partner's next action affect
+    decentralized zero-shot LLM planners, without exchanging plans or intentions.
+  links:
+    paper: https://arxiv.org/abs/2610.16895
+  access: closed
+  tags: [multi-robot, planning]
+  added: 2026-10-16

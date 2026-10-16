@@ -974,3 +974,33 @@
   access: closed
   tags: [failure-recovery, world-model, vla]
   added: 2026-10-15
+
+- id: acro
+  name: ACRO
+  title: 'ACRO: Actor-Critic Rollout Orchestration'
+  date: 2026-10
+  summary: >-
+    Orchestration layer for a fixed VLA: a critic learned from rollouts estimates success
+    prospects to decide when to intervene and where to re-enter, trajectory retraction
+    returns the robot to that point, and the same VLA resumes; evaluated with GR00T N1.7 and
+    pi0.5.
+  links:
+    paper: https://arxiv.org/abs/2610.19677
+  access: closed
+  tags: [failure-recovery, reward-model, vla, real-world]
+  added: 2026-10-16
+
+- id: robofqe
+  name: RoboFQE
+  title: >-
+    RoboFQE: Rollout-Free Evaluation of Visual Robot Policies from Offline Trajectories
+  date: 2026-10
+  summary: >-
+    Estimates a visual robot policy's expected return from offline trajectories with fitted
+    Q-evaluation on a pretrained visual representation, without rollouts in the real world,
+    a simulator or a learned world model.
+  links:
+    paper: https://arxiv.org/abs/2610.18699
+  access: closed
+  tags: [success-detection, reward-model]
+  added: 2026-10-16

@@ -1265,3 +1265,18 @@
   access: closed
   tags: [self-improving, agentic-loop]
   added: 2026-10-15
+
+- id: agentic-robots-survey
+  name: Towards Agentic Robots
+  title: 'Towards Agentic Robots: Model, Data, Environment, and Harness'
+  date: 2026-10
+  summary: >-
+    Survey of agentic robots, systems where foundation-model agents orchestrate data
+    collection, model training, task planning and execution and correct their own errors,
+    organized by model, data, environment and harness, tracing the path from robot policies
+    to agentic systems.
+  links:
+    paper: https://arxiv.org/abs/2610.20442
+  access: closed
+  tags: [agentic-loop, self-improving]
+  added: 2026-10-16

@@ -2405,3 +2405,63 @@
   access: closed
   tags: [benchmark, long-horizon, manipulation, agentic-loop]
   added: 2026-10-15
+
+- id: worldoracle
+  name: WorldOracle
+  title: >-
+    WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions
+  date: 2026-10
+  summary: >-
+    Benchmarks action-conditioned world models against paired real-world executions from the
+    same observation and actions, scoring physical state correctness, interaction alignment,
+    key-area fidelity and multi-view coherence.
+  links:
+    paper: https://arxiv.org/abs/2610.18826
+  access: closed
+  tags: [benchmark, world-model, real-world]
+  added: 2026-10-16
+
+- id: vla-gauge
+  name: VLA-GAUGE
+  title: >-
+    VLA-GAUGE: Systematically Evaluating Generalization and Robustness in
+    Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Diagnostic framework for VLAs with paired in- and out-of-distribution tasks across six
+    capability suites, single-factor sensitivity and combinatorial perturbation screening,
+    linked to targeted refinement.
+  links:
+    paper: https://arxiv.org/abs/2610.16567
+  access: closed
+  tags: [benchmark, vla, manipulation]
+  added: 2026-10-16
+
+- id: libero-industry
+  name: LIBERO-Industry
+  title: >-
+    LIBERO-Industry: Benchmarking Robotic Manipulation under Industrial Process Constraints
+  date: 2026-10
+  summary: >-
+    Extends LIBERO with industrial process constraints such as product variants, moving
+    material flows, finite execution windows and tight tolerances, to evaluate generalist
+    policies for high-mix, low-volume manufacturing.
+  links:
+    paper: https://arxiv.org/abs/2610.16782
+  access: closed
+  tags: [benchmark, manipulation, vla]
+  added: 2026-10-16
+
+- id: multinav-bench
+  name: MultINav-Bench
+  title: 'Interactive Navigation Beyond Reachability: Benchmark and Agentic Framework'
+  date: 2026-10
+  summary: >-
+    3K-episode ObjectGoal benchmark in MolmoSpaces where reaching the goal can require
+    opening doors or containers, with interaction-necessity annotations, plus an agentic
+    framework for interactive navigation.
+  links:
+    paper: https://arxiv.org/abs/2610.17089
+  access: closed
+  tags: [benchmark, navigation, mobile-manipulation, agentic-loop]
+  added: 2026-10-16

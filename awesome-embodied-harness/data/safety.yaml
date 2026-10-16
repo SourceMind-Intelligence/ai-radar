@@ -943,3 +943,18 @@
   access: closed
   tags: [safety, pointing, security]
   added: 2026-10-14
+
+- id: cosmo-safe-nav
+  name: CoSMO
+  title: 'CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation'
+  date: 2026-10
+  summary: >-
+    Builds VLM-based semantic maps with conformal prediction that adapts to an expanding,
+    non-stationary label set, so category-dependent safety clearances keep coverage
+    guarantees during open-world navigation.
+  links:
+    paper: https://arxiv.org/abs/2610.18321
+  access: closed
+  tags: [safety, uncertainty, navigation, open-vocabulary]
+  note: CoRL 2026.
+  added: 2026-10-16

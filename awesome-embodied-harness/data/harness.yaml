@@ -3193,3 +3193,32 @@
   access: closed
   tags: [code-as-policy, world-model, self-improving, agentic-loop]
   added: 2026-10-15
+
+- id: adarsi
+  name: AdaRSI
+  title: 'AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents'
+  date: 2026-10
+  summary: >-
+    On-demand recursive self-improvement: a coding agent first improves skills and harness,
+    then attributes persistent failures by retrying failing sub-steps from saved states, and
+    fine-tunes the VLA executor only on sub-steps that stay unreliable, with self-collected
+    demonstrations.
+  links:
+    paper: https://arxiv.org/abs/2610.20474
+  access: closed
+  tags: [self-improving, agentic-loop, vla, long-horizon]
+  added: 2026-10-16
+
+- id: cracking-mobile-manipulation
+  name: Cracking Mobile Manipulation
+  title: 'Cracking Mobile Manipulation: From Failure Diagnosis to Agentic Robot System'
+  date: 2026-10
+  summary: >-
+    Diagnoses why a subtask VLA at 80% on atomic skills drops to 19% in long-horizon mobile
+    manipulation (planning, navigation and base positioning, local manipulation) and adds
+    failure-guided agentic interventions around the fixed VLA.
+  links:
+    paper: https://arxiv.org/abs/2610.19600
+  access: closed
+  tags: [agentic-loop, failure-recovery, mobile-manipulation, vla]
+  added: 2026-10-16
