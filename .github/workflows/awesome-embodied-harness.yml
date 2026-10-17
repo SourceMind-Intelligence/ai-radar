@@ -1,0 +1,41 @@
+name: awesome-embodied-harness
+
+on:
+  pull_request:
+    paths:
+      - "awesome-embodied-harness/**"
+      - ".github/workflows/awesome-embodied-harness.yml"
+  push:
+    branches: [main]
+    paths:
+      - "awesome-embodied-harness/**"
+      - ".github/workflows/awesome-embodied-harness.yml"
+  workflow_dispatch:
+    inputs:
+      check_links:
+        description: "Also check every link (slow, network-dependent)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: awesome-embodied-harness
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate data
+        run: python3 scripts/awesome.py validate
+      - name: README and SURVEY are regenerated
+        run: python3 scripts/awesome.py build --check
+      - name: Check links
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.check_links }}
+        run: python3 scripts/awesome.py check-links

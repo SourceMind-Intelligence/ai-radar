@@ -1,0 +1,3 @@
+# Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
+# Two kinds: announcements that cannot be verified yet, and verified items that were over
+# a run's daily cap. The next run re-triages over-cap items first.
