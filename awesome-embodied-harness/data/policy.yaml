@@ -1693,3 +1693,50 @@
   tags: [vla, failure-recovery, rl]
   note: NeurIPS 2026.
   added: 2026-10-13
+
+- id: when-to-ask-dual-system
+  name: Value of Intervention (dual-system scheduling)
+  title: >-
+    When to Ask for Help: A Decision-Theoretic Account and Measurement Standard for
+    Slow-Module Scheduling in Dual-System Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Formalizes when a dual-system VLA should invoke its slow module as a calibrated decision
+    on the Value of Intervention, unifying fixed-ratio, fixed-budget and history-gated
+    schedules and proposing a measurement standard separating schedule quality from module
+    quality.
+  links:
+    paper: https://arxiv.org/abs/2610.21160
+  access: closed
+  tags: [dual-system, vla, uncertainty]
+  added: 2026-10-17
+
+- id: reki
+  name: REKI
+  title: 'REKI: Registering Knowledge in VLAs'
+  date: 2026-10
+  summary: >-
+    2.4B VLA (VLM plus flow-matching action expert) pretrained only on public robot,
+    egocentric human and vision-language data, with a few persistent register tokens in the
+    action expert that give cheap memory of the recent past.
+  links:
+    paper: https://arxiv.org/abs/2610.22178
+  access: closed
+  tags: [vla, memory, manipulation]
+  added: 2026-10-17
+
+- id: vlrla
+  name: VLRLA
+  title: >-
+    VLRLA: Deployment-Time Adaptation of Vision-Language-Action Models through In-Context
+    Reinforcement Learning
+  date: 2026-10
+  summary: >-
+    Adds an in-context reinforcement learning module to existing VLAs that learns from
+    histories of observations, actions, rewards and terminations, so the policy improves
+    during deployment with frozen parameters.
+  links:
+    paper: https://arxiv.org/abs/2610.19517
+  access: closed
+  tags: [vla, rl, self-improving]
+  added: 2026-10-17

@@ -3,12 +3,13 @@
 # Simulators & Environments
 
 > Physics simulators, rendering stacks and environment platforms for building and testing harnesses.  
-> Layer: L6 · 50 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
+> Layer: L6 · 51 entries · [overview](../README.md#sim) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟡 [**WEDGE**](https://arxiv.org/abs/2610.19420 "From Failures to Learnable Worlds: Policy-Conditioned Environment Generation for Navigation Agents") · 2026-10 — Weakness-guided environment generation: an LLM proposes executable weakness features by contrasting a pretrained navigation agent's successful and failed rollouts, validates them, and generates training environments targeting the strongest ones each round. _Note: Repository releases the weakness-discovery loop and episode corpora._ [code](https://github.com/zhangyuejoslin/WEDGE) · [project](https://zhangyuejoslin.github.io/WEDGE/)
 - ⚪ [**USDCraft**](https://arxiv.org/abs/2610.11322 "USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for Simulation") · 2026-10 — A pretrained LLM writes and revises executable programs that build simulation-ready articulated assets from partial or corrupted meshes, guided by a metric textual analysis of the source geometry; no task-specific training. [project](https://xingyoujun.github.io/usdcraft)
 - ⚪ [**Splat2Act**](https://arxiv.org/abs/2610.13945 "Splat2Act: From Captured Scenes to Personalized VLA Manipulation") · 2026-10 — Automated real-to-sim-to-real pipeline that personalizes a pretrained VLA (pi0.5) to a user's building-scale space from a phone scan and object images, building a 3D Gaussian Splatting digital twin to generate adaptation data. [project](https://splat2act.github.io)
 - ⚪ [**SMART**](https://arxiv.org/abs/2610.07652 "SMART: Zero-Shot Sim-to-Real Articulated Object Manipulation via Large-Scale Synthetic Pretraining") · 2026-10 — Large-scale synthesis of articulated-object manipulation demonstrations on an articulation-aware simulation platform (SMART-Sim) with part-level semantics and agentic task generation, used to pretrain policies that transfer zero-shot to real robots.

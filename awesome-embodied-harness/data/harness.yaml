@@ -3222,3 +3222,37 @@
   access: closed
   tags: [agentic-loop, failure-recovery, mobile-manipulation, vla]
   added: 2026-10-16
+
+- id: carryon
+  name: CarryOn
+  title: 'CarryOn: A Dual-Loop Harness for Personalized and Reliable Robot Assistance'
+  date: 2026-10
+  summary: >-
+    Dual-loop harness around a frozen VLA: a planning loop keeps persistent user-level and
+    scene-level context to ground subtask decomposition in preferences, and an execution
+    loop provides explainable safety checks and recovery from physical failures.
+  links:
+    paper: https://arxiv.org/abs/2610.21453
+    code: https://github.com/JIA-Lab-research/CarryOn
+    project: https://vincent2311.github.io/Projects/CarryOn/
+  access: closed
+  tags: [agentic-loop, memory, safety, failure-recovery, vla]
+  note: Repository README says code is coming soon (checked 2026-10-17).
+  added: 2026-10-17
+
+- id: pam-proactive
+  name: PAM
+  title: An Agentic Framework for Proactive Robots with Procedural Assistance Memory
+  aliases: [Procedural Assistance Memory]
+  date: 2026-10
+  summary: >-
+    Proactive assistance framework where a VLM task predictor reads a Procedural Assistance
+    Memory, a finite-state structure learned from recurring user routines, to decide when to
+    help and with what, and a VLA executes the predicted task.
+  links:
+    paper: https://arxiv.org/abs/2610.21211
+    project: https://davian-robotics.github.io/PAM/
+  access: closed
+  tags: [agentic-loop, memory, hitl, vla]
+  note: CoRL 2026.
+  added: 2026-10-17

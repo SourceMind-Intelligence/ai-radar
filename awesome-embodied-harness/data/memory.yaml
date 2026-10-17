@@ -1054,3 +1054,19 @@
   tags: [scene-graph, planning, long-horizon, agentic-loop]
   note: NeurIPS 2026.
   added: 2026-10-08
+
+- id: robota-embed
+  name: Robota-Embed
+  title: 'Robota-Embed: Unified VLA Embeddings for Robot In-Context Learning and Evolution'
+  aliases: [Robota-Embed-Bench]
+  date: 2026-10
+  summary: >-
+    VLA embedding model jointly encoding task, execution stage and future continuation,
+    trained with predictive retrieval on 1.7M anchors, so retrieved historical continuations
+    can serve as context for in-context robot learning; adds Robota-Embed-Bench.
+  links:
+    paper: https://arxiv.org/abs/2610.19495
+    project: https://robota-ai.github.io/robota-embed/
+  access: closed
+  tags: [memory, vla, dataset]
+  added: 2026-10-17

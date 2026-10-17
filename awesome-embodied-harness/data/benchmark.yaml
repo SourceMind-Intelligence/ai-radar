@@ -2465,3 +2465,52 @@
   access: closed
   tags: [benchmark, navigation, mobile-manipulation, agentic-loop]
   added: 2026-10-16
+
+- id: libero-perm
+  name: LIBERO-PeRM
+  title: 'LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation'
+  date: 2026-10
+  summary: >-
+    Benchmark separating task completion from preference satisfaction in household
+    manipulation, studying zero-shot preference following, learning from demonstrations,
+    sample efficiency, generalization and preference composition.
+  links:
+    paper: https://arxiv.org/abs/2610.22372
+    project: https://libero-perm.github.io/
+  access: closed
+  tags: [benchmark, manipulation, hitl]
+  note: NeurIPS 2026.
+  added: 2026-10-17
+
+- id: simpler-in
+  name: SIMPLER-IN
+  title: >-
+    Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in
+    Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Shows how-level instructions (how to do a task, not what) do not help current VLAs and
+    can lower success, tests segment-level enriched instructions in training, and introduces
+    the SIMPLER-IN benchmark whose success requires following such conditions.
+  links:
+    paper: https://arxiv.org/abs/2610.21251
+  access: closed
+  tags: [benchmark, vla, manipulation]
+  added: 2026-10-17
+
+- id: hm3d-m3
+  name: HM3D-M3
+  title: 'HM3D-M3: A Benchmark for Multi-Agent, Multi-Modal, Multi-Object Goal Navigation'
+  date: 2026-10
+  summary: >-
+    Teams of agents start apart in a photorealistic scene and search for an unordered set of
+    object goals given as categories, instance images or descriptions; 1,000 validation
+    episodes over 3,926 goals.
+  links:
+    paper: https://arxiv.org/abs/2610.20121
+    code: https://github.com/NJU-R-L-Group-Embodied-Lab/hm3d-m3-code
+    project: https://robo-lavira.github.io/hm3d-m3/
+    data: https://huggingface.co/datasets/skyhyding/HM3D-M3
+  access: open
+  tags: [benchmark, multi-robot, navigation, open-vocabulary]
+  added: 2026-10-17

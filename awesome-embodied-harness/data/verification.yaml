@@ -1004,3 +1004,33 @@
   access: closed
   tags: [success-detection, reward-model]
   added: 2026-10-16
+
+- id: verivla
+  name: VeriVLA
+  title: >-
+    VeriVLA: Adaptive Test-Time Verification for Flow-Based VLAs with Latent World Models
+  date: 2026-10
+  summary: >-
+    Training-free trigger uses within-chunk temporal variation and cross-sample variance of
+    two flow-VLA samples to detect critical states, where a JEPA latent world model ranks
+    candidate action chunks by predicted outcomes before execution.
+  links:
+    paper: https://arxiv.org/abs/2610.21985
+  access: closed
+  tags: [success-detection, world-model, vla, uncertainty]
+  added: 2026-10-17
+
+- id: pav-chunk-verifier
+  name: PAV
+  title: Policy-Aligned Predictive Verification for Adaptive VLA Action-Chunk Execution
+  aliases: [Policy-Aligned Predictive Verifier]
+  date: 2026-10
+  summary: >-
+    Decides how much of a VLA action chunk to execute by predicting the consequences of
+    candidate prefixes in the VLA's own task-conditioned representation space and checking
+    compatibility with successful continuation.
+  links:
+    paper: https://arxiv.org/abs/2610.21434
+  access: closed
+  tags: [success-detection, vla, manipulation]
+  added: 2026-10-17

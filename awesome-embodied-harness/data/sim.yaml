@@ -891,3 +891,22 @@
   access: open
   tags: [data-generation, code-as-policy, agentic-loop]
   added: 2026-10-15
+
+- id: wedge
+  name: WEDGE
+  title: >-
+    From Failures to Learnable Worlds: Policy-Conditioned Environment Generation for
+    Navigation Agents
+  date: 2026-10
+  summary: >-
+    Weakness-guided environment generation: an LLM proposes executable weakness features by
+    contrasting a pretrained navigation agent's successful and failed rollouts, validates
+    them, and generates training environments targeting the strongest ones each round.
+  links:
+    paper: https://arxiv.org/abs/2610.19420
+    code: https://github.com/zhangyuejoslin/WEDGE
+    project: https://zhangyuejoslin.github.io/WEDGE/
+  access: partial
+  tags: [data-generation, self-improving, navigation]
+  note: Repository releases the weakness-discovery loop and episode corpora.
+  added: 2026-10-17

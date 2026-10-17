@@ -3,12 +3,13 @@
 # World State, Memory & Spatial Context
 
 > Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.  
-> Layer: L3 · 59 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
+> Layer: L3 · 60 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**Robota-Embed**](https://arxiv.org/abs/2610.19495 "Robota-Embed: Unified VLA Embeddings for Robot In-Context Learning and Evolution") · 2026-10 — VLA embedding model jointly encoding task, execution stage and future continuation, trained with predictive retrieval on 1.7M anchors, so retrieved historical continuations can serve as context for in-context robot learning; adds Robota-Embed-Bench. [project](https://robota-ai.github.io/robota-embed/)
 - ⚪ [**OntoPlan**](https://arxiv.org/abs/2610.07649 "OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable Robot Task Planning") · 2026-10 — Ontology-grounded scene representation aligning objects, spaces, relations and states in one symbolic vocabulary, plus an agentic planner that retrieves only task-relevant scene facts, formalizes goals and constraints, and emits executable plans for large environments. _Note: NeurIPS 2026._
 - ⚪ [**EvoMem-VLA**](https://arxiv.org/abs/2610.05418 "EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation") · 2026-10 — VLA memory that encodes observed changes between historical states as directional delta tokens tied to their state evidence, so the policy can track interaction outcomes and task progress rather than isolated keyframes.
 - ⚪ [**Divide-and-Remember**](https://arxiv.org/abs/2610.00982 "Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies") · 2026-10 — Learned VLA memory that keeps history information relevant to the action but absent from the current observation, using a recursive top-K selector shared across blocks so a fixed-size module covers unbounded history; evaluated on RoboMME.
