@@ -827,13 +827,19 @@
     Explicit Action-Space Grounding
   aliases: [Explicit Action-Space Grounding]
   date: 2026-10
+  org: Zhejiang University; Shanghai AI Lab; Tsinghua
   summary: >-
     Turns a pretrained VLM into a continuous-action manipulation policy through explicit
     action-space grounding instead of learned action tokens or experts, keeping it
     end-to-end trainable while exposing its spatial and reasoning abilities.
   links:
     paper: https://arxiv.org/abs/2610.12832
+    code: https://github.com/General-Robo/EASG
     project: https://general-robo.github.io/EASG/
-  access: closed
+  access: partial
   tags: [vla, manipulation, spatial-reasoning]
+  note: >-
+    Repository releases the zero-shot simulation pipeline; robot-trajectory fine-tuning is
+    still listed as TODO (checked 2026-10-18).
   added: 2026-10-13
+  updated: 2026-10-18
