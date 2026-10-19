@@ -440,19 +440,24 @@
 - id: embodiedskills
   name: EmbodiedSkills
   title: >-
-    EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA
-    Agents
+    EmbodiedSkills: World Action Model-augmented Cascaded Skills for Vision-Language-Action
+    Agent
   date: 2026-09
   summary: >-
-    Agent loop that treats each skill decision as an execution proposal: a fixed
-    executable-skill interface checks prerequisites, runs a bounded VLA (pi0.5) and verifies
-    the outcome, logging planning, execution, verification and recovery events as training
-    trajectories.
+    Skill-based agent framework around frozen VLAs: at each decision point, world action
+    models predict the latent consequences of a shared set of policy proposals, and a
+    lightweight comparator combines outcome scores and model disagreement to choose which
+    action to execute.
   links:
     paper: https://arxiv.org/abs/2609.01281
   access: closed
-  tags: [agentic-loop, vla, success-detection, failure-recovery]
+  tags: [agentic-loop, vla, world-model, skill-library]
+  note: >-
+    The current arXiv version substantially revises the earlier one, previously titled "A
+    Unified Framework for Orchestrating, Training, and Deploying VLA Agents"; the summary
+    reflects the current version.
   added: 2026-09-29
+  updated: 2026-10-19
 
 - id: aquacap
   name: AquaCap
@@ -3151,7 +3156,7 @@
 
 - id: embodiedevo
   name: EmbodiedEvo
-  title: 'EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence'
+  title: 'EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence'
   date: 2026-10
   summary: >-
     Treats code as both policy and workspace: a SWE-style coding agent inspects robot state,
@@ -3162,6 +3167,7 @@
   access: closed
   tags: [code-as-policy, agentic-loop, self-improving]
   added: 2026-10-15
+  updated: 2026-10-19
 
 - id: chunkact
   name: ChunkAct

@@ -560,11 +560,14 @@
     simulation with up to 200 drones and on hardware with up to 20. RA-L 2025.
   links:
     paper: https://arxiv.org/abs/2412.08428
-    code: https://github.com/utiasDSL/swarmGPT
     project: https://utiasdsl.github.io/swarm_GPT/
-  access: open
+  access: closed
   tags: [multi-robot, safety, planning]
+  note: >-
+    The previously linked repository (utiasDSL/swarmGPT) no longer resolves and the project
+    page links no code (checked 2026-10-19).
   added: 2026-09-29
+  updated: 2026-10-19
 
 - id: dart-llm
   name: DART-LLM

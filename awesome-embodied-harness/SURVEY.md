@@ -282,11 +282,11 @@ Counts by category and year of first release, generated from `data/`.
 | [World Models](categories/world-model.md) | L6 | 72 | 0 | 1 | 3 | 7 | 26 | 35 | 41 |
 | [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 58 | 0 | 0 | 4 | 7 | 14 | 33 | 25 |
 | [Safety, Guardrails & Security](categories/safety.md) | L5 | 56 | 0 | 0 | 1 | 9 | 15 | 31 | 21 |
-| [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 49 | 0 | 0 | 5 | 8 | 13 | 23 | 22 |
+| [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 49 | 0 | 0 | 5 | 8 | 13 | 23 | 21 |
 | [Simulators & Environments](categories/sim.md) | L6 | 51 | 12 | 1 | 6 | 5 | 10 | 17 | 40 |
 | [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 139 | 5 | 1 | 4 | 19 | 31 | 79 | 79 |
 | [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 93 | 5 | 0 | 9 | 18 | 35 | 26 | 65 |
-| **Total** |  | **1066** | 23 | 20 | 96 | 153 | 274 | 500 | 542 |
+| **Total** |  | **1066** | 23 | 20 | 96 | 153 | 274 | 500 | 541 |
 <!-- END GENERATED: stats -->
 
 ---

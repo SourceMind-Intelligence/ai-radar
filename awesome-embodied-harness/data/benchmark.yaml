@@ -306,10 +306,11 @@
   added: 2026-09-29
 
 - id: roboprocessbench
-  name: RoboProcessBench
+  name: Robo2Process
   title: >-
-    RoboProcessBench: Benchmarking Process-Aware Understanding in Vision-Language Robotic
-    Manipulation
+    Robo2Process: Benchmarking and Learning Process-Aware Understanding in Vision-Language
+    Robotic Manipulation
+  aliases: [RoboProcessBench]
   date: 2026-06
   org: Shanghai AI Laboratory et al.
   summary: >-
@@ -325,6 +326,7 @@
     Evaluates the process monitoring behind robot "exit codes"; could also sit under
     verification. No code/data links found.
   added: 2026-09-29
+  updated: 2026-10-19
 
 - id: inspect-robots
   name: Inspect Robots
@@ -2326,10 +2328,11 @@
   added: 2026-10-13
 
 - id: autobio-plus
-  name: AutoBio+
+  name: DexBioLab
   title: >-
-    AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in
+    DexBioLab: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in
     Realistic Laboratories
+  aliases: [AutoBio+]
   date: 2026-10
   summary: >-
     Simulation benchmark of 14 biology-lab tasks across 4 embodiments (tool use, precision
@@ -2340,6 +2343,7 @@
   access: closed
   tags: [benchmark, dexterous, manipulation]
   added: 2026-10-13
+  updated: 2026-10-19
 
 - id: jittervla
   name: JitterVLA
