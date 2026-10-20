@@ -2518,3 +2518,37 @@
   access: open
   tags: [benchmark, multi-robot, navigation, open-vocabulary]
   added: 2026-10-17
+
+- id: sensenova-astra-embodied
+  name: Has GPT-6-Astra Achieved Embodied Intelligence?
+  title: Has GPT-6-Astra Achieved Embodied Intelligence?
+  date: 2026-10
+  org: SenseNova
+  summary: >-
+    SenseNova report evaluating GPT-6-Astra as a standalone embodied policy across 12
+    benchmarks (tabletop, humanoid, mobile, dexterous) under a unified protocol with
+    in-context demonstrations and longer step budgets, and discussing what this implies for
+    specialized models.
+  links:
+    paper: https://arxiv.org/abs/2610.22471
+    project: https://sensenova.ai/has-gpt-6-astra-achieved-embodied-intelligence
+  access: closed
+  tags: [benchmark, manipulation, navigation, humanoid]
+  added: 2026-10-20
+
+- id: imep-memory-eval
+  name: IMEP
+  title: >-
+    Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action
+    Systems
+  aliases: [Interventional Memory Evaluation Protocol]
+  date: 2026-10
+  summary: >-
+    Interventional Memory Evaluation Protocol for VLA systems: compares target-fact
+    substitutions with fact-preserving replacements at the retrieval interface to test
+    whether memory, rather than extra computation, actually drives outcomes.
+  links:
+    paper: https://arxiv.org/abs/2610.23372
+  access: closed
+  tags: [benchmark, memory, vla]
+  added: 2026-10-20

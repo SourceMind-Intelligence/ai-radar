@@ -1280,3 +1280,33 @@
   access: closed
   tags: [agentic-loop, self-improving]
   added: 2026-10-16
+
+- id: vla-memory-survey
+  name: VLA memory survey
+  title: >-
+    From Sliding Windows to Self-evolving Lifelong Memory: A Dual-perspective Survey of
+    Memory Paradigms for Long-Horizon Robotics VLA Models
+  date: 2026-10
+  summary: >-
+    Survey of VLA memory mechanisms organized by memory scope and persistence into five
+    paradigms plus an emerging self-evolving lifelong-memory frontier, comparing
+    representative systems on characteristics, complexity and cost.
+  links:
+    paper: https://arxiv.org/abs/2610.23319
+  access: closed
+  tags: [memory, vla, long-horizon]
+  added: 2026-10-20
+
+- id: model-to-policy
+  name: Model-to-Policy formulation
+  title: Unifying Embodied Foundation Models via a Model-to-Policy Formulation
+  date: 2026-10
+  summary: >-
+    Architecture-agnostic probabilistic formulation that describes VLAs and world-action
+    models as conditional output distributions plus action-realization kernels inducing
+    robot policies, and connects pretraining and post-training within it.
+  links:
+    paper: https://arxiv.org/abs/2610.23053
+  access: closed
+  tags: [vla, world-model]
+  added: 2026-10-20

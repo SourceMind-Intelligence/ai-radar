@@ -875,3 +875,51 @@
   access: closed
   tags: [multi-robot, planning]
   added: 2026-10-16
+
+- id: instagent
+  name: InstAgent
+  title: >-
+    InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot
+    Collaboration
+  date: 2026-10
+  summary: >-
+    Agent operating system for heterogeneous robot teams that organizes behaviours as
+    agentic behavior trees modelling capability assignment and inter-robot dependencies,
+    keeps spatio-temporal context memory for handoffs, and turns execution-time corrections
+    into reusable experience.
+  links:
+    paper: https://arxiv.org/abs/2610.23098
+  access: closed
+  tags: [multi-robot, self-improving, memory, agentic-loop]
+  added: 2026-10-20
+
+- id: coevolve
+  name: CoEvolve
+  title: >-
+    CoEvolve: Self-Evolving Code Policies from Skills to Strategies for Humanoid Robots
+  date: 2026-10
+  summary: >-
+    Represents multi-humanoid team coordination as executable code over fixed motor skills
+    and evolves it with verifier-guided revision when physical execution deviates from the
+    intended behaviour.
+  links:
+    paper: https://arxiv.org/abs/2610.23288
+  access: closed
+  tags: [multi-robot, code-as-policy, self-improving, humanoid]
+  added: 2026-10-20
+
+- id: vla-fabric
+  name: VLA-Fabric
+  title: 'VLA-Fabric: Learning Interaction for Composable Multi-Arm VLA Agents'
+  date: 2026-10
+  summary: >-
+    Runs one complete VLA per arm, preserving local perception and action ownership, and
+    coordinates them through learned interaction during action generation rather than a
+    centralized joint policy.
+  links:
+    paper: https://arxiv.org/abs/2610.23018
+    code: https://github.com/NEBULIS-Lab/VLA-Fabric
+    project: https://nebulis-lab.com/VLA-Fabric/
+  access: open
+  tags: [multi-robot, vla, manipulation]
+  added: 2026-10-20

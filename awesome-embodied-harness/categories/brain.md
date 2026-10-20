@@ -3,12 +3,13 @@
 # Embodied Reasoning Models & Planners
 
 > "System 2" models trained or adapted for embodied reasoning, spatial grounding, pointing and task planning.  
-> Layer: L4 · 49 entries · [overview](../README.md#brain) · [survey](../SURVEY.md)
+> Layer: L4 · 50 entries · [overview](../README.md#brain) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟢 [**SimpleVLN**](https://arxiv.org/abs/2610.23203 "SimpleVLN: Towards Simple and Frontier Vision-Language Navigation") · 2026-10 — Architecture-preserving recipe for turning a native multimodal LLM into a VLN agent through formulation (single-turn inputs with fixed-budget global-local memory), data construction and optimization choices rather than task-specific modules. [code](https://github.com/simplevln/SimpleVLN) · [project](https://simplevln.github.io/)
 - ⚪ [**ABot-ER**](https://arxiv.org/abs/2610.18355 "ABot-ER: Unified Embodied Reasoning through Agentic Data-Model Co-Evolution") · 2026-10 — Unified embodied reasoning model covering perception (spatial, scene, temporal reasoning), planning (long-horizon action organization) and execution (point grounding, affordance), trained with an agentic data-model self-evolution engine that adapts data to model weaknesses.
 - 🟢 [**X-Planner**](https://arxiv.org/abs/2609.25187 "X-Planner: Event-Structured Task Planning for Embodied Intelligence") · 2026-09 · X Square Robot — Planning front-end for VLA systems: a shared VLM backbone emits event-structured plans through a discrete interface of interpretable event states and a latent interface that relays continuous chain-of-thought states; trained on ego, UMI and teleop data with failure and takeover annotations. [code](https://github.com/X-Square-Robot/Xplanner) · [project](https://x-square-robot.github.io/Xplanner/) · [weights](https://huggingface.co/x-square-robot/X-Planner-9B-0916)
 - 🟡 [**PhysBrain 1.5**](https://arxiv.org/abs/2609.14973 "PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models") · 2026-09 · DeepCybo — 8B unified physical foundation model that encodes language answers, end-effector motion and dense visual targets as discrete tokens, pretrained on human interaction videos and fine-tuned on human, robot and simulated data; evaluated on 28 embodied-understanding benchmarks. _Note: Code link is the evaluation toolkit; training code not found. First-party: open-source SOTA average of 72.5 across the 28 benchmarks. Also predicts future RGB/depth/robot-mask frames, so it overlaps policy and world-model._ [code](https://github.com/DeepCybo-PhysAI/PhysBrainEvalKit) · [project](https://deepcybo-physai.github.io/PhysBrain-1.5/) · [weights](https://huggingface.co/DeepCybo/PhysBrain1.5-8B)

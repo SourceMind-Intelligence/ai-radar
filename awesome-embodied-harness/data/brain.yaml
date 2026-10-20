@@ -889,3 +889,19 @@
   access: closed
   tags: [spatial-reasoning, planning, pointing, self-improving]
   added: 2026-10-16
+
+- id: simplevln
+  name: SimpleVLN
+  title: 'SimpleVLN: Towards Simple and Frontier Vision-Language Navigation'
+  date: 2026-10
+  summary: >-
+    Architecture-preserving recipe for turning a native multimodal LLM into a VLN agent
+    through formulation (single-turn inputs with fixed-budget global-local memory), data
+    construction and optimization choices rather than task-specific modules.
+  links:
+    paper: https://arxiv.org/abs/2610.23203
+    code: https://github.com/simplevln/SimpleVLN
+    project: https://simplevln.github.io/
+  access: open
+  tags: [navigation, memory, planning]
+  added: 2026-10-20

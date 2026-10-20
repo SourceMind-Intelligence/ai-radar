@@ -1740,3 +1740,20 @@
   access: closed
   tags: [vla, rl, self-improving]
   added: 2026-10-17
+
+- id: nestedvla
+  name: NestedVLA
+  title: >-
+    NestedVLA: Learning to Consolidate and Generate Skills for Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Consolidates independently learned skills post hoc by generating task-adaptive
+    action-expert parameters with a nested hypernetwork that composes with a frozen VLA
+    backbone, avoiding multi-task interference and merging conflicts.
+  links:
+    paper: https://arxiv.org/abs/2610.23271
+    code: https://github.com/WanyuGroup/NeurIPS2026-NestedVLA
+  access: open
+  tags: [vla, skill-library]
+  note: NeurIPS 2026.
+  added: 2026-10-20

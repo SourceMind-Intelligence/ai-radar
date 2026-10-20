@@ -3,7 +3,7 @@
 # VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 95 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
+> Layer: L1 · 96 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -16,6 +16,7 @@
 - ⚪ [**REKI**](https://arxiv.org/abs/2610.22178 "REKI: Registering Knowledge in VLAs") · 2026-10 — 2.4B VLA (VLM plus flow-matching action expert) pretrained only on public robot, egocentric human and vision-language data, with a few persistent register tokens in the action expert that give cheap memory of the recent past.
 - ⚪ [**RACE**](https://arxiv.org/abs/2610.05719 "When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models") · 2026-10 — Finds that errors in long VLA action chunks concentrate at subskill transitions, and predicts transition timing from an auxiliary one-step denoising pass to condition action generation, enabling longer chunks with fewer pauses.
 - ⚪ [**OGPO**](https://arxiv.org/abs/2610.12914 "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models") · 2026-10 — Post-trains VLAs to recover toward task progress rather than replay demonstrated paths, by relabelling offline trajectories with semantic key states and optimizing a goal-conditioned objective. _Note: NeurIPS 2026._
+- 🟢 [**NestedVLA**](https://arxiv.org/abs/2610.23271 "NestedVLA: Learning to Consolidate and Generate Skills for Vision-Language-Action Models") · 2026-10 — Consolidates independently learned skills post hoc by generating task-adaptive action-expert parameters with a nested hypernetwork that composes with a frozen VLA backbone, avoiding multi-task interference and merging conflicts. _Note: NeurIPS 2026._ [code](https://github.com/WanyuGroup/NeurIPS2026-NestedVLA)
 - ⚪ [**NegaAlign**](https://arxiv.org/abs/2610.11952 "Tell Robot What Not to Do: A Negation Understanding Perspective") · 2026-10 — Plug-and-play negation transformation layers in a frozen VLA's vision-language backbone, trained with teacher-guided alignment, so the policy completes goals while respecting explicit exclusions; introduces the NegaBench simulation benchmark.
 - 🟢 [**Attacca**](https://arxiv.org/abs/2610.07785 "Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents") · 2026-10 — Trains visual goal-conditioned policies on full search-to-interact trajectories with goal images decoupled from the execution scene and a target-mask grounding head, so chained tasks can start from wherever the previous task left the agent. [code](https://github.com/attacca-project/attacca) · [project](https://attacca-project.github.io) · [weights](https://huggingface.co/willsuh/attacca)
 - ⚪ [**THAW-VLA**](https://arxiv.org/abs/2609.24682 "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies") · 2026-09 — Adds one feature-alignment term to VLA training so the policy matches cached features from a frozen world model; no teacher at training time or deployment, so the deployed policy keeps the baseline's size and latency.
