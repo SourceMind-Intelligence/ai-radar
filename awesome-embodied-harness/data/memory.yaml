@@ -1070,3 +1070,18 @@
   access: closed
   tags: [memory, vla, dataset]
   added: 2026-10-17
+
+- id: betamem
+  name: BetaMem
+  title: 'BetaMem: Learning to Remember a Changing World for Embodied Agents'
+  date: 2026-10
+  summary: >-
+    Traceable long-term memory for embodied agents across six linked layers (working,
+    spatial, entity, episodic, experiential, procedural) with a write contract learned by
+    SFT and RL that rewards complete, accurate memory operations verified against the
+    original observations.
+  links:
+    paper: https://arxiv.org/abs/2610.26554
+  access: closed
+  tags: [memory, long-horizon, rl]
+  added: 2026-10-21

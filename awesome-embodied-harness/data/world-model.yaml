@@ -1292,3 +1292,53 @@
   access: open
   tags: [world-model, cross-embodiment, vla]
   added: 2026-10-15
+
+- id: stateful-harness-swm
+  name: Stateful Harness (State World Models)
+  title: 'State World Models: Execute the Rules, Generate the Pixels'
+  aliases: [State World Models]
+  date: 2026-10
+  summary: >-
+    Separates world evolution from rendering: a stateful harness maintains an evolving world
+    state under specified rules, renders each event with a frozen video model, and uses the
+    generated clip to update state, so interactions follow persistent rules even when state
+    is off-screen.
+  links:
+    paper: https://arxiv.org/abs/2610.26811
+  access: closed
+  tags: [world-model, video, agentic-loop]
+  added: 2026-10-21
+
+- id: ropedia-w0
+  name: Ropedia W0
+  title: >-
+    Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human
+    Experience
+  aliases: [Xp-Data]
+  date: 2026-10
+  summary: >-
+    Egocentric loco-manipulation world foundation model across humans and robots, trained on
+    Xp-Data (10k hours of human and 3k hours of robot egocentric data) with a unified
+    kinematic representation of camera poses and projected skeletons.
+  links:
+    paper: https://arxiv.org/abs/2610.26855
+    code: https://github.com/Ropedia/ropedia-w0
+    project: https://ropedia.github.io/ropedia-w0/
+  access: open
+  tags: [world-model, cross-embodiment, humanoid, dataset]
+  added: 2026-10-21
+
+- id: vq-wm
+  name: VQ-WM
+  title: >-
+    Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation
+  date: 2026-10
+  summary: >-
+    Latent feedback motion planning that searches for shortest paths over vector-quantized
+    latent states with a discrete transition model, then reaches each latent subgoal with
+    continuous visual feedback control, to curb compounding errors over long horizons.
+  links:
+    paper: https://arxiv.org/abs/2610.25600
+  access: closed
+  tags: [world-model, planning, long-horizon, manipulation]
+  added: 2026-10-21

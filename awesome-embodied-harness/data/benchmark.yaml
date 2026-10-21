@@ -2552,3 +2552,67 @@
   access: closed
   tags: [benchmark, memory, vla]
   added: 2026-10-20
+
+- id: physrsi-eval
+  name: PhysRSI-eval
+  title: >-
+    Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy
+  date: 2026-10
+  summary: >-
+    Measures physical recursive self-improvement of VLM agents on 18 manipulation tasks
+    under a fixed interaction budget with five axes (first-attempt performance, efficiency,
+    success, budget, improvement from failure), and proposes a 'physical barrel' hypothesis
+    on what limits improvement.
+  links:
+    paper: https://arxiv.org/abs/2610.26848
+  access: closed
+  tags: [benchmark, self-improving, agentic-loop, manipulation]
+  added: 2026-10-21
+
+- id: handson-bench
+  name: HandsOn
+  title: >-
+    HandsOn: A Large-Scale Simulation Benchmark for Generalizable Dexterous Manipulation
+  date: 2026-10
+  summary: >-
+    Composable cross-embodiment dexterous manipulation platform with five arms, six hands
+    and about 200 rigid, articulated and deformable assets, pairing 18,000 human
+    demonstrations with 66 verified tasks split into demonstration-based and transfer
+    suites.
+  links:
+    paper: https://arxiv.org/abs/2610.26765
+  access: closed
+  tags: [benchmark, dexterous, cross-embodiment, dataset]
+  added: 2026-10-21
+
+- id: foragersim
+  name: ForagerSim
+  title: >-
+    ForagerSim: Evaluating Embodied Map-Based Reasoning in Large-Scale Dynamic Worlds
+  date: 2026-10
+  summary: >-
+    Benchmark of large-scale dynamic worlds that require agents to build and use map-like
+    representations, rather than hand-engineered metric mapping, for map-based navigation
+    and reasoning.
+  links:
+    paper: https://arxiv.org/abs/2610.26395
+    code: https://github.com/MrTomzor/foragersim
+  access: open
+  tags: [benchmark, memory, navigation]
+  added: 2026-10-21
+
+- id: pvbench
+  name: PVBench
+  title: >-
+    PVBench: Quantifying Physical Plausibility in Video Generation with Object-Level
+    Physical Measurements
+  date: 2026-10
+  summary: >-
+    Benchmark measuring physical plausibility of generated videos across 46 dimensions in
+    seven domains (geometry, kinematics, dynamics, conservation and more) with object-level
+    physical measurements instead of VLM judgments.
+  links:
+    paper: https://arxiv.org/abs/2610.26711
+  access: closed
+  tags: [benchmark, world-model, video]
+  added: 2026-10-21

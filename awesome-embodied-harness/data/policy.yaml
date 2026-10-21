@@ -1757,3 +1757,37 @@
   tags: [vla, skill-library]
   note: NeurIPS 2026.
   added: 2026-10-20
+
+- id: vlda
+  name: VLDA
+  title: >-
+    Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition
+    Interfaces for Robotic Manipulation
+  aliases: [Vision-Language-Delta-Action]
+  date: 2026-10
+  summary: >-
+    Reformulates future prediction in VLAs as compact, actionable transition deltas instead
+    of full future states, using them as the interface between semantic understanding and
+    action generation.
+  links:
+    paper: https://arxiv.org/abs/2610.25874
+    code: https://github.com/baidu-baige/LoongForge/tree/master/cookbook/loongforge-vlda
+  access: partial
+  tags: [vla, world-model, manipulation]
+  note: Code provided as a cookbook in the LoongForge framework.
+  added: 2026-10-21
+
+- id: scalenav
+  name: ScaleNav
+  title: >-
+    ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation
+  date: 2026-10
+  summary: >-
+    World-action framework that learns goal-directed visual dynamics from internet
+    egocentric videos and uses them to support robot action generation for
+    language-conditioned local navigation.
+  links:
+    paper: https://arxiv.org/abs/2610.25690
+  access: closed
+  tags: [navigation, world-model, video]
+  added: 2026-10-21

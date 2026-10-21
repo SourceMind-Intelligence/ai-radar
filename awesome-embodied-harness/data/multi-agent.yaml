@@ -923,3 +923,21 @@
   access: open
   tags: [multi-robot, vla, manipulation]
   added: 2026-10-20
+
+- id: coopuq
+  name: CoopUQ
+  title: >-
+    CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative
+    Forecasting
+  date: 2026-10
+  summary: >-
+    Multi-robot social navigation that shares uncertainty-aware cooperative occupancy
+    forecasts among robots and uses them for robust RL decision making under occlusion and
+    out-of-distribution scenarios.
+  links:
+    paper: https://arxiv.org/abs/2610.26852
+    project: https://coopuq.github.io/
+  access: closed
+  tags: [multi-robot, navigation, uncertainty, safety]
+  note: CoRL 2026.
+  added: 2026-10-21

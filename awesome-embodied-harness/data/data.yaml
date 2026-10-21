@@ -1587,3 +1587,20 @@
   access: open
   tags: [dataset, dexterous, data-collection]
   added: 2026-10-13
+
+- id: embodiedworld-200k
+  name: EmbodiedWorld-200K
+  title: >-
+    EmbodiedWorld-200K: Toward Embodied World Agents via Embodied-Planning Dataset and
+    Interactive World Models
+  date: 2026-10
+  summary: >-
+    Large open-world embodied navigation-planning dataset for training agents that
+    understand diverse 3D environments, paired with interactive world models for closed-loop
+    evaluation.
+  links:
+    paper: https://arxiv.org/abs/2610.25959
+  access: closed
+  tags: [dataset, navigation, planning, world-model]
+  note: NeurIPS 2026.
+  added: 2026-10-21
