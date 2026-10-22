@@ -3,7 +3,7 @@
 # World State, Memory & Spatial Context
 
 > Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.  
-> Layer: L3 · 61 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
+> Layer: L3 · 63 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -11,7 +11,9 @@
 
 - ⚪ [**Robota-Embed**](https://arxiv.org/abs/2610.19495 "Robota-Embed: Unified VLA Embeddings for Robot In-Context Learning and Evolution") · 2026-10 — VLA embedding model jointly encoding task, execution stage and future continuation, trained with predictive retrieval on 1.7M anchors, so retrieved historical continuations can serve as context for in-context robot learning; adds Robota-Embed-Bench. [project](https://robota-ai.github.io/robota-embed/)
 - ⚪ [**OntoPlan**](https://arxiv.org/abs/2610.07649 "OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable Robot Task Planning") · 2026-10 — Ontology-grounded scene representation aligning objects, spaces, relations and states in one symbolic vocabulary, plus an agentic planner that retrieves only task-relevant scene facts, formalizes goals and constraints, and emits executable plans for large environments. _Note: NeurIPS 2026._
+- ⚪ [**Industrial ReMEmbR**](https://arxiv.org/abs/2610.28624 "Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets") · 2026-10 — Extends NVIDIA ReMEmbR to warehouse fleets: robots encode clips on-device into retrieval embeddings and cached vision tokens, people are masked for privacy, and a Nemotron agent queries memories by content, position and time, decoding descriptions only on demand.
 - ⚪ [**EvoMem-VLA**](https://arxiv.org/abs/2610.05418 "EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation") · 2026-10 — VLA memory that encodes observed changes between historical states as directional delta tokens tied to their state evidence, so the policy can track interaction outcomes and task progress rather than isolated keyframes.
+- ⚪ [**EventSync**](https://arxiv.org/abs/2610.27917 "EventSync: Event-Driven Memory Updates for History-Dependent Manipulation") · 2026-10 — VLM-plus-VLA hierarchy where a lightweight event monitor confirms subgoal completion from vision and end-effector trajectories before the task memory is updated and the planner is re-invoked; reports 64.5% on RoboMME (first-party).
 - ⚪ [**Divide-and-Remember**](https://arxiv.org/abs/2610.00982 "Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies") · 2026-10 — Learned VLA memory that keeps history information relevant to the action but absent from the current observation, using a recursive top-K selector shared across blocks so a fixed-size module covers unbounded history; evaluated on RoboMME.
 - ⚪ [**BetaMem**](https://arxiv.org/abs/2610.26554 "BetaMem: Learning to Remember a Changing World for Embodied Agents") · 2026-10 — Traceable long-term memory for embodied agents across six linked layers (working, spatial, entity, episodic, experiential, procedural) with a write contract learned by SFT and RL that rewards complete, accurate memory operations verified against the original observations.
 - ⚪ [**Workspace Models**](https://arxiv.org/abs/2609.20820 "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision") · 2026-09 · MIT, CMU — Moves VLM calls to training time: a VLM labels task-salient current and past information, which is distilled into a lightweight latent 'workspace token' that policies use at deployment to solve memory-intensive tasks without in-the-loop VLM reasoning. _Note: CoRL 2026._

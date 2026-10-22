@@ -3293,3 +3293,51 @@
   access: closed
   tags: [agentic-loop, world-model, dual-system, long-horizon]
   added: 2026-10-20
+
+- id: agenticroborl
+  name: AgenticRoboRL
+  title: 'AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics'
+  date: 2026-10
+  summary: >-
+    Post-trains the planner of an agentic robot system with SFT plus multi-turn RL, using
+    harness-specific adapters for VLA-skill and control-code harnesses; reports a 9B planner
+    rising from 18.1% to 71.0% on LIBERO-PRO without external memory (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.28589
+  access: closed
+  tags: [agentic-loop, rl, self-improving, manipulation]
+  note: Framework and planner checkpoints announced, not yet released.
+  added: 2026-10-22
+
+- id: tactile-eta
+  name: Tactile-ETA
+  title: >-
+    Embodied Task Agents Can Perform Fine Manipulation through Tactile In-Context Learning
+  aliases: [Embodied Task Agents with Tactile ICL]
+  date: 2026-10
+  summary: >-
+    Adds tactile experience to an embodied task agent through in-context demonstrations that
+    pair each robot movement with camera views and selected tactile frames; the agent acts
+    through general robot tools without parameter updates.
+  links:
+    paper: https://arxiv.org/abs/2610.27613
+    code: https://github.com/No-518/Tactile-ETA
+    project: https://no-518.github.io/tactile-eta/
+  access: open
+  tags: [agentic-loop, tool-use, manipulation, real-world]
+  added: 2026-10-22
+
+- id: fit-mac
+  name: FIT-MAC
+  title: >-
+    FIT-MAC: A Closed-Loop Multi-Agent Framework for Robust Vision-Language-Action Models
+  date: 2026-10
+  summary: >-
+    Inference-time control layer around a VLA: planner, grounder, verifier and correction
+    agents separate target-binding errors from local execution failures and route bounded
+    recoveries, leaving the VLA as the default action generator.
+  links:
+    paper: https://arxiv.org/abs/2610.28109
+  access: closed
+  tags: [vla, failure-recovery, success-detection, manipulation]
+  added: 2026-10-22

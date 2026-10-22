@@ -1,3 +1,67 @@
 # Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
+
+- name: HATCH
+  url: https://arxiv.org/abs/2610.27485
+  title: 'HATCH: Hardware-Attested Task Chains for Verifiable Manipulation'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-22. Physically replicable, sensor-scored robot "escape room" with chained tasks and attested self-runs; open spec and build guide (github.com/shizacharania/hatch-benchmark, README verified). IROS 2026 workshop.'
+
+- name: PACT-VLA
+  url: https://arxiv.org/abs/2610.28019
+  title: 'PACT-VLA: Speculative Action-Chunk Verification with Pre-Commit Observations'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: verification
+  reason: 'Verified; over the daily cap on 2026-10-22. Training-free selection among candidate action chunks using a later pre-commit observation and the frozen VLA''s own flow residual.'
+
+- name: GPT-as-Tactile-Policy
+  url: https://arxiv.org/abs/2610.28457
+  title: 'GPT-6-Astra Understands Touch and Outperform Vision--Tactile--Language--Action Models'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: brain
+  reason: 'Verified; over the daily cap on 2026-10-22. GPT-6 Astra with demonstration-derived task guidance and tactile references as a contact-rich policy on UniVTAC; project page gpt-as-tactile-policy.github.io verified.'
+
+- name: RoboJudge
+  url: https://arxiv.org/abs/2610.27782
+  title: 'RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-22. Benchmark and 12K-video training set for MLLM judges of physical adherence and instruction alignment in embodied video generation; project page spherelab.ai/RoboJudge verified.'
+
+- name: Physical AI monograph
+  url: https://arxiv.org/abs/2610.27045
+  title: 'Physical AI: Concepts, Techniques, and Challenges'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: survey
+  reason: 'Verified; over the daily cap on 2026-10-22. 388-page monograph defining physical AI and surveying perception, world models, embodied foundation models, control and multi-agent coordination.'
+
+- name: SceneRig
+  url: https://arxiv.org/abs/2610.28585
+  title: 'SceneRig: An Agentic System for Simulation-Ready 3D Scene Reconstruction from Single Images'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: sim
+  reason: 'Verified; over the daily cap on 2026-10-22. Agent with edit-and-validate loops in a physics simulator turns one image into a stable sim-ready scene (CoRL 2026 Agentic Robotics Workshop); project page verified.'
+
+- name: ACE-Brain-0.6
+  url: https://arxiv.org/abs/2610.27040
+  title: 'ACE-Brain-0.6: Scaling Spatial Grounding for Physical Foundation Models'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: brain
+  reason: 'Verified; over the daily cap on 2026-10-22. Qwen3.5-9B fine-tuned on ~1.5M verifiable grounding samples from robot recordings; would update the ACE-Brain line (ace-brain-0-5).'
+
+- name: lambda_0 (HumanVerse)
+  url: https://arxiv.org/abs/2610.18950
+  title: 'λ_0: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation'
+  first_seen: 2026-10-22
+  last_checked: 2026-10-22
+  suggested_category: policy
+  reason: 'Verified; over the daily cap on 2026-10-22. 500-hour HumanVerse egocentric human loco-manipulation dataset and humanoid foundation model; project lambdahumanoid.github.io and repo LambdaHumanoid/openlambda README verified.'

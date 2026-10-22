@@ -2616,3 +2616,68 @@
   access: closed
   tags: [benchmark, world-model, video]
   added: 2026-10-21
+
+- id: robocoliseum-agent2act
+  name: RoboColiseum (Agent2Act)
+  title: >-
+    Frontier LLMs Enter the World of Robotics: A Cross-Model Evaluation on RoboColiseum
+  aliases: [Agent2Act]
+  date: 2026-10
+  summary: >-
+    Compares GPT-6 Astra, GPT-6.1 Sol, Claude Opus 5.5 and Gemini 4 Argon through one
+    control harness (Agent2Act) on instruction following, spatial reasoning, manipulation
+    and robustness tracks, and reports that harness design changes task success.
+  links:
+    paper: https://arxiv.org/abs/2610.27865
+  access: closed
+  tags: [benchmark, agentic-loop, manipulation, spatial-reasoning]
+  added: 2026-10-22
+
+- id: embodied-playground
+  name: Embodied Playground
+  title: >-
+    Embodied Playground: A Long-Horizon Agentic Robotics Benchmark for Physical, Strategic,
+    and Spatial Reasoning
+  date: 2026-10
+  summary: >-
+    410 task environments (manipulation, sequential puzzles, multi-stage household tasks)
+    for foundation-model agents, with a shared protocol for tool access, resource budgets,
+    repeated trials and independent checks of goal completion, rule compliance and physical
+    validity.
+  links:
+    paper: https://arxiv.org/abs/2610.27039
+    code: https://github.com/Winniechen2002/Embodied-Playground
+    project: https://winniechen2002.github.io/Agent-bench-website/
+  access: open
+  tags: [benchmark, long-horizon, agentic-loop, planning]
+  added: 2026-10-22
+
+- id: jarvis-assembly
+  name: JARVIS
+  title: 'JARVIS: From Visual Manuals to Autonomous Robotic Assembly'
+  aliases: [JARVIS-agentic]
+  date: 2026-10
+  summary: >-
+    Benchmark of 236,679 LEGO assembly tasks driven by visual manuals alone, with a 50-task
+    interactive suite and structure-aware scoring; its JARVIS-agentic baseline composes
+    robot primitives into programs and verifies them with execution feedback.
+  links:
+    paper: https://arxiv.org/abs/2610.27618
+  access: closed
+  tags: [benchmark, long-horizon, code-as-policy, manipulation]
+  added: 2026-10-22
+
+- id: gpt6-direct-robot-control
+  name: GPT-6 as a Beginning (LIBERO-GeoMotion)
+  title: 'Large Multimodal Models for Direct Robot Control: GPT-6 as a Beginning'
+  aliases: [LIBERO-GeoMotion]
+  date: 2026-10
+  summary: >-
+    Evaluates GPT-6 Astra in a lightweight agent loop on depth use, in-context learning,
+    tactile feedback and five manipulation benchmarks, and adds LIBERO-GeoMotion,
+    geometry-constrained tasks exposing gaps in precision and consequence-aware planning.
+  links:
+    paper: https://arxiv.org/abs/2610.28259
+  access: closed
+  tags: [benchmark, agentic-loop, manipulation]
+  added: 2026-10-22

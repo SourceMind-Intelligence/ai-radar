@@ -905,3 +905,20 @@
   access: open
   tags: [navigation, memory, planning]
   added: 2026-10-20
+
+- id: err-vlm
+  name: ERR-VLM (Replan for Error Recovery)
+  title: >-
+    Replan for Error Recovery: Training Embodied VLMs through Verifiable Interaction with
+    Action-Grouped Turn-GSPO
+  aliases: [ERR-Bench, AGT-GSPO]
+  date: 2026-10
+  summary: >-
+    Builds ERR-Env and ERR-Bench, which give feedback on task progress and execution errors
+    from nominal, intermediate and error states, and trains a 2B embodied VLM with
+    turn-level online RL to replan after failures.
+  links:
+    paper: https://arxiv.org/abs/2610.27003
+  access: closed
+  tags: [failure-recovery, rl, planning, benchmark]
+  added: 2026-10-22

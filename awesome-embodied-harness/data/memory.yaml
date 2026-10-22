@@ -1085,3 +1085,31 @@
   access: closed
   tags: [memory, long-horizon, rl]
   added: 2026-10-21
+
+- id: industrial-remembr
+  name: Industrial ReMEmbR
+  title: 'Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets'
+  date: 2026-10
+  summary: >-
+    Extends NVIDIA ReMEmbR to warehouse fleets: robots encode clips on-device into retrieval
+    embeddings and cached vision tokens, people are masked for privacy, and a Nemotron agent
+    queries memories by content, position and time, decoding descriptions only on demand.
+  links:
+    paper: https://arxiv.org/abs/2610.28624
+  access: closed
+  tags: [memory, multi-robot, on-device, video]
+  added: 2026-10-22
+
+- id: eventsync
+  name: EventSync
+  title: 'EventSync: Event-Driven Memory Updates for History-Dependent Manipulation'
+  date: 2026-10
+  summary: >-
+    VLM-plus-VLA hierarchy where a lightweight event monitor confirms subgoal completion
+    from vision and end-effector trajectories before the task memory is updated and the
+    planner is re-invoked; reports 64.5% on RoboMME (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.27917
+  access: closed
+  tags: [memory, dual-system, success-detection, manipulation]
+  added: 2026-10-22
