@@ -1113,3 +1113,20 @@
   access: closed
   tags: [memory, dual-system, success-detection, manipulation]
   added: 2026-10-22
+
+- id: pal-plan-first
+  name: PAL (Plan First, Act Later)
+  title: >-
+    Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control
+  date: 2026-10
+  summary: >-
+    Hierarchical memory in which a VLM turns streaming observations into a short-term visual
+    buffer, semantic-event memory and an executable subtask list ahead of time, then hands
+    the current subtask to a VLA, moving reasoning out of execution time.
+  links:
+    paper: https://arxiv.org/abs/2610.29329
+    project: https://qinghangliu.github.io/pal-webpage/
+  access: closed
+  tags: [memory, dual-system, long-horizon, manipulation]
+  note: The repository linked from the project page did not resolve on 2026-10-23.
+  added: 2026-10-23

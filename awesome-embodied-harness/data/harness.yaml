@@ -3341,3 +3341,19 @@
   access: closed
   tags: [vla, failure-recovery, success-detection, manipulation]
   added: 2026-10-22
+
+- id: sera
+  name: SERA
+  title: >-
+    From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Self-Evolving Robotic Agent: a VLM planner runs inside an editable harness that keeps
+    task context from observations and execution feedback over a fixed VLA executor, and
+    environment rollouts propose and evaluate revisions to the harness itself.
+  links:
+    paper: https://arxiv.org/abs/2610.29560
+  access: closed
+  tags: [agentic-loop, self-improving, memory, dual-system, long-horizon]
+  added: 2026-10-23

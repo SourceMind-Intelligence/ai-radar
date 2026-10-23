@@ -1034,3 +1034,33 @@
   access: closed
   tags: [success-detection, vla, manipulation]
   added: 2026-10-17
+
+- id: posthoc-vla-uncertainty
+  name: Post-hoc VLA epistemic uncertainty
+  title: Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
+  date: 2026-10
+  summary: >-
+    Kernel-variance heads fitted on a single VLA's embeddings estimate epistemic uncertainty
+    without gradient updates; on SmolVLA/LIBERO-10 they match two-policy ensembles for
+    predicting success, choosing demonstrations and deferring to a stronger supervisor.
+  links:
+    paper: https://arxiv.org/abs/2610.29730
+    code: https://github.com/post-hoc-vla-uncertainty/post-hoc-vla-uncertainty
+  access: open
+  tags: [uncertainty, vla, hitl, success-detection]
+  added: 2026-10-23
+
+- id: pact-vla
+  name: PACT-VLA
+  title: 'PACT-VLA: Speculative Action-Chunk Verification with Pre-Commit Observations'
+  date: 2026-10
+  summary: >-
+    Training-free asynchronous VLA inference that uses inference delay as decision time:
+    candidate chunks from the start observation are scored against a later pre-commit
+    observation by the frozen policy's own flow residual (FlowRes).
+  links:
+    paper: https://arxiv.org/abs/2610.28019
+  access: closed
+  tags: [vla, success-detection, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-23

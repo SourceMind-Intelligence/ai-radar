@@ -3,12 +3,13 @@
 # Open-Source Frameworks & Runtimes
 
 > Robot-agent frameworks, runtimes and SDKs you can install and run today.  
-> Layer: L0-L4 · 26 entries · [overview](../README.md#framework) · [survey](../SURVEY.md)
+> Layer: L0-L4 · 27 entries · [overview](../README.md#framework) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟢 [**TARSphere**](https://arxiv.org/abs/2610.30043 "TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments") · 2026-10 — Full stack for long-horizon embodied agents: simulator infrastructure with embodied NPCs and an event-driven FSM for task state, a harness letting a frozen MLLM act through multi-level skills with hierarchical memory, and a 360-episode benchmark. _Note: Real-robot support is still listed as TODO in the README._ [code](https://github.com/xuyicheng-zju/TARSphere) · [project](https://xuyicheng-zju.github.io/TARSphere/)
 - 🟢 [**quackd**](https://github.com/rokbenko/quackd) · 2026-08 — CLI that registers heterogeneous robots through capability manifests and lets an LLM (hosted or local) choose one declared skill at a time in a camera-feedback loop, under a contract on allowed skills, step budgets and human approval; supports multi-robot 'flocks'. _Note: Very early single-developer project; README reports only one real robot (SO-101 arm) tested, other bodies simulated or mocked._
 - ⚪ [**ABot-AgentOS**](https://arxiv.org/abs/2607.10350 "ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory") · 2026-07 — Robotic agent operating system above low-level controllers providing scene-conditioned planning, context-isolated skill execution, multi-stage verification, a persistent multimodal graph memory and edge-cloud collaboration; introduces EmbodiedWorldBench. _Note: arXiv metadata lists a GitHub repo and project page under amap-cvlab; neither could be verified from this sandbox._
 - 🟢 [**HoloAgent-0**](https://arxiv.org/abs/2606.23565 "HoloAgent-0: A Unified Embodied Agent Framework with 3D Spatial Memory") · 2026-06 · Horizon Robotics — Embodied agent framework whose AgentOS turns instructions into executable skill graphs, schedules robot resources, monitors execution and triggers clarification or replanning, coordinating heterogeneous robot models around a 3D spatial memory. [code](https://github.com/HorizonRobotics/HoloAgent) · [project](https://horizonrobotics.github.io/robot_lab/holoagent)

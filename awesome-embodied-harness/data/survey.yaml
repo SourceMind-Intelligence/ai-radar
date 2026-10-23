@@ -1310,3 +1310,39 @@
   access: closed
   tags: [vla, world-model]
   added: 2026-10-20
+
+- id: mmea-papav
+  name: Multimodal Embodied Agents (PAPAV)
+  title: >-
+    Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use
+    to Robot-Use
+  aliases: [PAPAV, MMEA survey]
+  date: 2026-10
+  summary: >-
+    Survey framing computer-use and robot-use agents by five functions (perceive,
+    anticipate, plan, act, verify) and asking what changes in the physical world; finds that
+    most of 64 benchmarks evaluate acting, with few assessing anticipation or verification.
+  links:
+    paper: https://arxiv.org/abs/2610.30108
+    code: https://github.com/showlab/Awesome-Multimodal-Embodied-Agent
+    project: https://showlab.github.io/Awesome-Multimodal-Embodied-Agent/
+  access: open
+  tags: [awesome-list, agentic-loop, benchmark]
+  added: 2026-10-23
+
+- id: physical-rsi
+  name: Toward Recursive Self-Improvement in Physical AI
+  title: Toward Recursive Self-Improvement in Physical AI
+  aliases: [Physical2RSI]
+  date: 2026-10
+  summary: >-
+    93-page position survey placing recursive self-improvement in robot learning: traces
+    paths from improving robot capabilities to improving the processes that produce them,
+    and states when physical gains can carry forward safely and affordably.
+  links:
+    paper: https://arxiv.org/abs/2610.29677
+    code: https://github.com/Physical2RSI/Awesome-Physical2RSI
+    project: https://physical2rsi.github.io/
+  access: open
+  tags: [self-improving, awesome-list, safety]
+  added: 2026-10-23

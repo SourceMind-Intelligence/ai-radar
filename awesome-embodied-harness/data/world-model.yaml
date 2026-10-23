@@ -1342,3 +1342,21 @@
   access: closed
   tags: [world-model, planning, long-horizon, manipulation]
   added: 2026-10-21
+
+- id: agentic-wam
+  name: AW-0 (Agentic World Action Models)
+  title: Agentic World Action Models
+  aliases: [AW-0]
+  date: 2026-10
+  summary: >-
+    Mixture-of-transformers world action model that jointly generates code, future video and
+    robot actions: a code expert writes parameterized skill routines that structure
+    prediction and are kept as reusable programs for agentic execution.
+  links:
+    paper: https://arxiv.org/abs/2610.30136
+    code: https://github.com/ZhuoyangLiu2005/agentic-wam
+    project: https://agentic-wam.github.io/
+    weights: https://huggingface.co/miniFranka/agentic-wam-pretrain-yamego3k-soup-e1
+  access: open
+  tags: [world-model, code-as-policy, skill-library, manipulation]
+  added: 2026-10-23

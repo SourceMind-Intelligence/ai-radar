@@ -922,3 +922,35 @@
   access: closed
   tags: [failure-recovery, rl, planning, benchmark]
   added: 2026-10-22
+
+- id: gpt-as-tactile-policy
+  name: GPT-as-Tactile-Policy
+  title: >-
+    GPT-6-Astra Understands Touch and Outperform Vision--Tactile--Language--Action Models
+  date: 2026-10
+  summary: >-
+    Summarizes expert demonstrations into task guidance and tactile references so GPT-6
+    Astra can assess contact and correct actions from tactile feedback without
+    robot-specific training; reports 93.8% mean success on five UniVTAC tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.28457
+    project: https://gpt-as-tactile-policy.github.io/
+  access: closed
+  tags: [agentic-loop, dexterous, manipulation]
+  note: Project page says code is coming soon. Promoted from the queue.
+  added: 2026-10-23
+
+- id: ace-brain-0-6
+  name: ACE-Brain-0.6
+  title: 'ACE-Brain-0.6: Scaling Spatial Grounding for Physical Foundation Models'
+  date: 2026-10
+  summary: >-
+    Successor to ACE-Brain-0.5 focused on spatial grounding: Qwen3.5-9B fine-tuned on about
+    1.5M verifiable grounding samples built from robot recordings and other visual data;
+    reports a higher average than GPT-6 Astra on seven grounding benchmarks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.27040
+  access: closed
+  tags: [spatial-reasoning, pointing, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-23

@@ -2681,3 +2681,37 @@
   access: closed
   tags: [benchmark, agentic-loop, manipulation]
   added: 2026-10-22
+
+- id: llm-libero
+  name: LLM-LIBERO
+  title: >-
+    From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot
+    Manipulation Tasks
+  date: 2026-10
+  summary: >-
+    Closed-loop tool-call framework in which frontier models set end-effector poses and
+    gripper commands on LIBERO-10; six models at three reasoning-effort levels over 1,800
+    episodes, with GPT-6 Astra highest at 44% (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.30051
+    code: https://github.com/IRVLUTD/LLM_LIBERO
+    project: https://irvlutd.github.io/LLM-LIBERO/
+  access: open
+  tags: [benchmark, agentic-loop, tool-use, manipulation]
+  added: 2026-10-23
+
+- id: hatch
+  name: HATCH
+  title: 'HATCH: Hardware-Attested Task Chains for Verifiable Manipulation'
+  date: 2026-10
+  summary: >-
+    A physically replicable robot "escape room": chained tasks across five skill categories
+    where the sensor confirming one task unlocks the next, scored by instrumentation,
+    randomized by a run-day seed and submitted as attested self-runs.
+  links:
+    paper: https://arxiv.org/abs/2610.27485
+    code: https://github.com/shizacharania/hatch-benchmark
+  access: open
+  tags: [benchmark, real-world, leaderboard, long-horizon]
+  note: IROS 2026 Workshop on Open Robotics Software. Promoted from the queue.
+  added: 2026-10-23

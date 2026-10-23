@@ -424,3 +424,22 @@
     Middleware layer rather than an agent loop; used as the execution backend by PhyAgentOS.
     dora 1.0 released 2026-09.
   added: 2026-09-29
+
+- id: tarsphere
+  name: TARSphere
+  title: >-
+    TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in
+    Evolving Physical and Social Environments
+  date: 2026-10
+  summary: >-
+    Full stack for long-horizon embodied agents: simulator infrastructure with embodied NPCs
+    and an event-driven FSM for task state, a harness letting a frozen MLLM act through
+    multi-level skills with hierarchical memory, and a 360-episode benchmark.
+  links:
+    paper: https://arxiv.org/abs/2610.30043
+    code: https://github.com/xuyicheng-zju/TARSphere
+    project: https://xuyicheng-zju.github.io/TARSphere/
+  access: open
+  tags: [agentic-loop, skill-library, memory, benchmark, long-horizon]
+  note: Real-robot support is still listed as TODO in the README.
+  added: 2026-10-23
