@@ -1,0 +1,148 @@
+# Watch list for the daily radar (see PLAYBOOK.md).
+#
+# `scan` (python3 scripts/awesome.py scan) runs the arXiv queries and the
+# Hugging Face daily-papers feed automatically. Everything else here is
+# checked by the agent with web search / fetch.
+
+# Add a short Chinese digest (中文速览) to each radar log. The parent repo
+# (ai-radar) publishes Chinese daily AI briefings.
+zh_digest: true
+
+# Soft cap on new entries per run; rank and keep the strongest.
+max_additions_per_run: 12
+
+arxiv:
+  max_results_per_query: 100
+  # arXiv API search syntax: https://info.arxiv.org/help/api/user-manual.html
+  queries:
+    - 'abs:"harness" AND (cat:cs.RO OR abs:"embodied" OR abs:"robot")'
+    - 'cat:cs.RO AND (abs:"LLM agent" OR abs:"agentic" OR abs:"tool calling" OR abs:"tool use" OR abs:"function calling")'
+    - 'cat:cs.RO AND (abs:"vision-language-action" OR abs:"VLA")'
+    - 'cat:cs.RO AND (abs:"scene graph" OR abs:"spatial memory" OR abs:"episodic memory") AND (abs:"language model" OR abs:"LLM" OR abs:"VLM")'
+    - 'cat:cs.RO AND (abs:"failure detection" OR abs:"failure recovery" OR abs:"success detection" OR abs:"self-reflection" OR abs:"failure reasoning")'
+    - 'cat:cs.RO AND (abs:"jailbreak" OR abs:"guardrail" OR abs:"safety") AND (abs:"LLM" OR abs:"VLA" OR abs:"language model" OR abs:"foundation model")'
+    - 'cat:cs.RO AND abs:"world model"'
+    - 'cat:cs.RO AND abs:"benchmark" AND (abs:"embodied" OR abs:"VLA" OR abs:"long-horizon")'
+    - 'cat:cs.RO AND (abs:"multi-robot" OR abs:"heterogeneous robots" OR abs:"robot fleet") AND (abs:"LLM" OR abs:"language model" OR abs:"VLM")'
+    - 'cat:cs.RO AND (abs:"code as policies" OR abs:"code-as-policy" OR abs:"code generation" OR abs:"skill library")'
+    - 'cat:cs.RO AND (abs:"survey" OR abs:"review") AND (abs:"foundation model" OR abs:"embodied" OR abs:"VLA")'
+    - '(cat:cs.AI OR cat:cs.CV OR cat:cs.CL OR cat:cs.LG) AND (abs:"embodied agent" OR abs:"embodied agents" OR abs:"embodied reasoning")'
+    - '(cat:cs.AI OR cat:cs.CV OR cat:cs.CL OR cat:cs.LG) AND abs:"vision-language-action"'
+    - '(abs:"model context protocol" OR abs:"MCP") AND (abs:"robot" OR abs:"ROS")'
+
+huggingface:
+  daily_papers: true   # https://huggingface.co/api/daily_papers?date=YYYY-MM-DD
+
+# Keyword weights for ranking scan results (title counts twice). Matching is
+# case-insensitive on word boundaries; a trailing plural "s" also matches.
+scan:
+  min_score: 4
+  # A candidate must also mention at least one of these, which filters out
+  # "test harness" papers about non-embodied agents.
+  require_any: [robot, robotic, robotics, embodied, embodiment, vla, vision-language-action,
+                manipulation, humanoid, navigation, ros, legged, locomotion, dexterous, grasping,
+                quadruped, drone, physical ai]
+  keywords:
+    embodied harness: 6
+    harness: 4
+    agent harness: 3
+    embodied agent: 3
+    code as policies: 3
+    code-as-policy: 3
+    model context protocol: 3
+    mcp: 3
+    agentic: 2
+    agent loop: 2
+    tool calling: 2
+    tool use: 2
+    function calling: 2
+    skill library: 2
+    vision-language-action: 2
+    vla: 2
+    embodied reasoning: 2
+    scene graph: 2
+    spatial memory: 2
+    world model: 2
+    failure detection: 2
+    failure recovery: 2
+    success detection: 2
+    self-reflection: 2
+    multi-robot: 2
+    guardrail: 2
+    jailbreak: 2
+    embodied: 1
+    robot: 1
+    manipulation: 1
+    humanoid: 1
+    mobile manipulation: 1
+    navigation: 1
+    long-horizon: 1
+    llm: 1
+    vlm: 1
+    large language model: 1
+    vision-language model: 1
+    safety: 1
+    benchmark: 1
+    open-source: 1
+    sim-to-real: 1
+
+# Web searches to run each day. Put the current month and year in the query
+# (for example "September 2026") and keep only results inside the window.
+web_searches:
+  - embodied agent harness robot new paper
+  - vision-language-action model release open weights
+  - robot foundation model launch
+  - LLM agent controls robot tool calling MCP ROS
+  - humanoid robot AI model announcement
+  - embodied AI benchmark leaderboard new
+  - robotics world model release
+  - 具身智能 大模型 发布
+  - 具身智能 VLA 开源
+  - 机器人 智能体 框架 开源
+
+# Primary sources to skim for posts inside the window.
+watch_pages:
+  labs:
+    - {name: Google DeepMind blog, url: "https://deepmind.google/discover/blog/"}
+    - {name: NVIDIA robotics blog, url: "https://blogs.nvidia.com/blog/category/robotics/"}
+    - {name: NVIDIA technical blog (robotics), url: "https://developer.nvidia.com/blog/category/robotics/"}
+    - {name: Physical Intelligence, url: "https://www.physicalintelligence.company/blog"}
+    - {name: Figure, url: "https://www.figure.ai/news"}
+    - {name: 1X, url: "https://www.1x.tech/discover"}
+    - {name: Hugging Face blog, url: "https://huggingface.co/blog"}
+    - {name: Toyota Research Institute, url: "https://www.tri.global/news"}
+    - {name: Skild AI, url: "https://www.skild.ai/blogs"}
+    - {name: Boston Dynamics blog, url: "https://bostondynamics.com/blog/"}
+    - {name: BAAI, url: "https://www.baai.ac.cn/"}
+    - {name: AgiBot, url: "https://www.agibot.com/"}
+    - {name: ByteDance Seed, url: "https://seed.bytedance.com/en/blog"}
+    - {name: Anthropic news, url: "https://www.anthropic.com/news"}
+    - {name: OpenAI news, url: "https://openai.com/news/"}
+    - {name: Meta AI blog, url: "https://ai.meta.com/blog/"}
+  news:
+    - {name: The Robot Report, url: "https://www.therobotreport.com/"}
+    - {name: IEEE Spectrum robotics, url: "https://spectrum.ieee.org/topic/robotics/"}
+    - {name: 机器之心, url: "https://www.jiqizhixin.com/"}
+    - {name: 量子位, url: "https://www.qbitai.com/"}
+    - {name: 36氪, url: "https://www.36kr.com/"}
+  community:
+    - {name: Hugging Face papers, url: "https://huggingface.co/papers"}
+    - {name: Hacker News, url: "https://news.ycombinator.com/"}
+    - {name: r/robotics, url: "https://www.reddit.com/r/robotics/"}
+    - {name: ROS Discourse, url: "https://discourse.ros.org/"}
+
+# Repositories to check for releases on the weekly pass (Mondays). GitHub
+# pages open with WebFetch; for existence checks use raw.githubusercontent.com.
+github_watch:
+  - huggingface/lerobot
+  - Physical-Intelligence/openpi
+  - NVIDIA/Isaac-GR00T
+  - isaac-sim/IsaacLab
+  - google-deepmind/mujoco
+  - Genesis-Embodied-AI/Genesis
+  - haosulab/ManiSkill
+  - robotmcp/ros-mcp-server
+  - nasa-jpl/rosa
+  - RobotecAI/rai
+  - OpenMind/OM1
+  - dimensionalOS/dimos
