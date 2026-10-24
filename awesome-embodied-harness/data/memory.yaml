@@ -1130,3 +1130,22 @@
   tags: [memory, dual-system, long-horizon, manipulation]
   note: The repository linked from the project page did not resolve on 2026-10-23.
   added: 2026-10-23
+
+- id: externalise-the-memory
+  name: Externalise the Memory
+  title: >-
+    Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience
+    Should Live
+  aliases: [AionGenos]
+  date: 2026-10
+  summary: >-
+    Pre-registered comparison of distilling a memory-augmented VLM teacher into LoRA policy
+    weights versus re-attaching its retrieval buffer at inference; distillation gave no
+    significant gain while external retrieval added 34 points on a reach task (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.30478
+    code: https://github.com/TPEmist/AionGenos
+  access: open
+  tags: [memory, benchmark]
+  note: CL4FMAgents workshop, NeurIPS 2026 (non-archival).
+  added: 2026-10-24

@@ -910,3 +910,22 @@
   tags: [data-generation, self-improving, navigation]
   note: Repository releases the weakness-discovery loop and episode corpora.
   added: 2026-10-17
+
+- id: scenerig
+  name: SceneRig
+  title: >-
+    SceneRig: An Agentic System for Simulation-Ready 3D Scene Reconstruction from Single
+    Images
+  date: 2026-10
+  summary: >-
+    Agent that reconstructs a single image into an editable, simulation-ready scene with
+    geometric, visual and physical tools, then runs edit-and-validate loops in a physics
+    simulator until the scene is stable.
+  links:
+    paper: https://arxiv.org/abs/2610.28585
+    code: https://github.com/Red-Fairy/SceneRig
+    project: https://red-fairy.github.io/SceneRig/
+  access: open
+  tags: [agentic-loop, data-generation, 3d, sim2real]
+  note: CoRL 2026 Agentic Robotics Workshop. Promoted from the queue.
+  added: 2026-10-24

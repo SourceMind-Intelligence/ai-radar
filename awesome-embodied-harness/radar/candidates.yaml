@@ -2,51 +2,19 @@
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
 
-- name: RoboJudge
-  url: https://arxiv.org/abs/2610.27782
-  title: 'RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation'
-  first_seen: 2026-10-22
-  last_checked: 2026-10-23
-  suggested_category: benchmark
-  reason: 'Verified; over the daily cap on 2026-10-22. Benchmark and 12K-video training set for MLLM judges of physical adherence and instruction alignment in embodied video generation; project page spherelab.ai/RoboJudge verified.'
-
 - name: Physical AI monograph
   url: https://arxiv.org/abs/2610.27045
   title: 'Physical AI: Concepts, Techniques, and Challenges'
   first_seen: 2026-10-22
-  last_checked: 2026-10-23
+  last_checked: 2026-10-24
   suggested_category: survey
   reason: 'Verified; over the daily cap on 2026-10-22. 388-page monograph defining physical AI and surveying perception, world models, embodied foundation models, control and multi-agent coordination.'
-
-- name: SceneRig
-  url: https://arxiv.org/abs/2610.28585
-  title: 'SceneRig: An Agentic System for Simulation-Ready 3D Scene Reconstruction from Single Images'
-  first_seen: 2026-10-22
-  last_checked: 2026-10-23
-  suggested_category: sim
-  reason: 'Verified; over the daily cap on 2026-10-22. Agent with edit-and-validate loops in a physics simulator turns one image into a stable sim-ready scene (CoRL 2026 Agentic Robotics Workshop); project page verified.'
-
-- name: lambda_0 (HumanVerse)
-  url: https://arxiv.org/abs/2610.18950
-  title: 'λ_0: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation'
-  first_seen: 2026-10-22
-  last_checked: 2026-10-23
-  suggested_category: policy
-  reason: 'Verified; over the daily cap on 2026-10-22. 500-hour HumanVerse egocentric human loco-manipulation dataset and humanoid foundation model; project lambdahumanoid.github.io and repo LambdaHumanoid/openlambda README verified.'
-
-- name: CausGround
-  url: https://arxiv.org/abs/2610.29702
-  title: 'CausGround: Causal Interaction Grounding for Adaptive Embodied Planning'
-  first_seen: 2026-10-23
-  last_checked: 2026-10-23
-  suggested_category: brain
-  reason: 'Verified; over the daily cap on 2026-10-23. Non-parametric distillation of interaction experience into action preconditions and effects over a factorized world state for MLLM planning; project page causground.github.io verified.'
 
 - name: TIDE
   url: https://arxiv.org/abs/2610.29264
   title: 'Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation'
   first_seen: 2026-10-23
-  last_checked: 2026-10-23
+  last_checked: 2026-10-24
   suggested_category: policy
   reason: 'Verified; over the daily cap on 2026-10-23. Critic-free online post-training from human interventions and policy rollouts during deployment; four real bimanual tasks; project page verified.'
 
@@ -54,7 +22,7 @@
   url: https://arxiv.org/abs/2610.29161
   title: 'SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training'
   first_seen: 2026-10-23
-  last_checked: 2026-10-23
+  last_checked: 2026-10-24
   suggested_category: sim
   reason: 'Verified; over the daily cap on 2026-10-23. Automates intervention-based VLA post-training in simulation with an agent-compiled progress graph and CuRobo recovery expert; compares RECAP, HG-DAgger, DPO+SFT, FlowPRO.'
 
@@ -62,6 +30,38 @@
   url: https://arxiv.org/abs/2610.28698
   title: 'Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds'
   first_seen: 2026-10-23
-  last_checked: 2026-10-23
+  last_checked: 2026-10-24
   suggested_category: brain
   reason: 'Verified; over the daily cap on 2026-10-23. 120-configuration study of data volume, diversity and model size for embodied game agents; model THUSI-Lab/GameScaling on Hugging Face verified.'
+
+- name: DRILL
+  url: https://arxiv.org/abs/2610.30814
+  title: 'DRILL: Training World Models to Improve Policies, Not Predict Pixels'
+  first_seen: 2026-10-24
+  last_checked: 2026-10-24
+  suggested_category: world-model
+  reason: 'Verified; over the daily cap on 2026-10-24. Bilevel training of world models for downstream VLA policy return rather than pixel accuracy (NeurIPS 2026).'
+
+- name: Echo
+  url: https://arxiv.org/abs/2610.31569
+  title: 'Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models'
+  first_seen: 2026-10-24
+  last_checked: 2026-10-24
+  suggested_category: verification
+  reason: 'Verified; over the daily cap on 2026-10-24. Stop and failure signals denoised as extra action-chunk dimensions inside one VLA; project page lyfeng001.github.io/Echo.'
+
+- name: TEAR
+  url: https://arxiv.org/abs/2610.30819
+  title: 'TEAR: Task-Evidence Authority Routing for Robotic Manipulation'
+  first_seen: 2026-10-24
+  last_checked: 2026-10-24
+  suggested_category: harness
+  reason: 'Verified; over the daily cap on 2026-10-24. Edge-deployable arbitration of control authority between human teleoperation and local autonomy from network and task evidence.'
+
+- name: Multi-Tool Selection for Robotic Systems
+  url: https://arxiv.org/abs/2610.31013
+  title: 'Multi-Tool Selection for Robotic Systems: Comparing Semantic Retrieval and LLM'
+  first_seen: 2026-10-24
+  last_checked: 2026-10-24
+  suggested_category: interface
+  reason: 'Verified; over the daily cap on 2026-10-24. Compares retrieval-based and LLM robot tool routing on 164 annotated compound instructions.'

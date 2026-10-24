@@ -1064,3 +1064,19 @@
   tags: [vla, success-detection, manipulation]
   note: Promoted from the queue.
   added: 2026-10-23
+
+- id: progress-probes
+  name: Progress Probes (P²)
+  title: >-
+    Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
+  aliases: [P2]
+  date: 2026-10
+  summary: >-
+    Runtime monitor that trains linear probes on a VLA's own activations to estimate task
+    progress from demonstrations and flags executions that deviate from expected progress,
+    instead of supervising with an external VLM.
+  links:
+    paper: https://arxiv.org/abs/2610.31613
+  access: closed
+  tags: [success-detection, vla, uncertainty]
+  added: 2026-10-24

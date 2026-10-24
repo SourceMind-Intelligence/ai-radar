@@ -954,3 +954,19 @@
   tags: [spatial-reasoning, pointing, manipulation]
   note: Promoted from the queue.
   added: 2026-10-23
+
+- id: causground
+  name: CausGround
+  title: 'CausGround: Causal Interaction Grounding for Adaptive Embodied Planning'
+  date: 2026-10
+  summary: >-
+    Non-parametric framework that distills interaction experience into action preconditions
+    and effects over a factorized world state, then grounds them in current observations for
+    backward and forward reasoning during MLLM planning.
+  links:
+    paper: https://arxiv.org/abs/2610.29702
+    project: https://causground.github.io
+  access: closed
+  tags: [planning, memory, scene-graph]
+  note: Project page says code is coming soon. Promoted from the queue.
+  added: 2026-10-24

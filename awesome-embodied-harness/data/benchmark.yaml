@@ -2715,3 +2715,52 @@
   tags: [benchmark, real-world, leaderboard, long-horizon]
   note: IROS 2026 Workshop on Open Robotics Software. Promoted from the queue.
   added: 2026-10-23
+
+- id: alpha-fault-injection
+  name: Alpha (fault injection)
+  title: >-
+    Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied
+    Manipulation
+  date: 2026-10
+  summary: >-
+    Injects calibrated perception, actuation, kinematic and planner-output faults into
+    LLM-driven simulated manipulation and pairs the LLM agent with a scripted oracle under
+    identical seeds to separate physical vulnerabilities from planner sensitivity.
+  links:
+    paper: https://arxiv.org/abs/2610.30197
+    code: https://github.com/jonajoy142/embodied-agent-chaos
+  access: open
+  tags: [benchmark, failure-recovery, safety, manipulation]
+  added: 2026-10-24
+
+- id: dual-exam
+  name: Dual Exam
+  title: 'Dual Exam: Controlled Evaluation of Multimodal Agents and World Models'
+  date: 2026-10
+  summary: >-
+    Evaluates agents under fixed environment responses and world models under fixed action
+    interventions across physical, digital, social and scientific domains (1,088 agent
+    items, 400 world-model cases), plus a pilot coupling the two.
+  links:
+    paper: https://arxiv.org/abs/2610.31066
+  access: closed
+  tags: [benchmark, world-model, agentic-loop]
+  added: 2026-10-24
+
+- id: robojudge
+  name: RoboJudge
+  title: 'RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation'
+  date: 2026-10
+  summary: >-
+    Benchmark of 800 human-annotated embodied videos for MLLM judges of physical adherence
+    and instruction alignment, a 12K-video training set and a fine-tuned 9B judge.
+  links:
+    paper: https://arxiv.org/abs/2610.27782
+    code: https://github.com/Sphere-AI-Lab/RoboJudge
+    project: https://spherelab.ai/RoboJudge
+    weights: https://huggingface.co/HuggingFriends/RoboJudge-9B
+    data: https://huggingface.co/datasets/HuggingFriends/RoboJudge-Bench
+  access: open
+  tags: [benchmark, reward-model, video, world-model]
+  note: Promoted from the queue.
+  added: 2026-10-24

@@ -3,12 +3,13 @@
 # VLA Models & Skill Policies
 
 > "System 1" vision-language-action models and skill policies a harness calls, including hierarchical and dual-system designs.  
-> Layer: L1 · 98 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
+> Layer: L1 · 99 entries · [overview](../README.md#policy) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟡 [**λ₀ (HumanVerse)**](https://arxiv.org/abs/2610.18950 "$λ_0$: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation") · 2026-10 — Humanoid whole-body loco-manipulation foundation model mid-trained on HumanVerse, 500 hours of egocentric human video with body and hand motion, aligned to the robot through a human-to-humanoid pipeline; transfers to Unitree G1. _Note: Stage I/II code released; HumanVerse data and Stage III workflows not yet released. Promoted from the queue._ [code](https://github.com/LambdaHumanoid/openlambda) · [project](https://lambdahumanoid.github.io/)
 - ⚪ [**VLRLA**](https://arxiv.org/abs/2610.19517 "VLRLA: Deployment-Time Adaptation of Vision-Language-Action Models through In-Context Reinforcement Learning") · 2026-10 — Adds an in-context reinforcement learning module to existing VLAs that learns from histories of observations, actions, rewards and terminations, so the policy improves during deployment with frozen parameters.
 - 🟡 [**VLDA**](https://arxiv.org/abs/2610.25874 "Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation") · 2026-10 — Reformulates future prediction in VLAs as compact, actionable transition deltas instead of full future states, using them as the interface between semantic understanding and action generation. _Note: Code provided as a cookbook in the LoongForge framework._ [code](https://github.com/baidu-baige/LoongForge/tree/master/cookbook/loongforge-vlda)
 - ⚪ [**Value of Intervention (dual-system scheduling)**](https://arxiv.org/abs/2610.21160 "When to Ask for Help: A Decision-Theoretic Account and Measurement Standard for Slow-Module Scheduling in Dual-System Vision-Language-Action Models") · 2026-10 — Formalizes when a dual-system VLA should invoke its slow module as a calibrated decision on the Value of Intervention, unifying fixed-ratio, fixed-budget and history-gated schedules and proposing a measurement standard separating schedule quality from module quality.

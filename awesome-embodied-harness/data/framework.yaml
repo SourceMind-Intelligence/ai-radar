@@ -443,3 +443,19 @@
   tags: [agentic-loop, skill-library, memory, benchmark, long-horizon]
   note: Real-robot support is still listed as TODO in the README.
   added: 2026-10-23
+
+- id: locomanilab
+  name: LocoManiLab
+  title: >-
+    LocoManiLab: A Unified Testbed for Data, Policies, Controllers, and Deployment in
+    Humanoid Loco-Manipulation
+  date: 2026-10
+  summary: >-
+    Humanoid loco-manipulation testbed covering data collection and generation, policy
+    training, evaluation and deployment: 234 tasks in five household scene types, 51.5 hours
+    of simulated teleoperation, and comparisons of 12 policies and 5 controllers.
+  links:
+    paper: https://arxiv.org/abs/2610.30876
+  access: closed
+  tags: [humanoid, mobile-manipulation, benchmark, teleop]
+  added: 2026-10-24

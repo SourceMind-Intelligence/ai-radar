@@ -1791,3 +1791,23 @@
   access: closed
   tags: [navigation, world-model, video]
   added: 2026-10-21
+
+- id: lambda-0
+  name: λ₀ (HumanVerse)
+  title: '$λ_0$: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation'
+  aliases: [lambda_0, HumanVerse]
+  date: 2026-10
+  summary: >-
+    Humanoid whole-body loco-manipulation foundation model mid-trained on HumanVerse, 500
+    hours of egocentric human video with body and hand motion, aligned to the robot through
+    a human-to-humanoid pipeline; transfers to Unitree G1.
+  links:
+    paper: https://arxiv.org/abs/2610.18950
+    code: https://github.com/LambdaHumanoid/openlambda
+    project: https://lambdahumanoid.github.io/
+  access: partial
+  tags: [humanoid, mobile-manipulation, cross-embodiment, dataset]
+  note: >-
+    Stage I/II code released; HumanVerse data and Stage III workflows not yet released.
+    Promoted from the queue.
+  added: 2026-10-24

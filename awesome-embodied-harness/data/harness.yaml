@@ -3357,3 +3357,50 @@
   access: closed
   tags: [agentic-loop, self-improving, memory, dual-system, long-horizon]
   added: 2026-10-23
+
+- id: fastharness
+  name: FastHarness
+  title: >-
+    FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies
+  date: 2026-10
+  summary: >-
+    Execution harness that schedules GPT-6 Astra review of a frozen pi0.5 policy: stage
+    memory and reviewed outcomes let a fast path review less as experience accumulates,
+    while a recovery path concentrates supervision on errors; reviewer tokens fall 57.2% on
+    average (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.31427
+    code: https://github.com/FastHarness/fast-harness
+  access: open
+  tags: [agentic-loop, memory, failure-recovery, self-improving, vla]
+  added: 2026-10-24
+
+- id: care-escalation
+  name: CARE
+  title: >-
+    Know When to Escalate: Critic-Guided Adaptive Execution for Cloud-Local Embodied Agents
+  aliases: [Know When to Escalate]
+  date: 2026-10
+  summary: >-
+    Cloud-local embodied agent in which a lightweight critic monitors a fast local executor
+    and escalates control to a stronger cloud model only when execution becomes unreliable,
+    rather than fixing roles or routing each request statelessly.
+  links:
+    paper: https://arxiv.org/abs/2610.30587
+  access: closed
+  tags: [agentic-loop, dual-system, on-device, uncertainty]
+  added: 2026-10-24
+
+- id: histeve
+  name: HiSTEVE 1.0
+  title: 'HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games'
+  date: 2026-10
+  summary: >-
+    Hierarchical Minecraft agent pairing a native-interface VLA with a capability-aware
+    harness: structured progress memory, a VLM planner that selects subtasks within the
+    VLA's abilities, and a policy-coupled completion detector.
+  links:
+    paper: https://arxiv.org/abs/2610.31162
+  access: closed
+  tags: [agentic-loop, memory, success-detection, long-horizon]
+  added: 2026-10-24
