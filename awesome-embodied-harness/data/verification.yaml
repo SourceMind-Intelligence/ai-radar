@@ -1080,3 +1080,21 @@
   access: closed
   tags: [success-detection, vla, uncertainty]
   added: 2026-10-24
+
+- id: echo-status
+  name: Echo
+  title: >-
+    Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models
+  date: 2026-10
+  summary: >-
+    Adds stop and failure signals as two extra dimensions of each action chunk in a single
+    VLA, learned from success, failure and recovery trajectories without frame-level
+    progress labels and denoised faster than actions so they can guide them.
+  links:
+    paper: https://arxiv.org/abs/2610.31569
+    code: https://github.com/lyfeng001/Echo-Sim
+    project: https://lyfeng001.github.io/Echo/
+  access: partial
+  tags: [success-detection, failure-recovery, vla, manipulation]
+  note: Simulation code (pi0.5, LIBERO-Recovery) released. Promoted from the queue.
+  added: 2026-10-25

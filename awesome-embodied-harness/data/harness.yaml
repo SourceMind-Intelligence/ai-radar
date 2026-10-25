@@ -3404,3 +3404,18 @@
   access: closed
   tags: [agentic-loop, memory, success-detection, long-horizon]
   added: 2026-10-24
+
+- id: tear
+  name: TEAR
+  title: 'TEAR: Task-Evidence Authority Routing for Robotic Manipulation'
+  date: 2026-10
+  summary: >-
+    Edge-deployable arbitrator that shifts control authority between human teleoperation and
+    local autonomy from network and task evidence; reports success close to pure
+    teleoperation with teleoperation on 19.8-27.4% of control steps (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.30819
+  access: closed
+  tags: [hitl, teleop, uncertainty, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-25

@@ -1360,3 +1360,18 @@
   access: open
   tags: [world-model, code-as-policy, skill-library, manipulation]
   added: 2026-10-23
+
+- id: drill
+  name: DRILL
+  title: 'DRILL: Training World Models to Improve Policies, Not Predict Pixels'
+  date: 2026-10
+  summary: >-
+    Bilevel framework that trains a video world model to maximize a VLA's return after an
+    inner GRPO update on imagined rollouts rather than to minimize pixel error; reports
+    gains over WMPO and RLVR-World across five manipulation simulators (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.30814
+  access: closed
+  tags: [world-model, rl, vla, manipulation]
+  note: NeurIPS 2026. Promoted from the queue.
+  added: 2026-10-25

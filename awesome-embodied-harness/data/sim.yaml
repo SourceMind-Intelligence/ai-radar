@@ -929,3 +929,19 @@
   tags: [agentic-loop, data-generation, 3d, sim2real]
   note: CoRL 2026 Agentic Robotics Workshop. Promoted from the queue.
   added: 2026-10-24
+
+- id: simpt
+  name: SimPT
+  title: >-
+    SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training
+  date: 2026-10
+  summary: >-
+    Automates intervention-based VLA post-training in simulation: an agent-compiled progress
+    graph keeps snapshots and times interventions, a CuRobo expert generates corrective
+    trajectories, and four post-training methods are compared on RoboTwin tasks.
+  links:
+    paper: https://arxiv.org/abs/2610.29161
+  access: closed
+  tags: [hitl, failure-recovery, vla, data-generation]
+  note: Promoted from the queue.
+  added: 2026-10-25

@@ -970,3 +970,22 @@
   tags: [planning, memory, scene-graph]
   note: Project page says code is coming soon. Promoted from the queue.
   added: 2026-10-24
+
+- id: gamescaling
+  name: GameScaling
+  title: >-
+    Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds
+  date: 2026-10
+  summary: >-
+    Controlled study of continued pre-training for game-playing embodied agents across 120
+    configurations (0.8B-27B models, 50-1,600 hours, single- to multi-world data), fitting a
+    scaling law over data volume, diversity and model size.
+  links:
+    paper: https://arxiv.org/abs/2610.28698
+    code: https://github.com/THUSI-Lab/GameScaling
+    project: https://gamescaling.github.io
+    weights: https://huggingface.co/THUSI-Lab/GameScaling
+  access: open
+  tags: [cross-embodiment, video, benchmark]
+  note: Promoted from the queue.
+  added: 2026-10-25

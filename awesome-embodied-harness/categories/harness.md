@@ -3,12 +3,13 @@
 # Embodied Harnesses
 
 > Systems where an LLM/VLM-driven agent loop orchestrates robot capabilities (skills, VLAs, motion primitives, generated code) and closes the loop on feedback.  
-> Layer: L4 · 196 entries · [overview](../README.md#harness) · [survey](../SURVEY.md)
+> Layer: L4 · 197 entries · [overview](../README.md#harness) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**TEAR**](https://arxiv.org/abs/2610.30819 "TEAR: Task-Evidence Authority Routing for Robotic Manipulation") · 2026-10 — Edge-deployable arbitrator that shifts control authority between human teleoperation and local autonomy from network and task evidence; reports success close to pure teleoperation with teleoperation on 19.8-27.4% of control steps (first-party). _Note: Promoted from the queue._
 - 🟢 [**Tactile-ETA**](https://arxiv.org/abs/2610.27613 "Embodied Task Agents Can Perform Fine Manipulation through Tactile In-Context Learning") · 2026-10 — Adds tactile experience to an embodied task agent through in-context demonstrations that pair each robot movement with camera views and selected tactile frames; the agent acts through general robot tools without parameter updates. [code](https://github.com/No-518/Tactile-ETA) · [project](https://no-518.github.io/tactile-eta/)
 - 🟢 [**SuperNav**](https://arxiv.org/abs/2610.12126 "SuperNav: An Agentic Navigation System for Any Task in Any Scene") · 2026-10 — Equips a pretrained multimodal LLM with a navigation agent harness, with no navigation-specific fine-tuning: the model interprets requests, understands scenes and decides, while motion execution is delegated to navigation tools. [code](https://github.com/zju3dv/SuperNav) · [project](https://zju3dv.github.io/SuperNav/)
 - ⚪ [**SpatialHarness**](https://arxiv.org/abs/2610.12457 "SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation") · 2026-10 — Test-time harness for frontier multimodal policies (e.g., GPT-6 Astra): keeps an online simulated scene synchronized with real execution, finds task-critical spatial relationships and renders virtual views that expose them, with no fine-tuning or new cameras.

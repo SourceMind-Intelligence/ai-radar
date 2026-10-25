@@ -1346,3 +1346,18 @@
   access: open
   tags: [self-improving, awesome-list, safety]
   added: 2026-10-23
+
+- id: physical-ai-monograph
+  name: Physical AI monograph
+  title: 'Physical AI: Concepts, Techniques, and Challenges'
+  date: 2026-10
+  summary: >-
+    388-page monograph that defines physical AI, separates it from embodied AI,
+    cyber-physical systems and digital twins, and reviews perception, simulation, world
+    models, embodied foundation models, control, multi-agent coordination and deployment.
+  links:
+    paper: https://arxiv.org/abs/2610.27045
+  access: open
+  tags: [world-model, safety, sim2real]
+  note: Promoted from the queue.
+  added: 2026-10-25

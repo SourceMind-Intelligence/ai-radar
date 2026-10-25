@@ -843,3 +843,18 @@
     still listed as TODO (checked 2026-10-18).
   added: 2026-10-13
   updated: 2026-10-18
+
+- id: robot-tool-routing
+  name: Multi-Tool Selection for Robotic Systems
+  title: 'Multi-Tool Selection for Robotic Systems: Comparing Semantic Retrieval and LLM'
+  date: 2026-10
+  summary: >-
+    Frames robot tool routing as choosing the smallest complete set of executable
+    capabilities for a natural-language request and compares three retrieval methods with a
+    120B LLM on 164 annotated prompts, finding a quality-latency trade-off.
+  links:
+    paper: https://arxiv.org/abs/2610.31013
+  access: closed
+  tags: [tool-use, on-device, benchmark]
+  note: Promoted from the queue.
+  added: 2026-10-25

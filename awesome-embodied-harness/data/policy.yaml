@@ -1811,3 +1811,22 @@
     Stage I/II code released; HumanVerse data and Stage III workflows not yet released.
     Promoted from the queue.
   added: 2026-10-24
+
+- id: tide
+  name: TIDE
+  title: >-
+    Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation
+  aliases: [Training in Deployment]
+  date: 2026-10
+  summary: >-
+    Human-in-the-loop online post-training that updates a robot foundation policy during
+    deployment from human interventions and its own rollouts through provenance-conditioned
+    supervised learning, with no critic or reward model; each session finishes in under an
+    hour (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.29264
+    project: https://logosroboticsgroup.github.io/TIDE/
+  access: closed
+  tags: [hitl, self-improving, manipulation, real-world]
+  note: Promoted from the queue.
+  added: 2026-10-25
