@@ -39,9 +39,7 @@
 
 - id: kamino
   name: Kamino
-  title: >-
-    Kamino: GPU-based Massively Parallel Simulation of Multi-Body Systems with Challenging
-    Topologies
+  title: 'Kamino: GPU-based Simulation of Rigid Multi-Body Physics with Kinematic Loops'
   date: 2026-03
   org: Disney Research, NVIDIA
   summary: >-
@@ -54,8 +52,12 @@
     code: https://github.com/newton-physics/newton
   access: open
   tags: [rl, legged]
-  note: Ships inside the Newton repo (Kamino examples under newton/examples/kamino).
+  note: >-
+    Ships inside the Newton repo (Kamino examples under newton/examples/kamino). Retitled on
+    arXiv; the earlier title was "Kamino: GPU-based Massively Parallel Simulation of
+    Multi-Body Systems with Challenging Topologies".
   added: 2026-09-29
+  updated: 2026-10-26
 
 - id: scenesmith
   name: SceneSmith
@@ -531,8 +533,11 @@
   tags: [rl, sim2real, humanoid, legged, dexterous]
   note: >-
     First released as Orbit (arXiv 2301.04195, Jan 2023) and renamed Isaac Lab in 2024; the
-    Isaac Lab paper appeared Nov 2025. Isaac Gym is arXiv 2108.10470.
+    Isaac Lab paper appeared Nov 2025. Isaac Gym is arXiv 2108.10470. Isaac Lab 3.0 (GA, Oct
+    2026) runs one task API over multiple physics backends, including Newton (MuJoCo-Warp,
+    VBD, MPM), and supports Kit-less execution without launching Isaac Sim.
   added: 2026-09-29
+  updated: 2026-10-26
 
 - id: procthor
   name: ProcTHOR

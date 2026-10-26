@@ -2528,11 +2528,15 @@
     motion.
   links:
     paper: https://arxiv.org/abs/2609.24145
+    code: https://github.com/Luckykantnayak/mimicagent-humnaoid
     project: https://luckykantnayak.github.io/mimic-agent/
-  access: closed
+  access: partial
   tags: [agentic-loop, code-as-policy, legged, rl, sim2real]
-  note: Code repository announced as "releasing soon" (checked 2026-09-30).
+  note: >-
+    A humanoid (Unitree G1) implementation is released, linked from the project page; the
+    quadruped data-generation repository still says "releasing soon" (checked 2026-10-26).
   added: 2026-09-30
+  updated: 2026-10-26
 
 - id: motormind
   name: MotorMind
@@ -3241,10 +3245,13 @@
     paper: https://arxiv.org/abs/2610.21453
     code: https://github.com/JIA-Lab-research/CarryOn
     project: https://vincent2311.github.io/Projects/CarryOn/
-  access: closed
+  access: open
   tags: [agentic-loop, memory, safety, failure-recovery, vla]
-  note: Repository README says code is coming soon (checked 2026-10-17).
+  note: >-
+    Code released 2026-10-25 with the LIBERO-Perturbation, LIBERO-Safety, LIBERO-Recovery
+    and RoboLab experiments; real-robot experiments are not included.
   added: 2026-10-17
+  updated: 2026-10-26
 
 - id: pam-proactive
   name: PAM

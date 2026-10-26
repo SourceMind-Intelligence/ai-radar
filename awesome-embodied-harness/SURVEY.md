@@ -273,7 +273,7 @@ Counts by category and year of first release, generated from `data/`.
 | Category | Layer | Total | ≤2021 | 2022 | 2023 | 2024 | 2025 | 2026 | open |
 |---|---|---|---|---|---|---|---|---|---|
 | [Surveys & Position Papers](categories/survey.md) | meta | 91 | 1 | 1 | 8 | 10 | 30 | 41 | 15 |
-| [Embodied Harnesses](categories/harness.md) | L4 | 197 | 0 | 10 | 30 | 23 | 14 | 120 | 77 |
+| [Embodied Harnesses](categories/harness.md) | L4 | 197 | 0 | 10 | 30 | 23 | 14 | 120 | 78 |
 | [Open-Source Frameworks & Runtimes](categories/framework.md) | L0-L4 | 28 | 0 | 1 | 5 | 11 | 5 | 6 | 26 |
 | [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 46 | 0 | 0 | 5 | 10 | 11 | 20 | 21 |
 | [World State, Memory & Spatial Context](categories/memory.md) | L3 | 65 | 0 | 4 | 6 | 15 | 10 | 30 | 32 |
@@ -286,7 +286,7 @@ Counts by category and year of first release, generated from `data/`.
 | [Simulators & Environments](categories/sim.md) | L6 | 53 | 12 | 1 | 6 | 5 | 10 | 19 | 41 |
 | [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 154 | 5 | 1 | 4 | 19 | 31 | 94 | 85 |
 | [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 94 | 5 | 0 | 9 | 18 | 35 | 27 | 65 |
-| **Total** |  | **1134** | 23 | 20 | 96 | 153 | 274 | 568 | 563 |
+| **Total** |  | **1134** | 23 | 20 | 96 | 153 | 274 | 568 | 564 |
 <!-- END GENERATED: stats -->
 
 ---
