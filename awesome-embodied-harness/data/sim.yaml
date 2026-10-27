@@ -950,3 +950,37 @@
   tags: [hitl, failure-recovery, vla, data-generation]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: worldmirror
+  name: WorldMirror
+  title: >-
+    WorldMirror: Agentic Real-to-Sim Generation of Interactive Worlds from In-the-Wild Robot
+    Demonstrations
+  date: 2026-10
+  summary: >-
+    Real-to-sim as iterative refinement of an executable world program: a coding agent
+    decomposes a demonstration scene, orchestrates image and 3D generation tools and
+    corrects reconstruction errors from verification feedback until trajectories replay
+    consistently.
+  links:
+    paper: https://arxiv.org/abs/2610.31834
+  access: closed
+  tags: [agentic-loop, code-as-policy, data-generation, 3d]
+  added: 2026-10-27
+
+- id: scenebloom
+  name: SceneBloom
+  title: >-
+    SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for
+    Embodied Learning
+  date: 2026-10
+  summary: >-
+    Agentic indoor scene generation that samples furniture layouts with diffusion priors
+    within functional zones, then compiles them into physically valid 3D scenes through
+    relation contracts, geometric fitting and pose correction.
+  links:
+    paper: https://arxiv.org/abs/2610.32978
+    code: https://github.com/Tinaliu0123/scenebloom
+  access: open
+  tags: [data-generation, 3d, agentic-loop]
+  added: 2026-10-27

@@ -3,13 +3,14 @@
 # Multi-Robot & Fleet Orchestration
 
 > Coordinating multiple robots, fleets and human-robot teams with language-model agents.  
-> Layer: L4 · 53 entries · [overview](../README.md#multi-agent) · [survey](../SURVEY.md)
+> Layer: L4 · 54 entries · [overview](../README.md#multi-agent) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
 - 🟢 [**VLA-Fabric**](https://arxiv.org/abs/2610.23018 "VLA-Fabric: Learning Interaction for Composable Multi-Arm VLA Agents") · 2026-10 — Runs one complete VLA per arm, preserving local perception and action ownership, and coordinates them through learned interaction during action generation rather than a centralized joint policy. [code](https://github.com/NEBULIS-Lab/VLA-Fabric) · [project](https://nebulis-lab.com/VLA-Fabric/)
+- ⚪ [**UAV-SwarmAgent**](https://arxiv.org/abs/2610.32559 "UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code Generation and Vision-Language Reasoning") · 2026-10 — Hierarchical system in which a ground-station agent turns a one-sentence mission into per-UAV routes by writing code and grounding targets with a VLM, and onboard worker agents verify incidents; 95.7% of 255 simulated missions located the incident (first-party).
 - ⚪ [**Observe, Share, or Predict?**](https://arxiv.org/abs/2610.16895 "Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent Collaboration") · 2026-10 — Under strictly individual perception on PARTNR, disentangles how observing a partner's state, sharing object knowledge and predicting the partner's next action affect decentralized zero-shot LLM planners, without exchanging plans or intentions.
 - ⚪ [**MRPilot**](https://arxiv.org/abs/2610.07477 "MRPilot: Supervising and Intervening LLM-Based Multi-Robot Teams through Mixed Reality") · 2026-10 — Mixed-reality interface for supervising LLM-directed heterogeneous robot teams: plans and execution states are shown as structured commitments across situated and overview views, supporting forming, reviewing, following and repairing; evaluated in a 20-participant VR study.
 - ⚪ [**InstAgent**](https://arxiv.org/abs/2610.23098 "InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration") · 2026-10 — Agent operating system for heterogeneous robot teams that organizes behaviours as agentic behavior trees modelling capability assignment and inter-robot dependencies, keeps spatio-temporal context memory for handoffs, and turns execution-time corrections into reusable experience.

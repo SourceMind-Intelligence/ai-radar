@@ -989,3 +989,22 @@
   tags: [cross-embodiment, video, benchmark]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: rynnunify
+  name: RynnUnify
+  title: 'RynnUnify: Towards Unified Embodied Brain'
+  date: 2026-10
+  org: Alibaba DAMO Academy
+  summary: >-
+    16B unified embodied model with interleaved video-language reasoning for spatial
+    reasoning, physical prediction and long-horizon visual planning, plus an RL-trained
+    agentic extension that consults video predictions and a world-action extension for robot
+    control.
+  links:
+    paper: https://arxiv.org/abs/2610.32965
+    code: https://github.com/alibaba-damo-academy/RynnUnify
+    project: https://alibaba-damo-academy.github.io/RynnUnify.github.io/
+    weights: https://huggingface.co/Alibaba-DAMO-Academy/RynnUnify-Base
+  access: open
+  tags: [world-model, planning, spatial-reasoning, video]
+  added: 2026-10-27

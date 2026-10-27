@@ -3426,3 +3426,19 @@
   tags: [hitl, teleop, uncertainty, manipulation]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: forca
+  name: FORCA
+  title: 'FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation'
+  date: 2026-10
+  summary: >-
+    Coding agent that writes Python contact-probing and force-responsive control programs
+    from images and wrist force/torque readings, and between runs inspects force records
+    with visual outcomes to diagnose failures and revise its control logic; five real-robot
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2610.31841
+    project: https://tanoom.github.io/forca/
+  access: closed
+  tags: [code-as-policy, agentic-loop, failure-recovery, real-world, manipulation]
+  added: 2026-10-27

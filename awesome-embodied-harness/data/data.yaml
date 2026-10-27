@@ -1604,3 +1604,22 @@
   tags: [dataset, navigation, planning, world-model]
   note: NeurIPS 2026.
   added: 2026-10-21
+
+- id: flora
+  name: Flora
+  title: 'FLORA: An Open Model Suite for Scaling Robotics Data Engines'
+  date: 2026-10
+  org: NVIDIA
+  summary: >-
+    NVIDIA data-engine model suite used for GR00T training that produces outcome rewards,
+    process rewards and timestamped captions for robot data; reports labeling 200,000 hours
+    per day and costs far below frontier APIs (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.31779
+    code: https://github.com/NVIDIA/Flora
+    project: https://research.nvidia.com/labs/gear/flora/
+    weights: https://huggingface.co/collections/nvidia/flora
+  access: partial
+  tags: [reward-model, data-generation, success-detection, video]
+  note: Weights and inference code under an NVIDIA research license; no training code.
+  added: 2026-10-27

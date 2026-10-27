@@ -941,3 +941,20 @@
   tags: [multi-robot, navigation, uncertainty, safety]
   note: CoRL 2026.
   added: 2026-10-21
+
+- id: uav-swarmagent
+  name: UAV-SwarmAgent
+  title: >-
+    UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code
+    Generation and Vision-Language Reasoning
+  date: 2026-10
+  summary: >-
+    Hierarchical system in which a ground-station agent turns a one-sentence mission into
+    per-UAV routes by writing code and grounding targets with a VLM, and onboard worker
+    agents verify incidents; 95.7% of 255 simulated missions located the incident
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.32559
+  access: closed
+  tags: [uav, multi-robot, code-as-policy, agentic-loop]
+  added: 2026-10-27

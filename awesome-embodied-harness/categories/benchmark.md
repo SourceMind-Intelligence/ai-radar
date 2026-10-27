@@ -3,7 +3,7 @@
 # Benchmarks & Evaluation
 
 > Benchmarks, evaluation suites and leaderboards for embodied agents, reasoning models and VLAs.  
-> Layer: L6 · 154 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
+> Layer: L6 · 155 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -28,6 +28,7 @@
 - ⚪ [**ManiUnit**](https://arxiv.org/abs/2610.12089 "ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks") · 2026-10 — Skill-level dataset (137,899 segments, 21 skill types, 417 subtasks) and 1,260-instance benchmark built from 50 BEHAVIOR-1K activities, designed to diagnose skill selection and inherited-state deviation in long-horizon mobile manipulation.
 - ⚪ [**ManiPhysicsBench**](https://arxiv.org/abs/2610.02802 "ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation") · 2026-10 — Assesses whether VLAs preserve objects: ManiPhysicsZoo assets with literature-backed material properties feed a solver that turns recorded grasp forces into deformation and fracture checks in LIBERO and SimplerEnv, exposing a gap between task success and safe success.
 - ⚪ [**MAGMA-Bench**](https://arxiv.org/abs/2610.13534 "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures") · 2026-10 — Architecture-agnostic benchmark for persistent task reasoning across heterogeneous robot teams, with growing horizons and controlled online perturbations (execution failures, interruptions, mission updates) over a structured skill-level interface.
+- ⚪ [**LOOM (NimCritic)**](https://arxiv.org/abs/2610.32776 "Predictive Long-Horizon Progress Modeling with Action-Aware Quantification") · 2026-10 — Action-aware progress specification that splits long-horizon trajectories into object-level subtasks with weighted action credits, an 800+ hour training set, the LOOM benchmark of 19,618 human-calibrated frames, and the NimCritic predictive progress critic.
 - 🟢 [**LLM-LIBERO**](https://arxiv.org/abs/2610.30051 "From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks") · 2026-10 — Closed-loop tool-call framework in which frontier models set end-effector poses and gripper commands on LIBERO-10; six models at three reasoning-effort levels over 1,800 episodes, with GPT-6 Astra highest at 44% (first-party). [code](https://github.com/IRVLUTD/LLM_LIBERO) · [project](https://irvlutd.github.io/LLM-LIBERO/)
 - ⚪ [**LIBERO-PeRM**](https://arxiv.org/abs/2610.22372 "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation") · 2026-10 — Benchmark separating task completion from preference satisfaction in household manipulation, studying zero-shot preference following, learning from demonstrations, sample efficiency, generalization and preference composition. _Note: NeurIPS 2026._ [project](https://libero-perm.github.io/)
 - ⚪ [**LIBERO-Industry**](https://arxiv.org/abs/2610.16782 "LIBERO-Industry: Benchmarking Robotic Manipulation under Industrial Process Constraints") · 2026-10 — Extends LIBERO with industrial process constraints such as product variants, moving material flows, finite execution windows and tight tolerances, to evaluate generalist policies for high-mix, low-volume manufacturing.

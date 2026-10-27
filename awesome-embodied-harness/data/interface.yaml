@@ -858,3 +858,19 @@
   tags: [tool-use, on-device, benchmark]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: nl-to-nav2
+  name: Natural-Language to Nav2
+  title: 'Natural-Language to Nav2: Operational Policies for Costmap-Based Navigation'
+  date: 2026-10
+  summary: >-
+    A local LLM turns operator instructions into JSON policies (destinations, spatial,
+    temporal and event constraints) that pass deterministic acceptance checks and are
+    projected into ROS 2 Nav2 costmaps without changing its planner or controller.
+  links:
+    paper: https://arxiv.org/abs/2610.32633
+    code: https://github.com/a56239637-dot/Natural-Language-to-Nav2-Operational-Policies-for-Costmap-Based-Navigation
+    project: https://a56239637-dot.github.io/Natural-Language-to-Nav2-Project-Page/
+  access: open
+  tags: [ros, navigation, on-device, safety]
+  added: 2026-10-27

@@ -3,12 +3,13 @@
 # Action Interfaces, Skills & Tool Protocols
 
 > How robot capabilities are exposed to models: skills as tools, code-as-action APIs, MCP servers, semantic action spaces, keypoint and affordance constraints.  
-> Layer: L2 · 46 entries · [overview](../README.md#interface) · [survey](../SURVEY.md)
+> Layer: L2 · 47 entries · [overview](../README.md#interface) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- 🟢 [**Natural-Language to Nav2**](https://arxiv.org/abs/2610.32633 "Natural-Language to Nav2: Operational Policies for Costmap-Based Navigation") · 2026-10 — A local LLM turns operator instructions into JSON policies (destinations, spatial, temporal and event constraints) that pass deterministic acceptance checks and are projected into ROS 2 Nav2 costmaps without changing its planner or controller. [code](https://github.com/a56239637-dot/Natural-Language-to-Nav2-Operational-Policies-for-Costmap-Based-Navigation) · [project](https://a56239637-dot.github.io/Natural-Language-to-Nav2-Project-Page/)
 - ⚪ [**Multi-Tool Selection for Robotic Systems**](https://arxiv.org/abs/2610.31013 "Multi-Tool Selection for Robotic Systems: Comparing Semantic Retrieval and LLM") · 2026-10 — Frames robot tool routing as choosing the smallest complete set of executable capabilities for a natural-language request and compares three retrieval methods with a 120B LLM on 164 annotated prompts, finding a quality-latency trade-off. _Note: Promoted from the queue._
 - ⚪ [**iAm.md**](https://arxiv.org/abs/2610.10962 "iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown Open-Vocabulary Domains") · 2026-10 — Markdown standard and generation framework in which a robot describes its own capabilities so an agent can check, before generating behaviour code, whether the robot and environment actually support a requested operation, reducing grounding failures. _Note: AIRO 2026 workshop._ [project](https://yurimachine.github.io/iAm.md/)
 - 🟡 [**EASG**](https://arxiv.org/abs/2610.12832 "VLMs are Native Action Models: Unleashing the Manipulation Capabilities of VLMs with Explicit Action-Space Grounding") · 2026-10 · Zhejiang University; Shanghai AI Lab; Tsinghua — Turns a pretrained VLM into a continuous-action manipulation policy through explicit action-space grounding instead of learned action tokens or experts, keeping it end-to-end trainable while exposing its spatial and reasoning abilities. _Note: Repository releases the zero-shot simulation pipeline; robot-trajectory fine-tuning is still listed as TODO (checked 2026-10-18)._ [code](https://github.com/General-Robo/EASG) · [project](https://general-robo.github.io/EASG/)

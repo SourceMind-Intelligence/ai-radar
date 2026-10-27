@@ -1,3 +1,27 @@
 # Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
+
+- name: Psi-0.6
+  url: https://arxiv.org/abs/2610.32177
+  title: '$Ψ$-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model'
+  first_seen: 2026-10-27
+  last_checked: 2026-10-27
+  suggested_category: world-model
+  reason: 'Verified; over the daily cap on 2026-10-27. Unified vision-language world model composing perception, language, geometry and simulation in interleaved streams of thought.'
+
+- name: AWARE
+  url: https://arxiv.org/abs/2610.32742
+  title: 'Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection'
+  first_seen: 2026-10-27
+  last_checked: 2026-10-27
+  suggested_category: verification
+  reason: 'Verified; over the daily cap on 2026-10-27. Camera-only world-model anomaly detection for robots, evaluated on 240 real robotic-crane trajectories.'
+
+- name: Federated VLA corrections safety
+  url: https://arxiv.org/abs/2610.32888
+  title: 'When Human Corrections Travel: Safety in Federated VLA Adaptation'
+  first_seen: 2026-10-27
+  last_checked: 2026-10-27
+  suggested_category: safety
+  reason: 'Verified; over the daily cap on 2026-10-27. Position paper on sharing human-correction adaptations across robots without suppressing rare safety interventions (SPAIS workshop, CoRL 2026).'

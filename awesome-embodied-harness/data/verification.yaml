@@ -1098,3 +1098,35 @@
   tags: [success-detection, failure-recovery, vla, manipulation]
   note: Simulation code (pi0.5, LIBERO-Recovery) released. Promoted from the queue.
   added: 2026-10-25
+
+- id: backtrack-vla
+  name: Backtrack
+  title: 'If at First You Don''t Succeed, Backtrack: Lightweight Recovery for Frozen VLAs'
+  date: 2026-10
+  summary: >-
+    A small failure-prediction head reads a frozen VLA's internal representations; when
+    predicted failure is high, a controller pauses, retraces recent arm motion and lets the
+    unchanged policy retry, cutting LIBERO-Long failure rates by 19-48% across three VLAs
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.32941
+  access: closed
+  tags: [failure-recovery, success-detection, vla, manipulation]
+  added: 2026-10-27
+
+- id: vla-sae-failure
+  name: Do VLAs Know They Will Fail?
+  title: >-
+    Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI
+    Systems
+  date: 2026-10
+  summary: >-
+    Shows sparse-autoencoder features of OpenVLA activations predict task failure before the
+    robot reaches an unrecoverable state, localizes features tied to stages of success or
+    failure, and describes the resulting behavior patterns with a VLM.
+  links:
+    paper: https://arxiv.org/abs/2610.32208
+  access: closed
+  tags: [success-detection, vla, safety]
+  note: Science of Physical AI Safety workshop, CoRL 2026 (non-archival).
+  added: 2026-10-27

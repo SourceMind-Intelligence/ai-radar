@@ -1007,3 +1007,17 @@
   access: closed
   tags: [safety, benchmark, planning, long-horizon]
   added: 2026-10-22
+
+- id: safety-filter-exploit
+  name: Not an Accident
+  title: 'Not an Accident: Exploiting Safety Filter Inadequacy in Humanoid Robots'
+  date: 2026-10
+  summary: >-
+    Shows that collision-avoidance safety filters on humanoids hold only when their task-
+    and environment-specific parameters are configured correctly, and that attackers can
+    trigger the resulting failures through ordinary user interactions.
+  links:
+    paper: https://arxiv.org/abs/2610.31923
+  access: closed
+  tags: [security, safety, humanoid]
+  added: 2026-10-27
