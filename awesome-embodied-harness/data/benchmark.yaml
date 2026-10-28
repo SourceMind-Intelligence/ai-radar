@@ -2780,3 +2780,70 @@
   access: closed
   tags: [benchmark, reward-model, success-detection, long-horizon]
   added: 2026-10-27
+
+- id: ebench-astra
+  name: EBench Astra report
+  title: >-
+    Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy
+  date: 2026-10
+  org: Shanghai AI Laboratory
+  summary: >-
+    Evaluates GPT-6 Astra on the EBench mobile-manipulation benchmark under the same
+    observations as post-trained policies, comparing direct waypoint control with a harness
+    that can also call a VLA or world action model.
+  links:
+    paper: https://arxiv.org/abs/2610.35832
+    code: https://github.com/InternRobotics/EBench
+    project: https://internrobotics.github.io/EBench-Astra-Tech-Report/
+  access: open
+  tags: [benchmark, agentic-loop, mobile-manipulation, dual-system]
+  added: 2026-10-28
+
+- id: physladder
+  name: PhysLadder
+  title: >-
+    How High Can GPT-6 Astra Climb in Contact-Rich Manipulation? PhysLadder: A Hierarchical,
+    Matched Sim-Real Benchmark for Physical Interaction
+  date: 2026-10
+  summary: >-
+    16 household contact-rich tasks at three cumulative levels (contact selection, force
+    regulation, contact reconfiguration) in matched sim and real setups; zero-shot GPT-6
+    Astra falls from 80% real success at level 1 to 0% at level 3 (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.34527
+  access: closed
+  tags: [benchmark, manipulation, real-world, sim2real]
+  added: 2026-10-28
+
+- id: robotagentbench
+  name: RobotAgentBench
+  title: 'RobotAgentBench: Towards Open-world Robot Autonomy'
+  date: 2026-10
+  summary: >-
+    Benchmark for robot agents in 50 open-world household layouts built with an
+    agent-assisted real-to-sim pipeline, covering atomic, short- and long-horizon tasks and
+    open-ended scenarios with multi-level evaluation.
+  links:
+    paper: https://arxiv.org/abs/2610.34649
+    code: https://github.com/AetherLabsAI/RobotAgentBench
+    project: https://aetherlabsai.github.io/RobotAgentBench/
+    data: https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-TrainingData
+  access: open
+  tags: [benchmark, agentic-loop, long-horizon, mobile-manipulation]
+  added: 2026-10-28
+
+- id: embodiedlab
+  name: EmbodiedLab
+  title: 'EmbodiedLab: Benchmarking Embodied Agents That Act to Know'
+  date: 2026-10
+  summary: >-
+    Benchmark where a robot must act to know: 30 quantitative science experiments in five
+    disciplines on 14 apparatus platforms, with system parameters resampled per instance so
+    results cannot be memorized but can be scored exactly.
+  links:
+    paper: https://arxiv.org/abs/2610.35385
+    code: https://github.com/HexaFuture/EmbodiedLab
+    project: https://hexafuture.ai/benchmarks/embodiedlab/
+  access: open
+  tags: [benchmark, agentic-loop, planning]
+  added: 2026-10-28

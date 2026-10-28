@@ -3442,3 +3442,86 @@
   access: closed
   tags: [code-as-policy, agentic-loop, failure-recovery, real-world, manipulation]
   added: 2026-10-27
+
+- id: roboharness-control-panel
+  name: RoboHarness (control panel)
+  title: 'RoboHarness: A Simple Harness Outperforms VLA and World Action Models'
+  date: 2026-09
+  summary: >-
+    Gives coding agents a visual-geometric control panel for invoking embodied tasks
+    directly; with it, Qwen3.8-Flash-Next driven through Claude Code outperforms
+    state-of-the-art VLA models on BEHAVIOR Challenge 2025 tasks (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.14018
+    code: https://github.com/BinceQu/RoboHarness
+    project: https://bincequ.github.io/RoboHarness/
+  access: open
+  tags: [agentic-loop, tool-use, mobile-manipulation, long-horizon]
+  note: >-
+    Not the same system as the two earlier entries named RoboHarness (2026-03, 2026-07).
+    Seen late via the Hugging Face feed.
+  added: 2026-10-28
+
+- id: vista-harness
+  name: VISTA
+  title: 'VISTA: Active Exploration for Self-Improvement in Embodied Agents'
+  date: 2026-10
+  summary: >-
+    Meta-agent that improves an embodied harness by active exploration rather than post-hoc
+    reflection: it keeps a harness graph recording the lineage of proposed harnesses and
+    tests each revision through new embodied interaction.
+  links:
+    paper: https://arxiv.org/abs/2610.35051
+    code: https://github.com/AgenticEI/VISTA
+    project: https://agenticei.github.io/VISTA-page/
+  access: open
+  tags: [self-improving, agentic-loop, manipulation]
+  added: 2026-10-28
+
+- id: robodoctor
+  name: RoboDoctor
+  title: 'RoboDoctor: Training-Free Recursive Self-Improvement for Robot Policies'
+  date: 2026-10
+  summary: >-
+    Training-free framework that revises how a harness splits control between a generalist
+    policy and an agent, when the agent intervenes and which physical methods it uses,
+    keeping linked experience records of each decision, method, outcome and reuse condition.
+  links:
+    paper: https://arxiv.org/abs/2610.35604
+    code: https://github.com/THUSI-Lab/RoboDoctor-Preview
+    project: https://robodoctor-rsi.github.io/
+  access: partial
+  tags: [self-improving, memory, vla, failure-recovery]
+  note: Preview repository.
+  added: 2026-10-28
+
+- id: roboduo
+  name: RoboDuo
+  title: >-
+    RoboDuo: Attempt, Check and Atomic Recovery through Code for Vision-Language-Action
+    Models
+  date: 2026-10
+  summary: >-
+    A coding agent writes a program that lets a frozen full-task VLA attempt the task,
+    checks completion, and on failure hands the remaining steps to an atomic-skill VLA; the
+    agent only chooses which VLA executes and never emits actions.
+  links:
+    paper: https://arxiv.org/abs/2610.34108
+  access: closed
+  tags: [code-as-policy, dual-system, failure-recovery, vla]
+  added: 2026-10-28
+
+- id: thinklocomanip
+  name: ThinkLocoManip
+  title: >-
+    ThinkLocoManip: A Whole-Body Control Agentic Harness for Legged Loco-Manipulation
+  date: 2026-10
+  summary: >-
+    Interleaved reason-act harness for legged loco-manipulation that orchestrates
+    perception, navigation, manipulation and locomotion tools, treating locomotion as an
+    explicit tool domain for long-horizon tasks in large environments.
+  links:
+    paper: https://arxiv.org/abs/2610.34370
+  access: closed
+  tags: [agentic-loop, tool-use, legged, mobile-manipulation]
+  added: 2026-10-28

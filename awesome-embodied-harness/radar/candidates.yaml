@@ -6,7 +6,7 @@
   url: https://arxiv.org/abs/2610.32177
   title: '$Ψ$-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model'
   first_seen: 2026-10-27
-  last_checked: 2026-10-27
+  last_checked: 2026-10-28
   suggested_category: world-model
   reason: 'Verified; over the daily cap on 2026-10-27. Unified vision-language world model composing perception, language, geometry and simulation in interleaved streams of thought.'
 
@@ -14,7 +14,7 @@
   url: https://arxiv.org/abs/2610.32742
   title: 'Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection'
   first_seen: 2026-10-27
-  last_checked: 2026-10-27
+  last_checked: 2026-10-28
   suggested_category: verification
   reason: 'Verified; over the daily cap on 2026-10-27. Camera-only world-model anomaly detection for robots, evaluated on 240 real robotic-crane trajectories.'
 
@@ -22,6 +22,70 @@
   url: https://arxiv.org/abs/2610.32888
   title: 'When Human Corrections Travel: Safety in Federated VLA Adaptation'
   first_seen: 2026-10-27
-  last_checked: 2026-10-27
+  last_checked: 2026-10-28
   suggested_category: safety
   reason: 'Verified; over the daily cap on 2026-10-27. Position paper on sharing human-correction adaptations across robots without suppressing rare safety interventions (SPAIS workshop, CoRL 2026).'
+
+- name: RetroNav
+  url: https://arxiv.org/abs/2610.35172
+  title: 'RetroNav: Scene-Grounded Retrospection and Retry for Self-Evolving Lifelong Navigation'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: memory
+  reason: 'Verified; over the daily cap on 2026-10-28. Training-free lifelong navigation with unified scene and experience memory, an evaluator and a retrospection agent; repo named in abstract (3dv-casia/RetroNav) not yet resolving.'
+
+- name: MOTIO
+  url: https://arxiv.org/abs/2610.33446
+  title: 'MOTIO: Agentic Skill Engineering for Reality-Grounded Humanoid Loco-Manipulation'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: harness
+  reason: 'Verified; over the daily cap on 2026-10-28. Agent turns human videos, 3D assets and robot skills into executable G1 loco-manipulation programs refined in physics and with human approval; project page verified.'
+
+- name: RoboJev
+  url: https://arxiv.org/abs/2610.33718
+  title: 'RoboJev: An Open Vision-Language Judge for Robot Success Detection'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: verification
+  reason: 'Verified; over the daily cap on 2026-10-28. Open-weight 27B success-detection judge; weights josefchen/RoboJev-27B and site robo-jev.com verified.'
+
+- name: WorldFailBench
+  url: https://arxiv.org/abs/2610.33565
+  title: 'WorldFailBench: Do World Models Understand Policy Failures?'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-28. Tests whether world models reproduce how and when policies fail, not only outcomes.'
+
+- name: SceneAgent
+  url: https://arxiv.org/abs/2610.34745
+  title: 'SceneAgent: An Agentic Pipeline from 3D and 4D Captures to Simulation Environments'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: sim
+  reason: 'Verified; over the daily cap on 2026-10-28. Agentic capture-to-simulation pipeline with simulator-based inspection and repair.'
+
+- name: Labference
+  url: https://arxiv.org/abs/2610.35252
+  title: 'Labference: Benchmarking the Reasoning-Action Connection in Robotic Laboratories'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-28. Benchmark for how observed physical outcomes guide subsequent lab-robot choices.'
+
+- name: Learning Dexterous Manipulation survey
+  url: https://arxiv.org/abs/2610.33486
+  title: 'Learning Dexterous Manipulation: Hands, Simulators, Training, and Evaluation'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: survey
+  reason: 'Verified; over the daily cap on 2026-10-28. Survey of 113 methods that cross-checks stated rewards against released code.'
+
+- name: Networked Humanoid Intelligence
+  url: https://arxiv.org/abs/2610.34740
+  title: 'Networked Humanoid Intelligence: Communication, Coordination, Collaboration, and Social Interaction'
+  first_seen: 2026-10-28
+  last_checked: 2026-10-28
+  suggested_category: survey
+  reason: 'Verified; over the daily cap on 2026-10-28. Survey of humanoid fleets along communication, coordination, collaboration and social interaction.'

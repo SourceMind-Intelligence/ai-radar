@@ -273,20 +273,20 @@ Counts by category and year of first release, generated from `data/`.
 | Category | Layer | Total | ≤2021 | 2022 | 2023 | 2024 | 2025 | 2026 | open |
 |---|---|---|---|---|---|---|---|---|---|
 | [Surveys & Position Papers](categories/survey.md) | meta | 91 | 1 | 1 | 8 | 10 | 30 | 41 | 15 |
-| [Embodied Harnesses](categories/harness.md) | L4 | 198 | 0 | 10 | 30 | 23 | 14 | 121 | 78 |
+| [Embodied Harnesses](categories/harness.md) | L4 | 203 | 0 | 10 | 30 | 23 | 14 | 126 | 80 |
 | [Open-Source Frameworks & Runtimes](categories/framework.md) | L0-L4 | 28 | 0 | 1 | 5 | 11 | 5 | 6 | 26 |
 | [Action Interfaces, Skills & Tool Protocols](categories/interface.md) | L2 | 47 | 0 | 0 | 5 | 10 | 11 | 21 | 22 |
-| [World State, Memory & Spatial Context](categories/memory.md) | L3 | 66 | 0 | 4 | 6 | 15 | 10 | 31 | 32 |
+| [World State, Memory & Spatial Context](categories/memory.md) | L3 | 67 | 0 | 4 | 6 | 15 | 10 | 32 | 32 |
 | [Embodied Reasoning Models & Planners](categories/brain.md) | L4 | 56 | 0 | 0 | 5 | 4 | 18 | 29 | 32 |
 | [VLA Models & Skill Policies](categories/policy.md) | L1 | 100 | 0 | 1 | 5 | 7 | 42 | 45 | 58 |
 | [World Models](categories/world-model.md) | L6 | 77 | 0 | 1 | 3 | 7 | 26 | 40 | 43 |
 | [Verification, Failure Detection & Recovery](categories/verification.md) | L5 | 64 | 0 | 0 | 4 | 7 | 14 | 39 | 26 |
-| [Safety, Guardrails & Security](categories/safety.md) | L5 | 60 | 0 | 0 | 1 | 9 | 15 | 35 | 21 |
+| [Safety, Guardrails & Security](categories/safety.md) | L5 | 62 | 0 | 0 | 1 | 9 | 15 | 37 | 21 |
 | [Multi-Robot & Fleet Orchestration](categories/multi-agent.md) | L4 | 54 | 0 | 0 | 5 | 8 | 13 | 28 | 22 |
 | [Simulators & Environments](categories/sim.md) | L6 | 55 | 12 | 1 | 6 | 5 | 10 | 21 | 42 |
-| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 155 | 5 | 1 | 4 | 19 | 31 | 95 | 85 |
+| [Benchmarks & Evaluation](categories/benchmark.md) | L6 | 159 | 5 | 1 | 4 | 19 | 31 | 99 | 88 |
 | [Data, Teleoperation & Training Infrastructure](categories/data.md) | L6 | 95 | 5 | 0 | 9 | 18 | 35 | 28 | 65 |
-| **Total** |  | **1146** | 23 | 20 | 96 | 153 | 274 | 580 | 567 |
+| **Total** |  | **1158** | 23 | 20 | 96 | 153 | 274 | 592 | 572 |
 <!-- END GENERATED: stats -->
 
 ---

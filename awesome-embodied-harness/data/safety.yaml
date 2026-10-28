@@ -1021,3 +1021,32 @@
   access: closed
   tags: [security, safety, humanoid]
   added: 2026-10-27
+
+- id: logs-sway-judges
+  name: Execution Logs Sway VLM Judges
+  title: Execution Logs Sway VLM Judges of Robot Progress
+  date: 2026-10
+  summary: >-
+    Shows one false log line beside robot video flips correct VLM-judge verdicts toward
+    progress 10-35 points more often than a neutral line across Gemini, Qwen and GPT judges;
+    a one-line warning that logs may be wrong removes most of the effect.
+  links:
+    paper: https://arxiv.org/abs/2610.34151
+  access: closed
+  tags: [security, success-detection, reward-model]
+  note: SPAIS workshop, CoRL 2026.
+  added: 2026-10-28
+
+- id: east-safety
+  name: EAST
+  title: 'EAST: Embodied AI Safety Testing via Systematic Fault Injection in Digital Twins'
+  date: 2026-10
+  summary: >-
+    Digital-twin framework that turns literature-grounded hazards into fault-injection tests
+    over perception, instructions, environment, actions and timing, verifies each fault was
+    realized, and scores safety violations separately from task success.
+  links:
+    paper: https://arxiv.org/abs/2610.34358
+  access: closed
+  tags: [safety, benchmark, failure-recovery]
+  added: 2026-10-28
