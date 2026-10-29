@@ -1130,3 +1130,37 @@
   tags: [success-detection, vla, safety]
   note: Science of Physical AI Safety workshop, CoRL 2026 (non-archival).
   added: 2026-10-27
+
+- id: blackbox-sensor-repair
+  name: Black-box policy sensor repair
+  title: >-
+    When Black-Box Robot Policies Fail: Online Sensor Diagnosis and Repair with a
+    Transparent Surrogate
+  date: 2026-10
+  summary: >-
+    External monitor around a frozen locomotion policy: a structured surrogate separating
+    periodic gait from sensor-dependent corrections diagnoses and repairs corrupted inputs,
+    raising simulated Go2 walking success from 259/640 to 382/640 online (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.36852
+  access: closed
+  tags: [failure-recovery, legged, safety]
+  note: SPAIS workshop, CoRL 2026.
+  added: 2026-10-29
+
+- id: robojev
+  name: RoboJev
+  title: 'RoboJev: An Open Vision-Language Judge for Robot Success Detection'
+  date: 2026-10
+  summary: >-
+    Open-weight 27B VLM judge that reads an instruction and video frames and outputs
+    calibrated success probabilities in one forward pass; reports 0.993 AUROC in-domain and
+    0.890 on episodes from unseen labs and robots (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.33718
+    project: https://robo-jev.com
+    weights: https://huggingface.co/josefchen/RoboJev-27B
+  access: open
+  tags: [success-detection, reward-model, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-29

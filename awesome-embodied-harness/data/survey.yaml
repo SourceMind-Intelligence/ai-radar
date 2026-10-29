@@ -1361,3 +1361,18 @@
   tags: [world-model, safety, sim2real]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: dexterous-learning-survey
+  name: Learning Dexterous Manipulation survey
+  title: 'Learning Dexterous Manipulation: Hands, Simulators, Training, and Evaluation'
+  date: 2026-10
+  summary: >-
+    Survey of 113 learning-based dexterous manipulation methods covering hands, simulators,
+    training recipes and evaluation, which cross-checks each paper's stated reward against
+    its released code.
+  links:
+    paper: https://arxiv.org/abs/2610.33486
+  access: open
+  tags: [dexterous, rl, sim2real]
+  note: Promoted from the queue.
+  added: 2026-10-29

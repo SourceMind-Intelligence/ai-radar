@@ -1008,3 +1008,21 @@
   access: open
   tags: [world-model, planning, spatial-reasoning, video]
   added: 2026-10-27
+
+- id: omnibrain-0
+  name: OmniBrain-0
+  title: 'OmniBrain-0: A Unified Agentic Model for Embodied Intelligence'
+  date: 2026-10
+  summary: >-
+    Lightweight unified decision model for manipulation and navigation that tracks progress
+    and recovers from failures, built by distilling strong agents' interaction experience
+    into domain experts and consolidating them, with a rubric-guided self-improvement data
+    flywheel.
+  links:
+    paper: https://arxiv.org/abs/2610.36013
+    code: https://github.com/luo-yc17/OmniBrain-0
+    project: https://public-bots.github.io/OmniBrain-0/
+  access: closed
+  tags: [planning, failure-recovery, self-improving, navigation, manipulation]
+  note: Repository says code release is coming soon.
+  added: 2026-10-29

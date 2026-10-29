@@ -3525,3 +3525,37 @@
   access: closed
   tags: [agentic-loop, tool-use, legged, mobile-manipulation]
   added: 2026-10-28
+
+- id: roboauto
+  name: RoboAuto
+  title: >-
+    RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding
+  date: 2026-10
+  summary: >-
+    Code-as-policy program search that organizes physical understanding at object, scene and
+    interaction levels: a knowledge base of skills and affordances, scene grounding of
+    action-critical quantities, and staged plans that run self-designed experiments to test
+    hypotheses.
+  links:
+    paper: https://arxiv.org/abs/2610.36533
+    project: https://roboauto-ai.github.io/
+  access: closed
+  tags: [code-as-policy, skill-library, agentic-loop, manipulation]
+  note: Project page says code is coming soon.
+  added: 2026-10-29
+
+- id: motio
+  name: MOTIO
+  title: 'MOTIO: Agentic Skill Engineering for Reality-Grounded Humanoid Loco-Manipulation'
+  date: 2026-10
+  summary: >-
+    Agentic skill-engineering system that turns human-action videos, metric 3D assets,
+    motion references and existing robot skills into executable Unitree G1 loco-manipulation
+    programs, refined through physics execution, multi-frame feedback and human approval.
+  links:
+    paper: https://arxiv.org/abs/2610.33446
+    project: https://iiiiqiiii.github.io/motio/
+  access: closed
+  tags: [code-as-policy, humanoid, mobile-manipulation, hitl]
+  note: Promoted from the queue.
+  added: 2026-10-29

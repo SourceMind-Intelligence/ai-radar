@@ -1178,3 +1178,21 @@
   access: closed
   tags: [memory, self-improving, code-as-policy, tool-use]
   added: 2026-10-28
+
+- id: retronav
+  name: RetroNav
+  title: >-
+    RetroNav: Scene-Grounded Retrospection and Retry for Self-Evolving Lifelong Navigation
+  date: 2026-10
+  summary: >-
+    Training-free lifelong navigation that links scene knowledge with past navigation
+    experience; after each attempt an evaluator decides whether to retry and a retrospection
+    agent revisits history to correct mistakes.
+  links:
+    paper: https://arxiv.org/abs/2610.35172
+  access: closed
+  tags: [memory, self-improving, navigation, failure-recovery]
+  note: >-
+    The repository named in the abstract (3dv-casia/RetroNav) did not resolve on 2026-10-29.
+    Promoted from the queue.
+  added: 2026-10-29

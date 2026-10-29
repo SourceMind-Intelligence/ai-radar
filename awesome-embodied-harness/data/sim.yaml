@@ -984,3 +984,20 @@
   access: open
   tags: [data-generation, 3d, agentic-loop]
   added: 2026-10-27
+
+- id: sceneagent
+  name: SceneAgent
+  title: >-
+    SceneAgent: An Agentic Pipeline from 3D and 4D Captures to Simulation Environments
+  date: 2026-10
+  summary: >-
+    Agentic pipeline that turns 3DGS, photogrammetry, LiDAR and 4D captures into simulation
+    environments, coordinating segmentation, physical parameters, articulation and
+    deformables through simulator-based inspection and repair, and generating object
+    variants and scripted demos.
+  links:
+    paper: https://arxiv.org/abs/2610.34745
+  access: closed
+  tags: [agentic-loop, data-generation, 3d]
+  note: Promoted from the queue.
+  added: 2026-10-29

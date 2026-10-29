@@ -1050,3 +1050,20 @@
   access: closed
   tags: [safety, benchmark, failure-recovery]
   added: 2026-10-28
+
+- id: vla-stem
+  name: VLA-Stem
+  title: >-
+    VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via
+    Reinforcement Learning
+  date: 2026-10
+  summary: >-
+    RL-trained module that turns a frozen VLA's action chunks into motion references and
+    adapts execution to spatial constraints and dynamic obstacles; reports 52.8%
+    collision-free success versus 23.7% for the strongest safety baseline in simulation
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.37378
+  access: closed
+  tags: [safety, vla, rl, manipulation]
+  added: 2026-10-29

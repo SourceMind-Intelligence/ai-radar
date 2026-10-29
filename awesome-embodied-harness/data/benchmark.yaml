@@ -2847,3 +2847,51 @@
   access: open
   tags: [benchmark, agentic-loop, planning]
   added: 2026-10-28
+
+- id: osma-bench
+  name: OSMA-Bench
+  title: Benchmarking Obstacle-Conditioned Safety in Household Robot Navigation
+  date: 2026-10
+  summary: >-
+    Spatially matched household scenarios that differ only in obstacle type, with a Semantic
+    Sensitivity Index testing whether clearance, speed and smoothness follow obstacle
+    caution ordering; VLM-based and VLA navigation policies do not adapt consistently.
+  links:
+    paper: https://arxiv.org/abs/2610.34674
+    code: https://github.com/OSMA-Bench/OSMA-Bench
+    project: https://osma-bench.github.io/
+  access: open
+  tags: [benchmark, safety, navigation]
+  added: 2026-10-29
+
+- id: so101-bench
+  name: SO-101 Bench
+  title: 'SO-101 Bench: Accessible Spatial Manipulation'
+  date: 2026-10
+  summary: >-
+    Isaac Lab digital twin of a low-cost SO-101 arm for language-conditioned spatial
+    manipulation, whose policy ranking matched the real arm; an LLM agent that writes code
+    and delegates grasping to a learned policy scores 83.2% versus about 61% for the best
+    learned policies (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.36420
+    code: https://github.com/5hadytru/so101_bench
+    project: https://so101-bench.github.io/
+  access: open
+  tags: [benchmark, sim2real, agentic-loop, manipulation]
+  added: 2026-10-29
+
+- id: worldfailbench
+  name: WorldFailBench
+  title: 'WorldFailBench: Do World Models Understand Policy Failures?'
+  date: 2026-10
+  summary: >-
+    Tests whether world models used as policy evaluators reproduce how and at which stages
+    policies fail, and when small scene changes flip success to failure, rather than only
+    matching task outcomes.
+  links:
+    paper: https://arxiv.org/abs/2610.33565
+  access: closed
+  tags: [benchmark, world-model, success-detection]
+  note: Promoted from the queue.
+  added: 2026-10-29
