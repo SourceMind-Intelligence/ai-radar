@@ -3,7 +3,7 @@
 # Benchmarks & Evaluation
 
 > Benchmarks, evaluation suites and leaderboards for embodied agents, reasoning models and VLAs.  
-> Layer: L6 · 162 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
+> Layer: L6 · 163 entries · [overview](../README.md#benchmark) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -38,6 +38,7 @@
 - ⚪ [**LIBERO-PeRM**](https://arxiv.org/abs/2610.22372 "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation") · 2026-10 — Benchmark separating task completion from preference satisfaction in household manipulation, studying zero-shot preference following, learning from demonstrations, sample efficiency, generalization and preference composition. _Note: NeurIPS 2026._ [project](https://libero-perm.github.io/)
 - ⚪ [**LIBERO-Industry**](https://arxiv.org/abs/2610.16782 "LIBERO-Industry: Benchmarking Robotic Manipulation under Industrial Process Constraints") · 2026-10 — Extends LIBERO with industrial process constraints such as product variants, moving material flows, finite execution windows and tight tolerances, to evaluate generalist policies for high-mix, low-volume manufacturing.
 - ⚪ [**LADDER**](https://arxiv.org/abs/2610.18053 "LADDER: A Long-Horizon Robot Manipulation Benchmark") · 2026-10 — Long-horizon manipulation benchmark scaling from 1 to 10 subgoals in the same environment across three suites (145 tasks, two embodiments), comparing text-subgoal orchestration of learned policies with tool-selection orchestration (CaP-X and others). [project](https://ladder.insait.ai)
+- ⚪ [**Labference**](https://arxiv.org/abs/2610.35252 "Labference: Benchmarking the Reasoning-Action Connection in Robotic Laboratories") · 2026-10 — Benchmark for robotic laboratories that evaluates how observed physical outcomes, such as a failed placement, should change subsequent choices and how those choices become lab actions, rather than scoring planning or manipulation in isolation. _Note: Promoted from the queue._
 - 🟡 [**JitterVLA**](https://arxiv.org/abs/2610.13628 "JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation") · 2026-10 — Replays identical VLA commands and arrival-delay traces through alternative controllers to isolate the controller's effect on jerk near people, across synthetic reaches, human hand trajectories, three open VLA pipelines and a physical UR3. [project](https://faithogunwoye.github.io/JitterVLA/) · [data](https://huggingface.co/datasets/armteam/JitterVLA-teleop-episodes)
 - ⚪ [**JARVIS**](https://arxiv.org/abs/2610.27618 "JARVIS: From Visual Manuals to Autonomous Robotic Assembly") · 2026-10 — Benchmark of 236,679 LEGO assembly tasks driven by visual manuals alone, with a 50-task interactive suite and structure-aware scoring; its JARVIS-agentic baseline composes robot primitives into programs and verifies them with execution feedback.
 - ⚪ [**IMEP**](https://arxiv.org/abs/2610.23372 "Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action Systems") · 2026-10 — Interventional Memory Evaluation Protocol for VLA systems: compares target-fact substitutions with fact-preserving replacements at the retrieval interface to test whether memory, rather than extra computation, actually drives outcomes.

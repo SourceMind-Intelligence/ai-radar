@@ -2895,3 +2895,18 @@
   tags: [benchmark, world-model, success-detection]
   note: Promoted from the queue.
   added: 2026-10-29
+
+- id: labference
+  name: Labference
+  title: 'Labference: Benchmarking the Reasoning-Action Connection in Robotic Laboratories'
+  date: 2026-10
+  summary: >-
+    Benchmark for robotic laboratories that evaluates how observed physical outcomes, such
+    as a failed placement, should change subsequent choices and how those choices become lab
+    actions, rather than scoring planning or manipulation in isolation.
+  links:
+    paper: https://arxiv.org/abs/2610.35252
+  access: closed
+  tags: [benchmark, planning, failure-recovery]
+  note: Promoted from the queue.
+  added: 2026-10-30

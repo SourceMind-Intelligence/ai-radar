@@ -1375,3 +1375,19 @@
   tags: [world-model, rl, vla, manipulation]
   note: NeurIPS 2026. Promoted from the queue.
   added: 2026-10-25
+
+- id: rollback-wm
+  name: Rollback
+  title: 'Rollback: Experience Backtracking in World Models for Policy Improvement'
+  date: 2026-10
+  summary: >-
+    Uses an action-conditioned world model as a counterfactual engine: it rewinds to
+    critical decision points, branches into alternative actions and contrasts outcomes to
+    produce action-level supervision for policy improvement.
+  links:
+    paper: https://arxiv.org/abs/2610.36068
+    project: https://rollback-wm.github.io/
+  access: closed
+  tags: [world-model, rl, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-30

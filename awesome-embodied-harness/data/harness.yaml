@@ -3559,3 +3559,23 @@
   tags: [code-as-policy, humanoid, mobile-manipulation, hitl]
   note: Promoted from the queue.
   added: 2026-10-29
+
+- id: the-trinity
+  name: The Trinity
+  title: The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents
+  date: 2026-10
+  summary: >-
+    Recursive self-improvement framework with Creator, Explorer and Evolver roles that
+    reorganizes tasks into a capability tree, builds simplified verifiable simulated worlds
+    per capability (Real2Sim2Real), evolves reusable harness modules and routes tasks to
+    compatible harness configurations.
+  links:
+    paper: https://arxiv.org/abs/2610.36077
+    code: https://github.com/InfRec-Cardinal/The-Trinity
+    project: https://trinity-rsi.github.io/
+  access: closed
+  tags: [self-improving, agentic-loop, data-generation]
+  note: >-
+    Repository says code will be released within one week of 2026-10-28. Promoted from the
+    queue.
+  added: 2026-10-30

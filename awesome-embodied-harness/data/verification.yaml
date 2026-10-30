@@ -1164,3 +1164,18 @@
   tags: [success-detection, reward-model, manipulation]
   note: Promoted from the queue.
   added: 2026-10-29
+
+- id: which-hand-was-late
+  name: Which Hand Was Late?
+  title: Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use
+  date: 2026-10
+  summary: >-
+    Measures which sensing channels let a failure diagnoser identify bimanual tool-use
+    failures, such as tool slip, mistimed hands and compound causes, on a simulated task
+    with causes read from recorded traces.
+  links:
+    paper: https://arxiv.org/abs/2610.37533
+  access: closed
+  tags: [failure-recovery, success-detection, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-30

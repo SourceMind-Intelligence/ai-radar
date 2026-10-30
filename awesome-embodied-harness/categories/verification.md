@@ -3,12 +3,13 @@
 # Verification, Failure Detection & Recovery
 
 > "Exit codes" for robots: success detection, failure reasoning, self-reflection, recovery and knowing when to ask for help.  
-> Layer: L5 · 66 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
+> Layer: L5 · 67 entries · [overview](../README.md#verification) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
 **2026**
 
+- ⚪ [**Which Hand Was Late?**](https://arxiv.org/abs/2610.37533 "Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use") · 2026-10 — Measures which sensing channels let a failure diagnoser identify bimanual tool-use failures, such as tool slip, mistimed hands and compound causes, on a simulated task with causes read from recorded traces. _Note: Promoted from the queue._
 - ⚪ [**VeriVLA**](https://arxiv.org/abs/2610.21985 "VeriVLA: Adaptive Test-Time Verification for Flow-Based VLAs with Latent World Models") · 2026-10 — Training-free trigger uses within-chunk temporal variation and cross-sample variance of two flow-VLA samples to detect critical states, where a JEPA latent world model ranks candidate action chunks by predicted outcomes before execution.
 - ⚪ [**VeriFine**](https://arxiv.org/abs/2610.08761 "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning") · 2026-10 — Agent harness that co-evolves policy, curriculum and judge for embodied reasoning: a rubric judge diagnoses failures and builds an adaptive curriculum, and when progress plateaus a judge-improvement loop queries humans on informative failures to refine the judge. [project](https://veri-fine.github.io/)
 - ⚪ [**Skill-seam observation-space shift**](https://arxiv.org/abs/2610.10810 "Diagnosing and Recovering from Observation-Space Shift at Long-Horizon Skill Seams") · 2026-10 — Finds that chained-skill failures mostly come from scene state displaced by earlier skills (e.g., an open drawer), not robot configuration, and builds a learned detect-restore-resume system: a progress monitor detects stalls and a policy restores the scene before resuming.

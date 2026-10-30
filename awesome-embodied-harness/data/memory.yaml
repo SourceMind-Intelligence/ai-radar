@@ -1196,3 +1196,20 @@
     The repository named in the abstract (3dv-casia/RetroNav) did not resolve on 2026-10-29.
     Promoted from the queue.
   added: 2026-10-29
+
+- id: retrieve-to-act
+  name: Retrieve to Act (R2A)
+  title: 'Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution'
+  aliases: [R2A]
+  date: 2026-10
+  summary: >-
+    Test-time framework that structures a VLA's successful training demonstrations into a
+    spatiotemporal motion-primitive graph and retrieves kinematic priors through a GNN to
+    keep execution robust under out-of-distribution visual shifts.
+  links:
+    paper: https://arxiv.org/abs/2610.37215
+    project: https://retrieve2act.github.io/r2a/
+  access: closed
+  tags: [memory, vla, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-30

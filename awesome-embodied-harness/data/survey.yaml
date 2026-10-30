@@ -1376,3 +1376,20 @@
   tags: [dexterous, rl, sim2real]
   note: Promoted from the queue.
   added: 2026-10-29
+
+- id: networked-humanoid-survey
+  name: Networked Humanoid Intelligence
+  title: >-
+    Networked Humanoid Intelligence: Communication, Coordination, Collaboration, and Social
+    Interaction
+  date: 2026-10
+  summary: >-
+    Survey of humanoids as connected fleets, organized by communication, coordination,
+    collaboration and social interaction, separating results on physical humanoids from
+    simulation and other platforms.
+  links:
+    paper: https://arxiv.org/abs/2610.34740
+  access: open
+  tags: [humanoid, multi-robot]
+  note: Promoted from the queue.
+  added: 2026-10-30

@@ -1067,3 +1067,18 @@
   access: closed
   tags: [safety, vla, rl, manipulation]
   added: 2026-10-29
+
+- id: adversarial-selfplay-security
+  name: Program-level adversarial self-play
+  title: Program-Level Adversarial Co-Adaptive Self-Play for Robotic Security
+  date: 2026-10
+  summary: >-
+    Coding agents generate robot attacks and defenses as programs from tested opponent code
+    and mission feedback, without fine-tuning; humanoid and driving case studies show local
+    recoveries but not sustained robustness.
+  links:
+    paper: https://arxiv.org/abs/2610.36143
+  access: closed
+  tags: [security, code-as-policy, humanoid]
+  note: Promoted from the queue.
+  added: 2026-10-30

@@ -3,7 +3,7 @@
 # Embodied Harnesses
 
 > Systems where an LLM/VLM-driven agent loop orchestrates robot capabilities (skills, VLAs, motion primitives, generated code) and closes the loop on feedback.  
-> Layer: L4 · 205 entries · [overview](../README.md#harness) · [survey](../SURVEY.md)
+> Layer: L4 · 206 entries · [overview](../README.md#harness) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -11,6 +11,7 @@
 
 - 🟢 [**VISTA**](https://arxiv.org/abs/2610.35051 "VISTA: Active Exploration for Self-Improvement in Embodied Agents") · 2026-10 — Meta-agent that improves an embodied harness by active exploration rather than post-hoc reflection: it keeps a harness graph recording the lineage of proposed harnesses and tests each revision through new embodied interaction. [code](https://github.com/AgenticEI/VISTA) · [project](https://agenticei.github.io/VISTA-page/)
 - ⚪ [**ThinkLocoManip**](https://arxiv.org/abs/2610.34370 "ThinkLocoManip: A Whole-Body Control Agentic Harness for Legged Loco-Manipulation") · 2026-10 — Interleaved reason-act harness for legged loco-manipulation that orchestrates perception, navigation, manipulation and locomotion tools, treating locomotion as an explicit tool domain for long-horizon tasks in large environments.
+- ⚪ [**The Trinity**](https://arxiv.org/abs/2610.36077 "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents") · 2026-10 — Recursive self-improvement framework with Creator, Explorer and Evolver roles that reorganizes tasks into a capability tree, builds simplified verifiable simulated worlds per capability (Real2Sim2Real), evolves reusable harness modules and routes tasks to compatible harness configurations. _Note: Repository says code will be released within one week of 2026-10-28. Promoted from the queue._ [code](https://github.com/InfRec-Cardinal/The-Trinity) · [project](https://trinity-rsi.github.io/)
 - ⚪ [**TEAR**](https://arxiv.org/abs/2610.30819 "TEAR: Task-Evidence Authority Routing for Robotic Manipulation") · 2026-10 — Edge-deployable arbitrator that shifts control authority between human teleoperation and local autonomy from network and task evidence; reports success close to pure teleoperation with teleoperation on 19.8-27.4% of control steps (first-party). _Note: Promoted from the queue._
 - 🟢 [**Tactile-ETA**](https://arxiv.org/abs/2610.27613 "Embodied Task Agents Can Perform Fine Manipulation through Tactile In-Context Learning") · 2026-10 — Adds tactile experience to an embodied task agent through in-context demonstrations that pair each robot movement with camera views and selected tactile frames; the agent acts through general robot tools without parameter updates. [code](https://github.com/No-518/Tactile-ETA) · [project](https://no-518.github.io/tactile-eta/)
 - 🟢 [**SuperNav**](https://arxiv.org/abs/2610.12126 "SuperNav: An Agentic Navigation System for Any Task in Any Scene") · 2026-10 — Equips a pretrained multimodal LLM with a navigation agent harness, with no navigation-specific fine-tuning: the model interprets requests, understands scenes and decides, while motion execution is delegated to navigation tools. [code](https://github.com/zju3dv/SuperNav) · [project](https://zju3dv.github.io/SuperNav/)

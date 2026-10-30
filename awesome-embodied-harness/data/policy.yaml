@@ -1830,3 +1830,20 @@
   tags: [hitl, self-improving, manipulation, real-world]
   note: Promoted from the queue.
   added: 2026-10-25
+
+- id: arc-residual
+  name: ARC (Adaptive Residual Correction)
+  title: >-
+    When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot
+    Policies
+  date: 2026-10
+  summary: >-
+    Post-training module that learns an RL residual on top of a frozen imitation policy,
+    using sparse human corrections to decide when the residual activates and where in action
+    space it explores.
+  links:
+    paper: https://arxiv.org/abs/2610.37547
+  access: closed
+  tags: [hitl, rl, manipulation]
+  note: Promoted from the queue.
+  added: 2026-10-30
