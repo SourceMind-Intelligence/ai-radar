@@ -1,3 +1,51 @@
 # Items the radar has seen but not added yet (see CONTRIBUTING.md and radar/PLAYBOOK.md).
 # Two kinds: announcements that cannot be verified yet, and verified items that were over
 # a run's daily cap. The next run re-triages over-cap items first.
+
+- name: DexSuite
+  url: https://arxiv.org/abs/2610.37799
+  title: 'DexSuite: An All-in-One Framework for Dexterous Manipulation Across Arms, Hands, and Tasks'
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: sim
+  reason: 'Verified; over the daily cap on 2026-10-31. Genesis-based dexterous manipulation framework: 30 tasks, 100+ arm-hand combinations, teleop, tactile sim, 4,700-episode dataset; project page dexsuiteorg.github.io.'
+
+- name: EgoContact
+  url: https://arxiv.org/abs/2610.39167
+  title: 'EgoContact: Evaluating Physical Intelligence with Egocentric Video'
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-31. 22.5K verified egocentric interaction events for future contact-point prediction; project page linked from the abstract returned 404 on 2026-10-31.'
+
+- name: AtomTree
+  url: https://arxiv.org/abs/2610.38744
+  title: 'AtomTree: A Hierarchical Framework for State-Aware Embodied Instruction Following with LLMs'
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: brain
+  reason: 'Verified; over the daily cap on 2026-10-31. Incremental state-aware subgoal tree for LLM embodied instruction following (IROS 2026).'
+
+- name: What Should a Navigator Remember?
+  url: https://arxiv.org/abs/2610.38318
+  title: What Should a Navigator Remember? Spatiotemporal Memory for Zero-Shot Vision-Language Navigation
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: memory
+  reason: 'Verified; over the daily cap on 2026-10-31. Task, temporal and spatial memories for an 8B zero-shot VLN agent.'
+
+- name: Robotic Data Inoculation
+  url: https://arxiv.org/abs/2610.39054
+  title: Robotic Data Inoculation
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: data
+  reason: 'Verified; over the daily cap on 2026-10-31. Shared-control data collection where a residual policy perturbs teleoperation to gather recovery-rich demonstrations.'
+
+- name: BURGER
+  url: https://arxiv.org/abs/2610.40532
+  title: 'BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing'
+  first_seen: 2026-10-31
+  last_checked: 2026-10-31
+  suggested_category: benchmark
+  reason: 'Verified; over the daily cap on 2026-10-31. Language-conditioned robot drawing benchmark with 28,200 simulated demos over 282 tasks.'

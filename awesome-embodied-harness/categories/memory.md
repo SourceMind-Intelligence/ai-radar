@@ -3,7 +3,7 @@
 # World State, Memory & Spatial Context
 
 > Scene graphs, semantic maps, spatial and episodic memory; the harness's context window onto the world.  
-> Layer: L3 · 69 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
+> Layer: L3 · 70 entries · [overview](../README.md#memory) · [survey](../SURVEY.md)
 
 **Legend:** 🟢 open · 🟡 partial · 🔵 api · ⚪ closed. Hover a name for the full paper title. Newest first within each year.
 
@@ -20,6 +20,7 @@
 - 🟢 [**Externalise the Memory**](https://arxiv.org/abs/2610.30478 "Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live") · 2026-10 — Pre-registered comparison of distilling a memory-augmented VLM teacher into LoRA policy weights versus re-attaching its retrieval buffer at inference; distillation gave no significant gain while external retrieval added 34 points on a reach task (first-party). _Note: CL4FMAgents workshop, NeurIPS 2026 (non-archival)._ [code](https://github.com/TPEmist/AionGenos)
 - ⚪ [**EvoMem-VLA**](https://arxiv.org/abs/2610.05418 "EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation") · 2026-10 — VLA memory that encodes observed changes between historical states as directional delta tokens tied to their state evidence, so the policy can track interaction outcomes and task progress rather than isolated keyframes.
 - ⚪ [**EventSync**](https://arxiv.org/abs/2610.27917 "EventSync: Event-Driven Memory Updates for History-Dependent Manipulation") · 2026-10 — VLM-plus-VLA hierarchy where a lightweight event monitor confirms subgoal completion from vision and end-effector trajectories before the task memory is updated and the planner is re-invoked; reports 64.5% on RoboMME (first-party).
+- ⚪ [**EmbodiExp**](https://arxiv.org/abs/2610.39180 "EmbodiExp: Compositional Experience Transfer for Embodied Agents") · 2026-10 — Stores outcome-grounded subgoal experiences (subgoal, applicability conditions, adaptable policy, verifiable outcome) and composes them online, so verified outcomes enable later experiences and failed trajectories still contribute verified local successes.
 - ⚪ [**Divide-and-Remember**](https://arxiv.org/abs/2610.00982 "Divide-and-Remember: Recursive Action-Relevant Memory for Long-Horizon VLA Policies") · 2026-10 — Learned VLA memory that keeps history information relevant to the action but absent from the current observation, using a recursive top-K selector shared across blocks so a fixed-size module covers unbounded history; evaluated on RoboMME.
 - ⚪ [**BetaMem**](https://arxiv.org/abs/2610.26554 "BetaMem: Learning to Remember a Changing World for Embodied Agents") · 2026-10 — Traceable long-term memory for embodied agents across six linked layers (working, spatial, entity, episodic, experiential, procedural) with a write contract learned by SFT and RL that rewards complete, accurate memory operations verified against the original observations.
 - ⚪ [**Workspace Models**](https://arxiv.org/abs/2609.20820 "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision") · 2026-09 · MIT, CMU — Moves VLM calls to training time: a VLM labels task-salient current and past information, which is distilled into a lightweight latent 'workspace token' that policies use at deployment to solve memory-intensive tasks without in-the-loop VLM reasoning. _Note: CoRL 2026._

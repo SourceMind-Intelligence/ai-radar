@@ -1393,3 +1393,37 @@
   tags: [humanoid, multi-robot]
   note: Promoted from the queue.
   added: 2026-10-30
+
+- id: agentic-videogen-survey
+  name: Video Generation Meets Agent Harness
+  title: >-
+    Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling
+    and Recursive Self-Improvement
+  date: 2026-10
+  summary: >-
+    Report on harnesses around video models (runtimes that build context, expose tools, keep
+    state, route feedback and manage budgets) covering agentic video generation, agentic
+    world modeling with engines or agent-written programs, and recursive self-improvement.
+  links:
+    paper: https://arxiv.org/abs/2610.40191
+    code: https://github.com/agentic-videogen/awesome-agentic-videogen
+    project: https://agentic-videogen.github.io/
+  access: open
+  tags: [awesome-list, world-model, self-improving, video]
+  added: 2026-10-31
+
+- id: physical-rsi-mechanisms
+  name: 'RSI in Physical AI: Mechanisms, Evidence, Evaluation'
+  title: 'Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation'
+  date: 2026-10
+  summary: >-
+    Survey distinguishing learner updates from improvers that revise data acquisition,
+    feedback or learning procedures, comparing policy learning, imagined experience, memory
+    and skill accumulation and executable harnesses, and when gains accumulate in
+    deployment.
+  links:
+    paper: https://arxiv.org/abs/2610.38266
+    code: https://github.com/nkd-lkz/physical-ai-rsi-survey
+  access: open
+  tags: [self-improving, awesome-list, memory]
+  added: 2026-10-31

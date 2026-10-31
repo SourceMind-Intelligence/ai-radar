@@ -1179,3 +1179,18 @@
   tags: [failure-recovery, success-detection, manipulation]
   note: Promoted from the queue.
   added: 2026-10-30
+
+- id: logiv
+  name: LOGIV
+  title: >-
+    LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks
+  date: 2026-10
+  summary: >-
+    Compiles a validated plan into a task graph of condition-support and resource-ordering
+    edges, checks them physically during execution above existing VLA or world-action
+    policies, and traces dependencies to repair only what a disturbance invalidated.
+  links:
+    paper: https://arxiv.org/abs/2610.40016
+  access: closed
+  tags: [planning, failure-recovery, success-detection, long-horizon]
+  added: 2026-10-31

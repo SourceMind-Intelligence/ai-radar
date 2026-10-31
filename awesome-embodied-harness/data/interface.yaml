@@ -874,3 +874,20 @@
   access: open
   tags: [ros, navigation, on-device, safety]
   added: 2026-10-27
+
+- id: metatron
+  name: METATRON
+  title: 'METATRON: A Promptable Whole-Body Execution Layer for Humanoids'
+  date: 2026-10
+  org: NVIDIA
+  summary: >-
+    Frozen generative humanoid base policy driven by prompts (timed body-part targets,
+    velocities, style cues), plus a skill layer of ordinary code that coding agents refine;
+    one checkpoint supports walking, recovery, teleoperated pickup and sitting on a Unitree
+    G1.
+  links:
+    paper: https://arxiv.org/abs/2610.38027
+    project: https://research.nvidia.com/labs/par/projects/metatron/
+  access: closed
+  tags: [humanoid, code-as-policy, skill-library, protocol]
+  added: 2026-10-31

@@ -1213,3 +1213,18 @@
   tags: [memory, vla, manipulation]
   note: Promoted from the queue.
   added: 2026-10-30
+
+- id: embodiexp
+  name: EmbodiExp
+  title: 'EmbodiExp: Compositional Experience Transfer for Embodied Agents'
+  date: 2026-10
+  summary: >-
+    Stores outcome-grounded subgoal experiences (subgoal, applicability conditions,
+    adaptable policy, verifiable outcome) and composes them online, so verified outcomes
+    enable later experiences and failed trajectories still contribute verified local
+    successes.
+  links:
+    paper: https://arxiv.org/abs/2610.39180
+  access: closed
+  tags: [memory, skill-library, success-detection]
+  added: 2026-10-31

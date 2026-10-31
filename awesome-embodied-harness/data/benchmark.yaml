@@ -2910,3 +2910,38 @@
   tags: [benchmark, planning, failure-recovery]
   note: Promoted from the queue.
   added: 2026-10-30
+
+- id: restep-remora
+  name: ReSTEP (REMORA)
+  title: >-
+    Tracking Task Progress Through Errors and Recovery:A Benchmark and Recurrent
+    Distributional Model
+  aliases: [REMORA]
+  date: 2026-10
+  summary: >-
+    Open dataset of 3,156 real manipulation episodes with stage labels and frame-level error
+    annotations for training and benchmarking progress monitors through mistakes and
+    recovery, plus REMORA, a recurrent distributional online progress estimator.
+  links:
+    paper: https://arxiv.org/abs/2610.39125
+  access: closed
+  tags: [benchmark, success-detection, failure-recovery, dataset]
+  note: Paper states the dataset is open-sourced; no link was verifiable on 2026-10-31.
+  added: 2026-10-31
+
+- id: roboseed
+  name: RoboSeed
+  title: >-
+    RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models:
+    Capability, Resource Affordability, and Research Evidence
+  date: 2026-10
+  summary: >-
+    Evaluation framework profiling VLA and world-action models on capability, training and
+    deployment affordability, locally verified research value and reproduction evidence,
+    normalized to 0-100 with budget-specific preference settings.
+  links:
+    paper: https://arxiv.org/abs/2610.40026
+    code: https://github.com/PrimitiveX/RoboSeed
+  access: open
+  tags: [benchmark, vla, world-model]
+  added: 2026-10-31

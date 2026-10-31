@@ -1001,3 +1001,37 @@
   tags: [agentic-loop, data-generation, 3d]
   note: Promoted from the queue.
   added: 2026-10-29
+
+- id: gym-anything-robotics
+  name: Gym-Anything for Robotics
+  title: 'Gym-Anything for Robotics: Scaling physical simulations with digital agents'
+  aliases: [RoboWorld]
+  date: 2026-10
+  summary: >-
+    Coding agents create robotics simulations chosen to cover economically valuable physical
+    work, checked by an adversarial creation-audit loop; the resulting RoboWorld suite (25
+    simulations) stumps frontier models, which average 0.06 reward on its test tasks
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.40565
+    code: https://github.com/gym-anything/robotics
+    project: https://gym-anything.github.io/robotics
+  access: open
+  tags: [data-generation, agentic-loop, benchmark, rl]
+  added: 2026-10-31
+
+- id: rfw-a
+  name: RFW-A
+  title: >-
+    RFW-A: Agentic Procedural Generation of 400K Articulated Assets over 500 Categories
+  date: 2026-10
+  summary: >-
+    Agents build reusable category-level construction programs for articulated objects that
+    procedural execution then reuses across many samples, producing 400K articulated assets
+    over 500 categories without repeating costly per-asset reasoning.
+  links:
+    paper: https://arxiv.org/abs/2610.40333
+    project: https://brain-labbb.github.io/RFW_A_web/
+  access: closed
+  tags: [data-generation, 3d, code-as-policy]
+  added: 2026-10-31

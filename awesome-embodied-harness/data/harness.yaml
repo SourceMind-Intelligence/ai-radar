@@ -3579,3 +3579,54 @@
     Repository says code will be released within one week of 2026-10-28. Promoted from the
     queue.
   added: 2026-10-30
+
+- id: evolife
+  name: EvoLife (Ask to Evolve)
+  title: >-
+    Ask to Evolve: A Unified Harness for Lifelong Embodied Navigation with Hybrid Action
+    Space and Persistent Memory
+  aliases: [Ask to Evolve]
+  date: 2026-10
+  summary: >-
+    Navigation harness that lets a multimodal agent choose among waypoint, discrete, pixel
+    and object-directed moves, ask for help when stuck, and bind observations and dialogue
+    to places in persistent memory; evaluated on eight benchmarks across four navigation
+    families.
+  links:
+    paper: https://arxiv.org/abs/2610.39446
+  access: closed
+  tags: [agentic-loop, memory, navigation, hitl]
+  added: 2026-10-31
+
+- id: elevate
+  name: ELEVATE
+  title: >-
+    ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation
+  date: 2026-10
+  summary: >-
+    When task-program refinement keeps failing for lack of a physical capability, a coding
+    agent formulates and refines an RL problem to train the missing whole-body controller
+    and adds it to the library; acquired skills transfer to a real quadrupedal manipulator
+    (first-party).
+  links:
+    paper: https://arxiv.org/abs/2610.38388
+    project: https://agentic-quad-elevate.github.io/public/
+  access: closed
+  tags: [code-as-policy, skill-library, self-improving, legged, rl]
+  added: 2026-10-31
+
+- id: proloop
+  name: ProLoop
+  title: >-
+    ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for
+    Long-Horizon Robotic Task Planning
+  date: 2026-10
+  summary: >-
+    LLM planning loop with a learned state-relation monitor that compares desired and
+    execution states to mark each subgoal as ongoing, deviated or completed, and adapts
+    execution from that explicit progress; tested on ALFWorld and a real robot.
+  links:
+    paper: https://arxiv.org/abs/2610.39319
+  access: closed
+  tags: [agentic-loop, success-detection, planning, long-horizon]
+  added: 2026-10-31
